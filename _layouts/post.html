@@ -1,0 +1,138 @@
+---
+layout: default
+---
+
+<article class="box" role="article">
+  <!-- Encabezado del artículo -->
+  <header class="media is-centered m-4">
+    <div class="media-left">
+      {% if page.image %}
+      <figure class="image is-64x64">
+        <img
+          src="{{ page.image | relative_url }}"
+          alt="Imagen destacada del artículo {{ page.title }}"
+          class="is-rounded"
+          loading="lazy"
+        />
+      </figure>
+      {% endif %}
+    </div>
+    <div class="media-content">
+      <p class="has-text-grey-light">
+        Publicado el {{ page.date | date: "%A, %d de %B de %Y" | localized_date:
+        "es" }} por <strong>{{ page.author | default: "Anónimo" }}</strong>
+      </p>
+    </div>
+  </header>
+
+  <!-- Contenido principal -->
+  <section class="content my-6 mx-4" role="main">{{ content }}</section>
+
+  <!-- Botón de compartir con opciones -->
+  <div class="mt-4 has-text-centered">
+    <button
+      id="shareButton"
+      class="button is-primary is-rounded"
+      aria-label="Compartir este artículo"
+    >
+      <span class="icon is-small">
+        <i class="fas fa-share-alt"></i>
+      </span>
+      <span>Compartir</span>
+    </button>
+  </div>
+</article>
+
+<div class="mt-4">
+  <div class="columns container">
+    <!-- Categorías -->
+    <div class="column">
+      <p class="has-text-grey">
+        <strong>Categorías:</strong>
+        {% if page.categories %} {% for category in page.categories %}
+        <a
+          href="/{{ category | slugify }}/"
+          class="has-text-primary"
+          aria-label="Ver artículos en la categoría {{ category }}"
+        >
+          {{ category | capitalize }}
+        </a>
+        {% if forloop.last == false %}, {% endif %} {% endfor %} {% else %} Sin
+        categorías asignadas. {% endif %}
+      </p>
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <nav class="level">
+      <div class="level-item">
+        <div class="buttons is-centered">
+          <a
+            href="/"
+            class="button is-link is-rounded"
+            aria-label="Volver al inicio"
+          >
+            <span class="icon">
+              <i class="fas fa-home"></i>
+            </span>
+            <span>Volver al Inicio</span>
+          </a>
+          <a
+            href="#top"
+            class="button is-link is-light is-rounded"
+            aria-label="Volver arriba"
+            title="Volver arriba"
+          >
+            <span class="icon">
+              <i class="fas fa-arrow-up"></i>
+            </span>
+            <span>Volver Arriba</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</dfooter>
+
+<!-- Script para el botón de compartir -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document
+      .getElementById("shareButton")
+      .addEventListener("click", function () {
+        if (navigator.share) {
+          navigator
+            .share({
+              title: "{{ page.title }}",
+              text: "¡Lee este artículo interesante en El Rincón de Hattrick!",
+              url: window.location.href,
+            })
+            .then(() => console.log("Artículo compartido con éxito"))
+            .catch((error) => console.error("Error al compartir:", error));
+        } else {
+          alert(
+            "La función de compartir no está disponible en este dispositivo. ¡Compártelo en tus redes sociales!"
+          );
+        }
+      });
+  });
+
+  // Desplazamiento suave para el botón "Volver Arriba"
+  document
+    .querySelector('a[href="#top"]')
+    .addEventListener("click", function (e) {
+      e.preventDefault(); // Evita el comportamiento por defecto de los enlaces
+      window.scrollTo({ top: 0, behavior: "smooth" }); // Desplazamiento suave hacia arriba
+    });
+</script>
+
+<!-- Estilo para el botón "Volver Arriba" -->
+<style>
+  #backToTopButton {
+    display: none; /* Inicialmente oculto */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10;
+  }
+</style>

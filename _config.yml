@@ -1,0 +1,49 @@
+# Metadatos del sitio
+title: El Rincón de Hattrick
+description: "Estrategias y consejos para mejorar tus juveniles y gestionar tu selección nacional en Hattrick."
+author: elPatronHT
+
+# URL y Base URL
+url: "https://rinconhattrick.github.io"
+baseurl: ""
+
+# Tema
+theme: null
+
+# Motor Markdown
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: true
+
+# Enlaces permanentes
+permalink: "/:categories/:year/:month/:day/:title/"
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-localized # Asegúrate de tener este plugin para la localización
+
+# Configuración de idioma y localización
+lang: "es" # Establece el idioma a español
+locale: "es" # Esto le dice a jekyll-localized que debe usar la configuración regional de español
+
+# Configuración de exclusión
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - .git/
+  - .github/
+  - .gitignore
+
+# Variables personalizadas
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      lang: "es"
+      layout: "post"

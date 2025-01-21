@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: 'es' }}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="{{ site.description }}" />
+    <meta name="author" content="{{ site.author }}" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="{{ page.title }} - {{ site.title }}" />
+    <meta property="og:description" content="{{ site.description }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+    <meta
+      property="og:image"
+      content="{{ '/assets/img/HT.jpg' | relative_url }}"
+    />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{{ page.title }} - {{ site.title }}" />
+    <meta name="twitter:description" content="{{ site.description }}" />
+    <meta
+      name="twitter:image"
+      content="{{ '/assets/img/HT.jpg' | relative_url }}"
+    />
+
+    <!-- Meta Tags para Móviles -->
+    <meta name="theme-color" content="hsl(217, 71%, 53%)" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="apple-mobile-web-app-title" content="{{ site.title }}" />
+    <meta name="mobile-web-app-capable" content="yes" />
+
+    <title>{{ page.title }} - {{ site.title }}</title>
+
+    <link
+      rel="icon"
+      href="{{ '/assets/img/favicon.ico' | relative_url }}"
+      type="image/x-icon"
+    />
+
+    <!-- Preconnect para mejorar rendimiento -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link
+      rel="preconnect"
+      href="https://cdnjs.cloudflare.com"
+      crossorigin="anonymous"
+    />
+
+    <!-- Bulma CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Estilos CSS personalizados -->
+    <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}" />
+  </head>
+  <body class="has-navbar-fixed-top {{ page.layout | downcase }}">
+    <!-- Incluye el header -->
+    <header role="banner" aria-label="Encabezado principal">
+      {% include header.html %}
+    </header>
+
+    <!-- Contenido principal -->
+    <main class="container">
+      <div class="box" role="main">{{ content }}</div>
+    </main>
+
+    <!-- Incluye el footer -->
+    <footer role="contentinfo" aria-label="Pie de página">
+      {% include footer.html %}
+    </footer>
+  </body>
+</html>

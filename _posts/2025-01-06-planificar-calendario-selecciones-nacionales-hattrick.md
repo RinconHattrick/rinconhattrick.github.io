@@ -1,0 +1,90 @@
+---
+layout: post
+title: "Planificar con el Calendario de Selecciones Nacionales en Hattrick"
+author: elPatronHT
+date: 2025-01-19
+categories: selecciones-nacionales
+tags: [calendario, selecciones, estrategia]
+excerpt: "Planifica estrategias y gestiona mejor tu equipo conociendo el calendario de temporadas en Hattrick."
+image: "/assets/img/user.png"
+---
+
+# Planificar con el Calendario de Selecciones Nacionales en Hattrick
+
+El calendario de temporadas en Hattrick es una herramienta esencial para planificar estrategias, entrenamientos y la gestión de jugadores en selecciones nacionales. Aquí se detalla la estructura general de las temporadas, sus eventos clave y cómo aprovechar al máximo cada etapa para garantizar el éxito de tu equipo.
+
+---
+
+## Estructura General del Calendario
+
+El calendario está organizado en dos temporadas consecutivas, cada una con eventos importantes como la Copa Continental, el Mundial, la Copa de Naciones y la Liga de Aspirantes. Además, incluye fechas clave para restablecer el espíritu y la confianza del equipo, aspectos críticos para el rendimiento en el campo.
+
+### Conceptos Clave
+
+- **C.C.**: Copa Continental.
+- **Mun.**: Mundial.
+- **C.N.**: Copa de Naciones.
+- **L.A.**: Liga de Aspirantes.
+- **E.E. y C.E.**: Espíritu y confianza de equipo.
+
+---
+
+## Temporada 1: Claves y Estrategias
+
+### Inicio de Temporada
+
+- **Elecciones Nacionales (Semanas 1-2)**: Se eligen los seleccionadores tras el Mundial anterior.
+- **Restablecimiento del Espíritu y la Confianza (Semana 3)**: Ambos valores se reinician al 100%, preparando al equipo para los próximos torneos.
+
+### Copa Continental y Liga de Aspirantes
+
+- **Fase de Grupos (Semanas 3-10)**: 10 partidos consecutivos.
+- **Cuartos de Final (Semana 11)**: Incluye el restablecimiento de E.E. y C.E. para equipos repescados.
+
+### Fase Final de la Temporada
+
+- **Semifinales y Final de la Copa Continental (Semana 12)**.
+- **Sorteo del Mundial (Final de Semana 12)**: Define los grupos para la siguiente temporada.
+- **Inicio del Mundial (Semana 13)**: Incluye 10 partidos repartidos hasta el final de la temporada.
+
+---
+
+## Temporada 2: Eventos y Gestión
+
+### Mundial y Copa de Naciones
+
+- **Primera Ronda (Semanas 1-6)**: 10 partidos que definen los clasificados.
+- **Fases Eliminatorias**:
+  - Segunda Ronda (Semanas 6-9): Cinco partidos.
+  - Tercera Ronda (Semanas 10-12): Tres partidos.
+  - Cuartos, semifinales y final (Semanas 12-16).
+
+### Restablecimiento del Espíritu y la Confianza
+
+- Semana 6: 80%.
+- Semana 10: 60%.
+- Semana 12: 40%.
+
+---
+
+## Consejos para Aprovechar el Calendario
+
+1. **Planifica los Entrenamientos:**  
+   Asegúrate de que los jugadores clave estén en óptimas condiciones antes de los torneos importantes.
+
+2. **Monitorea el Espíritu y la Confianza:**  
+   Ajusta alineaciones y tácticas en semanas clave para maximizar el rendimiento.
+
+3. **Participa en las Elecciones:**  
+   Influye en la elección del seleccionador para mejorar las probabilidades de éxito de tu selección.
+
+4. **Optimiza en Torneos Previos:**  
+   Usa la Copa Continental y la Liga de Aspirantes para preparar a los jugadores antes de eventos globales como el Mundial.
+
+---
+
+## Puntos Clave para Recordar
+
+- Cada temporada incluye eventos estratégicos que requieren preparación y ajuste constante.
+- Las semanas de restablecimiento son momentos clave para reorganizar tácticas y entrenamientos.
+- Planificar según el calendario te permite equilibrar torneos nacionales e internacionales de manera eficiente.

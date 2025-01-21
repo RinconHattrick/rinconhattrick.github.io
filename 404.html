@@ -1,0 +1,50 @@
+---
+layout: default
+title: "Página no encontrada"
+permalink: /404.html
+---
+
+<section class="section has-text-centered mb-6">
+  <!-- Icono de Error -->
+  <div class="icon">
+    <span class="icon is-large has-text-danger">
+      <i class="fas fa-exclamation-triangle fa-4x"></i>
+    </span>
+  </div>
+
+  <!-- Título Principal -->
+  <h1 class="title has-text-danger">¡Ups! Página no encontrada</h1>
+
+  <!-- Mensaje de Descripción -->
+  <p class="subtitle">
+    La página que buscas no está disponible o ha sido movida. Pero no te
+    preocupes, aquí tienes algunas opciones para seguir navegando.
+  </p>
+
+  <!-- Enlaces para navegación -->
+  <div class="buttons is-centered mt-5">
+    <a href="/" class="button is-link is-rounded">
+      <span class="icon">
+        <i class="fas fa-home"></i>
+      </span>
+      <span>Volver al inicio</span>
+    </a>
+  </div>
+
+  <!-- Imagen o Ilustración -->
+  <figure class="image is-256x256 is-inline-block mt-5">
+    <img
+      src="{{ '/assets/img/404-error.jpg' | relative_url }}"
+      alt="Página no encontrada - ilustración"
+      loading="lazy"
+    />
+  </figure>
+
+  <!-- Mensaje Final -->
+  <div class="mt-5">
+    <p class="has-text-centered">
+      Si crees que esto es un error, no dudes en
+      <a href="/contacto" class="has-text-primary">ponerte en contacto</a>.
+    </p>
+  </div>
+</section>

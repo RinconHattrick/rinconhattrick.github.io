@@ -1,0 +1,72 @@
+<footer class="footer" role="contentinfo" aria-label="Pie de página">
+  <div class="content has-text-centered">
+    <!-- Título del Blog -->
+    <p>
+      <strong class="has-text-primary">{{ site.title }}</strong> &copy; {{ "now"
+      | date: "%Y" }} - {{ site.author }}. <br />Todos los derechos reservados.
+    </p>
+
+    <!-- Navegación Secundaria -->
+    <nav
+      class="is-flex is-justify-content-center is-align-items-center mt-4"
+      role="navigation"
+      aria-label="Enlaces secundarios"
+    >
+      <a
+        href="/acerca-de/"
+        class="has-text-link mx-3"
+        aria-label="Ir a Acerca de"
+        title="Acerca de este sitio"
+      >
+        <span class="icon is-small">
+          <i class="fas fa-info-circle"></i>
+        </span>
+        Acerca de
+      </a>
+      <span aria-hidden="true">|</span>
+      <a
+        href="/contacto/"
+        class="has-text-link mx-3"
+        aria-label="Ir a la página de Contacto"
+        title="Contáctanos"
+      >
+        <span class="icon is-small">
+          <i class="fas fa-envelope"></i>
+        </span>
+        Contáctanos
+      </a>
+    </nav>
+
+    <!-- Iconos Sociales -->
+    <div class="social-icons mt-4">
+      <a
+        href="https://t.me/JuvenilesHT"
+        class="icon has-text-info mx-3"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Ir a nuestro canal de Telegram (nueva pestaña)"
+        title="Abrir Telegram"
+      >
+        <i class="fab fa-telegram fa-lg"></i>
+      </a>
+      <a
+        href="https://wa.me/qr/537E4GO72BHHB1"
+        class="icon has-text-success mx-3"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Abrir WhatsApp (nueva pestaña)"
+        title="Abrir WhatsApp"
+      >
+        <i class="fab fa-whatsapp fa-lg"></i>
+      </a>
+      <a
+        href="mailto:tutorhattrick@hotmail.com"
+        class="icon has-text-danger mx-3"
+        aria-label="Enviar un correo a tutorhattrick@hotmail.com"
+        title="Enviar un correo electrónico"
+      >
+        <i class="fas fa-envelope fa-lg"></i>
+      </a>
+    </div>
+  </div>
+</footer>
