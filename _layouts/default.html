@@ -7,7 +7,6 @@
     <meta name="author" content="{{ site.author }}" />
     <meta name="robots" content="index, follow" />
 
-    <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="{{ page.title }} - {{ site.title }}" />
     <meta property="og:description" content="{{ site.description }}" />
     <meta property="og:type" content="website" />
@@ -17,7 +16,6 @@
       content="{{ '/assets/img/HT.jpg' | relative_url }}"
     />
 
-    <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="{{ page.title }} - {{ site.title }}" />
     <meta name="twitter:description" content="{{ site.description }}" />
@@ -26,7 +24,6 @@
       content="{{ '/assets/img/HT.jpg' | relative_url }}"
     />
 
-    <!-- Meta Tags para Móviles -->
     <meta name="theme-color" content="hsl(217, 71%, 53%)" />
     <meta
       name="apple-mobile-web-app-status-bar-style"
@@ -43,7 +40,6 @@
       type="image/x-icon"
     />
 
-    <!-- Preconnect para mejorar rendimiento -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net" />
     <link
       rel="preconnect"
@@ -51,33 +47,27 @@
       crossorigin="anonymous"
     />
 
-    <!-- Bulma CSS -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"
     />
 
-    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
 
-    <!-- Estilos CSS personalizados -->
     <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}" />
   </head>
   <body class="has-navbar-fixed-top {{ page.layout | downcase }}">
-    <!-- Incluye el header -->
     <header role="banner" aria-label="Encabezado principal">
       {% include header.html %}
     </header>
 
-    <!-- Contenido principal -->
-    <main class="container">
-      <div class="box" role="main">{{ content }}</div>
+    <main class="container mt-5">
+      <div role="main">{{ content }}</div>
     </main>
 
-    <!-- Incluye el footer -->
     <footer role="contentinfo" aria-label="Pie de página">
       {% include footer.html %}
     </footer>

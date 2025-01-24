@@ -1,0 +1,16 @@
+---
+layout: null
+permalink: /assets/json/search.json
+---
+
+[
+{% for post in site.posts %}
+{% if post.published %}
+  {
+    "title": "{{ post.title | escape }}",
+    "url": "{{ post.url | relative_url }}",
+    "excerpt": "{{ post.excerpt | strip_newlines | escape }}"
+  }{% if forloop.last == false %},{% endif %}
+{% endif %}
+{% endfor %}
+]

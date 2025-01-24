@@ -7,6 +7,8 @@ categories: preguntas-respuestas
 tags: [FAQ, selecciones, Hattrick, reglas]
 excerpt: "Conoce a fondo las reglas que rigen las selecciones nacionales y Sub-21 en Hattrick, desde elecciones hasta convocatorias."
 image: "/assets/img/user.png"
+featured: true
+published: true
 ---
 
 # Preguntas Frecuentes sobre Reglas de las Selecciones Nacionales en Hattrick

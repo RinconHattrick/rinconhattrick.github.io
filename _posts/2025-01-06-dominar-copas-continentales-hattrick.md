@@ -7,6 +7,8 @@ categories: selecciones-nacionales
 tags: [Copas Continentales, Hattrick, selecciones, ranking, competiciones]
 excerpt: "Aprende a dominar las Copas Continentales en Hattrick con esta guía completa sobre su formato y cómo contribuir al éxito de tu selección nacional."
 image: "/assets/img/user.png"
+featured: false
+published: true
 ---
 
 # Dominar las Copas Continentales en Hattrick

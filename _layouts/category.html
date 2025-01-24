@@ -1,9 +1,8 @@
 ---
-layout: default
+layout: with-sidebar
 ---
 
-<!-- Hero Section -->
-<section class="hero">
+<header class="my-4">
   <div class="hero-body">
     <div class="container has-text-centered">
       <h1 class="title has-text-primary" role="heading" aria-level="1">
@@ -14,11 +13,9 @@ layout: default
       </h2>
     </div>
   </div>
-</section>
+</hesection>
 
-<!-- Main Content Section -->
-<section class="box" id="top">
-  <!-- Asegúrate de que este id="top" está aquí -->
+<main class="box my-4" id="top">
   <div class="container">
     <h2 class="title is-3 has-text-primary" role="heading" aria-level="2">
       {{ page.title }}
@@ -71,8 +68,7 @@ layout: default
     </div>
     {% endif %}
   </div>
-</section>
-<!-- Botones de Navegación (Volver al inicio, Volver arriba) -->
+</>
 <div class="mt-6">
   <nav class="level">
     <div class="level-item">
@@ -88,7 +84,6 @@ layout: default
           </span>
           <span>Volver al Inicio</span>
         </a>
-        <!-- Nuevo botón de "Volver Arriba" -->
         <a
           href="#top"
           class="button is-link is-light is-rounded"
@@ -105,13 +100,11 @@ layout: default
   </nav>
 </div>
 
-<!-- Script para desplazamiento suave -->
 <script>
-  // Desplazamiento suave para el botón "Volver Arriba"
   document
     .querySelector('a[href="#top"]')
     .addEventListener("click", function (e) {
-      e.preventDefault(); // Evita el comportamiento por defecto de los enlaces
-      window.scrollTo({ top: 0, behavior: "smooth" }); // Desplazamiento suave hacia arriba
+      e.preventDefault(); 
+      window.scrollTo({ top: 0, behavior: "smooth" }); 
     });
 </script>

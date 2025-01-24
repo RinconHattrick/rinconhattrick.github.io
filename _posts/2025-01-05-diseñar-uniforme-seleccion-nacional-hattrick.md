@@ -7,6 +7,8 @@ categories: selecciones-nacionales
 tags: [uniforme, selección, diseño, identidad, colores]
 excerpt: "Aprende a personalizar los colores y diseños del uniforme nacional y su impacto en la identidad del equipo."
 image: "/assets/img/user.png"
+featured: false
+published: true
 ---
 
 # Diseñar el Uniforme de la Selección Nacional en Hattrick

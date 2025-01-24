@@ -8,6 +8,8 @@ tags:
   [sorteo, Mundial, Hattrick, Copas Continentales, clasificación, estrategias]
 excerpt: "Descubre cómo funciona el sorteo del Mundial en Hattrick y las estrategias clave para enfrentarte a cualquier grupo con éxito."
 image: "/assets/img/user.png"
+featured: false
+published: true
 ---
 
 # Dominar el Sorteo del Mundial en Hattrick
@@ -78,7 +80,7 @@ Aquí tienes un ejemplo ficticio de cómo podrían formarse los grupos del Mundi
 
 ### Mantén a tu Equipo en Forma
 
-- Asegúrate de que tus jugadores estén entrenados en las tácticas que planeas usar, y prioriza la condición física y mental.
+- Asegúrate de que tus jugadores estén entrenados en las tácticas que planeas usar, y prioriza la resistencia y forma.
 
 > **Tip avanzado:** Revisa los históricos de enfrentamientos para detectar patrones tácticos y debilidades de tus rivales.
 

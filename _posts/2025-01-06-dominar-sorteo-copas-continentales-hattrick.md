@@ -7,6 +7,8 @@ categories: selecciones-nacionales
 tags: [sorteo, Copas Continentales, Hattrick, competición, ranking, estrategias]
 excerpt: "Descubre cómo funciona el sorteo de las Copas Continentales en Hattrick y las mejores estrategias para maximizar el rendimiento de tu selección nacional."
 image: "/assets/img/user.png"
+featured: false
+published: true
 ---
 
 # Dominar el Sorteo de las Copas Continentales en Hattrick

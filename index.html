@@ -1,125 +1,94 @@
 ---
-layout: default
-title: "el Rincón de Hattrick"
+layout: with-sidebar
+title: "El Rincón de Hattrick"
 ---
 
-<!-- Sección principal del héroe -->
-<section class="hero" id="top">
-  <div class="hero-body">
-    <div class="container has-text-centered">
-      <!-- Título principal del sitio -->
+<div class="container">
+  <header class="my-4" id="top">
+    <div class="has-text-centered">
       <h1 class="title has-text-primary" role="heading" aria-level="1">
         {{ site.title }}
       </h1>
-      <!-- Descripción del sitio -->
       <h2 class="subtitle is-4" role="heading" aria-level="2">
         {{ site.description }}
       </h2>
     </div>
-  </div>
-</section>
+  </header>
 
-<!-- Sección de artículos organizados por categoría -->
-<main>
-  <div class="container">
-    {% for category in site.categories %} {% assign category_name = category[0]
-    %}
-    <!-- Nombre de la categoría -->
-    {% assign category_page = site.pages | where: "category", category_name |
-    first %}
+  <main class="my-4">
+    <div class="container">
+      {% for category in site.categories %} {% assign category_name =
+      category[0] %} {% assign category_page = site.pages | where: "category",
+      category_name | first %}
 
-    <!-- Página asociada a la categoría -->
-    <div class="box">
-      <!-- Título de la categoría -->
-      <h2 class="title is-3 has-text-primary" role="heading" aria-level="3">
-        {{ category_page.title | default: category_name }}
-      </h2>
-      <!-- Descripción de la categoría, con un valor predeterminado si no se encuentra -->
-      <p class="subtitle is-5">
-        {{ category_page.description | default: "No hay descripción disponible
-        para esta categoría." }}
-      </p>
+      <div class="box">
+        <h2 class="title is-3 has-text-primary" role="heading" aria-level="3">
+          {{ category_page.title | default: category_name }}
+        </h2>
+        <p class="subtitle is-5">
+          {{ category_page.description | default: "No hay descripción disponible
+          para esta categoría." }}
+        </p>
 
-      <div class="table-container">
-        <!-- Tabla de artículos dentro de la categoría -->
-        <table class="table is-fullwidth is-hoverable">
-          <thead>
-            <tr>
-              <th>Fecha</th>
-              <th>Artículo</th>
-            </tr>
-          </thead>
-          <tbody>
-            {% for post in category[1] %}
-            <tr>
-              <!-- Fecha del artículo -->
-              <td class="is-narrow">
-                <span class="icon is-small">
-                  <i class="fas fa-calendar-day"></i>
-                </span>
-                {{ post.date | date: "%d/%m/%Y" }}
-              </td>
-              <!-- Enlace al artículo con un resumen -->
-              <td>
-                <a
-                  href="{{ post.url }}"
-                  class="has-text-weight-semibold"
-                  aria-label="Leer más sobre {{ post.title }}"
-                >
-                  {{ post.title }}
-                </a>
-                <p class="is-size-7 mt-1">
-                  {{ post.excerpt | strip_html | truncate: 150 }}
-                </p>
-              </td>
-            </tr>
-            {% endfor %}
-          </tbody>
-        </table>
+        <div class="table-container">
+          <table class="table is-fullwidth is-hoverable">
+            <thead>
+              <tr>
+                <th>Fecha</th>
+                <th>Artículo</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for post in category[1] %}
+              <tr>
+                <td class="is-narrow">
+                  <span class="icon is-small">
+                    <i class="fas fa-calendar-day"></i>
+                  </span>
+                  {{ post.date | date: "%d/%m/%Y" }}
+                </td>
+                <td>
+                  <a
+                    href="{{ post.url }}"
+                    class="has-text-weight-semibold"
+                    aria-label="Leer más sobre {{ post.title }}"
+                  >
+                    {{ post.title }}
+                  </a>
+                  <p class="is-size-7 mt-1">
+                    {{ post.excerpt | strip_html | truncate: 150 }}
+                  </p>
+                </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
       </div>
+      {% endfor %}
     </div>
-    {% endfor %}
-  </div>
 
-  <!-- Botón para volver al inicio de la página -->
-  <div class="has-text-centered mt-5">
-    <a
-      href="#top"
-      class="button is-link is-light is-rounded"
-      aria-label="Volver Arriba"
-      title="Volver al inicio"
-    >
-      <span class="icon">
-        <i class="fas fa-arrow-up"></i>
-      </span>
-      <span>Volver Arriba</span>
-    </a>
-  </div>
-</main>
-
-<!-- Sección sobre el autor del sitio -->
-<section class="mt-4">
-  <div class="container has-text-centered">
-    <h2 class="title is-3 has-text-primary" role="heading" aria-level="2">
-      Sobre el Autor
-    </h2>
-    <div class="content">
-      <p>
-        Soy elPatronHT, un apasionado mánager de Hattrick con años de
-        experiencia. Mi objetivo es compartir conocimientos y ayudar a la
-        comunidad a alcanzar el conocimiento con los juveniles y selecciones.
-      </p>
+    <div class="has-text-centered mt-5">
+      <a
+        href="#top"
+        class="button is-link is-light is-rounded"
+        aria-label="Volver Arriba"
+        title="Volver al inicio"
+      >
+        <span class="icon">
+          <i class="fas fa-arrow-up"></i>
+        </span>
+        <span>Volver Arriba</span>
+      </a>
     </div>
-  </div>
-</section>
+  </main>
+</div>
 
-<!-- Script para desplazamiento suave -->
 <script>
-  // Desplazamiento suave para el botón "Volver Arriba"
   document
     .querySelector('a[href="#top"]')
     .addEventListener("click", function (e) {
-      e.preventDefault(); // Evita el comportamiento por defecto de los enlaces
-      window.scrollTo({ top: 0, behavior: "smooth" }); // Desplazamiento suave hacia arriba
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
     });
 </script>

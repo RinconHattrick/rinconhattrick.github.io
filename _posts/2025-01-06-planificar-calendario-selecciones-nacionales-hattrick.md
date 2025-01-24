@@ -2,11 +2,13 @@
 layout: post
 title: "Planificar con el Calendario de Selecciones Nacionales en Hattrick"
 author: elPatronHT
-date: 2025-01-19
+date: 2025-01-20
 categories: selecciones-nacionales
 tags: [calendario, selecciones, estrategia]
 excerpt: "Planifica estrategias y gestiona mejor tu equipo conociendo el calendario de temporadas en Hattrick."
 image: "/assets/img/user.png"
+featured: false
+published: true
 ---
 
 # Planificar con el Calendario de Selecciones Nacionales en Hattrick

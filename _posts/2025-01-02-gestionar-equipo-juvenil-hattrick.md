@@ -7,6 +7,8 @@ categories: equipo-juvenil
 tags: [juveniles, gestión, estrategias]
 excerpt: "Aprende cómo gestionar y optimizar tu equipo juvenil en Hattrick para construir un club exitoso a largo plazo."
 image: "/assets/img/user.png"
+featured: false
+published: true
 ---
 
 # Gestionar un Equipo Juvenil en Hattrick

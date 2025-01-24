@@ -1,0 +1,77 @@
+---
+layout: default
+title: "Resultados de Búsqueda"
+---
+
+<section class="section">
+  <div class="container">
+    <h1 class="title">Resultados de búsqueda</h1>
+
+    <input
+      type="text"
+      id="search-input"
+      class="input"
+      placeholder="Buscar..."
+      aria-label="Buscar artículos"
+    />
+    <div id="search-results" class="content mt-5"></div>
+  </div>
+</section>
+
+<script>
+  // Ruta al JSON
+  const searchJsonUrl = "{{ '/assets/json/search.json' | relative_url }}";
+
+  // Obtener los resultados del archivo JSON
+  async function fetchSearchData(query) {
+    const response = await fetch(searchJsonUrl);
+    const data = await response.json();
+
+    // Filtrar los resultados que coincidan con la consulta
+    return data.filter((item) =>
+      item.title.toLowerCase().includes(query.toLowerCase())
+    );
+  }
+
+  // Renderizar resultados
+  function renderResults(results) {
+    const resultsContainer = document.getElementById("search-results");
+    resultsContainer.innerHTML = ""; // Limpiar resultados previos
+
+    if (results.length === 0) {
+      resultsContainer.innerHTML = "<p>No se encontraron resultados.</p>";
+      return;
+    }
+
+    const ul = document.createElement("ul");
+    results.forEach((item) => {
+      const li = document.createElement("li");
+      li.innerHTML = `<a href="${item.url}">${item.title}</a>`;
+      ul.appendChild(li);
+    });
+    resultsContainer.appendChild(ul);
+  }
+
+  // Obtener la consulta de la URL
+  function getQueryParam(param) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(param) || "";
+  }
+
+  // Manejar evento de entrada
+  document.getElementById("search-input").addEventListener("input", (e) => {
+    const query = e.target.value;
+    if (query.length >= 3) {
+      fetchSearchData(query).then(renderResults);
+    } else {
+      renderResults([]); // Limpiar si la consulta es corta
+    }
+  });
+
+  // Búsqueda inicial basada en la URL
+  const initialQuery = getQueryParam("q");
+  if (initialQuery) {
+    document.getElementById("search-input").value = initialQuery;
+    fetchSearchData(initialQuery).then(renderResults);
+  }
+</script>

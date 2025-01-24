@@ -1,12 +1,14 @@
 ---
 layout: post
-title: "Cómo Sacar el Máximo Provecho de la Red de Cazatalentos en Hattrick"
+title: "Sacar el Máximo Provecho de la Red de Cazatalentos en Hattrick"
 author: elPatronHT
 date: 2025-01-03
 categories: equipo-juvenil
 tags: [cazatalentos, ojeadores, refuerzos]
 excerpt: "Descubre cómo optimizar el uso de la red de cazatalentos para reforzar tu equipo en Hattrick."
 image: "/assets/img/user.png"
+featured: false
+published: true
 ---
 
 # Sacar el Máximo Provecho de la Red de Cazatalentos en Hattrick

@@ -7,6 +7,8 @@ categories: equipo-mayor
 tags: [Hattrick, experiencia, entrenamiento]
 excerpt: Descubre cómo la experiencia en Hattrick puede mejorar el rendimiento de tus jugadores y llevar a tu equipo al éxito.
 image: "/assets/img/user.png"
+featured: false
+published: true
 ---
 
 # Aprovechar la experiencia de los jugadores en Hattrick

@@ -7,6 +7,8 @@ categories: selecciones-nacionales
 tags: [partidos, selección, Hattrick]
 excerpt: "Descubre los beneficios y consideraciones clave de los partidos de selección nacional en Hattrick."
 image: "/assets/img/user.png"
+featured: false
+published: true
 ---
 
 # Partidos de Selección Nacional en Hattrick

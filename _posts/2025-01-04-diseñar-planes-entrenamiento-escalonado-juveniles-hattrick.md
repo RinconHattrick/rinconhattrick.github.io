@@ -7,6 +7,8 @@ categories: equipo-juvenil
 tags: [entrenamiento, juveniles, desarrollo]
 excerpt: "Aprende a desarrollar a tus juveniles con entrenamientos progresivos y optimizados."
 image: "/assets/img/user.png"
+featured: false
+published: true
 ---
 
 # Diseñar Planes de Entrenamiento Escalonado para los Juveniles en Hattrick

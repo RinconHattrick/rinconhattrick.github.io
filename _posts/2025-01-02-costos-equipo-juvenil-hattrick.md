@@ -1,15 +1,17 @@
 ---
 layout: post
-title: "Los Costos de un Equipo Juvenil en Hattrick"
+title: "Costos de un Equipo Juvenil en Hattrick"
 author: elPatronHT
 date: 2025-01-10
 categories: equipo-juvenil
 tags: [finanzas, juveniles, costos]
 excerpt: "Descubre los gastos asociados a gestionar un equipo juvenil en Hattrick y cómo optimizarlos para maximizar su rentabilidad."
 image: "/assets/img/user.png"
+featured: false
+published: true
 ---
 
-# Los Costos de un Equipo Juvenil en Hattrick
+# Costos de un Equipo Juvenil en Hattrick
 
 Gestionar un equipo juvenil en Hattrick es una inversión estratégica para garantizar el futuro de tu club. Sin embargo, antes de empezar, es crucial comprender los costos involucrados y cómo optimizarlos para evitar comprometer tus finanzas.
 

@@ -7,6 +7,8 @@ categories: selecciones-nacionales
 tags: [elecciones, seleccionadores, Hattrick]
 excerpt: "Descubre las reglas y responsabilidades detrás del proceso electoral de seleccionadores nacionales en Hattrick."
 image: "/assets/img/user.png"
+featured: false
+published: true
 ---
 
 # Cómo Funcionan las Elecciones de Seleccionadores Nacionales en Hattrick

@@ -13,6 +13,7 @@
         aria-label="Abrir menú"
         aria-expanded="false"
         data-target="navbarMenu"
+        aria-controls="navbarMenu"
       >
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
@@ -25,48 +26,42 @@
         <a
           class="navbar-item {% if page.url == '/' %}is-active{% endif %}"
           href="/"
+          aria-label="Ir a inicio"
         >
           <span class="icon">
-            <i class="fas fa-home"></i>
+            <i class="fas fa-home" aria-hidden="true"></i>
           </span>
           Inicio
         </a>
-        <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link" aria-haspopup="true" aria-expanded="false">
-            <span class="icon is-small">
-              <i class="fas fa-folder"></i>
-            </span>
-            Categorías
-          </a>
-          <div class="navbar-dropdown">
-            {% if site.pages %} {% for category_page in site.pages %} {% if
-            category_page.layout == "category" %}
-            <a
-              class="navbar-item {% if page.url contains category_page.permalink %}is-active{% endif %}"
-              href="{{ category_page.permalink }}"
-            >
-              {{ category_page.title }}
-            </a>
-            {% endif %} {% endfor %} {% else %}
-            <a class="navbar-item">No hay categorías disponibles</a>
-            {% endif %}
-          </div>
-        </div>
+        <a
+          class="navbar-item"
+          href="https://www.hattrick.org/?inviteRef=U8EHM5"
+          target="_blank"
+          rel="noopener"
+          aria-label="Ir a Hattrick"
+        >
+          <span class="icon">
+            <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+          </span>
+          Hattrick
+        </a>
         <a
           class="navbar-item {% if page.url contains '/acerca-de/' %}is-active{% endif %}"
           href="/acerca-de/"
+          aria-label="Ir a Acerca de"
         >
           <span class="icon">
-            <i class="fas fa-info-circle"></i>
+            <i class="fas fa-info-circle" aria-hidden="true"></i>
           </span>
           Acerca de
         </a>
         <a
           class="navbar-item {% if page.url contains '/contacto/' %}is-active{% endif %}"
           href="/contacto/"
+          aria-label="Ir a Contáctanos"
         >
           <span class="icon">
-            <i class="fas fa-envelope"></i>
+            <i class="fas fa-envelope" aria-hidden="true"></i>
           </span>
           Contáctanos
         </a>
@@ -85,6 +80,10 @@
         const isActive = burger.classList.toggle("is-active");
         menu.classList.toggle("is-active");
         burger.setAttribute("aria-expanded", isActive ? "true" : "false");
+
+        if (isActive) {
+          burger.focus();
+        }
       });
     }
   });

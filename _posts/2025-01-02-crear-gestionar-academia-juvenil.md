@@ -7,6 +7,8 @@ categories: equipo-juvenil
 tags: [academia, juveniles, estrategia]
 excerpt: "Aprende a activar tu academia juvenil, desarrollar talento y planificar el futuro de tu club en Hattrick."
 image: "/assets/img/user.png"
+featured: false
+published: true
 ---
 
 # Crear y Gestionar tu Academia Juvenil en Hattrick

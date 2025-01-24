@@ -1,0 +1,79 @@
+---
+layout: default
+---
+
+<div class="columns mt-6">
+  <div class="column">{{ content }}</div>
+
+  <aside class="column is-one-quarter">
+    <div class="box">
+      <h3 class="title is-5 has-text-primary">Categorías</h3>
+      <ul class="is-disc">
+        {% if site.pages %} {% for category_page in site.pages %} {% if
+        category_page.layout == "category" %}
+        <li>
+          <a
+            href="{{ category_page.permalink }}"
+            class="has-text-link is-hovered"
+          >
+            <span class="icon is-small"><i class="fas fa-tag"></i></span>
+            {{ category_page.title }}
+          </a>
+        </li>
+        {% endif %} {% endfor %} {% else %}
+        <li>No hay categorías disponibles</li>
+        {% endif %}
+      </ul>
+    </div>
+
+    <div class="box">
+      <h3 class="title is-5">Buscar en el Blog</h3>
+      <form action="/search/" method="get">
+        <div class="field">
+          <div class="control">
+            <input
+              class="input"
+              type="text"
+              name="q"
+              placeholder="Buscar artículos..."
+              aria-label="Buscar en el blog"
+            />
+          </div>
+        </div>
+        <button type="submit" class="button is-link">Buscar</button>
+      </form>
+    </div>
+
+    <div class="box">
+      <h3 class="title is-5 has-text-primary">Artículos Destacados</h3>
+      <ul class="has-text-grey">
+        {% assign featured_posts = site.posts | where: "featured", true %} {% if
+        featured_posts.size > 0 %} {% for post in featured_posts %}
+        <li>
+          <a href="{{ post.url }}" class="has-text-link is-hovered">
+            <span class="icon is-small"><i class="fas fa-circle"></i></span>
+            {{ post.title }}
+          </a>
+        </li>
+        {% endfor %} {% else %}
+        <li>No hay artículos destacados</li>
+        {% endif %}
+      </ul>
+    </div>
+
+    <div class="box">
+      <h3 class="title is-5 has-text-primary">Últimos Artículos</h3>
+      <ul>
+        {% assign published_posts = site.posts | where: "published", true |
+        sort: "date" | reverse %} {% for post in published_posts limit: 4 %}
+        <li>
+          <a href="{{ post.url }}">
+            <span class="icon is-small"><i class="fas fa-clock"></i></span>
+            {{ post.title }}
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </aside>
+</div>

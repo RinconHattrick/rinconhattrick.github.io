@@ -7,6 +7,8 @@ categories: equipo-juvenil
 tags: [ligas, juveniles, estrategia]
 excerpt: "Descubre cómo las ligas juveniles en Hattrick pueden potenciar el desarrollo de tu equipo."
 image: "/assets/img/user.png"
+featured: false
+published: true
 ---
 
 # Sacar Provecho a las Ligas Juveniles en Hattrick

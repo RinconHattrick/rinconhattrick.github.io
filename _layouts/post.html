@@ -3,7 +3,6 @@ layout: default
 ---
 
 <article class="box" role="article">
-  <!-- Encabezado del artículo -->
   <header class="media is-centered m-4">
     <div class="media-left">
       {% if page.image %}
@@ -25,10 +24,8 @@ layout: default
     </div>
   </header>
 
-  <!-- Contenido principal -->
   <section class="content my-6 mx-4" role="main">{{ content }}</section>
 
-  <!-- Botón de compartir con opciones -->
   <div class="mt-4 has-text-centered">
     <button
       id="shareButton"
@@ -45,7 +42,6 @@ layout: default
 
 <div class="mt-4">
   <div class="columns container">
-    <!-- Categorías -->
     <div class="column">
       <p class="has-text-grey">
         <strong>Categorías:</strong>
@@ -94,7 +90,6 @@ layout: default
   </div>
 </dfooter>
 
-<!-- Script para el botón de compartir -->
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     document
@@ -117,7 +112,6 @@ layout: default
       });
   });
 
-  // Desplazamiento suave para el botón "Volver Arriba"
   document
     .querySelector('a[href="#top"]')
     .addEventListener("click", function (e) {
@@ -125,14 +119,3 @@ layout: default
       window.scrollTo({ top: 0, behavior: "smooth" }); // Desplazamiento suave hacia arriba
     });
 </script>
-
-<!-- Estilo para el botón "Volver Arriba" -->
-<style>
-  #backToTopButton {
-    display: none; /* Inicialmente oculto */
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 10;
-  }
-</style>

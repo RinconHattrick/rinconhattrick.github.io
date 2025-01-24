@@ -7,6 +7,8 @@ categories: equipo-juvenil
 tags: [entrenamiento, juveniles, estrategia]
 excerpt: "Descubre cómo maximizar el desarrollo de tus juveniles con estrategias de entrenamiento efectivas."
 image: "/assets/img/user.png"
+featured: false
+published: true
 ---
 
 # Optimizar el Entrenamiento Juvenil en Hattrick

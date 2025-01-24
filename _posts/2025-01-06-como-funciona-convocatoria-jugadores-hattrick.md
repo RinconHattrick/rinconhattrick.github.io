@@ -7,6 +7,8 @@ categories: selecciones-nacionales
 tags: [convocatoria, jugadores, selecciones]
 excerpt: "Descubre cómo los seleccionadores eligen jugadores y gestionan la experiencia táctica en las selecciones nacionales."
 image: "/assets/img/user.png"
+featured: false
+published: true
 ---
 
 # Cómo Funciona la Convocatoria de Jugadores en Hattrick

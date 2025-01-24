@@ -1,15 +1,17 @@
 ---
 layout: post
-title: "Staff de las Selecciones Nacionales en Hattrick: Roles, Gestión y Estrategia"
+title: "Staff de las Selecciones Nacionales en Hattrick: Roles y Gestión"
 author: elPatronHT
 date: 2025-01-07
 categories: selecciones-nacionales
 tags: [personal, selección, Hattrick, staff]
 excerpt: "Descubre cómo los roles del equipo técnico de las selecciones nacionales contribuyen al éxito en Hattrick."
 image: "/assets/img/user.png"
+featured: false
+published: true
 ---
 
-# Staff de las Selecciones Nacionales en Hattrick: Roles, Gestión y Estrategia
+# Staff de las Selecciones Nacionales en Hattrick: Roles y Gestión
 
 En Hattrick, el éxito de una selección nacional no recae únicamente en el seleccionador. Un equipo técnico bien organizado, compuesto por ayudantes, ojeadores, analistas y otros roles, asegura una gestión eficiente y estratégica que impulsa el rendimiento del equipo.
 

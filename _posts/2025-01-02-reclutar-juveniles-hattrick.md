@@ -1,15 +1,17 @@
 ---
 layout: post
-title: "Reclutar Juveniles en Hattrick: Sistemas y Estrategias"
+title: "Reclutar Juveniles en Hattrick"
 author: elPatronHT
 date: 2025-01-01
 categories: equipo-juvenil
 tags: [juveniles, reclutamiento, estrategia]
 excerpt: "Explora los sistemas de reclutamiento juvenil en Hattrick y elige la mejor estrategia para el futuro de tu equipo."
 image: "/assets/img/user.png"
+featured: false
+published: true
 ---
 
-# Reclutar Juveniles en Hattrick: Sistemas y Estrategias
+# Reclutar Juveniles en Hattrick
 
 Reclutar y formar juveniles es fundamental para asegurar el futuro de tu equipo en Hattrick. Este proceso estratégico te permite descubrir talento, fortalecer tu primer equipo y generar ingresos con jugadores destacados. En esta guía exploramos los dos sistemas principales de reclutamiento: la red de cazatalentos y el equipo juvenil.
 

@@ -7,6 +7,8 @@ categories: selecciones-nacionales
 tags: [gestión, selección, jugadores]
 excerpt: "Descubre cómo maximizar el rendimiento de tus internacionales mientras proteges los intereses de tu club."
 image: "/assets/img/user.png"
+featured: false
+published: true
 ---
 
 # Gestionar un Jugador en la Selección Nacional en Hattrick
@@ -77,7 +79,7 @@ Si un jugador sufre una lesión en un partido con la selección, esta cubre el *
 ## Consejos Prácticos
 
 1. **Desarrolla habilidades clave:** Entrena atributos esenciales como resistencia, balón parado o finalización, según la posición del jugador.
-2. **Monitorea la condición física:** Controla su estado y carga de partidos para evitar sobreexigencias.
+2. **Monitorea la resistencia:** Controla su estado y carga de partidos para evitar sobreexigencias.
 3. **Planifica en función del calendario:** Ajusta tus estrategias de entrenamiento y alineación considerando los compromisos internacionales.
 4. **Participa en la comunidad:** Únete a los foros nacionales para coordinarte con el seleccionador y apoyar a la selección.
 

@@ -7,6 +7,8 @@ categories: selecciones-nacionales
 tags: [ranking, selecciones, estrategia]
 excerpt: "Descubre cómo se calcula el ranking de selecciones nacionales y qué estrategias usar para mejorar tu posición."
 image: "/assets/img/user.png"
+featured: false
+published: true
 ---
 
 # Cómo Funciona la Clasificación de Selecciones Nacionales en Hattrick

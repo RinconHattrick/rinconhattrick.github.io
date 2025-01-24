@@ -7,6 +7,8 @@ categories: equipo-juvenil
 tags: [juveniles, gestión, entrenamiento]
 excerpt: "Descubre cómo sacar el máximo provecho de tus juveniles en Hattrick con estrategias de evaluación y entrenamiento."
 image: "/assets/img/user.png"
+featured: false
+published: true
 ---
 
 # Gestionar y Descubrir el Potencial de los Jugadores Juveniles

@@ -1,12 +1,14 @@
 ---
 layout: post
-title: "Preguntas Frecuentes sobre -+Selecciones Nacionales y Sub-21 en Hattrick"
+title: "Preguntas Frecuentes sobre Selecciones Nacionales y Sub-21 en Hattrick"
 author: elPatronHT
 date: 2025-01-03
 categories: preguntas-respuestas
 tags: [FAQ, selecciones, estrategias]
 excerpt: "Descubre todo sobre la gestión y participación en las selecciones nacionales y Sub-21 en Hattrick, incluyendo tácticas y aspectos clave."
 image: "/assets/img/user.png"
+featured: true
+published: true
 ---
 
 # Preguntas Frecuentes sobre Selecciones Nacionales y Sub-21 en Hattrick
@@ -27,7 +29,7 @@ No. El entrenamiento depende exclusivamente del equipo de club.
 
 No hay un "entrenador" tradicional. Las tácticas se configuran con la barra del asistente táctico.
 
-## ¿Cuántos jugadores se pueden seleccionar como máximo?\*\*
+## ¿Cuántos jugadores se pueden seleccionar como máximo?
 
 Un máximo de **26 jugadores**.
 
@@ -52,7 +54,7 @@ Es un acuerdo entre seleccionadores para coordinar estrategias que mantengan el 
 
 Sí, las mecánicas son las mismas.
 
-## ¿La selección paga el sueldo de los jugadores\*
+## ¿La selección paga el sueldo de los jugadores
 
 Sí. La selección paga un porcentaje del salario del jugador al club después de cada partido.
 

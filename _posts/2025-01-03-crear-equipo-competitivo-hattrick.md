@@ -7,6 +7,8 @@ categories: equipo-mayor
 tags: ["Hattrick", "equipo competitivo", "estrategias fútbol"]
 excerpt: "Descubre cómo construir un equipo exitoso desde cero con estrategias claras y eficientes."
 image: "/assets/img/user.png"
+featured: false
+published: true
 ---
 
 # Crear un Equipo Competitivo en Hattrick

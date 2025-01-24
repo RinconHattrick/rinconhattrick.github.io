@@ -1,15 +1,17 @@
 ---
 layout: post
-title: "Ascender a Juveniles en Hattrick"
+title: "Ascender Juveniles en Hattrick"
 author: elPatronHT
 date: 2025-01-11
 categories: equipo-juvenil
 tags: [juveniles, ascenso, equipo]
 excerpt: "Descubre cómo ascender juveniles al primer equipo en Hattrick con esta guía detallada. Aprende los requisitos, cuándo promocionarlos y cómo maximizar su potencial y valor."
 image: "/assets/img/user.png"
+featured: false
+published: true
 ---
 
-# Ascender a Juveniles en Hattrick
+# Ascender Juveniles en Hattrick
 
 Ascender jugadores juveniles al primer equipo es uno de los momentos más emocionantes para cualquier manager en Hattrick. Este proceso define el futuro de tu club y puede generar importantes ingresos económicos si gestionas correctamente a tus promesas.
 

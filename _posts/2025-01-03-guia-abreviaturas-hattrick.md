@@ -7,6 +7,8 @@ categories: equipo-mayor
 tags: ["abreviaturas", "Hattrick", "tácticas"]
 excerpt: "Domina el lenguaje común usado en Hattrick con esta guía detallada de abreviaturas."
 image: "/assets/img/user.png"
+featured: false
+published: true
 ---
 
 # Guía Completa de Abreviaturas en Hattrick

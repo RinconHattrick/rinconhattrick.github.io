@@ -7,6 +7,8 @@ categories: selecciones-nacionales
 tags: [Mundial, competiciones, seleccionadores]
 excerpt: "Todo lo que necesitas saber sobre el torneo más prestigioso de Hattrick: su formato, estrategias y premios."
 image: "/assets/img/user.png"
+featured: false
+published: true
 ---
 
 # Dominar el Mundial en Hattrick
