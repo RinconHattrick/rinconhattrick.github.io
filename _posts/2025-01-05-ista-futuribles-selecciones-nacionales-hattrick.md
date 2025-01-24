@@ -7,8 +7,6 @@ categories: selecciones-nacionales
 tags: [futuribles, selección, Hattrick]
 excerpt: "Aprende a gestionar candidatos para las selecciones nacionales y maximizar el potencial de tus jugadores con la Lista de Futuribles."
 image: "/assets/img/user.png"
-featured: false
-published: true
 ---
 
 # Lista de Futuribles para Selecciones Nacionales en Hattrick
