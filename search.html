@@ -3,9 +3,15 @@ layout: default
 title: "Resultados de Búsqueda"
 ---
 
-<section class="section">
+<section class="section" role="main">
   <div class="container">
-    <h1 class="title">Resultados de búsqueda</h1>
+    <h1
+      class="title has-text-centered has-text-link"
+      role="heading"
+      aria-level="1"
+    >
+      Resultados de búsqueda
+    </h1>
 
     <input
       type="text"
@@ -13,65 +19,78 @@ title: "Resultados de Búsqueda"
       class="input"
       placeholder="Buscar..."
       aria-label="Buscar artículos"
+      aria-describedby="search-hint"
     />
-    <div id="search-results" class="content mt-5"></div>
+    <p id="search-hint" class="help">
+      Escribe al menos 3 caracteres para comenzar a buscar.
+    </p>
+
+    <div
+      id="search-results"
+      class="content mt-5"
+      aria-live="polite"
+      aria-relevant="additions"
+    ></div>
   </div>
 </section>
 
 <script>
-  // Ruta al JSON
   const searchJsonUrl = "{{ '/assets/json/search.json' | relative_url }}";
 
-  // Obtener los resultados del archivo JSON
   async function fetchSearchData(query) {
-    const response = await fetch(searchJsonUrl);
-    const data = await response.json();
+    try {
+      const response = await fetch(searchJsonUrl);
+      if (!response.ok) {
+        throw new Error("No se pudo cargar el archivo de búsqueda.");
+      }
+      const data = await response.json();
 
-    // Filtrar los resultados que coincidan con la consulta
-    return data.filter((item) =>
-      item.title.toLowerCase().includes(query.toLowerCase())
-    );
+      return data.filter((item) =>
+        item.title.toLowerCase().includes(query.toLowerCase())
+      );
+    } catch (error) {
+      console.error("Error al buscar:", error);
+      return [];
+    }
   }
 
-  // Renderizar resultados
   function renderResults(results) {
     const resultsContainer = document.getElementById("search-results");
-    resultsContainer.innerHTML = ""; // Limpiar resultados previos
+    resultsContainer.innerHTML = "";
 
     if (results.length === 0) {
-      resultsContainer.innerHTML = "<p>No se encontraron resultados.</p>";
+      resultsContainer.innerHTML =
+        "<p>No se encontraron resultados para tu búsqueda.</p>";
       return;
     }
 
     const ul = document.createElement("ul");
     results.forEach((item) => {
       const li = document.createElement("li");
-      li.innerHTML = `<a href="${item.url}">${item.title}</a>`;
+      li.innerHTML = `<a href="${item.url}" aria-label="Ir a ${item.title}">${item.title}</a>`;
       ul.appendChild(li);
     });
     resultsContainer.appendChild(ul);
   }
 
-  // Obtener la consulta de la URL
   function getQueryParam(param) {
     const urlParams = new URLSearchParams(window.location.search);
     return urlParams.get(param) || "";
   }
 
-  // Manejar evento de entrada
-  document.getElementById("search-input").addEventListener("input", (e) => {
-    const query = e.target.value;
+  const searchInput = document.getElementById("search-input");
+  searchInput.addEventListener("input", (e) => {
+    const query = e.target.value.trim();
     if (query.length >= 3) {
       fetchSearchData(query).then(renderResults);
-    } else {
-      renderResults([]); // Limpiar si la consulta es corta
+    } else if (query.length === 0) {
+      renderResults([]);
     }
   });
 
-  // Búsqueda inicial basada en la URL
   const initialQuery = getQueryParam("q");
   if (initialQuery) {
-    document.getElementById("search-input").value = initialQuery;
+    searchInput.value = initialQuery;
     fetchSearchData(initialQuery).then(renderResults);
   }
 </script>

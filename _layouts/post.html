@@ -19,7 +19,8 @@ layout: default
     <div class="media-content">
       <p class="has-text-grey-light">
         Publicado el {{ page.date | date: "%A, %d de %B de %Y" | localized_date:
-        "es" }} por <strong>{{ page.author | default: "Anónimo" }}</strong>
+        "es" }} por
+        <strong>{{ page.author | default: "Anónimo" }}</strong>
       </p>
     </div>
   </header>
@@ -30,17 +31,18 @@ layout: default
     <button
       id="shareButton"
       class="button is-primary is-rounded"
+      role="button"
       aria-label="Compartir este artículo"
     >
       <span class="icon is-small">
-        <i class="fas fa-share-alt"></i>
+        <i class="fas fa-share-alt" aria-hidden="true"></i>
       </span>
       <span>Compartir</span>
     </button>
   </div>
 </article>
 
-<div class="mt-4">
+<footer class="mt-4">
   <div class="columns container">
     <div class="column">
       <p class="has-text-grey">
@@ -48,7 +50,7 @@ layout: default
         {% if page.categories %} {% for category in page.categories %}
         <a
           href="/{{ category | slugify }}/"
-          class="has-text-primary"
+          class="has-text-link"
           aria-label="Ver artículos en la categoría {{ category }}"
         >
           {{ category | capitalize }}
@@ -60,7 +62,7 @@ layout: default
   </div>
 
   <div class="mb-3">
-    <nav class="level">
+    <nav class="level" role="navigation" aria-label="Navegación">
       <div class="level-item">
         <div class="buttons is-centered">
           <a
@@ -69,7 +71,7 @@ layout: default
             aria-label="Volver al inicio"
           >
             <span class="icon">
-              <i class="fas fa-home"></i>
+              <i class="fas fa-home" aria-hidden="true"></i>
             </span>
             <span>Volver al Inicio</span>
           </a>
@@ -80,7 +82,7 @@ layout: default
             title="Volver arriba"
           >
             <span class="icon">
-              <i class="fas fa-arrow-up"></i>
+              <i class="fas fa-arrow-up" aria-hidden="true"></i>
             </span>
             <span>Volver Arriba</span>
           </a>
@@ -88,7 +90,7 @@ layout: default
       </div>
     </nav>
   </div>
-</dfooter>
+</footer>
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
@@ -115,7 +117,7 @@ layout: default
   document
     .querySelector('a[href="#top"]')
     .addEventListener("click", function (e) {
-      e.preventDefault(); // Evita el comportamiento por defecto de los enlaces
-      window.scrollTo({ top: 0, behavior: "smooth" }); // Desplazamiento suave hacia arriba
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
     });
 </script>

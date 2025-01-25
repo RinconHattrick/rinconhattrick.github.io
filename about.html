@@ -4,9 +4,13 @@ title: "Acerca de"
 permalink: /acerca-de/
 ---
 
-<section class="my-4">
+<section class="my-4" role="main">
   <header class="my-6 mx-4">
-    <h1 class="title has-text-centered has-text-primary mb-3">
+    <h1
+      class="title has-text-centered has-text-link mb-3"
+      role="heading"
+      aria-level="1"
+    >
       Bienvenido al blog <strong>El Rincón de Hattrick</strong>
     </h1>
   </header>
@@ -56,31 +60,28 @@ permalink: /acerca-de/
     </p>
   </div>
 
+  <section class="section">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-12-mobile is-6-tablet is-4-desktop">
+          <figure class="image is-16by9">
+            <img
+              src="/assets/img/RinconHattrick.jpg"
+              alt="Logotipo de Hattrick - El juego de gestión futbol más popular"
+              loading="lazy"
+            />
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <div class="has-text-centered">
-    <a href="/" class="button is-link is-rounded">
+    <a href="/" class="button is-link is-rounded" aria-label="Volver al inicio">
       <span class="icon">
-        <i class="fas fa-home"></i>
+        <i class="fas fa-home" aria-hidden="true"></i>
       </span>
       <span>Volver al Inicio</span>
     </a>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="columns">
-      <div
-        class="column is-12-mobile is-6-tablet is-4-desktop is-offset-4-desktop is-offset-3-tablet"
-      >
-        <figure class="image is-16by9">
-          <img
-            src="/assets/img/RinconHattrick.jpg"
-            alt="Logotipo de Hattrick - El juego de gestión futbol más popular"
-            loading="lazy"
-          />
-          ​​
-        </figure>
-      </div>
-    </div>
   </div>
 </section>

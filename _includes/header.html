@@ -1,19 +1,22 @@
-<header role="banner">
+<header role="banner" aria-label="Cabecera del sitio">
   <nav
     class="navbar is-fixed-top"
     role="navigation"
     aria-label="Menú principal"
   >
     <div class="navbar-brand">
-      <a class="navbar-item has-text-white" href="/">
-        <h2 class="title is-4 has-text-primary">El Rincón de Hattrick</h2>
+      <a
+        class="navbar-item has-text-link"
+        href="/"
+        aria-label="Volver al inicio"
+      >
+        <h2 class="title is-4 has-text-link">El Rincón de Hattrick</h2>
       </a>
       <button
         class="navbar-burger"
         aria-label="Abrir menú"
         aria-expanded="false"
         data-target="navbarMenu"
-        aria-controls="navbarMenu"
       >
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
@@ -21,12 +24,13 @@
       </button>
     </div>
 
-    <div id="navbarMenu" class="navbar-menu">
+    <div id="navbarMenu" class="navbar-menu" role="menu">
       <div class="navbar-end">
         <a
           class="navbar-item {% if page.url == '/' %}is-active{% endif %}"
           href="/"
-          aria-label="Ir a inicio"
+          aria-label="Ir a Inicio"
+          role="menuitem"
         >
           <span class="icon">
             <i class="fas fa-home" aria-hidden="true"></i>
@@ -37,8 +41,9 @@
           class="navbar-item"
           href="https://www.hattrick.org/?inviteRef=U8EHM5"
           target="_blank"
-          rel="noopener"
-          aria-label="Ir a Hattrick"
+          rel="noopener noreferrer"
+          aria-label="Ir a Hattrick (abre en nueva pestaña)"
+          role="menuitem"
         >
           <span class="icon">
             <i class="fas fa-external-link-alt" aria-hidden="true"></i>
@@ -49,6 +54,7 @@
           class="navbar-item {% if page.url contains '/acerca-de/' %}is-active{% endif %}"
           href="/acerca-de/"
           aria-label="Ir a Acerca de"
+          role="menuitem"
         >
           <span class="icon">
             <i class="fas fa-info-circle" aria-hidden="true"></i>
@@ -59,6 +65,7 @@
           class="navbar-item {% if page.url contains '/contacto/' %}is-active{% endif %}"
           href="/contacto/"
           aria-label="Ir a Contáctanos"
+          role="menuitem"
         >
           <span class="icon">
             <i class="fas fa-envelope" aria-hidden="true"></i>
@@ -71,6 +78,7 @@
 </header>
 
 <script>
+  // Manejo del menú hamburguesa
   document.addEventListener("DOMContentLoaded", () => {
     const burger = document.querySelector(".navbar-burger");
     const menu = document.querySelector("#navbarMenu");
@@ -80,10 +88,6 @@
         const isActive = burger.classList.toggle("is-active");
         menu.classList.toggle("is-active");
         burger.setAttribute("aria-expanded", isActive ? "true" : "false");
-
-        if (isActive) {
-          burger.focus();
-        }
       });
     }
   });

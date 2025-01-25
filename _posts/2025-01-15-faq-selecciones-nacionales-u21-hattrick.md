@@ -29,9 +29,6 @@ No. El entrenamiento depende exclusivamente del equipo de club.
 
 No hay un "entrenador" tradicional. Las tácticas se configuran con la barra del asistente táctico.
 
-## ¿Cuántos jugadores se pueden seleccionar como máximo?
-
-Un máximo de **26 jugadores**.
 
 ## ¿Tiene consecuencias la entrada o salida de jugadores de la selección?
 
@@ -57,14 +54,6 @@ Sí, las mecánicas son las mismas.
 ## ¿La selección paga el sueldo de los jugadores
 
 Sí. La selección paga un porcentaje del salario del jugador al club después de cada partido.
-
-## ¿Qué sucede si un jugador se lesiona en la selección?
-
-La selección cubre el **100% del sueldo semanal** del jugador durante su recuperación.
-
-## ¿Cuándo comienza la niebla de partido?
-
-Comienza **8 horas antes del inicio del partido**.
 
 ## ¿Cuáles son los horarios de los partidos internacionales?
 

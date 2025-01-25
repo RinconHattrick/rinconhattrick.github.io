@@ -7,16 +7,19 @@ layout: default
 
   <aside class="column is-one-quarter">
     <div class="box">
-      <h3 class="title is-5 has-text-primary">Categorías</h3>
-      <ul class="is-disc">
+      <h3 class="title is-5 has-text-link">Categorías</h3>
+      <ul class="list is-hoverable">
         {% if site.pages %} {% for category_page in site.pages %} {% if
         category_page.layout == "category" %}
         <li>
           <a
             href="{{ category_page.permalink }}"
-            class="has-text-link is-hovered"
+            class="has-text-link"
+            aria-label="Ver artículos en la categoría {{ category_page.title }}"
           >
-            <span class="icon is-small"><i class="fas fa-tag"></i></span>
+            <span class="icon is-small" aria-hidden="true">
+              <i class="fas fa-tag"></i>
+            </span>
             {{ category_page.title }}
           </a>
         </li>
@@ -28,7 +31,12 @@ layout: default
 
     <div class="box">
       <h3 class="title is-5">Buscar en el Blog</h3>
-      <form action="/search/" method="get">
+      <form
+        action="/search/"
+        method="get"
+        role="search"
+        aria-label="Formulario de búsqueda"
+      >
         <div class="field">
           <div class="control">
             <input
@@ -36,7 +44,7 @@ layout: default
               type="text"
               name="q"
               placeholder="Buscar artículos..."
-              aria-label="Buscar en el blog"
+              aria-label="Buscar artículos en el blog"
             />
           </div>
         </div>
@@ -45,13 +53,19 @@ layout: default
     </div>
 
     <div class="box">
-      <h3 class="title is-5 has-text-primary">Artículos Destacados</h3>
-      <ul class="has-text-grey">
+      <h3 class="title is-5 has-text-link">Artículos Destacados</h3>
+      <ul class="list is-hoverable">
         {% assign featured_posts = site.posts | where: "featured", true %} {% if
         featured_posts.size > 0 %} {% for post in featured_posts %}
         <li>
-          <a href="{{ post.url }}" class="has-text-link is-hovered">
-            <span class="icon is-small"><i class="fas fa-circle"></i></span>
+          <a
+            href="{{ post.url }}"
+            class="has-text-link"
+            aria-label="Leer artículo destacado: {{ post.title }}"
+          >
+            <span class="icon is-small" aria-hidden="true">
+              <i class="fas fa-circle"></i>
+            </span>
             {{ post.title }}
           </a>
         </li>
@@ -62,13 +76,19 @@ layout: default
     </div>
 
     <div class="box">
-      <h3 class="title is-5 has-text-primary">Últimos Artículos</h3>
-      <ul>
+      <h3 class="title is-5 has-text-link">Últimos Artículos</h3>
+      <ul class="list is-hoverable">
         {% assign published_posts = site.posts | where: "published", true |
         sort: "date" | reverse %} {% for post in published_posts limit: 4 %}
         <li>
-          <a href="{{ post.url }}">
-            <span class="icon is-small"><i class="fas fa-clock"></i></span>
+          <a
+            href="{{ post.url }}"
+            class="has-text-link"
+            aria-label="Leer artículo reciente: {{ post.title }}"
+          >
+            <span class="icon is-small" aria-hidden="true">
+              <i class="fas fa-clock"></i>
+            </span>
             {{ post.title }}
           </a>
         </li>

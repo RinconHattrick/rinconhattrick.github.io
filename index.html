@@ -6,7 +6,7 @@ title: "El Rincón de Hattrick"
 <div class="container">
   <header class="my-4" id="top">
     <div class="has-text-centered">
-      <h1 class="title has-text-primary" role="heading" aria-level="1">
+      <h1 class="title has-text-link" role="heading" aria-level="1">
         {{ site.title }}
       </h1>
       <h2 class="subtitle is-4" role="heading" aria-level="2">
@@ -22,7 +22,7 @@ title: "El Rincón de Hattrick"
       category_name | first %}
 
       <div class="box">
-        <h2 class="title is-3 has-text-primary" role="heading" aria-level="3">
+        <h2 class="title is-3 has-text-link" role="heading" aria-level="3">
           {{ category_page.title | default: category_name }}
         </h2>
         <p class="subtitle is-5">
@@ -50,12 +50,12 @@ title: "El Rincón de Hattrick"
                 <td>
                   <a
                     href="{{ post.url }}"
-                    class="has-text-weight-semibold"
+                    class="has-text-link"
                     aria-label="Leer más sobre {{ post.title }}"
                   >
                     {{ post.title }}
                   </a>
-                  <p class="is-size-7 mt-1">
+                  <p class="is-size-6 mt-1">
                     {{ post.excerpt | strip_html | truncate: 150 }}
                   </p>
                 </td>

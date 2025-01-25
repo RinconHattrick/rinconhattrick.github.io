@@ -2,10 +2,10 @@
 layout: with-sidebar
 ---
 
-<header class="my-4">
+<header class="hero my-4">
   <div class="hero-body">
     <div class="container has-text-centered">
-      <h1 class="title has-text-primary" role="heading" aria-level="1">
+      <h1 class="title has-text-link" role="heading" aria-level="1">
         {{ site.title }}
       </h1>
       <h2 class="subtitle is-4" role="heading" aria-level="2">
@@ -13,11 +13,11 @@ layout: with-sidebar
       </h2>
     </div>
   </div>
-</hesection>
+</header>
 
 <main class="box my-4" id="top">
   <div class="container">
-    <h2 class="title is-3 has-text-primary" role="heading" aria-level="2">
+    <h2 class="title is-3 has-text-link" role="heading" aria-level="2">
       {{ page.title }}
     </h2>
     <p class="subtitle is-5">{{ page.description }}</p>
@@ -38,8 +38,8 @@ layout: with-sidebar
           {% for post in site.categories[page.category] %}
           <tr>
             <td class="is-narrow">
-              <span class="icon is-small">
-                <i class="fas fa-calendar-day"></i>
+              <span class="icon is-small" role="img" aria-label="Fecha">
+                <i class="fas fa-calendar-day" aria-hidden="true"></i>
               </span>
               {{ post.date | date: "%d/%m/%Y" }}
             </td>
@@ -62,15 +62,16 @@ layout: with-sidebar
       </table>
     </div>
     {% else %}
-    <div class="notification is-warning">
+    <div class="notification is-warning" role="alert">
       No hay artículos disponibles en esta categoría. ¡Explora otras secciones
       del blog!
     </div>
     {% endif %}
   </div>
-</>
+</main>
+
 <div class="mt-6">
-  <nav class="level">
+  <nav class="level" role="navigation" aria-label="Navegación">
     <div class="level-item">
       <div class="buttons is-centered">
         <a
@@ -80,7 +81,7 @@ layout: with-sidebar
           title="Volver al inicio"
         >
           <span class="icon">
-            <i class="fas fa-home"></i>
+            <i class="fas fa-home" aria-hidden="true"></i>
           </span>
           <span>Volver al Inicio</span>
         </a>
@@ -91,7 +92,7 @@ layout: with-sidebar
           title="Volver arriba"
         >
           <span class="icon">
-            <i class="fas fa-arrow-up"></i>
+            <i class="fas fa-arrow-up" aria-hidden="true"></i>
           </span>
           <span>Volver Arriba</span>
         </a>
@@ -104,7 +105,7 @@ layout: with-sidebar
   document
     .querySelector('a[href="#top"]')
     .addEventListener("click", function (e) {
-      e.preventDefault(); 
-      window.scrollTo({ top: 0, behavior: "smooth" }); 
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
     });
 </script>

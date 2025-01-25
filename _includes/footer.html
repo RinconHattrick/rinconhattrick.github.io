@@ -1,8 +1,10 @@
 <footer class="footer" role="contentinfo" aria-label="Pie de página">
   <div class="content has-text-centered">
     <p>
-      <strong class="has-text-primary">{{ site.title }}</strong> &copy; {{ "now"
-      | date: "%Y" }} - {{ site.author }}. <br />Todos los derechos reservados.
+      <strong class="has-text-link">{{ site.title }}</strong> &copy; {{ "now" |
+      date: "%Y" }} - {{ site.author }}.
+      <br />
+      Todos los derechos reservados.
     </p>
 
     <nav
@@ -13,22 +15,22 @@
       <a
         href="/acerca-de/"
         class="has-text-link mx-3"
-        aria-label="Ir a Acerca de"
+        aria-label="Ir a la página Acerca de"
         title="Acerca de este sitio"
       >
-        <span class="icon is-small">
+        <span class="icon is-small" aria-hidden="true">
           <i class="fas fa-info-circle"></i>
         </span>
         Acerca de
       </a>
-      <span aria-hidden="true">|</span>
+      <span class="mx-1" aria-hidden="true">|</span>
       <a
         href="/contacto/"
         class="has-text-link mx-3"
         aria-label="Ir a la página de Contacto"
         title="Contáctanos"
       >
-        <span class="icon is-small">
+        <span class="icon is-small" aria-hidden="true">
           <i class="fas fa-envelope"></i>
         </span>
         Contáctanos
@@ -44,7 +46,7 @@
         aria-label="Ir a nuestro canal de Telegram (nueva pestaña)"
         title="Abrir Telegram"
       >
-        <i class="fab fa-telegram fa-lg"></i>
+        <i class="fab fa-telegram fa-lg" aria-hidden="true"></i>
       </a>
       <a
         href="https://wa.me/qr/537E4GO72BHHB1"
@@ -54,7 +56,7 @@
         aria-label="Abrir WhatsApp (nueva pestaña)"
         title="Abrir WhatsApp"
       >
-        <i class="fab fa-whatsapp fa-lg"></i>
+        <i class="fab fa-whatsapp fa-lg" aria-hidden="true"></i>
       </a>
       <a
         href="mailto:tutorhattrick@hotmail.com"
@@ -62,7 +64,7 @@
         aria-label="Enviar un correo a tutorhattrick@hotmail.com"
         title="Enviar un correo electrónico"
       >
-        <i class="fas fa-envelope fa-lg"></i>
+        <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>
       </a>
     </div>
   </div>
