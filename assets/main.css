@@ -22,7 +22,6 @@ section {
 .content p {
   margin-bottom: 1.5rem;
   line-height: 1.6; /* Aumenta la legibilidad */
-  color: #4a4a4a;
 }
 
 .content ul,
@@ -33,35 +32,6 @@ section {
 
 .content li {
   margin-bottom: 0.5rem;
-}
-
-/* Destacar citas */
-.content blockquote {
-  padding: 1rem 1.5rem;
-  margin: 1.5rem 0;
-  background-color: #f5f5f5;
-  border-left: 4px solid var(--primary, #3273dc);
-  color: #4a4a4a;
-  font-style: italic;
-}
-
-/* Tablas */
-.content table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 1.5rem;
-}
-
-.content th,
-.content td {
-  padding: 0.75rem;
-  text-align: left;
-  border: 1px solid #dbdbdb;
-}
-
-.content th {
-  background-color: var(--primary, #3273dc);
-  color: #fff;
 }
 
 /* Botones */
@@ -96,4 +66,22 @@ section {
 /* Ajustar márgenes del botón Buscar */
 .field .button {
   margin-top: 1rem;
+}
+
+
+body, html {
+  overflow-x: hidden; 
+  max-width: 100%;
+}
+
+.container {
+  max-width: 100%;
+}
+
+.card, .columns {
+  overflow: hidden; 
+}
+
+.navbar-menu {
+  overflow: hidden; 
 }
