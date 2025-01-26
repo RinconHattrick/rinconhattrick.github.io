@@ -1,75 +1,48 @@
-<!DOCTYPE html>
-<html lang="{{ page.lang | default: 'es' }}">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="{{ site.description }}" />
-    <meta name="author" content="{{ site.author }}" />
-    <meta name="robots" content="index, follow" />
+---
+layout: default
+title: "Página no encontrada"
+permalink: /404.html
+---
 
-    <meta property="og:title" content="{{ page.title }} - {{ site.title }}" />
-    <meta property="og:description" content="{{ site.description }}" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
-    <meta
-      property="og:image"
-      content="{{ '/assets/img/HT.jpg' | relative_url }}"
-    />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="{{ page.title }} - {{ site.title }}" />
-    <meta name="twitter:description" content="{{ site.description }}" />
-    <meta
-      name="twitter:image"
-      content="{{ '/assets/img/HT.jpg' | relative_url }}"
-    />
-
-    <meta name="theme-color" content="hsl(217, 71%, 53%)" />
-    <meta
-      name="apple-mobile-web-app-status-bar-style"
-      content="black-translucent"
-    />
-    <meta name="apple-mobile-web-app-title" content="{{ site.title }}" />
-    <meta name="mobile-web-app-capable" content="yes" />
-
-    <title>{{ page.title }} - {{ site.title }}</title>
-
-    <link
-      rel="icon"
-      href="{{ '/assets/img/favicon.ico' | relative_url }}"
-      type="image/x-icon"
-    />
-
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
-    <link
-      rel="preconnect"
-      href="https://cdnjs.cloudflare.com"
-      crossorigin="anonymous"
-    />
-
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"
-    />
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-
-    <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}" />
-  </head>
-  <body class="has-navbar-fixed-top {{ page.layout | downcase }}">
-    <header role="banner" aria-label="Encabezado principal">
-      {% include header.html %}
-    </header>
-
-    <main class="container mt-5">
-      <div role="main" aria-label="Contenido principal">{{ content }}</div>
-    </main>
-
-    <footer role="contentinfo" aria-label="Pie de página">
-      {% include footer.html %}
-    </footer>
-  </body>
-</html>
+<section class="hero is-fullheight" style="background-color: #f9f9f9">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <div class="icon">
+        <span
+          class="icon is-large has-text-danger"
+          aria-label="Advertencia: página no encontrada"
+        >
+          <i class="fas fa-exclamation-triangle fa-4x" aria-hidden="true"></i>
+        </span>
+      </div>
+      <h1 class="title is-1 has-text-danger">¡Ups! Página no encontrada</h1>
+      <p class="subtitle is-4">
+        La página que buscas no está disponible o ha sido movida.
+      </p>
+      <p class="subtitle is-4">
+        Si crees que esto es un error, no dudes en
+        <a href="/contacto" class="has-text-link">ponerte en contacto</a>.
+      </p>
+      <div class="buttons is-centered mt-4">
+        <a
+          href="/"
+          class="button is-link is-rounded"
+          aria-label="Volver al inicio"
+          title="Regresa a la página de inicio"
+        >
+          <span class="icon">
+            <i class="fas fa-home" aria-hidden="true"></i>
+          </span>
+          <span>Volver al inicio</span>
+        </a>
+      </div>
+      <figure class="image is-256x256 is-inline-block mt-5">
+        <img
+          src="{{ '/assets/img/404.png' | relative_url }}"
+          alt="Página no encontrada"
+          loading="lazy"
+        />
+      </figure>
+    </div>
+  </div>
+</section>

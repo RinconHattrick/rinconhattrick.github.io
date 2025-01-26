@@ -1,15 +1,15 @@
 ---
-layout: default
+layout: with-sidebar
 ---
 
-<article class="box" role="article">
-  <header class="media is-centered m-4">
+<article class="container" role="article">
+  <header class="media is-align-items-center">
     <div class="media-left">
       {% if page.image %}
       <figure class="image is-64x64">
         <img
           src="{{ page.image | relative_url }}"
-          alt="Imagen destacada del artículo {{ page.title }}"
+          alt="Imagen de: {{ page.title }}"
           class="is-rounded"
           loading="lazy"
         />
@@ -17,17 +17,16 @@ layout: default
       {% endif %}
     </div>
     <div class="media-content">
-      <p class="has-text-grey-light">
-        Publicado el {{ page.date | date: "%A, %d de %B de %Y" | localized_date:
-        "es" }} por
+      <p class="has-text-centered">
+        Publicado el {{ page.date | date: "%d/%m/%Y" }} por
         <strong>{{ page.author | default: "Anónimo" }}</strong>
       </p>
     </div>
   </header>
 
-  <section class="content my-6 mx-4" role="main">{{ content }}</section>
+  <section class="content" role="main">{{ content }}</section>
 
-  <div class="mt-4 has-text-centered">
+  <div class="has-text-centered">
     <button
       id="shareButton"
       class="button is-primary is-rounded"
@@ -42,16 +41,16 @@ layout: default
   </div>
 </article>
 
-<footer class="mt-4">
-  <div class="columns container">
+<footer>
+  <div class="columns">
     <div class="column">
       <p class="has-text-grey">
         <strong>Categorías:</strong>
         {% if page.categories %} {% for category in page.categories %}
         <a
           href="/{{ category | slugify }}/"
-          class="has-text-link"
           aria-label="Ver artículos en la categoría {{ category }}"
+          class="has-text-weight-semibold"
         >
           {{ category | capitalize }}
         </a>
@@ -61,42 +60,41 @@ layout: default
     </div>
   </div>
 
-  <div class="mb-3">
-    <nav class="level" role="navigation" aria-label="Navegación">
-      <div class="level-item">
-        <div class="buttons is-centered">
-          <a
-            href="/"
-            class="button is-link is-rounded"
-            aria-label="Volver al inicio"
-          >
-            <span class="icon">
-              <i class="fas fa-home" aria-hidden="true"></i>
-            </span>
-            <span>Volver al Inicio</span>
-          </a>
-          <a
-            href="#top"
-            class="button is-link is-light is-rounded"
-            aria-label="Volver arriba"
-            title="Volver arriba"
-          >
-            <span class="icon">
-              <i class="fas fa-arrow-up" aria-hidden="true"></i>
-            </span>
-            <span>Volver Arriba</span>
-          </a>
-        </div>
+  <nav class="level" role="navigation" aria-label="Navegación principal">
+    <div class="level-item">
+      <div class="buttons is-centered">
+        <a
+          href="/"
+          class="button is-link is-rounded"
+          aria-label="Volver al inicio"
+          aria-current="page"
+        >
+          <span class="icon">
+            <i class="fas fa-home" aria-hidden="true"></i>
+          </span>
+          <span>Volver al Inicio</span>
+        </a>
+        <a
+          href="#top"
+          class="button is-link is-light is-rounded"
+          aria-label="Volver arriba"
+          title="Volver arriba"
+        >
+          <span class="icon">
+            <i class="fas fa-arrow-up" aria-hidden="true"></i>
+          </span>
+          <span>Volver Arriba</span>
+        </a>
       </div>
-    </nav>
-  </div>
+    </div>
+  </nav>
 </footer>
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    document
-      .getElementById("shareButton")
-      .addEventListener("click", function () {
+    const shareButton = document.getElementById("shareButton");
+    if (shareButton) {
+      shareButton.addEventListener("click", function () {
         if (navigator.share) {
           navigator
             .share({
@@ -112,12 +110,6 @@ layout: default
           );
         }
       });
+    }
   });
-
-  document
-    .querySelector('a[href="#top"]')
-    .addEventListener("click", function (e) {
-      e.preventDefault();
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
 </script>

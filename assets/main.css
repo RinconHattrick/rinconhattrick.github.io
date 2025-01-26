@@ -1,10 +1,3 @@
-/* General */
-
-/* Ajusta el espaciado global entre secciones */
-section {
-  margin-bottom: 2rem;
-}
-
 /* Artículos desde Markdown */
 .content h1,
 .content h2,
@@ -12,76 +5,9 @@ section {
 .content h4,
 .content h5,
 .content h6 {
-  color: var(--primary, #3273dc); /* Usar el color primario */
-  font-weight: 700;
-  margin-top: 1.5rem;
-  margin-bottom: 0.75rem;
-  line-height: 1.2;
-}
-
-.content p {
-  margin-bottom: 1.5rem;
-  line-height: 1.6; /* Aumenta la legibilidad */
-}
-
-.content ul,
-.content ol {
-  margin-left: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.content li {
-  margin-bottom: 0.5rem;
-}
-
-/* Botones */
-.button {
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  color: var(--primary, #3273dc);
 }
 
 .button:hover {
   transform: scale(1.05);
-}
-
-/* Categorías, Artículos y Enlaces en la Barra Lateral */
-.box h3 {
-  font-size: 1.25rem;
-  margin-bottom: 1rem;
-}
-
-.box ul li {
-  margin-bottom: 0.5rem;
-}
-
-.box a {
-  transition: color 0.3s ease;
-}
-
-/* Formularios */
-.input,
-.button {
-  border-radius: 4px;
-}
-
-/* Ajustar márgenes del botón Buscar */
-.field .button {
-  margin-top: 1rem;
-}
-
-
-body, html {
-  overflow-x: hidden; 
-  max-width: 100%;
-}
-
-.container {
-  max-width: 100%;
-}
-
-.card, .columns {
-  overflow: hidden; 
-}
-
-.navbar-menu {
-  overflow: hidden; 
 }

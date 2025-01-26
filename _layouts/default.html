@@ -24,7 +24,7 @@
       content="{{ '/assets/img/HT.jpg' | relative_url }}"
     />
 
-    <meta name="theme-color" content="hsl(217, 71%, 53%)" />
+    <meta name="theme-color" content="#3273dc" />
     <meta
       name="apple-mobile-web-app-status-bar-style"
       content="black-translucent"
@@ -60,16 +60,17 @@
     <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}" />
   </head>
   <body class="has-navbar-fixed-top {{ page.layout | downcase }}">
-    <header role="banner" aria-label="Encabezado principal">
-      {% include header.html %}
-    </header>
+    <!-- Navbar -->
+    {% include header.html %}
 
-    <main class="container mt-5">
-      <div role="main" aria-label="Contenido principal">{{ content }}</div>
+    <!-- Main content -->
+    <main class="section" role="main" aria-label="Contenido principal">
+      {{ content }}
     </main>
 
-    <footer role="contentinfo" aria-label="Pie de página">
-      {% include footer.html %}
-    </footer>
+    <!-- Footer -->
+    {% include footer.html %}
+
+    <script src="/assets/js/script.js" defer></script>
   </body>
 </html>

@@ -3,92 +3,75 @@ layout: with-sidebar
 title: "El Rincón de Hattrick"
 ---
 
-<div class="container">
-  <header class="my-4" id="top">
-    <div class="has-text-centered">
-      <h1 class="title has-text-link" role="heading" aria-level="1">
-        {{ site.title }}
-      </h1>
-      <h2 class="subtitle is-4" role="heading" aria-level="2">
-        {{ site.description }}
-      </h2>
-    </div>
+<div class="container py-5">
+  <!-- Encabezado principal -->
+  <header class="content has-text-centered" id="top">
+    <h1 class="title" role="heading" aria-level="1">{{ site.title }}</h1>
+    <p class="subtitle" role="heading" aria-level="2">{{ site.description }}</p>
   </header>
 
-  <main class="my-4">
-    <div class="container">
-      {% for category in site.categories %} {% assign category_name =
-      category[0] %} {% assign category_page = site.pages | where: "category",
-      category_name | first %}
+  <!-- Listado de categorías y artículos -->
+  {% for category in site.categories %} {% assign category_name = category[0] %}
+  {% assign category_page = site.pages | where: "category", category_name |
+  first %}
 
-      <div class="box">
-        <h2 class="title is-3 has-text-link" role="heading" aria-level="3">
-          {{ category_page.title | default: category_name }}
-        </h2>
-        <p class="subtitle is-5">
-          {{ category_page.description | default: "No hay descripción disponible
-          para esta categoría." }}
-        </p>
+  <div class="content box my-5">
+    <h2 class="title is-4" role="heading" aria-level="3">
+      {{ category_page.title | default: category_name }}
+    </h2>
+    <p class="subtitle">
+      {{ category_page.description | default: "No hay descripción disponible
+      para esta categoría." }}
+    </p>
 
-        <div class="table-container">
-          <table class="table is-fullwidth is-hoverable">
-            <thead>
-              <tr>
-                <th>Fecha</th>
-                <th>Artículo</th>
-              </tr>
-            </thead>
-            <tbody>
-              {% for post in category[1] %}
-              <tr>
-                <td class="is-narrow">
-                  <span class="icon is-small">
-                    <i class="fas fa-calendar-day"></i>
-                  </span>
-                  {{ post.date | date: "%d/%m/%Y" }}
-                </td>
-                <td>
-                  <a
-                    href="{{ post.url }}"
-                    class="has-text-link"
-                    aria-label="Leer más sobre {{ post.title }}"
-                  >
-                    {{ post.title }}
-                  </a>
-                  <p class="is-size-6 mt-1">
-                    {{ post.excerpt | strip_html | truncate: 150 }}
-                  </p>
-                </td>
-              </tr>
-              {% endfor %}
-            </tbody>
-          </table>
-        </div>
-      </div>
-      {% endfor %}
+    <div class="table-container">
+      <table class="table is-fullwidth is-hoverable">
+        <thead>
+          <tr>
+            <th scope="col">Fecha</th>
+            <th scope="col">Artículo</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for post in category[1] %}
+          <tr>
+            <td class="is-narrow">
+              <span class="icon is-small">
+                <i class="fas fa-calendar-day"></i>
+              </span>
+              {{ post.date | date: "%d/%m/%Y" }}
+            </td>
+            <td>
+              <a
+                href="{{ post.url }}"
+                aria-label="Leer más sobre {{ post.title }}"
+              >
+                {{ post.title }}
+              </a>
+              <p class="is-size-7 mt-1">
+                {{ post.excerpt | strip_html | truncate: 150 }}
+              </p>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
     </div>
+  </div>
+  {% endfor %}
 
-    <div class="has-text-centered mt-5">
-      <a
-        href="#top"
-        class="button is-link is-light is-rounded"
-        aria-label="Volver Arriba"
-        title="Volver al inicio"
-      >
-        <span class="icon">
-          <i class="fas fa-arrow-up"></i>
-        </span>
-        <span>Volver Arriba</span>
-      </a>
-    </div>
-  </main>
+  <!-- Botón para volver arriba -->
+  <div class="has-text-centered mt-5">
+    <a
+      href="#top"
+      class="button is-link is-light is-rounded"
+      aria-label="Volver al inicio"
+      title="Volver al inicio"
+    >
+      <span class="icon">
+        <i class="fas fa-arrow-up"></i>
+      </span>
+      <span>Volver Arriba</span>
+    </a>
+  </div>
 </div>
-
-<script>
-  document
-    .querySelector('a[href="#top"]')
-    .addEventListener("click", function (e) {
-      e.preventDefault();
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-</script>

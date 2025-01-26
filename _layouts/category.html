@@ -2,26 +2,15 @@
 layout: with-sidebar
 ---
 
-<header class="hero my-4">
-  <div class="hero-body">
-    <div class="container has-text-centered">
-      <h1 class="title has-text-link" role="heading" aria-level="1">
-        {{ site.title }}
-      </h1>
-      <h2 class="subtitle is-4" role="heading" aria-level="2">
-        {{ site.description }}
-      </h2>
-    </div>
-  </div>
-</header>
+<div class="container py-5" id="top">
+  <header class="content has-text-centered">
+    <h1 class="title" role="heading" aria-level="1">{{ page.title }}</h1>
+    <p class="subtitle" role="heading" aria-level="2">{{ page.description }}</p>
+  </header>
 
-<main class="box my-4" id="top">
-  <div class="container">
-    <h2 class="title is-3 has-text-link" role="heading" aria-level="2">
-      {{ page.title }}
-    </h2>
-    <p class="subtitle is-5">{{ page.description }}</p>
-
+  <!-- Encabezado de la categoría -->
+  <div class="content box my-5">
+    <!-- Tabla de artículos de la categoría -->
     {% if site.categories[page.category] %}
     <div class="table-container">
       <table class="table is-fullwidth is-hoverable is-striped" role="table">
@@ -62,50 +51,37 @@ layout: with-sidebar
       </table>
     </div>
     {% else %}
+    <!-- Notificación en caso de no haber artículos -->
     <div class="notification is-warning" role="alert">
       No hay artículos disponibles en esta categoría. ¡Explora otras secciones
       del blog!
     </div>
     {% endif %}
   </div>
-</main>
 
-<div class="mt-6">
-  <nav class="level" role="navigation" aria-label="Navegación">
-    <div class="level-item">
-      <div class="buttons is-centered">
-        <a
-          href="/"
-          class="button is-link is-rounded"
-          aria-label="Volver al inicio"
-          title="Volver al inicio"
-        >
-          <span class="icon">
-            <i class="fas fa-home" aria-hidden="true"></i>
-          </span>
-          <span>Volver al Inicio</span>
-        </a>
-        <a
-          href="#top"
-          class="button is-link is-light is-rounded"
-          aria-label="Volver arriba"
-          title="Volver arriba"
-        >
-          <span class="icon">
-            <i class="fas fa-arrow-up" aria-hidden="true"></i>
-          </span>
-          <span>Volver Arriba</span>
-        </a>
-      </div>
-    </div>
-  </nav>
+  <!-- Navegación -->
+  <div class="mt-6 has-text-centered">
+    <a
+      href="/"
+      class="button is-link is-rounded"
+      aria-label="Volver al inicio"
+      title="Regresa a la página de inicio"
+    >
+      <span class="icon">
+        <i class="fas fa-home" aria-hidden="true"></i>
+      </span>
+      <span>Volver al Inicio</span>
+    </a>
+    <a
+      href="#top"
+      class="button is-link is-light is-rounded"
+      aria-label="Volver arriba"
+      title="Volver arriba"
+    >
+      <span class="icon">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+      </span>
+      <span>Volver Arriba</span>
+    </a>
+  </div>
 </div>
-
-<script>
-  document
-    .querySelector('a[href="#top"]')
-    .addEventListener("click", function (e) {
-      e.preventDefault();
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-</script>
