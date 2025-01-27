@@ -6,8 +6,10 @@ title: "El Rincón de Hattrick"
 <div class="container py-5">
   <!-- Encabezado principal -->
   <header class="content has-text-centered" id="top">
-    <h1 class="title" role="heading" aria-level="1">{{ site.title }}</h1>
-    <p class="subtitle" role="heading" aria-level="2">{{ site.description }}</p>
+    <h1 class="title is-2" role="heading" aria-level="1">{{ site.title }}</h1>
+    <p class="subtitle is-size-4" role="heading" aria-level="2">
+      {{ site.description }}
+    </p>
   </header>
 
   <!-- Listado de categorías y artículos -->
@@ -15,21 +17,21 @@ title: "El Rincón de Hattrick"
   {% assign category_page = site.pages | where: "category", category_name |
   first %}
 
-  <div class="content box my-5">
-    <h2 class="title is-4" role="heading" aria-level="3">
+  <div class="content box is-rounded my-5">
+    <h2 class="title is-4 has-text-link" role="heading" aria-level="3">
       {{ category_page.title | default: category_name }}
     </h2>
-    <p class="subtitle">
+    <p class="subtitle is-size-6 has-text-grey-dark">
       {{ category_page.description | default: "No hay descripción disponible
       para esta categoría." }}
     </p>
 
     <div class="table-container">
-      <table class="table is-fullwidth is-hoverable">
+      <table class="table is-fullwidth is-hoverable is-striped is-rounded">
         <thead>
           <tr>
-            <th scope="col">Fecha</th>
-            <th scope="col">Artículo</th>
+            <th scope="col" class="has-text-grey">Fecha</th>
+            <th scope="col" class="has-text-grey">Artículo</th>
           </tr>
         </thead>
         <tbody>
@@ -45,10 +47,11 @@ title: "El Rincón de Hattrick"
               <a
                 href="{{ post.url }}"
                 aria-label="Leer más sobre {{ post.title }}"
+                class="has-text-link"
               >
                 {{ post.title }}
               </a>
-              <p class="is-size-7 mt-1">
+              <p class="is-size-7 mt-1 has-text-grey">
                 {{ post.excerpt | strip_html | truncate: 150 }}
               </p>
             </td>
@@ -64,7 +67,7 @@ title: "El Rincón de Hattrick"
   <div class="has-text-centered mt-5">
     <a
       href="#top"
-      class="button is-link is-light is-rounded"
+      class="button is-link is-light is-rounded has-shadow"
       aria-label="Volver al inicio"
       title="Volver al inicio"
     >
@@ -75,3 +78,14 @@ title: "El Rincón de Hattrick"
     </a>
   </div>
 </div>
+
+<style>
+  .table.is-rounded {
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .button.has-shadow:hover {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+</style>

@@ -6,7 +6,9 @@
     <meta name="description" content="{{ site.description }}" />
     <meta name="author" content="{{ site.author }}" />
     <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#3273dc" />
 
+    <!-- Open Graph -->
     <meta property="og:title" content="{{ page.title }} - {{ site.title }}" />
     <meta property="og:description" content="{{ site.description }}" />
     <meta property="og:type" content="website" />
@@ -16,6 +18,7 @@
       content="{{ '/assets/img/HT.jpg' | relative_url }}"
     />
 
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="{{ page.title }} - {{ site.title }}" />
     <meta name="twitter:description" content="{{ site.description }}" />
@@ -24,22 +27,24 @@
       content="{{ '/assets/img/HT.jpg' | relative_url }}"
     />
 
-    <meta name="theme-color" content="#3273dc" />
+    <!-- Mobile-specific -->
+    <meta name="apple-mobile-web-app-title" content="{{ site.title }}" />
     <meta
       name="apple-mobile-web-app-status-bar-style"
       content="black-translucent"
     />
-    <meta name="apple-mobile-web-app-title" content="{{ site.title }}" />
     <meta name="mobile-web-app-capable" content="yes" />
 
     <title>{{ page.title }} - {{ site.title }}</title>
 
+    <!-- Favicon -->
     <link
       rel="icon"
       href="{{ '/assets/img/favicon.ico' | relative_url }}"
       type="image/x-icon"
     />
 
+    <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net" />
     <link
       rel="preconnect"
@@ -47,30 +52,40 @@
       crossorigin="anonymous"
     />
 
+    <!-- CSS -->
+    <link
+      rel="preload"
+      as="style"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"
+    />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"
     />
-
+    <link
+      rel="preload"
+      as="style"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-
     <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}" />
+
+    <!-- JS -->
+    <script src="/assets/js/script.js" defer></script>
   </head>
   <body class="has-navbar-fixed-top {{ page.layout | downcase }}">
     <!-- Navbar -->
     {% include header.html %}
 
-    <!-- Main content -->
+    <!-- Main Content -->
     <main class="section" role="main" aria-label="Contenido principal">
       {{ content }}
     </main>
 
     <!-- Footer -->
     {% include footer.html %}
-
-    <script src="/assets/js/script.js" defer></script>
   </body>
 </html>

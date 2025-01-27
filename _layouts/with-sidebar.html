@@ -4,12 +4,15 @@ layout: default
 
 <div class="container">
   <div class="content">
-    <div class="columns">
+    <div class="columns is-variable is-4">
+      <!-- Contenido Principal -->
       <div class="column">{{ content }}</div>
 
-      <aside class="column is-one-quarter">
-        <div class="box">
-          <h3 class="title is-5">Categorías</h3>
+      <!-- Barra Lateral -->
+      <aside class="column is-one-quarter is-hidden-mobile">
+        <!-- Categorías -->
+        <section aria-labelledby="categories-title" class="box">
+          <h3 id="categories-title" class="title is-5">Categorías</h3>
           <div class="columns is-multiline">
             {% assign category_pages = site.pages | where: "layout", "category"
             %} {% if category_pages.size > 0 %} {% for category_page in
@@ -17,8 +20,7 @@ layout: default
             <div class="column is-12">
               <a
                 href="{{ category_page.permalink }}"
-                class="tag is-medium"
-                aria-label="Ver artículos en la categoría {{ category_page.title }}"
+                class="tag is-medium is-link is-light"
               >
                 <span class="icon is-small mr-3" aria-hidden="true">
                   <i class="fas fa-tag"></i>
@@ -32,16 +34,12 @@ layout: default
             </div>
             {% endif %}
           </div>
-        </div>
+        </section>
 
-        <div class="box">
-          <h3 class="title is-5">Buscar en el Blog</h3>
-          <form
-            action="/search/"
-            method="get"
-            role="search"
-            aria-label="Formulario de búsqueda"
-          >
+        <!-- Buscar en el Blog -->
+        <section aria-labelledby="search-title" class="box">
+          <h3 id="search-title" class="title is-5">Buscar en el Blog</h3>
+          <form action="/search/" method="get" role="search">
             <div class="field">
               <div class="control">
                 <input
@@ -53,27 +51,20 @@ layout: default
                 />
               </div>
             </div>
-            <button
-              type="submit"
-              class="button is-primary is-rounded"
-              aria-label="Buscar artículos"
-            >
-              Buscar
-            </button>
+            <button class="button is-primary is-rounded">Buscar</button>
           </form>
-        </div>
+        </section>
 
-        <div class="box">
-          <h3 class="title is-5">Artículos Destacados</h3>
+        <!-- Artículos Destacados -->
+        <section aria-labelledby="featured-title" class="box">
+          <h3 id="featured-title" class="title is-5">Artículos Destacados</h3>
           <div class="columns is-multiline">
             {% assign featured_posts = site.posts | where: "featured", true %}
             {% if featured_posts.size > 0 %} {% for post in featured_posts %}
             <div class="column is-12">
               <a
                 href="{{ post.url }}"
-                class="box is-shadowless is-underlined"
-                aria-label="Leer artículo destacado: {{ post.title }}"
-                title="{{ post.title }}"
+                class="box is-shadowless has-hover-effect"
               >
                 {{ post.title }}
               </a>
@@ -84,11 +75,11 @@ layout: default
             </div>
             {% endif %}
           </div>
-        </div>
+        </section>
 
         <!-- Últimos Artículos -->
-        <div class="box">
-          <h3 class="title is-5">Últimos Artículos</h3>
+        <section aria-labelledby="recent-title" class="box">
+          <h3 id="recent-title" class="title is-5">Últimos Artículos</h3>
           <div class="columns is-multiline">
             {% assign published_posts = site.posts | where: "published", true |
             sort: "date" | reverse %} {% if published_posts.size > 0 %} {% for
@@ -96,9 +87,7 @@ layout: default
             <div class="column is-12">
               <a
                 href="{{ post.url }}"
-                class="box is-shadowless is-underlined"
-                aria-label="Leer artículo reciente: {{ post.title }}"
-                title="{{ post.title }}"
+                class="box is-shadowless has-hover-effect"
               >
                 {{ post.title }}
               </a>
@@ -109,7 +98,7 @@ layout: default
             </div>
             {% endif %}
           </div>
-        </div>
+        </section>
       </aside>
     </div>
   </div>

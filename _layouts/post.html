@@ -3,6 +3,7 @@ layout: with-sidebar
 ---
 
 <article class="container" role="article">
+  <!-- Encabezado del artículo -->
   <header class="media is-align-items-center">
     <div class="media-left">
       {% if page.image %}
@@ -24,8 +25,10 @@ layout: with-sidebar
     </div>
   </header>
 
+  <!-- Contenido principal -->
   <section class="content" role="main">{{ content }}</section>
 
+  <!-- Botón para compartir -->
   <div class="has-text-centered">
     <button
       id="shareButton"
@@ -41,6 +44,7 @@ layout: with-sidebar
   </div>
 </article>
 
+<!-- Footer del artículo -->
 <footer>
   <div class="columns">
     <div class="column">
@@ -60,6 +64,7 @@ layout: with-sidebar
     </div>
   </div>
 
+  <!-- Navegación -->
   <nav class="level" role="navigation" aria-label="Navegación principal">
     <div class="level-item">
       <div class="buttons is-centered">
@@ -67,7 +72,6 @@ layout: with-sidebar
           href="/"
           class="button is-link is-rounded"
           aria-label="Volver al inicio"
-          aria-current="page"
         >
           <span class="icon">
             <i class="fas fa-home" aria-hidden="true"></i>
@@ -90,6 +94,7 @@ layout: with-sidebar
   </nav>
 </footer>
 
+<!-- Script para compartir -->
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const shareButton = document.getElementById("shareButton");

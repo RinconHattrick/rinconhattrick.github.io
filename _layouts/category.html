@@ -3,15 +3,18 @@ layout: with-sidebar
 ---
 
 <div class="container py-5" id="top">
+  <!-- Encabezado principal -->
   <header class="content has-text-centered">
-    <h1 class="title" role="heading" aria-level="1">{{ page.title }}</h1>
-    <p class="subtitle" role="heading" aria-level="2">{{ page.description }}</p>
+    <h1 class="title is-2" role="heading" aria-level="1">{{ page.title }}</h1>
+    <p class="subtitle is-size-4" role="heading" aria-level="2">
+      {{ page.description }}
+    </p>
   </header>
 
   <!-- Encabezado de la categoría -->
   <div class="content box my-5">
-    <!-- Tabla de artículos de la categoría -->
     {% if site.categories[page.category] %}
+    <!-- Tabla de artículos de la categoría -->
     <div class="table-container">
       <table class="table is-fullwidth is-hoverable is-striped" role="table">
         <caption class="sr-only">
@@ -27,7 +30,11 @@ layout: with-sidebar
           {% for post in site.categories[page.category] %}
           <tr>
             <td class="is-narrow">
-              <span class="icon is-small" role="img" aria-label="Fecha">
+              <span
+                class="icon is-small"
+                role="img"
+                aria-label="Fecha de publicación"
+              >
                 <i class="fas fa-calendar-day" aria-hidden="true"></i>
               </span>
               {{ post.date | date: "%d/%m/%Y" }}
@@ -51,7 +58,7 @@ layout: with-sidebar
       </table>
     </div>
     {% else %}
-    <!-- Notificación en caso de no haber artículos -->
+    <!-- Mensaje de categoría vacía -->
     <div class="notification is-warning" role="alert">
       No hay artículos disponibles en esta categoría. ¡Explora otras secciones
       del blog!

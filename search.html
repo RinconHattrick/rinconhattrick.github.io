@@ -3,40 +3,38 @@ layout: default
 title: "Resultados de Búsqueda"
 ---
 
-<section
-  class="container"
-  role="main"
-  style="background-color: #f9f9f9; padding: 2rem 1rem"
->
+<section class="container" role="main">
   <div class="content">
     <h1 class="title has-text-centered" role="heading" aria-level="1">
       Resultados de Búsqueda
     </h1>
 
-    <input
-      type="text"
-      id="search-input"
-      class="input"
-      placeholder="Buscar artículos..."
-      aria-label="Buscar artículos"
-      aria-describedby="search-hint"
-    />
+    <div class="field has-addons mt-5">
+      <div class="control is-expanded">
+        <input
+          type="text"
+          id="search-input"
+          class="input is-rounded"
+          placeholder="Buscar artículos..."
+          aria-label="Buscar artículos"
+          aria-describedby="search-hint"
+        />
+      </div>
+    </div>
     <p id="search-hint" class="help">
       Escribe al menos 3 caracteres para comenzar a buscar.
     </p>
 
     <div
       id="search-feedback"
-      class="has-text-centered mt-3"
-      aria-live="polite"
-      aria-atomic="true"
+      class="notification is-primary is-hidden mt-3"
     ></div>
 
     <div
       id="search-results"
-      class="content mt-5"
+      class="box mt-5"
       aria-live="polite"
-      aria-relevant="additions"
+      role="region"
     ></div>
   </div>
 </section>
@@ -44,52 +42,35 @@ title: "Resultados de Búsqueda"
 <script>
   const searchJsonUrl = "{{ '/assets/json/search.json' | relative_url }}";
 
-  /**
-   * Fetch search data from JSON and filter by query.
-   * @param {string} query - Search query string.
-   * @returns {Promise<Array>} Filtered search results.
-   */
-  async function fetchSearchData(query) {
-    try {
-      const response = await fetch(searchJsonUrl);
-      if (!response.ok) {
-        throw new Error("No se pudo cargar el archivo de búsqueda.");
-      }
-      const data = await response.json();
-      return data.filter((item) =>
-        item.title.toLowerCase().includes(query.toLowerCase().trim())
-      );
-    } catch (error) {
-      console.error("Error al buscar:", error);
-      return [];
-    }
+  function showFeedback(message, type = "is-primary") {
+    const feedback = document.getElementById("search-feedback");
+    feedback.textContent = message;
+    feedback.className = `notification ${type}`;
+    feedback.classList.remove("is-hidden");
   }
 
-  /**
-   * Render search results in the DOM.
-   * @param {Array} results - Array of search result objects.
-   */
+  function hideFeedback() {
+    const feedback = document.getElementById("search-feedback");
+    feedback.classList.add("is-hidden");
+  }
+
   function renderResults(results) {
     const resultsContainer = document.getElementById("search-results");
-    const feedback = document.getElementById("search-feedback");
-
     resultsContainer.innerHTML = "";
-    feedback.textContent = "";
 
     if (results.length === 0) {
-      resultsContainer.innerHTML = `
-        <p class="has-text-danger">No se encontraron resultados para tu búsqueda.</p>
-      `;
+      resultsContainer.innerHTML = `<p class="has-text-danger">No se encontraron resultados.</p>`;
       return;
     }
 
     const ul = document.createElement("ul");
     ul.className = "search-results-list";
+    ul.setAttribute("role", "list");
 
     results.forEach((item) => {
       const li = document.createElement("li");
       li.innerHTML = `
-        <a href="${item.url}" aria-label="Ir a ${item.title}" class="has-text-link">
+        <a href="${item.url}" aria-label="Leer artículo: ${item.title}" class="has-text-link">
           ${item.title}
         </a>
       `;
@@ -99,42 +80,64 @@ title: "Resultados de Búsqueda"
     resultsContainer.appendChild(ul);
   }
 
-  /**
-   * Display a loading message while results are being fetched.
-   */
-  function showLoadingFeedback() {
-    const feedback = document.getElementById("search-feedback");
-    feedback.textContent = "Cargando resultados...";
+  function debounce(func, wait) {
+    let timeout;
+    return function (...args) {
+      const context = this;
+      clearTimeout(timeout);
+      timeout = setTimeout(() => func.apply(context, args), wait);
+    };
   }
 
-  /**
-   * Initialize the search functionality.
-   */
+  async function search(query) {
+    if (query.length < 3) {
+      renderResults([]);
+      hideFeedback();
+      return;
+    }
+
+    showFeedback("Cargando resultados...", "is-primary");
+
+    try {
+      const response = await fetch(searchJsonUrl);
+      if (!response.ok) {
+        throw new Error("No se pudo cargar el archivo de búsqueda.");
+      }
+      const data = await response.json();
+      const results = data.filter((item) =>
+        item.title.toLowerCase().includes(query.toLowerCase().trim())
+      );
+
+      renderResults(results);
+      hideFeedback();
+    } catch (error) {
+      console.error(error);
+      showFeedback(
+        "Ocurrió un error al buscar. Por favor, intenta más tarde.",
+        "is-danger"
+      );
+    }
+  }
+
   function initSearch() {
     const searchInput = document.getElementById("search-input");
 
-    // Handle search input
-    searchInput.addEventListener("input", (e) => {
-      const query = e.target.value.trim();
+    searchInput.addEventListener(
+      "input",
+      debounce((e) => search(e.target.value.trim()), 300)
+    );
 
-      if (query.length >= 3) {
-        showLoadingFeedback();
-        fetchSearchData(query).then(renderResults);
-      } else {
-        renderResults([]);
-      }
-    });
-
-    // Handle initial query from URL
     const queryParams = new URLSearchParams(window.location.search);
     const initialQuery = queryParams.get("q") || "";
 
     if (initialQuery) {
       searchInput.value = initialQuery;
-      fetchSearchData(initialQuery).then(renderResults);
+      search(initialQuery);
     }
   }
 
-  // Initialize search on page load
   document.addEventListener("DOMContentLoaded", initSearch);
 </script>
+
+<style>
+</style>
