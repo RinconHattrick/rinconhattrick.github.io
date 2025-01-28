@@ -156,4 +156,4 @@ Ayudan a identificar y dar seguimiento a jugadores prometedores con herramientas
 
 ---
 
-¿Tienes preguntas adicionales o quieres compartir sugerencias? Contáctame a través de la [página de contacto](/contact.html) y estaré encantado de ayudarte.
+¿Tienes preguntas adicionales o quieres compartir sugerencias? Contáctame a través de la [página de contacto](/contact/) y estaré encantado de ayudarte.

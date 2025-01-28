@@ -4,24 +4,22 @@ title: "El Rincón de Hattrick"
 ---
 
 <div class="container">
-  <!-- Encabezado principal -->
   <header class="content has-text-centered" id="top">
     <h1 class="title is-2" role="heading" aria-level="1">{{ site.title }}</h1>
-    <p class="subtitle is-size-4" role="heading" aria-level="2">
+    <p class="subtitle is-4" role="heading" aria-level="2">
       {{ site.description }}
     </p>
   </header>
 
-  <!-- Listado de categorías y artículos -->
   {% for category in site.categories %} {% assign category_name = category[0] %}
   {% assign category_page = site.pages | where: "category", category_name |
   first %}
 
-  <div class="content box is-rounded my-5">
+  <div class="content my-5">
     <h2 class="title is-4 has-text-link" role="heading" aria-level="3">
       {{ category_page.title | default: category_name }}
     </h2>
-    <p class="subtitle is-size-6 has-text-grey-dark">
+    <p class="subtitle is-6">
       {{ category_page.description | default: "No hay descripción disponible
       para esta categoría." }}
     </p>
@@ -51,7 +49,7 @@ title: "El Rincón de Hattrick"
               >
                 {{ post.title }}
               </a>
-              <p class="is-size-7 mt-1 has-text-grey">
+              <p class="is-7 mt-1">
                 {{ post.excerpt | strip_html | truncate: 150 }}
               </p>
             </td>
@@ -67,14 +65,16 @@ title: "El Rincón de Hattrick"
   <div class="has-text-centered mt-5">
     <a
       href="#top"
-      class="button is-link is-light is-rounded has-shadow"
+      class="button is-link is-light is-rounded"
       aria-label="Volver al inicio"
       title="Volver al inicio"
     >
-      <span class="icon">
-        <i class="fas fa-arrow-up"></i>
+      <span class="icon-text">
+        <span class="icon">
+          <i class="fas fa-arrow-up"></i>
+        </span>
+        <span>Volver Arriba</span>
       </span>
-      <span>Volver Arriba</span>
     </a>
   </div>
 </div>

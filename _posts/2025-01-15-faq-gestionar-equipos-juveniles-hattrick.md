@@ -184,4 +184,4 @@ Puedes cerrar el equipo entre temporadas o cuando no esté en ninguna liga. Si d
 
 ---
 
-¿Tienes preguntas adicionales o quieres compartir sugerencias? Contáctame a través de la [página de contacto](/contact.html) y estaré encantado de ayudarte.
+¿Tienes preguntas adicionales o quieres compartir sugerencias? Contáctame a través de la [página de contacto](/contact/) y estaré encantado de ayudarte.

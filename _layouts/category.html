@@ -3,18 +3,15 @@ layout: with-sidebar
 ---
 
 <div class="container" id="top">
-  <!-- Encabezado principal -->
   <header class="content has-text-centered">
     <h1 class="title is-2" role="heading" aria-level="1">{{ page.title }}</h1>
-    <p class="subtitle is-size-4" role="heading" aria-level="2">
+    <p class="subtitle is-4" role="heading" aria-level="2">
       {{ page.description }}
     </p>
   </header>
 
-  <!-- Encabezado de la categoría -->
-  <div class="content box my-5">
+  <div class="content my-5">
     {% if site.categories[page.category] %}
-    <!-- Tabla de artículos de la categoría -->
     <div class="table-container">
       <table class="table is-fullwidth is-hoverable is-striped" role="table">
         <caption class="sr-only">
@@ -48,7 +45,7 @@ layout: with-sidebar
               >
                 {{ post.title }}
               </a>
-              <p class="is-size-7 mt-1">
+              <p class="is-7 mt-1">
                 {{ post.excerpt | strip_html | truncate: 150 }}
               </p>
             </td>
@@ -58,7 +55,6 @@ layout: with-sidebar
       </table>
     </div>
     {% else %}
-    <!-- Mensaje de categoría vacía -->
     <div class="notification is-warning" role="alert">
       No hay artículos disponibles en esta categoría. ¡Explora otras secciones
       del blog!
@@ -66,7 +62,6 @@ layout: with-sidebar
     {% endif %}
   </div>
 
-  <!-- Navegación -->
   <div class="mt-6 has-text-centered">
     <a
       href="/"
@@ -74,10 +69,12 @@ layout: with-sidebar
       aria-label="Volver al inicio"
       title="Regresa a la página de inicio"
     >
-      <span class="icon">
-        <i class="fas fa-home" aria-hidden="true"></i>
+      <span class="icon-text">
+        <span class="icon">
+          <i class="fas fa-home" aria-hidden="true"></i>
+        </span>
+        <span>Volver al Inicio</span>
       </span>
-      <span>Volver al Inicio</span>
     </a>
     <a
       href="#top"
@@ -85,10 +82,12 @@ layout: with-sidebar
       aria-label="Volver arriba"
       title="Volver arriba"
     >
-      <span class="icon">
-        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+      <span class="icon-text">
+        <span class="icon">
+          <i class="fas fa-arrow-up" aria-hidden="true"></i>
+        </span>
+        <span>Volver Arriba</span>
       </span>
-      <span>Volver Arriba</span>
     </a>
   </div>
 </div>

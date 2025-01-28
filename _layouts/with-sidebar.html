@@ -12,7 +12,7 @@ layout: default
       <aside class="column is-one-quarter is-hidden-mobile">
         <!-- Categorías -->
         <section aria-labelledby="categories-title" class="box">
-          <h3 id="categories-title" class="title is-5">Categorías</h3>
+          <h3 class="title is-5">Categorías</h3>
           <div class="columns is-multiline">
             {% assign category_pages = site.pages | where: "layout", "category"
             %} {% if category_pages.size > 0 %} {% for category_page in
@@ -57,7 +57,7 @@ layout: default
 
         <!-- Artículos Destacados -->
         <section aria-labelledby="featured-title" class="box">
-          <h3 id="featured-title" class="title is-5">Artículos Destacados</h3>
+          <h3 class="title is-5">Artículos Destacados</h3>
           <div class="columns is-multiline">
             {% assign featured_posts = site.posts | where: "featured", true %}
             {% if featured_posts.size > 0 %} {% for post in featured_posts %}
@@ -79,7 +79,7 @@ layout: default
 
         <!-- Últimos Artículos -->
         <section aria-labelledby="recent-title" class="box">
-          <h3 id="recent-title" class="title is-5">Últimos Artículos</h3>
+          <h3 class="title is-5">Últimos Artículos</h3>
           <div class="columns is-multiline">
             {% assign published_posts = site.posts | where: "published", true |
             sort: "date" | reverse %} {% if published_posts.size > 0 %} {% for

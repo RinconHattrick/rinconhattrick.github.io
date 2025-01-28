@@ -29,7 +29,6 @@ No. El entrenamiento depende exclusivamente del equipo de club.
 
 No hay un "entrenador" tradicional. Las tácticas se configuran con la barra del asistente táctico.
 
-
 ## ¿Tiene consecuencias la entrada o salida de jugadores de la selección?
 
 - **Entrada:** No afecta negativamente al equipo.
@@ -74,4 +73,4 @@ Puedes elegir **6 formaciones** con experiencia inicial de **9.5** antes del pri
 
 ---
 
-¿Tienes preguntas adicionales o quieres compartir sugerencias? Contáctame a través de la [página de contacto](/contact.html) y estaré encantado de ayudarte.
+¿Tienes preguntas adicionales o quieres compartir sugerencias? Contáctame a través de la [página de contacto](/contact/) y estaré encantado de ayudarte.

@@ -5,7 +5,7 @@ title: "Resultados de Búsqueda"
 
 <section class="container" role="main">
   <div class="content">
-    <h1 class="title has-text-centered" role="heading" aria-level="1">
+    <h1 class="title is-2 has-text-centered" role="heading" aria-level="1">
       Resultados de Búsqueda
     </h1>
 
@@ -64,7 +64,6 @@ title: "Resultados de Búsqueda"
     }
 
     const ul = document.createElement("ul");
-    ul.className = "search-results-list";
     ul.setAttribute("role", "list");
 
     results.forEach((item) => {
@@ -138,5 +137,3 @@ title: "Resultados de Búsqueda"
 
   document.addEventListener("DOMContentLoaded", initSearch);
 </script>
-
-<style></style>

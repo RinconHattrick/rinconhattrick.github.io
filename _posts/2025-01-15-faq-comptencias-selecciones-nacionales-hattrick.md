@@ -167,4 +167,4 @@ No se permite manipular las selecciones nacionales. Los administradores NTA pued
 
 ---
 
-¿Tienes preguntas adicionales o quieres compartir sugerencias? Contáctame a través de la [página de contacto](/contact.html) y estaré encantado de ayudarte.
+¿Tienes preguntas adicionales o quieres compartir sugerencias? Contáctame a través de la [página de contacto](/contact/) y estaré encantado de ayudarte.
