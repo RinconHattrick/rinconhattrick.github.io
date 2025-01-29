@@ -58,14 +58,34 @@ El mantenimiento semanal del equipo juvenil incluye:
 
 ## Tabla Resumen de Costos
 
-| **Concepto**                    | **Costo**          | **Frecuencia**           |
-| ------------------------------- | ------------------ | ------------------------ |
-| Apertura del equipo juvenil     | 5,000 US$          | Única                    |
-| Mantenimiento con 1 ojeador     | 10,000 US$         | Semanal                  |
-| Ojeador adicional (hasta 2 más) | 5,000 US$ cada uno | Semanal                  |
-| Firma de un nuevo ojeador       | 5,000 US$          | Por contratación         |
-| Ascender un juvenil             | 2,000 US$          | Por jugador              |
-| Viajes de ojeadores             | Variable           | Por búsqueda en regiones |
+- **Apertura del equipo juvenil**
+
+  - **Costo:** 5,000 US$
+  - **Frecuencia:** Única
+
+- **Mantenimiento con 1 ojeador**
+
+  - **Costo:** 10,000 US$
+  - **Frecuencia:** Semanal
+
+- **Ojeador adicional (hasta 2 más)**
+
+  - **Costo:** 5,000 US$ cada uno
+  - **Frecuencia:** Semanal
+
+- **Firma de un nuevo ojeador**
+
+  - **Costo:** 5,000 US$
+  - **Frecuencia:** Por contratación
+
+- **Ascender un juvenil**
+
+  - **Costo:** 2,000 US$
+  - **Frecuencia:** Por jugador
+
+- **Viajes de ojeadores**
+  - **Costo:** Variable
+  - **Frecuencia:** Por búsqueda en regiones
 
 ---
 

@@ -1,70 +1,166 @@
-<nav class="navbar is-fixed-top" role="navigation" aria-label="Menú principal">
-  <div class="navbar-brand">
-    <a class="navbar-item" href="/" aria-label="Volver al inicio">
-      <h2 class="title is-4">El Rincón de Hattrick</h2>
-    </a>
-    <button
-      class="navbar-burger"
-      aria-label="Abrir menú"
-      aria-expanded="false"
-      data-target="navbarMenu"
-      aria-controls="navbarMenu"
-    >
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </button>
-  </div>
+<nav class="navbar is-fixed-top" aria-label="Menú principal">
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="{{ '/' | relative_url }}">
+        <h1 class="title is-4 mb-0">El Rincón de Hattrick</h1>
+      </a>
 
-  <div id="navbarMenu" class="navbar-menu" role="menu">
-    <div class="navbar-end">
-      <a
-        class="navbar-item {% if page.url == '/' %}is-active{% endif %}"
-        href="/"
-        aria-label="Ir a Inicio"
-        role="menuitem"
+      <button
+        class="navbar-burger"
+        aria-label="Menú"
+        aria-expanded="false"
+        aria-controls="navbarMenu"
       >
-        <span class="icon">
-          <i class="fas fa-home" aria-hidden="true"></i>
-        </span>
-        Inicio
-      </a>
-      <a
-        class="navbar-item"
-        href="https://www.hattrick.org/?inviteRef=U8EHM5"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Ir a Hattrick (abre en nueva pestaña)"
-        role="menuitem"
-      >
-        <span class="icon">
-          <i class="fas fa-external-link-alt" aria-hidden="true"></i>
-        </span>
-        Hattrick
-      </a>
-      <a
-        class="navbar-item {% if page.url contains '/acerca-de/' %}is-active{% endif %}"
-        href="/acerca-de/"
-        aria-label="Ir a Acerca de"
-        role="menuitem"
-      >
-        <span class="icon">
-          <i class="fas fa-info-circle" aria-hidden="true"></i>
-        </span>
-        Acerca de
-      </a>
-      <a
-        class="navbar-item {% if page.url contains '/contacto/' %}is-active{% endif %}"
-        href="/contacto/"
-        aria-label="Ir a Contáctanos"
-        role="menuitem"
-      >
-        <span class="icon">
-          <i class="fas fa-envelope" aria-hidden="true"></i>
-        </span>
-        Contáctanos
-      </a>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <div id="navbarMenu" class="navbar-menu">
+      <div class="navbar-end">
+        <a
+          class="navbar-item {% if page.url == '/' %}is-active{% endif %}"
+          href="{{ '/' | relative_url }}"
+        >
+          <span class="icon-text">
+            <span class="icon">
+              <i class="fas fa-home"></i>
+            </span>
+            <span>Inicio</span>
+          </span>
+        </a>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-item">
+            <span class="icon-text">
+              <span class="icon">
+                <i class="fas fa-folder"></i>
+              </span>
+              <span>Categorías</span>
+            </span>
+          </a>
+          <div class="navbar-dropdown">
+            {% if site.pages %} {% for category_page in site.pages %} {% if
+            category_page.layout == "category" %}
+            <a
+              class="navbar-item {% if page.url contains category_page.permalink %}is-active{% endif %}"
+              href="{{ category_page.permalink }}"
+            >
+              {{ category_page.title }}
+            </a>
+            {% endif %} {% endfor %} {% else %}
+            <a class="navbar-item">No hay categorías disponibles</a>
+            {% endif %}
+          </div>
+        </div>
+
+        <a
+          class="navbar-item {% if page.url contains '/acerca-de/' %}is-active{% endif %}"
+          href="{{ '/acerca-de/' | relative_url }}"
+        >
+          <span class="icon-text">
+            <span class="icon">
+              <i class="fas fa-info-circle"></i>
+            </span>
+            <span>Acerca de</span>
+          </span>
+        </a>
+
+        <a
+          class="navbar-item {% if page.url contains '/contacto/' %}is-active{% endif %}"
+          href="{{ '/contacto/' | relative_url }}"
+        >
+          <span class="icon-text">
+            <span class="icon">
+              <i class="fas fa-envelope"></i>
+            </span>
+            <span>Contáctanos</span>
+          </span>
+        </a>
+
+        <a
+          class="navbar-item"
+          href="https://www.hattrick.org/?inviteRef=U8EHM5"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span class="icon-text">
+            <span class="icon">
+              <i class="fas fa-external-link-alt"></i>
+            </span>
+            <span>Hattrick</span>
+          </span>
+        </a>
+      </div>
     </div>
   </div>
 </nav>
+
+<style>
+  .navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar-item {
+    transition: background-color 0.2s ease;
+  }
+
+  .icon-text {
+    align-items: center;
+    display: inline-flex;
+    gap: 0.5rem;
+  }
+
+  @media screen and (max-width: 1023px) {
+    .navbar-menu {
+      padding: 1rem;
+    }
+
+    .navbar-item {
+      padding: 0.75rem;
+    }
+  }
+
+  /* Estilos para el botón burger */
+  .navbar-burger {
+    height: 4rem;
+    width: 4rem;
+  }
+
+  .navbar-burger span {
+    height: 2px;
+    width: 20px;
+  }
+
+  .navbar-burger:focus {
+    outline: 2px solid var(--primary);
+    outline-offset: -2px;
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // Funcionalidad del menú móvil
+    const burger = document.querySelector(".navbar-burger");
+    const menu = document.querySelector(".navbar-menu");
+
+    burger?.addEventListener("click", () => {
+      const isExpanded = burger.getAttribute("aria-expanded") === "true";
+
+      burger.setAttribute("aria-expanded", !isExpanded);
+      menu.classList.toggle("is-active");
+    });
+
+    // Cerrar menú al hacer clic fuera
+    document.addEventListener("click", (e) => {
+      const isClickInside =
+        burger?.contains(e.target) || menu?.contains(e.target);
+
+      if (!isClickInside && menu?.classList.contains("is-active")) {
+        menu.classList.remove("is-active");
+        burger?.setAttribute("aria-expanded", "false");
+      }
+    });
+  });
+</script>

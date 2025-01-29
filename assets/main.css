@@ -1,11 +1,13 @@
 /* Artículos desde Markdown */
-.content h1,
+.content h1 {
+  color: var(--primary, #00d1b2);
+}
 .content h2,
 .content h3,
 .content h4,
 .content h5,
 .content h6 {
-  color: var(--primary, #3273dc);
+  color: var(--primary, #b5b5b5);
 }
 
 .button:hover,

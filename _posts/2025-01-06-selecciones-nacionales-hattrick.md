@@ -48,10 +48,13 @@ El ciclo competitivo de las selecciones nacionales se organiza en dos fases prin
 - Diseñada para selecciones con un ranking más bajo.
 - Utiliza un formato **suizo** para equilibrar los enfrentamientos.
 
-| **Competición**     | **Participantes**             | **Duración**  |
-| ------------------- | ----------------------------- | ------------- |
-| Copas Continentales | Selecciones con alto ranking  | Una temporada |
-| Liga de Aspirantes  | Selecciones con menor ranking | Una temporada |
+- **Copas Continentales**
+  - **Participantes:** Selecciones con alto ranking
+  - **Duración:** Una temporada
+
+- **Liga de Aspirantes**
+  - **Participantes:** Selecciones con menor ranking
+  - **Duración:** Una temporada
 
 ### **Fase 2: Competiciones Globales**
 

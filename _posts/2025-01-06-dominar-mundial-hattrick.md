@@ -49,10 +49,15 @@ El torneo está estructurado para ofrecer una experiencia emocionante y desafian
 
 En estas rondas, la competencia se intensifica:
 
-| **Ronda** | **Equipos Totales** | **Grupos** | **Clasificados** |
-| --------- | ------------------- | ---------- | ---------------- |
-| Ronda 4   | 16                  | 4 grupos   | 2 por grupo      |
-| Ronda 5   | 8                   | 2 grupos   | 2 por grupo      |
+- **Ronda 4**
+  - **Equipos Totales:** 16
+  - **Grupos:** 4 grupos
+  - **Clasificados:** 2 por grupo
+
+- **Ronda 5**
+  - **Equipos Totales:** 8
+  - **Grupos:** 2 grupos
+  - **Clasificados:** 2 por grupo
 
 ### **Semifinales y Final: Por la Gloria**
 
@@ -66,21 +71,31 @@ En estas rondas, la competencia se intensifica:
 
 Antes de cada ronda, el Mundial incluye un **reinicio parcial** del espíritu de equipo y la confianza para nivelar las condiciones entre los equipos.
 
-### Fórmula del reinicio parcial
+### Fórmula del Reinicio Parcial
 
-\[
-(Nivel\ Actual - Nivel\ Base) \times Porcentaje\ de\ Reinicio + Nivel\ Base
-\]
+La fórmula para calcular el nuevo nivel después de un reinicio parcial es:  
 
-**Ejemplo:**
+**Nuevo Nivel = (Nivel Actual - Nivel Base) × Porcentaje de Reinicio + Nivel Base**
 
-- Nivel actual: 9
-- Nivel base: 5
-- Porcentaje de reinicio: 80%  
-  Nuevo nivel = \[(9 - 5) \times 0.8 + 5 = 8.2\]
+#### Ejemplo:
+
+- **Nivel actual**: 9  
+- **Nivel base**: 5  
+- **Porcentaje de reinicio**: 80%  
+
+Sustituyendo en la fórmula:  
+
+**Nuevo Nivel = (9 - 5) × 0.8 + 5**  
+
+Cálculo:  
+- 9 - 5 = 4
+- 4 × 0.8 = 3.2
+- 3.2 + 5 = 8.2
+
+**Resultado:** El nuevo nivel es **8.2**.
 
 Este reinicio introduce un elemento estratégico adicional para los seleccionadores.
-
+
 ---
 
 ## Premios del Mundial

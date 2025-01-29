@@ -2,101 +2,142 @@
 layout: with-sidebar
 ---
 
-<article class="container" role="article">
-  <!-- Encabezado del artículo -->
-  <header class="media is-align-items-center">
+<article class="container">
+  <header class="media is-align-items-center mb-5">
+    {% if page.image %}
     <div class="media-left">
-      {% if page.image %}
       <figure class="image is-64x64">
         <img
           src="{{ page.image | relative_url }}"
-          alt="Imagen de: {{ page.title }}"
+          alt="Imagen del artículo: {{ page.title }}"
           class="is-rounded"
           loading="lazy"
+          width="64"
+          height="64"
         />
       </figure>
-      {% endif %}
     </div>
+    {% endif %}
+
     <div class="media-content">
-      <p class="has-text-centered">
-        Publicado el {{ page.date | date: "%d/%m/%Y" }} por
-        <strong>{{ page.author | default: "Anónimo" }}</strong>
-      </p>
+      <div class="has-text-centered">
+        <time
+          datetime="{{ page.date | date_to_xmlschema }}"
+          class="has-text-grey"
+        >
+          Publicado el {{ page.date | date: "%d/%m/%Y" }}
+        </time>
+        {% if page.author %}
+        <span class="mx-2">por</span>
+        <strong>{{ page.author }}</strong>
+        {% endif %}
+      </div>
     </div>
   </header>
 
-  <!-- Contenido principal -->
-  <section class="content" role="main">{{ content }}</section>
+  <section class="content">{{ content }}</section>
 
-  <!-- Botón para compartir -->
-  <div class="has-text-centered">
+  <div class="has-text-centered my-6">
     <button
       id="shareButton"
       class="button is-primary is-rounded"
-      role="button"
-      aria-label="Compartir este artículo"
+      aria-label="Compartir artículo"
     >
-      <span class="icon is-small">
-        <i class="fas fa-share-alt" aria-hidden="true"></i>
+      <span class="icon-text">
+        <span class="icon" aria-hidden="true">
+          <i class="fas fa-share-alt"></i>
+        </span>
+        <span>Compartir</span>
       </span>
-      <span>Compartir</span>
     </button>
   </div>
 </article>
 
-<!-- Footer del artículo -->
 <footer class="section">
-  <!-- Navegación -->
-  <nav class="level" role="navigation" aria-label="Navegación principal">
+  <nav class="level" aria-label="Navegación del artículo">
     <div class="level-item">
       <div class="buttons is-centered">
-        <a
-          href="/"
-          class="button is-link is-rounded"
-          aria-label="Volver al inicio"
-        >
-          <span class="icon">
-            <i class="fas fa-home" aria-hidden="true"></i>
+        <a href="{{ '/' | relative_url }}" class="button is-link is-rounded">
+          <span class="icon-text">
+            <span class="icon" aria-hidden="true">
+              <i class="fas fa-home"></i>
+            </span>
+            <span>Volver al Inicio</span>
           </span>
-          <span>Volver al Inicio</span>
         </a>
         <a
-          href="#top"
+          href="#main-header"
           class="button is-link is-light is-rounded"
-          aria-label="Volver arriba"
-          title="Volver arriba"
+          title="Ir al inicio de la página"
         >
-          <span class="icon">
-            <i class="fas fa-arrow-up" aria-hidden="true"></i>
+          <span class="icon-text">
+            <span class="icon" aria-hidden="true">
+              <i class="fas fa-arrow-up"></i>
+            </span>
+            <span>Subir</span>
           </span>
-          <span>Volver Arriba</span>
         </a>
       </div>
     </div>
   </nav>
 </footer>
 
-<!-- Script para compartir -->
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const shareButton = document.getElementById("shareButton");
-    if (shareButton) {
-      shareButton.addEventListener("click", function () {
-        if (navigator.share) {
-          navigator
-            .share({
-              title: "{{ page.title }}",
-              text: "¡Lee este artículo interesante en El Rincón de Hattrick!",
-              url: window.location.href,
-            })
-            .then(() => console.log("Artículo compartido con éxito"))
-            .catch((error) => console.error("Error al compartir:", error));
-        } else {
-          alert(
-            "La función de compartir no está disponible en este dispositivo. ¡Compártelo en tus redes sociales!"
-          );
-        }
-      });
+  class ShareManager {
+    constructor() {
+      this.shareButton = document.getElementById("shareButton");
+      this.shareData = {
+        title: "{{ page.title }}",
+        text: "¡Lee este artículo interesante en El Rincón de Hattrick!",
+        url: window.location.href,
+      };
+
+      this.init();
     }
-  });
+
+    init() {
+      if (this.shareButton) {
+        this.shareButton.addEventListener("click", () => this.handleShare());
+      }
+    }
+
+    async handleShare() {
+      try {
+        if (navigator.share) {
+          await navigator.share(this.shareData);
+          console.log("Contenido compartido exitosamente");
+        } else {
+          this.showFallbackMessage();
+        }
+      } catch (error) {
+        if (error.name !== "AbortError") {
+          console.error("Error al compartir:", error);
+          this.showFallbackMessage();
+        }
+      }
+    }
+
+    showFallbackMessage() {
+      const message =
+        `Lo sentimos, la función de compartir no está disponible.\n\n` +
+        `URL del artículo: ${this.shareData.url}`;
+      alert(message);
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", () => new ShareManager());
 </script>
+
+<style>
+  .icon-text {
+    align-items: center;
+    display: inline-flex;
+    gap: 0.5rem;
+  }
+
+  @media print {
+    .button {
+      display: none;
+    }
+  }
+</style>

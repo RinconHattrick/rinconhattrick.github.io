@@ -76,13 +76,20 @@ La red de cazatalentos te permite contratar ojeadores para buscar jugadores pote
 
 ## Comparativa: Red de Cazatalentos vs. Equipo Juvenil
 
-| **Aspecto**                | **Red de Cazatalentos** | **Equipo Juvenil** |
-| -------------------------- | ----------------------- | ------------------ |
-| **Tiempo para resultados** | Inmediato               | A largo plazo      |
-| **Control del desarrollo** | Bajo                    | Alto               |
-| **Calidad de jugadores**   | Variable                | Generalmente mayor |
-| **Costo inicial**          | Bajo                    | Moderado           |
-| **Flexibilidad**           | Alta                    | Baja               |
+- **Red de Cazatalentos**
+
+  - **Tiempo para resultados:** Inmediato
+  - **Control del desarrollo:** Bajo
+  - **Calidad de jugadores:** Variable
+  - **Costo inicial:** Bajo
+  - **Flexibilidad:** Alta
+
+- **Equipo Juvenil**
+  - **Tiempo para resultados:** A largo plazo
+  - **Control del desarrollo:** Alto
+  - **Calidad de jugadores:** Generalmente mayor
+  - **Costo inicial:** Moderado
+  - **Flexibilidad:** Baja
 
 ---
 

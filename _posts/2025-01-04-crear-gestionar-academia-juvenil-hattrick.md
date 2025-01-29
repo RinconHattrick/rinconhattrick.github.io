@@ -7,7 +7,7 @@ categories: equipo-juvenil
 tags: [juveniles, entrenamiento, academia]
 excerpt: "Guía práctica para construir una academia juvenil eficiente y potenciar el futuro de tu equipo en Hattrick."
 image: "/assets/img/user.png"
-featured: false
+featured: true
 published: true
 ---
 

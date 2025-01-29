@@ -107,3 +107,4 @@ Si tienes jugadores convocados por su selección, ten en cuenta lo siguiente:
 - Aunque no contribuyen al entrenamiento, generan experiencia y reducen costos salariales.
 - La niebla de guerra y la ventaja de local reducida son factores únicos que hacen de estos encuentros un desafío estratégico.
 - Mantén comunicación con el seleccionador y aprovecha al máximo las oportunidades que estos partidos brindan a tus jugadores.
+

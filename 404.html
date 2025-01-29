@@ -1,46 +1,69 @@
 ---
 layout: default
 title: "Página no encontrada"
+description: "Lo sentimos, la página que buscas no está disponible o ha sido movida"
 permalink: /404.html
 ---
 
-<section class="hero id-medium">
+<section class="hero is-fullheight-with-navbar">
   <div class="hero-body">
-    <div class="container has-text-centered">
-      <!-- Icono de advertencia -->
-      <div class="icon">
-        <span
-          class="icon is-large has-text-danger"
-          aria-label="Advertencia: página no encontrada"
-        >
-          <i class="fas fa-exclamation-triangle fa-4x" aria-hidden="true"></i>
-        </span>
-      </div>
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8-tablet is-6-desktop">
+          <div class="has-text-centered">
+            <!-- Icono de advertencia con mejor accesibilidad -->
+            <div class="icon mb-6" role="img" aria-label="Error 404">
+              <span class="icon is-large">
+                <i
+                  class="fas fa-exclamation-triangle fa-4x has-text-danger"
+                  aria-hidden="true"
+                ></i>
+              </span>
+            </div>
 
-      <!-- Encabezado principal -->
-      <h1 class="title is-1 has-text-danger">¡Ups! Página no encontrada</h1>
-      <p class="subtitle is-size-4 mt-4">
-        La página que buscas no está disponible o ha sido movida.
-      </p>
-      <p class="subtitle is-size-4">
-        Si crees que esto es un error, no dudes en
-        <a href="/contacto" class="has-text-link">ponerte en contacto</a>.
-      </p>
+            <main>
+              <h1 class="title is-2 has-text-danger mb-4">
+                ¡Ups! Página no encontrada
+              </h1>
 
-      <!-- Botón para regresar al inicio -->
-      <div class="buttons is-centered mt-4">
-        <a
-          href="/"
-          class="button is-link is-rounded"
-          aria-label="Volver al inicio"
-          title="Regresa a la página de inicio"
-        >
-          <span class="icon">
-            <i class="fas fa-home" aria-hidden="true"></i>
-          </span>
-          <span>Volver al inicio</span>
-        </a>
+              <div class="content">
+                <p class="subtitle is-4 mb-5">
+                  La página que buscas no está disponible o ha sido movida.
+                </p>
+                <p class="is-size-5 mb-6">
+                  Si crees que esto es un error, por favor
+                  <a
+                    href="/contacto"
+                    class="has-text-link has-text-weight-semibold"
+                    aria-label="Ir a la página de contacto"
+                  >
+                    ponte en contacto con nosotros </a
+                  >.
+                </p>
+              </div>
+
+              <div class="field">
+                <a
+                  href="/"
+                  class="button is-link is-medium is-rounded"
+                  aria-label="Volver a la página de inicio"
+                >
+                  <span class="icon">
+                    <i class="fas fa-home" aria-hidden="true"></i>
+                  </span>
+                  <span>Volver al inicio</span>
+                </a>
+              </div>
+            </main>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
+
+<script>
+  if (typeof ga === "function") {
+    ga("send", "event", "404", "view", window.location.pathname);
+  }
+</script>

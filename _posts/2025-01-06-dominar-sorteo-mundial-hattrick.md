@@ -36,20 +36,6 @@ El Mundial reúne a los **96 mejores equipos del mundo**, organizados en **16 gr
 3. **Asignación aleatoria:**
    - Se realiza un sorteo para distribuir a los equipos restantes en cada grupo, asegurando equilibrio competitivo y evitando encuentros predecibles.
 
----
-
-## Ejemplo de Distribución de Grupos
-
-Aquí tienes un ejemplo ficticio de cómo podrían formarse los grupos del Mundial:
-
-| **Grupo** | **Equipo 1**  | **Equipo 2**     | **Equipo 3**          | **Equipo 4**   | **Equipo 5**    | **Equipo 6**   |
-| --------- | ------------- | ---------------- | --------------------- | -------------- | --------------- | -------------- |
-| Grupo 1   | España (EU#1) | Nigeria (AF#8)   | Chile (AM#10)         | Japón (AO#15)  | Grecia (EU#22)  | Zambia (AF#35) |
-| Grupo 2   | Italia (EU#2) | Camerún (AF#7)   | Ecuador (AM#11)       | Corea (AO#16)  | Ucrania (EU#23) | Ghana (AF#36)  |
-| ...       | ...           | ...              | ...                   | ...            | ...             | ...            |
-| Grupo 16  | Brasil (AM#1) | Sudáfrica (AF#5) | Nueva Zelanda (AO#12) | Canadá (AM#20) | Turquía (EU#29) | Egipto (AF#40) |
-
-> **Nota:** Las posiciones (#) se basan en la clasificación final de las Copas Continentales.
 
 ---
 
@@ -82,16 +68,9 @@ Aquí tienes un ejemplo ficticio de cómo podrían formarse los grupos del Mundi
 
 - Asegúrate de que tus jugadores estén entrenados en las tácticas que planeas usar, y prioriza la resistencia y forma.
 
-> **Tip avanzado:** Revisa los históricos de enfrentamientos para detectar patrones tácticos y debilidades de tus rivales.
+> **Tip avanzado:** Revisa los históricos de partidos para detectar patrones tácticos y debilidades de tus rivales.
 
----
-
-## Datos Históricos del Sorteo
-
-- **Grupo de la Muerte:**  
-  En el Mundial de 2021, el Grupo 5 incluyó a España, Brasil y Nigeria, dejando fuera a equipos prometedores.
-- **Sorpresas:**  
-  En 2023, un equipo de Asia/Oceanía llegó a semifinales tras superar un grupo complicado, demostrando que todo es posible con planificación.
+> **Sorpresas:** En 2024, el equipo de Ecuador llegó hasta la cuarta ronda  tras superar unos grupo muy complicado, demostrando que todo es posible con planificación.
 
 ---
 

@@ -1,71 +1,123 @@
-<footer class="footer" role="contentinfo" aria-label="Pie de página">
+<footer class="footer">
   <div class="content has-text-centered">
-    <p>
-      <strong>{{ site.title }}</strong> &copy; {{ "now" | date: "%Y" }} - {{
-      site.author }}<br />
-      Todos los derechos reservados.
-    </p>
+    <div class="mb-4">
+      <strong>{{ site.title }}</strong>
+      <br />
+      &copy; {{ "now" | date: "%Y" }} {{ site.author }}
+      <br />
+      Todos los derechos reservados
+    </div>
 
-    <nav
-      class="is-flex is-justify-content-center is-align-items-center"
-      role="navigation"
-      aria-label="Enlaces secundarios"
-    >
-      <a
-        href="/acerca-de/"
-        class="mx-3"
-        aria-label="Ir a la página Acerca de"
-        title="Acerca de este sitio"
-      >
-        <span class="icon is-small" aria-hidden="true">
-          <i class="fas fa-info-circle" aria-hidden="true"></i>
-        </span>
-        <span>Acerca de</span>
-      </a>
-      <span class="mx-1" aria-hidden="true">|</span>
-      <a
-        href="/contacto/"
-        class="mx-3"
-        aria-label="Ir a la página de Contacto"
-        title="Contáctanos"
-      >
-        <span class="icon is-small" aria-hidden="true">
-          <i class="fas fa-envelope" aria-hidden="true"></i>
-        </span>
-        <span>Contáctanos</span>
-      </a>
+    <nav class="footer-nav mb-4">
+      <div class="buttons is-centered">
+        <a
+          href="{{ '/acerca-de/' | relative_url }}"
+          class="button is-text"
+          title="Acerca de este sitio"
+        >
+          <span class="icon-text">
+            <span class="icon" aria-hidden="true">
+              <i class="fas fa-info-circle"></i>
+            </span>
+            <span>Acerca de</span>
+          </span>
+        </a>
+        <a
+          href="{{ '/contacto/' | relative_url }}"
+          class="button is-text"
+          title="Contáctanos"
+        >
+          <span class="icon-text">
+            <span class="icon" aria-hidden="true">
+              <i class="fas fa-envelope"></i>
+            </span>
+            <span>Contáctanos</span>
+          </span>
+        </a>
+      </div>
     </nav>
 
-    <!-- Iconos de redes sociales -->
-    <div class="social-icons mt-4">
-      <a
-        href="https://t.me/JuvenilesHT"
-        class="icon has-text-info mx-3"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Ir a nuestro canal de Telegram (nueva pestaña)"
-        title="Abrir Telegram"
-      >
-        <i class="fab fa-telegram fa-lg" aria-hidden="true"></i>
-      </a>
-      <a
-        href="https://wa.me/qr/537E4GO72BHHB1"
-        class="icon has-text-success mx-3"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Abrir WhatsApp (nueva pestaña)"
-        title="Abrir WhatsApp"
-      >
-        <i class="fab fa-whatsapp fa-lg" aria-hidden="true"></i>
-      </a>
-      <a
-        href="mailto:tutorhattrick@hotmail.com"
-        class="icon has-text-danger mx-3"
-        aria-label="Enviar un correo a tutorhattrick@hotmail.com"
-        title="Enviar un correo electrónico"
-      >
-        <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>
-      </a>
+    <div class="social-links">
+      <div class="buttons is-centered">
+        <a
+          href="https://t.me/JuvenilesHT"
+          class="button is-text has-text-info"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Síguenos en Telegram"
+        >
+          <span class="icon">
+            <i class="fab fa-telegram fa-lg"></i>
+          </span>
+        </a>
+        <a
+          href="https://wa.me/qr/537E4GO72BHHB1"
+          class="button is-text has-text-success"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Contáctanos por WhatsApp"
+        >
+          <span class="icon">
+            <i class="fab fa-whatsapp fa-lg"></i>
+          </span>
+        </a>
+        <a
+          href="mailto:tutorhattrick@hotmail.com"
+          class="button is-text has-text-danger"
+          title="Envíanos un correo"
+        >
+          <span class="icon">
+            <i class="fas fa-envelope fa-lg"></i>
+          </span>
+        </a>
+      </div>
     </div>
   </div>
 </footer>
+
+<style>
+  .footer {
+    padding: 3rem 1.5rem;
+  }
+
+  .footer-nav {
+    border-bottom: 1px solid #dbdbdb;
+    padding-bottom: 1.5rem;
+  }
+
+  .icon-text {
+    align-items: center;
+    display: inline-flex;
+    gap: 0.5rem;
+  }
+
+  .button.is-text {
+    text-decoration: none;
+    padding: 0.5rem;
+    height: auto;
+    min-width: 2.5rem;
+  }
+
+  .button.is-text:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+  }
+
+  .social-links {
+    margin-top: 1.5rem;
+  }
+
+  .social-links .button.is-text {
+    transition: transform 0.2s ease;
+  }
+
+  .social-links .button.is-text:hover {
+    transform: translateY(-2px);
+  }
+
+  @media print {
+    footer {
+      display: none;
+    }
+  }
+</style>

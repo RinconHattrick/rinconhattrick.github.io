@@ -4,19 +4,17 @@ title: "El Rincón de Hattrick"
 ---
 
 <div class="container">
-  <header class="content has-text-centered" id="top">
-    <h1 class="title is-2" role="heading" aria-level="1">{{ site.title }}</h1>
-    <p class="subtitle is-4" role="heading" aria-level="2">
-      {{ site.description }}
-    </p>
+  <header class="content has-text-centered" id="main-header">
+    <h1 class="title is-2">{{ site.title }}</h1>
+    <p class="subtitle is-4">{{ site.description }}</p>
   </header>
 
   {% for category in site.categories %} {% assign category_name = category[0] %}
   {% assign category_page = site.pages | where: "category", category_name |
   first %}
 
-  <div class="content my-5">
-    <h2 class="title is-4 has-text-link" role="heading" aria-level="3">
+  <section class="content my-5">
+    <h2 class="title is-4">
       {{ category_page.title | default: category_name }}
     </h2>
     <p class="subtitle is-6">
@@ -25,7 +23,7 @@ title: "El Rincón de Hattrick"
     </p>
 
     <div class="table-container">
-      <table class="table is-fullwidth is-hoverable is-striped is-rounded">
+      <table class="table is-fullwidth is-hoverable is-striped">
         <thead>
           <tr>
             <th scope="col" class="has-text-grey">Fecha</th>
@@ -36,21 +34,19 @@ title: "El Rincón de Hattrick"
           {% for post in category[1] %}
           <tr>
             <td class="is-narrow">
-              <span class="icon is-small">
+              <span class="icon is-small" aria-hidden="true">
                 <i class="fas fa-calendar-day"></i>
               </span>
-              {{ post.date | date: "%d/%m/%Y" }}
+              <time datetime="{{ post.date | date: '%Y-%m-%d' }}">
+                {{ post.date | date: "%d/%m/%Y" }}
+              </time>
             </td>
             <td>
-              <a
-                href="{{ post.url }}"
-                aria-label="Leer más sobre {{ post.title }}"
-                class="has-text-link"
-              >
+              <a href="{{ post.url | relative_url }}" class="has-text-link">
                 {{ post.title }}
               </a>
               <p class="is-7 mt-1">
-                {{ post.excerpt | strip_html | truncate: 150 }}
+                {{ post.excerpt | strip_html | truncatewords: 30 }}
               </p>
             </td>
           </tr>
@@ -58,23 +54,21 @@ title: "El Rincón de Hattrick"
         </tbody>
       </table>
     </div>
-  </div>
+  </section>
   {% endfor %}
 
-  <!-- Botón para volver arriba -->
-  <div class="has-text-centered mt-5">
+  <footer class="has-text-centered mt-5">
     <a
-      href="#top"
+      href="#main-header"
       class="button is-link is-light is-rounded"
       aria-label="Volver al inicio"
-      title="Volver al inicio"
     >
       <span class="icon-text">
-        <span class="icon">
+        <span class="icon" aria-hidden="true">
           <i class="fas fa-arrow-up"></i>
         </span>
-        <span>Volver Arriba</span>
+        <span>Subir</span>
       </span>
     </a>
-  </div>
+  </footer>
 </div>

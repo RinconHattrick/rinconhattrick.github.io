@@ -5,97 +5,100 @@ layout: default
 <div class="container">
   <div class="content">
     <div class="columns is-variable is-4">
-      <!-- Contenido Principal -->
-      <div class="column">{{ content }}</div>
+      <main class="column">{{ content }}</main>
 
-      <!-- Barra Lateral -->
       <aside class="column is-one-quarter is-hidden-mobile">
-        <!-- Categorías -->
-        <section aria-labelledby="categories-title" class="box">
-          <h3 class="title is-5">Categorías</h3>
-          <div class="columns is-multiline">
+        <section class="box">
+          <h2 class="title is-5">Categorías</h2>
+          <div class="menu">
             {% assign category_pages = site.pages | where: "layout", "category"
             %} {% if category_pages.size > 0 %} {% for category_page in
             category_pages %}
-            <div class="column is-12">
-              <a
-                href="{{ category_page.permalink }}"
-                class="tag is-medium is-link is-light"
-              >
-                <span class="icon is-small mr-3" aria-hidden="true">
+            <a
+              href="{{ category_page.permalink | relative_url }}"
+              class="menu-label mb-2 has-text-link"
+            >
+              <span class="icon-text">
+                <span class="icon" aria-hidden="true">
                   <i class="fas fa-tag"></i>
                 </span>
-                {{ category_page.title }}
-              </a>
-            </div>
+                <span>{{ category_page.title }}</span>
+              </span>
+            </a>
             {% endfor %} {% else %}
-            <div class="column">
-              <p>No hay categorías disponibles. ¡Explora más tarde!</p>
-            </div>
+            <p class="has-text-grey">No hay categorías disponibles.</p>
             {% endif %}
           </div>
         </section>
 
-        <!-- Buscar en el Blog -->
-        <section aria-labelledby="search-title" class="box">
-          <h3 id="search-title" class="title is-5">Buscar en el Blog</h3>
-          <form action="/search/" method="get" role="search">
-            <div class="field">
-              <div class="control">
+        <section class="box">
+          <h2 class="title is-5">Buscar</h2>
+          <form
+            action="{{ '/search/' | relative_url }}"
+            method="get"
+            role="search"
+          >
+            <div class="field has-addons">
+              <div class="control is-expanded">
                 <input
                   class="input is-rounded"
-                  type="text"
+                  type="search"
                   name="q"
                   placeholder="Buscar artículos..."
-                  aria-label="Buscar artículos en el blog"
+                  aria-label="Buscar artículos"
+                  required
                 />
               </div>
+              <div class="control">
+                <button type="submit" class="button is-primary is-rounded">
+                  <span class="icon" aria-hidden="true">
+                    <i class="fas fa-search"></i>
+                  </span>
+                  <span>Buscar</span>
+                </button>
+              </div>
             </div>
-            <button class="button is-primary is-rounded">Buscar</button>
           </form>
         </section>
 
-        <!-- Artículos Destacados -->
-        <section aria-labelledby="featured-title" class="box">
-          <h3 class="title is-5">Artículos Destacados</h3>
-          <div class="columns is-multiline">
-            {% assign featured_posts = site.posts | where: "featured", true %}
-            {% if featured_posts.size > 0 %} {% for post in featured_posts %}
-            <div class="column is-12">
-              <a
-                href="{{ post.url }}"
-                class="box is-shadowless has-hover-effect is-underlined"
+        <section class="box">
+          <h2 class="title is-5">Artículos Destacados</h2>
+          <div class="menu">
+            {% assign featured_posts = site.posts | where: "featured", true |
+            limit: 5 %} {% if featured_posts.size > 0 %} {% for post in
+            featured_posts %}
+            <a href="{{ post.url | relative_url }}" class="menu-item mb-2">
+              {{ post.title }}
+              <time
+                datetime="{{ post.date | date_to_xmlschema }}"
+                class="is-size-7 has-text-grey"
               >
-                {{ post.title }}
-              </a>
-            </div>
+                {{ post.date | date: "%d/%m/%Y" }}
+              </time>
+            </a>
             {% endfor %} {% else %}
-            <div class="column">
-              <p>No hay artículos destacados</p>
-            </div>
+            <p class="has-text-grey">No hay artículos destacados</p>
             {% endif %}
           </div>
         </section>
 
-        <!-- Últimos Artículos -->
-        <section aria-labelledby="recent-title" class="box">
-          <h3 class="title is-5">Últimos Artículos</h3>
-          <div class="columns is-multiline">
-            {% assign published_posts = site.posts | where: "published", true |
-            sort: "date" | reverse %} {% if published_posts.size > 0 %} {% for
-            post in published_posts limit: 4 %}
-            <div class="column is-12">
-              <a
-                href="{{ post.url }}"
-                class="box is-shadowless has-hover-effect is-underlined"
+        <section class="box">
+          <h2 class="title is-5">Últimos Artículos</h2>
+          <div class="menu">
+            {% assign recent_posts = site.posts | where: "published", true |
+            sort: "date" | reverse | limit: 4 %} {% if recent_posts.size > 0 %}
+            {% for post in recent_posts limit: 5%}
+            <a href="{{ post.url | relative_url }}" class="menu-item mb-2">
+              {{ post.title }}
+              <time
+                datetime="{{ post.date | date_to_xmlschema }}"
+                class="is-size-7 has-text-grey"
               >
-                {{ post.title }}
-              </a>
-            </div>
+                {{ post.date | date: "%d/%m/%Y" }}
+              </time>
+            </a>
             {% endfor %} {% else %}
-            <div class="column">
-              <p>No hay artículos recientes</p>
-            </div>
+            <p class="has-text-grey">No hay artículos recientes</p>
             {% endif %}
           </div>
         </section>
@@ -103,3 +106,22 @@ layout: default
     </div>
   </div>
 </div>
+
+<style>
+  .menu-item {
+    display: block;
+    padding: 0.5rem;
+    border-radius: 4px;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .menu-item:hover {
+    background-color: #f5f5f5;
+  }
+
+  .menu-item time {
+    display: block;
+    margin-top: 0.25rem;
+  }
+</style>

@@ -102,3 +102,4 @@ Si deseas que tus jugadores lleguen a la Sub-21, sigue estos pasos:
 - La Selección Sub-21 es independiente de la Absoluta, con su propio seleccionador, objetivos y dinámica operativa.
 - Los jugadores deben tener entre 19 y 21 años para ser seleccionados y solo pueden jugar mientras cumplan este requisito.
 - La Sub-21 es una herramienta clave para desarrollar talento joven, fortalecer el futuro del equipo nacional y proyectar jugadores prometedores.
+

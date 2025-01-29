@@ -45,13 +45,29 @@ Las ligas juveniles son competencias exclusivas para equipos juveniles. Ofrecen 
 
 Las ligas juveniles se adaptan a diferentes necesidades con varios tamaños disponibles:
 
-| **Tamaño de la liga** | **Duración**           | **Ideal para...**            |
-| --------------------- | ---------------------- | ---------------------------- |
-| 4 equipos             | Temporada corta        | Pruebas rápidas              |
-| 6 equipos             | Temporada moderada     | Grupos pequeños              |
-| 8 equipos             | Estándar equilibrado   | Experiencia tradicional      |
-| 12 equipos            | Temporada extensa      | Grupos medianos              |
-| 16 equipos            | Competencia prolongada | Grupos grandes y organizados |
+- **4 equipos**
+
+  - **Duración:** Temporada corta
+  - **Ideal para:** Pruebas rápidas
+
+- **6 equipos**
+
+  - **Duración:** Temporada moderada
+  - **Ideal para:** Grupos pequeños
+
+- **8 equipos**
+
+  - **Duración:** Estándar equilibrado
+  - **Ideal para:** Experiencia tradicional
+
+- **12 equipos**
+
+  - **Duración:** Temporada extensa
+  - **Ideal para:** Grupos medianos
+
+- **16 equipos**
+  - **Duración:** Competencia prolongada
+  - **Ideal para:** Grupos grandes y organizados
 
 ---
 

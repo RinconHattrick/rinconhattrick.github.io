@@ -87,3 +87,4 @@ Las estadísticas y condiciones de las selecciones nacionales se actualizan diar
 - Los seleccionadores pueden convocar hasta 26 jugadores, siempre que cumplan con los requisitos de edad mínima y pertenezcan a equipos activos.
 - La experiencia táctica es un recurso estratégico que debe configurarse cuidadosamente antes de torneos importantes.
 - La colaboración efectiva entre managers de clubes y seleccionadores es crucial para maximizar el rendimiento tanto a nivel de selecciones como de clubes.
+

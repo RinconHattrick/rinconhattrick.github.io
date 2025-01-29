@@ -21,12 +21,8 @@ El calendario de temporadas en Hattrick es una herramienta esencial para planifi
 
 El calendario está organizado en dos temporadas consecutivas, cada una con eventos importantes como la Copa Continental, el Mundial, la Copa de Naciones y la Liga de Aspirantes. Además, incluye fechas clave para restablecer el espíritu y la confianza del equipo, aspectos críticos para el rendimiento en el campo.
 
-### Conceptos Clave
-
-- **C.C.**: Copa Continental.
-- **Mun.**: Mundial.
-- **C.N.**: Copa de Naciones.
-- **L.A.**: Liga de Aspirantes.
+### Concepto Clave
+
 - **E.E. y C.E.**: Espíritu y confianza de equipo.
 
 ---

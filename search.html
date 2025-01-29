@@ -1,139 +1,178 @@
 ---
 layout: with-sidebar
 title: "Resultados de Búsqueda"
+description: "Búsqueda de artículos en el sitio"
 ---
 
-<section class="container" role="main">
+<section class="container">
   <div class="content">
-    <h1 class="title is-2 has-text-centered" role="heading" aria-level="1">
-      Resultados de Búsqueda
-    </h1>
+    <h1 class="title is-2 has-text-centered">Resultados de Búsqueda</h1>
 
-    <div class="field has-addons mt-5">
-      <div class="control is-expanded">
-        <input
-          type="text"
-          id="search-input"
-          class="input is-rounded"
-          placeholder="Buscar artículos..."
-          aria-label="Buscar artículos"
-          aria-describedby="search-hint"
-        />
+    <form class="mt-5" role="search" onsubmit="event.preventDefault()">
+      <div class="field has-addons">
+        <div class="control is-expanded">
+          <input
+            type="search"
+            id="search-input"
+            class="input is-rounded"
+            placeholder="Buscar artículos..."
+            aria-label="Buscar artículos"
+            aria-describedby="search-hint"
+            autocomplete="off"
+          />
+        </div>
       </div>
-    </div>
-    <p id="search-hint" class="help">
-      Escribe al menos 3 caracteres para comenzar a buscar.
-    </p>
+      <p id="search-hint" class="help">
+        Escribe al menos 3 caracteres para comenzar a buscar.
+      </p>
+    </form>
 
     <div
       id="search-feedback"
       class="notification is-primary is-hidden mt-3"
     ></div>
 
-    <div
-      id="search-results"
-      class="box mt-5"
-      aria-live="polite"
-      role="region"
-    ></div>
+    <div id="search-results" class="box mt-5" aria-live="polite"></div>
   </div>
 </section>
 
 <script>
-  const searchJsonUrl = "{{ '/assets/json/search.json' | relative_url }}";
+  class SearchManager {
+    constructor() {
+      this.searchJsonUrl = "{{ '/assets/json/search.json' | relative_url }}";
+      this.searchInput = document.getElementById("search-input");
+      this.feedbackElement = document.getElementById("search-feedback");
+      this.resultsContainer = document.getElementById("search-results");
 
-  function showFeedback(message, type = "is-primary") {
-    const feedback = document.getElementById("search-feedback");
-    feedback.textContent = message;
-    feedback.className = `notification ${type}`;
-    feedback.classList.remove("is-hidden");
-  }
-
-  function hideFeedback() {
-    const feedback = document.getElementById("search-feedback");
-    feedback.classList.add("is-hidden");
-  }
-
-  function renderResults(results) {
-    const resultsContainer = document.getElementById("search-results");
-    resultsContainer.innerHTML = "";
-
-    if (results.length === 0) {
-      resultsContainer.innerHTML = `<p class="has-text-danger">No se encontraron resultados.</p>`;
-      return;
+      this.init();
     }
 
-    const ul = document.createElement("ul");
-    ul.setAttribute("role", "list");
+    init() {
+      this.searchInput.addEventListener(
+        "input",
+        this.debounce((e) => this.search(e.target.value.trim()), 300)
+      );
 
-    results.forEach((item) => {
-      const li = document.createElement("li");
-      li.innerHTML = `
-        <a href="${item.url}" aria-label="Leer artículo: ${item.title}" class="has-text-link">
-          ${item.title}
-        </a>
-      `;
-      ul.appendChild(li);
-    });
+      const queryParams = new URLSearchParams(window.location.search);
+      const initialQuery = queryParams.get("q");
 
-    resultsContainer.appendChild(ul);
-  }
-
-  function debounce(func, wait) {
-    let timeout;
-    return function (...args) {
-      const context = this;
-      clearTimeout(timeout);
-      timeout = setTimeout(() => func.apply(context, args), wait);
-    };
-  }
-
-  async function search(query) {
-    if (query.length < 3) {
-      renderResults([]);
-      hideFeedback();
-      return;
-    }
-
-    showFeedback("Cargando resultados...", "is-primary");
-
-    try {
-      const response = await fetch(searchJsonUrl);
-      if (!response.ok) {
-        throw new Error("No se pudo cargar el archivo de búsqueda.");
+      if (initialQuery) {
+        this.searchInput.value = initialQuery;
+        this.search(initialQuery);
       }
-      const data = await response.json();
-      const results = data.filter((item) =>
-        item.title.toLowerCase().includes(query.toLowerCase().trim())
-      );
+    }
 
-      renderResults(results);
-      hideFeedback();
-    } catch (error) {
-      console.error(error);
-      showFeedback(
-        "Ocurrió un error al buscar. Por favor, intenta más tarde.",
-        "is-danger"
-      );
+    showFeedback(message, type = "is-primary") {
+      this.feedbackElement.textContent = message;
+      this.feedbackElement.className = `notification ${type}`;
+      this.feedbackElement.classList.remove("is-hidden");
+    }
+
+    hideFeedback() {
+      this.feedbackElement.classList.add("is-hidden");
+    }
+
+    renderResults(results) {
+      this.resultsContainer.innerHTML = "";
+
+      if (!results.length) {
+        this.resultsContainer.innerHTML = `
+          <p class="has-text-danger">No se encontraron resultados.</p>
+        `;
+        return;
+      }
+
+      const ul = document.createElement("ul");
+      ul.className = "search-results-list";
+
+      results.forEach((item) => {
+        const li = document.createElement("li");
+        li.className = "mb-3";
+        li.innerHTML = `
+          <article>
+            <h2 class="is-size-5 mb-2">
+              <a href="${item.url}" class="has-text-link">
+                ${this.highlightMatch(item.title, this.searchInput.value)}
+              </a>
+            </h2>
+            ${
+              item.excerpt
+                ? `
+              <p class="is-size-6 has-text-grey">
+                ${this.truncateText(item.excerpt, 150)}
+              </p>
+            `
+                : ""
+            }
+          </article>
+        `;
+        ul.appendChild(li);
+      });
+
+      this.resultsContainer.appendChild(ul);
+    }
+
+    highlightMatch(text, query) {
+      if (!query) return text;
+      const regex = new RegExp(`(${query})`, "gi");
+      return text.replace(regex, "<mark>$1</mark>");
+    }
+
+    truncateText(text, length) {
+      return text.length > length ? text.substring(0, length) + "..." : text;
+    }
+
+    debounce(func, wait) {
+      let timeout;
+      return function (...args) {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func.apply(this, args), wait);
+      };
+    }
+
+    async search(query) {
+      if (query.length < 3) {
+        this.renderResults([]);
+        this.hideFeedback();
+        return;
+      }
+
+      this.showFeedback("Cargando resultados...");
+
+      try {
+        const response = await fetch(this.searchJsonUrl);
+        if (!response.ok)
+          throw new Error("Error al cargar el archivo de búsqueda");
+
+        const data = await response.json();
+        const results = data.filter((item) =>
+          item.title.toLowerCase().includes(query.toLowerCase())
+        );
+
+        this.renderResults(results);
+        this.hideFeedback();
+      } catch (error) {
+        console.error(error);
+        this.showFeedback(
+          "Ocurrió un error al buscar. Por favor, intenta más tarde.",
+          "is-danger"
+        );
+      }
     }
   }
 
-  function initSearch() {
-    const searchInput = document.getElementById("search-input");
-
-    searchInput.addEventListener(
-      "input",
-      debounce((e) => search(e.target.value.trim()), 300)
-    );
-
-    const queryParams = new URLSearchParams(window.location.search);
-    const initialQuery = queryParams.get("q") || "";
-
-    if (initialQuery) {
-      searchInput.value = initialQuery;
-      search(initialQuery);
-    }
-  }
-
-  document.addEventListener("DOMContentLoaded", initSearch);
+  document.addEventListener("DOMContentLoaded", () => new SearchManager());
 </script>
+
+<style>
+  .search-results-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  mark {
+    background-color: #ffdd57;
+    padding: 0.1em 0.2em;
+    border-radius: 2px;
+  }
+</style>

@@ -7,13 +7,13 @@ categories: preguntas-respuestas
 tags: [FAQ, selecciones, estrategias]
 excerpt: "Descubre todo sobre la gestión y participación en las selecciones nacionales y Sub-21 en Hattrick, incluyendo tácticas y aspectos clave."
 image: "/assets/img/user.png"
-featured: true
+featured: false
 published: true
 ---
 
 # Preguntas Frecuentes sobre Selecciones Nacionales y Sub-21 en Hattrick
 
-En este artículo respondemos a las dudas más comunes sobre las selecciones nacionales y Sub-21 en Hattrick. Además, te damos claves importantes para entender su funcionamiento.
+Este artículo se responde a las preguntas más frecuentes sobre las selecciones nacionales y Sub-21 en Hattrick. Además, te damos claves importantes para entender su funcionamiento.
 
 ---
 

@@ -53,9 +53,7 @@ La posición final en la Liga de Aspirantes define el futuro competitivo de las 
 | ---------------------- | ----------------------------------- |
 | 1° y 2°                | Repesca para el Mundial             |
 | 3° en adelante         | Clasificación a la Copa de Naciones |
-| Buen desempeño general | Mejora del ranking nacional         |
-
-> **Dato interesante:** Este torneo ha demostrado que incluso selecciones consideradas débiles pueden sobresalir con una estrategia bien planificada.
+| Buen desempeño general | Mejora del ranking nacional         |
 
 ---
 
@@ -104,3 +102,4 @@ La participación en la Liga de Aspirantes aporta más que victorias:
 - La Liga de Aspirantes utiliza un formato suizo que garantiza enfrentamientos equilibrados y competitivos.
 - Los mejores equipos acceden a la repesca del Mundial, mientras que el resto clasifica para la Copa de Naciones.
 - Es una herramienta invaluable para desarrollar selecciones nacionales y mejorar el ranking, todo mientras pruebas estrategias sin riesgo de lesiones.
+

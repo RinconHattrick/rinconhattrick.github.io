@@ -7,7 +7,7 @@ categories: equipo-juvenil
 tags: [herramientas, juveniles, análisis]
 excerpt: "Conoce las mejores herramientas para potenciar la gestión y el rendimiento de tu cantera en Hattrick."
 image: "/assets/img/user.png"
-featured: false
+featured: true
 published: true
 ---
 
@@ -19,7 +19,7 @@ Gestionar una academia juvenil eficazmente en Hattrick requiere aprovechar las h
 
 ## Hattrick YouthClub: Gestión Avanzada y Análisis Integral
 
-[Hattrick YouthClub](https://www.hattrick-youthclub.org/) es una herramienta completa diseñada para analizar y gestionar tu equipo juvenil de forma profesional. Su enfoque se basa en maximizar el rendimiento y el valor de tus jugadores.
+<a href="https://www.hattrick-youthclub.org/" target="_blank" rel="noopener noreferrer"> Hattrick YouthClub</a> es una herramienta completa diseñada para analizar y gestionar tu equipo juvenil de forma profesional. Su enfoque se basa en maximizar el rendimiento y el valor de tus jugadores.
 
 ### Funciones Principales
 
@@ -45,7 +45,7 @@ Gestionar una academia juvenil eficazmente en Hattrick requiere aprovechar las h
 
 ## Rate My Academy: Evaluación Rápida y Precisa
 
-[Rate My Academy](https://www.rate-my-academy.com/players) es una herramienta práctica centrada en evaluar el potencial absoluto de tus jugadores. Es perfecta para identificar rápidamente los talentos destacados en tu cantera.
+<a href="https://www.rate-my.academy/" target="_blank" rel="noopener noreferrer"> Rate My Academy</a> es una herramienta práctica centrada en evaluar el potencial absoluto de tus jugadores. Es perfecta para identificar rápidamente los talentos destacados en tu cantera.
 
 ### Funciones Principales
 
@@ -69,7 +69,7 @@ Gestionar una academia juvenil eficazmente en Hattrick requiere aprovechar las h
 
 ## youtHTeam: Una Opción Ligera y Funcional
 
-[youtHTeam](https://youthteam.moshu.ro/) es una herramienta sencilla para el seguimiento básico del desarrollo de tus juveniles. Es ideal para managers que buscan una solución práctica y fácil de manejar.
+<a href="https://youthteam.moshu.ro/" target="_blank" rel="noopener noreferrer"> youtHTeam</a> es una herramienta sencilla para el seguimiento básico del desarrollo de tus juveniles. Es ideal para managers que buscan una solución práctica y fácil de manejar.
 
 ### Funciones Principales
 

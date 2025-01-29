@@ -77,14 +77,22 @@ Es una academia donde entrenas y evalúas jugadores jóvenes antes de ascenderlo
 
 ## Comparativa: ¿Qué Sistema de Reclutamiento Es Mejor para Ti?
 
-| **Aspecto**                | **Red de Cazatalentos** | **Equipo Juvenil** |
-| -------------------------- | ----------------------- | ------------------ |
-| **Tiempo para resultados** | Inmediato               | A largo plazo      |
-| **Control del desarrollo** | Bajo                    | Alto               |
-| **Potencial de jugadores** | Moderado                | Alto               |
-| **Costo inicial**          | Bajo                    | Moderado           |
-| **Flexibilidad**           | Alta                    | Baja               |
-| **Compromiso de gestión**  | Bajo                    | Alto               |
+- **Red de Cazatalentos**
+
+  - **Tiempo para resultados:** Inmediato
+  - **Control del desarrollo:** Bajo
+  - **Potencial de jugadores:** Moderado
+  - **Costo inicial:** Bajo
+  - **Flexibilidad:** Alta
+  - **Compromiso de gestión:** Bajo
+
+- **Equipo Juvenil**
+  - **Tiempo para resultados:** A largo plazo
+  - **Control del desarrollo:** Alto
+  - **Potencial de jugadores:** Alto
+  - **Costo inicial:** Moderado
+  - **Flexibilidad:** Baja
+  - **Compromiso de gestión:** Alto
 
 ---
 

@@ -83,11 +83,28 @@ El momento adecuado para ascender un jugador depende de varios factores.
 
 ## Caso Práctico: Cómo Tomar Decisiones Basadas en Datos
 
-| **Jugador**      | **Edad** | **Posición principal** | **Nivel actual** | **Potencial** | **Recomendación**                                 |
-| ---------------- | -------- | ---------------------- | ---------------- | ------------- | ------------------------------------------------- |
-| Carlos Rodríguez | 17       | Defensa                | Excelente        | Excelente     | Ascender al primer equipo para entrenar o vender. |
-| Diego Fernández  | 16       | Delantero              | Débil            | Bueno         | Esperar una temporada más.                        |
-| Javier López     | 18       | Portero                | Bueno            | Bueno         | Vender antes de que pierda valor.                 |
+- **Carlos Rodríguez**
+
+  - **Edad:** 17
+  - **Posición principal:** Defensa
+  - **Nivel actual:** Excelente
+  - **Potencial:** Excelente
+  - **Recomendación:** Ascender al primer equipo para entrenar o vender.
+
+- **Diego Fernández**
+
+  - **Edad:** 16
+  - **Posición principal:** Delantero
+  - **Nivel actual:** Débil
+  - **Potencial:** Bueno
+  - **Recomendación:** Esperar una temporada más.
+
+- **Javier López**
+  - **Edad:** 18
+  - **Posición principal:** Portero
+  - **Nivel actual:** Bueno
+  - **Potencial:** Bueno
+  - **Recomendación:** Vender antes de que pierda valor.
 
 ---
 

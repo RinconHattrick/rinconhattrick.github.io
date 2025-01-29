@@ -88,10 +88,24 @@ Sigue estos pasos para completar el proceso:
 
 ## Tabla Comparativa: Cerrar vs. Reiniciar
 
-| **Opción**             | **Condiciones principales**                                                                               | **Consecuencias**                                                                         |
-| ---------------------- | --------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| **Cerrar Academia**    | - Entre temporadas o sin liga activa. <br> - Mínimo 6 semanas desde la apertura.                          | Equipo juvenil desactivado. <br> No más gastos asociados.                                 |
-| **Reiniciar Academia** | - Inactividad de 3 semanas. <br> - Menos de 9 juveniles elegibles. <br> - Solo una vez cada 3 temporadas. | Ojeadores y juveniles despedidos. <br> Nuevo equipo y liga requeridos. <br> Irreversible. |
+- **Cerrar Academia**
+
+  - **Condiciones principales:**
+    - Entre temporadas o sin liga activa.
+    - Mínimo 6 semanas desde la apertura.
+  - **Consecuencias:**
+    - Equipo juvenil desactivado.
+    - No más gastos asociados.
+
+- **Reiniciar Academia**
+  - **Condiciones principales:**
+    - Inactividad de 3 semanas.
+    - Menos de 9 juveniles elegibles.
+    - Solo una vez cada 3 temporadas.
+  - **Consecuencias:**
+    - Ojeadores y juveniles despedidos.
+    - Nuevo equipo y liga requeridos.
+    - Irreversible.
 
 ---
 

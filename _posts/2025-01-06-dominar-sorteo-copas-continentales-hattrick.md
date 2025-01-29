@@ -36,13 +36,25 @@ El sorteo distribuye a las selecciones en **bombos**, según su posición en el 
 
 El número de bombos depende de la cantidad de equipos participantes. Por ejemplo, en la **Copa América** (30 equipos):
 
-| **Bombo** | **Posición en el grupo**       | **Rango de clasificación** |
-| --------- | ------------------------------ | -------------------------- |
-| Bombo 1   | Primera posición de cada grupo | 1.º al 5.º                 |
-| Bombo 2   | Segunda posición de cada grupo | 6.º al 10.º                |
-| Bombo 3   | Tercera posición de cada grupo | 11.º al 15.º               |
-| Bombo 4   | Cuarta posición de cada grupo  | 16.º al 20.º               |
-| Bombo 5   | Quinta y sexta posición        | 21.º al 30.º               |
+- **Bombo 1**
+  - **Posición en el grupo:** Primera posición de cada grupo
+  - **Rango de clasificación:** 1.º al 5.º
+
+- **Bombo 2**
+  - **Posición en el grupo:** Segunda posición de cada grupo
+  - **Rango de clasificación:** 6.º al 10.º
+
+- **Bombo 3**
+  - **Posición en el grupo:** Tercera posición de cada grupo
+  - **Rango de clasificación:** 11.º al 15.º
+
+- **Bombo 4**
+  - **Posición en el grupo:** Cuarta posición de cada grupo
+  - **Rango de clasificación:** 16.º al 20.º
+
+- **Bombo 5**
+  - **Posición en el grupo:** Quinta y sexta posición
+  - **Rango de clasificación:** 21.º al 30.º
 
 ### Proceso de Asignación
 
@@ -56,25 +68,6 @@ El número de bombos depende de la cantidad de equipos participantes. Por ejempl
 
 > **Nota:** El sistema garantiza que no haya grupos con desbalances extremos en calidad de selecciones.
 
----
-
-## Ejemplo del Sorteo ficticio
-
-Imaginemos el sorteo de la Copa América con los siguientes equipos:
-
-- **Bombo 1:** Brasil, Argentina, Colombia, Chile, Uruguay.
-- **Bombo 2:** Perú, Ecuador, Paraguay, Venezuela, Bolivia.
-- **Bombo 3:** México, Costa Rica, Panamá, Honduras, Guatemala.
-
-### Resultado del Sorteo:
-
-| **Grupo** | **Equipo 1** | **Equipo 2** | **Equipo 3** | **Equipo 4** | **Equipo 5** | **Equipo 6** |
-| --------- | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ |
-| A         | Brasil       | Ecuador      | Panamá       | Bolivia      | Jamaica      | Haití        |
-| B         | Argentina    | Perú         | Costa Rica   | Venezuela    | El Salvador  | Nicaragua    |
-| ...       | ...          | ...          | ...          | ...          | ...          | ...          |
-
-> **Dato interesante:** Aunque el sorteo busca equilibrio, siempre hay margen para sorpresas y grupos con resultados inesperados.
 
 ---
 

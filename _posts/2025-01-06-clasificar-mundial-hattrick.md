@@ -32,12 +32,25 @@ El objetivo es garantizar competitividad y representación equilibrada de todas 
 
 Cada continente tiene un número asignado de plazas basadas en su tamaño y desempeño histórico:
 
-| **Continente**   | **Equipos Totales** | **Plazas para el Mundial** | **Clasificados por Grupo** |
-| ---------------- | ------------------- | -------------------------- | -------------------------- |
-| **Europa**       | 48                  | 32                         | 4                          |
-| **Asia/Oceanía** | 42                  | 21                         | 3                          |
-| **África**       | 24                  | 12                         | 3                          |
-| **América**      | 30                  | 20                         | 4                          |
+- **Europa**
+  - **Equipos Totales:** 48
+  - **Plazas para el Mundial:** 32
+  - **Clasificados por Grupo:** 4
+
+- **Asia/Oceanía**
+  - **Equipos Totales:** 42
+  - **Plazas para el Mundial:** 21
+  - **Clasificados por Grupo:** 3
+
+- **África**
+  - **Equipos Totales:** 24
+  - **Plazas para el Mundial:** 12
+  - **Clasificados por Grupo:** 3
+
+- **América**
+  - **Equipos Totales:** 30
+  - **Plazas para el Mundial:** 20
+  - **Clasificados por Grupo:** 4
 
 > **Dato curioso:** Las plazas se ajustan periódicamente según el rendimiento de las selecciones en ediciones anteriores.
 
@@ -89,24 +102,6 @@ Los criterios de selección incluyen:
 
 - **Consulta en foros nacionales:** Aprende de las experiencias de otros managers.
 - **Comparte tus planes:** Genera unidad y aprovecha los análisis adicionales sobre tus rivales.
-
----
-
-## Ejemplo Práctico: Clasificación en América
-
-Supongamos que lideras una selección de América. En la Copa Continental, terminas en la **tercera posición de tu grupo** con estos resultados:
-
-| **Partido**  | **Resultado**  | **Puntos** |
-| ------------ | -------------- | ---------- |
-| vs. Brasil   | 1-3 (Derrota)  | 0          |
-| vs. Chile    | 2-1 (Victoria) | 3          |
-| vs. Paraguay | 0-0 (Empate)   | 1          |
-| vs. Bolivia  | 4-0 (Victoria) | 3          |
-
-Resultado:
-
-- **Clasificación directa:** No asegurada (clasifican los dos primeros del grupo).
-- **Repesca:** Accedes gracias a los 7 puntos obtenidos y la diferencia de goles positiva (+3).
 
 ---
 

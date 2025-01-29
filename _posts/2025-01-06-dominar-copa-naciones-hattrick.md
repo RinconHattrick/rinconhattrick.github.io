@@ -49,11 +49,17 @@ El formato suizo empareja equipos con niveles de rendimiento similares, garantiz
 
 Los **ocho mejores equipos** tras la fase suiza pasan a las eliminatorias directas.
 
-| **Fase**    | **Número de Equipos** | **Formato**         |
-| ----------- | --------------------- | ------------------- |
-| Cuartos     | 8                     | Eliminación directa |
-| Semifinales | 4                     | Eliminación directa |
-| Final       | 2                     | Partido único       |
+- **Cuartos**
+  - **Número de Equipos:** 8
+  - **Formato:** Eliminación directa
+
+- **Semifinales**
+  - **Número de Equipos:** 4
+  - **Formato:** Eliminación directa
+
+- **Final**
+  - **Número de Equipos:** 2
+  - **Formato:** Partido único
 
 **Criterios de clasificación en fase suiza:**
 

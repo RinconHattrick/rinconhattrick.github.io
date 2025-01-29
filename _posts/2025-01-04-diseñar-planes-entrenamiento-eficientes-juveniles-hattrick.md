@@ -7,7 +7,7 @@ categories: equipo-juvenil
 tags: [entrenamiento, juveniles, desarrollo]
 excerpt: "Aprende a maximizar el potencial de tus juveniles con estrategias de entrenamiento bien estructuradas."
 image: "/assets/img/user.png"
-featured: false
+featured: true
 published: true
 ---
 
@@ -45,7 +45,9 @@ A continuación, se presentan estrategias de entrenamiento específicas para cad
   - **Secundario:** Portería.
 - **Porcentaje de Entrenamiento:**
   - 120% (1 portero).
-- [Ver más detalles](https://bit.ly/41Zc2wG).
+- <a href="https://bit.ly/41Zc2wG" class="button" target="_blank" rel="noopener noreferrer">
+    Ver más detalles
+  </a>
 
 ---
 
@@ -59,7 +61,9 @@ A continuación, se presentan estrategias de entrenamiento específicas para cad
 - **Porcentaje de Entrenamiento:**
   - 125% (5 defensas).
   - 42% (3 mediocampistas / 2 extremos).
-- [Ver más detalles](https://bit.ly/425O4ju).
+- <a href="https://bit.ly/425O4ju" class="button" target="_blank" rel="noopener noreferrer">
+    Ver más detalles
+  </a>
 
 ---
 
@@ -73,7 +77,9 @@ A continuación, se presentan estrategias de entrenamiento específicas para cad
 - **Porcentaje de Entrenamiento:**
   - 133% (3 mediocampistas).
   - 66% (2 extremos).
-- [Ver más detalles](https://bit.ly/3MqfgUf).
+- <a href="https://bit.ly/3MqfgUf" class="button" target="_blank" rel="noopener noreferrer">
+    Ver más detalles
+  </a>
 
 ---
 
@@ -88,7 +94,9 @@ A continuación, se presentan estrategias de entrenamiento específicas para cad
   - 130% (2 extremos).
   - 54% (2 defensas laterales).
   - 43% (3 delanteros).
-- [Ver más detalles](https://bit.ly/42SaJki).
+- <a href="https://bit.ly/42SaJki" class="button" target="_blank" rel="noopener noreferrer">
+    Ver más detalles
+  </a>
 
 ---
 
@@ -101,11 +109,13 @@ A continuación, se presentan estrategias de entrenamiento específicas para cad
   - **Secundario:** Anotación combinada (Anotación y Balón parado).
 - **Porcentaje de Entrenamiento:**
   - 123% (3 delanteros).
-- [Ver más detalles](https://bit.ly/425O4ju).
+- <a href="https://bit.ly/425O4ju" class="button" target="_blank" rel="noopener noreferrer">
+    Ver más detalles
+  </a>
 
 ---
 
-### Pases
+### Habilidad Pases
 
 - **Formación recomendada:** 2-5-3 o similar.
 - **Posiciones Ideal:** Mediocampistas o extremos.
@@ -116,7 +126,9 @@ A continuación, se presentan estrategias de entrenamiento específicas para cad
   - 140% (3 mediocampistas / 2 extremos).
   - 107% (3 delanteros).
   - 57% (2 defensas).
-- [Ver más detalles](https://bit.ly/3Ow0zlg).
+- <a href="https://bit.ly/3Ow0zlg" class="button" target="_blank" rel="noopener noreferrer">
+    Ver más detalles
+  </a>
 
 ---
 

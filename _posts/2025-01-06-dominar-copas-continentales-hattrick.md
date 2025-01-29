@@ -40,9 +40,10 @@ Más allá del prestigio, las Copas Continentales ofrecen:
 
 Cada continente divide a sus selecciones en **grupos de 6 equipos**. El formato incluye una liga de ida y vuelta, donde cada equipo disputa 10 partidos.
 
-| **Grupo** | **Equipos** | **Formato**         | **Duración** |
-| --------- | ----------- | ------------------- | ------------ |
-| 1-6       | 6           | Liga a doble vuelta | 10 semanas   |
+- **Grupo 1-6**
+  - **Equipos:** 6
+  - **Formato:** Liga a doble vuelta
+  - **Duración:** 10 semanas
 
 Los **dos mejores equipos** de cada grupo avanzan a las eliminatorias.
 
@@ -61,11 +62,19 @@ Tras la fase de grupos, los mejores equipos compiten en rondas eliminatorias dir
 
 - Determinan al campeón, subcampeón y tercer lugar del torneo.
 
-| **Ronda**        | **Equipos** | **Duración** |
-| ---------------- | ----------- | ------------ |
-| Cuartos de Final | 8           | 1 semana     |
-| Semifinales      | 4           | 1 semana     |
-| Final            | 2           | 1 semana     |
+- **Cuartos de Final**
+
+  - **Equipos:** 8
+  - **Duración:** 1 semana
+
+- **Semifinales**
+
+  - **Equipos:** 4
+  - **Duración:** 1 semana
+
+- **Final**
+  - **Equipos:** 2
+  - **Duración:** 1 semana
 
 > **Nota importante:** Los equipos eliminados pueden organizar amistosos para mantener activos a sus jugadores y experimentar tácticas.
 

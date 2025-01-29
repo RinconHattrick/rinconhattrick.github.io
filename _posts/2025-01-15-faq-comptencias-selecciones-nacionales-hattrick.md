@@ -7,13 +7,13 @@ categories: preguntas-respuestas
 tags: [FAQ, selecciones, Hattrick, competiciones]
 excerpt: "Resuelve dudas sobre las selecciones nacionales y Sub-21 en Hattrick."
 image: "/assets/img/user.png"
-featured: true
+featured: false
 published: true
 ---
 
 # Preguntas Frecuentes sobre Competencias de Selecciones Nacionales
 
-Este artículo responde a las preguntas más frecuentes sobre las selecciones nacionales y Sub-21 en Hattrick, desde cómo funcionan las competiciones hasta las ventajas de tener jugadores en las selecciones.
+Este artículo se responde a las preguntas más frecuentes sobre las selecciones nacionales y Sub-21 en Hattrick, desde cómo funcionan las competiciones hasta las ventajas de tener jugadores en las selecciones.
 
 ---
 
