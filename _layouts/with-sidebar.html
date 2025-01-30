@@ -16,7 +16,7 @@ layout: default
             category_pages %}
             <a
               href="{{ category_page.permalink | relative_url }}"
-              class="menu-label mb-2 has-text-link"
+              class="menu-label mb-2 has-text-weight-semibold has-text-link"
             >
               <span class="icon-text">
                 <span class="icon" aria-hidden="true">
@@ -67,7 +67,10 @@ layout: default
             {% assign featured_posts = site.posts | where: "featured", true |
             limit: 5 %} {% if featured_posts.size > 0 %} {% for post in
             featured_posts %}
-            <a href="{{ post.url | relative_url }}" class="menu-item mb-2">
+            <a
+              href="{{ post.url | relative_url }}"
+              class="menu-item mb-2 has-text-weight-semibold"
+            >
               {{ post.title }}
               <time
                 datetime="{{ post.date | date_to_xmlschema }}"
@@ -88,7 +91,10 @@ layout: default
             {% assign recent_posts = site.posts | where: "published", true |
             sort: "date" | reverse | limit: 4 %} {% if recent_posts.size > 0 %}
             {% for post in recent_posts limit: 5%}
-            <a href="{{ post.url | relative_url }}" class="menu-item mb-2">
+            <a
+              href="{{ post.url | relative_url }}"
+              class="menu-item mb-2 has-text-weight-semibold"
+            >
               {{ post.title }}
               <time
                 datetime="{{ post.date | date_to_xmlschema }}"
@@ -114,10 +120,6 @@ layout: default
     border-radius: 4px;
     color: inherit;
     text-decoration: none;
-  }
-
-  .menu-item:hover {
-    background-color: #f5f5f5;
   }
 
   .menu-item time {

@@ -6,8 +6,9 @@ description: "Búsqueda de artículos en el sitio"
 
 <section class="container">
   <div class="content">
-    <h1 class="title is-2 has-text-centered">Resultados de Búsqueda</h1>
-
+    <header class="has-text-centered" id="main-header">
+      <h1 class="title is-2 has-text-centered">Resultados de Búsqueda</h1>
+    </header>
     <form class="mt-5" role="search" onsubmit="event.preventDefault()">
       <div class="field has-addons">
         <div class="control is-expanded">
@@ -91,7 +92,7 @@ description: "Búsqueda de artículos en el sitio"
         li.innerHTML = `
           <article>
             <h2 class="is-size-5 mb-2">
-              <a href="${item.url}" class="has-text-link">
+              <a href="${item.url}" class="has-text-weight-semibold">
                 ${this.highlightMatch(item.title, this.searchInput.value)}
               </a>
             </h2>

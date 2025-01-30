@@ -7,7 +7,7 @@ categories: equipo-juvenil
 tags: [herramientas, juveniles, análisis]
 excerpt: "Conoce las mejores herramientas para potenciar la gestión y el rendimiento de tu cantera en Hattrick."
 image: "/assets/img/user.png"
-featured: true
+featured: false
 published: true
 ---
 

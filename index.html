@@ -37,15 +37,21 @@ title: "El Rincón de Hattrick"
               <span class="icon is-small" aria-hidden="true">
                 <i class="fas fa-calendar-day"></i>
               </span>
-              <time datetime="{{ post.date | date: '%Y-%m-%d' }}">
+              <time
+                datetime="{{ post.date | date: '%Y-%m-%d' }}"
+                class="has-text-grey"
+              >
                 {{ post.date | date: "%d/%m/%Y" }}
               </time>
             </td>
             <td>
-              <a href="{{ post.url | relative_url }}" class="has-text-link">
+              <a
+                href="{{ post.url | relative_url }}"
+                class="has-text-weight-semibold"
+              >
                 {{ post.title }}
               </a>
-              <p class="is-7 mt-1">
+              <p class="is-7 mt-1 has-text-grey">
                 {{ post.excerpt | strip_html | truncatewords: 30 }}
               </p>
             </td>

@@ -2,8 +2,8 @@
 layout: with-sidebar
 ---
 
-<div class="container" id="top">
-  <header class="content has-text-centered">
+<div class="container">
+  <header class="content has-text-centered" id="main-header">
     <h1 class="title is-2" role="heading" aria-level="1">{{ page.title }}</h1>
     <p class="subtitle is-4" role="heading" aria-level="2">
       {{ page.description }}
@@ -34,7 +34,12 @@ layout: with-sidebar
               >
                 <i class="fas fa-calendar-day" aria-hidden="true"></i>
               </span>
-              {{ post.date | date: "%d/%m/%Y" }}
+              <time
+                datetime="{{ post.date | date: '%Y-%m-%d' }}"
+                class="has-text-grey"
+              >
+                {{ post.date | date: "%d/%m/%Y" }}
+              </time>
             </td>
             <td>
               <a
@@ -45,7 +50,7 @@ layout: with-sidebar
               >
                 {{ post.title }}
               </a>
-              <p class="is-7 mt-1">
+              <p class="is-7 mt-1 has-text-grey">
                 {{ post.excerpt | strip_html | truncate: 150 }}
               </p>
             </td>
