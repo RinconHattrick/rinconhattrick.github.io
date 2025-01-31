@@ -1,24 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Actualizar la posición de la barra de navegación
-  const updateNavbarPosition = () => {
-    const nav = document.querySelector("nav");
-    const body = document.querySelector("body");
+  const nav = document.querySelector("nav");
+  const body = document.querySelector("body");
 
-    if (nav && body) {
-      if (window.innerWidth <= 767) {
-        nav.classList.remove("is-fixed-top");
-        nav.classList.add("is-fixed-bottom");
-        body.classList.remove("has-navbar-fixed-top");
-        body.classList.add("has-navbar-fixed-bottom");
-      } else {
-        nav.classList.remove("is-fixed-bottom");
-        nav.classList.add("is-fixed-top");
-        body.classList.remove("has-navbar-fixed-bottom");
-        body.classList.add("has-navbar-fixed-top");
-      }
-    } else {
-      console.warn("No se encontró el elemento <nav> o <body> en el DOM.");
-    }
+  if (!nav || !body) return; // Evita ejecutar si no existen los elementos
+
+  const updateNavbarPosition = () => {
+    const isMobile = window.innerWidth <= 767;
+    nav.classList.toggle("is-fixed-top", !isMobile);
+    nav.classList.toggle("is-fixed-bottom", isMobile);
+    body.classList.toggle("has-navbar-fixed-top", !isMobile);
+    body.classList.toggle("has-navbar-fixed-bottom", isMobile);
   };
 
   updateNavbarPosition();
@@ -30,7 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
       e.preventDefault();
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
-  } else {
-    console.warn("No se encontró el enlace con href='#main-header'.");
   }
 });
+
