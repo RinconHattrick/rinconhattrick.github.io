@@ -24,8 +24,8 @@ layout: with-sidebar
             <div class="posts-list">
               {% for post in site.categories[page.category] %}
               <article class="post-item mb-5">
-                <div class="columns is-vcentered">
-                  <div class="column is-2">
+                <div class="columns is-vcentered is-mobile">
+                  <div class="column is-2 has-text-centered-mobile">
                     <time
                       datetime="{{ post.date | date: '%Y-%m-%d' }}"
                       class="has-text-grey"
@@ -85,7 +85,7 @@ layout: with-sidebar
       </main>
 
       <!-- Navigation -->
-      <footer class="has-text-centered mt-6 mb-6">
+      <footer class="has-text-centered mt-4">
         <div class="buttons is-centered">
           <a
             href="/"

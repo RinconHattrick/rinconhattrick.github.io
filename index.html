@@ -19,7 +19,7 @@ title: "El Rincón de Hattrick"
       category_name | first %}
 
       <main id="{{ category_name | slugify }}">
-        <div class="card">
+        <div class="card mb-5">
           <div class="card-header">
             <h2 class="card-header-title title is-4">
               {{ category_page.title | default: category_name }}
@@ -35,8 +35,8 @@ title: "El Rincón de Hattrick"
             <div class="posts-list">
               {% for post in category[1] %}
               <article class="post-item mb-4">
-                <div class="columns is-vcentered">
-                  <div class="column is-2">
+                <div class="columns is-vcentered is-mobile">
+                  <div class="column is-2 has-text-centered-mobile">
                     <time
                       datetime="{{ post.date | date: '%Y-%m-%d' }}"
                       class="has-text-grey is-size-7"
@@ -68,9 +68,9 @@ title: "El Rincón de Hattrick"
                   </div>
                 </div>
               </article>
-              {% if forloop.last == false %}
+              {% unless forloop.last %}
               <hr class="my-4" />
-              {% endif %} {% endfor %}
+              {% endunless %} {% endfor %}
             </div>
           </div>
         </div>
@@ -78,7 +78,7 @@ title: "El Rincón de Hattrick"
       {% endfor %}
 
       <!-- Footer -->
-      <footer class="has-text-centered mt-6 mb-6">
+      <footer class="has-text-centered mt-4">
         <a
           href="#main-header"
           class="button is-link is-rounded"

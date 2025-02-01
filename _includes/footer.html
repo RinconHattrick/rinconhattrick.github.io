@@ -1,10 +1,8 @@
 <footer class="footer">
   <div class="content has-text-centered">
     <div class="mb-4">
-      <strong>{{ site.title }}</strong>
-      <br />
-      &copy; {{ "now" | date: "%Y" }} {{ site.author }}
-      <br />
+      <strong>{{ site.title }}</strong><br />
+      &copy; {{ "now" | date: "%Y" }} {{ site.author }}<br />
       Todos los derechos reservados
     </div>
 
@@ -12,7 +10,7 @@
       <div class="buttons is-centered">
         <a
           href="{{ '/acerca-de/' | relative_url }}"
-          class="button is-text"
+          class="button is-link is-light"
           title="Acerca de este sitio"
         >
           <span class="icon-text">
@@ -24,7 +22,7 @@
         </a>
         <a
           href="{{ '/contacto/' | relative_url }}"
-          class="button is-text"
+          class="button is-link is-light"
           title="Contáctanos"
         >
           <span class="icon-text">
@@ -41,33 +39,33 @@
       <div class="buttons is-centered">
         <a
           href="https://t.me/JuvenilesHT"
-          class="button is-text has-text-info"
+          class="button is-white"
           target="_blank"
           rel="noopener noreferrer"
-          title="Síguenos en Telegram"
+          aria-label="Síguenos en Telegram"
         >
-          <span class="icon">
-            <i class="fab fa-telegram fa-lg"></i>
+          <span class="icon has-text-info">
+            <i class="fab fa-telegram is-medium"></i>
           </span>
         </a>
         <a
           href="https://wa.me/qr/537E4GO72BHHB1"
-          class="button is-text has-text-success"
+          class="button is-white"
           target="_blank"
           rel="noopener noreferrer"
-          title="Contáctanos por WhatsApp"
+          aria-label="Contáctanos por WhatsApp"
         >
-          <span class="icon">
-            <i class="fab fa-whatsapp fa-lg"></i>
+          <span class="icon has-text-success">
+            <i class="fab fa-whatsapp is-medium"></i>
           </span>
         </a>
         <a
           href="mailto:tutorhattrick@hotmail.com"
-          class="button is-text has-text-danger"
-          title="Envíanos un correo"
+          class="button is-white"
+          aria-label="Envíanos un correo"
         >
-          <span class="icon">
-            <i class="fas fa-envelope fa-lg"></i>
+          <span class="icon has-text-danger">
+            <i class="fas fa-envelope is-medium"></i>
           </span>
         </a>
       </div>

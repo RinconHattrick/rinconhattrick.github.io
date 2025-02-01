@@ -3,7 +3,7 @@ layout: post
 title: "Preguntas Frecuentes sobre Competencias de Selecciones Nacionales"
 author: elPatronHT
 date: 2025-01-01
-categories: preguntas-respuestas
+categories: preguntas-frecuentes
 tags: [FAQ, selecciones, Hattrick, competiciones]
 excerpt: "Resuelve dudas sobre las selecciones nacionales y Sub-21 en Hattrick."
 image: "/assets/img/user.png"

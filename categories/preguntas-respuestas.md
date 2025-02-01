@@ -1,8 +1,8 @@
 ---
 layout: category
-title: "Preguntas y Respuestas"
-category: "preguntas-respuestas"
-description: "Preguntas y respuestas de los temas del blog"
-permalink: "/preguntas-respuestas/"
+title: "Preguntas Frecuentes"
+category: "preguntas-frecuentes"
+description: "Preguntas frecuentes de los temas del blog"
+permalink: "/preguntas-frecuentes/"
 icon: fa-question
 ---

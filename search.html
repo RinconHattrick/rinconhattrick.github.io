@@ -6,12 +6,13 @@ description: "Búsqueda de artículos en el sitio"
 
 <section class="container">
   <div class="content">
-    <header class="has-text-centered" id="main-header">
+    <header id="main-header">
       <h1 class="title is-2 has-text-centered">Resultados de Búsqueda</h1>
     </header>
+
     <form class="mt-5" role="search" onsubmit="event.preventDefault()">
-      <div class="field has-addons">
-        <div class="control is-expanded">
+      <div class="field">
+        <div class="control has-icons-left is-expanded">
           <input
             type="search"
             id="search-input"
@@ -21,6 +22,9 @@ description: "Búsqueda de artículos en el sitio"
             aria-describedby="search-hint"
             autocomplete="off"
           />
+          <span class="icon is-small is-left">
+            <i class="fas fa-search"></i>
+          </span>
         </div>
       </div>
       <p id="search-hint" class="help">
@@ -28,12 +32,9 @@ description: "Búsqueda de artículos en el sitio"
       </p>
     </form>
 
-    <div
-      id="search-feedback"
-      class="notification is-primary is-hidden mt-3"
-    ></div>
+    <div id="search-feedback" class="notification is-hidden mt-3"></div>
 
-    <div id="search-results" class="box mt-5" aria-live="polite"></div>
+    <div id="search-results" class="box mt-5 p-4" aria-live="polite"></div>
   </div>
 </section>
 
@@ -65,8 +66,12 @@ description: "Búsqueda de artículos en el sitio"
 
     showFeedback(message, type = "is-primary") {
       this.feedbackElement.textContent = message;
-      this.feedbackElement.className = `notification ${type}`;
-      this.feedbackElement.classList.remove("is-hidden");
+      this.feedbackElement.classList.remove(
+        "is-hidden",
+        "is-danger",
+        "is-primary"
+      );
+      this.feedbackElement.classList.add(type);
     }
 
     hideFeedback() {
@@ -98,11 +103,10 @@ description: "Búsqueda de artículos en el sitio"
             </h2>
             ${
               item.excerpt
-                ? `
-              <p class="is-size-6 has-text-grey">
-                ${this.truncateText(item.excerpt, 150)}
-              </p>
-            `
+                ? `<p class="is-size-6 has-text-grey">${this.truncateText(
+                    item.excerpt,
+                    150
+                  )}</p>`
                 : ""
             }
           </article>
@@ -143,9 +147,12 @@ description: "Búsqueda de artículos en el sitio"
       try {
         const response = await fetch(this.searchJsonUrl);
         if (!response.ok)
-          throw new Error("Error al cargar el archivo de búsqueda");
+          throw new Error("Error al cargar los datos de búsqueda");
 
         const data = await response.json();
+        if (!Array.isArray(data))
+          throw new Error("Formato incorrecto de datos");
+
         const results = data.filter((item) =>
           item.title.toLowerCase().includes(query.toLowerCase())
         );
@@ -155,7 +162,7 @@ description: "Búsqueda de artículos en el sitio"
       } catch (error) {
         console.error(error);
         this.showFeedback(
-          "Ocurrió un error al buscar. Por favor, intenta más tarde.",
+          "No se pudieron obtener los resultados. Inténtalo más tarde.",
           "is-danger"
         );
       }

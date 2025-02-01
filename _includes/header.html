@@ -17,8 +17,8 @@
         aria-label="Menú"
         aria-expanded="false"
         aria-controls="navbarMenu"
+        onclick="document.getElementById('navbarMenu').classList.toggle('is-active'); this.classList.toggle('is-active');"
       >
-        <span></span>
         <span></span>
         <span></span>
         <span></span>
@@ -30,6 +30,7 @@
         <a
           class="navbar-item {% if page.url == '/' %}is-active{% endif %}"
           href="{{ '/' | relative_url }}"
+          role="menuitem"
         >
           <span class="icon-text">
             <span class="icon">
@@ -40,7 +41,7 @@
         </a>
 
         <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-item">
+          <a class="navbar-link" aria-haspopup="true" aria-expanded="false">
             <span class="icon-text">
               <span class="icon">
                 <i class="fas fa-folder"></i>
@@ -54,11 +55,19 @@
             <a
               class="navbar-item {% if page.url contains category_page.permalink %}is-active{% endif %}"
               href="{{ category_page.permalink }}"
+              role="menuitem"
             >
-              {{ category_page.title }}
+              <span class="icon-text">
+                <span class="icon">
+                  <i class="fas {{ category_page.icon }}"></i>
+                </span>
+                <span>{{ category_page.title }}</span>
+              </span>
             </a>
             {% endif %} {% endfor %} {% else %}
-            <a class="navbar-item">No hay categorías disponibles</a>
+            <a class="navbar-item" role="menuitem">
+              No hay categorías disponibles
+            </a>
             {% endif %}
           </div>
         </div>
@@ -66,6 +75,7 @@
         <a
           class="navbar-item {% if page.url contains '/acerca-de/' %}is-active{% endif %}"
           href="{{ '/acerca-de/' | relative_url }}"
+          role="menuitem"
         >
           <span class="icon-text">
             <span class="icon">
@@ -78,6 +88,7 @@
         <a
           class="navbar-item {% if page.url contains '/contacto/' %}is-active{% endif %}"
           href="{{ '/contacto/' | relative_url }}"
+          role="menuitem"
         >
           <span class="icon-text">
             <span class="icon">
@@ -92,6 +103,7 @@
           href="https://www.hattrick.org/?inviteRef=U8EHM5"
           target="_blank"
           rel="noopener noreferrer"
+          role="menuitem"
         >
           <span class="icon-text">
             <span class="icon">
@@ -104,3 +116,34 @@
     </div>
   </div>
 </nav>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // Funcionalidad del menú móvil
+    const burger = document.querySelector(".navbar-burger");
+    const menu = document.querySelector(".navbar-menu");
+
+    if (burger && menu) {
+      burger.addEventListener("click", () => {
+        const isExpanded = burger.getAttribute("aria-expanded") === "true";
+
+        // Actualizar el aria-expanded
+        burger.setAttribute("aria-expanded", !isExpanded);
+
+        // Alternar la clase is-active en el menú
+        menu.classList.toggle("is-active");
+      });
+    }
+
+    // Cerrar menú al hacer clic fuera
+    document.addEventListener("click", (e) => {
+      const isClickInside =
+        burger?.contains(e.target) || menu?.contains(e.target);
+
+      if (!isClickInside && menu?.classList.contains("is-active")) {
+        menu.classList.remove("is-active");
+        if (burger) burger.setAttribute("aria-expanded", "false");
+      }
+    });
+  });
+</script>

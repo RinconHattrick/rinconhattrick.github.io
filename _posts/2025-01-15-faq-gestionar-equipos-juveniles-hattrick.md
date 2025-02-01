@@ -3,7 +3,7 @@ layout: post
 title: "Preguntas Frecuentes sobre como Gestionar tu Equipo Juvenil en Hattrick"
 author: elPatronHT
 date: 2025-01-04
-categories: preguntas-respuestas
+categories: preguntas-frecuentes
 tags: [FAQ, juveniles, Hattrick, preguntas]
 excerpt: "Descubre cómo gestionar y sacar el máximo provecho de tu equipo juvenil en Hattrick, desde reclutamientos hasta tácticas."
 image: "/assets/img/user.png"
