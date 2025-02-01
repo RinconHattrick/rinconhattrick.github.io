@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const nav = document.querySelector("nav");
   const body = document.querySelector("body");
 
-  if (!nav || !body) return; // Evita ejecutar si no existen los elementos
+  if (!nav || !body) return;
 
   const updateNavbarPosition = () => {
     const isMobile = window.innerWidth <= 767;
@@ -23,4 +23,3 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
-

@@ -114,4 +114,4 @@ Sigue estos pasos para completar el proceso:
 - **Evalúa tus necesidades**: Decide si cerrar o reiniciar es lo más adecuado según tus objetivos y recursos.
 - **Planifica cuidadosamente**: Ambas decisiones son irreversibles y requieren cumplir con condiciones específicas.
 - **Reiniciar puede ser estratégico**: Si tu academia no genera talento útil, puede ser mejor empezar desde cero.
-- **Mantén el equilibrio financiero**: Considera los costos y beneficios antes de realizar cualquier cambio.
+- **Mantén el equilibrio financiero**: Evalúa costos y beneficios antes de actuar.

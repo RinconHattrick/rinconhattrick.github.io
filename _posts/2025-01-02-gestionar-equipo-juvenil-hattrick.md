@@ -77,5 +77,5 @@ Un equipo juvenil es una extensión de tu club diseñada para entrenar y evaluar
 ## Puntos Clave para Recordar
 
 - El equipo juvenil es una inversión estratégica que permite desarrollar talento y generar ingresos a largo plazo.
-- Gestionar juveniles requiere tiempo, recursos y planificación, pero las recompensas son significativas para tu club.
+- Gestionar juveniles requiere tiempo y planificación, pero ofrece recompensas significativas.
 - Participa activamente en competencias y amistosos para descubrir y maximizar el potencial de tus jugadores.

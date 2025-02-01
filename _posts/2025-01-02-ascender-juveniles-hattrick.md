@@ -96,14 +96,14 @@ El momento adecuado para ascender un jugador depende de varios factores.
   - **Edad:** 16
   - **Posición principal:** Delantero
   - **Nivel actual:** Débil
-  - **Potencial:** Bueno
+  - **Potencial Máximo:** Bueno
   - **Recomendación:** Esperar una temporada más.
 
 - **Javier López**
   - **Edad:** 18
   - **Posición principal:** Portero
   - **Nivel actual:** Bueno
-  - **Potencial:** Bueno
+  - **Potencial Máximo:** Bueno
   - **Recomendación:** Vender antes de que pierda valor.
 
 ---
@@ -112,4 +112,4 @@ El momento adecuado para ascender un jugador depende de varios factores.
 
 - Asegúrate de cumplir con los requisitos básicos antes de ascender jugadores.
 - Evalúa cuidadosamente el momento adecuado según las habilidades y el potencial del jugador.
-- Planifica con antelación para mantener el equilibrio en ambos equipos (juvenil y primer equipo).
+- Planifica con antelación para equilibrar ambos equipos.

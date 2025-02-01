@@ -70,7 +70,7 @@ El progreso en el equipo juvenil es lento pero constante. Con paciencia y estrat
 - **Define un enfoque**: Decide si entrenarás posiciones específicas o buscarás un equipo equilibrado.
 - **Evalúa habilidades iniciales**: Revisa las estadísticas para priorizar el entrenamiento.
 - **Participa en ligas juveniles**: Únete a una liga para competir y probar tácticas.
-- **Mantén la paciencia**: El desarrollo de juveniles es un proyecto a largo plazo.
+- **Mantén la paciencia**: El desarrollo de juveniles es a largo plazo.
 
 ---
 

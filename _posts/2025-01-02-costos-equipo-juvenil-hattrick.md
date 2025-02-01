@@ -109,4 +109,4 @@ El mantenimiento semanal del equipo juvenil incluye:
 
 - Gestionar un equipo juvenil implica costos fijos y variables que debes integrar cuidadosamente en la planificación financiera de tu club.
 - Aunque no genera ingresos directos, un equipo juvenil bien gestionado puede proporcionar jugadores clave o transferibles para fortalecer tu economía y competitividad.
-- Optimiza los gastos priorizando calidad sobre cantidad en la búsqueda de talento y promueve juveniles en el momento ideal para maximizar su valor.
+- Prioriza calidad sobre cantidad en la búsqueda de talento y promueve juveniles en el momento ideal para maximizar su valor.

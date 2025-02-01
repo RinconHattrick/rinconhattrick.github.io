@@ -93,4 +93,4 @@ La evaluación efectiva de tus juveniles es fundamental para aprovechar su poten
 
 - Los juveniles inician con habilidades ocultas que se revelan progresivamente mediante entrenamiento y partidos.
 - Herramientas como las calificaciones por estrellas, los comentarios de los ojeadores y los reportes de partidos son fundamentales para evaluar su potencial.
-- Experimentar con posiciones y diseñar entrenamientos estratégicos son pasos esenciales para maximizar el rendimiento y desarrollo de tu equipo juvenil.
+- Experimentar con posiciones y entrenamientos estratégicos maximiza el rendimiento juvenil.

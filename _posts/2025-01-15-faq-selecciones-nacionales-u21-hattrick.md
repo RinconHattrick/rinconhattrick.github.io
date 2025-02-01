@@ -73,4 +73,4 @@ Puedes elegir **6 formaciones** con experiencia inicial de **9.5** antes del pri
 
 ---
 
-¿Tienes preguntas adicionales o quieres compartir sugerencias? Contáctame a través de la [página de contacto](/contact/) y estaré encantado de ayudarte.
+¿Tienes preguntas adicionales o quieres compartir sugerencias? Contáctame a través de la [página de contacto](/contacto/) y estaré encantado de ayudarte.
