@@ -22,4 +22,26 @@ document.addEventListener("DOMContentLoaded", () => {
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
   }
+
+  // Funcionalidad del menú móvil
+  const burger = document.querySelector(".navbar-burger");
+  const menu = document.querySelector(".navbar-menu");
+
+  burger?.addEventListener("click", () => {
+    const isExpanded = burger.getAttribute("aria-expanded") === "true";
+
+    burger.setAttribute("aria-expanded", !isExpanded);
+    menu.classList.toggle("is-active");
+  });
+
+  // Cerrar menú al hacer clic fuera
+  document.addEventListener("click", (e) => {
+    const isClickInside =
+      burger?.contains(e.target) || menu?.contains(e.target);
+
+    if (!isClickInside && menu?.classList.contains("is-active")) {
+      menu.classList.remove("is-active");
+      burger?.setAttribute("aria-expanded", "false");
+    }
+  });
 });
