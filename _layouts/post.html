@@ -2,57 +2,58 @@
 layout: with-sidebar
 ---
 
-<article class="container">
-  <header class="media is-align-items-center mb-5">
-    {% if page.image %}
-    <div class="media-left">
-      <figure class="image is-64x64">
-        <img
-          src="{{ page.image | relative_url }}"
-          alt="Imagen del artículo: {{ page.title }}"
-          class="is-rounded"
-          loading="lazy"
-          width="64"
-          height="64"
-        />
-      </figure>
-    </div>
-    {% endif %}
-
-    <div class="media-content">
-      <div class="has-text-centered">
-        <time
-          datetime="{{ page.date | date_to_xmlschema }}"
-          class="has-text-grey"
-        >
-          Publicado el {{ page.date | date: "%d/%m/%Y" }}
-        </time>
-        {% if page.author %}
-        <span class="mx-2">por</span>
-        <strong>{{ page.author }}</strong>
-        {% endif %}
+<section class="section">
+  <article class="container">
+    <header class="media is-align-items-center mb-5">
+      {% if page.image %}
+      <div class="media-left">
+        <figure class="image is-64x64">
+          <img
+            src="{{ page.image | relative_url }}"
+            alt="Imagen del artículo: {{ page.title }}"
+            class="is-rounded"
+            loading="lazy"
+            width="64"
+            height="64"
+          />
+        </figure>
       </div>
-    </div>
-  </header>
+      {% endif %}
 
-  <section class="content">{{ content }}</section>
+      <div class="media-content">
+        <div class="has-text-centered">
+          <time
+            datetime="{{ page.date | date_to_xmlschema }}"
+            class="has-text-grey"
+          >
+            Publicado el {{ page.date | date: "%d/%m/%Y" }}
+          </time>
+          {% if page.author %}
+          <span class="mx-2">por</span>
+          <strong>{{ page.author }}</strong>
+          {% endif %}
+        </div>
+      </div>
+    </header>
 
-  <div class="has-text-centered my-6">
-    <button
-      id="shareButton"
-      class="button is-primary is-rounded"
-      aria-label="Compartir artículo"
-    >
-      <span class="icon-text">
-        <span class="icon" aria-hidden="true">
-          <i class="fas fa-share-alt"></i>
+    <section class="content">{{ content }}</section>
+
+    <div class="has-text-centered my-6">
+      <button
+        id="shareButton"
+        class="button is-primary is-rounded"
+        aria-label="Compartir artículo"
+      >
+        <span class="icon-text">
+          <span class="icon" aria-hidden="true">
+            <i class="fas fa-share-alt"></i>
+          </span>
+          <span>Compartir</span>
         </span>
-        <span>Compartir</span>
-      </span>
-    </button>
-  </div>
-</article>
-
+      </button>
+    </div>
+  </article>
+</section>
 <footer class="section">
   <nav class="level" aria-label="Navegación del artículo">
     <div class="level-item">
