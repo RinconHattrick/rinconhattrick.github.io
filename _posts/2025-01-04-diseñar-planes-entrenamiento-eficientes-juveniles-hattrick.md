@@ -45,7 +45,7 @@ A continuación, se presentan estrategias de entrenamiento específicas para cad
   - **Secundario:** Portería.
 - **Porcentaje de Entrenamiento:**
   - 120% (1 portero).
-- <a href="https://bit.ly/41Zc2wG" class="button" target="_blank" rel="noopener noreferrer">
+- <a href="https://bit.ly/41Zc2wG" target="_blank" rel="noopener noreferrer">
     Ver más detalles
   </a>
 
@@ -61,7 +61,7 @@ A continuación, se presentan estrategias de entrenamiento específicas para cad
 - **Porcentaje de Entrenamiento:**
   - 125% (5 defensas).
   - 42% (3 mediocampistas / 2 extremos).
-- <a href="https://bit.ly/425O4ju" class="button" target="_blank" rel="noopener noreferrer">
+- <a href="https://bit.ly/425O4ju" target="_blank" rel="noopener noreferrer">
     Ver más detalles
   </a>
 
@@ -77,7 +77,7 @@ A continuación, se presentan estrategias de entrenamiento específicas para cad
 - **Porcentaje de Entrenamiento:**
   - 133% (3 mediocampistas).
   - 66% (2 extremos).
-- <a href="https://bit.ly/3MqfgUf" class="button" target="_blank" rel="noopener noreferrer">
+- <a href="https://bit.ly/3MqfgUf" target="_blank" rel="noopener noreferrer">
     Ver más detalles
   </a>
 
@@ -94,7 +94,7 @@ A continuación, se presentan estrategias de entrenamiento específicas para cad
   - 130% (2 extremos).
   - 54% (2 defensas laterales).
   - 43% (3 delanteros).
-- <a href="https://bit.ly/42SaJki" class="button" target="_blank" rel="noopener noreferrer">
+- <a href="https://bit.ly/42SaJki" target="_blank" rel="noopener noreferrer">
     Ver más detalles
   </a>
 
@@ -109,7 +109,7 @@ A continuación, se presentan estrategias de entrenamiento específicas para cad
   - **Secundario:** Anotación combinada (Anotación y Balón parado).
 - **Porcentaje de Entrenamiento:**
   - 123% (3 delanteros).
-- <a href="https://bit.ly/425O4ju" class="button" target="_blank" rel="noopener noreferrer">
+- <a href="https://bit.ly/425O4ju" target="_blank" rel="noopener noreferrer">
     Ver más detalles
   </a>
 
@@ -126,7 +126,7 @@ A continuación, se presentan estrategias de entrenamiento específicas para cad
   - 140% (3 mediocampistas / 2 extremos).
   - 107% (3 delanteros).
   - 57% (2 defensas).
-- <a href="https://bit.ly/3Ow0zlg" class="button" target="_blank" rel="noopener noreferrer">
+- <a href="https://bit.ly/3Ow0zlg" target="_blank" rel="noopener noreferrer">
     Ver más detalles
   </a>
 
