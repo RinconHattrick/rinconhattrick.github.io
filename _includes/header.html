@@ -17,8 +17,8 @@
         aria-label="Menú"
         aria-expanded="false"
         aria-controls="navbarMenu"
-        onclick="document.getElementById('navbarMenu').classList.toggle('is-active'); this.classList.toggle('is-active');"
       >
+        <span></span>
         <span></span>
         <span></span>
         <span></span>
@@ -119,31 +119,27 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    // Funcionalidad del menú móvil
     const burger = document.querySelector(".navbar-burger");
     const menu = document.querySelector(".navbar-menu");
 
     if (burger && menu) {
       burger.addEventListener("click", () => {
-        const isExpanded = burger.getAttribute("aria-expanded") === "true";
+        const isActive = menu.classList.contains("is-active");
 
-        // Actualizar el aria-expanded
-        burger.setAttribute("aria-expanded", !isExpanded);
-
-        // Alternar la clase is-active en el menú
+        // Alternar clases y accesibilidad
         menu.classList.toggle("is-active");
+        burger.classList.toggle("is-active");
+        burger.setAttribute("aria-expanded", isActive ? "false" : "true");
+      });
+
+      // Cerrar el menú al hacer clic fuera
+      document.addEventListener("click", (event) => {
+        if (!menu.contains(event.target) && !burger.contains(event.target)) {
+          menu.classList.remove("is-active");
+          burger.classList.remove("is-active");
+          burger.setAttribute("aria-expanded", "false");
+        }
       });
     }
-
-    // Cerrar menú al hacer clic fuera
-    document.addEventListener("click", (e) => {
-      const isClickInside =
-        burger?.contains(e.target) || menu?.contains(e.target);
-
-      if (!isClickInside && menu?.classList.contains("is-active")) {
-        menu.classList.remove("is-active");
-        if (burger) burger.setAttribute("aria-expanded", "false");
-      }
-    });
   });
 </script>
