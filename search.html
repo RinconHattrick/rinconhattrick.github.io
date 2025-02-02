@@ -12,7 +12,7 @@ description: "Búsqueda de artículos en el sitio"
 
     <form class="mt-5" role="search" onsubmit="event.preventDefault()">
       <div class="field">
-        <div class="control has-icons-left is-expanded">
+        <div class="control has-icons-left">
           <input
             type="search"
             id="search-input"
@@ -34,7 +34,7 @@ description: "Búsqueda de artículos en el sitio"
 
     <div id="search-feedback" class="notification is-hidden mt-3"></div>
 
-    <div id="search-results" class="box mt-5 p-4" aria-live="polite"></div>
+    <div id="search-results" class="content mt-5" aria-live="polite"></div>
   </div>
 </section>
 
@@ -65,7 +65,11 @@ description: "Búsqueda de artículos en el sitio"
     }
 
     showFeedback(message, type = "is-primary") {
-      this.feedbackElement.textContent = message;
+      this.feedbackElement.innerHTML = `
+        <span class="icon">
+          <i class="fas fa-info-circle"></i>
+        </span> ${message}
+      `;
       this.feedbackElement.classList.remove(
         "is-hidden",
         "is-danger",
@@ -89,7 +93,7 @@ description: "Búsqueda de artículos en el sitio"
       }
 
       const ul = document.createElement("ul");
-      ul.className = "search-results-list";
+      ul.className = "list";
 
       results.forEach((item) => {
         const li = document.createElement("li");
@@ -142,7 +146,9 @@ description: "Búsqueda de artículos en el sitio"
         return;
       }
 
-      this.showFeedback("Cargando resultados...");
+      this.showFeedback(
+        '<span class="icon"><i class="fas fa-spinner fa-spin"></i></span> Cargando resultados...'
+      );
 
       try {
         const response = await fetch(this.searchJsonUrl);
@@ -153,9 +159,14 @@ description: "Búsqueda de artículos en el sitio"
         if (!Array.isArray(data))
           throw new Error("Formato incorrecto de datos");
 
-        const results = data.filter((item) =>
-          item.title.toLowerCase().includes(query.toLowerCase())
-        );
+        // Filtrar resultados con coincidencias exactas primero
+        const results = data
+          .filter((item) =>
+            item.title.toLowerCase().includes(query.toLowerCase())
+          )
+          .sort((a, b) =>
+            a.title.toLowerCase().startsWith(query.toLowerCase()) ? -1 : 1
+          );
 
         this.renderResults(results);
         this.hideFeedback();

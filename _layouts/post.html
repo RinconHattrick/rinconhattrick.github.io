@@ -4,7 +4,7 @@ layout: with-sidebar
 
 <section class="section">
   <article class="container article">
-    <header class="media is-align-items-center mb-5">
+    <header class="media is-flex is-align-items-center mb-5">
       {% if page.image %}
       <div class="media-left">
         <figure class="image is-64x64">
@@ -21,11 +21,8 @@ layout: with-sidebar
       {% endif %}
 
       <div class="media-content">
-        <div class="has-text-centered">
-          <time
-            datetime="{{ page.date | date_to_xmlschema }}"
-            class="has-text-grey"
-          >
+        <div class="has-text-grey" style="text-align: center">
+          <time datetime="{{ page.date | date_to_xmlschema }}">
             Publicado el {{ page.date | date: "%d/%m/%Y" }}
           </time>
           {% if page.author %}
@@ -41,13 +38,13 @@ layout: with-sidebar
     <div class="has-text-centered my-6">
       <button
         id="shareButton"
-        class="button is-primary is-rounded"
+        class="button is-primary is-light is-rounded"
         aria-label="Compartir artículo"
         title="Compartir este artículo"
       >
         <span class="icon-text">
-          <span class="icon" aria-hidden="true">
-            <i class="fas fa-share-alt"></i>
+          <span class="icon">
+            <i class="fas fa-share-alt" aria-hidden="true"></i>
           </span>
           <span>Compartir</span>
         </span>
@@ -58,7 +55,7 @@ layout: with-sidebar
 
 <footer class="section">
   <nav class="level" aria-label="Navegación del artículo">
-    <div class="level-item">
+    <div class="level-item has-text-centered">
       <div class="buttons is-centered">
         <a
           href="{{ '/' | relative_url }}"
@@ -66,7 +63,7 @@ layout: with-sidebar
           aria-label="Volver al Inicio"
         >
           <span class="icon-text">
-            <span class="icon" aria-hidden="true">
+            <span class="icon">
               <i class="fas fa-home" aria-hidden="true"></i>
             </span>
             <span>Volver al Inicio</span>
@@ -79,7 +76,7 @@ layout: with-sidebar
           aria-label="Volver arriba"
         >
           <span class="icon-text">
-            <span class="icon" aria-hidden="true">
+            <span class="icon">
               <i class="fas fa-arrow-up" aria-hidden="true"></i>
             </span>
             <span>Subir</span>
@@ -126,10 +123,9 @@ layout: with-sidebar
     }
 
     showFallbackMessage() {
-      const message =
-        `Lo sentimos, la función de compartir no está disponible.\n\n` +
-        `URL del artículo: ${this.shareData.url}`;
-      alert(message);
+      alert(
+        `Lo sentimos, la función de compartir no está disponible.\n\nURL del artículo: ${this.shareData.url}`
+      );
     }
   }
 

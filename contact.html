@@ -4,135 +4,95 @@ title: "Contacto - El Rincón de Hattrick"
 permalink: /contacto/
 ---
 
-<section class="section">
-  <div class="container">
-    <!-- Header Section -->
-    <header class="has-text-centered" id="main-header">
-      <h1 class="title is-2 has-text-white">Contáctame</h1>
-      <p class="subtitle is-4 has-text-white">
-        ¿Tienes preguntas, comentarios o simplemente quieres hablar sobre
-        estrategias de Hattrick? Aquí tienes varias formas de conectar.
-      </p>
-    </header>
+<div class="container">
+  <div class="columns">
+    <div class="column">
+      <!-- Hero Header -->
+      <section class="hero" id="main-header">
+        <div class="hero-body has-text-centered">
+          <h1 class="title is-2">Contáctame</h1>
+          <p class="subtitle is-4">
+            ¿Tienes preguntas, comentarios o simplemente quieres hablar sobre
+            estrategias de Hattrick?
+          </p>
+        </div>
+      </section>
 
-    <!-- Contact Cards Section -->
-    <div class="columns is-multiline is-centered is-variable is-3">
-      <!-- Telegram Card -->
-      <div class="column is-4-desktop is-6-tablet">
-        <div class="card">
-          <div class="card-content has-text-centered">
-            <div class="mb-4">
-              <span class="icon has-text-info is-large">
-                <i class="fab fa-telegram fa-3x" aria-hidden="true"></i>
-              </span>
+      <!-- Contacto -->
+      <main class="section">
+        <div class="container">
+          <div class="columns is-multiline is-centered is-variable is-3">
+            {% assign contact_methods = "Telegram,WhatsApp,Correo Electrónico" |
+            split: "," %} {% assign icons =
+            "fa-telegram,fa-whatsapp,fa-envelope" | split: "," %} {% assign
+            colors = "is-info,is-success,is-danger" | split: "," %} {% assign
+            descriptions = "Únete a nuestra comunidad para discutir estrategias,
+            compartir experiencias y mantenerte actualizado.,Contacta
+            directamente para resolver dudas específicas o recibir asesoramiento
+            personalizado.,Envía tus consultas detalladas o propuestas de
+            colaboración por correo electrónico." | split: "," %} {% assign
+            links =
+            "https://t.me/JuvenilesHT,https://wa.me/qr/537E4GO72BHHB1,mailto:tutorhattrick@hotmail.com"
+            | split: "," %} {% for method in contact_methods %}
+            <div class="column is-4-desktop is-6-tablet">
+              <div class="card">
+                <div class="card-content has-text-centered">
+                  <div class="mb-4">
+                    <span class="icon has-text-primary is-large">
+                      <i
+                        class="fab {{ icons[forloop.index0] }} fa-3x"
+                        aria-hidden="true"
+                      ></i>
+                    </span>
+                  </div>
+                  <h2 class="title is-4 mb-4">{{ method }}</h2>
+                  <p class="mb-5">{{ descriptions[forloop.index0] }}</p>
+                  <div class="mt-auto">
+                    <a
+                      href="{{ links[forloop.index0] }}"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="button {{ colors[forloop.index0] }} is-medium is-fullwidth is-rounded"
+                      aria-label="Contactar vía {{ method }}"
+                    >
+                      <span class="icon">
+                        <i
+                          class="fab {{ icons[forloop.index0] }}"
+                          aria-hidden="true"
+                        ></i>
+                      </span>
+                      <span>Contactar</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
-            <h2 class="title is-4 mb-4">Grupo de Telegram</h2>
-            <p class="mb-5">
-              Únete a nuestra comunidad para discutir estrategias, compartir
-              experiencias y mantenerte actualizado.
-            </p>
-            <div class="mt-auto">
-              <a
-                href="https://t.me/JuvenilesHT"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="button is-info is-medium is-fullwidth is-rounded"
-                aria-label="Unirte al grupo de Telegram de Hattrick"
-              >
-                <span class="icon">
-                  <i class="fab fa-telegram" aria-hidden="true"></i>
-                </span>
-                <span>Unirme al Grupo</span>
-              </a>
-            </div>
+            {% endfor %}
           </div>
         </div>
-      </div>
+      </main>
 
-      <!-- WhatsApp Card -->
-      <div class="column is-4-desktop is-6-tablet">
-        <div class="card">
-          <div class="card-content has-text-centered">
-            <div class="mb-4">
-              <span class="icon has-text-success is-large">
-                <i class="fab fa-whatsapp fa-3x" aria-hidden="true"></i>
-              </span>
-            </div>
-            <h2 class="title is-4 mb-4">WhatsApp</h2>
-            <p class="mb-5">
-              Contacta directamente para resolver dudas específicas o recibir
-              asesoramiento personalizado.
-            </p>
-            <div class="mt-auto">
-              <a
-                href="https://wa.me/qr/537E4GO72BHHB1"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="button is-success is-medium is-fullwidth is-rounded"
-                aria-label="Contactar por WhatsApp para consultas sobre Hattrick"
-              >
-                <span class="icon">
-                  <i class="fab fa-whatsapp" aria-hidden="true"></i>
-                </span>
-                <span>Enviar Mensaje</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Email Card -->
-      <div class="column is-4-desktop is-6-tablet">
-        <div class="card">
-          <div class="card-content has-text-centered">
-            <div class="mb-4">
-              <span class="icon has-text-danger is-large">
-                <i class="fas fa-envelope fa-3x" aria-hidden="true"></i>
-              </span>
-            </div>
-            <h2 class="title is-4 mb-4">Correo Electrónico</h2>
-            <p class="mb-5">
-              Envía tus consultas detalladas o propuestas de colaboración por
-              correo electrónico.
-            </p>
-            <div class="mt-auto">
-              <a
-                href="mailto:tutorhattrick@hotmail.com"
-                class="button is-danger is-medium is-fullwidth is-rounded"
-                aria-label="Enviar correo electrónico para consultas sobre Hattrick"
-              >
-                <span class="icon">
-                  <i class="fas fa-envelope" aria-hidden="true"></i>
-                </span>
-                <span>Escribir Correo</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Footer Section -->
-    <footer class="has-text-centered">
-      <div class="content">
+      <!-- Mensaje Final -->
+      <section class="box has-text-centered p-6 mb-6">
         <p class="is-size-5">
           Estoy aquí para ayudarte con cualquier aspecto de Hattrick. No dudes
           en contactarme por el medio que prefieras. ¡Espero tu mensaje!
         </p>
-      </div>
+      </section>
 
-      <nav>
+      <!-- Navegación -->
+      <footer class="has-text-centered mt-4" role="contentinfo">
         <a
           href="/"
           class="button is-link is-medium is-rounded"
-          aria-label="Volver a la página principal"
+          aria-label="Volver al inicio"
         >
           <span class="icon">
             <i class="fas fa-home" aria-hidden="true"></i>
           </span>
           <span>Volver al Inicio</span>
         </a>
-      </nav>
-    </footer>
+      </footer>
+    </div>
   </div>
-</section>
+</div>

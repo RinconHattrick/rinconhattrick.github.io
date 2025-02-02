@@ -5,7 +5,7 @@ author: elPatronHT
 date: 2025-01-03
 categories: preguntas-frecuentes
 tags: [FAQ, selecciones, estrategias]
-excerpt: "Descubre todo sobre la gestión y participación en las selecciones nacionales y Sub-21 en Hattrick, incluyendo tácticas y aspectos clave."
+excerpt: "Descubre todo lo que necesitas saber sobre la gestión y participación en las selecciones nacionales y Sub-21 en Hattrick, desde tácticas hasta aspectos clave que te ayudarán a triunfar."
 image: "/assets/img/user.png"
 featured: false
 published: true
@@ -13,13 +13,13 @@ published: true
 
 # Preguntas Frecuentes sobre Selecciones Nacionales y Sub-21 en Hattrick
 
-Este artículo se responde a las preguntas más frecuentes sobre las selecciones nacionales y Sub-21 en Hattrick. Además, te damos claves importantes para entender su funcionamiento.
+Este artículo responde a las preguntas más frecuentes sobre las selecciones nacionales y Sub-21 en Hattrick. Además, te damos claves importantes para entender su funcionamiento.
 
 ---
 
 ## ¿Puede el seleccionador ver las habilidades de todos los jugadores?
 
-No. Solo puede ver las habilidades de los jugadores convocados o incluidos en la lista de promesas futuribles.
+No. Solo puede ver las habilidades de los jugadores convocados o de aquellos incluidos en la lista de promesas futuribles.
 
 ## ¿Tienen entrenamiento las selecciones?
 
@@ -27,9 +27,9 @@ No. El entrenamiento depende exclusivamente del equipo de club.
 
 ## ¿Tienen entrenador las selecciones?
 
-No hay un "entrenador" tradicional. Las tácticas se configuran con la barra del asistente táctico.
+No hay un "entrenador" tradicional. Las tácticas se configuran mediante el asistente táctico.
 
-## ¿Tiene consecuencias la entrada o salida de jugadores de la selección?
+## ¿Tiene consecuencias la entrada o salida de jugadores de la Selección?
 
 - **Entrada:** No afecta negativamente al equipo.
 - **Salida:** Disminuye el espíritu del equipo entre medio y un nivel.
@@ -38,11 +38,11 @@ No hay un "entrenador" tradicional. Las tácticas se configuran con la barra del
 
 No es necesario. Los jugadores pueden ser convocados según se necesiten.
 
-## ¿La alineación en la selección es diferente a la de un equipo normal?
+## ¿La alineación en la Selección es diferente a la de un equipo normal?
 
 No. Es exactamente igual.
 
-## ¿Qué es un pacto de espíritu o de PIC?
+## ¿Qué es un pacto de espíritu (PIC) y cómo puede beneficiarte?
 
 Es un acuerdo entre seleccionadores para coordinar estrategias que mantengan el espíritu del equipo bajo control.
 
@@ -50,9 +50,9 @@ Es un acuerdo entre seleccionadores para coordinar estrategias que mantengan el 
 
 Sí, las mecánicas son las mismas.
 
-## ¿La selección paga el sueldo de los jugadores
+## ¿La Selección paga el sueldo de los jugadores?
 
-Sí. La selección paga un porcentaje del salario del jugador al club después de cada partido.
+Sí, la Selección paga un porcentaje del salario del jugador al club después de cada partido.
 
 ## ¿Cuáles son los horarios de los partidos internacionales?
 
@@ -61,16 +61,16 @@ Sí. La selección paga un porcentaje del salario del jugador al club después d
 
 ## ¿Qué sucede con las formaciones iniciales?
 
-Puedes elegir **6 formaciones** con experiencia inicial de **9.5** antes del primer partido de la temporada. El resto tendrán una experiencia inicial de **3.5**.
+Antes del primer partido de la temporada, puedes seleccionar **6 formaciones** con una experiencia inicial de **9.5**, lo que te da una ventaja estratégica desde el inicio. El resto tendrán una experiencia inicial de **3.5**.
 
 ---
 
 ## Puntos Clave para Recordar
 
-- Usa las listas de futuribles para identificar jugadores prometedores y analizar rivales.
-- Gestionar las entradas y salidas de jugadores afecta el espíritu del equipo, planifica cuidadosamente.
-- Las selecciones no entrenan jugadores, pero aportan ventajas económicas y tácticas a sus clubes.
+- Aprovecha las listas de futuribles para descubrir jugadores prometedores y analizar a tus rivales con mayor eficacia.
+- Gestionar las entradas y salidas de jugadores afecta el espíritu del equipo, por lo que debes planificar cuidadosamente.
+- Aunque las selecciones no entrenan jugadores, ofrecen ventajas económicas y tácticas significativas para los clubes.
 
 ---
 
-¿Tienes preguntas adicionales o quieres compartir sugerencias? Contáctame a través de la [página de contacto](/contacto/) y estaré encantado de ayudarte.
+¿Tienes más preguntas o quieres compartir tus ideas? No dudes en contactarme a través de la [página de contacto](/contacto/). ¡Estaré encantado de ayudarte!

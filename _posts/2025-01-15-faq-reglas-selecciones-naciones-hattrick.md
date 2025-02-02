@@ -5,7 +5,7 @@ author: elPatronHT
 date: 2025-01-02
 categories: preguntas-frecuentes
 tags: [FAQ, selecciones, Hattrick, reglas]
-excerpt: "Conoce a fondo las reglas que rigen las selecciones nacionales y Sub-21 en Hattrick, desde elecciones hasta convocatorias."
+excerpt: "Descubre todo lo que necesitas saber sobre las reglas que rigen las selecciones nacionales y Sub-21 en Hattrick, desde cómo se eligen los seleccionadores hasta cómo se gestionan las convocatorias."
 image: "/assets/img/user.png"
 featured: false
 published: true
@@ -13,7 +13,7 @@ published: true
 
 # Preguntas Frecuentes sobre Reglas de las Selecciones Nacionales en Hattrick
 
-Este artículo se responde a las preguntas más frecuentes sobre cómo funcionan las selecciones nacionales y Sub-21 en Hattrick, desde la elección de seleccionadores hasta la gestión de jugadores.
+Este artículo responde a las preguntas más frecuentes sobre cómo funcionan las selecciones nacionales y Sub-21 en Hattrick, desde la elección de seleccionadores hasta la gestión de jugadores.
 
 ---
 
@@ -23,17 +23,17 @@ Son equipos que representan a cada país en el juego, divididos en Selección Na
 
 ## ¿Quién gestiona las selecciones nacionales?
 
-Un seleccionador elegido por los usuarios del país mediante elecciones públicas.
+Un Seleccionador elegido por los usuarios del país mediante elecciones públicas.
 
-## ¿Cuánto dura el mandato de un seleccionador?
+## ¿Cuánto dura el mandato de un Seleccionador?
 
 Dos temporadas, salvo excepciones autorizadas por los Administradores de Selecciones Nacionales.
 
-## ¿Qué sucede si un seleccionador no cumple sus obligaciones?
+## ¿Qué sucede si un Seleccionador no cumple sus obligaciones?
 
-Los administradores pueden organizar nuevas elecciones si no puede continuar por razones justificadas.
+Los administradores pueden organizar nuevas elecciones si el Seleccionador no puede continuar por razones justificadas.
 
-## ¿Qué pasa si un seleccionador incumple las reglas durante las elecciones?
+## ¿Qué pasa si un Seleccionador incumple las reglas durante las elecciones?
 
 Podría ser descalificado si realiza acciones que le otorguen una ventaja injusta.
 
@@ -49,21 +49,21 @@ Esto podría descalificarte de las elecciones.
 
 En el foro de Seleccionadores Nacionales, accesible solo para seleccionadores.
 
-## ¿Cómo elige un seleccionador a los jugadores?
+## ¿Cómo elige un Seleccionador a los jugadores?
 
-Selecciona a jugadores activos nativos del país y pertenecientes a equipos con dueño.
+Selecciona a jugadores activos, nativos del país y que pertenezcan a equipos con dueño.
 
 ## ¿Cuántos jugadores pueden estar en la selección al mismo tiempo?
 
 Un máximo de 26 jugadores.
 
-## ¿Qué sucede al desconvocar un jugador?
+## ¿Qué sucede cuando se desconvoca a un jugador?
 
 El espíritu de equipo disminuye ligeramente.
 
-## ¿Puede el seleccionador ver todas las habilidades de los jugadores convocados?
+## ¿Puede el Seleccionador ver todas las habilidades de los jugadores convocados?
 
-Sí, pero pierde el acceso al desconvocarlos o al finalizar su mandato.
+Sí, pero pierde el acceso al desconvocarlos o, al finalizar su mandato, perderá el acceso.
 
 ## ¿Cómo afecta jugar con la selección al salario del jugador?
 
@@ -85,7 +85,7 @@ No, no afectan el entrenamiento.
 
 Solo aplican en los partidos futuros de la selección.
 
-## ¿Qué es la "Niebla de batalla"?
+## ¿Qué es la "Niebla de batalla" y cómo puede afectar tus estrategias?
 
 Durante las últimas 8 horas antes de un partido, se oculta información clave del equipo para equilibrar estrategias.
 
@@ -95,7 +95,7 @@ Es menor que en los clubes y similar a la ventaja de visitantes en derbis.
 
 ## ¿Quién elige los uniformes de la selección?
 
-El seleccionador, reflejando los colores reales del país.
+El Seleccionador, reflejando los colores reales del país.
 
 ## ¿Cuándo se juegan los amistosos?
 
@@ -103,7 +103,7 @@ Los viernes a las 20:00 Hattrick (hora del servidor).
 
 ## ¿Cómo se organiza un amistoso?
 
-El seleccionador envía o acepta un reto. Si no se organiza, se asigna automáticamente un rival el jueves.
+El Seleccionador envía o acepta un reto. Si no se organiza, se asigna automáticamente un rival el jueves.
 
 ## ¿Dónde se juegan los amistosos?
 
@@ -139,7 +139,7 @@ Al menos una semana, excepto en las dos primeras semanas tras las elecciones.
 
 ## ¿Qué hace un auxiliar técnico?
 
-Asiste al seleccionador en el análisis de jugadores, órdenes de partidos y aceptación de amistosos.
+Asiste al Seleccionador en el análisis de jugadores, órdenes de partidos y aceptación de amistosos.
 
 ## ¿Qué tareas tienen los colaboradores?
 
@@ -149,11 +149,11 @@ Ayudan a identificar y dar seguimiento a jugadores prometedores con herramientas
 
 ## Puntos Clave para Recordar
 
-- Las selecciones están dirigidas por seleccionadores elegidos democráticamente y tienen un mandato de dos temporadas.
-- Los jugadores convocados no afectan el entrenamiento del club, pero reciben experiencia en partidos internacionales.
-- Los partidos de selección incluyen reglas específicas como la compensación por lesiones y la reducción del salario.
+- Las selecciones están dirigidas por Seleccionadores elegidos democráticamente, con un mandato de dos temporadas que les permite implementar estrategias a largo plazo.
+- Los jugadores convocados no afectan el entrenamiento del club, pero ganan valiosa experiencia en partidos internacionales que puede beneficiar a tu equipo.
+- Los partidos de selección incluyen reglas específicas, como la compensación por lesiones y la reducción del salario, que pueden beneficiar a tu club.
 - La lista de futuribles permite observar y preparar jugadores antes de su convocatoria oficial.
 
 ---
 
-¿Tienes preguntas adicionales o quieres compartir sugerencias? Contáctame a través de la [página de contacto](/contacto/) y estaré encantado de ayudarte.
+¿Tienes más preguntas o quieres compartir tus ideas? No dudes en contactarme a través de la [página de contacto](/contacto/). ¡Estaré encantado de ayudarte!

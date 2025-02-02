@@ -2,7 +2,7 @@
 layout: category
 title: "Equipo Mayor"
 category: "equipo-mayor"
-description: "Información y estrategias sobre el manejo de tu primer equipo."
+description: "Aprende estrategias avanzadas de gestión de plantilla, maximización de ingresos en el mercado y formación de equipos competitivos."
 permalink: /equipo-mayor/
 icon: fa-futbol
 ---
