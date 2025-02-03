@@ -9,11 +9,10 @@ layout: default
         {{ content }}
       </main>
 
-      <!-- Barra lateral -->
       <aside class="column is-one-quarter is-hidden-mobile">
         <div class="sticky-sidebar">
           <!-- Búsqueda -->
-          <section class="card mb-3">
+          <div class="card mb-3">
             <div class="card-content">
               <h2 class="title is-5 has-text-weight-semibold mb-3">Buscar</h2>
               <form
@@ -34,113 +33,106 @@ layout: default
                   </div>
                   <div class="control">
                     <button type="submit" class="button is-primary is-rounded">
-                      <span class="icon">
-                        <i class="fas fa-search"></i>
-                      </span>
+                      <span class="icon"><i class="fas fa-search"></i></span>
                       <span class="is-hidden-touch">Buscar</span>
                     </button>
                   </div>
                 </div>
               </form>
             </div>
-          </section>
+          </div>
 
           <!-- Categorías -->
-          <nav class="card mb-3">
+          <div class="card mb-3">
             <div class="card-content">
-              <h2 class="title is-5 has-text-weight-semibold mb-3">
-                Categorías
-              </h2>
-              <ul class="menu-list">
-                {% for category in site.categories %} {% assign category_name =
-                category[0] %}
-                <li>
-                  <a
-                    href="{{ category_name | slugify | prepend: '/' }}"
-                    class="{% if page.category == category_name %}is-active{% endif %}"
-                    aria-label="Ver artículos en {{ category_name }}"
-                  >
-                    <span class="icon-text">
-                      <span class="icon">
-                        <i class="fas fa-folder"></i>
+              <nav class="menu">
+                <p class="menu-label">Categorías</p>
+                <ul class="menu-list">
+                  {% for category in site.categories %} {% assign category_name
+                  = category[0] %} {% assign category_page = site.pages | where:
+                  "category", category_name | first %}
+                  <li>
+                    <a
+                      href="/{{ category_name | slugify }}"
+                      class="{% if page.category == category_name %}is-active{% endif %}"
+                      aria-label="Ver artículos de {{ category_name }}"
+                    >
+                      <span class="icon-text">
+                        <span class="icon">
+                          <i class="fas {{ category_page.icon }}"></i>
+                        </span>
+                        <span
+                          >{{ category_page.title | default: category_name
+                          }}</span
+                        >
                       </span>
-                      <span>{{ category_name | capitalize }}</span>
-                    </span>
-                  </a>
-                </li>
-                {% endfor %}
-              </ul>
+                    </a>
+                  </li>
+                  {% endfor %}
+                </ul>
+              </nav>
             </div>
-          </nav>
+          </div>
 
           <!-- Artículos Destacados -->
-          <section class="card mb-3">
+          <div class="card mb-3">
             <div class="card-content">
               <h2 class="title is-5 has-text-weight-semibold mb-3">
                 Artículos Destacados
               </h2>
-              <nav>
+              <div class="menu">
                 {% assign featured_posts = site.posts | where: "featured", true
-                | limit: 5 %} {% if featured_posts.size > 0 %}
-                <ul class="menu-list">
-                  {% for post in featured_posts %}
-                  <li>
-                    <a
-                      href="{{ post.url | relative_url }}"
-                      aria-label="Leer {{ post.title }}"
-                    >
-                      <strong>{{ post.title }}</strong>
-                      <time
-                        datetime="{{ post.date | date_to_xmlschema }}"
-                        class="is-size-7 has-text-grey"
-                      >
-                        {{ post.date | date: "%d/%m/%Y" }}
-                      </time>
-                    </a>
-                  </li>
-                  {% endfor %}
-                </ul>
-                {% else %}
+                | limit: 5 %} {% if featured_posts.size > 0 %} {% for post in
+                featured_posts %}
+                <a
+                  href="{{ post.url | relative_url }}"
+                  class="menu-item"
+                  aria-label="Leer: {{ post.title }}"
+                >
+                  <strong>{{ post.title }}</strong>
+                  <time
+                    datetime="{{ post.date | date_to_xmlschema }}"
+                    class="is-size-7 has-text-grey"
+                  >
+                    {{ post.date | date: "%d/%m/%Y" }}
+                  </time>
+                </a>
+                {% endfor %} {% else %}
                 <p class="has-text-grey">No hay artículos destacados</p>
                 {% endif %}
-              </nav>
+              </div>
             </div>
-          </section>
+          </div>
 
           <!-- Últimos Artículos -->
-          <section class="card mb-3">
+          <div class="card mb-3">
             <div class="card-content">
               <h2 class="title is-5 has-text-weight-semibold mb-3">
                 Últimos Artículos
               </h2>
-              <nav>
+              <div class="menu">
                 {% assign recent_posts = site.posts | where: "published", true |
                 sort: "date" | reverse | limit: 4 %} {% if recent_posts.size > 0
-                %}
-                <ul class="menu-list">
-                  {% for post in recent_posts %}
-                  <li>
-                    <a
-                      href="{{ post.url | relative_url }}"
-                      aria-label="Leer {{ post.title }}"
-                    >
-                      <strong>{{ post.title }}</strong>
-                      <time
-                        datetime="{{ post.date | date_to_xmlschema }}"
-                        class="is-size-7 has-text-grey"
-                      >
-                        {{ post.date | date: "%d/%m/%Y" }}
-                      </time>
-                    </a>
-                  </li>
-                  {% endfor %}
-                </ul>
-                {% else %}
+                %} {% for post in recent_posts %}
+                <a
+                  href="{{ post.url | relative_url }}"
+                  class="menu-item"
+                  aria-label="Leer: {{ post.title }}"
+                >
+                  <strong>{{ post.title }}</strong>
+                  <time
+                    datetime="{{ post.date | date_to_xmlschema }}"
+                    class="is-size-7 has-text-grey"
+                  >
+                    {{ post.date | date: "%d/%m/%Y" }}
+                  </time>
+                </a>
+                {% endfor %} {% else %}
                 <p class="has-text-grey">No hay artículos recientes</p>
                 {% endif %}
-              </nav>
+              </div>
             </div>
-          </section>
+          </div>
         </div>
       </aside>
     </div>

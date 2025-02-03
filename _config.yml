@@ -12,7 +12,7 @@ kramdown:
   input: GFM
   hard_wrap: true
 
-permalink: "/:categories/:year/:month/:day/:title/"
+permalink: "/:categories/:title/"
 
 plugins:
   - jekyll-feed
@@ -27,6 +27,8 @@ exclude:
   - .git/
   - .github/
   - .gitignore
+  - vendor/
+  - _site/
 
 defaults:
   - scope:

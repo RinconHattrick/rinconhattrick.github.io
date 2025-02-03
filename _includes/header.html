@@ -1,15 +1,8 @@
-<nav class="navbar is-fixed-top" aria-label="Menú principal">
+<nav class="navbar is-fixed-top" aria-label="Menú principal" role="navigation">
   <div class="container">
     <div class="navbar-brand">
       <a class="navbar-item" href="{{ '/' | relative_url }}">
-        <h1 class="title is-4 mb-0">
-          <span class="icon-text">
-            <span class="icon">
-              <i class="fas fa-futbol"></i>
-            </span>
-            <span>El Rincón de Hattrick</span>
-          </span>
-        </h1>
+        <h1 class="title is-4 mb-0">El Rincón de Hattrick</h1>
       </a>
 
       <button
@@ -18,10 +11,10 @@
         aria-expanded="false"
         aria-controls="navbarMenu"
       >
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
       </button>
     </div>
 
@@ -33,23 +26,25 @@
           role="menuitem"
         >
           <span class="icon-text">
-            <span class="icon">
-              <i class="fas fa-home"></i>
-            </span>
+            <span class="icon"><i class="fas fa-home"></i></span>
             <span>Inicio</span>
           </span>
         </a>
 
+        <!-- Aquí comenzamos a manejar las categorías -->
         <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link" aria-haspopup="true" aria-expanded="false">
+          <a
+            class="navbar-link"
+            id="category-toggle"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
             <span class="icon-text">
-              <span class="icon">
-                <i class="fas fa-folder"></i>
-              </span>
+              <span class="icon"><i class="fas fa-folder"></i></span>
               <span>Categorías</span>
             </span>
           </a>
-          <div class="navbar-dropdown">
+          <div class="navbar-dropdown" id="category-menu">
             {% if site.pages %} {% for category_page in site.pages %} {% if
             category_page.layout == "category" %}
             <a
@@ -58,16 +53,16 @@
               role="menuitem"
             >
               <span class="icon-text">
-                <span class="icon">
-                  <i class="fas {{ category_page.icon }}"></i>
-                </span>
+                <span class="icon"
+                  ><i class="fas {{ category_page.icon }}"></i
+                ></span>
                 <span>{{ category_page.title }}</span>
               </span>
             </a>
             {% endif %} {% endfor %} {% else %}
-            <a class="navbar-item" role="menuitem">
-              No hay categorías disponibles
-            </a>
+            <a class="navbar-item" role="menuitem"
+              >No hay categorías disponibles</a
+            >
             {% endif %}
           </div>
         </div>
@@ -78,9 +73,7 @@
           role="menuitem"
         >
           <span class="icon-text">
-            <span class="icon">
-              <i class="fas fa-info-circle"></i>
-            </span>
+            <span class="icon"><i class="fas fa-info-circle"></i></span>
             <span>Acerca de</span>
           </span>
         </a>
@@ -91,9 +84,7 @@
           role="menuitem"
         >
           <span class="icon-text">
-            <span class="icon">
-              <i class="fas fa-envelope"></i>
-            </span>
+            <span class="icon"><i class="fas fa-envelope"></i></span>
             <span>Contáctanos</span>
           </span>
         </a>
@@ -106,9 +97,7 @@
           role="menuitem"
         >
           <span class="icon-text">
-            <span class="icon">
-              <i class="fas fa-external-link-alt"></i>
-            </span>
+            <span class="icon"><i class="fas fa-external-link-alt"></i></span>
             <span>Hattrick</span>
           </span>
         </a>
@@ -121,15 +110,16 @@
   document.addEventListener("DOMContentLoaded", () => {
     const burger = document.querySelector(".navbar-burger");
     const menu = document.querySelector(".navbar-menu");
+    const categoryToggle = document.getElementById("category-toggle");
+    const categoryMenu = document.getElementById("category-menu");
 
+    // Toggle del menú hamburguesa
     if (burger && menu) {
       burger.addEventListener("click", () => {
         const isActive = menu.classList.contains("is-active");
-
-        // Alternar clases y accesibilidad
         menu.classList.toggle("is-active");
         burger.classList.toggle("is-active");
-        burger.setAttribute("aria-expanded", isActive ? "false" : "true");
+        burger.setAttribute("aria-expanded", !isActive);
       });
 
       // Cerrar el menú al hacer clic fuera
@@ -141,5 +131,33 @@
         }
       });
     }
+
+    // Toggle del menú de Categorías en móviles
+    if (categoryToggle && categoryMenu) {
+      categoryToggle.addEventListener("click", (event) => {
+        if (window.innerWidth <= 1024) {
+          event.preventDefault(); // Evitar el comportamiento del enlace en móvil
+          categoryMenu.classList.toggle("is-active");
+          categoryToggle.setAttribute(
+            "aria-expanded",
+            categoryMenu.classList.contains("is-active")
+          );
+        }
+      });
+    }
   });
 </script>
+
+<style>
+  @media screen and (max-width: 1024px) {
+    /* El menú de categorías se oculta por defecto */
+    .navbar-dropdown {
+      display: none;
+    }
+
+    /* Cuando se activa, se muestra */
+    .navbar-dropdown.is-active {
+      display: block;
+    }
+  }
+</style>

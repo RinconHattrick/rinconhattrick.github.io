@@ -4,7 +4,7 @@ title: "Página no encontrada"
 permalink: /404.html
 ---
 
-<section class="hero is-fullheight-with-navbar">
+<section class="hero is-fullheight-with-navbar" lang="es">
   <div class="hero-body">
     <div class="container">
       <div class="columns is-centered">
@@ -12,14 +12,16 @@ permalink: /404.html
           <div class="card">
             <div class="card-content has-text-centered">
               <main>
-                <div class="mb-6" role="img" aria-label="Error 404">
-                  <span class="icon is-large">
+                <div class="mb-6" aria-labelledby="error-title">
+                  <span class="icon is-large" aria-hidden="true">
                     <i
                       class="fas fa-exclamation-circle fa-4x has-text-danger"
-                      aria-hidden="true"
                     ></i>
                   </span>
                 </div>
+                <p id="error-title" class="is-sr-only">
+                  Error 404: Página no encontrada
+                </p>
 
                 <h1 class="title is-2 has-text-danger mb-4">
                   ¡Ups! Página no encontrada
@@ -37,38 +39,50 @@ permalink: /404.html
 
                 <div class="buttons is-centered">
                   <a
-                    href="/"
+                    href="{{ '/' | relative_url }}"
                     class="button is-primary is-medium is-rounded"
-                    aria-label="Volver a la página de inicio"
                   >
-                    <span class="icon">
-                      <i class="fas fa-home" aria-hidden="true"></i>
-                    </span>
+                    <span class="icon"
+                      ><i class="fas fa-home" aria-hidden="true"></i
+                    ></span>
                     <span>Volver al inicio</span>
                   </a>
 
                   <a
-                    href="/contacto"
+                    href="{{ '/contacto' | relative_url }}"
                     class="button is-link is-medium is-rounded"
-                    aria-label="Contactar para obtener ayuda"
                   >
-                    <span class="icon">
-                      <i class="fas fa-envelope" aria-hidden="true"></i>
-                    </span>
+                    <span class="icon"
+                      ><i class="fas fa-envelope" aria-hidden="true"></i
+                    ></span>
                     <span>Contactar</span>
+                  </a>
+
+                  <a
+                    onclick="history.back()"
+                    class="button is-warning is-medium is-rounded"
+                  >
+                    <span class="icon"><i class="fas fa-arrow-left"></i></span>
+                    <span>Ir atrás</span>
                   </a>
                 </div>
 
                 <div class="mt-6">
                   <h2 class="title is-5 mb-4">Enlaces populares</h2>
                   <div class="buttons is-centered">
-                    <a href="/equipo-juvenil" class="button is-light"
+                    <a
+                      href="{{ '/equipo-juvenil' | relative_url }}"
+                      class="button is-light"
                       >Equipo Juvenil</a
                     >
-                    <a href="/equipo-mayor" class="button is-light"
+                    <a
+                      href="{{ '/equipo-mayor' | relative_url }}"
+                      class="button is-light"
                       >Equipo Mayor</a
                     >
-                    <a href="/selecciones-nacionales" class="button is-light"
+                    <a
+                      href="{{ '/selecciones-nacionales' | relative_url }}"
+                      class="button is-light"
                       >Selecciones Nacionales</a
                     >
                   </div>

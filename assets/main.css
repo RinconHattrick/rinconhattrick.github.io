@@ -205,6 +205,10 @@ th {
   -webkit-text-fill-color: transparent;
 }
 
+.navbar-item:hover {
+  text-decoration: none;
+}
+
 #main-header {
   background: var(--primary-gradient);
   padding: 2.5rem 2rem;
@@ -399,7 +403,10 @@ mark {
 }
 
 /* Media Queries */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
+  body {
+    padding-top: 0;
+  }
   .sticky-sidebar {
     position: static;
     max-height: none;
@@ -420,7 +427,7 @@ mark {
   }
 
   .column {
-    padding: 0.75rem;
+    padding: 0.3rem;
   }
 
   #main-header {
