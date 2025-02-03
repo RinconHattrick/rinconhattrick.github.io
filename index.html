@@ -28,53 +28,52 @@ title: "El Rincón de Hattrick"
             </h2>
           </header>
 
-          <div class="card-content">
+          <div class="card-content is-flex is-flex-direction-column">
             <p class="subtitle is-6 mb-4">
               {{ category_page.description | default: "No hay descripción
               disponible para esta categoría." }}
             </p>
 
-            <div class="columns is-multiline">
-              {% for post in category[1] %}
-              <div class="column is-12">
+            <div class="columns is-multiline is-vcentered is-centered">
+              {% for category in site.categories %} {% for post in category[1]
+              %}
+              <div class="column is-6">
                 <article class="box">
-                  <div class="columns is-vcentered is-mobile">
-                    <div class="column is-2 has-text-centered-mobile">
-                      <time
-                        datetime="{{ post.date | date: '%Y-%m-%d' }}"
-                        class="is-size-7 has-text-grey"
-                      >
-                        <span class="icon-text">
-                          <span class="icon">
-                            <i class="fas fa-calendar-day"></i>
-                          </span>
-                          <span>{{ post.date | date: "%d/%m/%Y" }}</span>
-                        </span>
-                      </time>
-                    </div>
+                  <time
+                    datetime="{{ post.date | date: '%Y-%m-%d' }}"
+                    class="is-size-7 has-text-grey"
+                  >
+                    <span class="icon-text">
+                      <span class="icon">
+                        <i class="fas fa-calendar-day"></i>
+                      </span>
+                      <span>{{ post.date | date: "%d/%m/%Y" }}</span>
+                    </span>
+                  </time>
 
-                    <div class="column">
-                      <h3 class="title is-5">
-                        <a
-                          href="{{ post.url | relative_url }}"
-                          class="has-text-primary"
-                        >
-                          {{ post.title }}
-                        </a>
-                      </h3>
-                      <p class="mt-2">
-                        {{ post.excerpt | strip_html | truncatewords: 30 }}
-                      </p>
-                      <div class="tags mt-2">
-                        {% for tag in post.tags %}
-                        <span class="tag is-light">{{ tag }}</span>
-                        {% endfor %}
-                      </div>
-                    </div>
+                  <h3 class="title is-5 mt-2">
+                    <a
+                      href="{{ post.url | relative_url }}"
+                      class="has-text-primary"
+                    >
+                      {{ post.title }}
+                    </a>
+                  </h3>
+
+                  <p class="mt-2">
+                    {{ post.excerpt | strip_html | truncatewords: 30 }}
+                  </p>
+
+                  {% if post.tags %}
+                  <div class="tags mt-2">
+                    {% for tag in post.tags %}
+                    <span class="tag is-light">{{ tag }}</span>
+                    {% endfor %}
                   </div>
+                  {% endif %}
                 </article>
               </div>
-              {% endfor %}
+              {% endfor %} {% endfor %}
             </div>
           </div>
         </div>
@@ -82,7 +81,7 @@ title: "El Rincón de Hattrick"
       {% endfor %}
 
       <!-- Footer -->
-      <footer class="has-text-centered mt-4" role="contentinfo">
+      <footer class="footer mt-6 py-5 has-text-centered" role="contentinfo">
         <a
           href="#top"
           class="button is-link is-rounded"

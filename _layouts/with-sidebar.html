@@ -111,9 +111,10 @@ layout: default
                 Últimos Artículos
               </h2>
               <div class="menu">
-                {% assign recent_posts = site.posts | where: "published", true |
-                sort: "date" | reverse | limit: 4 %} {% if recent_posts.size > 0
-                %} {% for post in recent_posts %}
+                {% assign sorted_posts = site.posts | where: "published", true |
+                sort: "date" | reverse %} {% assign recent_posts = sorted_posts
+                | slice: 0, 5 %} {% if recent_posts.size > 0 %} {% for post in
+                recent_posts %}
                 <a
                   href="{{ post.url | relative_url }}"
                   class="menu-item"

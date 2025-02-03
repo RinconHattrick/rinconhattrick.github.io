@@ -34,7 +34,11 @@ description: "Búsqueda de artículos en el sitio"
 
     <div id="search-feedback" class="notification is-hidden mt-3"></div>
 
-    <div id="search-results" class="content mt-5" aria-live="polite"></div>
+    <div
+      id="search-results"
+      class="columns is-multiline is-vcentered is-centered mt-5"
+      aria-live="polite"
+    ></div>
   </div>
 </section>
 
@@ -92,33 +96,33 @@ description: "Búsqueda de artículos en el sitio"
         return;
       }
 
-      const ul = document.createElement("ul");
-      ul.className = "list";
-
       results.forEach((item) => {
-        const li = document.createElement("li");
-        li.className = "mb-3";
-        li.innerHTML = `
-          <article>
-            <h2 class="is-size-5 mb-2">
-              <a href="${item.url}" class="has-text-weight-semibold">
+        const article = document.createElement("div");
+        article.className = "column is-6";
+        article.innerHTML = `
+          <article class="box">
+            <time datetime="${item.date}" class="is-size-7 has-text-grey">
+              <span class="icon-text">
+                <span class="icon">
+                  <i class="fas fa-calendar-day"></i>
+                </span>
+                <span>${item.date}</span>
+              </span>
+            </time>
+
+            <h3 class="title is-5 mt-2">
+              <a href="${item.url}" class="has-text-primary">
                 ${this.highlightMatch(item.title, this.searchInput.value)}
               </a>
-            </h2>
-            ${
-              item.excerpt
-                ? `<p class="is-size-6 has-text-grey">${this.truncateText(
-                    item.excerpt,
-                    150
-                  )}</p>`
-                : ""
-            }
+            </h3>
+
+            <p class="mt-2">
+              ${item.excerpt ? this.truncateText(item.excerpt, 150) : ""}
+            </p>
           </article>
         `;
-        ul.appendChild(li);
+        this.resultsContainer.appendChild(article);
       });
-
-      this.resultsContainer.appendChild(ul);
     }
 
     highlightMatch(text, query) {
@@ -159,7 +163,6 @@ description: "Búsqueda de artículos en el sitio"
         if (!Array.isArray(data))
           throw new Error("Formato incorrecto de datos");
 
-        // Filtrar resultados con coincidencias exactas primero
         const results = data
           .filter((item) =>
             item.title.toLowerCase().includes(query.toLowerCase())

@@ -30,7 +30,7 @@
   --shadow-md: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
-/* Configuración de temas */
+/* Configuración de temas usando prefers-color-scheme */
 @media (prefers-color-scheme: light) {
   :root {
     --primary-color: var(--primary-color-light);
@@ -47,20 +47,20 @@
     --text: var(--text-dark);
     --card-background: var(--card-background-dark);
   }
+}
 
-  .card,
-  .has-background-white-bis {
-    background-color: var(--card-background) !important;
-  }
+/* Modo oscuro sin !important (usar clase .dark-mode en el HTML cuando corresponda) */
+.dark-mode .has-background-white-bis {
+  background-color: var(--card-background);
+}
 
-  .has-text-grey-lighter,
-  .menu-label {
-    color: var(--text-dark) !important;
-  }
+.dark-mode .has-text-grey-lighter,
+.dark-mode .menu-label {
+  color: var(--text-dark);
+}
 
-  .menu-list a:hover {
-    background-color: var(--primary-color-dark);
-  }
+.dark-mode .menu-list a:hover {
+  background-color: var(--primary-color-dark);
 }
 
 /* Utilidades de transición */
@@ -218,7 +218,7 @@ th {
 
 #main-header .title,
 #main-header .subtitle {
-  color: white !important;
+  color: white;
 }
 
 /* Cards */
@@ -236,9 +236,6 @@ th {
 }
 
 .card-content {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
   padding: 2rem;
 }
 
@@ -403,7 +400,7 @@ mark {
 }
 
 /* Media Queries */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   body {
     padding-top: 0;
   }
@@ -413,23 +410,18 @@ mark {
     overflow-y: visible;
     padding-right: 0;
   }
-
   .hide-mobile {
     display: none;
   }
-
   table {
     font-size: 0.9rem;
   }
-
   .columns {
     margin: 0;
   }
-
   .column {
-    padding: 0.3rem;
+    padding: 0.5rem;
   }
-
   #main-header {
     padding: 2rem 1rem;
     margin: 1rem;
@@ -442,7 +434,6 @@ mark {
     scrollbar-width: none;
     -ms-overflow-style: none;
   }
-
   .sticky-sidebar::-webkit-scrollbar {
     display: none;
   }

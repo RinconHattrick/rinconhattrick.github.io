@@ -1,122 +1,98 @@
 ---
 layout: default
-title: "Acerca de "
+title: "Acerca de"
 permalink: /acerca-de/
 ---
 
-<div class="container">
-  <div class="columns">
-    <div class="column">
-      <!-- Hero Header -->
-      <section class="hero" id="main-header">
-        <div class="hero-body has-text-centered">
-          <h1 class="title is-2">Acerca de El Rincón de Hattrick</h1>
-          <p class="subtitle is-4">
-            Tu guía definitiva para el éxito en Hattrick
-          </p>
-        </div>
-      </section>
-
-      <!-- Contenido -->
-      <main class="section">
-        <div class="container">
-          <article class="content is-medium">
-            <!-- Introducción -->
-            <section class="box mb-6">
-              <p class="has-text-justified">
-                <strong>El Rincón de Hattrick</strong> es un espacio dedicado a
-                todos los apasionados del juego en línea Hattrick. Nuestro
-                objetivo es proporcionar estrategias prácticas, consejos útiles
-                y recursos especializados para ayudarte a alcanzar el éxito en
-                la gestión de juveniles y selecciones nacionales.
-              </p>
-              <p class="has-text-justified">
-                Aquí encontrarás análisis detallados, guías avanzadas y tácticas
-                innovadoras para optimizar tus decisiones como mánager y
-                destacar en el competitivo universo de <em>Hattrick</em>.
-              </p>
-            </section>
-
-            <!-- Áreas de Especialización -->
-            <section class="mb-6">
-              <h2 class="title is-3 has-text-primary has-text-centered mb-5">
-                Áreas de Especialización
-              </h2>
-
-              <div class="columns is-multiline">
-                {% assign areas = "Equipo Juvenil,Equipo Mayor,Selecciones
-                Nacionales" | split: "," %} {% assign icons =
-                "fa-users,fa-futbol,fa-flag" | split: "," %} {% assign colors =
-                "has-text-primary,has-text-success,has-text-info" | split: ","
-                %} {% assign descriptions = "Descubre cómo desarrollar al máximo
-                a tus juveniles y convertirlos en futuras estrellas del primer
-                equipo.,Aprende estrategias avanzadas de gestión de plantilla,
-                maximización de ingresos en el mercado y formación de equipos
-                competitivos.,Explora las mejores prácticas y estrategias para
-                la gestión exitosa de selecciones nacionales." | split: "," %}
-                {% for area in areas %}
-                <div class="column is-12-tablet is-4-desktop">
-                  <div class="card">
-                    <div class="card-content">
-                      <div class="has-text-centered mb-4">
-                        <span
-                          class="icon is-large {{ colors[forloop.index0] }}"
-                        >
-                          <i
-                            class="fas {{ icons[forloop.index0] }} fa-3x"
-                            aria-hidden="true"
-                          ></i>
-                        </span>
-                      </div>
-                      <h3 class="title is-4 has-text-centered mb-4">
-                        {{ area }}
-                      </h3>
-                      <p class="has-text-justified">
-                        {{ descriptions[forloop.index0] }}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                {% endfor %}
-              </div>
-            </section>
-
-            <!-- Call to Action -->
-            <section class="card has-text-centered p-6 mb-6">
-              <p class="is-size-4 has-text-weight-semibold mb-4">
-                ¡Únete a nosotros y domina <em>Hattrick</em>, el mejor juego de
-                gestión de fútbol en línea!
-              </p>
-              <a
-                href="/contacto"
-                class="button is-primary is-medium is-rounded"
-                aria-label="Contactar para más información"
-              >
-                <span class="icon">
-                  <i class="fas fa-paper-plane" aria-hidden="true"></i>
-                </span>
-                <span>Contactar</span>
-              </a>
-            </section>
-
-            <!-- Navegación -->
-            <footer class="has-text-centered mt-4" role="contentinfo">
-              <div class="buttons is-centered">
-                <a
-                  href="/"
-                  class="button is-link is-medium is-rounded"
-                  aria-label="Volver al inicio"
-                >
-                  <span class="icon">
-                    <i class="fas fa-home" aria-hidden="true"></i>
-                  </span>
-                  <span>Volver al Inicio</span>
-                </a>
-              </div>
-            </footer>
-          </article>
-        </div>
-      </main>
+<div class="container py-5">
+  <!-- Hero Header -->
+  <section class="hero" id="main-header">
+    <div class="hero-body has-text-centered">
+      <h1 class="title is-2">Acerca de El Rincón de Hattrick</h1>
+      <p class="subtitle is-4">Tu guía definitiva para el éxito en Hattrick</p>
     </div>
-  </div>
+  </section>
+
+  <!-- Contenido -->
+  <main class="section">
+    <div class="container">
+      <article class="content is-medium">
+        <!-- Introducción -->
+        <section class="box mb-6">
+          <p class="has-text-justified">
+            <strong>El Rincón de Hattrick</strong> es un espacio dedicado a
+            todos los apasionados del juego en línea Hattrick. Nuestro objetivo
+            es proporcionar estrategias prácticas, consejos útiles y recursos
+            especializados para ayudarte a alcanzar el éxito en la gestión de
+            juveniles y selecciones nacionales.
+          </p>
+          <p class="has-text-justified">
+            Aquí encontrarás análisis detallados, guías avanzadas y tácticas
+            innovadoras para optimizar tus decisiones como mánager y destacar en
+            el competitivo universo de <em>Hattrick</em>.
+          </p>
+        </section>
+
+        <!-- Áreas de Especialización (Extraídas automáticamente) -->
+        <section class="mb-6">
+          <h2 class="title is-3 has-text-primary has-text-centered mb-5">
+            Áreas de Especialización
+          </h2>
+
+          <div class="columns is-multiline is-vcentered is-centered">
+            {% for category in site.categories %} {% assign category_name =
+            category[0] %} {% assign category_page = site.pages | where:
+            "category", category_name | first %}
+
+            <div class="column is-12-tablet is-4-desktop">
+              <div class="card">
+                <div class="card-content">
+                  <div class="has-text-centered mb-4">
+                    <span class="icon is-large has-text-primary">
+                      <i
+                        class="fas {{ category_page.icon }} fa-3x"
+                        aria-hidden="true"
+                      ></i>
+                    </span>
+                  </div>
+                  <h3 class="title is-4 has-text-centered mb-4">
+                    {{ category_page.title | default: category_name }}
+                  </h3>
+                  <p class="has-text-justified">
+                    {{ category_page.description | default: "Descripción no
+                    disponible." }}
+                  </p>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="card has-text-centered p-6 mb-6">
+          <p class="is-size-4 has-text-weight-semibold mb-4">
+            ¡Únete a nosotros y domina <em>Hattrick</em>, el mejor juego de
+            gestión de fútbol en línea!
+          </p>
+          <a href="/contacto" class="button is-primary is-medium is-rounded">
+            <span class="icon">
+              <i class="fas fa-paper-plane"></i>
+            </span>
+            <span>Contactar</span>
+          </a>
+        </section>
+
+        <!-- Navegación -->
+        <div class="has-text-centered mt-5">
+          <a href="/" class="button is-link is-medium is-rounded">
+            <span class="icon">
+              <i class="fas fa-home"></i>
+            </span>
+            <span>Volver al Inicio</span>
+          </a>
+        </div>
+      </article>
+    </div>
+  </main>
 </div>
