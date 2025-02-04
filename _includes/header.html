@@ -14,7 +14,6 @@
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
       </button>
     </div>
 
@@ -31,7 +30,7 @@
           </span>
         </a>
 
-        <!-- Aquí comenzamos a manejar las categorías -->
+        <!-- Menú de categorías -->
         <div class="navbar-item has-dropdown is-hoverable">
           <a
             class="navbar-link"
@@ -45,11 +44,12 @@
             </span>
           </a>
           <div class="navbar-dropdown" id="category-menu">
-            {% if site.pages %} {% for category_page in site.pages %} {% if
-            category_page.layout == "category" %}
+            {% assign category_pages = site.pages | where: "layout", "category"
+            %} {% if category_pages.size > 0 %} {% for category_page in
+            category_pages %}
             <a
-              class="navbar-item {% if page.url contains category_page.permalink %}is-active{% endif %}"
-              href="{{ category_page.permalink }}"
+              class="navbar-item {% if page.url == category_page.permalink %}is-active{% endif %}"
+              href="{{ category_page.permalink | relative_url }}"
               role="menuitem"
             >
               <span class="icon-text">
@@ -59,7 +59,7 @@
                 <span>{{ category_page.title }}</span>
               </span>
             </a>
-            {% endif %} {% endfor %} {% else %}
+            {% endfor %} {% else %}
             <a class="navbar-item" role="menuitem"
               >No hay categorías disponibles</a
             >
@@ -105,59 +105,3 @@
     </div>
   </div>
 </nav>
-
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const burger = document.querySelector(".navbar-burger");
-    const menu = document.querySelector(".navbar-menu");
-    const categoryToggle = document.getElementById("category-toggle");
-    const categoryMenu = document.getElementById("category-menu");
-
-    // Toggle del menú hamburguesa
-    if (burger && menu) {
-      burger.addEventListener("click", () => {
-        const isActive = menu.classList.contains("is-active");
-        menu.classList.toggle("is-active");
-        burger.classList.toggle("is-active");
-        burger.setAttribute("aria-expanded", !isActive);
-      });
-
-      // Cerrar el menú al hacer clic fuera
-      document.addEventListener("click", (event) => {
-        if (!menu.contains(event.target) && !burger.contains(event.target)) {
-          menu.classList.remove("is-active");
-          burger.classList.remove("is-active");
-          burger.setAttribute("aria-expanded", "false");
-        }
-      });
-    }
-
-    // Toggle del menú de Categorías en móviles
-    if (categoryToggle && categoryMenu) {
-      categoryToggle.addEventListener("click", (event) => {
-        if (window.innerWidth <= 1024) {
-          event.preventDefault(); // Evitar el comportamiento del enlace en móvil
-          categoryMenu.classList.toggle("is-active");
-          categoryToggle.setAttribute(
-            "aria-expanded",
-            categoryMenu.classList.contains("is-active")
-          );
-        }
-      });
-    }
-  });
-</script>
-
-<style>
-  @media screen and (max-width: 1024px) {
-    /* El menú de categorías se oculta por defecto */
-    .navbar-dropdown {
-      display: none;
-    }
-
-    /* Cuando se activa, se muestra */
-    .navbar-dropdown.is-active {
-      display: block;
-    }
-  }
-</style>

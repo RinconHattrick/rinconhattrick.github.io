@@ -27,7 +27,7 @@
       content="default-src 'self' https:; script-src 'self' https://cdnjs.cloudflare.com 'unsafe-inline'; style-src 'self' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com 'unsafe-inline';"
     />
 
-    <!-- Open Graph (Facebook, LinkedIn) -->
+    <!-- Open Graph -->
     <meta property="og:site_name" content="{{ site.title | escape }}" />
     <meta
       property="og:title"
@@ -87,7 +87,8 @@
     />
     <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}" />
 
-    <script src="{{ '/assets/js/script.js' | relative_url }}" defer></script>
+    <!-- Mover el script al head sin defer -->
+    <script src="{{ '/assets/js/script.js' | relative_url }}"></script>
   </head>
 
   <body

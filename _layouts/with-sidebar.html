@@ -9,7 +9,9 @@ layout: default
         {{ content }}
       </main>
 
-      <aside class="column is-one-quarter is-hidden-mobile">
+      <aside
+        class="column is-one-quarter-desktop is-one-third-tablet is-hidden-mobile"
+      >
         <div class="sticky-sidebar">
           <!-- Búsqueda -->
           <div class="card mb-3">
@@ -50,7 +52,8 @@ layout: default
                 <ul class="menu-list">
                   {% for category in site.categories %} {% assign category_name
                   = category[0] %} {% assign category_page = site.pages | where:
-                  "category", category_name | first %}
+                  "category", category_name | first %} {% assign category_icon =
+                  category_page.icon | default: "fa-folder" %}
                   <li>
                     <a
                       href="/{{ category_name | slugify }}"
@@ -59,7 +62,7 @@ layout: default
                     >
                       <span class="icon-text">
                         <span class="icon">
-                          <i class="fas {{ category_page.icon }}"></i>
+                          <i class="fas {{ category_icon }}"></i>
                         </span>
                         <span
                           >{{ category_page.title | default: category_name

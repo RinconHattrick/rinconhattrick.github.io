@@ -1,4 +1,6 @@
-/* Variables y temas */
+/* ==========================================================================
+   VARIABLES Y TEMAS
+   ========================================================================== */
 :root {
   /* Colores base */
   --primary-color-light: #00d1b2;
@@ -30,7 +32,7 @@
   --shadow-md: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
-/* Configuración de temas usando prefers-color-scheme */
+/* Configuración de temas según preferencia de color */
 @media (prefers-color-scheme: light) {
   :root {
     --primary-color: var(--primary-color-light);
@@ -47,23 +49,25 @@
     --text: var(--text-dark);
     --card-background: var(--card-background-dark);
   }
+
+  .card,
+  .has-background-white-bis {
+    background-color: var(--card-background) !important;
+  }
+
+  .has-text-grey-lighter,
+  .menu-label {
+    color: var(--text-dark) !important;
+  }
+
+  .menu-list a:hover {
+    background-color: var(--primary-color-dark);
+  }
 }
 
-/* Modo oscuro sin !important (usar clase .dark-mode en el HTML cuando corresponda) */
-.dark-mode .has-background-white-bis {
-  background-color: var(--card-background);
-}
-
-.dark-mode .has-text-grey-lighter,
-.dark-mode .menu-label {
-  color: var(--text-dark);
-}
-
-.dark-mode .menu-list a:hover {
-  background-color: var(--primary-color-dark);
-}
-
-/* Utilidades de transición */
+/* ==========================================================================
+   UTILIDADES DE TRANSICIÓN
+   ========================================================================== */
 .transition-standard {
   transition: var(--transition-standard);
 }
@@ -72,13 +76,18 @@
   transition: var(--transition-transform);
 }
 
-/* Estilos base */
+/* ==========================================================================
+   ESTILOS BASE
+   ========================================================================== */
 body {
   background-color: var(--background);
   color: var(--text);
   transition: var(--transition-all);
 }
 
+/* ==========================================================================
+   TIPOGRAFÍA
+   ========================================================================== */
 /* Sistema de tipografía */
 h1,
 h2,
@@ -109,25 +118,32 @@ h2 {
 h3 {
   font-size: 1.75rem;
 }
+
 h4 {
   font-size: 1.5rem;
 }
+
 h5 {
   font-size: 1.25rem;
 }
+
 h6 {
   font-size: 1rem;
   font-weight: 500;
 }
 
-/* Estilos de artículo */
+/* ==========================================================================
+   CONTENEDORES Y ARTÍCULOS
+   ========================================================================== */
 .article {
   max-width: 800px;
   margin: 0 auto;
   padding: 2rem;
 }
 
-/* Listas */
+/* ==========================================================================
+   LISTAS
+   ========================================================================== */
 ul,
 ol {
   list-style-type: none;
@@ -151,7 +167,9 @@ ol {
   list-style-type: decimal;
 }
 
-/* Enlaces */
+/* ==========================================================================
+   ENLACES
+   ========================================================================== */
 a {
   color: var(--primary-color);
   text-decoration: none;
@@ -168,7 +186,9 @@ a:active {
   color: var(--primary-color);
 }
 
-/* Imágenes */
+/* ==========================================================================
+   IMÁGENES
+   ========================================================================== */
 img {
   max-width: 100%;
   height: auto;
@@ -176,7 +196,9 @@ img {
   margin: 1rem 0;
 }
 
-/* Tablas */
+/* ==========================================================================
+   TABLAS
+   ========================================================================== */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -196,7 +218,11 @@ th {
   font-weight: 600;
 }
 
-/* Componentes */
+/* ==========================================================================
+   COMPONENTES
+   ========================================================================== */
+
+/* --- Navbar y Header --- */
 .navbar-brand h1 {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
@@ -218,10 +244,10 @@ th {
 
 #main-header .title,
 #main-header .subtitle {
-  color: white;
+  color: white !important;
 }
 
-/* Cards */
+/* --- Cards --- */
 .card {
   height: 100%;
   border-radius: 12px;
@@ -236,6 +262,9 @@ th {
 }
 
 .card-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   padding: 2rem;
 }
 
@@ -246,7 +275,7 @@ th {
   border-radius: 8px 8px 0 0;
 }
 
-/* Botones */
+/* --- Botones --- */
 .button {
   transition: var(--transition-standard);
   font-weight: 500;
@@ -257,7 +286,7 @@ th {
   box-shadow: var(--shadow-sm);
 }
 
-/* Iconos */
+/* --- Iconos --- */
 .icon.is-large i {
   transition: var(--transition-transform);
 }
@@ -266,14 +295,14 @@ th {
   transform: scale(1.1);
 }
 
-/* Layout con sidebar */
+/* --- Layout con Sidebar --- */
 .with-sidebar-layout {
   background-color: var(--background);
   min-height: calc(100vh - 52px - 3rem);
   padding-bottom: 3rem;
 }
 
-/* Navegación lateral */
+/* --- Navegación lateral (Sidebar) --- */
 .sticky-sidebar {
   position: sticky;
   top: 1rem;
@@ -305,7 +334,7 @@ th {
   background-color: var(--secondary-color);
 }
 
-/* Menú y navegación */
+/* --- Menú y navegación --- */
 .menu-list a {
   border-radius: 6px;
   margin-bottom: 0.5rem;
@@ -337,7 +366,7 @@ th {
   margin-top: 0.25rem;
 }
 
-/* Posts */
+/* --- Posts --- */
 .post-item {
   transition: var(--transition-transform);
 }
@@ -357,7 +386,11 @@ th {
   max-height: unset;
 }
 
-/* Footer */
+/* --- Footer --- */
+.footer {
+  padding: 2rem 0;
+}
+
 footer.has-text-centered {
   margin-top: 4rem;
   padding: 2rem 0;
@@ -367,7 +400,7 @@ footer .button {
   margin-top: 1.5rem;
 }
 
-/* Notificaciones */
+/* --- Notificaciones --- */
 .notification.is-warning {
   background-color: rgba(255, 221, 87, 0.2);
   border: 1px solid #ffdd57;
@@ -377,7 +410,7 @@ footer .button {
   color: #ffdd57;
 }
 
-/* Búsqueda */
+/* --- Búsqueda --- */
 .search-results-list {
   list-style: none;
   padding: 0;
@@ -399,8 +432,10 @@ mark {
   border-radius: 2px;
 }
 
-/* Media Queries */
-@media screen and (max-width: 1023px) {
+/* ==========================================================================
+   MEDIA QUERIES Y ADAPTATIVIDAD
+   ========================================================================== */
+@media screen and (max-width: 1024px) {
   body {
     padding-top: 0;
   }
@@ -410,31 +445,53 @@ mark {
     overflow-y: visible;
     padding-right: 0;
   }
+
   .hide-mobile {
     display: none;
   }
+
   table {
     font-size: 0.9rem;
   }
+
   .columns {
     margin: 0;
   }
+
   .column {
-    padding: 0.5rem;
+    padding: 0.3rem;
   }
+  .navbar-dropdown {
+    display: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+  }
+
+  .navbar-dropdown.is-active {
+    display: block;
+    max-height: 500px;
+  }
+
   #main-header {
     padding: 2rem 1rem;
     margin: 1rem;
   }
 }
 
-/* Dispositivos táctiles */
 @media (hover: none) {
   .sticky-sidebar {
     scrollbar-width: none;
     -ms-overflow-style: none;
   }
+
   .sticky-sidebar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .aside {
     display: none;
   }
 }
