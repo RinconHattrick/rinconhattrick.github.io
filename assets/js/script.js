@@ -72,4 +72,22 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+
+const scrollToTopLink = document.querySelector('a[href="#main-header"]');
+
+if (scrollToTopLink) {
+  scrollToTopLink.addEventListener("click", (e) => {
+    e.preventDefault(); // Evita el comportamiento por defecto del enlace.
+
+    // Desplazarse suavemente hacia la parte superior.
+    if ("scrollBehavior" in document.documentElement.style) {
+      // Navegadores modernos.
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      // Alternativa para navegadores antiguos.
+      window.scrollTo(0, 0);
+    }
+  });
+}
+
 });
