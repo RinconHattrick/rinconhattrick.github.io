@@ -5,81 +5,95 @@ permalink: /contacto/
 ---
 
 <div class="container py-5">
-  <!-- Hero Header -->
-  <section class="hero" id="main-header">
-    <div class="hero-body has-text-centered">
-      <h1 class="title is-2">Contáctame</h1>
-      <p class="subtitle is-4">
-        ¿Tienes preguntas, comentarios o simplemente quieres hablar sobre
-        estrategias de Hattrick?
-      </p>
-    </div>
-  </section>
-
-  <!-- Contacto -->
   <section class="section">
-    <div class="container">
-      <div class="columns is-multiline is-centered is-variable is-5">
-        {% assign contact_methods = "Telegram,WhatsApp,Correo Electrónico" |
-        split: "," %} {% assign icons = "fa-telegram,fa-whatsapp,fa-envelope" |
-        split: "," %} {% assign colors = "is-info,is-success,is-danger" | split:
-        "," %} {% assign descriptions = "Únete a nuestra comunidad para discutir
-        estrategias, compartir experiencias y mantenerte actualizado.,Contacta
-        directamente para resolver dudas específicas o recibir asesoramiento
-        personalizado.,Envía tus consultas detalladas o propuestas de
-        colaboración por correo electrónico." | split: "," %} {% assign links =
-        "https://t.me/JuvenilesHT,https://wa.me/qr/537E4GO72BHHB1,mailto:tutorhattrick@hotmail.com"
-        | split: "," %} {% for method in contact_methods %}
-        <div class="column is-4-desktop is-6-tablet">
-          <div class="card has-text-centered">
-            <div class="card-content">
-              <div class="mb-4">
-                <span class="icon is-large">
-                  <i
-                    class="fab {{ icons[forloop.index0] }} fa-3x has-text-primary"
-                    aria-hidden="true"
-                  ></i>
-                </span>
-              </div>
-              <h2 class="title is-4 mb-3">{{ method }}</h2>
-              <p class="mb-5">{{ descriptions[forloop.index0] }}</p>
-              <a
-                href="{{ links[forloop.index0] }}"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="button {{ colors[forloop.index0] }} is-medium is-rounded is-fullwidth"
+    <!-- Hero Header -->
+    <section class="hero" id="main-header">
+      <div class="hero-body has-text-centered">
+        <h1 class="title is-2">Contáctame</h1>
+        <p class="subtitle is-4">
+          ¿Tienes preguntas, comentarios o simplemente quieres hablar sobre
+          estrategias de Hattrick?
+        </p>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section class="section">
+      <div class="container">
+        <div
+          class="columns is-multiline is-vcentered is-centered is-variable is-5"
+        >
+          {% assign contact_methods = "Telegram,WhatsApp,Correo Electrónico" |
+          split: "," %} {% assign icons = "fa-telegram,fa-whatsapp,fa-envelope"
+          | split: "," %} {% assign colors = "is-info,is-success,is-danger" |
+          split: "," %} {% assign descriptions = "Únete a nuestra comunidad para
+          discutir estrategias, compartir experiencias y mantenerte
+          actualizado.,Contactame al correo para recibir asesoramiento
+          personalizado.,Envía tus consultas detalladas o propuestas de
+          colaboración por correo electrónico." | split: "," %} {% assign links
+          =
+          "https://t.me/JuvenilesHT,https://wa.me/qr/537E4GO72BHHB1,mailto:tutorhattrick@hotmail.com"
+          | split: "," %} {% for method in contact_methods %}
+          <div class="column is-4-desktop is-6-tablet">
+            <div class="card has-text-centered">
+              <div
+                class="card-content is-flex is-flex-direction-column is-align-items-center"
               >
-                <span class="icon">
-                  <i
-                    class="fab {{ icons[forloop.index0] }}"
-                    aria-hidden="true"
-                  ></i>
-                </span>
-                <span>Contactar</span>
-              </a>
+                <div class="mb-4">
+                  <span class="icon">
+                    <i
+                      class="fab {{ icons[forloop.index0] }} fa-3x"
+                      aria-hidden="true"
+                    ></i>
+                  </span>
+                </div>
+                <h2 class="title is-4 mb-3">{{ method }}</h2>
+                <p class="mb-5 has-text-justified">
+                  {{ descriptions[forloop.index0] }}
+                </p>
+                <a
+                  href="{{ links[forloop.index0] }}"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="button {{ colors[forloop.index0] }} is-medium is-rounded is-fullwidth-mobile"
+                  aria-label="Contactar por {{ method }}"
+                >
+                  <span class="icon">
+                    <i
+                      class="fab {{ icons[forloop.index0] }}"
+                      aria-hidden="true"
+                    ></i>
+                  </span>
+                  <span>Contactar</span>
+                </a>
+              </div>
             </div>
           </div>
+          {% endfor %}
         </div>
-        {% endfor %}
       </div>
+    </section>
+
+    <!-- Mensaje Final -->
+    <section class="box has-text-centered p-6 mb-6">
+      <p class="is-size-5">
+        Estoy aquí para ayudarte con cualquier aspecto de Hattrick. No dudes en
+        contactarme por el medio que prefieras. ¡Espero tu mensaje!
+      </p>
+    </section>
+
+    <!-- Navegación -->
+    <div class="has-text-centered mt-5">
+      <a
+        href="/"
+        class="button is-link is-medium is-rounded"
+        aria-label="Inicio"
+      >
+        <span class="icon">
+          <i class="fas fa-home"></i>
+        </span>
+        <span>Inicio</span>
+      </a>
     </div>
   </section>
-
-  <!-- Mensaje Final -->
-  <section class="box has-text-centered p-6 mb-6">
-    <p class="is-size-5">
-      Estoy aquí para ayudarte con cualquier aspecto de Hattrick. No dudes en
-      contactarme por el medio que prefieras. ¡Espero tu mensaje!
-    </p>
-  </section>
-
-  <!-- Navegación -->
-  <div class="has-text-centered mt-5">
-    <a href="/" class="button is-link is-medium is-rounded">
-      <span class="icon">
-        <i class="fas fa-home"></i>
-      </span>
-      <span>Volver al Inicio</span>
-    </a>
-  </div>
 </div>

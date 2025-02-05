@@ -5,11 +5,13 @@
         <h1 class="title is-4 mb-0">El Rincón de Hattrick</h1>
       </a>
 
+      <!-- Menú móvil -->
       <button
         class="navbar-burger"
         aria-label="Menú"
         aria-expanded="false"
-        aria-controls="navbarMenu"
+        data-target="navbarMenu"
+        onclick="toggleNavbar()"
       >
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
@@ -17,6 +19,7 @@
       </button>
     </div>
 
+    <!-- Menú principal -->
     <div id="navbarMenu" class="navbar-menu">
       <div class="navbar-end">
         <a
@@ -48,8 +51,8 @@
             %} {% if category_pages.size > 0 %} {% for category_page in
             category_pages %}
             <a
-              class="navbar-item {% if page.url == category_page.permalink %}is-active{% endif %}"
-              href="{{ category_page.permalink | relative_url }}"
+              class="navbar-item {% if page.url == category_page.url %}is-active{% endif %}"
+              href="{{ category_page.url | relative_url }}"
               role="menuitem"
             >
               <span class="icon-text">

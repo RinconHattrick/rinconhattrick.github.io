@@ -24,7 +24,12 @@
 
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self' https:; script-src 'self' https://cdnjs.cloudflare.com 'unsafe-inline'; style-src 'self' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com 'unsafe-inline';"
+      content="default-src 'self' https:; 
+               script-src 'self' https://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval'; 
+               style-src 'self' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com 'unsafe-inline'; 
+               img-src 'self' data: https:; 
+               font-src 'self' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; 
+               connect-src 'self';"
     />
 
     <!-- Open Graph -->
@@ -41,7 +46,7 @@
     <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
     <meta
       property="og:image"
-      content="{{ page.image | default: '/assets/img/HT.jpg' | relative_url }}"
+      content="{{ page.image | default: '/assets/img/HT.jpg' | absolute_url }}"
     />
     <meta property="og:locale" content="{{ page.lang | default: 'es_ES' }}" />
 
@@ -57,7 +62,7 @@
     />
     <meta
       name="twitter:image"
-      content="{{ page.image | default: '/assets/img/HT.jpg' | relative_url }}"
+      content="{{ page.image | default: '/assets/img/HT.jpg' | absolute_url }}"
     />
 
     <link
@@ -66,6 +71,7 @@
       sizes="any"
     />
 
+    <!-- Preconexión para mejorar la carga de fuentes y recursos -->
     <link
       rel="preconnect"
       href="https://cdn.jsdelivr.net"
@@ -77,6 +83,7 @@
       crossorigin="anonymous"
     />
 
+    <!-- Estilos -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"
@@ -86,9 +93,6 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
     <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}" />
-
-    <!-- Mover el script al head sin defer -->
-    <script src="{{ '/assets/js/script.js' | relative_url }}"></script>
   </head>
 
   <body
@@ -99,5 +103,8 @@
     <main role="main">{{ content }}</main>
 
     {% include footer.html %}
+
+    <!-- Script optimizado con defer -->
+    <script src="{{ '/assets/js/script.js' | relative_url }}" defer></script>
   </body>
 </html>

@@ -85,8 +85,8 @@ layout: default
               </h2>
               <div class="menu">
                 {% assign featured_posts = site.posts | where: "featured", true
-                | limit: 5 %} {% if featured_posts.size > 0 %} {% for post in
-                featured_posts %}
+                | where: "published", true | limit: 5 %} {% if
+                featured_posts.size > 0 %} {% for post in featured_posts %}
                 <a
                   href="{{ post.url | relative_url }}"
                   class="menu-item"
@@ -114,10 +114,9 @@ layout: default
                 Últimos Artículos
               </h2>
               <div class="menu">
-                {% assign sorted_posts = site.posts | where: "published", true |
-                sort: "date" | reverse %} {% assign recent_posts = sorted_posts
-                | slice: 0, 5 %} {% if recent_posts.size > 0 %} {% for post in
-                recent_posts %}
+                {% assign recent_posts = site.posts | where: "published", true |
+                sort: "date" | reverse | slice: 0, 5 %} {% if recent_posts.size
+                > 0 %} {% for post in recent_posts %}
                 <a
                   href="{{ post.url | relative_url }}"
                   class="menu-item"

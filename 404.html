@@ -11,7 +11,7 @@ permalink: /404.html
         <div class="column is-8-tablet is-6-desktop">
           <div class="card">
             <div class="card-content has-text-centered">
-              <main>
+              <main role="alert">
                 <!-- Ícono de error -->
                 <div class="mb-6" aria-labelledby="error-title">
                   <span class="icon is-large has-text-danger">
@@ -39,23 +39,15 @@ permalink: /404.html
                 <div class="buttons is-centered">
                   <a
                     href="{{ '/' | relative_url }}"
-                    class="button is-primary is-medium is-rounded"
+                    class="button is-link is-rounded"
                   >
                     <span class="icon"><i class="fas fa-home"></i></span>
-                    <span>Volver al inicio</span>
+                    <span>Inicio</span>
                   </a>
 
                   <a
-                    href="{{ '/contacto' | relative_url }}"
-                    class="button is-link is-medium is-rounded"
-                  >
-                    <span class="icon"><i class="fas fa-envelope"></i></span>
-                    <span>Contactar</span>
-                  </a>
-
-                  <a
-                    onclick="history.back()"
-                    class="button is-warning is-medium is-rounded"
+                    onclick="window.location.href=document.referrer"
+                    class="button is-warning is-rounded"
                   >
                     <span class="icon"><i class="fas fa-arrow-left"></i></span>
                     <span>Ir atrás</span>
@@ -68,7 +60,8 @@ permalink: /404.html
                   <div class="buttons is-centered">
                     {% for category in site.categories %} {% assign
                     category_page = site.pages | where: "category", category[0]
-                    | first %} {% if category_page %}
+                    | first %} {% if category_page and category_page.url != ""
+                    %}
                     <a
                       href="{{ category_page.url | relative_url }}"
                       class="button is-light"
@@ -86,3 +79,6 @@ permalink: /404.html
     </div>
   </div>
 </section>
+
+<!-- Meta noindex para evitar indexación en buscadores -->
+<meta name="robots" content="noindex" />

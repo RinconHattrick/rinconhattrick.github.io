@@ -237,7 +237,6 @@ th {
 
 #main-header {
   background: var(--primary-gradient);
-  padding: 2.5rem 2rem;
   border-radius: 12px;
   margin-bottom: 3rem;
 }
@@ -459,7 +458,7 @@ mark {
   }
 
   .column {
-    padding: 0.3rem;
+    padding: 0.2rem;
   }
   .navbar-dropdown {
     display: none;
@@ -471,11 +470,6 @@ mark {
   .navbar-dropdown.is-active {
     display: block;
     max-height: 500px;
-  }
-
-  #main-header {
-    padding: 2rem 1rem;
-    margin: 1rem;
   }
 }
 
@@ -491,6 +485,23 @@ mark {
 }
 
 @media screen and (max-width: 768px) {
+  .navbar {
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar-item {
+    padding: 0.25rem 0.75rem;
+  }
+
+  .navbar-burger {
+    height: 2rem;
+    width: 2rem;
+  }
+
+  .navbar-burger span {
+    height: 2px;
+    width: 18px;
+  }
   .aside {
     display: none;
   }

@@ -4,41 +4,51 @@ title: "Resultados de Búsqueda"
 description: "Búsqueda de artículos en el sitio"
 ---
 
-<section class="container">
-  <div class="content">
-    <header id="main-header">
-      <h1 class="title is-2 has-text-centered">Resultados de Búsqueda</h1>
-    </header>
+<section class="section">
+  <div class="container">
+    <div class="content">
+      <header id="main-header">
+        <h1 class="title is-2 has-text-centered">Resultados de Búsqueda</h1>
+      </header>
 
-    <form class="mt-5" role="search" onsubmit="event.preventDefault()">
-      <div class="field">
-        <div class="control has-icons-left">
-          <input
-            type="search"
-            id="search-input"
-            class="input is-rounded"
-            placeholder="Buscar artículos..."
-            aria-label="Buscar artículos"
-            aria-describedby="search-hint"
-            autocomplete="off"
-          />
-          <span class="icon is-small is-left">
-            <i class="fas fa-search"></i>
-          </span>
+      <!-- Formulario de búsqueda -->
+      <form class="mt-5" role="search" onsubmit="event.preventDefault()">
+        <div class="field">
+          <div class="control has-icons-left">
+            <input
+              type="search"
+              id="search-input"
+              class="input is-rounded"
+              placeholder="Buscar artículos..."
+              aria-label="Buscar artículos"
+              aria-describedby="search-hint"
+              autocomplete="off"
+            />
+            <span class="icon is-small is-left">
+              <i class="fas fa-search"></i>
+            </span>
+          </div>
         </div>
-      </div>
-      <p id="search-hint" class="help">
-        Escribe al menos 3 caracteres para comenzar a buscar.
-      </p>
-    </form>
+        <p id="search-hint" class="help">
+          Escribe al menos 3 caracteres para comenzar a buscar.
+        </p>
+      </form>
 
-    <div id="search-feedback" class="notification is-hidden mt-3"></div>
+      <!-- Retroalimentación de búsqueda -->
+      <div
+        id="search-feedback"
+        class="notification is-hidden mt-3"
+        role="status"
+        aria-live="polite"
+      ></div>
 
-    <div
-      id="search-results"
-      class="columns is-multiline is-vcentered is-centered mt-5"
-      aria-live="polite"
-    ></div>
+      <!-- Resultados de búsqueda -->
+      <div
+        id="search-results"
+        class="columns is-multiline is-centered mt-5"
+        aria-live="polite"
+      ></div>
+    </div>
   </div>
 </section>
 
@@ -98,7 +108,7 @@ description: "Búsqueda de artículos en el sitio"
 
       results.forEach((item) => {
         const article = document.createElement("div");
-        article.className = "column is-6";
+        article.className = "column is-12-tablet is-6-desktop";
         article.innerHTML = `
           <article class="box">
             <time datetime="${item.date}" class="is-size-7 has-text-grey">
@@ -128,7 +138,10 @@ description: "Búsqueda de artículos en el sitio"
     highlightMatch(text, query) {
       if (!query) return text;
       const regex = new RegExp(`(${query})`, "gi");
-      return text.replace(regex, "<mark>$1</mark>");
+      return text.replace(
+        regex,
+        '<mark class="has-background-warning">$1</mark>'
+      );
     }
 
     truncateText(text, length) {
@@ -164,8 +177,10 @@ description: "Búsqueda de artículos en el sitio"
           throw new Error("Formato incorrecto de datos");
 
         const results = data
-          .filter((item) =>
-            item.title.toLowerCase().includes(query.toLowerCase())
+          .filter(
+            (item) =>
+              item.title.toLowerCase().includes(query.toLowerCase()) ||
+              item.excerpt.toLowerCase().includes(query.toLowerCase())
           )
           .sort((a, b) =>
             a.title.toLowerCase().startsWith(query.toLowerCase()) ? -1 : 1

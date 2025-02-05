@@ -7,21 +7,21 @@ layout: with-sidebar
     <header class="media is-flex is-align-items-center mb-5">
       {% if page.image %}
       <div class="media-left">
-        <figure class="image is-64x64">
+        <figure class="image is-32x32">
           <img
             src="{{ page.image | relative_url }}"
-            alt="Imagen del artículo: {{ page.title }}"
+            alt="Autor del artículo"
             class="is-rounded"
             loading="lazy"
-            width="64"
-            height="64"
+            width="32"
+            height="32"
           />
         </figure>
       </div>
       {% endif %}
 
-      <div class="media-content">
-        <div class="has-text-grey" style="text-align: center">
+      <div class="media-content is-flex is-align-items-center">
+        <div class="has-text-grey">
           <time datetime="{{ page.date | date_to_xmlschema }}">
             Publicado el {{ page.date | date: "%d/%m/%Y" }}
           </time>
@@ -41,6 +41,8 @@ layout: with-sidebar
         class="button is-primary is-light is-rounded"
         aria-label="Compartir artículo"
         title="Compartir este artículo"
+        role="button"
+        tabindex="0"
       >
         <span class="icon-text">
           <span class="icon">
@@ -53,10 +55,10 @@ layout: with-sidebar
   </article>
 </section>
 
-<footer class="section">
+<footer class="footer py-5">
   <nav class="level" aria-label="Navegación del artículo">
     <div class="level-item has-text-centered">
-      <div class="buttons is-centered">
+      <div class="buttons is-flex is-justify-content-center">
         <a
           href="{{ '/' | relative_url }}"
           class="button is-link is-rounded"
@@ -69,11 +71,11 @@ layout: with-sidebar
             <span>Inicio</span>
           </span>
         </a>
-        <a
-          href="#"
+        <button
           class="button is-link is-light is-rounded"
           title="Ir al inicio de la página"
           aria-label="Subir"
+          onclick="window.scrollTo({ top: 0, behavior: 'smooth' });"
         >
           <span class="icon-text">
             <span class="icon">
@@ -81,53 +83,54 @@ layout: with-sidebar
             </span>
             <span>Subir</span>
           </span>
-        </a>
+        </button>
       </div>
     </div>
   </nav>
 </footer>
 
 <script>
-  class ShareManager {
-    constructor() {
-      this.shareButton = document.getElementById("shareButton");
-      this.shareData = {
-        title: "{{ page.title }}",
-        text: "¡Lee este artículo interesante en El Rincón de Hattrick!",
-        url: window.location.href,
-      };
+  document.addEventListener("DOMContentLoaded", () => {
+    class ShareManager {
+      constructor() {
+        this.shareButton = document.getElementById("shareButton");
+        this.shareData = {
+          title: "{{ page.title }}",
+          text: "¡Lee este artículo interesante en El Rincón de Hattrick!",
+          url: window.location.href, // Se usa window.location.href para mayor compatibilidad
+        };
 
-      this.init();
-    }
-
-    init() {
-      if (this.shareButton) {
-        this.shareButton.addEventListener("click", () => this.handleShare());
+        if (this.shareButton) {
+          this.shareButton.addEventListener("click", () => this.handleShare());
+        }
       }
-    }
 
-    async handleShare() {
-      try {
+      async handleShare() {
         if (navigator.share) {
-          await navigator.share(this.shareData);
-          console.log("Contenido compartido exitosamente");
+          try {
+            await navigator.share(this.shareData);
+            console.log("Contenido compartido exitosamente.");
+          } catch (error) {
+            if (error.name !== "AbortError") {
+              console.warn(
+                "El usuario canceló o ocurrió un error al compartir.",
+                error
+              );
+              this.showFallbackMessage();
+            }
+          }
         } else {
           this.showFallbackMessage();
         }
-      } catch (error) {
-        if (error.name !== "AbortError") {
-          console.error("Error al compartir:", error);
-          this.showFallbackMessage();
-        }
+      }
+
+      showFallbackMessage() {
+        alert(
+          `Lo sentimos, la función de compartir no está disponible.\n\nPuedes copiar esta URL manualmente:\n${this.shareData.url}`
+        );
       }
     }
 
-    showFallbackMessage() {
-      alert(
-        `Lo sentimos, la función de compartir no está disponible.\n\nURL del artículo: ${this.shareData.url}`
-      );
-    }
-  }
-
-  document.addEventListener("DOMContentLoaded", () => new ShareManager());
+    new ShareManager();
+  });
 </script>

@@ -1,74 +1,48 @@
 <footer class="footer">
   <div class="content has-text-centered">
-    <p class="mb-4">
-      <strong>{{ site.title }}</strong><br />
-      &copy; {{ "now" | date: "%Y" }} {{ site.author }} - Todos los derechos
-      reservados
+    <p>
+      <strong>{{ site.title }}</strong> &copy; {{ "now" | date: "%Y" }} {{
+      site.author }}
     </p>
 
-    <nav class="footer-nav mb-4">
-      <div class="buttons is-centered">
-        <a
-          href="{{ '/acerca-de/' | relative_url }}"
-          class="button is-link is-light"
-          title="Acerca de este sitio"
-        >
-          <span class="icon-text">
-            <span class="icon" aria-hidden="true">
-              <i class="fas fa-info-circle"></i>
-            </span>
-            <span>Acerca de</span>
-          </span>
-        </a>
-        <a
-          href="{{ '/contacto/' | relative_url }}"
-          class="button is-link is-light"
-          title="Contáctanos"
-        >
-          <span class="icon-text">
-            <span class="icon" aria-hidden="true">
-              <i class="fas fa-envelope"></i>
-            </span>
-            <span>Contáctanos</span>
-          </span>
-        </a>
-      </div>
-    </nav>
+    <div class="buttons is-centered">
+      <a
+        href="{{ '/acerca-de/' | relative_url }}"
+        class="button is-light is-small"
+      >
+        <span class="icon"><i class="fas fa-info-circle"></i></span>
+        <span>Acerca de</span>
+      </a>
+      <a
+        href="{{ '/contacto/' | relative_url }}"
+        class="button is-light is-small"
+      >
+        <span class="icon"><i class="fas fa-envelope"></i></span>
+        <span>Contacto</span>
+      </a>
+    </div>
 
-    <nav class="social-links">
-      <div class="buttons is-centered">
-        <a
-          href="https://t.me/JuvenilesHT"
-          class="button is-white"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Síguenos en Telegram"
-        >
-          <span class="icon has-text-info">
-            <i class="fab fa-telegram"></i>
-          </span>
-        </a>
-        <a
-          href="https://wa.me/qr/537E4GO72BHHB1"
-          class="button is-white"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Contáctanos por WhatsApp"
-        >
-          <span class="icon has-text-success">
-            <i class="fab fa-whatsapp"></i>
-          </span>
-        </a>
-        <a
-          href="mailto:tutorhattrick@hotmail.com"
-          class="button is-white"
-          aria-label="Envíanos un correo"
-        >
-          <span class="icon has-text-danger">
-            <i class="fas fa-envelope"></i>
-          </span>
-        </a>
-      </div>
-    </nav>
+    <div class="social-links mt-3">
+      <a
+        href="https://t.me/JuvenilesHT"
+        target="_blank"
+        class="icon is-medium has-text-info"
+      >
+        <i class="fab fa-telegram"></i>
+      </a>
+      <a
+        href="https://wa.me/qr/537E4GO72BHHB1"
+        target="_blank"
+        class="icon is-medium has-text-success"
+      >
+        <i class="fab fa-whatsapp"></i>
+      </a>
+      <a
+        href="mailto:tutorhattrick@hotmail.com"
+        class="icon is-medium has-text-danger"
+      >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
   </div>
 </footer>
