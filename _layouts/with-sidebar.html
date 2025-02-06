@@ -9,19 +9,15 @@ layout: default
         {{ content }}
       </main>
 
-      <aside
-        class="column is-one-quarter-desktop is-one-third-tablet is-hidden-mobile"
-      >
+      <aside class="column is-one-quarter-desktop is-one-third-tablet is-hidden-mobile" role="complementary">
         <div class="sticky-sidebar">
           <!-- Búsqueda -->
           <div class="card mb-3">
             <div class="card-content">
-              <h2 class="title is-5 has-text-weight-semibold mb-3">Buscar</h2>
-              <form
-                action="{{ '/search/' | relative_url }}"
-                method="get"
-                role="search"
-              >
+              <h2 id="search-title" class="title is-5 has-text-weight-semibold mb-3">
+                Buscar
+              </h2>
+              <form action="{{ '/search/' | relative_url }}" method="get" role="search" aria-labelledby="search-title">
                 <div class="field has-addons">
                   <div class="control is-expanded">
                     <input
@@ -35,7 +31,7 @@ layout: default
                   </div>
                   <div class="control">
                     <button type="submit" class="button is-primary is-rounded">
-                      <span class="icon"><i class="fas fa-search"></i></span>
+                      <span class="icon" aria-hidden="true"><i class="fas fa-search"></i></span>
                       <span class="is-hidden-touch">Buscar</span>
                     </button>
                   </div>
@@ -47,30 +43,25 @@ layout: default
           <!-- Categorías -->
           <div class="card mb-3">
             <div class="card-content">
-              <nav class="menu">
-                <p class="menu-label">Categorías</p>
+              <nav class="menu" aria-labelledby="categories-title">
+                <p id="categories-title" class="menu-label">Categorías</p>
                 <ul class="menu-list">
-                  {% for category in site.categories %} {% assign category_name
-                  = category[0] %} {% assign category_page = site.pages | where:
-                  "category", category_name | first %} {% assign category_icon =
-                  category_page.icon | default: "fa-folder" %}
-                  <li>
-                    <a
-                      href="/{{ category_name | slugify }}"
-                      class="{% if page.category == category_name %}is-active{% endif %}"
-                      aria-label="Ver artículos de {{ category_name }}"
-                    >
-                      <span class="icon-text">
-                        <span class="icon">
-                          <i class="fas {{ category_icon }}"></i>
+                  {% for category in site.categories %}
+                    {% assign category_name = category[0] %}
+                    {% assign category_page = site.pages | where: "category", category_name | first %}
+                    {% assign category_icon = category_page.icon | default: "fa-folder" %}
+                    <li>
+                      <a href="{{ category_name | slugify | relative_url }}"
+                         class="{% if page.category == category_name %}is-active{% endif %}"
+                         aria-label="Ver artículos de {{ category_name }}">
+                        <span class="icon-text">
+                          <span class="icon" aria-hidden="true">
+                            <i class="fas {{ category_icon }}"></i>
+                          </span>
+                          <span>{{ category_page.title | default: category_name }}</span>
                         </span>
-                        <span
-                          >{{ category_page.title | default: category_name
-                          }}</span
-                        >
-                      </span>
-                    </a>
-                  </li>
+                      </a>
+                    </li>
                   {% endfor %}
                 </ul>
               </nav>
@@ -80,28 +71,22 @@ layout: default
           <!-- Artículos Destacados -->
           <div class="card mb-3">
             <div class="card-content">
-              <h2 class="title is-5 has-text-weight-semibold mb-3">
+              <h2 id="featured-articles-title" class="title is-5 has-text-weight-semibold mb-3">
                 Artículos Destacados
               </h2>
-              <div class="menu">
-                {% assign featured_posts = site.posts | where: "featured", true
-                | where: "published", true | limit: 5 %} {% if
-                featured_posts.size > 0 %} {% for post in featured_posts %}
-                <a
-                  href="{{ post.url | relative_url }}"
-                  class="menu-item"
-                  aria-label="Leer: {{ post.title }}"
-                >
-                  <strong>{{ post.title }}</strong>
-                  <time
-                    datetime="{{ post.date | date_to_xmlschema }}"
-                    class="is-size-7 has-text-grey"
-                  >
-                    {{ post.date | date: "%d/%m/%Y" }}
-                  </time>
-                </a>
-                {% endfor %} {% else %}
-                <p class="has-text-grey">No hay artículos destacados</p>
+              <div class="menu" aria-labelledby="featured-articles-title">
+                {% assign featured_posts = site.posts | where: "featured", true | where: "published", true | limit: 5 %}
+                {% if featured_posts.size > 0 %}
+                  {% for post in featured_posts %}
+                    <a href="{{ post.url | relative_url }}" class="menu-item" aria-label="Leer: {{ post.title }}">
+                      <strong>{{ post.title }}</strong>
+                      <time datetime="{{ post.date | date_to_xmlschema }}" class="is-size-7 has-text-grey">
+                        {{ post.date | date: "%d/%m/%Y" }}
+                      </time>
+                    </a>
+                  {% endfor %}
+                {% else %}
+                  <p class="has-text-grey">No hay artículos destacados</p>
                 {% endif %}
               </div>
             </div>
@@ -110,28 +95,22 @@ layout: default
           <!-- Últimos Artículos -->
           <div class="card mb-3">
             <div class="card-content">
-              <h2 class="title is-5 has-text-weight-semibold mb-3">
+              <h2 id="latest-articles-title" class="title is-5 has-text-weight-semibold mb-3">
                 Últimos Artículos
               </h2>
-              <div class="menu">
-                {% assign recent_posts = site.posts | where: "published", true |
-                sort: "date" | reverse | slice: 0, 5 %} {% if recent_posts.size
-                > 0 %} {% for post in recent_posts %}
-                <a
-                  href="{{ post.url | relative_url }}"
-                  class="menu-item"
-                  aria-label="Leer: {{ post.title }}"
-                >
-                  <strong>{{ post.title }}</strong>
-                  <time
-                    datetime="{{ post.date | date_to_xmlschema }}"
-                    class="is-size-7 has-text-grey"
-                  >
-                    {{ post.date | date: "%d/%m/%Y" }}
-                  </time>
-                </a>
-                {% endfor %} {% else %}
-                <p class="has-text-grey">No hay artículos recientes</p>
+              <div class="menu" aria-labelledby="latest-articles-title">
+                {% assign recent_posts = site.posts | where: "published", true | sort: "date" | reverse | slice: 0, 5 %}
+                {% if recent_posts.size > 0 %}
+                  {% for post in recent_posts %}
+                    <a href="{{ post.url | relative_url }}" class="menu-item" aria-label="Leer: {{ post.title }}">
+                      <strong>{{ post.title }}</strong>
+                      <time datetime="{{ post.date | date_to_xmlschema }}" class="is-size-7 has-text-grey">
+                        {{ post.date | date: "%d/%m/%Y" }}
+                      </time>
+                    </a>
+                  {% endfor %}
+                {% else %}
+                  <p class="has-text-grey">No hay artículos recientes</p>
                 {% endif %}
               </div>
             </div>

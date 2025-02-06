@@ -25,7 +25,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Función para cambiar el atributo aria-expanded
   const toggleAriaExpanded = (element, condition) => {
-    if (element) element.setAttribute("aria-expanded", condition);
+    if (element) {
+      element.setAttribute("aria-expanded", condition);
+    }
   };
 
   // Manejo del menú hamburguesa

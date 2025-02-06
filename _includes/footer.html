@@ -1,46 +1,40 @@
 <footer class="footer">
   <div class="content has-text-centered">
     <p>
-      <strong>{{ site.title }}</strong> &copy; {{ "now" | date: "%Y" }} {{
-      site.author }}
+      <strong>{{ site.title }}</strong> &copy; {{ "now" | date: "%Y" }} {{ site.author }}
     </p>
 
+    <!-- Botones de navegación -->
     <div class="buttons is-centered">
-      <a
-        href="{{ '/acerca-de/' | relative_url }}"
-        class="button is-light is-small"
-      >
+      <a href="{{ '/acerca-de/' | relative_url }}" class="button is-light is-small">
         <span class="icon"><i class="fas fa-info-circle"></i></span>
         <span>Acerca de</span>
       </a>
-      <a
-        href="{{ '/contacto/' | relative_url }}"
-        class="button is-light is-small"
-      >
+      <a href="{{ '/contacto/' | relative_url }}" class="button is-light is-small">
         <span class="icon"><i class="fas fa-envelope"></i></span>
         <span>Contacto</span>
       </a>
     </div>
 
+    <!-- Enlaces a redes sociales -->
     <div class="social-links mt-3">
-      <a
-        href="https://t.me/JuvenilesHT"
-        target="_blank"
-        class="icon is-medium has-text-info"
-      >
+      <a href="https://t.me/JuvenilesHT"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="icon is-medium has-text-info"
+         aria-label="Canal de Telegram">
         <i class="fab fa-telegram"></i>
       </a>
-      <a
-        href="https://wa.me/qr/537E4GO72BHHB1"
-        target="_blank"
-        class="icon is-medium has-text-success"
-      >
+      <a href="https://wa.me/qr/537E4GO72BHHB1"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="icon is-medium has-text-success"
+         aria-label="Chat de WhatsApp">
         <i class="fab fa-whatsapp"></i>
       </a>
-      <a
-        href="mailto:tutorhattrick@hotmail.com"
-        class="icon is-medium has-text-danger"
-      >
+      <a href="mailto:tutorhattrick@hotmail.com"
+         class="icon is-medium has-text-danger"
+         aria-label="Enviar un correo">
         <i class="fas fa-envelope"></i>
       </a>
     </div>
