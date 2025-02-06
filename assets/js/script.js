@@ -82,4 +82,52 @@ document.addEventListener("DOMContentLoaded", () => {
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
   }
+
+  // Compartir artículo
+  class ShareManager {
+    constructor() {
+      this.shareButton = document.getElementById("shareButton");
+      this.shareData = {
+        title: document.title, // Usa el título de la página
+        text: "¡Lee este artículo interesante en El Rincón de Hattrick!",
+        url: window.location.href,
+      };
+
+      if (this.shareButton) {
+        this.shareButton.addEventListener("click", () => this.handleShare());
+      }
+    }
+
+    async handleShare() {
+      if (navigator.share) {
+        try {
+          await navigator.share(this.shareData);
+          console.log("Contenido compartido exitosamente.");
+        } catch (error) {
+          if (error.name !== "AbortError") {
+            console.warn(
+              "El usuario canceló o ocurrió un error al compartir.",
+              error
+            );
+            this.showFallbackMessage();
+          }
+        }
+      } else {
+        this.showFallbackMessage();
+      }
+    }
+
+    showFallbackMessage() {
+      const message = document.createElement("div");
+      message.classList.add("notification", "is-danger");
+      message.innerHTML = `
+        <button class="delete"></button>
+        Lo sentimos, la función de compartir no está disponible en tu navegador.<br />
+        Puedes copiar esta URL manualmente: <a href="${this.shareData.url}" target="_blank">${this.shareData.url}</a>
+      `;
+      document.body.appendChild(message);
+    }
+  }
+
+  new ShareManager();
 });
