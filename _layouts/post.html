@@ -97,7 +97,7 @@ layout: with-sidebar
         this.shareData = {
           title: "{{ page.title }}",
           text: "¡Lee este artículo interesante en El Rincón de Hattrick!",
-          url: window.location.href, // Se usa window.location.href para mayor compatibilidad
+          url: window.location.href, 
         };
 
         if (this.shareButton) {
@@ -125,9 +125,15 @@ layout: with-sidebar
       }
 
       showFallbackMessage() {
-        alert(
-          `Lo sentimos, la función de compartir no está disponible.\n\nPuedes copiar esta URL manualmente:\n${this.shareData.url}`
-        );
+        // Crear un mensaje de fallback dentro de la página en lugar de usar 'alert'
+        const message = document.createElement('div');
+        message.classList.add('notification', 'is-danger');
+        message.innerHTML = `
+          <button class="delete"></button>
+          Lo sentimos, la función de compartir no está disponible en tu navegador.<br />
+          Puedes copiar esta URL manualmente: <a href="${this.shareData.url}" target="_blank">${this.shareData.url}</a>
+        `;
+        document.body.appendChild(message);
       }
     }
 

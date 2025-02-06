@@ -2,59 +2,98 @@
 <html lang="{{ page.lang | default: 'es' }}" dir="ltr">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
 
     <title>
-      {% if page.title %}{{ page.title | escape }} - {{ site.title | escape }}{% else %}{{ site.title | escape }}{% endif %}
+      {% if page.title %}{{ page.title | escape }} - {{ site.title | escape }}{%
+      else %}{{ site.title | escape }}{% endif %}
     </title>
 
-    <meta name="description" content="{{ page.description | default: site.description | escape }}" />
+    <meta
+      name="description"
+      content="{{ page.description | default: site.description | escape }}"
+    />
     <meta name="author" content="{{ site.author | escape }}" />
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#3273dc" />
     <meta name="color-scheme" content="light dark" />
     <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
 
-    <meta http-equiv="Content-Security-Policy"
-      content="default-src 'self' https:; 
-               script-src 'self' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; 
-               style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; 
-               img-src 'self' data: https:; 
-               font-src 'self' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; 
-               connect-src 'self' https://api.ejemplo.com; 
-               frame-ancestors 'none';"
-    />
-
     <!-- Open Graph -->
     <meta property="og:site_name" content="{{ site.title | escape }}" />
-    <meta property="og:title" content="{{ page.title | escape }} - {{ site.title | escape }}" />
-    <meta property="og:description" content="{{ page.description | default: site.description | escape }}" />
+    <meta
+      property="og:title"
+      content="{{ page.title | escape }} - {{ site.title | escape }}"
+    />
+    <meta
+      property="og:description"
+      content="{{ page.description | default: site.description | escape }}"
+    />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
-    <meta property="og:image" content="{{ page.image | default: '/assets/img/HT.jpg' | absolute_url }}" />
+    <meta
+      property="og:image"
+      content="{{ page.image | default: '/assets/img/HT.jpg' | absolute_url }}"
+    />
     <meta property="og:locale" content="{{ page.lang | default: 'es_ES' }}" />
 
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="{{ page.title | escape }} - {{ site.title | escape }}" />
-    <meta name="twitter:description" content="{{ page.description | default: site.description | escape }}" />
-    <meta name="twitter:image" content="{{ page.image | default: '/assets/img/HT.jpg' | absolute_url }}" />
+    <meta
+      name="twitter:title"
+      content="{{ page.title | escape }} - {{ site.title | escape }}"
+    />
+    <meta
+      name="twitter:description"
+      content="{{ page.description | default: site.description | escape }}"
+    />
+    <meta
+      name="twitter:image"
+      content="{{ page.image | default: '/assets/img/HT.jpg' | absolute_url }}"
+    />
 
     <!-- Iconos -->
-    <link rel="icon" href="{{ '/assets/img/favicon.ico' | relative_url }}" sizes="any" />
+    <link
+      rel="icon"
+      href="{{ '/assets/img/favicon.ico' | relative_url }}"
+      sizes="any"
+    />
 
     <!-- Preconexión y Preload -->
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous" />
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous" />
-    <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css" />
+    <link
+      rel="preconnect"
+      href="https://cdn.jsdelivr.net"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preconnect"
+      href="https://cdnjs.cloudflare.com"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      as="style"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"
+    />
 
     <!-- Estilos -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}" />
   </head>
 
-  <body class="has-navbar-fixed-top {% if page.layout %}{{ page.layout | downcase }}{% endif %}">
+  <body
+    class="has-navbar-fixed-top {% if page.layout %}{{ page.layout | downcase }}{% endif %}"
+  >
     {% include header.html %}
 
     <main role="main">{{ content }}</main>
