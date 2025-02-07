@@ -5,10 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const menu = document.querySelector(".navbar-menu");
   const categoryToggle = document.getElementById("category-toggle");
   const categoryMenu = document.getElementById("category-menu");
-  const scrollToTopBtn = document.getElementById("scrollToTopBtn");
-
-  if (!nav || !body) return;
-
+  const scrollToTopBtn = document.getElementById("scrollToTopBtn");
   
 
   if (!scrollToTopBtn) return;
