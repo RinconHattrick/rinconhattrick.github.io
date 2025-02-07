@@ -5,41 +5,32 @@ document.addEventListener("DOMContentLoaded", () => {
   const menu = document.querySelector(".navbar-menu");
   const categoryToggle = document.getElementById("category-toggle");
   const categoryMenu = document.getElementById("category-menu");
-  const scrollToTopBtn = document.getElementById("scrollToTopBtn"); // Solo botón
+  const scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
   if (!nav || !body) return;
 
-  // --- Funcionalidad de Scroll to Top ---
+  
 
-  // Función de desplazamiento suave
+  if (!scrollToTopBtn) return;
+
+  // Función para hacer scroll suave al inicio
   const scrollToTop = () => {
-    const scrollStep = window.scrollY / 20; // Ajusta la velocidad
-    const smoothScroll = () => {
-      if (window.scrollY > 0) {
-        window.scrollBy(0, -scrollStep);
-        requestAnimationFrame(smoothScroll);
-      }
-    };
-    requestAnimationFrame(smoothScroll);
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  // Mostrar/ocultar el botón al hacer scroll
+  // Mostrar/ocultar el botón según el scroll
   const toggleScrollToTopButton = () => {
-    if (scrollToTopBtn) {
-      if (window.scrollY > 300) {
-        scrollToTopBtn.style.display = "flex"; // Flex para centrar el ícono
-        scrollToTopBtn.classList.add("aFadeIn");
-      } else {
-        scrollToTopBtn.style.display = "none";
-        scrollToTopBtn.classList.remove("aFadeIn");
-      }
+    if (window.scrollY > 200) {
+      scrollToTopBtn.classList.add("show");
+    } else {
+      scrollToTopBtn.classList.remove("show");
     }
   };
 
-  if (scrollToTopBtn) {
-    window.addEventListener("scroll", toggleScrollToTopButton);
-    scrollToTopBtn.addEventListener("click", scrollToTop);
-  }
+  // Eventos
+  window.addEventListener("scroll", toggleScrollToTopButton);
+  scrollToTopBtn.addEventListener("click", scrollToTop);
+
 
   // --- Funcionalidad del Navbar Responsivo ---
 
