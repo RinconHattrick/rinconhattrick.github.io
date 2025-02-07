@@ -560,11 +560,21 @@ mark {
   opacity: 1 !important;
 }
 
+
 /* Ajuste en pantallas más grandes */
 @media (min-width: 768px) {
   .scroll-to-top-btn {
     bottom: 30px;
     right: 30px;
+  }
+.aFadeIn {
+    animation: fadeInUp 0.6s ease-in-out;
+  }
+}
+
+@media (max-width: 767px) {
+  .scroll-to-top-btn {
+    display: flex;  /* Asegurar que en móvil también se muestra el botón */
   }
 }
 
