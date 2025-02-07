@@ -561,8 +561,8 @@ mark {
 /* Qkuste en pantallas pequeñas */
 @media screen and (max-width: 767px) {
   .scroll-to-top-btn {
-    right: 80px;
-    bottom: 80px; 
+    right: 30px;
+    bottom: 100px; 
   }
 }
 
