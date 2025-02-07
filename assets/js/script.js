@@ -5,11 +5,44 @@ document.addEventListener("DOMContentLoaded", () => {
   const menu = document.querySelector(".navbar-menu");
   const categoryToggle = document.getElementById("category-toggle");
   const categoryMenu = document.getElementById("category-menu");
-  const scrollToTopLink = document.querySelector('a[href="#main-header"]');
+  const scrollToTopBtn = document.getElementById("scrollToTopBtn"); // Solo botón
 
   if (!nav || !body) return;
 
-  // Función para actualizar la posición del navbar según el tamaño de la pantalla
+  // --- Funcionalidad de Scroll to Top ---
+
+  // Función de desplazamiento suave
+  const scrollToTop = () => {
+    const scrollStep = window.scrollY / 20; // Ajusta la velocidad
+    const smoothScroll = () => {
+      if (window.scrollY > 0) {
+        window.scrollBy(0, -scrollStep);
+        requestAnimationFrame(smoothScroll);
+      }
+    };
+    requestAnimationFrame(smoothScroll);
+  };
+
+  // Mostrar/ocultar el botón al hacer scroll
+  const toggleScrollToTopButton = () => {
+    if (scrollToTopBtn) {
+      if (window.scrollY > 200) {
+        scrollToTopBtn.style.display = "flex"; // Flex para centrar el ícono
+        scrollToTopBtn.classList.add("aFadeIn");
+      } else {
+        scrollToTopBtn.style.display = "none";
+        scrollToTopBtn.classList.remove("aFadeIn");
+      }
+    }
+  };
+
+  if (scrollToTopBtn) {
+    window.addEventListener("scroll", toggleScrollToTopButton);
+    scrollToTopBtn.addEventListener("click", scrollToTop);
+  }
+
+  // --- Funcionalidad del Navbar Responsivo ---
+
   const applyNavbarPosition = () => {
     const isMobile = window.innerWidth <= 767;
     nav.classList.toggle("is-fixed-top", !isMobile);
@@ -23,14 +56,13 @@ document.addEventListener("DOMContentLoaded", () => {
     requestAnimationFrame(applyNavbarPosition)
   );
 
-  // Función para cambiar el atributo aria-expanded
+  // Manejo del menú hamburguesa
   const toggleAriaExpanded = (element, condition) => {
     if (element) {
       element.setAttribute("aria-expanded", condition);
     }
   };
 
-  // Manejo del menú hamburguesa
   if (burger && menu) {
     burger.addEventListener("click", () => {
       const isActive = menu.classList.toggle("is-active");
@@ -74,60 +106,4 @@ document.addEventListener("DOMContentLoaded", () => {
       toggleAriaExpanded(categoryToggle, false);
     }
   });
-
-  // Scroll suave al hacer clic en el enlace de "Ir arriba"
-  if (scrollToTopLink) {
-    scrollToTopLink.addEventListener("click", (e) => {
-      e.preventDefault();
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-  }
-
-  // Compartir artículo
-  class ShareManager {
-    constructor() {
-      this.shareButton = document.getElementById("shareButton");
-      this.shareData = {
-        title: document.title, // Usa el título de la página
-        text: "¡Lee este artículo interesante en El Rincón de Hattrick!",
-        url: window.location.href,
-      };
-
-      if (this.shareButton) {
-        this.shareButton.addEventListener("click", () => this.handleShare());
-      }
-    }
-
-    async handleShare() {
-      if (navigator.share) {
-        try {
-          await navigator.share(this.shareData);
-          console.log("Contenido compartido exitosamente.");
-        } catch (error) {
-          if (error.name !== "AbortError") {
-            console.warn(
-              "El usuario canceló o ocurrió un error al compartir.",
-              error
-            );
-            this.showFallbackMessage();
-          }
-        }
-      } else {
-        this.showFallbackMessage();
-      }
-    }
-
-    showFallbackMessage() {
-      const message = document.createElement("div");
-      message.classList.add("notification", "is-danger");
-      message.innerHTML = `
-        <button class="delete"></button>
-        Lo sentimos, la función de compartir no está disponible en tu navegador.<br />
-        Puedes copiar esta URL manualmente: <a href="${this.shareData.url}" target="_blank">${this.shareData.url}</a>
-      `;
-      document.body.appendChild(message);
-    }
-  }
-
-  new ShareManager();
 });

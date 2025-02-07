@@ -241,14 +241,14 @@ th {
   text-decoration: none;
 }
 
-#main-header {
+.main-header {
   background: var(--primary-gradient);
   border-radius: 12px;
   margin-bottom: 3rem;
 }
 
-#main-header .title,
-#main-header .subtitle {
+.main-header .title,
+.main-header .subtitle {
   color: white !important;
 }
 
@@ -511,4 +511,77 @@ mark {
   .aside {
     display: none;
   }
+}
+
+/* =========================================================================
+   BOTÓN DE SCROLL HACIA ARRIBA
+   ========================================================================== */
+.scroll-to-top-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  display: none; /* Controlado con JS */
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: var(--primary-color);
+  color: white;
+  box-shadow: var(--shadow-md);
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+}
+
+.scroll-to-top-btn:hover {
+  background-color: var(--secondary-color);
+  transform: scale(1.1);
+}
+
+/* Animación de fadeInUp (aparición con deslizamiento) */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Clase para aplicar la animación */
+.aFadeIn {
+  animation: fadeInUp 0.6s ease-in-out;
+  opacity: 1 !important;
+}
+
+/* Ajuste en pantallas más grandes */
+@media (min-width: 768px) {
+  .scroll-to-top-btn {
+    bottom: 30px;
+    right: 30px;
+  }
+}
+
+/* Estilos de la barra de desplazamiento */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--secondary-color);
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--card-background);
 }

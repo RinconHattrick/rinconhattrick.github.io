@@ -8,14 +8,8 @@ layout: with-sidebar
       {% if page.image %}
       <div class="media-left">
         <figure class="image is-32x32">
-          <img
-            src="{{ page.image | relative_url }}"
-            alt="Autor del artículo"
-            class="is-rounded"
-            loading="lazy"
-            width="32"
-            height="32"
-          />
+          <img src="{{ page.image | relative_url }}" alt="Autor del artículo" class="is-rounded" loading="lazy"
+            width="32" height="32" />
         </figure>
       </div>
       {% endif %}
@@ -36,14 +30,8 @@ layout: with-sidebar
     <section class="content">{{ content }}</section>
 
     <div class="has-text-centered my-6">
-      <button
-        id="shareButton"
-        class="button is-primary is-light is-rounded"
-        aria-label="Compartir artículo"
-        title="Compartir este artículo"
-        role="button"
-        tabindex="0"
-      >
+      <button id="shareButton" class="button is-primary is-light is-rounded" aria-label="Compartir artículo"
+        title="Compartir este artículo" role="button" tabindex="0">
         <span class="icon-text">
           <span class="icon">
             <i class="fas fa-share-alt" aria-hidden="true"></i>
@@ -59,34 +47,15 @@ layout: with-sidebar
   <nav class="level" aria-label="Navegación del artículo">
     <div class="level-item has-text-centered">
       <div class="buttons is-flex is-justify-content-center">
-        <a
-          href="{{ '/' | relative_url }}"
-          class="button is-link is-rounded"
-          aria-label="Inicio"
-        >
+        <a href="{{ '/' | relative_url }}" class="button is-link is-rounded" aria-label="Inicio">
           <span class="icon-text">
             <span class="icon">
               <i class="fas fa-home" aria-hidden="true"></i>
             </span>
-            <span>Inicio</span>
+            <span>Volver al Inicio</span>
           </span>
         </a>
-        <button
-          class="button is-link is-light is-rounded"
-          title="Ir al inicio de la página"
-          aria-label="Subir"
-          onclick="window.scrollTo({ top: 0, behavior: 'smooth' });"
-        >
-          <span class="icon-text">
-            <span class="icon">
-              <i class="fas fa-arrow-up" aria-hidden="true"></i>
-            </span>
-            <span>Subir</span>
-          </span>
-        </button>
       </div>
     </div>
   </nav>
 </footer>
-
-

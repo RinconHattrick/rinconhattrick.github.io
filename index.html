@@ -9,7 +9,7 @@ title: "El Rincón de Hattrick"
       <!-- Contenido principal -->
       <div class="column">
         <!-- Header -->
-        <section class="hero" id="main-header" role="banner">
+        <section class="hero main-header" role="banner">
           <div class="hero-body has-text-centered">
             <h1 class="title is-2">{{ site.title }}</h1>
             <p class="subtitle is-4">{{ site.description }}</p>
@@ -18,79 +18,64 @@ title: "El Rincón de Hattrick"
 
         <!-- Categorías -->
         {% for category in site.categories %}
-          {% assign category_name = category[0] %}
-          {% assign category_page = site.pages | where: "category", category_name | first %}
+        {% assign category_name = category[0] %}
+        {% assign category_page = site.pages | where: "category", category_name | first %}
 
-          <section id="{{ category_name | slugify }}" 
-                   class="mt-5" 
-                   role="region" 
-                   aria-labelledby="category-title-{{ category_name | slugify }}">
-            <div class="card">
-              <header class="card-header">
-                <h2 id="category-title-{{ category_name | slugify }}" 
-                    class="card-header-title title is-4">
-                  {{ category_page.title | default: category_name }}
-                </h2>
-              </header>
+        <section id="{{ category_name | slugify }}" class="mt-5" role="region"
+          aria-labelledby="category-title-{{ category_name | slugify }}">
+          <div class="card">
+            <header class="card-header main-header">
+              <h2 id="category-title-{{ category_name | slugify }}" class="card-header-title title is-4">
+                {{ category_page.title | default: category_name }}
+              </h2>
+            </header>
 
-              <div class="card-content">
-                <p class="subtitle is-6 mb-4">
-                  {{ category_page.description | default: "No hay descripción disponible para esta categoría." }}
-                </p>
+            <div class="card-content">
+              <p class="subtitle is-6 mb-4">
+                {{ category_page.description | default: "No hay descripción disponible para esta categoría." }}
+              </p>
 
-                <div class="columns is-multiline is-centered">
-                  {% for post in category[1] %}
-                    <div class="column is-12-tablet is-6-desktop">
-                      <article class="box" role="article">
-                        <time datetime="{{ post.date | date: '%Y-%m-%d' }}" 
-                              class="is-size-7 has-text-grey">
-                          <span class="icon-text">
-                            <span class="icon" aria-hidden="true">
-                              <i class="fas fa-calendar-day"></i>
-                            </span>
-                            <span>{{ post.date | date: "%d/%m/%Y" }}</span>
-                          </span>
-                        </time>
+              <div class="columns is-multiline is-centered">
+                {% for post in category[1] %}
+                <div class="column is-12-tablet is-6-desktop">
+                  <article class="box" role="article">
+                    <time datetime="{{ post.date | date: '%Y-%m-%d' }}" class="is-size-7 has-text-grey">
+                      <span class="icon-text">
+                        <span class="icon" aria-hidden="true">
+                          <i class="fas fa-calendar-day"></i>
+                        </span>
+                        <span>{{ post.date | date: "%d/%m/%Y" }}</span>
+                      </span>
+                    </time>
 
-                        <h3 class="title is-5 mt-2">
-                          <a href="{{ post.url | relative_url }}" 
-                             class="has-text-primary" 
-                             rel="bookmark">
-                            {{ post.title }}
-                          </a>
-                        </h3>
+                    <h3 class="title is-5 mt-2">
+                      <a href="{{ post.url | relative_url }}" class="has-text-primary" rel="bookmark">
+                        {{ post.title }}
+                      </a>
+                    </h3>
 
-                        <p class="mt-2">
-                          {{ post.excerpt | strip_html | truncatewords: 30 }}
-                        </p>
+                    <p class="mt-2">
+                      {{ post.excerpt | strip_html | truncatewords: 30 }}
+                    </p>
 
-                        {% if post.tags %}
-                          <div class="tags mt-2">
-                            {% for tag in post.tags %}
-                              <span class="tag is-light">{{ tag }}</span>
-                            {% endfor %}
-                          </div>
-                        {% endif %}
-                      </article>
+                    {% if post.tags %}
+                    <div class="tags mt-2">
+                      {% for tag in post.tags %}
+                      <span class="tag is-light">{{ tag }}</span>
+                      {% endfor %}
                     </div>
-                  {% endfor %}
+                    {% endif %}
+                  </article>
                 </div>
+                {% endfor %}
               </div>
             </div>
-          </section>
+          </div>
+        </section>
         {% endfor %}
 
-        <!-- Footer -->
-        <footer class="footer mt-6 py-5 has-text-centered" role="contentinfo">
-          <a href="#main-header" class="button is-link is-rounded" aria-label="Volver al inicio">
-            <span class="icon-text">
-              <span class="icon" aria-hidden="true">
-                <i class="fas fa-arrow-up"></i>
-              </span>
-              <span>Subir</span>
-            </span>
-          </a>
-        </footer>
+
+
       </div>
     </div>
   </section>

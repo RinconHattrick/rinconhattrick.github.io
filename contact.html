@@ -7,7 +7,7 @@ permalink: /contacto/
 <div class="container py-5">
   <section class="section">
     <!-- Hero Header -->
-    <section class="hero" id="main-header">
+    <section class="hero main-header">
       <div class="hero-body has-text-centered">
         <h1 class="title is-2">Contáctame</h1>
         <p class="subtitle is-4">
@@ -20,9 +20,7 @@ permalink: /contacto/
     <!-- Contacto -->
     <section class="section">
       <div class="container">
-        <div
-          class="columns is-multiline is-vcentered is-centered is-variable is-5"
-        >
+        <div class="columns is-multiline is-vcentered is-centered is-variable is-5">
           {% assign contact_methods = "Telegram,WhatsApp,Correo Electrónico" |
           split: "," %} {% assign icons = "fa-telegram,fa-whatsapp,fa-envelope"
           | split: "," %} {% assign colors = "is-info,is-success,is-danger" |
@@ -36,33 +34,21 @@ permalink: /contacto/
           | split: "," %} {% for method in contact_methods %}
           <div class="column is-4-desktop is-6-tablet">
             <div class="card has-text-centered">
-              <div
-                class="card-content is-flex is-flex-direction-column is-align-items-center"
-              >
+              <div class="card-content is-flex is-flex-direction-column is-align-items-center">
                 <div class="mb-4">
                   <span class="icon">
-                    <i
-                      class="fab {{ icons[forloop.index0] }} fa-3x"
-                      aria-hidden="true"
-                    ></i>
+                    <i class="fab {{ icons[forloop.index0] }} fa-3x" aria-hidden="true"></i>
                   </span>
                 </div>
                 <h2 class="title is-4 mb-3">{{ method }}</h2>
                 <p class="mb-5 has-text-justified">
                   {{ descriptions[forloop.index0] }}
                 </p>
-                <a
-                  href="{{ links[forloop.index0] }}"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <a href="{{ links[forloop.index0] }}" target="_blank" rel="noopener noreferrer"
                   class="button {{ colors[forloop.index0] }} is-medium is-rounded is-fullwidth-mobile"
-                  aria-label="Contactar por {{ method }}"
-                >
+                  aria-label="Contactar por {{ method }}">
                   <span class="icon">
-                    <i
-                      class="fab {{ icons[forloop.index0] }}"
-                      aria-hidden="true"
-                    ></i>
+                    <i class="fab {{ icons[forloop.index0] }}" aria-hidden="true"></i>
                   </span>
                   <span>Contactar</span>
                 </a>
@@ -84,15 +70,11 @@ permalink: /contacto/
 
     <!-- Navegación -->
     <div class="has-text-centered mt-5">
-      <a
-        href="/"
-        class="button is-link  is-rounded"
-        aria-label="Inicio"
-      >
+      <a href="/" class="button is-link  is-rounded" aria-label="Inicio">
         <span class="icon">
           <i class="fas fa-home"></i>
         </span>
-        <span>Inicio</span>
+        <span>Volver al Inicio</span>
       </a>
     </div>
   </section>

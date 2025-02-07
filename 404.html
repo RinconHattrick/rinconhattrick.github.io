@@ -37,19 +37,12 @@ permalink: /404.html
 
                 <!-- Botones de navegación -->
                 <div class="buttons is-centered">
-                  <a
-                    href="{{ '/' | relative_url }}"
-                    class="button is-link is-rounded"
-                  >
+                  <a href="{{ '/' | relative_url }}" class="button is-link is-rounded">
                     <span class="icon"><i class="fas fa-home"></i></span>
-                    <span>Inicio</span>
+                    <span>Volver al Inicio</span>
                   </a>
 
-                  <a
-                    onclick="window.history.back()"
-                    class="button is-warning is-rounded"
-                    role="button"
-                  >
+                  <a onclick="window.history.back()" class="button is-warning is-rounded" role="button">
                     <span class="icon"><i class="fas fa-arrow-left"></i></span>
                     <span>Ir atrás</span>
                   </a>
@@ -63,10 +56,7 @@ permalink: /404.html
                     category_page = site.pages | where: "category", category[0]
                     | first %} {% if category_page and category_page.url != ""
                     %}
-                    <a
-                      href="{{ category_page.url | relative_url }}"
-                      class="button is-light"
-                    >
+                    <a href="{{ category_page.url | relative_url }}" class="button is-light">
                       {{ category_page.title | default: category[0] }}
                     </a>
                     {% endif %} {% endfor %}
