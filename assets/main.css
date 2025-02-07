@@ -558,10 +558,11 @@ mark {
   }
 }
 
-@media screen and (max-width: 768px) {
+/* Qkuste en pantallas pequeñas */
+@media screen and (max-width: 767px) {
   .scroll-to-top-btn {
-    right: 80px; /* Mueve el botón a la izquierda para no tapar el menú */
-    bottom: 80px; /* Ajusta la altura si es necesario */
+    right: 80px;
+    bottom: 80px; 
   }
 }
 
