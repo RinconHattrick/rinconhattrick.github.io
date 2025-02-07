@@ -522,7 +522,7 @@ mark {
   right: 20px;
   width: 50px;
   height: 50px;
-  display: none; /* Controlado con JS */
+  display: flex; /* Asegura que se muestre bien en móviles */
   justify-content: center;
   align-items: center;
   border: none;
@@ -534,7 +534,9 @@ mark {
   color: white;
   box-shadow: var(--shadow-md);
   opacity: 0;
-  transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+  visibility: hidden;
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+  z-index: 1000; /* Asegura que el botón esté por encima de otros elementos */
 }
 
 .scroll-to-top-btn:hover {
@@ -542,24 +544,11 @@ mark {
   transform: scale(1.1);
 }
 
-/* Animación de fadeInUp (aparición con deslizamiento) */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* Cuando el botón debe aparecer */
+.scroll-to-top-btn.show {
+  opacity: 1;
+  visibility: visible;
 }
-
-/* Clase para aplicar la animación */
-.aFadeIn {
-  animation: fadeInUp 0.6s ease-in-out;
-  opacity: 1 !important;
-}
-
 
 /* Ajuste en pantallas más grandes */
 @media (min-width: 768px) {
@@ -567,18 +556,9 @@ mark {
     bottom: 30px;
     right: 30px;
   }
-.aFadeIn {
-    animation: fadeInUp 0.6s ease-in-out;
-  }
 }
 
-@media (max-width: 767px) {
-  .scroll-to-top-btn {
-    display: flex;  /* Asegurar que en móvil también se muestra el botón */
-  }
-}
-
-/* Estilos de la barra de desplazamiento */
+/* Estilos de la barra de desplazamiento (compatibles con más navegadores) */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -595,3 +575,11 @@ mark {
 ::-webkit-scrollbar-track {
   background-color: var(--card-background);
 }
+
+/* Para Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-color) var(--card-background);
+}
+
+ 
