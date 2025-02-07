@@ -558,6 +558,13 @@ mark {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .scroll-to-top-btn {
+    right: 80px; /* Mueve el botón a la izquierda para no tapar el menú */
+    bottom: 80px; /* Ajusta la altura si es necesario */
+  }
+}
+
 /* Estilos de la barra de desplazamiento (compatibles con más navegadores) */
 ::-webkit-scrollbar {
   width: 8px;
