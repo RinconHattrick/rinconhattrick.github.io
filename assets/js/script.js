@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Mostrar/ocultar el botón al hacer scroll
   const toggleScrollToTopButton = () => {
     if (scrollToTopBtn) {
-      if (window.scrollY > 200) {
+      if (window.scrollY > 300) {
         scrollToTopBtn.style.display = "flex"; // Flex para centrar el ícono
         scrollToTopBtn.classList.add("aFadeIn");
       } else {
