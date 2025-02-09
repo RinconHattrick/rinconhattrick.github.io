@@ -11,13 +11,13 @@ featured: false
 published: true
 ---
 
-# Gestionar los Partidos de tu Equipo Juvenil en Hattrick
+## Gestionar los Partidos de tu Equipo Juvenil en Hattrick
 
 Los partidos son esenciales para el crecimiento de tu equipo juvenil en Hattrick. Te permiten descubrir habilidades, ajustar tácticas y preparar a tus jugadores para desafíos mayores. Aprovechar al máximo cada encuentro es clave para el desarrollo de tu equipo.
 
 ---
 
-## La Importancia de los Partidos Juveniles
+### La Importancia de los Partidos Juveniles
 
 En Hattrick, los partidos juveniles ofrecen la oportunidad de evaluar el rendimiento y el potencial de tus jugadores. Puedes competir en partidos de liga o amistosos, cada uno con objetivos específicos:
 
@@ -28,18 +28,18 @@ Las órdenes tácticas en los partidos juveniles funcionan de manera similar a l
 
 ---
 
-## ¿Cómo Configurar Alineaciones y Tácticas?
+### ¿Cómo Configurar Alineaciones y Tácticas?
 
 La planificación antes de cada partido es crucial para sacar el máximo provecho a tu equipo juvenil.
 
-### Configuración de las Órdenes del Partido
+#### Configuración de las Órdenes del Partido
 
 1. **Planificación anticipada:** Configura tu alineación antes del partido para evitar alineaciones automáticas del sistema.
 2. **Estrategias tácticas:**
    - Experimenta con formaciones y tácticas para identificar las mejores combinaciones para tus jugadores.
    - Adapta tus estrategias según las fortalezas y debilidades del rival.
 
-### Alineaciones Automáticas
+#### Alineaciones Automáticas
 
 Si no configuras las órdenes del partido, el sistema alineará automáticamente a los jugadores según estas reglas:
 
@@ -50,7 +50,7 @@ Si no configuras las órdenes del partido, el sistema alineará automáticamente
 
 ---
 
-## Beneficios de los Partidos en el Desarrollo Juvenil
+### Beneficios de los Partidos en el Desarrollo Juvenil
 
 Los partidos no solo son competiciones, sino también herramientas para optimizar tu equipo juvenil:
 
@@ -60,17 +60,17 @@ Los partidos no solo son competiciones, sino también herramientas para optimiza
 
 ---
 
-## Gestión Efectiva de Partidos Amistosos
+### Gestión Efectiva de Partidos Amistosos
 
 Los amistosos son una herramienta invaluable para probar tácticas y desarrollar a tus jugadores:
 
-### Ventajas de los Partidos Amistosos
+#### Ventajas de los Partidos Amistosos
 
 - Permiten rotar jugadores para asegurar que todos obtengan minutos en el campo.
 - Facilitan la experimentación con nuevas tácticas y posiciones.
 - Ayudan a mantener activos a jugadores que no participan regularmente en partidos de liga.
 
-### ¿Cómo Organizar un Amistoso?
+#### ¿Cómo Organizar un Amistoso?
 
 1. **Busca un rival:** Encuentra oponentes disponibles en tu liga juvenil o en ligas internacionales.
 2. **Define tus objetivos:** Decide si el amistoso será para pruebas tácticas, desarrollo de jugadores jóvenes o ambas cosas.
@@ -78,7 +78,7 @@ Los amistosos son una herramienta invaluable para probar tácticas y desarrollar
 
 ---
 
-## Puntos Clave para Recordar
+### Puntos Clave para Recordar
 
 - **Partidos de liga:** Son esenciales para fomentar la cohesión táctica y evaluar el progreso del equipo.
 - **Amistosos:** Ofrecen flexibilidad para probar tácticas y dar minutos a jugadores jóvenes.

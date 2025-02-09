@@ -102,7 +102,8 @@ h6 {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   font-weight: 700;
   border-bottom: 2px solid var(--primary-color);
   padding-bottom: 0.5rem;
@@ -621,4 +622,28 @@ mark {
   opacity: 0;
   transform: translateY(10px);
   animation: fadeIn 0.3s ease-in-out forwards;
+}
+
+.featured-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.featured-item {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 8px;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.featured-item:hover {
+  color: var(--text);
+}
+
+.featured-info {
+  display: flex;
+  flex-direction: column;
 }

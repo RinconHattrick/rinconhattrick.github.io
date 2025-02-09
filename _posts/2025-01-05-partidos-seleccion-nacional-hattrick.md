@@ -11,13 +11,13 @@ featured: false
 published: true
 ---
 
-# Partidos de selección nacional en Hattrick
+## Partidos de selección nacional en Hattrick
 
 Los partidos de selección nacional no solo son un honor para los jugadores, sino que también ofrecen beneficios únicos para ellos y sus clubes. Sin embargo, es crucial entender las reglas, ventajas y limitaciones para aprovechar al máximo esta oportunidad.
 
 ---
 
-## ¿Por qué son importantes los partidos de selección?
+### ¿Por qué son importantes los partidos de selección?
 
 Estos encuentros, tanto de la selección absoluta como de la Sub-21, permiten que los jugadores:
 
@@ -27,16 +27,16 @@ Estos encuentros, tanto de la selección absoluta como de la Sub-21, permiten qu
 
 ---
 
-## Beneficios de participar en los partidos de selección
+### Beneficios de participar en los partidos de selección
 
-### Reducción de salarios
+#### Reducción de salarios
 
 Los jugadores convocados reciben una reducción salarial significativa, lo que alivia los costos para los clubes:
 
 - **40% menos** si juegan en un equipo de su país natal.
 - **33% menos** si juegan en un equipo extranjero.
 
-### Ganancia de experiencia
+#### Ganancia de experiencia
 
 La experiencia acumulada por los jugadores varía según la importancia del partido:
 
@@ -49,7 +49,7 @@ La experiencia acumulada por los jugadores varía según la importancia del part
 
 Esto convierte a los partidos de selección en una herramienta clave para el desarrollo a largo plazo de los jugadores.
 
-### Compensación por lesiones
+#### Compensación por lesiones
 
 Si un jugador sufre una lesión durante un partido de selección, el club recibe una compensación económica:
 
@@ -57,29 +57,29 @@ Si un jugador sufre una lesión durante un partido de selección, el club recibe
 
 ---
 
-## Consideraciones clave en los partidos de selección
+### Consideraciones clave en los partidos de selección
 
-### Entrenamiento
+#### Entrenamiento
 
 - Los partidos de selección no contribuyen al entrenamiento semanal del jugador.
 
-### Amonestaciones y expulsiones
+#### Amonestaciones y expulsiones
 
 - Las sanciones disciplinarias aplican únicamente a los partidos de selección y no afectan los encuentros de club.
 
-### Ventaja de local
+#### Ventaja de local
 
 - La ventaja por jugar como local en partidos de selección es menor, siendo similar a jugar como visitante en un derbi.
 
-### Sin bonificación por fidelidad
+#### Sin bonificación por fidelidad
 
 - Los jugadores no reciben la bonificación por fidelidad en estos encuentros.
 
 ---
 
-## Estrategias y mecánicas especiales
+### Estrategias y mecánicas especiales
 
-### Nieblas de guerra
+#### Nieblas de guerra
 
 La 'niebla de guerra' es una mecánica estratégica que oculta información clave antes del partido, permitiendo a los seleccionadores planificar tácticas sin que sus rivales puedan ajustar sus estrategias en tiempo real:
 
@@ -89,7 +89,7 @@ La 'niebla de guerra' es una mecánica estratégica que oculta información clav
 
 ---
 
-## Recomendaciones finales para managers
+### Recomendaciones finales para managers
 
 Si tienes jugadores convocados por su selección, ten en cuenta lo siguiente:
 
@@ -99,7 +99,7 @@ Si tienes jugadores convocados por su selección, ten en cuenta lo siguiente:
 
 ---
 
-## Puntos clave para recordar
+### Puntos clave para recordar
 
 - Los partidos de selección son esenciales para el desarrollo de los jugadores y ofrecen ventajas económicas a los clubes.
 - Aunque no contribuyen al entrenamiento, generan experiencia y reducen costos salariales.

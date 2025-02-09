@@ -11,23 +11,23 @@ featured: false
 published: true
 ---
 
-# Diseñar el uniforme de la selección nacional en Hattrick
+## Diseñar el uniforme de la selección nacional en Hattrick
 
 El uniforme nacional es uno de los elementos más distintivos de cualquier equipo, ya que representa la identidad y el orgullo de una selección. En Hattrick, los seleccionadores tienen la responsabilidad de configurar los colores y diseños que identifican a su equipo en el campo de juego.
 
 ---
 
-## La importancia del uniforme nacional
+### La importancia del uniforme nacional
 
 El uniforme es un símbolo de unidad, historia y representación nacional. En Hattrick, los seleccionadores pueden reflejar estos valores al elegir diseños que honren los colores tradicionales del país y fortalezcan la conexión con su comunidad de usuarios.
 
 ---
 
-## Cómo configurar el uniforme nacional
+### Cómo configurar el uniforme nacional
 
 Los seleccionadores pueden personalizar dos tipos de uniformes: principal y alternativo.
 
-### Pasos para configurar el uniforme
+#### Pasos para configurar el uniforme
 
 1. **Accede al panel de la selección:**  
    Desde el menú principal, selecciona la página de tu equipo nacional.
@@ -48,7 +48,7 @@ Los seleccionadores pueden personalizar dos tipos de uniformes: principal y alte
 
 ---
 
-## Consejos para diseñar un uniforme representativo
+### Consejos para diseñar un uniforme representativo
 
 - **Investiga los colores históricos:**  
    Utiliza combinaciones tradicionales que representen el orgullo nacional.
@@ -61,7 +61,7 @@ Los seleccionadores pueden personalizar dos tipos de uniformes: principal y alte
 
 ---
 
-## Errores comunes al diseñar el uniforme
+### Errores comunes al diseñar el uniforme
 
 - **Ignorar la identidad nacional:**  
    Elegir colores alejados de los tradicionales puede generar críticas de la comunidad.
@@ -74,7 +74,7 @@ Los seleccionadores pueden personalizar dos tipos de uniformes: principal y alte
 
 ---
 
-## Puntos clave para recordar
+### Puntos clave para recordar
 
 - El uniforme representa la identidad y el orgullo de la selección nacional.
 - Configurar adecuadamente los uniformes principal y alternativo es una tarea clave del seleccionador.

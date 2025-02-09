@@ -11,17 +11,17 @@ featured: false
 published: true
 ---
 
-# Optimizar el Entrenamiento Juvenil en Hattrick
+## Optimizar el Entrenamiento Juvenil en Hattrick
 
 El entrenamiento es clave para transformar juveniles en futuras estrellas de tu equipo o en valiosos activos para el mercado de transferencias. Con una estrategia adecuada, puedes aprovechar al máximo el potencial de tus jugadores y construir una cantera sólida.
 
 ---
 
-## ¿Cómo Funciona el Entrenamiento Juvenil?
+### ¿Cómo Funciona el Entrenamiento Juvenil?
 
 El sistema permite entrenar dos habilidades cada semana: un **entrenamiento primario** (impacto mayor) y un **entrenamiento secundario** (impacto menor pero útil para evaluar el potencial).
 
-### Diferencias Entre Entrenamiento Primario y Secundario
+#### Diferencias Entre Entrenamiento Primario y Secundario
 
 - **Primario:** Mejora directamente la habilidad actual del jugador.
 - **Secundario:** Aumenta menos la habilidad, pero revela el potencial máximo.
@@ -30,9 +30,9 @@ Una combinación inteligente de ambos entrenamientos puede acelerar el desarroll
 
 ---
 
-## Estrategias para Diseñar un Entrenamiento Efectivo
+### Estrategias para Diseñar un Entrenamiento Efectivo
 
-### Selección de Habilidades a Entrenar
+#### Selección de Habilidades a Entrenar
 
 1. **Focalización en Habilidades Clave**
 
@@ -43,18 +43,18 @@ Una combinación inteligente de ambos entrenamientos puede acelerar el desarroll
    - Coloca a los jugadores en posiciones que coincidan con las habilidades que estás entrenando.
    - Ejemplo: Defensas centrales deben entrenar defensa; delanteros, anotación.
 
-### Factores Importantes para el Entrenamiento
+#### Factores Importantes para el Entrenamiento
 
 - **Tiempo en el Campo:** Los jugadores deben participar al menos **44 minutos por partido** en una posición entrenable.
 - **Prioridad de Partidos:** Los partidos de liga tienen más impacto que los amistosos, aunque estos últimos son ideales para entrenar habilidades secundarias.
 
 ---
 
-## ¿Cómo Usar los Reportes del Entrenador?
+### ¿Cómo Usar los Reportes del Entrenador?
 
 Tras cada partido, recibirás reportes del entrenador que te ayudarán a optimizar el entrenamiento y a tomar decisiones informadas.
 
-### Elementos Clave del Reporte
+#### Elementos Clave del Reporte
 
 1. **Progreso Actual:**
 
@@ -69,7 +69,7 @@ Tras cada partido, recibirás reportes del entrenador que te ayudarán a optimiz
 
 ---
 
-## Requisitos para Maximizar el Entrenamiento
+### Requisitos para Maximizar el Entrenamiento
 
 Para asegurar que el entrenamiento sea efectivo y los reportes sean completos, considera estos puntos:
 
@@ -79,21 +79,21 @@ Para asegurar que el entrenamiento sea efectivo y los reportes sean completos, c
 
 ---
 
-## Estrategias Avanzadas para Entrenar Juveniles
+### Estrategias Avanzadas para Entrenar Juveniles
 
-### Equilibrio Entre Desarrollo y Evaluación
+#### Equilibrio Entre Desarrollo y Evaluación
 
 - Usa partidos amistosos para entrenar habilidades secundarias o experimentar con posiciones.
 - En los partidos de liga, prioriza habilidades cruciales para tu táctica o necesidades futuras.
 
-### Gestión de Talento Juvenil
+#### Gestión de Talento Juvenil
 
 - Identifica rápidamente a los jugadores con menor potencial para centrar recursos en los más prometedores.
 - Rota jugadores entre partidos de liga y amistosos para equilibrar desarrollo y análisis.
 
 ---
 
-## Puntos Clave para Recordar
+### Puntos Clave para Recordar
 
 - Combina habilidades clave en entrenamientos primarios y secundarios para maximizar el desarrollo y descubrir potencial.
 - Prioriza partidos de liga para mejorar habilidades importantes, pero usa los amistosos para analizar y probar alternativas.

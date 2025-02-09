@@ -96,32 +96,23 @@ layout: default
           <!-- Artículos Destacados -->
           <div class="card mb-3">
             <div class="card-content">
-              <h2
-                id="featured-articles-title"
-                class="title is-5 has-text-weight-semibold mb-3"
-              >
-                <a
-                  href="{{ '/destacados/' | relative_url }}"
-                  class="has-text-link"
-                  >Artículos Destacados</a
-                >
+              <h2 class="title is-5 has-text-weight-semibold mb-3">
+                Artículos Destacados
               </h2>
-              <div class="menu" aria-labelledby="featured-articles-title">
+              <div class="featured-list">
                 {% assign featured_posts = site.posts | where: "featured", true
                 | where: "published", true | limit: 5 %} {% if
                 featured_posts.size > 0 %} {% for post in featured_posts %}
-                <a
-                  href="{{ post.url | relative_url }}"
-                  class="menu-item"
-                  aria-label="Leer: {{ post.title }}"
-                >
-                  <strong>{{ post.title }}</strong>
-                  <time
-                    datetime="{{ post.date | date_to_xmlschema }}"
-                    class="is-size-7 has-text-grey"
-                  >
-                    {{ post.date | date: "%d/%m/%Y" }}
-                  </time>
+                <a href="{{ post.url | relative_url }}" class="featured-item">
+                  <div class="featured-info">
+                    <strong>{{ post.title }}</strong>
+                    <time
+                      datetime="{{ post.date | date_to_xmlschema }}"
+                      class="is-size-7 has-text-grey"
+                    >
+                      {{ post.date | date: "%d/%m/%Y" }}
+                    </time>
+                  </div>
                 </a>
                 {% endfor %} {% else %}
                 <p class="has-text-grey">No hay artículos destacados</p>

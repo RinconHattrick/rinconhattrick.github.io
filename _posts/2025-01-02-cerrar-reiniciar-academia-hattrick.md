@@ -11,13 +11,13 @@ featured: false
 published: true
 ---
 
-# Cerrar o Reiniciar tu Academia Juvenil en Hattrick
+## Cerrar o Reiniciar tu Academia Juvenil en Hattrick
 
 A lo largo de tu experiencia como manager en Hattrick, puede surgir la necesidad de cerrar o reiniciar tu academia juvenil. Ya sea por motivos estratégicos o porque deseas un nuevo comienzo, esta decisión requiere planificación y una evaluación cuidadosa.
 
 ---
 
-## ¿Por Qué Deberías Considerar Cerrar o Reiniciar tu Academia Juvenil?
+### ¿Por Qué Deberías Considerar Cerrar o Reiniciar tu Academia Juvenil?
 
 Tomar esta decisión puede ser beneficioso en ciertas circunstancias:
 
@@ -27,26 +27,26 @@ Tomar esta decisión puede ser beneficioso en ciertas circunstancias:
 
 ---
 
-## Condiciones para Cerrar tu Academia Juvenil
+### Condiciones para Cerrar tu Academia Juvenil
 
-### ¿Cuándo Puedes Cerrar la Academia?
+#### ¿Cuándo Puedes Cerrar la Academia?
 
 Puedes desactivar tu academia juvenil en los siguientes escenarios:
 
 - **Entre temporadas de juveniles**.
 - **Sin liga activa**: Si tu equipo no pertenece a ninguna liga activa.
 
-### Requisitos Mínimos para el Cierre
+#### Requisitos Mínimos para el Cierre
 
 - El equipo juvenil debe haber estado operativo durante al menos **6 semanas** desde su apertura.
 
 ---
 
-## Todo lo que Necesitas Saber para Reiniciar tu Academia Juvenil
+### Todo lo que Necesitas Saber para Reiniciar tu Academia Juvenil
 
 Reiniciar implica comenzar desde cero con un nuevo equipo juvenil. Es una opción útil si sientes que la generación actual no tiene suficiente potencial. Sin embargo, esta decisión tiene limitaciones importantes.
 
-### Requisitos para Reiniciar
+#### Requisitos para Reiniciar
 
 1. **Inactividad reciente**:
 
@@ -56,7 +56,7 @@ Reiniciar implica comenzar desde cero con un nuevo equipo juvenil. Es una opció
 2. **Frecuencia limitada**:
    - Solo puedes reiniciar una vez cada **3 temporadas** (48 semanas).
 
-### ¿Qué Sucede al Reiniciar?
+#### ¿Qué Sucede al Reiniciar?
 
 - Todos los **ojeadores y jugadores juveniles** serán despedidos.
 - El equipo anterior permanecerá en su liga actual.
@@ -64,7 +64,7 @@ Reiniciar implica comenzar desde cero con un nuevo equipo juvenil. Es una opció
 
 ---
 
-## Pasos para Cerrar o Reiniciar tu Academia Juvenil
+### Pasos para Cerrar o Reiniciar tu Academia Juvenil
 
 Sigue estos pasos para completar el proceso:
 
@@ -78,7 +78,7 @@ Sigue estos pasos para completar el proceso:
 
 ---
 
-## Consejos Antes de Tomar la Decisión
+### Consejos Antes de Tomar la Decisión
 
 - **Evalúa el potencial actual**: Usa informes de ojeadores y partidos para analizar si hay jugadores valiosos en tu academia.
 - **Considera los costos**: Aunque cerrar o reiniciar puede reducir gastos, también puede limitar tus opciones futuras.
@@ -86,7 +86,7 @@ Sigue estos pasos para completar el proceso:
 
 ---
 
-## Comparativa: Cerrar vs. Reiniciar
+### Comparativa: Cerrar vs. Reiniciar
 
 - **Cerrar Academia**
 
@@ -109,7 +109,7 @@ Sigue estos pasos para completar el proceso:
 
 ---
 
-## Puntos Clave para Recordar
+### Puntos Clave para Recordar
 
 - **Evalúa tus necesidades**: Decide si cerrar o reiniciar es lo más adecuado según tus objetivos y recursos.
 - **Planifica cuidadosamente**: Ambas decisiones son irreversibles y requieren cumplir con condiciones específicas.

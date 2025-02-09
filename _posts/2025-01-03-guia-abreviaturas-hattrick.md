@@ -11,9 +11,9 @@ featured: false
 published: true
 ---
 
-# Guía completa de abreviaturas en Hattrick
+## Guía completa de abreviaturas en Hattrick
 
-## En el dinámico mundo de Hattrick, las abreviaturas son herramientas esenciales para comunicarte eficazmente y comprender los aspectos clave del juego. Dominarlas te permitirá interactuar mejor con la comunidad y optimizar tu experiencia.
+En el dinámico mundo de Hattrick, las abreviaturas son herramientas esenciales para comunicarte eficazmente y comprender los aspectos clave del juego. Dominarlas te permitirá interactuar mejor con la comunidad y optimizar tu experiencia.
 
 ### Abreviaturas por Categoría
 

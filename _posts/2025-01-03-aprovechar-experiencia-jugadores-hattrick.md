@@ -11,7 +11,7 @@ featured: false
 published: true
 ---
 
-# Aprovechar la experiencia de los jugadores en Hattrick
+## Aprovechar la experiencia de los jugadores en Hattrick
 
 La experiencia en Hattrick es un valor independiente de las habilidades técnicas de un jugador, pero es crucial para su rendimiento en el campo. Un jugador experimentado puede marcar la diferencia en partidos clave al evitar la desorganización, contribuir a eventos especiales como goles o defensas decisivas y liderar al equipo en situaciones de alta presión.
 
@@ -19,7 +19,7 @@ En este artículo, exploraremos cómo funciona la experiencia, cómo los jugador
 
 ---
 
-## ¿Qué es la experiencia y por qué importa?
+### ¿Qué es la experiencia y por qué importa?
 
 La experiencia es una medida del conocimiento táctico y emocional de un jugador en situaciones de juego. A diferencia de habilidades como el pase o la defensa, la experiencia influye en aspectos como:
 
@@ -31,18 +31,18 @@ Un jugador necesita acumular 100 puntos de experiencia para alcanzar un nuevo ni
 
 ---
 
-## ¿Cómo se acumula la experiencia?
+### ¿Cómo se acumula la experiencia?
 
 No todos los partidos contribuyen de la misma manera a la experiencia de un jugador. A continuación, presentamos unas tablas con los puntos de experiencia otorgados por cada tipo de partido:
 
-### **Encuentros Juveniles**
+#### **Encuentros Juveniles**
 
 | **Tipo de Encuentro Juvenil** | **Puntos de Experiencia** |
 | ----------------------------- | ------------------------- |
 | Partido juvenil               | 3.5                       |
 | Amistoso juvenil              | 0.35                      |
 
-### **Selecciones Nacionales**
+#### **Selecciones Nacionales**
 
 | **Tipo de Encuentro de Selecciones**  | **Puntos de Experiencia** |
 | ------------------------------------- | ------------------------- |
@@ -56,7 +56,7 @@ No todos los partidos contribuyen de la misma manera a la experiencia de un juga
 | Copa de Naciones (Eliminatorias)      | 14                        |
 | Liga de Aspirantes                    | 7                         |
 
-### **Equipo Mayor**
+#### **Equipo Mayor**
 
 | **Tipo de Encuentro del Equipo Mayor** | **Puntos de Experiencia** |
 | -------------------------------------- | ------------------------- |
@@ -72,33 +72,33 @@ Como puedes observar, los partidos más importantes, como la **Copa del Mundo** 
 
 ---
 
-## Estrategias para maximizar la experiencia
+### Estrategias para maximizar la experiencia
 
 Aquí tienes consejos prácticos para ayudar a tus jugadores a acumular experiencia de manera eficiente:
 
-### 1. **Prioriza los partidos de alto impacto**
+#### 1. **Prioriza los partidos de alto impacto**
 
 - Participa en torneos importantes como la **Copa Nacional** y los **Hattrick Masters** para que tus jugadores ganen más puntos rápidamente.
 
-### 2. **Incluye jugadores en partidos internacionales**
+#### 2. **Incluye jugadores en partidos internacionales**
 
 - Los amistosos internacionales y los partidos de selección nacional ofrecen más experiencia que los encuentros locales. Alinea estratégicamente a tus jugadores en estas oportunidades.
 
-### 3. **Desarrolla a tus jóvenes desde el inicio**
+#### 3. **Desarrolla a tus jóvenes desde el inicio**
 
 - Los partidos juveniles, tanto de liga como amistosos, son una excelente manera de acumular experiencia en los futuros pilares de tu equipo.
 
-### 4. **No subestimes los amistosos**
+#### 4. **No subestimes los amistosos**
 
 - Aunque aportan menos puntos, los amistosos regulares mantienen a los jugadores activos y ayudan a los suplentes a mejorar su experiencia gradualmente.
 
-### 5. **Evita sobrecargar a tus jugadores**
+#### 5. **Evita sobrecargar a tus jugadores**
 
 - Gestiona su participación en partidos para evitar fatiga o lesiones. Un jugador fresco será más eficiente tanto en rendimiento como en acumulación de experiencia.
 
 ---
 
-## Cómo identificar la mejora en experiencia
+### Cómo identificar la mejora en experiencia
 
 Aunque no existe un indicador visible para saber exactamente cuándo un jugador sube de nivel, puedes observar su rendimiento en partidos clave. Los jugadores experimentados suelen:
 
@@ -107,7 +107,7 @@ Aunque no existe un indicador visible para saber exactamente cuándo un jugador 
 
 ---
 
-## Puntos Clave para Recordar
+### Puntos Clave para Recordar
 
 - **La experiencia marca la diferencia**: Mejora el rendimiento de los jugadores en momentos críticos, como finales o partidos de promoción.
 - **No todos los partidos son iguales**: Participar en competiciones clave como la Copa del Mundo o los Hattrick Masters es crucial para acumular experiencia rápidamente.
