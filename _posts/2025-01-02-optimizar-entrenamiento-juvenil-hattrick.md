@@ -6,7 +6,7 @@ date: 2025-01-07
 categories: equipo-juvenil
 tags: [entrenamiento, juveniles, estrategia]
 excerpt: "Descubre cómo maximizar el desarrollo de tus juveniles con estrategias de entrenamiento efectivas."
-image: "/assets/img/user.png"
+image: "/assets/img/HT.jpg"
 featured: false
 published: true
 ---
@@ -17,7 +17,7 @@ El entrenamiento es clave para transformar juveniles en futuras estrellas de tu 
 
 ---
 
-## Cómo Funciona el Entrenamiento Juvenil
+## ¿Cómo Funciona el Entrenamiento Juvenil?
 
 El sistema permite entrenar dos habilidades cada semana: un **entrenamiento primario** (impacto mayor) y un **entrenamiento secundario** (impacto menor pero útil para evaluar el potencial).
 
@@ -50,7 +50,7 @@ Una combinación inteligente de ambos entrenamientos puede acelerar el desarroll
 
 ---
 
-## Cómo Usar los Reportes del Entrenador
+## ¿Cómo Usar los Reportes del Entrenador?
 
 Tras cada partido, recibirás reportes del entrenador que te ayudarán a optimizar el entrenamiento y a tomar decisiones informadas.
 

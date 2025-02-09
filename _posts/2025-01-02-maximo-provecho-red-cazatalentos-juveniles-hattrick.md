@@ -6,7 +6,7 @@ date: 2025-01-03
 categories: equipo-juvenil
 tags: [cazatalentos, ojeadores, refuerzos]
 excerpt: "Descubre cómo optimizar el uso de la red de cazatalentos para reforzar tu equipo en Hattrick."
-image: "/assets/img/user.png"
+image: "/assets/img/HT.jpg"
 featured: false
 published: true
 ---
@@ -29,7 +29,7 @@ La red de cazatalentos te permite contratar ojeadores para buscar jugadores pote
 
 ---
 
-## Cómo Funciona la Red de Cazatalentos
+## ¿Cómo Funciona la Red de Cazatalentos?
 
 ### Proceso de Reclutamiento
 
@@ -60,7 +60,7 @@ La red de cazatalentos te permite contratar ojeadores para buscar jugadores pote
 
 ---
 
-## Cómo Optimizar el Uso de la Red de Cazatalentos
+## ¿Cómo Optimizar el Uso de la Red de Cazatalentos?
 
 ### Gestión de Ojeadores
 

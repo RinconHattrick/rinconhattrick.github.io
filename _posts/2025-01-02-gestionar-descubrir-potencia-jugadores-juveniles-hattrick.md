@@ -6,7 +6,7 @@ date: 2025-01-05
 categories: equipo-juvenil
 tags: [juveniles, gestión, entrenamiento]
 excerpt: "Descubre cómo sacar el máximo provecho de tus juveniles en Hattrick con estrategias de evaluación y entrenamiento."
-image: "/assets/img/user.png"
+image: "/assets/img/HT.jpg"
 featured: false
 published: true
 ---
@@ -27,7 +27,7 @@ Cuando reclutas jugadores para tu equipo juvenil, estos tienen características 
 
 ---
 
-## Cómo Evaluar a Tus Jugadores Juveniles
+## ¿Cómo Evaluar a Tus Jugadores Juveniles?
 
 La evaluación efectiva de tus juveniles es fundamental para aprovechar su potencial al máximo.
 

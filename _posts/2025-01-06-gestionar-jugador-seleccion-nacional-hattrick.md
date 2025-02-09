@@ -6,7 +6,7 @@ date: 2025-01-10
 categories: selecciones-nacionales
 tags: [gestión, selección, jugadores]
 excerpt: "Descubre cómo maximizar el rendimiento de tus internacionales mientras proteges los intereses de tu club, y lleva a tu equipo al éxito en todos los frentes."
-image: "/assets/img/user.png"
+image: "/assets/img/HT.jpg"
 featured: false
 published: true
 ---

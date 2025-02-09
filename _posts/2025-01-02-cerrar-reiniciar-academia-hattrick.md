@@ -6,7 +6,7 @@ date: 2025-01-12
 categories: equipo-juvenil
 tags: [juveniles, cierre, reinicio]
 excerpt: "¿Es hora de cerrar o reiniciar tu academia juvenil en Hattrick? Descubre los motivos, condiciones y pasos necesarios para tomar la mejor decisión."
-image: "/assets/img/user.png"
+image: "/assets/img/HT.jpg"
 featured: false
 published: true
 ---
@@ -86,7 +86,7 @@ Sigue estos pasos para completar el proceso:
 
 ---
 
-## Tabla Comparativa: Cerrar vs. Reiniciar
+## Comparativa: Cerrar vs. Reiniciar
 
 - **Cerrar Academia**
 

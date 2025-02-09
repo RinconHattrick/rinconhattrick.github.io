@@ -6,7 +6,7 @@ date: 2025-01-08
 categories: equipo-juvenil
 tags: [partidos, tácticas, desarrollo]
 excerpt: "Descubre cómo maximizar el desarrollo de tus jugadores juveniles y afinar tus estrategias a través de los partidos en Hattrick."
-image: "/assets/img/user.png"
+image: "/assets/img/HT.jpg"
 featured: false
 published: true
 ---
@@ -28,7 +28,7 @@ Las órdenes tácticas en los partidos juveniles funcionan de manera similar a l
 
 ---
 
-## Cómo Configurar Alineaciones y Tácticas
+## ¿Cómo Configurar Alineaciones y Tácticas?
 
 La planificación antes de cada partido es crucial para sacar el máximo provecho a tu equipo juvenil.
 
@@ -70,7 +70,7 @@ Los amistosos son una herramienta invaluable para probar tácticas y desarrollar
 - Facilitan la experimentación con nuevas tácticas y posiciones.
 - Ayudan a mantener activos a jugadores que no participan regularmente en partidos de liga.
 
-### Cómo Organizar un Amistoso
+### ¿Cómo Organizar un Amistoso?
 
 1. **Busca un rival:** Encuentra oponentes disponibles en tu liga juvenil o en ligas internacionales.
 2. **Define tus objetivos:** Decide si el amistoso será para pruebas tácticas, desarrollo de jugadores jóvenes o ambas cosas.

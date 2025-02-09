@@ -6,7 +6,7 @@ date: 2025-01-01
 categories: equipo-mayor
 tags: [gestión de equipo, finanzas, entrenamiento]
 excerpt: "Descubre cómo gestionar tu club en Hattrick con estrategias clave para principiantes."
-image: "/assets/img/user.png"
+image: "/assets/img/HT.jpg"
 featured: false
 published: true
 ---

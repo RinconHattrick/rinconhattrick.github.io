@@ -6,7 +6,7 @@ date: 2025-01-20
 categories: selecciones-nacionales
 tags: [calendario, selecciones, estrategia]
 excerpt: "Descubre cómo planificar estrategias y gestionar mejor tu equipo conociendo el calendario de temporadas en Hattrick, y lleva a tu selección al éxito."
-image: "/assets/img/user.png"
+image: "/assets/img/HT.jpg"
 featured: false
 published: true
 ---

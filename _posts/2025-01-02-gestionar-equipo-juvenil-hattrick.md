@@ -6,7 +6,7 @@ date: 2025-01-02
 categories: equipo-juvenil
 tags: [juveniles, gestión, estrategias]
 excerpt: "Aprende cómo gestionar y optimizar tu equipo juvenil en Hattrick para construir un club exitoso a largo plazo."
-image: "/assets/img/user.png"
+image: "/assets/img/HT.jpg"
 featured: false
 published: true
 ---

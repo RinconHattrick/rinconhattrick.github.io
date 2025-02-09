@@ -1,30 +1,30 @@
 ---
 layout: post
-title: "Clasificar al Mundial en Hattrick"
+title: "Clasificar al mundial en Hattrick"
 author: elPatronHT
 date: 2025-01-15
 categories: selecciones-nacionales
 tags: [Mundial, clasificación, Hattrick, selecciones]
 excerpt: "Conoce el camino hacia la Copa del Mundo en Hattrick y cómo clasificar con éxito."
-image: "/assets/img/user.png"
+image: "/assets/img/HT.jpg"
 featured: false
 published: true
 ---
 
-# Clasificar al Mundial en Hattrick
+# Clasificar al mundial en Hattrick
 
-Clasificar al Mundial es uno de los mayores logros y retos para una selección nacional en Hattrick. Este proceso exige una combinación de planificación estratégica, manejo eficiente del equipo y enfoque competitivo.
+Clasificar al mundial es uno de los mayores logros, y retos, para una selección nacional en Hattrick. Este proceso exige una combinación de planificación estratégica, manejo eficiente del equipo y enfoque competitivo.
 
 ---
 
 ## Entendiendo el Sistema de Clasificación
 
-El Mundial reúne a las **96 mejores selecciones nacionales**. La clasificación tiene dos vías principales:
+El mundial reúne a las **96 mejores selecciones nacionales**. La clasificación tiene dos vías principales:
 
 - **Clasificación directa:** Según los resultados en las Copas Continentales.
 - **Repesca:** Una segunda oportunidad para equipos destacados que no logran la clasificación directa.
 
-El objetivo es garantizar competitividad y representación equilibrada de todas las regiones.
+El objetivo es asegurar que todas las regiones tengan una representación justa y que el torneo sea competitivo.
 
 ---
 
@@ -32,24 +32,27 @@ El objetivo es garantizar competitividad y representación equilibrada de todas 
 
 Cada continente tiene un número asignado de plazas basadas en su tamaño y desempeño histórico:
 
-- **Europa**
+- **Europa**
+
   - **Equipos Totales:** 48
-  - **Plazas para el Mundial:** 32
+  - **Plazas:** 32
   - **Clasificados por Grupo:** 4
 
 - **Asia/Oceanía**
+
   - **Equipos Totales:** 42
-  - **Plazas para el Mundial:** 21
+  - **Plazas:** 21
   - **Clasificados por Grupo:** 3
 
 - **África**
+
   - **Equipos Totales:** 24
-  - **Plazas para el Mundial:** 12
+  - **Plazas:** 12
   - **Clasificados por Grupo:** 3
 
 - **América**
   - **Equipos Totales:** 30
-  - **Plazas para el Mundial:** 20
+  - **Plazas:** 20
   - **Clasificados por Grupo:** 4
 
 > **Dato curioso:** Las plazas se ajustan periódicamente según el rendimiento de las selecciones en ediciones anteriores.
@@ -60,18 +63,18 @@ Cada continente tiene un número asignado de plazas basadas en su tamaño y dese
 
 ### ¿Quiénes Participan?
 
-La repesca otorga **11 plazas adicionales** para el Mundial. Participan:
+La repesca otorga **11 plazas adicionales** para el mundial. Participan:
 
 - Los **20 mejores equipos no clasificados directamente** en las Copas Continentales.
 - Los **2 mejores equipos** de la Liga de Aspirantes.
 
-Los criterios de selección incluyen:
+Los criterios de selección para la repesca incluyen:
 
 1. **Puntos obtenidos.**
 2. **Diferencia de goles.**
 3. **Goles anotados.**
 
-### Estructura de la Repesca
+### Detalles de la Fase de Repesca
 
 | **Aspecto**               | **Detalle**                                                           |
 | ------------------------- | --------------------------------------------------------------------- |
@@ -90,7 +93,7 @@ Los criterios de selección incluyen:
 
 - **Identifica partidos clave:** Prioriza enfrentar a tus rivales directos con tus mejores estrategias.
 - **Maximiza tu diferencia de goles:** Gana cómodamente contra selecciones más débiles para obtener una ventaja en el desempate.
-- **Planifica el entrenamiento:** Mantén a tus jugadores clave en forma y enfocados en habilidades críticas.
+- **Planifica el entrenamiento:** Mantén a tus jugadores clave en su mejor forma.
 
 ### Prepara el Equipo para la Repesca
 
@@ -102,10 +105,15 @@ Los criterios de selección incluyen:
 
 - **Consulta en foros nacionales:** Aprende de las experiencias de otros managers.
 - **Comparte tus planes:** Genera unidad y aprovecha los análisis adicionales sobre tus rivales.
+- **Únete a la conversación:** ¡Juntos, podemos alcanzar la gloria!
 
 ---
 
 ## Preguntas Frecuentes
+
+### ¿Cómo funciona el sistema de clasificación en Hattrick?
+
+El sistema de clasificación tiene dos fases: directa en las Copas Continentales o mediante la repesca.
 
 ### ¿Qué criterios definen un empate en puntos?
 

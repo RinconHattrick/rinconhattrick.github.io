@@ -6,7 +6,7 @@ date: 2025-01-06
 categories: equipo-juvenil
 tags: [ojeadores, estrategia, juveniles]
 excerpt: "Aprende a gestionar y sacar el máximo provecho a los ojeadores juveniles en Hattrick para construir un equipo competitivo."
-image: "/assets/img/user.png"
+image: "/assets/img/HT.jpg"
 featured: false
 published: true
 ---
@@ -34,7 +34,7 @@ Los ojeadores son empleados que buscan nuevos talentos para tu equipo juvenil. P
 
 ---
 
-## Cómo Contratar y Gestionar a los Ojeadores
+## ¿Cómo Contratar y Gestionar a los Ojeadores?
 
 ### Pasos para Contratar Ojeadores
 
@@ -49,7 +49,7 @@ Los ojeadores son empleados que buscan nuevos talentos para tu equipo juvenil. P
 
 ---
 
-## Buscar Jugadores por Posición: ¿Conviene?
+## ¿Buscar Jugadores por Posición? ¿Conviene?
 
 ### Ventajas
 

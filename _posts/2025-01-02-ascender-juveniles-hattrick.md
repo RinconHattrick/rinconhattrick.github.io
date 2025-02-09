@@ -6,7 +6,7 @@ date: 2025-01-11
 categories: equipo-juvenil
 tags: [juveniles, ascenso, equipo]
 excerpt: "Descubre cómo ascender juveniles al primer equipo en Hattrick con esta guía detallada. Aprende los requisitos, cuándo promocionarlos y cómo maximizar su potencial y valor."
-image: "/assets/img/user.png"
+image: "/assets/img/HT.jpg"
 featured: false
 published: true
 ---

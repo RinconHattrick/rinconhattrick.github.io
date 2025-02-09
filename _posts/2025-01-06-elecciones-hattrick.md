@@ -6,7 +6,7 @@ date: 2025-01-09
 categories: selecciones-nacionales
 tags: [elecciones, seleccionadores, votación]
 excerpt: "Descubre cómo funciona el sistema electoral en Hattrick para elegir a los seleccionadores nacionales, y sé parte del cambio que tu país necesita."
-image: "/assets/img/user.png"
+image: "/assets/img/HT.jpg"
 featured: false
 published: true
 ---

@@ -7,7 +7,7 @@ categories: selecciones-nacionales
 tags:
   [sorteo, Mundial, Hattrick, Copas Continentales, clasificación, estrategias]
 excerpt: "Descubre cómo funciona el sorteo del Mundial en Hattrick y las estrategias clave para enfrentarte a cualquier grupo con éxito, llevando a tu selección a lo más alto."
-image: "/assets/img/user.png"
+image: "/assets/img/HT.jpg"
 featured: false
 published: true
 ---

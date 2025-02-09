@@ -6,7 +6,7 @@ date: 2025-01-05
 categories: equipo-mayor
 tags: [Hattrick, experiencia, entrenamiento]
 excerpt: Descubre cómo la experiencia en Hattrick puede mejorar el rendimiento de tus jugadores y llevar a tu equipo al éxito.
-image: "/assets/img/user.png"
+image: "/assets/img/HT.jpg"
 featured: false
 published: true
 ---
@@ -21,7 +21,7 @@ En este artículo, exploraremos cómo funciona la experiencia, cómo los jugador
 
 ## ¿Qué es la experiencia y por qué importa?
 
-La experiencia es una medida del conocimiento táctico y emocional de un jugador en situaciones de juego. A diferencia de habilidades como pase o defensa, la experiencia influye en aspectos como:
+La experiencia es una medida del conocimiento táctico y emocional de un jugador en situaciones de juego. A diferencia de habilidades como el pase o la defensa, la experiencia influye en aspectos como:
 
 - **Evitar la desorganización táctica** del equipo.
 - **Participar en eventos especiales** que pueden generar goles o prevenirlos.
@@ -35,14 +35,14 @@ Un jugador necesita acumular 100 puntos de experiencia para alcanzar un nuevo ni
 
 No todos los partidos contribuyen de la misma manera a la experiencia de un jugador. A continuación, presentamos unas tablas con los puntos de experiencia otorgados por cada tipo de partido:
 
+### **Encuentros Juveniles**
+
 | **Tipo de Encuentro Juvenil** | **Puntos de Experiencia** |
 | ----------------------------- | ------------------------- |
 | Partido juvenil               | 3.5                       |
 | Amistoso juvenil              | 0.35                      |
 
----
-
-Selecciones Nacionales
+### **Selecciones Nacionales**
 
 | **Tipo de Encuentro de Selecciones**  | **Puntos de Experiencia** |
 | ------------------------------------- | ------------------------- |
@@ -56,9 +56,7 @@ Selecciones Nacionales
 | Copa de Naciones (Eliminatorias)      | 14                        |
 | Liga de Aspirantes                    | 7                         |
 
----
-
-Equipo Mayor
+### **Equipo Mayor**
 
 | **Tipo de Encuentro del Equipo Mayor** | **Puntos de Experiencia** |
 | -------------------------------------- | ------------------------- |

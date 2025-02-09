@@ -6,7 +6,7 @@ date: 2025-01-18
 categories: selecciones-nacionales
 tags: [Copa de Naciones, Hattrick, selecciones, torneo, ranking]
 excerpt: "Descubre cómo aprovechar la Copa de Naciones en Hattrick para mejorar tu selección nacional y escalar en el ranking, llevando a tu equipo al éxito en la competición."
-image: "/assets/img/user.png"
+image: "/assets/img/HT.jpg"
 featured: false
 published: true
 ---

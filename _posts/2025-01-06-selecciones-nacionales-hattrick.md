@@ -6,7 +6,7 @@ date: 2025-01-11
 categories: selecciones-nacionales
 tags: [selecciones, Hattrick, estrategias]
 excerpt: "Descubre cómo funcionan las selecciones nacionales en Hattrick y cómo puedes contribuir al éxito de tu país, convirtiéndote en un pilar fundamental para el crecimiento de tu nación en el juego."
-image: "/assets/img/user.png"
+image: "/assets/img/HT.jpg"
 featured: false
 published: true
 ---

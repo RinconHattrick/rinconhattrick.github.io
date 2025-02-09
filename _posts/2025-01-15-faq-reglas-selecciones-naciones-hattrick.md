@@ -6,7 +6,7 @@ date: 2025-01-02
 categories: preguntas-frecuentes
 tags: [FAQ, selecciones, Hattrick, reglas]
 excerpt: "Descubre todo lo que necesitas saber sobre las reglas que rigen las selecciones nacionales y Sub-21 en Hattrick, desde cómo se eligen los seleccionadores hasta cómo se gestionan las convocatorias."
-image: "/assets/img/ht.jpg"
+image: "/assets/img/HT.jpg"
 featured: false
 published: true
 ---
