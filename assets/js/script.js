@@ -5,8 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const menu = document.querySelector(".navbar-menu");
   const categoryToggle = document.getElementById("category-toggle");
   const categoryMenu = document.getElementById("category-menu");
-  const scrollToTopBtn = document.getElementById("scrollToTopBtn");
-  
+  const scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
   if (!scrollToTopBtn) return;
 
@@ -27,7 +26,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // Eventos
   window.addEventListener("scroll", toggleScrollToTopButton);
   scrollToTopBtn.addEventListener("click", scrollToTop);
-
 
   // --- Funcionalidad del Navbar Responsivo ---
 

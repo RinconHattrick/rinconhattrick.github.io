@@ -80,6 +80,7 @@
    ESTILOS BASE
    ========================================================================== */
 body {
+  font-family: sans-serif;
   background-color: var(--background);
   color: var(--text);
   transition: var(--transition-all);
@@ -97,39 +98,43 @@ h5,
 h6 {
   font-family: "Poppins", sans-serif;
   color: var(--primary-color);
-  margin-top: 1.5rem;
-  margin-bottom: 1rem;
+  margin: 1.5rem 0 1rem;
 }
 
-h1 {
-  font-size: 2.5rem;
+h1,
+h2 {
   font-weight: 700;
   border-bottom: 2px solid var(--primary-color);
   padding-bottom: 0.5rem;
 }
 
-h2 {
-  font-size: 2rem;
+h3,
+h4 {
   font-weight: 600;
-  border-bottom: 2px solid var(--primary-color);
-  padding-bottom: 0.5rem;
 }
 
+h5,
+h6 {
+  font-weight: 500;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 2.5rem);
+}
+h2 {
+  font-size: clamp(1.75rem, 4vw, 2rem);
+}
 h3 {
   font-size: 1.75rem;
 }
-
 h4 {
   font-size: 1.5rem;
 }
-
 h5 {
   font-size: 1.25rem;
 }
-
 h6 {
   font-size: 1rem;
-  font-weight: 500;
 }
 
 /* =========================================================================
@@ -187,7 +192,7 @@ a:active {
 }
 
 a:focus {
-  outline: px solid var(--secondary-color);
+  outline: 2px solid var(--secondary-color);
   outline-offset: 2px;
 }
 
@@ -259,6 +264,7 @@ th {
   overflow: hidden;
   background-color: var(--card-background);
   transition: var(--transition-standard);
+  will-change: transform;
 }
 
 .card:hover {
@@ -284,6 +290,7 @@ th {
 .button {
   transition: var(--transition-standard);
   font-weight: 500;
+  will-change: transform;
 }
 
 .button:hover {
@@ -444,6 +451,7 @@ mark {
   body {
     padding-top: 0;
   }
+
   .sticky-sidebar {
     position: static;
     max-height: none;
@@ -466,6 +474,7 @@ mark {
   .column {
     padding: 0.2rem;
   }
+
   .navbar-dropdown {
     display: none;
     max-height: 0;
@@ -508,8 +517,23 @@ mark {
     height: 2px;
     width: 18px;
   }
+
   .aside {
     display: none;
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (hover: hover) {
+  .button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
   }
 }
 
@@ -518,25 +542,24 @@ mark {
    ========================================================================== */
 .scroll-to-top-btn {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 50px;
-  height: 50px;
-  display: flex; /* Asegura que se muestre bien en móviles */
-  justify-content: center;
-  align-items: center;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background-color: var(--primary-color);
+  color: var(--background-light);
   border: none;
   border-radius: 50%;
-  padding: 10px;
-  font-size: 20px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
-  background-color: var(--primary-color);
-  color: white;
-  box-shadow: var(--shadow-md);
   opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
-  z-index: 1000; /* Asegura que el botón esté por encima de otros elementos */
+  transition: opacity 0.3s ease-in-out;
+}
+
+.scroll-to-top-btn.show {
+  opacity: 1;
 }
 
 .scroll-to-top-btn:hover {
@@ -562,7 +585,7 @@ mark {
 @media screen and (max-width: 767px) {
   .scroll-to-top-btn {
     right: 20px;
-    bottom: 100px; 
+    bottom: 90px;
   }
 }
 
@@ -584,10 +607,18 @@ mark {
   background-color: var(--card-background);
 }
 
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-color) var(--card-backgroundbg);
+}
 /* Para Firefox */
 * {
   scrollbar-width: thin;
   scrollbar-color: var(--primary-color) var(--card-background);
 }
 
- 
+.box {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeIn 0.3s ease-in-out forwards;
+}

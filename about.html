@@ -4,7 +4,7 @@ title: "Acerca de"
 permalink: /acerca-de/
 ---
 
-<div class="container py-5">
+<div class="container">
   <section class="section">
     <!-- Hero Header -->
     <section class="hero main-header">
@@ -16,10 +16,39 @@ permalink: /acerca-de/
       </div>
     </section>
 
+    <!-- Sobre el autor -->
+    <section class="section">
+      <div class="container">
+        <div class="box has-text-centered">
+          <figure class="image is-64x64 is-inline-block">
+            <img src="/assets/img/elPatronHT.jpeg" alt="Perfil en Hattrick" />
+          </figure>
+          <h2 class="title is-4 pt-4">Sobre el Autor</h2>
+          <p class="is-size-5">
+            ¡Hola! Soy <strong>elPatronHT</strong>, un apasionado de Hattrick y
+            la gestión de equipos de fútbol. A lo largo de los años, he
+            adquirido experiencia en la planificación de juveniles, tácticas de
+            juego y estrategias de selección nacional.
+          </p>
+          <p class="mt-3">
+            Puedes conocer más sobre mi equipo en Hattrick aquí:
+            <a
+              href="https://hattrick.org/goto.ashx?path=/Club/?TeamID=538167"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="has-text-link"
+            >
+              Mi equipo en Hattrick </a
+            >.
+          </p>
+        </div>
+      </div>
+    </section>
+
     <!-- Contenido -->
     <main class="section">
       <div class="container">
-        <article class="content is-medium">
+        <article class="content">
           <!-- Introducción -->
           <section class="box mb-6">
             <p class="has-text-justified">
@@ -53,14 +82,14 @@ permalink: /acerca-de/
                     <div class="has-text-centered mb-4">
                       <span class="icon">
                         <i
-                          class="fas {{ category_page.icon | default: 'fa-folder' }} fa-3x"
+                          class="fas {{ category_page.icon | default: 'fa-folder' }} fa-2x"
                           aria-label="{{ category_page.title | default: category_name }}"
                         ></i>
                       </span>
                     </div>
-                    <h3 class="title is-4 has-text-centered mb-4">
+                    <h2 class="title is-4 has-text-centered mb-4">
                       {{ category_page.title | default: category_name }}
-                    </h3>
+                    </h2>
                     <p class="has-text-justified">
                       {{ category_page.description | default: "Descripción no
                       disponible." }}
@@ -74,7 +103,7 @@ permalink: /acerca-de/
 
           <!-- Call to Action -->
           <section class="card has-text-centered p-6 mb-6">
-            <p class="is-size-4 has-text-weight-semibold mb-4">
+            <p class="is-size-5 has-text-weight-semibold mb-4">
               ¡Únete a nosotros y domina <em>Hattrick</em>, el mejor juego de
               gestión de fútbol en línea!
             </p>

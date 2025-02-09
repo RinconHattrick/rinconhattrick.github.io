@@ -13,17 +13,12 @@ permalink: /404.html
             <div class="card-content has-text-centered">
               <main role="alert">
                 <!-- Ícono de error -->
-                <div class="mb-6" aria-labelledby="error-title">
-                  <span class="icon is-large has-text-danger">
-                    <i class="fas fa-exclamation-circle fa-4x"></i>
-                  </span>
-                </div>
-
-                <p id="error-title" class="is-sr-only">
-                  Error 404: Página no encontrada
-                </p>
-
-                <h1 class="title is-2 has-text-danger mb-4">
+                <h1
+                  id="error-title"
+                  class="title is-2 has-text-danger mb-4"
+                  role="heading"
+                  aria-level="1"
+                >
                   ¡Ups! Página no encontrada
                 </h1>
 
@@ -37,12 +32,19 @@ permalink: /404.html
 
                 <!-- Botones de navegación -->
                 <div class="buttons is-centered">
-                  <a href="{{ '/' | relative_url }}" class="button is-link is-rounded">
+                  <a
+                    href="{{ '/' | relative_url }}"
+                    class="button is-link is-rounded"
+                  >
                     <span class="icon"><i class="fas fa-home"></i></span>
                     <span>Volver al Inicio</span>
                   </a>
 
-                  <a onclick="window.history.back()" class="button is-warning is-rounded" role="button">
+                  <a
+                    onclick="window.history.back()"
+                    class="button is-warning is-rounded"
+                    role="button"
+                  >
                     <span class="icon"><i class="fas fa-arrow-left"></i></span>
                     <span>Ir atrás</span>
                   </a>
@@ -56,7 +58,10 @@ permalink: /404.html
                     category_page = site.pages | where: "category", category[0]
                     | first %} {% if category_page and category_page.url != ""
                     %}
-                    <a href="{{ category_page.url | relative_url }}" class="button is-light">
+                    <a
+                      href="{{ category_page.url | relative_url }}"
+                      class="button is-light"
+                    >
                       {{ category_page.title | default: category[0] }}
                     </a>
                     {% endif %} {% endfor %}

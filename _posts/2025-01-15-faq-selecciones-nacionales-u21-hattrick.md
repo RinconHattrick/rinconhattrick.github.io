@@ -6,7 +6,7 @@ date: 2025-01-03
 categories: preguntas-frecuentes
 tags: [FAQ, selecciones, estrategias]
 excerpt: "Descubre todo lo que necesitas saber sobre la gestión y participación en las selecciones nacionales y Sub-21 en Hattrick, desde tácticas hasta aspectos clave que te ayudarán a triunfar."
-image: "/assets/img/user.png"
+image: "/assets/img/ht.jpg"
 featured: false
 published: true
 ---

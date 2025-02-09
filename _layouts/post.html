@@ -4,34 +4,45 @@ layout: with-sidebar
 
 <section class="section">
   <article class="container article">
-    <header class="media is-flex is-align-items-center mb-5">
-      {% if page.image %}
-      <div class="media-left">
-        <figure class="image is-32x32">
-          <img src="{{ page.image | relative_url }}" alt="Autor del artículo" class="is-rounded" loading="lazy"
-            width="32" height="32" />
+    <!-- Imagen Destacada -->
+    {% if page.image %}
+    <div class="columns is-centered mb-4">
+      <div class="column is-12-mobile is-10-tablet is-8-desktop">
+        <figure class="image is-16by9">
+          <img
+            src="{{ page.image | relative_url }}"
+            alt="Imagen del artículo"
+            loading="lazy"
+          />
         </figure>
       </div>
-      {% endif %}
+    </div>
+    {% endif %}
 
-      <div class="media-content is-flex is-align-items-center">
-        <div class="has-text-grey">
-          <time datetime="{{ page.date | date_to_xmlschema }}">
-            Publicado el {{ page.date | date: "%d/%m/%Y" }}
-          </time>
-          {% if page.author %}
-          <span class="mx-2">por</span>
-          <strong>{{ page.author }}</strong>
-          {% endif %}
-        </div>
+    <!-- Encabezado con fecha y autor -->
+    <header class="mb-5">
+      <div class="has-text-grey has-text-centered">
+        <time datetime="{{ page.date | date_to_xmlschema }}">
+          Publicado el {{ page.date | date: "%d/%m/%Y" }}
+        </time>
+        {% if page.author %}
+        <span class="mx-2">por</span>
+        <strong>{{ page.author }}</strong>
+        {% endif %}
       </div>
     </header>
 
     <section class="content">{{ content }}</section>
 
     <div class="has-text-centered my-6">
-      <button id="shareButton" class="button is-primary is-light is-rounded" aria-label="Compartir artículo"
-        title="Compartir este artículo" role="button" tabindex="0">
+      <button
+        id="shareButton"
+        class="button is-primary is-light is-rounded"
+        aria-label="Compartir artículo"
+        title="Compartir este artículo"
+        role="button"
+        tabindex="0"
+      >
         <span class="icon-text">
           <span class="icon">
             <i class="fas fa-share-alt" aria-hidden="true"></i>
@@ -43,19 +54,52 @@ layout: with-sidebar
   </article>
 </section>
 
-<footer class="footer py-5">
-  <nav class="level" aria-label="Navegación del artículo">
-    <div class="level-item has-text-centered">
-      <div class="buttons is-flex is-justify-content-center">
-        <a href="{{ '/' | relative_url }}" class="button is-link is-rounded" aria-label="Inicio">
-          <span class="icon-text">
-            <span class="icon">
-              <i class="fas fa-home" aria-hidden="true"></i>
-            </span>
-            <span>Volver al Inicio</span>
-          </span>
-        </a>
+<hr />
+
+<!-- Navegación entre artículos -->
+<div class="buttons is-centered mt-5">
+  {% if page.previous.url %}
+  <a href="{{ page.previous.url | relative_url }}" class="button is-light">
+    <span class="icon"><i class="fas fa-arrow-left"></i></span>
+    <span>Artículo Anterior</span>
+  </a>
+  {% endif %}
+
+  <a href="{{ '/' | relative_url }}" class="button is-link">
+    <span class="icon"><i class="fas fa-home"></i></span>
+    <span>Inicio</span>
+  </a>
+
+  {% if page.next.url %}
+  <a href="{{ page.next.url | relative_url }}" class="button is-light">
+    <span>Artículo Siguiente</span>
+    <span class="icon"><i class="fas fa-arrow-right"></i></span>
+  </a>
+  {% endif %}
+</div>
+
+<!-- Artículos relacionados -->
+<section class="section mt-6">
+  <h2 class="title is-4">Artículos Relacionados</h2>
+  <div class="columns is-multiline is-centered is-vcentered">
+    {% assign related_posts = site.categories[page.categories.first] |
+    where_exp: "post", "post.url != page.url" | limit:3 %} {% for post in
+    related_posts %}
+    <div class="column is-4">
+      <div class="card">
+        <div class="card-content">
+          <h3 class="title is-5">
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          </h3>
+          <p>{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
+          <a
+            href="{{ post.url | relative_url }}"
+            class="button is-primary is-small"
+            >Leer más</a
+          >
+        </div>
       </div>
     </div>
-  </nav>
-</footer>
+    {% endfor %}
+  </div>
+</section>

@@ -6,7 +6,7 @@ date: 2025-01-01
 categories: preguntas-frecuentes
 tags: [FAQ, selecciones, Hattrick, competiciones]
 excerpt: "Descubre todo lo que necesitas saber sobre las selecciones nacionales y Sub-21 en Hattrick, desde cómo funcionan las competiciones hasta las ventajas de tener jugadores en las selecciones."
-image: "/assets/img/user.png"
+image: "/assets/img/ht.jpg"
 featured: false
 published: true
 ---
