@@ -13,13 +13,13 @@ published: true
 
 ## Interpretar los colores en las habilidades de juveniles en Hattrick
 
-En Hattrick, los colores que aparecen en las habilidades de los juveniles, son claves para entender su nivel actual y potencial máximo, ayudándote a tomar decisiones informadas sobre su desarrollo. Interpretarlos correctamente te permitirá gestionar mejor el entrenamiento y tomar decisiones estratégicas en tu academia juvenil.
+En Hattrick, los colores que aparecen en las habilidades de los juveniles son claves para entender su nivel actual y potencial máximo, ayudándote a tomar decisiones informadas sobre su desarrollo. Entender estos colores te ayudará a gestionar mejor el entrenamiento y tomar decisiones estratégicas en tu academia juvenil.
 
 ---
 
 ### Estado desconocido: ¿Qué significa y qué hacer?
 
-Cuando una habilidad aparece como 'desconocida', significa que aún no tienes información sobre el nivel actual y el potencial máximo del jugador en esa habilidad.
+Cuando una habilidad aparece como 'desconocida', significa que aún no tienes información sobre el nivel actual ni el potencial máximo del jugador en esa habilidad.
 
 #### ¿Cómo se ve?
 
@@ -43,7 +43,7 @@ La barra gris indica que conoces el **potencial máximo**, pero no el **nivel ac
 
 #### Recomendación
 
-- Entrena al jugador en esta habilidad para descubrir su nivel actual y evaluar su utilidad en el equipo.
+- Entrena al jugador en esta habilidad para descubrir su nivel actual y evaluar si es útil para tu equipo.
 
 ---
 
@@ -59,12 +59,12 @@ La barra verde tiene diferentes significados dependiendo de los datos conocidos:
 2. **Nivel actual conocido pero potencial máximo desconocido.**
 
    - **Símbolo:** [🟩🟩/❓].
-   - **Interpretación:** Sabes dónde está ahora, pero no hasta dónde puede llegar.
+   - **Interpretación:** Conoces el nivel actual, pero no el potencial máximo.
 
 3. **Nivel actual revelado por los ojeadores, pero potencial máximo desconocido.**
 
    - **Símbolo:** [🟩🟩/❓].
-   - **Interpretación:** Sabes dónde está ahora, pero no el potencial máximo.
+   - **Interpretación:** Conoces el nivel actual, pero no el potencial máximo.
 
 4. **Desarrollo parcial.**
    - **Símbolo:** [🟩/🟩🟩].
@@ -78,7 +78,7 @@ La barra verde tiene diferentes significados dependiendo de los datos conocidos:
 
 ### Barra amarilla: Habilidad totalmente desarrollada
 
-La barra amarilla significa que la habilidad está completamente desarrollada, incluyendo todos los subniveles (por ejemplo, x.1 a x.9).
+La barra amarilla indica que la habilidad está completamente desarrollada, incluyendo todos los subniveles.
 
 #### ¿Cómo se ve?
 
@@ -97,4 +97,5 @@ La barra amarilla significa que la habilidad está completamente desarrollada, i
 - **Barra gris:** El potencial es conocido; entrena para revelar el nivel actual.
 - **Barra verde:** Indica progreso parcial o completo, dependiendo del contexto.
 - **Barra amarilla:** Representa que la habilidad está totalmente desarrollada y lista para ser aprovechada.
-- ¡Recuerda: interpretar correctamente los colores en las habilidades de tus juveniles es clave para su desarrollo. Utiliza esta información para maximizar su potencial y llevar tu equipo al éxito!
+
+¡Recuerda: entender estos colores es clave para el desarrollo de tus juveniles y el éxito de tu equipo! Interpretar correctamente estos colores no solo maximiza el potencial de tus juveniles, sino que también te coloca en el camino hacia el éxito.

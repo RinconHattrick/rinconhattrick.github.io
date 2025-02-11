@@ -17,31 +17,23 @@ title: "El Rincón de Hattrick"
         </section>
 
         <!-- Categorías con últimos 2 artículos -->
-        {% for category in site.categories %} {% assign category_name =
-        category[0] %} {% assign category_page = site.pages | where: "category",
-        category_name | first %} {% assign recent_posts = category[1] | sort:
-        "date" | reverse | slice: 0,2 %}
+        {% for category in site.categories %}
+        {% assign category_name = category[0] %}
+        {% assign category_page = site.pages | where: "category", category_name | first %}
+        {% assign recent_posts = category[1] | sort: "date" | reverse | slice: 0,2 %}
 
-        <section
-          id="{{ category_name | slugify }}"
-          class="mt-5"
-          role="region"
-          aria-labelledby="category-title-{{ category_name | slugify }}"
-        >
-          <div class="card">
-            <header class="card-header">
-              <h2
-                id="category-title-{{ category_name | slugify }}"
-                class="title is-3"
-              >
-                {{ category_page.title | default: category_name }}
+        <section id="{{ category_name | slugify }}" class="mt-5" role="region"
+          aria-labelledby="category-title-{{ category_name | slugify }}">
+          <div class="card has-text-centered">
+            <header class="card-header is-flex is-justify-content-center">
+              <h2 id="category-title-{{ category_name | slugify }}" class="title is-3">
+                {{ category_page.title | default: category_name | capitalize }}
               </h2>
             </header>
 
             <div class="card-content">
               <p class="subtitle is-6 mb-4">
-                {{ category_page.description | default: "No hay descripción
-                disponible para esta categoría." }}
+                {{ category_page.description | default: "Explora artículos sobre esta temática en nuestro blog." }}
               </p>
 
               <div class="columns is-multiline is-centered">
@@ -50,18 +42,11 @@ title: "El Rincón de Hattrick"
                   <article class="box" role="article">
                     {% if post.image %}
                     <figure class="image is-16by9">
-                      <img
-                        src="{{ post.image | relative_url }}"
-                        alt="{{ post.title }}"
-                        loading="lazy"
-                      />
+                      <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" loading="lazy" />
                     </figure>
                     {% endif %}
-                    <br />
-                    <time
-                      datetime="{{ post.date | date: '%Y-%m-%d' }}"
-                      class="is-size-7 has-text-grey"
-                    >
+
+                    <time datetime="{{ post.date | date: '%Y-%m-%d' }}" class="is-size-7 has-text-grey">
                       <span class="icon-text">
                         <span class="icon" aria-hidden="true">
                           <i class="fas fa-calendar-day"></i>
@@ -71,11 +56,7 @@ title: "El Rincón de Hattrick"
                     </time>
 
                     <h3 class="title is-5 mt-2">
-                      <a
-                        href="{{ post.url | relative_url }}"
-                        class="has-text-primary"
-                        rel="bookmark"
-                      >
+                      <a href="{{ post.url | relative_url }}" class="has-text-primary" rel="bookmark">
                         {{ post.title }}
                       </a>
                     </h3>
@@ -98,18 +79,15 @@ title: "El Rincón de Hattrick"
 
               <!-- Botón para ver más artículos de la categoría -->
               <div class="has-text-centered mt-4">
-                <a
-                  href="{{ category_name | slugify | relative_url }}"
-                  class="button is-primary is-light"
-                >
+                {% if category_page %}
+                <a href="{{ category_page.url | relative_url }}" class="button is-primary is-light"
+                  aria-label="Ver más artículos de la categoría {{ category_page.title | default: category_name }}">
                   <span class="icon-text">
                     <span class="icon"><i class="fas fa-folder-open"></i></span>
-                    <span
-                      >Ver más en {{ category_page.title | default:
-                      category_name }}</span
-                    >
+                    <span>Ver más en {{ category_page.title | default: category_name }}</span>
                   </span>
                 </a>
+                {% endif %}
               </div>
             </div>
           </div>

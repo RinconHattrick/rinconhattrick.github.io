@@ -9,49 +9,30 @@ layout: default
         {{ content }}
       </main>
 
-      <!-- Botón para mostrar el sidebar en móviles y tabletas -->
+      <!-- Botón para mostrar el sidebar en móviles -->
       <button id="toggle-sidebar" class="button is-primary is-hidden-desktop">
         <span class="icon"><i class="fas fa-bars"></i></span>
         <span>Menú</span>
       </button>
 
-      <aside
-        id="sidebar"
-        class="column is-one-quarter-desktop is-one-third-tablet is-hidden-touch"
-        role="complementary"
-      >
+      <aside id="sidebar" class="column is-one-quarter-desktop is-one-third-tablet is-hidden-touch"
+        role="complementary">
         <div class="sticky-sidebar">
           <!-- Búsqueda -->
           <div class="card mb-3">
             <div class="card-content">
-              <h2
-                id="search-title"
-                class="title is-5 has-text-weight-semibold mb-3"
-              >
+              <h2 id="search-title" class="title is-5 has-text-weight-semibold mb-3">
                 Buscar
               </h2>
-              <form
-                action="{{ '/search/' | relative_url }}"
-                method="get"
-                role="search"
-                aria-labelledby="search-title"
-              >
+              <form action="{{ '/search/' | relative_url }}" method="get" role="search" aria-labelledby="search-title">
                 <div class="field has-addons">
                   <div class="control is-expanded">
-                    <input
-                      class="input is-rounded"
-                      type="search"
-                      name="q"
-                      placeholder="Buscar artículos..."
-                      aria-label="Buscar artículos"
-                      required
-                    />
+                    <input class="input is-rounded" type="search" name="q" placeholder="Buscar artículos..."
+                      aria-label="Buscar artículos" required />
                   </div>
                   <div class="control">
                     <button type="submit" class="button is-primary is-rounded">
-                      <span class="icon" aria-hidden="true"
-                        ><i class="fas fa-search"></i
-                      ></span>
+                      <span class="icon" aria-hidden="true"><i class="fas fa-search"></i></span>
                       <span class="is-hidden-touch">Buscar</span>
                     </button>
                   </div>
@@ -66,24 +47,19 @@ layout: default
               <nav class="menu" aria-labelledby="categories-title">
                 <p id="categories-title" class="menu-label">Categorías</p>
                 <ul class="menu-list">
-                  {% for category in site.categories %} {% assign category_name
-                  = category[0] %} {% assign category_page = site.pages | where:
-                  "category", category_name | first %} {% assign category_icon =
-                  category_page.icon | default: "fa-folder" %}
+                  {% for category in site.categories %}
+                  {% assign category_name = category[0] %}
+                  {% assign category_page = site.pages | where: "category", category_name | first %}
+                  {% assign category_icon = category_page.icon | default: "fa-folder" %}
                   <li>
-                    <a
-                      href="{{ site.baseurl }}/{{ category_name | slugify }}"
+                    <a href="{{ site.baseurl }}/{{ category_name | slugify }}"
                       class="{% if page.category == category_name %}is-active{% endif %}"
-                      aria-label="Ver artículos de {{ category_name }}"
-                    >
+                      aria-label="Ver artículos de {{ category_name }}">
                       <span class="icon-text">
                         <span class="icon" aria-hidden="true">
                           <i class="fas {{ category_icon }}"></i>
                         </span>
-                        <span
-                          >{{ category_page.title | default: category_name
-                          }}</span
-                        >
+                        <span>{{ category_page.title | default: category_name }}</span>
                       </span>
                     </a>
                   </li>
@@ -100,21 +76,19 @@ layout: default
                 Artículos Destacados
               </h2>
               <div class="featured-list">
-                {% assign featured_posts = site.posts | where: "featured", true
-                | where: "published", true | limit: 5 %} {% if
-                featured_posts.size > 0 %} {% for post in featured_posts %}
+                {% assign featured_posts = site.posts | where: "featured", true | where: "published", true | limit: 5 %}
+                {% if featured_posts.size > 0 %}
+                {% for post in featured_posts %}
                 <a href="{{ post.url | relative_url }}" class="featured-item">
                   <div class="featured-info">
                     <strong>{{ post.title }}</strong>
-                    <time
-                      datetime="{{ post.date | date_to_xmlschema }}"
-                      class="is-size-7 has-text-grey"
-                    >
+                    <time datetime="{{ post.date | date_to_xmlschema }}" class="is-size-7 has-text-grey">
                       {{ post.date | date: "%d/%m/%Y" }}
                     </time>
                   </div>
                 </a>
-                {% endfor %} {% else %}
+                {% endfor %}
+                {% else %}
                 <p class="has-text-grey">No hay artículos destacados</p>
                 {% endif %}
               </div>

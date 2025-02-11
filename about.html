@@ -16,30 +16,25 @@ permalink: /acerca-de/
       </div>
     </section>
 
-    <!-- Sobre el autor -->
+    <!-- Sobre el Autor -->
     <section class="section">
       <div class="container">
         <div class="box has-text-centered">
-          <figure class="image is-64x64 is-inline-block">
-            <img src="/assets/img/elPatronHT.jpeg" alt="Perfil en Hattrick" />
+          <figure class="image is-128x128 is-inline-block">
+            <img src="/assets/img/elPatronHT.jpeg" alt="Perfil en Hattrick" class="is-rounded" />
           </figure>
           <h2 class="title is-4 pt-4">Sobre el Autor</h2>
           <p class="is-size-5">
-            ¡Hola! Soy <strong>elPatronHT</strong>, un apasionado de Hattrick y
-            la gestión de equipos de fútbol. A lo largo de los años, he
-            adquirido experiencia en la planificación de juveniles, tácticas de
-            juego y estrategias de selección nacional.
+            ¡Hola! Soy <strong>elPatronHT</strong>, un apasionado de Hattrick y la gestión de equipos de fútbol.
+            A lo largo de los años, he adquirido experiencia en la planificación de juveniles, tácticas de juego y
+            estrategias de selección nacional.
           </p>
           <p class="mt-3">
             Puedes conocer más sobre mi equipo en Hattrick aquí:
-            <a
-              href="https://hattrick.org/goto.ashx?path=/Club/?TeamID=538167"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="has-text-link"
-            >
-              Mi equipo en Hattrick </a
-            >.
+            <a href="https://hattrick.org/goto.ashx?path=/Club/?TeamID=538167" target="_blank" rel="noopener noreferrer"
+              class="has-text-link">
+              Mi equipo en Hattrick
+            </a>.
           </p>
         </div>
       </div>
@@ -52,16 +47,14 @@ permalink: /acerca-de/
           <!-- Introducción -->
           <section class="box mb-6">
             <p class="has-text-justified">
-              <strong>El Rincón de Hattrick</strong> es un espacio dedicado a
-              todos los apasionados del juego en línea <em>Hattrick</em>.
-              Nuestro objetivo es proporcionar estrategias prácticas, consejos
-              útiles y recursos especializados para ayudarte a alcanzar el éxito
-              en la gestión de juveniles y selecciones nacionales.
+              <strong>El Rincón de Hattrick</strong> es un espacio dedicado a todos los apasionados del juego en línea
+              <em>Hattrick</em>.
+              Nuestro objetivo es proporcionar estrategias prácticas, consejos útiles y recursos especializados
+              para ayudarte a alcanzar el éxito en la gestión de juveniles y selecciones nacionales.
             </p>
             <p class="has-text-justified">
-              Aquí encontrarás análisis detallados, guías avanzadas y tácticas
-              innovadoras para optimizar tus decisiones como mánager y destacar
-              en el competitivo universo de <em>Hattrick</em>.
+              Aquí encontrarás análisis detallados, guías avanzadas y tácticas innovadoras para optimizar
+              tus decisiones como mánager y destacar en el competitivo universo de <em>Hattrick</em>.
             </p>
           </section>
 
@@ -72,40 +65,37 @@ permalink: /acerca-de/
             </h2>
 
             <div class="columns is-multiline is-vcentered is-centered">
-              {% for category in site.categories %} {% assign category_name =
-              category[0] %} {% assign category_page = site.pages | where:
-              "category", category_name | first %} {% if category_page and
-              category_page.url != "" %}
+              {% for category in site.categories %}
+              {% assign category_name = category[0] %}
+              {% assign category_page = site.pages | where: "category", category_name | first %}
+              {% if category_page %}
               <div class="column is-12-tablet is-4-desktop">
-                <div class="card">
+                <div class="card has-text-centered">
                   <div class="card-content">
                     <div class="has-text-centered mb-4">
                       <span class="icon">
-                        <i
-                          class="fas {{ category_page.icon | default: 'fa-folder' }} fa-2x"
-                          aria-label="{{ category_page.title | default: category_name }}"
-                        ></i>
+                        <i class="fas {{ category_page.icon | default: 'fa-folder' }} fa-2x"
+                          aria-label="{{ category_page.title | default: category_name }}"></i>
                       </span>
                     </div>
                     <h2 class="title is-4 has-text-centered mb-4">
                       {{ category_page.title | default: category_name }}
                     </h2>
-                    <p class="has-text-justified">
-                      {{ category_page.description | default: "Descripción no
-                      disponible." }}
+                    <p>
+                      {{ category_page.description | default: "Descripción no disponible." }}
                     </p>
                   </div>
                 </div>
               </div>
-              {% endif %} {% endfor %}
+              {% endif %}
+              {% endfor %}
             </div>
           </section>
 
           <!-- Call to Action -->
           <section class="card has-text-centered p-6 mb-6">
             <p class="is-size-5 has-text-weight-semibold mb-4">
-              ¡Únete a nosotros y domina <em>Hattrick</em>, el mejor juego de
-              gestión de fútbol en línea!
+              ¡Únete a nosotros y domina <em>Hattrick</em>, el mejor juego de gestión de fútbol en línea!
             </p>
             <a href="/contacto" class="button is-primary is-rounded">
               <span class="icon"><i class="fas fa-paper-plane"></i></span>

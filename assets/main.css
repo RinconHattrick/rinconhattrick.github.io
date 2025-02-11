@@ -247,6 +247,11 @@ th {
   text-decoration: none;
 }
 
+@media (min-width: 1024px) {
+  .main-content {
+    margin-top: 3.25rem;
+  }
+}
 .main-header {
   background: var(--primary-gradient);
   border-radius: 12px;
@@ -549,18 +554,18 @@ mark {
   color: var(--background-light);
   border: none;
   border-radius: 50%;
-  width: 36px;
-  height: 36px;
+  width: 30px;
+  height: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   opacity: 0;
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s, transform 0.3s;
 }
 
-.scroll-to-top-btn.show {
-  opacity: 1;
+.scroll-to-top-btn i {
+  font-size: 20px;
 }
 
 .scroll-to-top-btn:hover {
@@ -572,6 +577,13 @@ mark {
 .scroll-to-top-btn.show {
   opacity: 1;
   visibility: visible;
+}
+
+/* Mostrar el botón cuando se hace scroll */
+.show-scroll {
+  display: flex;
+  opacity: 1;
+  transform: scale(1);
 }
 
 /* Ajuste en pantallas más grandes */

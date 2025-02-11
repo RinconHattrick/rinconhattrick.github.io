@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Cómo Comenzar en Hattrick"
+title: "Cómo comenzar en Hattrick"
 author: elPatronHT
 date: 2025-01-01
 categories: equipo-mayor
@@ -11,25 +11,25 @@ featured: false
 published: true
 ---
 
-## Cómo Comenzar en Hattrick
+## Cómo comenzar en Hattrick
 
-Comenzar en Hattrick puede ser emocionante pero desafiante. Aquí encontrarás los conceptos básicos y estrategias esenciales para gestionar tu club con éxito y dar tus primeros pasos en el juego.
-
----
-
-### Tus Funciones como Mánager
-
-En Hattrick, eres el encargado de todo lo relacionado con tu club. Algunas de tus principales responsabilidades incluyen:
-
-- Diseñar tácticas y estrategias para los partidos.
-- Elegir qué habilidades entrenar y seleccionar jugadores clave.
-- Administrar las finanzas para equilibrar ingresos y gastos.
-
-**Consejo:** Aprende las dinámicas del juego antes de tomar decisiones importantes.
+Comenzar en Hattrick puede ser emocionante, pero también desafiante. Aquí encontrarás los conceptos básicos y estrategias esenciales para gestionar tu club con éxito y dar tus primeros pasos en el juego.
 
 ---
 
-### Gestión del Dinero
+### Tus funciones como mánager
+
+En Hattrick, tú eres el responsable de todo lo relacionado con tu club. Algunas de tus principales responsabilidades incluyen:
+
+- Planifica tácticas y estrategias para los partidos.
+- Decide qué habilidades entrenar y selecciona jugadores clave.
+- Administra las finanzas para equilibrar ingresos y gastos.
+
+**Consejo:** Familiarízate con las dinámicas del juego antes de tomar decisiones importantes.
+
+---
+
+### Gestión del dinero
 
 El dinero es fundamental para el éxito en Hattrick. Tus ingresos provienen de:
 
@@ -43,13 +43,13 @@ El dinero es fundamental para el éxito en Hattrick. Tus ingresos provienen de:
 - Mantenimiento del estadio.
 - Inversión en jugadores y mejoras del estadio.
 
-**Consejo:** Evita gastos innecesarios al inicio y prioriza inversiones estratégicas.
+**Consejo:** Evita gastos innecesarios al inicio y prioriza inversiones que beneficien a tu equipo a largo plazo.
 
 ---
 
-### Conoce a tus Jugadores
+### Conoce a tus jugadores
 
-Cada jugador tiene habilidades específicas que definen su rendimiento:
+Cada jugador tiene habilidades específicas que determinan su rendimiento:
 
 - **Jugadas:** Crucial para mediocampistas.
 - **Anotación:** Esencial para delanteros.
@@ -61,7 +61,7 @@ Cada jugador tiene habilidades específicas que definen su rendimiento:
 
 ---
 
-### Partidos y Temporadas
+### Partidos y temporadas
 
 Cada temporada dura 16 semanas:
 
@@ -78,7 +78,7 @@ Cada temporada dura 16 semanas:
 
 ---
 
-### Conceptos Básicos de los Partidos
+### Conceptos básicos de los partidos
 
 Los partidos se dividen en tres fases:
 
@@ -103,7 +103,7 @@ El entrenamiento es clave para mejorar tu equipo y generar ingresos.
 
 - Los jugadores deben jugar en la posición correspondiente al menos 90 minutos por semana.
 
-**Estrategia:** Compra jóvenes prometedores, entrénalos y véndelos una vez que mejoren para generar ingresos.
+**Estrategia:** Compra jóvenes prometedores, entrénalos y véndelos para generar ingresos.
 
 ---
 
@@ -118,7 +118,7 @@ El mercado de transferencias es fundamental para fortalecer tu equipo:
 
 ---
 
-### Gestión del Estadio y Empleados
+### Gestión del estadio y empleados
 
 #### Estadio
 
@@ -141,7 +141,9 @@ Reclutar jugadores juveniles es una inversión a largo plazo:
 
 ---
 
-### Estrategias para Construir el Equipo
+### Estrategias para construir el equipo
+
+Aquí tienes algunas estrategias para construir un equipo competitivo:
 
 - **Enfócate en jóvenes:** Desarrolla jugadores con potencial a largo plazo.
 - **Maximiza el entrenamiento:** Usa formaciones que permitan entrenar a más jugadores.
@@ -149,9 +151,9 @@ Reclutar jugadores juveniles es una inversión a largo plazo:
 
 ---
 
-### Puntos Clave para Recordar
+### Puntos clave para recordar
 
 - **Evalúa y entrena:** Identifica las habilidades clave de tus jugadores y poténcialas.
 - **Gestión financiera:** Controla ingresos y gastos para asegurar la estabilidad del club.
 - **Usa las transferencias:** Compra y vende estratégicamente para mejorar tu equipo.
-- **Planifica a largo plazo:** Desarrolla juveniles y construye un equipo competitivo con visión de futuro.
+- **Planifica a largo plazo:** Desarrolla juveniles y construye un equipo competitivo con una visión clara del futuro.

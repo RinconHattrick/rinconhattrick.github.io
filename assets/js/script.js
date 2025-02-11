@@ -7,25 +7,16 @@ document.addEventListener("DOMContentLoaded", () => {
   const categoryMenu = document.getElementById("category-menu");
   const scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
-  if (!scrollToTopBtn) return;
+  if (scrollToTopBtn) {
+    const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
-  // Función para hacer scroll suave al inicio
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
+    const toggleScrollToTopButton = () => {
+      scrollToTopBtn.classList.toggle("show", window.scrollY > 200);
+    };
 
-  // Mostrar/ocultar el botón según el scroll
-  const toggleScrollToTopButton = () => {
-    if (window.scrollY > 200) {
-      scrollToTopBtn.classList.add("show");
-    } else {
-      scrollToTopBtn.classList.remove("show");
-    }
-  };
-
-  // Eventos
-  window.addEventListener("scroll", toggleScrollToTopButton);
-  scrollToTopBtn.addEventListener("click", scrollToTop);
+    window.addEventListener("scroll", toggleScrollToTopButton);
+    scrollToTopBtn.addEventListener("click", scrollToTop);
+  }
 
   // --- Funcionalidad del Navbar Responsivo ---
 
@@ -38,15 +29,15 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   applyNavbarPosition();
-  window.addEventListener("resize", () =>
-    requestAnimationFrame(applyNavbarPosition)
-  );
+  let resizeTimeout;
+  window.addEventListener("resize", () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(applyNavbarPosition, 200);
+  });
 
-  // Manejo del menú hamburguesa
-  const toggleAriaExpanded = (element, condition) => {
-    if (element) {
-      element.setAttribute("aria-expanded", condition);
-    }
+  // --- Menú Hamburguesa ---
+  const toggleAriaExpanded = (element, state) => {
+    if (element) element.setAttribute("aria-expanded", state);
   };
 
   if (burger && menu) {
@@ -57,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Manejo del menú de categorías en móviles
+  // --- Menú de Categorías en Móvil ---
   if (categoryToggle && categoryMenu) {
     categoryToggle.addEventListener("click", (event) => {
       if (window.innerWidth <= 1024) {
@@ -68,18 +59,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Cerrar menús al hacer clic fuera
+  // --- Cerrar Menús al Hacer Clic Fuera ---
   document.addEventListener("click", (event) => {
     const clickedOutsideMenu =
-      menu &&
-      !menu.contains(event.target) &&
-      burger &&
-      !burger.contains(event.target);
+      menu && !menu.contains(event.target) && burger && !burger.contains(event.target);
     const clickedOutsideCategory =
-      categoryMenu &&
-      !categoryMenu.contains(event.target) &&
-      categoryToggle &&
-      !categoryToggle.contains(event.target);
+      categoryMenu && !categoryMenu.contains(event.target) && categoryToggle && !categoryToggle.contains(event.target);
 
     if (clickedOutsideMenu) {
       menu.classList.remove("is-active");

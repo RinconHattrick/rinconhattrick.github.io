@@ -13,7 +13,7 @@ published: true
 
 ## Diseñar planes de entrenamiento eficientes para los juveniles en Hattrick
 
-Diseñar un plan de entrenamiento adecuado para los juveniles, es fundamental para maximizar su potencial y garantizar una transición exitosa al equipo principal. Un buen plan no solo mejora sus habilidades, sino que también aumenta su valor en el mercado. Este artículo ofrece estrategias detalladas para cada posición y consejos prácticos para optimizar el proceso.
+Diseñar un plan de entrenamiento adecuado para los juveniles es clave para maximizar su potencial y garantizar una transición exitosa al equipo principal. Un buen plan no solo mejora las habilidades de los jugadores, sino que también aumenta su valor en el mercado. Este artículo ofrece estrategias detalladas para cada posición y consejos prácticos para optimizar el proceso.
 
 ---
 
@@ -26,9 +26,9 @@ Diseñar un plan de entrenamiento adecuado para los juveniles, es fundamental pa
 
 #### Cómo optimizar los informes del entrenador
 
-- **Revelar habilidades actuales:** Configura la habilidad deseada como entrenamiento primario.
+- **Revelar habilidades actuales:** Elige la habilidad deseada como entrenamiento primario.
 - **Revelar el potencial máximo:** Usa esa habilidad como entrenamiento secundario.
-- **Optimización:** Incluye jugadores de relleno con habilidades conocidas para obtener informes más detallados.
+- **Optimización:** Incluye jugadores con habilidades conocidas para obtener informes más detallados.
 
 ---
 
@@ -134,8 +134,11 @@ A continuación, se presentan estrategias de entrenamiento específicas para cad
 
 ### Puntos clave para recordar
 
-- **Define tus objetivos:** Decide si deseas formar jugadores para tu equipo o maximizar ingresos en el mercado.
+Aquí tienes algunos puntos clave para recordar al diseñar tu plan de entrenamiento:
+
+- **Define tus objetivos:** Decide si deseas formar jugadores para tu equipo o maximizar los ingresos.
 - **Prioriza habilidades clave:** Enfócate en las habilidades más importantes para tu estilo de juego y posición.
 - **Optimiza los informes:** Usa jugadores con habilidades conocidas para obtener información más precisa del entrenador.
 - **Personaliza tu enfoque:** Diseña entrenamientos específicos según las necesidades individuales y del equipo.
-- ¡Recuerda: un plan de entrenamiento bien diseñado no solo maximiza el potencial de tus juveniles, sino que también asegura el éxito a largo plazo de tu equipo. ¡Empieza a planificar hoy mismo!
+
+¡Recuerda: un plan de entrenamiento bien diseñado no solo maximiza el potencial de tus juveniles, sino que también asegura el éxito a largo plazo de tu equipo.

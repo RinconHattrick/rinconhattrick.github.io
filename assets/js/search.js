@@ -13,7 +13,7 @@ class SearchManager {
   init() {
     this.searchInput.addEventListener(
       "input",
-      this.debounce((e) => this.search(e.target.value.trim()), 300)
+      this.debounce((e) => this.handleInput(e.target.value.trim()), 300)
     );
 
     const queryParams = new URLSearchParams(window.location.search);
@@ -23,6 +23,26 @@ class SearchManager {
       this.searchInput.value = initialQuery;
       this.search(initialQuery);
     }
+  }
+
+  handleInput(query) {
+    if (query.length < 3) {
+      this.clearResults();
+      this.showFeedback(
+        "Escribe al menos 3 caracteres para buscar.",
+        "is-info"
+      );
+      return;
+    }
+
+    this.updateURL(query);
+    this.search(query);
+  }
+
+  updateURL(query) {
+    const url = new URL(window.location);
+    url.searchParams.set("q", query);
+    window.history.pushState({}, "", url);
   }
 
   showFeedback(message, type = "is-primary") {
@@ -35,7 +55,8 @@ class SearchManager {
     this.feedbackElement.classList.remove(
       "is-hidden",
       "is-danger",
-      "is-primary"
+      "is-primary",
+      "is-info"
     );
     this.feedbackElement.classList.add(type);
   }
@@ -46,12 +67,18 @@ class SearchManager {
     }
   }
 
-  renderResults(results) {
+  clearResults() {
+    if (this.resultsContainer) {
+      this.resultsContainer.innerHTML = "";
+    }
+  }
+
+  renderResults(results, query) {
     if (!this.resultsContainer) return;
-    this.resultsContainer.innerHTML = "";
+    this.clearResults();
 
     if (!results.length) {
-      this.resultsContainer.innerHTML = `<p class="has-text-danger">No se encontraron resultados.</p>`;
+      this.showFeedback("No se encontraron resultados.", "is-danger");
       return;
     }
 
@@ -71,12 +98,19 @@ class SearchManager {
 
           <h3 class="title is-5 mt-2">
             <a href="${item.url}" class="has-text-primary">
-              ${this.highlightMatch(item.title, this.searchInput.value)}
+              ${this.highlightMatch(item.title, query)}
             </a>
           </h3>
 
           <p class="mt-2">
-            ${item.excerpt ? this.truncateText(item.excerpt, 150) : ""}
+            ${
+              item.excerpt
+                ? this.truncateText(
+                    this.highlightMatch(item.excerpt, query),
+                    300
+                  )
+                : ""
+            }
           </p>
         </article>
       `;
@@ -106,12 +140,6 @@ class SearchManager {
   }
 
   async search(query) {
-    if (query.length < 3) {
-      this.renderResults([]);
-      this.hideFeedback();
-      return;
-    }
-
     this.showFeedback(
       '<span class="icon"><i class="fas fa-spinner fa-spin"></i></span> Cargando resultados...'
     );
@@ -130,11 +158,9 @@ class SearchManager {
             item.title.toLowerCase().includes(query.toLowerCase()) ||
             item.excerpt.toLowerCase().includes(query.toLowerCase())
         )
-        .sort((a, b) =>
-          a.title.toLowerCase().startsWith(query.toLowerCase()) ? -1 : 1
-        );
+        .sort((a, b) => this.rankResults(a, b, query));
 
-      this.renderResults(results);
+      this.renderResults(results, query);
       this.hideFeedback();
     } catch (error) {
       console.error(error);
@@ -143,6 +169,23 @@ class SearchManager {
         "is-danger"
       );
     }
+  }
+
+  rankResults(a, b, query) {
+    query = query.toLowerCase();
+    const aTitle = a.title.toLowerCase();
+    const bTitle = b.title.toLowerCase();
+
+    if (aTitle === query) return -1;
+    if (bTitle === query) return 1;
+
+    if (aTitle.startsWith(query) && !bTitle.startsWith(query)) return -1;
+    if (!aTitle.startsWith(query) && bTitle.startsWith(query)) return 1;
+
+    if (aTitle.includes(query) && !bTitle.includes(query)) return -1;
+    if (!aTitle.includes(query) && bTitle.includes(query)) return 1;
+
+    return 0;
   }
 }
 

@@ -13,7 +13,7 @@ published: true
 
 ## Crear y gestionar una academia juvenil en Hattrick
 
-Crear una academia juvenil en Hattrick, es una inversión estratégica que te permitirá asegurar el éxito a largo plazo de tu equipo, desarrollando talentos desde la base. Con las decisiones correctas desde el inicio, puedes desarrollar jugadores talentosos y generar importantes beneficios para tu club.
+Crear una academia juvenil en Hattrick es una gran inversión que te permitirá asegurar el éxito a largo plazo de tu equipo, desarrollando talentos desde la base. Con las decisiones correctas desde el inicio, puedes desarrollar jugadores talentosos y generar beneficios importantes para tu club.
 
 ---
 
@@ -39,7 +39,7 @@ Crear una academia juvenil en Hattrick, es una inversión estratégica que te pe
 
 #### Beneficio adicional
 
-- Identificar especialidades puede aumentar significativamente el valor de mercado de tus jugadores juveniles.
+- Identificar especialidades como rápido, cabeceador o resistente puede aumentar significativamente el valor de mercado de tus jugadores juveniles.
 
 ---
 
@@ -52,7 +52,7 @@ Crear una academia juvenil en Hattrick, es una inversión estratégica que te pe
 
 ### Entrenamiento: la clave para el desarrollo de los juveniles
 
-#### Diseña una estrategia eficiente
+#### Crea una estrategia eficiente
 
 - **Entrenamiento primario:** Defensa, ideal para formar jugadores versátiles.
 - **Entrenamiento secundario:** Defensa extendida que incluye porteros, defensas, mediocampistas y extremos.
@@ -61,7 +61,7 @@ Crear una academia juvenil en Hattrick, es una inversión estratégica que te pe
 
 - **5-5-0:** Esta formación maximiza el entrenamiento defensivo y permite evaluar el rendimiento de tus jugadores en posiciones clave.
 
-#### Realiza sustituciones estratégicas
+#### Haz sustituciones estratégicas
 
 - Haz **tres cambios en el minuto 45** para dar tiempo de juego a más jugadores y evaluar su potencial.
 
@@ -91,6 +91,8 @@ Crear una academia juvenil en Hattrick, es una inversión estratégica que te pe
 
 ### Herramientas recomendadas para la academia
 
+Aquí tienes algunas herramientas recomendadas para gestionar tu academia juvenil:
+
 #### [Hattrick YouthClub](https://www.hattrick-youthclub.org/)
 
 - Analiza especialidades ocultas y subniveles de habilidades, permitiéndote tomar decisiones informadas sobre el desarrollo de tus juveniles.
@@ -105,6 +107,7 @@ Crear una academia juvenil en Hattrick, es una inversión estratégica que te pe
 
 - Contrata tres ojeadores y envíalos a regiones grandes para maximizar el reclutamiento de talentos.
 - Utiliza tácticas como **jugar creativamente** para descubrir especialidades ocultas y aumentar el valor de mercado de los juveniles.
-- Participa en amistosos regularmente y prioriza formaciones como el **5-5-0** para optimizar el entrenamiento.
+- Participa en amistosos regularmente y usa formaciones como el **5-5-0** para optimizar el entrenamiento.
 - Ajusta la plantilla para mantener el equilibrio entre número de jugadores y calidad, y usa herramientas externas para tomar decisiones estratégicas.
-- ¡Recuerda: una academia juvenil bien gestionada no solo desarrolla talentos, sino que también asegura el futuro de tu equipo. Empieza a construir la tuya hoy mismo!
+
+¡Recuerda: una academia juvenil bien gestionada no solo desarrolla talentos, sino que también asegura el futuro de tu equipo.

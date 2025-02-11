@@ -1,4 +1,4 @@
-<nav class="navbar is-fixed-top" aria-label="Menú principal" role="navigation">
+<nav class="navbar is-fixed-top" aria-label="Menú principal">
   <div class="container">
     <div class="navbar-brand">
       <a class="navbar-item" href="{{ '/' | relative_url }}">
@@ -6,13 +6,7 @@
       </a>
 
       <!-- Botón de menú en móviles -->
-      <button
-        class="navbar-burger"
-        aria-label="Menú"
-        aria-expanded="false"
-        data-target="navbarMenu"
-        onclick="toggleNavbar()"
-      >
+      <button class="navbar-burger" aria-label="Menú" aria-expanded="false" data-target="navbarMenu">
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
@@ -22,11 +16,7 @@
     <!-- Menú principal -->
     <div id="navbarMenu" class="navbar-menu">
       <div class="navbar-end">
-        <a
-          class="navbar-item {% if page.url == '/' %}is-active{% endif %}"
-          href="{{ '/' | relative_url }}"
-          role="menuitem"
-        >
+        <a class="navbar-item {% if page.url == '/' %}is-active{% endif %}" href="{{ '/' | relative_url }}">
           <span class="icon-text">
             <span class="icon"><i class="fas fa-home"></i></span>
             <span>Inicio</span>
@@ -35,71 +25,48 @@
 
         <!-- Menú de categorías -->
         <div class="navbar-item has-dropdown is-hoverable">
-          <a
-            class="navbar-link"
-            id="category-toggle"
-            aria-haspopup="true"
-            aria-expanded="false"
-            onclick="toggleCategoryMenu()"
-          >
+          <a class="navbar-link" id="category-toggle" aria-haspopup="true" aria-expanded="false">
             <span class="icon-text">
               <span class="icon"><i class="fas fa-folder"></i></span>
               <span>Categorías</span>
             </span>
           </a>
           <div class="navbar-dropdown" id="category-menu">
-            {% assign category_pages = site.pages | where: "layout", "category"
-            %} {% if category_pages.size > 0 %} {% for category_page in
-            category_pages %}
-            <a
-              class="navbar-item {% if page.url == category_page.url %}is-active{% endif %}"
-              href="{{ category_page.url | relative_url }}"
-              role="menuitem"
-            >
+            {% assign category_pages = site.pages | where: "layout", "category" %}
+            {% if category_pages.size > 0 %}
+            {% for category_page in category_pages %}
+            <a class="navbar-item {% if page.url == category_page.url %}is-active{% endif %}"
+              href="{{ category_page.url | relative_url }}">
               <span class="icon-text">
-                <span class="icon"
-                  ><i class="fas {{ category_page.icon }}"></i
-                ></span>
+                <span class="icon"><i class="fas {{ category_page.icon }}"></i></span>
                 <span>{{ category_page.title }}</span>
               </span>
             </a>
-            {% endfor %} {% else %}
-            <a class="navbar-item" role="menuitem"
-              >No hay categorías disponibles</a
-            >
+            {% endfor %}
+            {% else %}
+            <a class="navbar-item">No hay categorías disponibles</a>
             {% endif %}
           </div>
         </div>
 
-        <a
-          class="navbar-item {% if page.url contains '/acerca-de/' %}is-active{% endif %}"
-          href="{{ '/acerca-de/' | relative_url }}"
-          role="menuitem"
-        >
+        <a class="navbar-item {% if page.url contains '/acerca-de/' %}is-active{% endif %}"
+          href="{{ '/acerca-de/' | relative_url }}">
           <span class="icon-text">
             <span class="icon"><i class="fas fa-info-circle"></i></span>
             <span>Acerca de</span>
           </span>
         </a>
 
-        <a
-          class="navbar-item {% if page.url contains '/contacto/' %}is-active{% endif %}"
-          href="{{ '/contacto/' | relative_url }}"
-          role="menuitem"
-        >
+        <a class="navbar-item {% if page.url contains '/contacto/' %}is-active{% endif %}"
+          href="{{ '/contacto/' | relative_url }}">
           <span class="icon-text">
             <span class="icon"><i class="fas fa-envelope"></i></span>
             <span>Contáctanos</span>
           </span>
         </a>
 
-        <a
-          class="navbar-item"
-          href="https://www.hattrick.org/?inviteRef=U8EHM5"
-          target="_blank"
-          rel="noopener noreferrer"
-          role="menuitem"
-        >
+        <a class="navbar-item" href="https://www.hattrick.org/?inviteRef=U8EHM5" target="_blank"
+          rel="noopener noreferrer">
           <span class="icon-text">
             <span class="icon"><i class="fas fa-external-link-alt"></i></span>
             <span>Hattrick</span>

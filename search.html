@@ -14,23 +14,11 @@ description: "Búsqueda de artículos en el sitio"
       </header>
 
       <!-- Formulario de búsqueda -->
-      <form
-        class="mt-5"
-        role="search"
-        rel="search"
-        onsubmit="event.preventDefault()"
-      >
+      <form class="mt-5" role="search" rel="search" onsubmit="event.preventDefault()">
         <div class="field">
           <div class="control has-icons-left">
-            <input
-              type="search"
-              id="search-input"
-              class="input is-rounded"
-              placeholder="Buscar artículos..."
-              aria-label="Buscar artículos"
-              aria-describedby="search-hint"
-              autocomplete="off"
-            />
+            <input type="search" id="search-input" class="input is-rounded" placeholder="Buscar artículos..."
+              aria-label="Buscar artículos" aria-describedby="search-hint" autocomplete="off" />
             <span class="icon is-small is-left" aria-hidden="true">
               <i class="fas fa-search"></i>
             </span>
@@ -42,19 +30,10 @@ description: "Búsqueda de artículos en el sitio"
       </form>
 
       <!-- Retroalimentación de búsqueda -->
-      <div
-        id="search-feedback"
-        class="notification is-hidden mt-3"
-        role="status"
-        aria-live="polite"
-      ></div>
+      <div id="search-feedback" class="notification is-hidden mt-3" role="status" aria-live="polite"></div>
 
       <!-- Resultados de búsqueda -->
-      <div
-        id="search-results"
-        class="columns is-multiline is-centered mt-5"
-        aria-live="polite"
-      ></div>
+      <div id="search-results" class="columns is-multiline is-centered mt-5" aria-live="polite"></div>
     </div>
   </div>
   <div class="has-text-centered mt-6">
@@ -66,5 +45,3 @@ description: "Búsqueda de artículos en el sitio"
     </a>
   </div>
 </section>
-
-<script src="{{ '/assets/js/search.js' | relative_url }}" defer></script>

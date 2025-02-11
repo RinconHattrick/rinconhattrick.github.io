@@ -1,66 +1,46 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: 'es' }}" dir="ltr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, viewport-fit=cover"
-    />
 
-    <meta name="robots" content="index, follow" />
-    <meta name="theme-color" content="#3273dc" />
-    <meta name="color-scheme" content="light dark" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#3273dc" />
+  <meta name="color-scheme" content="light dark" />
 
-    {% seo %}
+  {% seo %}
 
-    <!-- Iconos -->
-    <link
-      rel="icon"
-      href="{{ '/assets/img/favicon.ico' | relative_url }}"
-      sizes="any"
-    />
+  <!-- Iconos -->
+  <link rel="icon" href="{{ '/assets/img/favicon.ico' | relative_url }}" sizes="any" />
 
-    <!-- Preconexión y Preload -->
-    <link
-      rel="preconnect"
-      href="https://cdn.jsdelivr.net"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="preconnect"
-      href="https://cdnjs.cloudflare.com"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="preload"
-      as="style"
-      href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"
-      onload="this.onload=null;this.rel='stylesheet'"
-    />
+  <!-- Preconexión -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous" />
 
-    <!-- Estilos -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}" />
-  </head>
+  <!-- Bulma -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css" />
 
-  <body
-    class="has-navbar-fixed-top {% if page.layout %}{{ page.layout | downcase }}{% endif %}"
-  >
-    {% include header.html %}
+  <!-- Font Awesome  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
-    <main role="main">{{ content }}</main>
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}" />
+</head>
 
-    {% include footer.html %}
+<body class="has-navbar-fixed-top {% if page.layout %}{{ page.layout | downcase }}{% endif %}">
+  {% include header.html %}
 
-    <!-- Botón de Scroll Arriba -->
-    <button class="scroll-to-top-btn" id="scrollToTopBtn" title="Subir">
-      <i class="fas fa-arrow-up"></i>
-    </button>
+  <main role="main" class="main-content">{{ content }}</main>
 
-    <!-- Script principal -->
-    <script src="{{ '/assets/js/script.js' | relative_url }}" defer></script>
-  </body>
+  {% include footer.html %}
+
+  <!-- Botón de Scroll Arriba -->
+  <button class="scroll-to-top-btn" id="scrollToTopBtn" title="Subir">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Script principal -->
+  <script src="{{ '/assets/js/script.js' | relative_url }}" defer></script>
+</body>
+
 </html>
