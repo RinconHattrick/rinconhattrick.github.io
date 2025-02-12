@@ -79,4 +79,3 @@ Los seleccionadores pueden personalizar dos tipos de uniformes: principal y alte
 - El uniforme representa la identidad y el orgullo de la selección nacional.
 - Configurar adecuadamente los uniformes principal y alternativo es una tarea clave del seleccionador.
 - Elegir colores representativos y evitar confusiones con los rivales asegura una experiencia de juego óptima.
-- ¡Recuerda: un uniforme bien diseñado no solo representa a tu selección, sino que también inspira a tus jugadores y seguidores. Diseña con orgullo!

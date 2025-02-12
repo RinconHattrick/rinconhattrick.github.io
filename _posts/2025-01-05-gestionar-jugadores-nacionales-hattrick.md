@@ -86,4 +86,3 @@ El espíritu del equipo es un factor crucial que los seleccionadores deben gesti
 - Eliminar jugadores afecta el espíritu del equipo; planifica cambios estratégicamente.
 - La colaboración con la comunidad y el uso de herramientas como estadísticas detalladas y valoraciones son clave para encontrar talento.
 - Trabajar con redes de scouts facilita el seguimiento de jugadores en ligas extranjeras y asegura un equipo competitivo.
-- ¡Recuerda: la gestión eficaz de los jugadores nacionales es clave para el éxito de la selección. Planifica con cuidado y colabora con la comunidad!

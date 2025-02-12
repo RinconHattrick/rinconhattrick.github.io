@@ -99,4 +99,3 @@ Para que un jugador pase de la lista de futuribles a la plantilla oficial:
 - Cada selección puede monitorear hasta 300 jugadores a la vez.
 - Los managers reciben actualizaciones y sugerencias de entrenamiento a través del boletín de la selección.
 - Los jugadores deben permanecer en la lista al menos una semana antes de ser convocados oficialmente.
-- ¡Recuerda: la lista de futuribles es una oportunidad única para el desarrollo de tus jugadores. Aprovecha al máximo estas oportunidades!

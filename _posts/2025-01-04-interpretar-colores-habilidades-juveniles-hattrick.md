@@ -97,5 +97,3 @@ La barra amarilla indica que la habilidad está completamente desarrollada, incl
 - **Barra gris:** El potencial es conocido; entrena para revelar el nivel actual.
 - **Barra verde:** Indica progreso parcial o completo, dependiendo del contexto.
 - **Barra amarilla:** Representa que la habilidad está totalmente desarrollada y lista para ser aprovechada.
-
-¡Recuerda: entender estos colores es clave para el desarrollo de tus juveniles y el éxito de tu equipo! Interpretar correctamente estos colores no solo maximiza el potencial de tus juveniles, sino que también te coloca en el camino hacia el éxito.

@@ -121,5 +121,3 @@ Aquí tienes algunos consejos iniciales para construir tu equipo:
 - Entrenar porteros o laterales es una estrategia rentable para generar ingresos a corto y medio plazo.
 - Usa herramientas como Foxtrick para tomar decisiones informadas y mejorar la gestión.
 - Aprovecha al máximo a los jugadores iniciales y realiza compras en horarios de menor actividad para optimizar tu presupuesto.
-
-¡Recuerda: contratar un entrenador equilibrado y entrenar porteros o laterales son estrategias clave para comenzar con éxito. Planifica bien y verás los resultados!

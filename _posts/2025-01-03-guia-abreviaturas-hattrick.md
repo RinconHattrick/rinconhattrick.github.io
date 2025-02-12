@@ -197,5 +197,3 @@ Aquí tienes algunos consejos clave para dominar las abreviaturas en Hattrick:
 - **Aplica abreviaturas en el contexto adecuado:** Desde tácticas hasta roles, úsalas para expresar tus ideas rápidamente.
 - **Usa esta guía como referencia:** Siempre puedes volver a este listado para resolver dudas sobre términos específicos y mejorar tu comprensión del juego.
 - **El conocimiento ahorra tiempo:** Dominar el lenguaje común te permitirá interactuar mejor con la comunidad y optimizar tu experiencia.
-
-¡Recuerda: dominar las abreviaturas no solo mejora tu comunicación, sino que también te ayuda a tomar decisiones más informadas. 

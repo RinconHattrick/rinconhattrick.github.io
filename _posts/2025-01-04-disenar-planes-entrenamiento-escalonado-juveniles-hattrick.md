@@ -132,5 +132,3 @@ Cada plan escalonado aprovecha el entrenamiento principal y secundario, ayudando
   - Usa **entrenamiento individual** para desarrollar a jugadores clave, como tu delantero estrella o tu portero titular.
   - Opta por **entrenamiento por bloques** para un progreso equilibrado en todo el equipo.
 - **Progresión escalonada:** Integra habilidades complementarias en cada fase del plan para potenciar el rendimiento global de tus juveniles.
-
-Un plan de entrenamiento bien diseñado no solo maximiza el potencial de tus juveniles, sino que también te coloca en el camino hacia el éxito a largo plazo.

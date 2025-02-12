@@ -118,4 +118,3 @@ El cálculo sería:
 - La clasificación nacional se calcula en función de los resultados, la importancia de los partidos y la calidad del rival.
 - Los resultados recientes tienen un impacto mayor, incentivando la consistencia en torneos importantes.
 - Participar estratégicamente en partidos clave es esencial para escalar posiciones en el ranking.
-- ¡Recuerda: cada victoria cuenta y puede marcar la diferencia en tu posición en el ranking. Planifica tus próximos pasos y lleva a tu selección al éxito!

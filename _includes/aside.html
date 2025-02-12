@@ -1,0 +1,17 @@
+<div class="sticky-sidebar">
+  <!-- Enlaces a herramientas -->
+  <div class="card mb-3">
+    <div class="card-content">
+      <h2 class="title is-5 has-text-weight-semibold mb-3">Enlaces Útiles</h2>
+      {% for categoria in site.data.enlaces %}
+      <p class="menu-label my-5">{{ categoria[0] | capitalize }}</p>
+      <ul class="menu-list">
+        {% for enlace in categoria[1] %}
+        <li><a href="{{ enlace.url }}" target="_blank">{{ enlace.nombre }}</a></li>
+        {% endfor %}
+      </ul>
+      {% endfor %}
+    </div>
+  </div>
+
+</div>

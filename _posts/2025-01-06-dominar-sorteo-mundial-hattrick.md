@@ -65,9 +65,7 @@ El Mundial reúne a los **96 mejores equipos del mundo**, divididos en **16 grup
 
 #### Mantén a tu Equipo en Forma
 
-- Asegúrate de que tus jugadores estén entrenados en las tácticas que planeas usar, y prioriza la resistencia y la forma.
-
-> **Consejo avanzado:** Revisa los históricos de partidos para detectar patrones tácticos y debilidades de tus rivales.
+- Asegúrate de que tus jugadores estén entrenados en las tácticas que planeas usar, y prioriza la resistencia y la forma.
 
 > **Sorpresas:** En 2024, el equipo de Ecuador llegó hasta la cuarta ronda tras superar un grupo muy complicado, demostrando que todo es posible con planificación.
 

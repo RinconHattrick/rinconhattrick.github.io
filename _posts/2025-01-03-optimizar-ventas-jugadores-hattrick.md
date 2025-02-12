@@ -119,5 +119,3 @@ Expande el alcance de tus ventas utilizando redes sociales y colaboraciones estr
 - **Establece precios dinámicos:** Analiza el mercado y ajusta los precios según la demanda para garantizar ventas exitosas.
 - **Planifica el momento de venta:** Aprovecha los picos de actividad en Hattrick para maximizar el interés en tus jugadores.
 - **Sé estratégico y persistente:** Las ventas efectivas requieren tiempo, pero una buena planificación siempre da resultados.
-
-¡Recuerda: diversificar tus canales de promoción y ajustar los precios según la demanda son claves para maximizar tus ventas. Planifica bien y verás los resultados!

@@ -20,17 +20,32 @@
   <!-- Bulma -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css" />
 
-  <!-- Font Awesome  -->
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
   <!-- Estilos personalizados -->
   <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}" />
 </head>
 
-<body class="has-navbar-fixed-top {% if page.layout %}{{ page.layout | downcase }}{% endif %}">
+<body class="has-navbar-fixed-top">
   {% include header.html %}
 
-  <main role="main" class="main-content">{{ content }}</main>
+  <div class="container">
+    <div class="columns is-variable is-2">
+      <!-- Contenido principal -->
+      <main class="main-content is-full-touch is-three-quarters-desktop">
+        {{ content }}
+      </main>
+
+      <!-- Aside  -->
+      {% if page.layout != "no-sidebar" %}
+      <aside class="column is-hidden-touch is-one-quarter-desktop main-content">
+
+        {% include aside.html %}
+      </aside>
+      {% endif %}
+    </div>
+  </div>
 
   {% include footer.html %}
 
@@ -39,7 +54,7 @@
     <i class="fas fa-arrow-up"></i>
   </button>
 
-  <!-- Script principal -->
+  <!-- Scripts -->
   <script src="{{ '/assets/js/script.js' | relative_url }}" defer></script>
 </body>
 

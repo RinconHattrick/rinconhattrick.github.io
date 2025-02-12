@@ -98,4 +98,3 @@ Los seleccionadores no solo representan a su país, sino que también tienen un 
 - Las elecciones en Hattrick son un proceso democrático que define el liderazgo de las selecciones nacionales y Sub-21.
 - Los seleccionadores tienen la responsabilidad de planificar estrategias, gestionar jugadores y representar al país en torneos internacionales.
 - La transparencia, el respeto por las reglas y la participación activa de la comunidad son esenciales para el éxito del proceso.
-- ¡Recuerda: tu participación en las elecciones es esencial para garantizar un liderazgo competente en las selecciones nacionales. Vota con responsabilidad!

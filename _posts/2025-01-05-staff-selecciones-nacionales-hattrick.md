@@ -117,4 +117,3 @@ El espíritu se actualiza semanalmente los martes a las 03:00 AM HT, ofreciendo 
 - Roles como ayudantes, ojeadores y analistas son fundamentales para la planificación estratégica y el desarrollo de jugadores.
 - La gestión del espíritu y las tácticas adecuadas son cruciales para mantener un rendimiento constante.
 - Una comunicación efectiva y la delegación de responsabilidades garantizan un trabajo eficiente y cohesionado.
-- ¡Recuerda: un equipo técnico bien organizado es la clave del éxito. Empieza a construir el tuyo hoy mismo!

@@ -140,5 +140,3 @@ Aquí tienes algunos puntos clave para recordar al diseñar tu plan de entrenami
 - **Prioriza habilidades clave:** Enfócate en las habilidades más importantes para tu estilo de juego y posición.
 - **Optimiza los informes:** Usa jugadores con habilidades conocidas para obtener información más precisa del entrenador.
 - **Personaliza tu enfoque:** Diseña entrenamientos específicos según las necesidades individuales y del equipo.
-
-¡Recuerda: un plan de entrenamiento bien diseñado no solo maximiza el potencial de tus juveniles, sino que también asegura el éxito a largo plazo de tu equipo.

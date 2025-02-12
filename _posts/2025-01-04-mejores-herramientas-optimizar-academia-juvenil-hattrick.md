@@ -97,5 +97,3 @@ La elección de la herramienta adecuada dependerá de tus necesidades específic
 - **Hattrick YouthClub:** Perfecta para un análisis profundo y gestión integral.
 - **Rate My Academy:** Ideal para evaluaciones rápidas del potencial de tus jugadores.
 - **youtHTeam:** Una opción ligera para un seguimiento básico y funcional.
-
-¡Recuerda: elegir la herramienta adecuada es clave para el éxito de tu academia juvenil y el crecimiento de tus futuras estrellas!

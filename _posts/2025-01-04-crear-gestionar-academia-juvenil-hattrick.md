@@ -109,5 +109,3 @@ Aquí tienes algunas herramientas recomendadas para gestionar tu academia juveni
 - Utiliza tácticas como **jugar creativamente** para descubrir especialidades ocultas y aumentar el valor de mercado de los juveniles.
 - Participa en amistosos regularmente y usa formaciones como el **5-5-0** para optimizar el entrenamiento.
 - Ajusta la plantilla para mantener el equilibrio entre número de jugadores y calidad, y usa herramientas externas para tomar decisiones estratégicas.
-
-¡Recuerda: una academia juvenil bien gestionada no solo desarrolla talentos, sino que también asegura el futuro de tu equipo.
