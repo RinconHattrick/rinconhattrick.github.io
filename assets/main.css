@@ -49,10 +49,15 @@ body {
   color: var(--text);
 }
 
-code, pre {
-  font-family: "Fira Code", monospace;
+.columns.is-variable {
+  margin: 0;
+  padding: 0; 
 }
 
+.columns.is-variable .column {
+  margin: 0;
+  padding: 0; 
+}
 
 /* ==============================
    NAVBAR
