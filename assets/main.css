@@ -10,23 +10,15 @@
   --text-dark: #f1f1f1;
   --card-background-light: #f5f5f5;
   --card-background-dark: #242435;
-  --primary-gradient: linear-gradient(
-    135deg,
-    var(--primary-color),
-    var(--secondary-color)
-  );
-  --transition-standard: all 0.3s ease-in-out; /* Transición más uniforme */
+  --primary-gradient: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  --transition-standard: all 0.3s ease-in-out;
   --shadow-sm: 0 2px 5px rgba(0, 0, 0, 0.1);
-  --shadow-md: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --shadow-dark: 0 5px 15px rgba(0, 0, 0, 0.3);
   --border-radius: 8px;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --background: var(--background-light);
-    --text: var(--text-light);
-    --card-background: var(--card-background-light);
-  }
+  --background: var(--background-light);
+  --text: var(--text-light);
+  --card-background: var(--card-background-light);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -40,12 +32,13 @@
 /* ==============================
    FUENTES TIPOGRÁFICAS
 ============================== */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+* {
+  box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-color) transparent;
+}
+
+h1, h2, h3, h4, h5, h6 {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
 }
@@ -56,10 +49,10 @@ body {
   color: var(--text);
 }
 
-code,
-pre {
+code, pre {
   font-family: "Fira Code", monospace;
 }
+
 
 /* ==============================
    NAVBAR
@@ -72,31 +65,19 @@ pre {
 @media (prefers-color-scheme: dark) {
   .navbar {
     background-color: rgba(30, 30, 30, 0.9);
-  }
-
-  .navbar-item,
-  .navbar-link {
-    color: var(--text-dark); /* Ajustamos el color del texto en modo oscuro */
-  }
-
-  .navbar-item:hover,
-  .navbar-link:hover {
-    color: var(
-      --primary-color
-    ); /* Colorear los elementos del navbar al pasar el ratón */
+    box-shadow: var(--shadow-dark);
   }
 }
 
-.navbar-item,
-.navbar-link {
+.navbar-item, .navbar-link {
   color: var(--text);
-  text-decoration: none; /* Elimina el subrayado por defecto */
+  text-decoration: none;
 }
 
-.navbar-item:hover,
-.navbar-link:hover {
-  color: var(--primary-color); /* Color cuando se pasa el ratón */
+.navbar-item:hover, .navbar-link:hover {
+  color: var(--primary-color);
 }
+
 /* ==============================
    TARJETAS
 ============================== */
@@ -107,7 +88,7 @@ pre {
 }
 
 .card:hover {
-  transform: translateY(-4px); /* Efecto más marcado */
+  transform: translateY(-4px);
   box-shadow: var(--shadow-md);
 }
 
@@ -118,37 +99,24 @@ pre {
   border-radius: var(--border-radius) var(--border-radius) 0 0;
 }
 
+
 /* ==============================
    SCROLLBAR
 ============================== */
 ::-webkit-scrollbar {
-  width: 10px; /* Ancho mayor para mejor visibilidad */
+  width: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: var(--primary-color);
-  border-radius: 10px; /* Añadir bordes redondeados para un mejor diseño */
-  border: 2px solid transparent; /* Bordes transparentes para evitar distorsión */
-  transition: background-color 0.3s ease, transform 0.3s ease; /* Transición más suave */
+  border-radius: 10px;
+  border: 2px solid transparent;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: var(--secondary-color);
-  transform: scale(1.1); /* Efecto de expansión para interacción */
-}
-
-@media (prefers-color-scheme: dark) {
-  ::-webkit-scrollbar-thumb {
-    background-color: var(
-      --secondary-color
-    ); /* Mejor contraste en modo oscuro */
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  ::-webkit-scrollbar-thumb {
-    background-color: var(--primary-color); /* Mejor contraste en modo claro */
-  }
+  transform: scale(1.1);
 }
 
 /* ==============================
@@ -160,30 +128,6 @@ pre {
   padding: 1.5rem 0;
 }
 
-.footer .buttons a.button {
-  transition: var(--transition-standard);
-  font-weight: 500;
-  border-radius: var(--border-radius);
-  background-color: var(--primary-color);
-  color: var(--background-light);
-}
-
-.footer .buttons a.button:hover {
-  background-color: var(--secondary-color);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-sm);
-}
-
-.footer .buttons a.button:active {
-  background-color: var(--primary-color);
-  transform: translateY(1px);
-  box-shadow: var(--shadow-sm);
-}
-
-.footer .buttons a.button:focus {
-  outline: 2px solid var(--secondary-color);
-}
-
 /* ==============================
    BOTONES
 ============================== */
@@ -192,14 +136,11 @@ pre {
   font-weight: 500;
 }
 
-.button:hover {
-  transform: translateY(-2px);
+.button:hover, .button:active {
+  transform: translateY(-1px);
   box-shadow: var(--shadow-sm);
 }
 
-.button:active {
-  transform: translateY(1px);
-}
 
 /* ==============================
    ANIMACIONES
@@ -208,7 +149,6 @@ pre {
   from {
     opacity: 0;
     transform: translateY(10px);
-    will-change: opacity, transform;
   }
   to {
     opacity: 1;
@@ -219,7 +159,8 @@ pre {
 .box {
   opacity: 0;
   transform: translateY(10px);
-  animation: fadeIn 0.3s ease-out forwards; /* Suavizado en la animación */
+  animation: fadeIn 0.3s ease-out forwards;
+  will-change: opacity, transform;
 }
 
 /* ==============================
@@ -234,36 +175,24 @@ pre {
     display: none;
   }
 
-@media screen and (max-width: 1024px) {
-    .columns {
-        flex-wrap: wrap;
-    }
-}
-
-  /* Menú desplegable en dispositivos móviles */
   .navbar-dropdown {
-    height: 0;
+    max-height: 0;
     overflow: hidden;
-    transition: height 0.3s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
   }
+
   .navbar-dropdown.is-active {
-    height: auto;
+    max-height: 300px;
+    opacity: 1;
+    visibility: visible;
   }
 }
 
 @media (max-width: 768px) {
   .is-hidden-tablet {
     display: none;
-  }
-}
-
-.navbar-burger {
-  color: var(--text); /* Color de la hamburguesa en modo claro */
-}
-
-@media (prefers-color-scheme: dark) {
-  .navbar-burger {
-    color: var(--text-dark); /* Color de la hamburguesa en modo oscuro */
   }
 }
 
@@ -287,7 +216,6 @@ pre {
 
 .scroll-to-top-btn:hover {
   transform: scale(1.1);
-  box-shadow: var(--shadow-md);
 }
 
 .scroll-to-top-btn.show {
@@ -314,6 +242,7 @@ pre {
   padding-bottom: 10px;
   margin-bottom: 10px;
 }
+
 .search-results-list li:last-child {
   margin-bottom: 0;
   border-bottom: none;
@@ -349,78 +278,24 @@ mark {
 }
 
 /* ==============================
+   ACCESIBILIDAD Y ENLACES
+============================== */
+.menu-list a:focus-visible, .button:focus-visible, .navbar-item:focus-visible {
+  outline: 2px solid var(--secondary-color);
+}
+
+/* ==============================
    SIDEBAR
 ============================== */
 .sticky-sidebar {
   position: sticky;
   top: 1rem;
+  width: 100%;
   max-width: 300px;
   max-height: min(calc(100vh - 6rem), 400px);
   overflow-y: auto;
-  background-color: var(
-    --card-background
-  ); /* Asegura que el sidebar tenga un fondo */
-  box-shadow: var(--shadow-sm); /* Añade sombra para dar profundidad */
+  background-color: var(--card-background);
+  box-shadow: var(--shadow-sm);
   padding: 1rem;
   border-radius: var(--border-radius);
-}
-
-/* ==============================
-    MENU LISTA
-============================== */
-.menu-list a {
-  padding: 0.5rem 1rem; /* Añadir algo de espacio en los laterales */
-  border-radius: var(--border-radius);
-  transition: var(--transition-standard);
-  display: flex; /* Asegura que los iconos y el texto estén alineados */
-  align-items: center; /* Centra el texto y el icono */
-}
-
-.menu-list a .icon {
-  margin-right: 0.5rem; /* Añadir espacio entre el icono y el texto */
-}
-
-.menu-list a:hover,
-.menu-list a:focus {
-  background-color: var(--primary-color);
-  color: var(--background-light);
-  outline: 2px solid var(--primary-color);
-}
-
-/* ==============================
-    MENU LABEL
-============================== */
-.menu-label {
-  font-weight: 600;
-  margin-top: 1rem;
-  text-transform: capitalize;
-  color: var(--text-dark);
-}
-
-/* ==============================
-   MODO CLARO
-============================== */
-@media (prefers-color-scheme: light) {
-  .menu-label {
-    color: var(
-      --text-light
-    ); /* Asegura un color oscuro para el texto en modo claro */
-  }
-}
-
-/* ==============================
-   MODO OSCURO
-============================== */
-@media (prefers-color-scheme: dark) {
-  .menu-label {
-    color: var(
-      --text-dark
-    ); /* Asegura un color claro para el texto en modo oscuro */
-  }
-}
-/* ==============================
-    ACCESIBILIDAD Y ENLACES
-============================== */
-.menu-list a:focus {
-  outline: 2px solid var(--secondary-color); /* Cambia el color de outline en focus para accesibilidad */
 }
