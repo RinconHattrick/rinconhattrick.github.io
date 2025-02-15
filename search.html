@@ -96,23 +96,25 @@ description: "Búsqueda de artículos en el sitio"
 
     showFeedback(message, type = "is-primary") {
       if (!this.feedbackElement) return;
+
       this.feedbackElement.innerHTML = `
-      <span class="icon" aria-hidden="true">
-        <i class="fas fa-info-circle"></i>
-      </span> ${message}
-    `;
-      this.feedbackElement.classList.remove(
-        "is-hidden",
-        "is-danger",
-        "is-primary",
-        "is-info"
-      );
+    <span class="icon" aria-hidden="true">
+      <i class="fas fa-info-circle"></i>
+    </span> ${message}
+  `;
+
+      // Remueve todas las clases anteriores de estado y la clase is-hidden
+      this.feedbackElement.classList.remove("is-hidden", "is-danger", "is-primary", "is-info", "is-warning");
       this.feedbackElement.classList.add(type);
+
+      // Asegura que sea visible
+      this.feedbackElement.style.display = "block";
     }
 
     hideFeedback() {
       if (this.feedbackElement) {
         this.feedbackElement.classList.add("is-hidden");
+        this.feedbackElement.style.display = "none"; // Asegura que se oculta completamente
       }
     }
 
@@ -127,41 +129,42 @@ description: "Búsqueda de artículos en el sitio"
       this.clearResults();
 
       if (!results.length) {
-        this.showFeedback("No se encontraron resultados.", "is-danger");
+        this.showFeedback(
+          '<span class="icon"><i class="fas fa-exclamation-triangle"></i></span> No se encontraron resultados relacionados.',
+          "is-warning"
+        );
         return;
       }
+
+      this.hideFeedback(); // Oculta el mensaje si hay resultados
 
       results.forEach((item) => {
         const article = document.createElement("div");
         article.className = "column is-12-tablet is-6-desktop";
         article.innerHTML = `
-        <article class="box">
-          <time datetime="${item.date}" class="is-size-7 has-text-grey">
-            <span class="icon-text">
-              <span class="icon" aria-hidden="true">
-                <i class="fas fa-calendar-day"></i>
-              </span>
-              <span>${item.date}</span>
+      <article class="box">
+        <time datetime="${item.date}" class="is-size-7 has-text-grey">
+          <span class="icon-text">
+            <span class="icon" aria-hidden="true">
+              <i class="fas fa-calendar-day"></i>
             </span>
-          </time>
+            <span>${item.date}</span>
+          </span>
+        </time>
 
-          <h3 class="title is-5 mt-2">
-            <a href="${item.url}" class="has-text-primary">
-              ${this.highlightMatch(item.title, query)}
-            </a>
-          </h3>
+        <h3 class="title is-5 mt-2">
+          <a href="${item.url}" class="has-text-primary">
+            ${this.highlightMatch(item.title, query)}
+          </a>
+        </h3>
 
-          <p class="mt-2">
-            ${item.excerpt
-            ? this.truncateText(
-              this.highlightMatch(item.excerpt, query),
-              300
-            )
-            : ""
-          }
-          </p>
-        </article>
-      `;
+        <p class="mt-2">
+          ${item.excerpt
+            ? this.truncateText(this.highlightMatch(item.excerpt, query), 300)
+            : ""}
+        </p>
+      </article>
+    `;
         this.resultsContainer.appendChild(article);
       });
     }

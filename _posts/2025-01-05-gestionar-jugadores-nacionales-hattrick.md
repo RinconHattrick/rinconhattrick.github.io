@@ -6,7 +6,7 @@ date: 2025-01-02
 categories: selecciones-nacionales
 tags: [jugadores, selección, Hattrick]
 excerpt: "Aprende a gestionar la plantilla de tu selección nacional en Hattrick y selecciona a los mejores talentos."
-image: "/assets/img/HT.jpg"
+image: "/assets/img/ht-b.png"
 featured: false
 published: true
 ---

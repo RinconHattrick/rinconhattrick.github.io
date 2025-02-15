@@ -6,7 +6,7 @@ date: 2025-01-04
 categories: preguntas-frecuentes
 tags: [FAQ, juveniles, Hattrick, preguntas]
 excerpt: "Descubre todo lo que necesitas saber para gestionar y sacar el máximo provecho de tu equipo juvenil en Hattrick, desde el reclutamiento de jugadores hasta la optimización de tácticas."
-image: "/assets/img/HT.jpg"
+image: "/assets/img/ht-b.png"
 featured: false
 published: true
 ---

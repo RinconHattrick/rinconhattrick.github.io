@@ -6,7 +6,7 @@ date: 2025-01-05
 categories: equipo-juvenil
 tags: [juveniles, gestión, entrenamiento]
 excerpt: "Descubre cómo sacar el máximo provecho de tus juveniles en Hattrick con estrategias de evaluación y entrenamiento."
-image: "/assets/img/HT.jpg"
+image: "/assets/img/ht-v.png"
 featured: false
 published: true
 ---
@@ -34,13 +34,16 @@ La evaluación efectiva de tus juveniles es fundamental para aprovechar su poten
 #### Herramientas para evaluar
 
 1. **Calificación por estrellas:**
+
    - Representa el rendimiento del jugador en su posición actual.
    - Útil para identificar si están jugando en el puesto adecuado.
 
 2. **Comentarios de los ojeadores:**
+
    - Proporcionan pistas valiosas sobre el potencial del jugador en ciertas posiciones.
 
 3. **Informe del entrenador:**
+
    - Detalla el progreso y las áreas donde el jugador podría sobresalir.
 
 4. **Reportes de partidos:**
@@ -72,12 +75,15 @@ La evaluación efectiva de tus juveniles es fundamental para aprovechar su poten
 Aquí tienes algunos consejos que te ayudarán a maximizar el rendimiento de tus jugadores juveniles:
 
 1. **Mantén un equilibrio en tu equipo:**
+
    - Asegúrate de tener jugadores en todas las posiciones para cubrir necesidades tácticas.
 
 2. **Recluta regularmente:**
+
    - Introduce nuevos talentos de forma constante para mantener un flujo de desarrollo.
 
 3. **Aprovecha los informes:**
+
    - Los comentarios de ojeadores y entrenadores son esenciales para enfocar esfuerzos en los jugadores más prometedores.
 
 4. **Ten paciencia:**

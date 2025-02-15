@@ -6,7 +6,7 @@ date: 2025-01-17
 categories: equipo-juvenil
 tags: [entrenamiento, juveniles, desarrollo]
 excerpt: "Aprende a maximizar el potencial de tus juveniles con estrategias de entrenamiento bien estructuradas."
-image: "/assets/img/HT.jpg"
+image: "/assets/img/ht-v.png"
 featured: true
 published: true
 ---

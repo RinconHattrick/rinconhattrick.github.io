@@ -6,7 +6,7 @@ date: 2025-01-06
 categories: selecciones-nacionales
 tags: [selección, Sub-21, desarrollo, Hattrick]
 excerpt: "Descubre cómo funciona la selección Sub-21, su impacto en el desarrollo de talentos y su rol estratégico en Hattrick."
-image: "/assets/img/HT.jpg"
+image: "/assets/img/ht-b.png"
 featured: false
 published: true
 ---

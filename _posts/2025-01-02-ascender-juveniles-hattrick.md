@@ -6,7 +6,7 @@ date: 2025-01-11
 categories: equipo-juvenil
 tags: [juveniles, ascenso, equipo]
 excerpt: "Descubre cómo ascender juveniles al primer equipo en Hattrick con esta guía detallada. Aprende los requisitos, cuándo promocionarlos y cómo maximizar su potencial y valor."
-image: "/assets/img/HT.jpg"
+image: "/assets/img/ht-v.png"
 featured: false
 published: true
 ---
@@ -22,13 +22,16 @@ Ascender jugadores juveniles al primer equipo es uno de los momentos más emocio
 Antes de ascender un juvenil al primer equipo, asegúrate de cumplir con los siguientes criterios:
 
 1. **Edad mínima y permanencia**:
+
    - El jugador debe tener **al menos 17 años**.
    - Debe haber estado en tu equipo juvenil por un mínimo de **112 días** (una temporada).
 
 2. **Limitaciones del equipo juvenil**:
+
    - Tu equipo juvenil debe contar con al menos **11 jugadores disponibles** para seguir compitiendo tras el ascenso.
 
 3. **Limitaciones del primer equipo**:
+
    - No puedes promocionar jugadores si el primer equipo ya tiene **50 jugadores o más**.
 
 4. **Límite de edad**:
@@ -64,6 +67,7 @@ El momento adecuado para ascender un jugador depende de varios factores.
 ### Cómo evaluar las habilidades y potencial de un juvenil
 
 1. **Revisa las habilidades reveladas**:
+
    - Usa los informes de entrenamiento y partidos para identificar fortalezas y debilidades.
    - Ten en cuenta las posiciones en las que destacó durante su tiempo en juveniles.
 
@@ -82,6 +86,7 @@ El momento adecuado para ascender un jugador depende de varios factores.
 Veamos algunos ejemplos prácticos para entender mejor cómo tomar decisiones informadas.
 
 - **Carlos Rodríguez**
+
   - **Edad:** 17
   - **Posición principal:** Defensa
   - **Nivel actual:** Excelente
@@ -89,6 +94,7 @@ Veamos algunos ejemplos prácticos para entender mejor cómo tomar decisiones in
   - **Recomendación:** Ascender al primer equipo para entrenar o vender.
 
 - **Diego Fernández**
+
   - **Edad:** 16
   - **Posición principal:** Delantero
   - **Nivel actual:** Débil

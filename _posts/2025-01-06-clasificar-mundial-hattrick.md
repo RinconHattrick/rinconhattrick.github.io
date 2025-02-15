@@ -6,7 +6,7 @@ date: 2025-01-15
 categories: selecciones-nacionales
 tags: [Mundial, clasificación, Hattrick, selecciones]
 excerpt: "Conoce el camino hacia la Copa del Mundo en Hattrick y cómo clasificar con éxito."
-image: "/assets/img/HT.jpg"
+image: "/assets/img/ht-v.png"
 featured: false
 published: true
 ---

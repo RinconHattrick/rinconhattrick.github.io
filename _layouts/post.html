@@ -29,7 +29,7 @@ layout: default
     <section class="content">{{ content }}</section>
 
     <div class="has-text-centered my-6">
-      <button id="shareButton" class="button is-primary is-light is-rounded" aria-label="Compartir artículo"
+      <button id="shareButton" class="button is-light is-rounded" aria-label="Compartir artículo"
         title="Compartir este artículo" role="button" tabindex="0">
         <span class="icon-text">
           <span class="icon">
@@ -81,7 +81,7 @@ layout: default
             <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
           </h3>
           <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
-          <a href="{{ post.url | relative_url }}" class="button is-primary is-small">Leer más</a>
+          <a href="{{ post.url | relative_url }}" class="button  is-small">Leer más</a>
         </div>
       </div>
     </div>

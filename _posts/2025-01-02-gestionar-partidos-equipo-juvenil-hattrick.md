@@ -6,7 +6,7 @@ date: 2025-01-08
 categories: equipo-juvenil
 tags: [partidos, tácticas, desarrollo]
 excerpt: "Descubre cómo maximizar el desarrollo de tus jugadores juveniles y afinar tus estrategias a través de los partidos en Hattrick."
-image: "/assets/img/HT.jpg"
+image: "/assets/img/ht-v.png"
 featured: false
 published: true
 ---

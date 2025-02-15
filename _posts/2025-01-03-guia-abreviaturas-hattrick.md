@@ -6,7 +6,7 @@ date: 2025-01-03
 categories: equipo-mayor
 tags: ["abreviaturas", "Hattrick", "tácticas"]
 excerpt: "Domina el lenguaje común usado en Hattrick con esta guía detallada de abreviaturas."
-image: "/assets/img/HT.jpg"
+image: "/assets/img/ht-b.png"
 featured: false
 published: true
 ---
@@ -14,7 +14,6 @@ published: true
 ## Guía completa de abreviaturas en Hattrick
 
 En el dinámico mundo de Hattrick, las abreviaturas son herramientas esenciales para comunicarte eficazmente y comprender los aspectos clave del juego. Dominar estas abreviaturas te permitirá interactuar mejor con la comunidad y optimizar tu experiencia.
-
 
 ### Abreviaturas por Categoría
 
@@ -189,6 +188,7 @@ En el dinámico mundo de Hattrick, las abreviaturas son herramientas esenciales 
 - **YS**: Equipo Juvenil.
 
 ---
+
 ### Consejos clave para dominar las abreviaturas en Hattrick
 
 Aquí tienes algunos consejos clave para dominar las abreviaturas en Hattrick:

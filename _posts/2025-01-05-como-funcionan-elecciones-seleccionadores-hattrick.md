@@ -6,7 +6,7 @@ date: 2025-01-01
 categories: selecciones-nacionales
 tags: [elecciones, seleccionadores, Hattrick]
 excerpt: "Descubre las reglas y responsabilidades detrás del proceso electoral de seleccionadores nacionales en Hattrick."
-image: "/assets/img/HT.jpg"
+image: "/assets/img/ht-b.png"
 featured: false
 published: true
 ---

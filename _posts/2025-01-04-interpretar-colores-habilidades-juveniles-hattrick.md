@@ -6,7 +6,7 @@ date: 2025-01-14
 categories: equipo-juvenil
 tags: [juveniles, habilidades, entrenamiento]
 excerpt: "Descubre el significado de los colores en las habilidades de los juveniles y cómo utilizarlos para optimizar su desarrollo."
-image: "/assets/img/HT.jpg"
+image: "/assets/img/ht-v.png"
 featured: true
 published: true
 ---

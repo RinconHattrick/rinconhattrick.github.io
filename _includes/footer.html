@@ -4,13 +4,14 @@
       <strong>{{ site.title }}</strong> &copy; {{ "now" | date: "%Y" }} {{ site.author }}
     </p>
 
-    <!-- Botones de navegación -->
     <div class="buttons is-centered">
-      <a href="{{ '/acerca-de/' | relative_url }}" class="button is-light is-small">
+      <a href="{{ '/acerca-de/' | relative_url }}" class="button is-small button-footer" aria-label="Acerca de"
+        title="Ver información sobre nosotros">
         <span class="icon"><i class="fas fa-info-circle"></i></span>
         <span>Acerca de</span>
       </a>
-      <a href="{{ '/contacto/' | relative_url }}" class="button is-light is-small">
+      <a href="{{ '/contacto/' | relative_url }}" class="button is-small button-footer" aria-label="Contacto"
+        title="Enviar un mensaje">
         <span class="icon"><i class="fas fa-envelope"></i></span>
         <span>Contacto</span>
       </a>

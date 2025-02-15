@@ -6,7 +6,7 @@ date: 2025-01-16
 categories: equipo-juvenil
 tags: [entrenamiento, juveniles, desarrollo]
 excerpt: "Aprende a desarrollar a tus juveniles con entrenamientos progresivos y optimizados."
-image: "/assets/img/HT.jpg"
+image: "/assets/img/ht-v.png"
 featured: true
 published: true
 ---

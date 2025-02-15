@@ -7,7 +7,7 @@ categories: selecciones-nacionales
 tags:
   [sorteo, Mundial, Hattrick, Copas Continentales, clasificación, estrategias]
 excerpt: "Descubre cómo funciona el sorteo del Mundial en Hattrick y las estrategias clave para enfrentarte a cualquier grupo con éxito, llevando a tu selección a lo más alto."
-image: "/assets/img/HT.jpg"
+image: "/assets/img/ht-v.png"
 featured: false
 published: true
 ---
@@ -65,7 +65,7 @@ El Mundial reúne a los **96 mejores equipos del mundo**, divididos en **16 grup
 
 #### Mantén a tu Equipo en Forma
 
-- Asegúrate de que tus jugadores estén entrenados en las tácticas que planeas usar, y prioriza la resistencia y la forma.
+- Asegúrate de que tus jugadores estén entrenados en las tácticas que planeas usar, y prioriza la resistencia y la forma.
 
 > **Sorpresas:** En 2024, el equipo de Ecuador llegó hasta la cuarta ronda tras superar un grupo muy complicado, demostrando que todo es posible con planificación.
 

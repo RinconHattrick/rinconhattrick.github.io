@@ -6,7 +6,7 @@ date: 2025-01-12
 categories: equipo-juvenil
 tags: [juveniles, cierre, reinicio]
 excerpt: "¿Es hora de cerrar o reiniciar tu academia juvenil en Hattrick? Descubre los motivos, condiciones y pasos necesarios para tomar la mejor decisión."
-image: "/assets/img/HT.jpg"
+image: "/assets/img/ht-v.png"
 featured: false
 published: true
 ---
@@ -49,6 +49,7 @@ Reiniciar implica crear un nuevo equipo juvenil desde cero, despidiendo a todos 
 #### Requisitos para reiniciar
 
 1. **Inactividad reciente**:
+
    - No haber llamado a tus ojeadores durante al menos **3 semanas consecutivas**, o
    - Tener menos de **9 jugadores elegibles** (menores de 19 años).
 
@@ -66,6 +67,7 @@ Reiniciar implica crear un nuevo equipo juvenil desde cero, despidiendo a todos 
 ### Comparativa: Cerrar vs. Reiniciar
 
 - **Cerrar academia**
+
   - **Condiciones principales:**
     - Entre temporadas o sin liga activa.
     - Mínimo 6 semanas desde la apertura.

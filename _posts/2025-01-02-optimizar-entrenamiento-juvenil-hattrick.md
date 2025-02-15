@@ -6,7 +6,7 @@ date: 2025-01-07
 categories: equipo-juvenil
 tags: [entrenamiento, juveniles, estrategia]
 excerpt: "Descubre cómo maximizar el desarrollo de tus juveniles con estrategias de entrenamiento efectivas."
-image: "/assets/img/HT.jpg"
+image: "/assets/img/ht-v.png"
 featured: false
 published: true
 ---
@@ -35,6 +35,7 @@ Una combinación inteligente de ambos entrenamientos puede acelerar el desarroll
 #### Selección de habilidades a entrenar
 
 1. **Enfócate en habilidades clave**
+
    - Entrenar la misma habilidad en primario y secundario optimiza el desarrollo de esa habilidad.
    - Usar habilidades diferentes amplía tu conocimiento del potencial de los jugadores.
 
@@ -56,9 +57,11 @@ Tras cada partido, recibirás reportes del entrenador que te ayudarán a optimiz
 #### Elementos clave del reporte
 
 1. **Progreso actual:**
+
    - Detalla el nivel actual del jugador en la habilidad entrenada.
 
 2. **Potencial máximo:**
+
    - En entrenamiento secundario, revela el techo de desarrollo del jugador.
 
 3. **Sugerencias adicionales:**

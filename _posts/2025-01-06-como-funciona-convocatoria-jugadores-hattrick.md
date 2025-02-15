@@ -6,7 +6,7 @@ date: 2025-01-10
 categories: selecciones-nacionales
 tags: [convocatoria, jugadores, selecciones]
 excerpt: "Descubre cómo los seleccionadores eligen jugadores y gestionan la experiencia táctica en las selecciones nacionales, llevando a tu equipo al éxito en la competición."
-image: "/assets/img/HT.jpg"
+image: "/assets/img/ht-v.png"
 featured: false
 published: true
 ---

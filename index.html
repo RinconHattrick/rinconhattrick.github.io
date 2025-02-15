@@ -79,7 +79,7 @@ title: "El Rincón de Hattrick"
               <!-- Botón para ver más artículos de la categoría -->
               <div class="has-text-centered mt-4">
                 {% if category_page %}
-                <a href="{{ category_page.url | relative_url }}" class="button is-primary is-light"
+                <a href="{{ category_page.url | relative_url }}" class="button is-light"
                   aria-label="Ver más artículos de la categoría {{ category_page.title | default: category_name }}">
                   <span class="icon-text">
                     <span class="icon"><i class="fas fa-folder-open"></i></span>

@@ -6,7 +6,7 @@ date: 2025-01-04
 categories: equipo-mayor
 tags: ["ventas Hattrick", "estrategias mercado", "jugadores"]
 excerpt: "Aprende a maximizar la visibilidad y el valor de tus jugadores con estrategias efectivas de venta en Hattrick."
-image: "/assets/img/HT.jpg"
+image: "/assets/img/ht-b.png"
 featured: false
 published: true
 ---

@@ -6,7 +6,7 @@ date: 2025-01-10
 categories: equipo-juvenil
 tags: [finanzas, juveniles, costos]
 excerpt: "Descubre los gastos asociados a gestionar un equipo juvenil en Hattrick y cómo optimizarlos para maximizar su rentabilidad."
-image: "/assets/img/HT.jpg"
+image: "/assets/img/ht-v.png"
 featured: false
 published: true
 ---
@@ -74,9 +74,11 @@ El mantenimiento semanal del equipo juvenil incluye:
 Aquí tienes algunos consejos que te ayudarán a optimizar los gastos de tu equipo juvenil:
 
 1. **Limita el número de ojeadores activos**
+
    - Si tu presupuesto es ajustado, trabaja con un solo ojeador y busca calidad en lugar de cantidad.
 
 2. **Planifica los ascensos con cuidado**
+
    - Promociona juveniles únicamente cuando estén listos para aportar al primer equipo o generar ingresos en el mercado.
 
 3. **Evalúa las búsquedas regionales**

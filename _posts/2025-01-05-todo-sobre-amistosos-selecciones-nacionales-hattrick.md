@@ -6,7 +6,7 @@ date: 2025-01-05
 categories: selecciones-nacionales
 tags: [amistosos, selecciones, Hattrick]
 excerpt: "Descubre cómo organizar y aprovechar los amistosos de selecciones nacionales en Hattrick."
-image: "/assets/img/HT.jpg"
+image: "/assets/img/ht-b.png"
 featured: false
 published: true
 ---

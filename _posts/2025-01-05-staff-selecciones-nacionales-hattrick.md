@@ -6,7 +6,7 @@ date: 2025-01-07
 categories: selecciones-nacionales
 tags: [personal, selección, Hattrick, staff]
 excerpt: "Descubre cómo los roles del equipo técnico de las selecciones nacionales contribuyen al éxito en Hattrick."
-image: "/assets/img/HT.jpg"
+image: "/assets/img/ht-b.png"
 featured: false
 published: true
 ---

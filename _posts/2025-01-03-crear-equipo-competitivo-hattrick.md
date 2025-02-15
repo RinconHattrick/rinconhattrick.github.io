@@ -6,7 +6,7 @@ date: 2025-01-02
 categories: equipo-mayor
 tags: ["Hattrick", "equipo competitivo", "estrategias fútbol"]
 excerpt: "Descubre cómo construir un equipo exitoso desde cero con estrategias claras y eficientes."
-image: "/assets/img/HT.jpg"
+image: "/assets/img/ht-b.png"
 featured: true
 published: true
 ---

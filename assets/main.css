@@ -1,41 +1,28 @@
-/* =========================================================================
-   VARIABLES Y TEMAS
-   ========================================================================== */
+/* ==============================
+   VARIABLES Y TEMAS DE COLORES
+============================== */
 :root {
-  /* Colores base */
-  --primary-color-light: #00d1b2;
-  --primary-color-dark: #4caf50;
+  --primary-color: #00d1b2;
   --secondary-color: #485fc7;
-
-  /* Temas */
   --background-light: #ffffff;
   --background-dark: #181825;
   --text-light: #363636;
   --text-dark: #f1f1f1;
   --card-background-light: #f5f5f5;
   --card-background-dark: #242435;
-
-  /* Gradientes */
   --primary-gradient: linear-gradient(
     135deg,
     var(--primary-color),
     var(--secondary-color)
   );
-
-  /* Transiciones */
-  --transition-transform: transform 0.2s ease;
-  --transition-all: all 0.2s ease;
-  --transition-standard: transform 0.2s ease, box-shadow 0.2s ease;
-
-  /* Sombras */
-  --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.1);
-  --shadow-md: 0 8px 16px rgba(0, 0, 0, 0.1);
+  --transition-standard: all 0.3s ease-in-out; /* Transición más uniforme */
+  --shadow-sm: 0 2px 5px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --border-radius: 8px;
 }
 
-/* Configuración de temas según preferencia de color */
 @media (prefers-color-scheme: light) {
   :root {
-    --primary-color: var(--primary-color-light);
     --background: var(--background-light);
     --text: var(--text-light);
     --card-background: var(--card-background-light);
@@ -44,52 +31,15 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --primary-color: var(--primary-color-dark);
     --background: var(--background-dark);
     --text: var(--text-dark);
     --card-background: var(--card-background-dark);
   }
-
-  .card,
-  .has-background-white-bis {
-    background-color: var(--card-background) !important;
-  }
-
-  .has-text-grey-lighter,
-  .menu-label {
-    color: var(--text-dark) !important;
-  }
-
-  .menu-list a:hover {
-    background-color: var(--primary-color-dark);
-  }
 }
 
-/* =========================================================================
-   UTILIDADES DE TRANSICIÓN
-   ========================================================================== */
-.transition-standard {
-  transition: var(--transition-standard);
-}
-
-.transition-transform {
-  transition: var(--transition-transform);
-}
-
-/* =========================================================================
-   ESTILOS BASE
-   ========================================================================== */
-body {
-  font-family: sans-serif;
-  background-color: var(--background);
-  color: var(--text);
-  transition: var(--transition-all);
-}
-
-/* =========================================================================
-   TIPOGRAFÍA
-   ========================================================================== */
-/* Sistema de tipografía */
+/* ==============================
+   FUENTES TIPOGRÁFICAS
+============================== */
 h1,
 h2,
 h3,
@@ -97,196 +47,149 @@ h4,
 h5,
 h6 {
   font-family: "Poppins", sans-serif;
-  color: var(--primary-color);
-  margin: 1.5rem 0 1rem;
-}
-
-h1,
-h2,
-h3 {
   font-weight: 700;
-  border-bottom: 2px solid var(--primary-color);
-  padding-bottom: 0.5rem;
 }
 
-h3,
-h4 {
-  font-weight: 600;
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--background);
+  color: var(--text);
 }
 
-h5,
-h6 {
-  font-weight: 500;
+code,
+pre {
+  font-family: "Fira Code", monospace;
 }
 
-h1 {
-  font-size: clamp(2rem, 5vw, 2.5rem);
-}
-h2 {
-  font-size: clamp(1.75rem, 4vw, 2rem);
-}
-h3 {
-  font-size: 1.75rem;
-}
-h4 {
-  font-size: 1.5rem;
-}
-h5 {
-  font-size: 1.25rem;
-}
-h6 {
-  font-size: 1rem;
+/* ==============================
+   NAVBAR
+============================== */
+.navbar {
+  box-shadow: var(--shadow-md);
+  background-color: var(--background);
 }
 
-/* =========================================================================
-   CONTENEDORES Y ARTÍCULOS
-   ========================================================================== */
-.article {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem;
-}
+@media (prefers-color-scheme: dark) {
+  .navbar {
+    background-color: rgba(30, 30, 30, 0.9);
+  }
 
-/* =========================================================================
-   LISTAS
-   ========================================================================== */
-ul,
-ol {
-  list-style-type: none;
-  padding-left: 0;
-  margin-top: 0;
-}
+  .navbar-item,
+  .navbar-link {
+    color: var(--text-dark); /* Ajustamos el color del texto en modo oscuro */
+  }
 
-ul li,
-ol li {
-  margin-bottom: 0.5rem;
-  font-size: 1rem;
-}
-
-ul li::before {
-  color: var(--primary-color);
-  font-weight: bold;
-  margin-right: 0.5rem;
-}
-
-ol {
-  list-style-type: decimal;
-}
-
-/* =========================================================================
-   ENLACES
-   ========================================================================== */
-a {
-  color: var(--primary-color);
-  text-decoration: none;
-  transition: var(--transition-all);
-}
-
-a:hover,
-a:focus {
-  color: var(--secondary-color);
-  text-decoration: underline;
-}
-
-a:active {
-  color: var(--primary-color);
-}
-
-a:focus {
-  outline: 2px solid var(--secondary-color);
-  outline-offset: 2px;
-}
-
-/* =========================================================================
-   TABLAS
-   ========================================================================== */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 1.5rem 0;
-}
-
-th,
-td {
-  padding: 0.8rem;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
-}
-
-th {
-  background-color: var(--primary-color);
-  color: white;
-  font-weight: 600;
-}
-
-/* =========================================================================
-   COMPONENTES
-   ========================================================================== */
-
-/* --- Navbar y Header --- */
-.navbar-brand h1 {
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  background: var(--primary-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.navbar-item:hover {
-  text-decoration: none;
-}
-
-@media (min-width: 1024px) {
-  .main-content {
-    margin-top: 3.25rem;
+  .navbar-item:hover,
+  .navbar-link:hover {
+    color: var(
+      --primary-color
+    ); /* Colorear los elementos del navbar al pasar el ratón */
   }
 }
 
-.main-header {
-  background: var(--primary-gradient);
-  border-radius: 12px;
-  margin-bottom: 3rem;
+.navbar-item,
+.navbar-link {
+  color: var(--text);
+  text-decoration: none; /* Elimina el subrayado por defecto */
 }
 
-.main-header .title,
-.main-header .subtitle {
-  color: white !important;
+.navbar-item:hover,
+.navbar-link:hover {
+  color: var(--primary-color); /* Color cuando se pasa el ratón */
 }
-
-/* --- Cards --- */
+/* ==============================
+   TARJETAS
+============================== */
 .card {
-  height: 100%;
-  border-radius: 12px;
-  overflow: hidden;
   background-color: var(--card-background);
+  box-shadow: var(--shadow-sm);
   transition: var(--transition-standard);
-  will-change: transform;
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-4px); /* Efecto más marcado */
   box-shadow: var(--shadow-md);
 }
 
-.card-content {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  padding: 2rem;
-}
-
-.card-header-title {
+.card-header {
   background: var(--primary-gradient);
   color: white;
-  padding: 1.5rem;
-  border-radius: 8px 8px 0 0;
+  padding: 1rem;
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
 }
 
-/* --- Botones --- */
+/* ==============================
+   SCROLLBAR
+============================== */
+::-webkit-scrollbar {
+  width: 10px; /* Ancho mayor para mejor visibilidad */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  border-radius: 10px; /* Añadir bordes redondeados para un mejor diseño */
+  border: 2px solid transparent; /* Bordes transparentes para evitar distorsión */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Transición más suave */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--secondary-color);
+  transform: scale(1.1); /* Efecto de expansión para interacción */
+}
+
+@media (prefers-color-scheme: dark) {
+  ::-webkit-scrollbar-thumb {
+    background-color: var(
+      --secondary-color
+    ); /* Mejor contraste en modo oscuro */
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color); /* Mejor contraste en modo claro */
+  }
+}
+
+/* ==============================
+   FOOTER
+============================== */
+.footer {
+  background-color: var(--background);
+  color: var(--text);
+  padding: 1.5rem 0;
+}
+
+.footer .buttons a.button {
+  transition: var(--transition-standard);
+  font-weight: 500;
+  border-radius: var(--border-radius);
+  background-color: var(--primary-color);
+  color: var(--background-light);
+}
+
+.footer .buttons a.button:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.footer .buttons a.button:active {
+  background-color: var(--primary-color);
+  transform: translateY(1px);
+  box-shadow: var(--shadow-sm);
+}
+
+.footer .buttons a.button:focus {
+  outline: 2px solid var(--secondary-color);
+}
+
+/* ==============================
+   BOTONES
+============================== */
 .button {
   transition: var(--transition-standard);
   font-weight: 500;
-  will-change: transform;
 }
 
 .button:hover {
@@ -294,131 +197,107 @@ th {
   box-shadow: var(--shadow-sm);
 }
 
-/* --- Iconos --- */
-.icon.is-large i {
-  transition: var(--transition-transform);
+.button:active {
+  transform: translateY(1px);
 }
 
-.card:hover .icon.is-large i {
+/* ==============================
+   ANIMACIONES
+============================== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+    will-change: opacity, transform;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.box {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeIn 0.3s ease-out forwards; /* Suavizado en la animación */
+}
+
+/* ==============================
+   RESPONSIVE
+============================== */
+@media (max-width: 1024px) {
+  .sticky-sidebar {
+    position: static;
+    max-width: 100%;
+  }
+  .is-hidden-mobile {
+    display: none;
+  }
+
+  /* Menú desplegable en dispositivos móviles */
+  .navbar-dropdown {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease-in-out;
+  }
+  .navbar-dropdown.is-active {
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .is-hidden-tablet {
+    display: none;
+  }
+}
+
+.navbar-burger {
+  color: var(--text); /* Color de la hamburguesa en modo claro */
+}
+
+@media (prefers-color-scheme: dark) {
+  .navbar-burger {
+    color: var(--text-dark); /* Color de la hamburguesa en modo oscuro */
+  }
+}
+
+.scroll-to-top-btn {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background-color: var(--primary-color);
+  color: var(--background-light);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  box-shadow: var(--shadow-md);
+}
+
+.scroll-to-top-btn:hover {
   transform: scale(1.1);
+  box-shadow: var(--shadow-md);
 }
 
-/* --- Layout con Sidebar --- */
-.with-sidebar-layout {
-  background-color: var(--background);
-  min-height: calc(100vh - 52px - 3rem);
-  padding-bottom: 3rem;
+.scroll-to-top-btn.show {
+  opacity: 1;
 }
 
-/* --- Navegación lateral (Sidebar) --- */
-.sticky-sidebar {
-  position: sticky;
-  top: 1rem;
-  max-height: calc(100vh - 6rem);
-  overflow-y: auto;
-  padding-right: 0.5rem;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: thin;
-  scrollbar-color: var(--primary-color) transparent;
+@media (max-width: 767px) {
+  .scroll-to-top-btn {
+    right: 20px;
+    bottom: 60px;
+  }
 }
 
-.sticky-sidebar::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-}
-
-.sticky-sidebar::-webkit-scrollbar-track {
-  background: transparent;
-  border-radius: 4px;
-}
-
-.sticky-sidebar::-webkit-scrollbar-thumb {
-  background-color: var(--primary-color);
-  border-radius: 4px;
-}
-
-.sticky-sidebar::-webkit-scrollbar-thumb:hover {
-  background-color: var(--secondary-color);
-}
-
-/* --- Menú y navegación --- */
-.menu-list a {
-  border-radius: 6px;
-  margin-bottom: 0.5rem;
-  transition: var(--transition-all);
-}
-
-.menu-list a:hover,
-.menu-list a.is-active {
-  background-color: var(--primary-color);
-  color: white;
-}
-
-.menu-item {
-  display: block;
-  padding: 0.5rem;
-  border-radius: 6px;
-  color: var(--text);
-  text-decoration: none;
-  transition: var(--transition-all);
-}
-
-.menu-item:hover {
-  background-color: var(--card-background);
-  transform: translateX(4px);
-}
-
-.menu-item time {
-  display: block;
-  margin-top: 0.25rem;
-}
-
-/* --- Posts --- */
-.post-item {
-  transition: var(--transition-transform);
-}
-
-.post-item:hover {
-  transform: translateX(5px);
-}
-
-.posts-list {
-  max-height: 800px;
-  overflow-y: auto;
-  scrollbar-width: thin;
-  scrollbar-color: var(--primary-color) transparent;
-}
-
-.category-page .posts-list {
-  max-height: unset;
-}
-
-/* --- Footer --- */
-.footer {
-  padding: 2rem 0;
-}
-
-footer.has-text-centered {
-  margin-top: 4rem;
-  padding: 2rem 0;
-}
-
-footer .button {
-  margin-top: 1.5rem;
-}
-
-/* --- Notificaciones --- */
-.notification.is-warning {
-  background-color: rgba(255, 221, 87, 0.2);
-  border: 1px solid #ffdd57;
-}
-
-.notification.is-warning .icon {
-  color: #ffdd57;
-}
-
-/* --- Búsqueda --- */
+/* ==============================
+   BUSCADOR
+============================== */
 .search-results-list {
   list-style: none;
   padding: 0;
@@ -429,223 +308,113 @@ footer .button {
   padding-bottom: 10px;
   margin-bottom: 10px;
 }
-
 .search-results-list li:last-child {
+  margin-bottom: 0;
   border-bottom: none;
+}
+
+#search-feedback {
+  display: none;
+  transition: var(--transition-standard);
+}
+
+#search-feedback:not(.is-hidden) {
+  display: block;
 }
 
 mark {
   background-color: #ffdd57;
-  padding: 0.1em 0.2em;
-  border-radius: 2px;
+  color: #222;
+  padding: 2px 4px;
+  border-radius: 3px;
 }
 
-/* =========================================================================
-   MEDIA QUERIES Y ADAPTATIVIDAD
-   ========================================================================== */
-@media screen and (max-width: 1024px) {
-  body {
-    padding-top: 0;
-  }
-
-  .sticky-sidebar {
-    position: static;
-    max-height: none;
-    overflow-y: visible;
-    padding-right: 0;
-  }
-
-  .hide-mobile {
-    display: none;
-  }
-
-  table {
-    font-size: 0.9rem;
-  }
-
-  .columns {
-    margin: 0;
-  }
-
-  .column {
-    padding: 0.2rem;
-  }
-
-  .navbar-dropdown {
-    display: none;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-in-out;
-  }
-
-  .navbar-dropdown.is-active {
-    display: block;
-    max-height: 500px;
-  }
+.notification.is-warning {
+  background-color: rgba(255, 221, 87, 0.2);
+  border: 1px solid #ffdd57;
+  border-radius: var(--border-radius);
+  padding: 10px;
 }
 
-@media (hover: none) {
-  .sticky-sidebar {
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
-
-  .sticky-sidebar::-webkit-scrollbar {
-    display: none;
-  }
+.notification.is-warning .icon {
+  color: #ffdd57;
+  font-size: 1.2rem;
+  vertical-align: middle;
 }
 
-@media screen and (max-width: 768px) {
-  .navbar {
-    padding: 0.5rem 1rem;
-  }
-
-  .navbar-item {
-    padding: 0.25rem 0.75rem;
-  }
-
-  .navbar-burger {
-    height: 2rem;
-    width: 2rem;
-  }
-
-  .navbar-burger span {
-    height: 2px;
-    width: 18px;
-  }
-
-  .aside {
-    display: none;
-  }
+/* ==============================
+   SIDEBAR
+============================== */
+.sticky-sidebar {
+  position: sticky;
+  top: 1rem;
+  max-width: 300px;
+  max-height: min(calc(100vh - 6rem), 400px);
+  overflow-y: auto;
+  background-color: var(
+    --card-background
+  ); /* Asegura que el sidebar tenga un fondo */
+  box-shadow: var(--shadow-sm); /* Añade sombra para dar profundidad */
+  padding: 1rem;
+  border-radius: var(--border-radius);
 }
 
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* ==============================
+    MENU LISTA
+============================== */
+.menu-list a {
+  padding: 0.5rem 1rem; /* Añadir algo de espacio en los laterales */
+  border-radius: var(--border-radius);
+  transition: var(--transition-standard);
+  display: flex; /* Asegura que los iconos y el texto estén alineados */
+  align-items: center; /* Centra el texto y el icono */
 }
 
-@media (hover: hover) {
-  .button:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow);
-  }
+.menu-list a .icon {
+  margin-right: 0.5rem; /* Añadir espacio entre el icono y el texto */
 }
 
-/* =========================================================================
-   BOTÓN DE SCROLL HACIA ARRIBA
-   ========================================================================== */
-.scroll-to-top-btn {
-  position: fixed;
-  bottom: 1.5rem;
-  right: 1.5rem;
+.menu-list a:hover,
+.menu-list a:focus {
   background-color: var(--primary-color);
   color: var(--background-light);
-  border: none;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  opacity: 0;
-  transition: opacity 0.3s, transform 0.3s;
+  outline: 2px solid var(--primary-color);
 }
 
-.scroll-to-top-btn i {
-  font-size: 20px;
+/* ==============================
+    MENU LABEL
+============================== */
+.menu-label {
+  font-weight: 600;
+  margin-top: 1rem;
+  text-transform: capitalize;
+  color: var(--text-dark);
 }
 
-.scroll-to-top-btn:hover {
-  background-color: var(--secondary-color);
-  transform: scale(1.1);
-}
-
-/* Cuando el botón debe aparecer */
-.scroll-to-top-btn.show {
-  opacity: 1;
-  visibility: visible;
-}
-
-/* Mostrar el botón cuando se hace scroll */
-.show-scroll {
-  display: flex;
-  opacity: 1;
-  transform: scale(1);
-}
-
-/* Ajuste en pantallas más grandes */
-@media (min-width: 768px) {
-  .scroll-to-top-btn {
-    bottom: 30px;
-    right: 30px;
+/* ==============================
+   MODO CLARO
+============================== */
+@media (prefers-color-scheme: light) {
+  .menu-label {
+    color: var(
+      --text-light
+    ); /* Asegura un color oscuro para el texto en modo claro */
   }
 }
 
-/* Qkuste en pantallas pequeñas */
-@media screen and (max-width: 767px) {
-  .scroll-to-top-btn {
-    right: 20px;
-    bottom: 90px;
+/* ==============================
+   MODO OSCURO
+============================== */
+@media (prefers-color-scheme: dark) {
+  .menu-label {
+    color: var(
+      --text-dark
+    ); /* Asegura un color claro para el texto en modo oscuro */
   }
 }
-
-/* Estilos de la barra de desplazamiento (compatibles con más navegadores) */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: var(--primary-color);
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: var(--secondary-color);
-}
-
-::-webkit-scrollbar-track {
-  background-color: var(--card-background);
-}
-
-* {
-  scrollbar-width: thin;
-  scrollbar-color: var(--primary-color) var(--card-backgroundbg);
-}
-/* Para Firefox */
-* {
-  scrollbar-width: thin;
-  scrollbar-color: var(--primary-color) var(--card-background);
-}
-
-.box {
-  opacity: 0;
-  transform: translateY(10px);
-  animation: fadeIn 0.3s ease-in-out forwards;
-}
-
-.featured-list {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.featured-item {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  padding: 8px;
-  border-radius: 8px;
-  transition: background 0.3s ease;
-}
-
-.featured-item:hover {
-  color: var(--text);
-}
-
-.featured-info {
-  display: flex;
-  flex-direction: column;
+/* ==============================
+    ACCESIBILIDAD Y ENLACES
+============================== */
+.menu-list a:focus {
+  outline: 2px solid var(--secondary-color); /* Cambia el color de outline en focus para accesibilidad */
 }

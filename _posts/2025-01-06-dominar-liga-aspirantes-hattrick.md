@@ -6,7 +6,7 @@ date: 2025-01-19
 categories: selecciones-nacionales
 tags: [Liga de Aspirantes, torneo, Hattrick]
 excerpt: "Descubre cómo la Liga de Aspirantes en Hattrick puede impulsar el desarrollo de tu selección nacional y mejorar su rendimiento competitivo, llevando a tu equipo al éxito en la competición."
-image: "/assets/img/HT.jpg"
+image: "/assets/img/ht-v.png"
 featured: false
 published: true
 ---

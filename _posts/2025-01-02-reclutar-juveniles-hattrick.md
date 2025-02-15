@@ -6,7 +6,7 @@ date: 2025-01-01
 categories: equipo-juvenil
 tags: [juveniles, reclutamiento, estrategia]
 excerpt: "Explora los sistemas de reclutamiento juvenil en Hattrick y elige la mejor estrategia para el futuro de tu equipo."
-image: "/assets/img/HT.jpg"
+image: "/assets/img/ht-v.png"
 featured: false
 published: true
 ---

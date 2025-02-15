@@ -6,7 +6,7 @@ date: 2025-01-06
 categories: equipo-juvenil
 tags: [ojeadores, estrategia, juveniles]
 excerpt: "Aprende a gestionar y sacar el máximo provecho a los ojeadores juveniles en Hattrick para construir un equipo competitivo."
-image: "/assets/img/HT.jpg"
+image: "/assets/img/ht-v.png"
 featured: false
 published: true
 ---

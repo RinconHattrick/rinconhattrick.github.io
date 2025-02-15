@@ -6,7 +6,7 @@ date: 2025-01-08
 categories: selecciones-nacionales
 tags: [uniforme, selección, diseño, identidad, colores]
 excerpt: "Aprende a personalizar los colores y diseños del uniforme nacional y su impacto en la identidad del equipo."
-image: "/assets/img/HT.jpg"
+image: "/assets/img/ht-b.png"
 featured: false
 published: true
 ---

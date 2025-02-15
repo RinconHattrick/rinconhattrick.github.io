@@ -2,34 +2,25 @@
   <div class="container">
     <div class="navbar-brand">
       <a class="navbar-item" href="{{ '/' | relative_url }}">
-        <h1 class="title is-4 mb-0">El Rincón de Hattrick</h1>
+        <h2 class="title is-4 mb-0">El Rincón de Hattrick</h2>
       </a>
 
-      <!-- Botón de menú en móviles -->
-      <button class="navbar-burger" aria-label="Menú" aria-expanded="false" data-target="navbarMenu">
+      <button class="navbar-burger" role="button" aria-label="Menú" aria-expanded="false" data-target="navbarMenu">
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
       </button>
     </div>
 
-    <!-- Menú principal -->
     <div id="navbarMenu" class="navbar-menu">
       <div class="navbar-end">
         <a class="navbar-item {% if page.url == '/' %}is-active{% endif %}" href="{{ '/' | relative_url }}">
-          <span class="icon-text">
-            <span class="icon"><i class="fas fa-home"></i></span>
-            <span>Inicio</span>
-          </span>
+          <i class="fas fa-home"></i> <span>Inicio</span>
         </a>
 
-        <!-- Menú de categorías -->
         <div class="navbar-item has-dropdown is-hoverable">
           <a class="navbar-link" id="category-toggle" aria-haspopup="true" aria-expanded="false">
-            <span class="icon-text">
-              <span class="icon"><i class="fas fa-folder"></i></span>
-              <span>Categorías</span>
-            </span>
+            <i class="fas fa-folder"></i> <span>Categorías</span>
           </a>
           <div class="navbar-dropdown" id="category-menu">
             {% assign category_pages = site.pages | where: "layout", "category" %}
@@ -37,10 +28,7 @@
             {% for category_page in category_pages %}
             <a class="navbar-item {% if page.url == category_page.url %}is-active{% endif %}"
               href="{{ category_page.url | relative_url }}">
-              <span class="icon-text">
-                <span class="icon"><i class="fas {{ category_page.icon }}"></i></span>
-                <span>{{ category_page.title }}</span>
-              </span>
+              <i class="fas {{ category_page.icon }}"></i> <span>{{ category_page.title }}</span>
             </a>
             {% endfor %}
             {% else %}
@@ -51,30 +39,23 @@
 
         <a class="navbar-item {% if page.url contains '/acerca-de/' %}is-active{% endif %}"
           href="{{ '/acerca-de/' | relative_url }}">
-          <span class="icon-text">
-            <span class="icon"><i class="fas fa-info-circle"></i></span>
-            <span>Acerca de</span>
-          </span>
+          <i class="fas fa-info-circle"></i> <span>Acerca de</span>
         </a>
 
         <a class="navbar-item {% if page.url contains '/contacto/' %}is-active{% endif %}"
           href="{{ '/contacto/' | relative_url }}">
-          <span class="icon-text">
-            <span class="icon"><i class="fas fa-envelope"></i></span>
-            <span>Contáctanos</span>
-          </span>
+          <i class="fas fa-envelope"></i> <span>Contáctanos</span>
         </a>
 
-        <!-- Buscador en el header -->
         <div class="navbar-item">
           <form action="{{ '/search/' | relative_url }}" method="get" role="search">
             <div class="field has-addons">
               <div class="control">
-                <input class="input is-rounded" type="search" name="q" placeholder="Buscar..."
+                <input id="searchInput" class="input is-rounded" type="search" name="q" placeholder="Buscar..."
                   aria-label="Buscar artículos" required>
               </div>
               <div class="control">
-                <button type="submit" class="button is-primary is-rounded">
+                <button id="searchButton" type="submit" class="button is-primary is-rounded" disabled>
                   <span class="icon"><i class="fas fa-search"></i></span>
                 </button>
               </div>

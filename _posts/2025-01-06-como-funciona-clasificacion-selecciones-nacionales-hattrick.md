@@ -6,7 +6,7 @@ date: 2025-01-14
 categories: selecciones-nacionales
 tags: [ranking, selecciones, estrategia]
 excerpt: "Descubre cómo se calcula el ranking de selecciones nacionales y qué estrategias usar para mejorar tu posición."
-image: "/assets/img/HT.jpg"
+image: "/assets/img/ht-v.png"
 featured: false
 published: true
 ---
