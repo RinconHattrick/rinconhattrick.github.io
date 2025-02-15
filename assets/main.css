@@ -234,6 +234,12 @@ pre {
     display: none;
   }
 
+@media screen and (max-width: 1024px) {
+    .columns {
+        flex-wrap: wrap;
+    }
+}
+
   /* Menú desplegable en dispositivos móviles */
   .navbar-dropdown {
     height: 0;
