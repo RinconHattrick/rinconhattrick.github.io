@@ -1,23 +1,23 @@
-<aside class="sticky-sidebar is-hidden-touch">
-  <div class="card mb-4">
+<section class="sticky-sidebar" role="complementary">
+  <div class="card">
     <div class="card-content">
       <h2 class="title is-5 has-text-weight-semibold">Enlaces Útiles</h2>
       {% for categoria in site.data.enlaces %}
-      {% assign nombre_categoria = categoria[0] %}
-      {% assign enlaces = categoria[1] %}
-
-      <p class="menu-label">{{ nombre_categoria | capitalize }}</p>
-      <ul class="menu-list">
-        {% for enlace in enlaces %}
-        <li>
-          <a href="{{ enlace.url }}" target="_blank" title="{{ enlace.nombre }}">
-            <span class="icon"><i class="fas fa-link"></i></span>
-            <span>{{ enlace.nombre }}</span>
-          </a>
-        </li>
-        {% endfor %}
-      </ul>
+        {% assign nombre_categoria = categoria[0] %}
+        {% assign enlaces = categoria[1] %}
+        
+        <p class="menu-label">{{ nombre_categoria | capitalize }}</p>
+        <ul class="menu-list">
+          {% for enlace in enlaces %}
+            <li>
+              <a href="{{ enlace.url }}" target="_blank" title="{{ enlace.nombre }}" aria-label="{{ enlace.nombre }}">
+                <span class="icon" aria-hidden="true"><i class="fas fa-link"></i></span>
+                <span>{{ enlace.nombre }}</span>
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
       {% endfor %}
     </div>
   </div>
-</aside>
+</section>

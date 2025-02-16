@@ -79,8 +79,45 @@ body {
   text-decoration: none;
 }
 
-.navbar-item:hover, .navbar-link:hover {
-  color: var(--primary-color);
+.navbar-item.is-active {
+  background-color: var(--primary-color); 
+  color: var(--background-light); 
+}
+
+body.has-navbar-fixed-bottom {
+  padding-bottom: 4rem; /* Ajusta según el tamaño del navbar */
+}
+
+.navbar-dropdown {
+  max-height: 0;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  z-index: 100;
+}
+
+.navbar-item.has-dropdown {
+  position: relative;
+}
+
+@media (min-width: 1024px) {
+  .navbar-item.has-dropdown:hover .navbar-dropdown {
+    max-height: 500px;
+    opacity: 1;
+    visibility: visible;
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar-dropdown {
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+    z-index: 10;
+  }
 }
 
 /* ==============================
@@ -104,6 +141,18 @@ body {
   border-radius: var(--border-radius) var(--border-radius) 0 0;
 }
 
+/* ==============================
+   BOTONES
+============================== */
+.button {
+  transition: var(--transition-standard);
+  font-weight: 500;
+}
+
+.button:hover, .button:active {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}
 
 /* ==============================
    SCROLLBAR
@@ -134,20 +183,6 @@ body {
 }
 
 /* ==============================
-   BOTONES
-============================== */
-.button {
-  transition: var(--transition-standard);
-  font-weight: 500;
-}
-
-.button:hover, .button:active {
-  transform: translateY(-1px);
-  box-shadow: var(--shadow-sm);
-}
-
-
-/* ==============================
    ANIMACIONES
 ============================== */
 @keyframes fadeIn {
@@ -176,9 +211,6 @@ body {
     position: static;
     max-width: 100%;
   }
-  .is-hidden-mobile {
-    display: none;
-  }
 
   .navbar-dropdown {
     max-height: 0;
@@ -195,42 +227,30 @@ body {
   }
 }
 
-@media (max-width: 768px) {
-  .is-hidden-tablet {
-    display: none;
+@media (min-width: 1024px) {
+  .navbar-item.has-dropdown:hover .navbar-dropdown {
+    max-height: 500px;
+    opacity: 1;
+    visibility: visible;
+    padding: 0.5rem 1rem;
   }
 }
 
-.scroll-to-top-btn {
-  position: fixed;
-  bottom: 1.5rem;
-  right: 1.5rem;
-  background-color: var(--primary-color);
-  color: var(--background-light);
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-  box-shadow: var(--shadow-md);
-}
-
-.scroll-to-top-btn:hover {
-  transform: scale(1.1);
-}
-
-.scroll-to-top-btn.show {
-  opacity: 1;
+@media (min-width: 768px) {
+  main, .sticky-sidebar {
+    margin-top: 4rem; /* Ajusta el valor según el tamaño de tu navbar */
+  }
 }
 
 @media (max-width: 767px) {
-  .scroll-to-top-btn {
-    right: 20px;
-    bottom: 60px;
+  main, .sticky-sidebar {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .is-hidden-tablet {
+    display: none;
   }
 }
 
@@ -297,10 +317,78 @@ mark {
   top: 1rem;
   width: 100%;
   max-width: 300px;
-  max-height: min(calc(100vh - 6rem), 400px);
+  min-height: 250px; 
+  max-height: calc(100vh - 6rem); 
   overflow-y: auto;
   background-color: var(--card-background);
   box-shadow: var(--shadow-sm);
   padding: 1rem;
   border-radius: var(--border-radius);
+}
+
+.sticky-sidebar:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+.sticky-sidebar a:focus {
+  outline: 3px solid var(--primary-color); 
+}
+
+.sticky-sidebar {
+  transition: top 0.3s ease;
+}
+
+.menu-list a {
+  display: block;
+  padding: 0.3rem;
+  margin-bottom: 1rem;
+  border-radius: var(--border-radius);
+  transition: top 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-list a:hover, .menu-list a:focus {
+  background-color: var(--primary-color);
+  transform: scale(1.05);
+  color: var(--background-light); 
+}
+
+.menu-list a:focus {
+  outline: 1px solid var(--primary-color); 
+  outline-offset: 2px;
+}
+
+/* ==============================
+   SCROLL TO TOP BUTTON
+============================== */
+.scroll-to-top-btn {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background-color: var(--primary-color);
+  color: var(--background-light);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  box-shadow: var(--shadow-md);
+}
+
+.scroll-to-top-btn:hover {
+  transform: scale(1.1);
+}
+
+.scroll-to-top-btn.show {
+  opacity: 1;
+}
+
+@media (max-width: 767px) {
+  .scroll-to-top-btn {
+    right: 20px;
+    bottom: 60px;
+  }
 }

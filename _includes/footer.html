@@ -1,16 +1,15 @@
-<footer class="footer">
+<footer class="footer" role="contentinfo">
   <div class="content has-text-centered">
-    <p>
-      <strong>{{ site.title }}</strong> &copy; {{ "now" | date: "%Y" }} {{ site.author }}
-    </p>
-
+		<p>
+			<strong>{{ site.title }}</strong> &copy; <small>{{ "now" | date: "%Y" }}</small> {{ site.author }}
+		</p>
     <div class="buttons is-centered">
-      <a href="{{ '/acerca-de/' | relative_url }}" class="button is-small button-footer" aria-label="Acerca de"
+      <a href="{{ '/acerca-de/' | relative_url }}" class="button is-small" aria-label="Acerca de"
         title="Ver información sobre nosotros">
         <span class="icon"><i class="fas fa-info-circle"></i></span>
         <span>Acerca de</span>
       </a>
-      <a href="{{ '/contacto/' | relative_url }}" class="button is-small button-footer" aria-label="Contacto"
+      <a href="{{ '/contacto/' | relative_url }}" class="button is-small" aria-label="Contacto"
         title="Enviar un mensaje">
         <span class="icon"><i class="fas fa-envelope"></i></span>
         <span>Contacto</span>

@@ -5,7 +5,7 @@
         <h2 class="title is-4 mb-0">El Rincón de Hattrick</h2>
       </a>
 
-      <button class="navbar-burger" role="button" aria-label="Menú" aria-expanded="false" data-target="navbarMenu">
+      <button class="navbar-burger" aria-controls="navbarMenu" aria-expanded="false" data-target="navbarMenu">
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
@@ -14,10 +14,9 @@
 
     <div id="navbarMenu" class="navbar-menu">
       <div class="navbar-end">
-        <a class="navbar-item {% if page.url == '/' %}is-active{% endif %}" href="{{ '/' | relative_url }}">
-          <i class="fas fa-home"></i> <span>Inicio</span>
-        </a>
-
+				<a class="navbar-item {% if page.url == '/' %}is-active{% endif %}" href="{{ '/' | relative_url }}" aria-label="Ir a la página principal">
+					<i class="fas fa-home"></i> <span>Inicio</span>
+				</a>
         <div class="navbar-item has-dropdown is-hoverable">
           <a class="navbar-link" id="category-toggle" aria-haspopup="true" aria-expanded="false">
             <i class="fas fa-folder"></i> <span>Categorías</span>

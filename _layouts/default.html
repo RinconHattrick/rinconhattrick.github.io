@@ -13,7 +13,7 @@
 
   {% seo %}
 
-<!-- Icono -->
+	<!-- Icono -->
   <link rel="icon" href="{{ '/assets/img/favicon.ico' | relative_url }}" sizes="any" />
 
   <!-- Preconexión (con CDN utilizados) -->
@@ -28,10 +28,10 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
-  <!-- Google Fonts (solo los pesos necesarios) -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&family=Roboto:wght@400&display=swap" rel="stylesheet">
+  <!-- Google Fonts  -->
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400&display=swap" rel="stylesheet">
 
-  <!-- Estilos personalizados (con versión para evitar problemas de caché) -->
+  <!-- Estilos personalizados  -->
   <link rel="stylesheet" href="{{ '/assets/main.css?v=1.0.0' | relative_url }}" />
 
 </head>
@@ -41,12 +41,11 @@
 
   <div class="container">
     <div class="columns is-variable is-2">
-      <!-- Contenido principal -->
+
       <main class="column is-full-touch is-three-quarters-desktop">
         {{ content }}
       </main>
 
-      <!-- Aside -->
       {% if page.layout != "no-sidebar" %}
       <aside class="column is-hidden-touch is-one-quarter-desktop">
         {% include aside.html %}
@@ -57,12 +56,11 @@
 
   {% include footer.html %}
 
-  <!-- Botón de Scroll Arriba -->
   <button class="scroll-to-top-btn" id="scrollToTopBtn" title="Subir" aria-label="Subir al inicio">
     <i class="fas fa-arrow-up"></i>
   </button>
 
-  <!-- Scripts (con defer para mejorar rendimiento) -->
+  <!-- Scripts -->
   <script src="{{ '/assets/js/script.js?v=1.0.3' | relative_url }}" defer></script>
 </body>
 
