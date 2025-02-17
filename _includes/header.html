@@ -14,36 +14,38 @@
 
     <div id="navbarMenu" class="navbar-menu">
       <div class="navbar-end">
-				<a class="navbar-item {% if page.url == '/' %}is-active{% endif %}" href="{{ '/' | relative_url }}" aria-label="Ir a la página principal">
-					<i class="fas fa-home"></i> <span>Inicio</span>
-				</a>
+        <a class="navbar-item {% if page.url == '/' %}is-active{% endif %}" href="{{ '/' | relative_url }}"
+          aria-label="Ir a la página principal">
+          <i class="fas fa-home" aria-hidden="true"></i> <span>Inicio</span>
+        </a>
+
         <div class="navbar-item has-dropdown is-hoverable">
           <a class="navbar-link" id="category-toggle" aria-haspopup="true" aria-expanded="false">
-            <i class="fas fa-folder"></i> <span>Categorías</span>
+            <i class="fas fa-folder" aria-hidden="true"></i> <span>Categorías</span>
           </a>
           <div class="navbar-dropdown" id="category-menu">
             {% assign category_pages = site.pages | where: "layout", "category" %}
             {% if category_pages.size > 0 %}
-            {% for category_page in category_pages %}
-            <a class="navbar-item {% if page.url == category_page.url %}is-active{% endif %}"
-              href="{{ category_page.url | relative_url }}">
-              <i class="fas {{ category_page.icon }}"></i> <span>{{ category_page.title }}</span>
-            </a>
-            {% endfor %}
+              {% for category_page in category_pages %}
+                <a class="navbar-item {% if page.url == category_page.url %}is-active{% endif %}"
+                  href="{{ category_page.url | relative_url }}">
+                  <i class="fas {{ category_page.icon }}" aria-hidden="true"></i> <span>{{ category_page.title }}</span>
+                </a>
+              {% endfor %}
             {% else %}
-            <a class="navbar-item">No hay categorías disponibles</a>
+              <a class="navbar-item">No hay categorías disponibles</a>
             {% endif %}
           </div>
         </div>
 
         <a class="navbar-item {% if page.url contains '/acerca-de/' %}is-active{% endif %}"
           href="{{ '/acerca-de/' | relative_url }}">
-          <i class="fas fa-info-circle"></i> <span>Acerca de</span>
+          <i class="fas fa-info-circle" aria-hidden="true"></i> <span>Acerca de</span>
         </a>
 
         <a class="navbar-item {% if page.url contains '/contacto/' %}is-active{% endif %}"
           href="{{ '/contacto/' | relative_url }}">
-          <i class="fas fa-envelope"></i> <span>Contáctanos</span>
+          <i class="fas fa-envelope" aria-hidden="true"></i> <span>Contáctanos</span>
         </a>
 
         <div class="navbar-item">

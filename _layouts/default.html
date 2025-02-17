@@ -13,13 +13,13 @@
 
   {% seo %}
 
-	<!-- Icono -->
+  <!-- Icono -->
   <link rel="icon" href="{{ '/assets/img/favicon.ico' | relative_url }}" sizes="any" />
 
   <!-- Preconexión (con CDN utilizados) -->
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous" />
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="anonymous">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <!-- Bulma -->
@@ -29,7 +29,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
   <!-- Google Fonts  -->
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400&display=swap" rel="stylesheet">
 
   <!-- Estilos personalizados  -->
   <link rel="stylesheet" href="{{ '/assets/main.css?v=1.0.0' | relative_url }}" />
@@ -40,16 +40,16 @@
   {% include header.html %}
 
   <div class="container">
-    <div class="columns is-variable is-2">
+    <div class="columns is-gapless is-gapless">
 
       <main class="column is-full-touch is-three-quarters-desktop">
         {{ content }}
       </main>
 
       {% if page.layout != "no-sidebar" %}
-      <aside class="column is-hidden-touch is-one-quarter-desktop">
+      <section class="column is-hidden-touch is-one-quarter-desktop">
         {% include aside.html %}
-      </aside>
+      </section>
       {% endif %}
     </div>
   </div>
@@ -57,7 +57,7 @@
   {% include footer.html %}
 
   <button class="scroll-to-top-btn" id="scrollToTopBtn" title="Subir" aria-label="Subir al inicio">
-    <i class="fas fa-arrow-up"></i>
+    <i class="fas fa-arrow-up" aria-hidden="true"></i>
   </button>
 
   <!-- Scripts -->

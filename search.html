@@ -4,43 +4,42 @@ title: "Resultados de Búsqueda"
 description: "Búsqueda de artículos en el sitio"
 ---
 
+<section class="hero">
+  <div class="hero-body has-text-centered">
+    <div class="container">
+      <h1 class="title is-2">Resultados de Búsqueda</h1>
+    </div>
+  </div>
+</section>
+
 <section class="px-4">
   <div class="container">
     <div class="content">
-      <header class="hero main-header" role="banner">
-        <h2 class="title is-2 has-text-centered" role="heading" aria-level="1">
-          Resultados de Búsqueda
-        </h2>
-      </header>
-
       <!-- Formulario de búsqueda -->
-      <form class="mt-5" role="search" rel="search" onsubmit="event.preventDefault()">
+      <form class="mt-5" role="search" onsubmit="event.preventDefault()">
         <div class="field">
           <div class="control has-icons-left">
             <input type="search" id="search-input" class="input is-rounded" placeholder="Buscar artículos..."
-              aria-label="Buscar artículos" aria-describedby="search-hint" autocomplete="off" />
-            <span class="icon is-small is-left" aria-hidden="true">
+              aria-label="Buscar artículos" autocomplete="off" />
+            <span class="icon is-small is-left">
               <i class="fas fa-search"></i>
             </span>
           </div>
         </div>
-        <p id="search-hint" class="help">
-          Escribe al menos 3 caracteres para comenzar a buscar.
-        </p>
+        <p class="help">Escribe al menos 3 caracteres para comenzar a buscar.</p>
       </form>
 
       <!-- Retroalimentación de búsqueda -->
-      <div id="search-feedback" class="notification is-hidden mt-3" role="status" aria-live="polite"></div>
+      <div id="search-feedback" class="notification is-warning is-hidden mt-3" role="status" aria-live="polite"></div>
 
       <!-- Resultados de búsqueda -->
-      <div id="search-results" class="columns is-multiline is-centered mt-5" aria-live="polite"></div>
+      <div id="search-results" class="columns is-gapless is-multiline is-centered mt-5" aria-live="polite"></div>
     </div>
   </div>
+
   <div class="has-text-centered mt-6">
     <a href="{{ '/' | relative_url }}" class="button is-link is-rounded">
-      <span class="icon">
-        <i class="fas fa-home"></i>
-      </span>
+      <span class="icon"><i class="fas fa-home"></i></span>
       <span>Volver al Inicio</span>
     </a>
   </div>

@@ -2,12 +2,29 @@
 layout: default
 ---
 
+<section class="hero">
+  <div class="hero-body has-text-centered">
+    <div class="container">
+      <h1 class="title is-2">{{ page.title }}</h1>
+      <p class="has-text-grey">
+        <time datetime="{{ page.date | date_to_xmlschema }}">
+          Publicado el {{ page.date | date: "%d/%m/%Y" }}
+        </time>
+        {% if page.author %}
+        <span class="mx-2">por</span>
+        <strong>{{ page.author }}</strong>
+        {% endif %}
+      </p>
+    </div>
+  </div>
+</section>
+
 <section class="px-4">
   <article class="container article">
     <!-- Imagen Destacada -->
     {% if page.image %}
-    <div class="columns is-centered ">
-      <div class="column is-12-mobile is-10-tablet is-8-desktop">
+    <div class="columns is-gapless is-centered">
+      <div class="column is-10">
         <figure class="image is-16by9">
           <img src="{{ page.image | relative_url }}" alt="Imagen del artículo" loading="lazy" />
         </figure>
@@ -15,25 +32,13 @@ layout: default
     </div>
     {% endif %}
 
-    <!-- Encabezado con fecha y autor -->
-    <header class="mb-5 has-text-centered has-text-grey">
-      <time datetime="{{ page.date | date_to_xmlschema }}">
-        Publicado el {{ page.date | date: "%d/%m/%Y" }}
-      </time>
-      {% if page.author %}
-      <span class="mx-2">por</span>
-      <strong>{{ page.author }}</strong>
-      {% endif %}
-    </header>
-
-    <section class="content">{{ content }}</section>
+    <section class="content mt-5">{{ content }}</section>
 
     <div class="has-text-centered my-6">
-      <button id="shareButton" class="button is-light is-rounded" aria-label="Compartir artículo"
-        title="Compartir este artículo" role="button" tabindex="0">
+      <button id="shareButton" class="button is-primary is-light is-rounded" aria-label="Compartir artículo">
         <span class="icon-text">
           <span class="icon">
-            <i class="fas fa-share-alt" aria-hidden="true"></i>
+            <i class="fas fa-share-alt"></i>
           </span>
           <span>Compartir</span>
         </span>
@@ -69,19 +74,20 @@ layout: default
 <!-- Artículos relacionados -->
 <section class="section mt-6">
   <h2 class="title is-4">Artículos Relacionados</h2>
-  <div class="columns is-multiline is-centered is-vcentered">
+  <div class="columns is-gapless is-multiline is-centered">
     {% assign category = page.categories | first %}
     {% if category %}
-    {% assign related_posts = site.categories[category] | where_exp: "post", "post.url != page.url" | limit:3 %}
+    {% assign related_posts = site.categories[category] | where_exp: "post", "post.url != page.url" | reverse | limit: 4
+    %}
     {% for post in related_posts %}
-    <div class="column is-4">
+    <div class="column is-6-tablet is-3-desktop">
       <div class="card">
         <div class="card-content">
           <h3 class="title is-5">
             <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
           </h3>
-          <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
-          <a href="{{ post.url | relative_url }}" class="button  is-small">Leer más</a>
+          <p>{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
+          <a href="{{ post.url | relative_url }}" class="button is-primary is-small">Leer más</a>
         </div>
       </div>
     </div>
@@ -114,10 +120,8 @@ layout: default
         if (navigator.share) {
           try {
             await navigator.share(this.shareData);
-            console.log("Contenido compartido exitosamente.");
           } catch (error) {
             if (error.name !== "AbortError") {
-              console.warn("Error al compartir:", error);
               this.showFallbackMessage();
             }
           }
@@ -127,23 +131,19 @@ layout: default
       }
 
       showFallbackMessage() {
-        if (document.getElementById("share-fallback")) return; // Evita duplicados
+        if (document.getElementById("share-fallback")) return;
 
         const fallbackMessage = document.createElement("div");
         fallbackMessage.id = "share-fallback";
         fallbackMessage.classList.add("notification", "is-danger", "mt-3");
-
         fallbackMessage.innerHTML = `
-        <button class="delete" aria-label="Cerrar"></button>
-        Lo sentimos, la función de compartir no está disponible en tu navegador.<br>
-        Puedes copiar esta URL manualmente:
-        <span class="has-background-light p-1 is-family-monospace" id="share-url">${this.shareData.url}</span>
-        <button class="button is-small is-link ml-2" id="copyButton">Copiar</button>
-      `;
+          <button class="delete"></button>
+          No se puede compartir automáticamente. Copia este enlace:
+          <span class="has-background-light p-1 is-family-monospace">${this.shareData.url}</span>
+          <button class="button is-small is-link ml-2" id="copyButton">Copiar</button>
+        `;
 
         this.shareButton.after(fallbackMessage);
-
-        // Delegación de eventos para cerrar y copiar
         fallbackMessage.addEventListener("click", (event) => {
           if (event.target.matches(".delete")) fallbackMessage.remove();
           if (event.target.matches("#copyButton")) this.copyToClipboard();
@@ -154,8 +154,7 @@ layout: default
         try {
           await navigator.clipboard.writeText(this.shareData.url);
           alert("¡Enlace copiado al portapapeles!");
-        } catch (error) {
-          console.error("Error al copiar el enlace:", error);
+        } catch {
           alert("No se pudo copiar el enlace. Copia manualmente.");
         }
       }
@@ -163,5 +162,4 @@ layout: default
 
     new ShareManager();
   });
-
 </script>
