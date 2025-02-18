@@ -9,19 +9,18 @@ excerpt: "Aprende a gestionar y sacar el máximo provecho a los ojeadores juveni
 image: "/assets/img/ht-v.png"
 featured: false
 published: true
+views: 0
 ---
-
-## Maximizar el rendimiento de los ojeadores en los juveniles en Hattrick
 
 Los ojeadores son una herramienta esencial para encontrar y desarrollar el talento juvenil en Hattrick. Gestionarlos de forma estratégica puede marcar la diferencia entre un equipo promedio y uno excepcional.
 
 ---
 
-### ¿Qué son los ojeadores y cómo funcionan?
+## ¿Qué son los ojeadores y cómo funcionan?
 
 Los ojeadores son empleados que buscan nuevos talentos para tu equipo juvenil. Puedes dirigir sus búsquedas a regiones específicas o dejarlos trabajar libremente, dependiendo de las necesidades de tu club.
 
-#### Características principales
+### Características principales
 
 - **Cantidad:** Puedes contratar de 1 a 3 ojeadores.
 - **Funciones:**
@@ -34,36 +33,36 @@ Los ojeadores son empleados que buscan nuevos talentos para tu equipo juvenil. P
 
 ---
 
-### ¿Cómo contratar y gestionar a los ojeadores?
+## ¿Cómo contratar y gestionar a los ojeadores?
 
-#### Pasos para contratar ojeadores
+### Pasos para contratar ojeadores
 
 1. Ve al menú **"Equipo Juvenil"** o **"Mi Club"**.
 2. Decide cuántos ojeadores contratar (de uno a tres, según tu presupuesto).
 3. Define las áreas de búsqueda: región y enfoque en posiciones.
 
-#### Claves para gestionar eficientemente
+### Claves para gestionar eficientemente
 
 - **Ajusta las búsquedas semanalmente:** Cambia región o posición para diversificar los resultados.
 - **Mantén flexibilidad:** Contratar o despedir ojeadores es sencillo, pero es obligatorio tener al menos uno activo.
 
 ---
 
-### ¿Buscar jugadores por posición? ¿Conviene?
+## ¿Buscar jugadores por posición? ¿Conviene?
 
-#### Ventajas
+### Ventajas
 
 - **Mayor especialización:** Incrementa las posibilidades de encontrar talentos específicos para posiciones clave.
 - **Reforzar áreas críticas:** Ideal si necesitas cubrir una posición particular en tu equipo juvenil.
 
-#### Desventajas
+### Desventajas
 
 - **Menor diversidad:** Limita las opciones a jugadores de una posición.
 - **Riesgo de perder oportunidades:** Podrías descartar jugadores con potencial para otras posiciones.
 
 ---
 
-### Estrategias para sacar el máximo provecho a los ojeadores
+## Estrategias para sacar el máximo provecho a los ojeadores
 
 Aquí tienes algunas estrategias para sacar el máximo provecho a tus ojeadores:
 
@@ -85,7 +84,7 @@ Aquí tienes algunas estrategias para sacar el máximo provecho a tus ojeadores:
 
 ---
 
-### Puntos clave para recordar
+## Puntos clave para recordar
 
 - Contratar y gestionar correctamente a los ojeadores es fundamental para desarrollar un equipo juvenil competitivo.
 - Los ojeadores pueden buscar en regiones específicas o enfocarse en posiciones, según las necesidades del club.

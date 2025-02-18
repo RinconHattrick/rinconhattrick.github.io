@@ -9,21 +9,20 @@ excerpt: "Descubre los gastos asociados a gestionar un equipo juvenil en Hattric
 image: "/assets/img/ht-v.png"
 featured: false
 published: true
+views: 0
 ---
-
-## Costos de un equipo juvenil en Hattrick
 
 Gestionar un equipo juvenil en Hattrick es una inversión estratégica para garantizar el futuro de tu club. Sin embargo, antes de empezar, es crucial comprender los costos involucrados y cómo optimizarlos para evitar comprometer tus finanzas.
 
 ---
 
-### Costos iniciales y gastos recurrentes
+## Costos iniciales y gastos recurrentes
 
-#### Gasto inicial
+### Gasto inicial
 
 - Abrir un equipo juvenil tiene un costo inicial de **5,000 US$**, que se refleja como un gasto único en las finanzas de tu club.
 
-#### Gastos recurrentes
+### Gastos recurrentes
 
 El mantenimiento semanal del equipo juvenil incluye:
 
@@ -31,32 +30,32 @@ El mantenimiento semanal del equipo juvenil incluye:
 - **Ojeadores adicionales:** **5,000 US$** semanales por cada uno (hasta un máximo de tres).
 - **Costo total con 3 ojeadores:** **20,000 US$** semanales.
 
-#### Firma de nuevos ojeadores
+### Firma de nuevos ojeadores
 
 - Contratar un nuevo ojeador tiene un costo inicial de **5,000 US$**.
 
 ---
 
-### Otros gastos asociados
+## Otros gastos asociados
 
-#### Ascenso de juveniles
+### Ascenso de juveniles
 
 - Promocionar a un jugador al primer equipo tiene un costo fijo de **2,000 US$** por juvenil.
 
-#### Viajes de ojeadores
+### Viajes de ojeadores
 
 - Enviar ojeadores a buscar talento en otras regiones tiene un costo adicional, que varía según la distancia y la región específica.
 
 ---
 
-### Gastos que no representan una carga
+## Gastos que no representan una carga
 
 - **Empleados adicionales:** No necesitas contratar personal extra para el equipo juvenil; las familias de los jugadores se encargan de aspectos como traslados y lesiones.
 - **Ingresos por espectadores:** Los partidos juveniles no generan ingresos por taquilla, ya que solo asisten familiares y amigos de los jugadores.
 
 ---
 
-### Tabla resumen de costos
+## Tabla resumen de costos
 
 | **Concepto**                    | **Costo**          | **Frecuencia**           |
 | ------------------------------- | ------------------ | ------------------------ |
@@ -69,7 +68,7 @@ El mantenimiento semanal del equipo juvenil incluye:
 
 ---
 
-### Consejos para optimizar gastos
+## Consejos para optimizar gastos
 
 Aquí tienes algunos consejos que te ayudarán a optimizar los gastos de tu equipo juvenil:
 
@@ -86,7 +85,7 @@ Aquí tienes algunos consejos que te ayudarán a optimizar los gastos de tu equi
 
 ---
 
-### Puntos clave para recordar
+## Puntos clave para recordar
 
 - Gestionar un equipo juvenil implica costos fijos y variables que debes integrar cuidadosamente en la planificación financiera de tu club.
 - Aunque no genera ingresos directos, un equipo juvenil bien gestionado puede proporcionar jugadores clave o transferibles, fortaleciendo tanto tu economía como tu competitividad.

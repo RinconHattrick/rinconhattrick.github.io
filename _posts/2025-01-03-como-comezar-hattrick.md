@@ -9,15 +9,14 @@ excerpt: "Descubre cómo gestionar tu club en Hattrick con estrategias clave par
 image: "/assets/img/ht-b.png"
 featured: false
 published: true
+views: 0
 ---
-
-## Cómo comenzar en Hattrick
 
 Comenzar en Hattrick puede ser emocionante, pero también desafiante. Aquí encontrarás los conceptos básicos y estrategias esenciales para gestionar tu club con éxito y dar tus primeros pasos en el juego.
 
 ---
 
-### Tus funciones como mánager
+## Tus funciones como mánager
 
 En Hattrick, tú eres el responsable de todo lo relacionado con tu club. Algunas de tus principales responsabilidades incluyen:
 
@@ -29,7 +28,7 @@ En Hattrick, tú eres el responsable de todo lo relacionado con tu club. Algunas
 
 ---
 
-### Gestión del dinero
+## Gestión del dinero
 
 El dinero es fundamental para el éxito en Hattrick. Tus ingresos provienen de:
 
@@ -37,7 +36,7 @@ El dinero es fundamental para el éxito en Hattrick. Tus ingresos provienen de:
 - **Patrocinadores y socios:** Ingresos semanales.
 - **Transferencias:** Venta de jugadores.
 
-#### Principales gastos
+### Principales gastos
 
 - Salarios de jugadores y empleados.
 - Mantenimiento del estadio.
@@ -47,7 +46,7 @@ El dinero es fundamental para el éxito en Hattrick. Tus ingresos provienen de:
 
 ---
 
-### Conoce a tus jugadores
+## Conoce a tus jugadores
 
 Cada jugador tiene habilidades específicas que determinan su rendimiento:
 
@@ -61,7 +60,7 @@ Cada jugador tiene habilidades específicas que determinan su rendimiento:
 
 ---
 
-### Partidos y temporadas
+## Partidos y temporadas
 
 Cada temporada dura 16 semanas:
 
@@ -69,7 +68,7 @@ Cada temporada dura 16 semanas:
 - **1 semana de promoción (si aplica).**
 - **1 semana de descanso de liga.**
 
-#### Tipos de partidos
+### Tipos de partidos
 
 - **Liga:** Fines de semana.
 - **Copa o amistosos:** Entre semana.
@@ -78,7 +77,7 @@ Cada temporada dura 16 semanas:
 
 ---
 
-### Conceptos básicos de los partidos
+## Conceptos básicos de los partidos
 
 Los partidos se dividen en tres fases:
 
@@ -90,16 +89,16 @@ Los partidos se dividen en tres fases:
 
 ---
 
-### Entrenamiento
+## Entrenamiento
 
 El entrenamiento es clave para mejorar tu equipo y generar ingresos.
 
-#### Recomendaciones
+### Recomendaciones
 
 - Entrena una **habilidad primaria** como portería, defensa, jugadas o anotación.
 - Evita cambiar de tipo de entrenamiento con frecuencia.
 
-#### Requisitos
+### Requisitos
 
 - Los jugadores deben jugar en la posición correspondiente al menos 90 minutos por semana.
 
@@ -107,7 +106,7 @@ El entrenamiento es clave para mejorar tu equipo y generar ingresos.
 
 ---
 
-### Transferencias
+## Transferencias
 
 El mercado de transferencias es fundamental para fortalecer tu equipo:
 
@@ -118,21 +117,21 @@ El mercado de transferencias es fundamental para fortalecer tu equipo:
 
 ---
 
-### Gestión del estadio y empleados
+## Gestión del estadio y empleados
 
-#### Estadio
+### Estadio
 
 - Amplía tu estadio solo cuando lo llenes regularmente.
 - Evita ampliaciones innecesarias para no desperdiciar dinero.
 
-#### Empleados
+### Empleados
 
 - Contrata asistentes técnicos para mejorar el entrenamiento.
 - Considera contratar médicos para tratar lesiones.
 
 ---
 
-### Juveniles
+## Juveniles
 
 Reclutar jugadores juveniles es una inversión a largo plazo:
 
@@ -141,7 +140,7 @@ Reclutar jugadores juveniles es una inversión a largo plazo:
 
 ---
 
-### Estrategias para construir el equipo
+## Estrategias para construir el equipo
 
 Aquí tienes algunas estrategias para construir un equipo competitivo:
 
@@ -151,7 +150,7 @@ Aquí tienes algunas estrategias para construir un equipo competitivo:
 
 ---
 
-### Puntos clave para recordar
+## Puntos clave para recordar
 
 - **Evalúa y entrena:** Identifica las habilidades clave de tus jugadores y poténcialas.
 - **Gestión financiera:** Controla ingresos y gastos para asegurar la estabilidad del club.

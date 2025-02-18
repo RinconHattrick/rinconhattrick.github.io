@@ -9,9 +9,8 @@ excerpt: "Descubre todo lo que necesitas saber para gestionar y sacar el máximo
 image: "/assets/img/ht-b.png"
 featured: false
 published: true
+views: 0
 ---
-
-## Preguntas Frecuentes sobre cómo gestionar tu Equipo Juvenil en Hattrick
 
 Este artículo responde a las preguntas más frecuentes sobre cómo gestionar y sacar el máximo partido a tu equipo juvenil en Hattrick, desde el reclutamiento de jugadores hasta la optimización del entrenamiento.
 

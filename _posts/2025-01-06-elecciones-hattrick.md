@@ -9,15 +9,14 @@ excerpt: "Descubre cómo funciona el sistema electoral en Hattrick para elegir a
 image: "/assets/img/ht-v.png"
 featured: false
 published: true
+views: 0
 ---
-
-## Elecciones Nacionales en Hattrick
 
 En Hattrick, las elecciones nacionales son una oportunidad única para que los usuarios elijan a los seleccionadores absolutos y Sub-21 de su país. Este proceso democrático asegura que las selecciones nacionales sean dirigidas por los mejores estrategas, fomentando la participación activa de la comunidad.
 
 ---
 
-### ¿Cuándo se Realizan las Elecciones?
+## ¿Cuándo se Realizan las Elecciones?
 
 Las elecciones comienzan **dos días después de la final del Mundial** y se alternan entre las selecciones:
 
@@ -31,11 +30,11 @@ Cada seleccionador cumple un mandato de **dos temporadas**, que finaliza una sem
 
 ---
 
-### Sistema de Voto Ponderado
+## Sistema de Voto Ponderado
 
 El sistema electoral de Hattrick utiliza un método de **voto ponderado** que premia la antigüedad y el compromiso de los usuarios. Esto garantiza un proceso justo y minimiza la posibilidad de manipulaciones.
 
-#### Factores que Determinan el Peso del Voto
+### Factores que Determinan el Peso del Voto
 
 1. **Antigüedad del Equipo Local**
 
@@ -59,7 +58,7 @@ El sistema electoral de Hattrick utiliza un método de **voto ponderado** que pr
 
 ---
 
-### Ejemplo de Cálculo del Peso del Voto
+## Ejemplo de Cálculo del Peso del Voto
 
 Si eres un usuario con:
 
@@ -78,7 +77,7 @@ Tu voto tendría el siguiente peso:
 
 ---
 
-### Consejos para Participar en las Elecciones
+## Consejos para Participar en las Elecciones
 
 1. **Infórmate sobre los Candidatos**
 
@@ -94,7 +93,7 @@ Tu voto tendría el siguiente peso:
 
 ---
 
-### Puntos Clave para Recordar
+## Puntos Clave para Recordar
 
 - Las elecciones se realizan cada dos temporadas, alternando entre la selección absoluta y la Sub-21, lo que permite a la comunidad influir directamente en el éxito de su país.
 - El sistema de voto ponderado premia la antigüedad y el compromiso de los usuarios, asegurando un proceso justo.

@@ -5,66 +5,66 @@
         <h2 class="title is-4 mb-0">El Rincón de Hattrick</h2>
       </a>
 
-      <button class="navbar-burger" aria-controls="navbarMenu" aria-expanded="false" data-target="navbarMenu">
+      <button class="navbar-burger" aria-controls="navbarMenu" aria-expanded="false" data-target="navbarMenu"
+        aria-label="Abrir menú de navegación">
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
       </button>
-    </div>
 
-    <div id="navbarMenu" class="navbar-menu">
-      <div class="navbar-end">
-        <a class="navbar-item {% if page.url == '/' %}is-active{% endif %}" href="{{ '/' | relative_url }}"
-          aria-label="Ir a la página principal">
-          <i class="fas fa-home" aria-hidden="true"></i> <span>Inicio</span>
-        </a>
-
-        <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link" id="category-toggle" aria-haspopup="true" aria-expanded="false">
-            <i class="fas fa-folder" aria-hidden="true"></i> <span>Categorías</span>
+      <div id="navbarMenu" class="navbar-menu">
+        <div class="navbar-end">
+          <a class="navbar-item {% if page.url == '/' %}is-active{% endif %}" href="{{ '/' | relative_url }}"
+            aria-label="Ir a la página principal">
+            <i class="fas fa-home" aria-hidden="true"></i> <span>Inicio</span>
           </a>
-          <div class="navbar-dropdown" id="category-menu">
-            {% assign category_pages = site.pages | where: "layout", "category" %}
-            {% if category_pages.size > 0 %}
+
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link" id="category-toggle" aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-folder" aria-hidden="true"></i> <span>Categorías</span>
+            </a>
+            <div class="navbar-dropdown" id="category-menu">
+              {% assign category_pages = site.pages | where: "layout", "category" %}
+              {% if category_pages.size > 0 %}
               {% for category_page in category_pages %}
-                <a class="navbar-item {% if page.url == category_page.url %}is-active{% endif %}"
-                  href="{{ category_page.url | relative_url }}">
-                  <i class="fas {{ category_page.icon }}" aria-hidden="true"></i> <span>{{ category_page.title }}</span>
-                </a>
+              <a class="navbar-item {% if page.url == category_page.url %}is-active{% endif %}"
+                href="{{ category_page.url | relative_url }}">
+                <i class="fas {{ category_page.icon }}" aria-hidden="true"></i> <span>{{ category_page.title }}</span>
+              </a>
               {% endfor %}
-            {% else %}
+              {% else %}
               <a class="navbar-item">No hay categorías disponibles</a>
-            {% endif %}
-          </div>
-        </div>
-
-        <a class="navbar-item {% if page.url contains '/acerca-de/' %}is-active{% endif %}"
-          href="{{ '/acerca-de/' | relative_url }}">
-          <i class="fas fa-info-circle" aria-hidden="true"></i> <span>Acerca de</span>
-        </a>
-
-        <a class="navbar-item {% if page.url contains '/contacto/' %}is-active{% endif %}"
-          href="{{ '/contacto/' | relative_url }}">
-          <i class="fas fa-envelope" aria-hidden="true"></i> <span>Contáctanos</span>
-        </a>
-
-        <div class="navbar-item">
-          <form action="{{ '/search/' | relative_url }}" method="get" role="search">
-            <div class="field has-addons">
-              <div class="control">
-                <input id="searchInput" class="input is-rounded" type="search" name="q" placeholder="Buscar..."
-                  aria-label="Buscar artículos" required>
-              </div>
-              <div class="control">
-                <button id="searchButton" type="submit" class="button is-primary is-rounded" disabled>
-                  <span class="icon"><i class="fas fa-search"></i></span>
-                </button>
-              </div>
+              {% endif %}
             </div>
-          </form>
-        </div>
+          </div>
 
+          <a class="navbar-item {% if page.url contains '/acerca-de/' %}is-active{% endif %}"
+            href="{{ '/acerca-de/' | relative_url }}">
+            <i class="fas fa-info-circle" aria-hidden="true"></i> <span>Acerca de</span>
+          </a>
+
+          <a class="navbar-item {% if page.url contains '/contacto/' %}is-active{% endif %}"
+            href="{{ '/contacto/' | relative_url }}">
+            <i class="fas fa-envelope" aria-hidden="true"></i> <span>Contáctanos</span>
+          </a>
+
+          <div class="navbar-item">
+            <form action="{{ '/search/' | relative_url }}" method="get" role="search">
+              <div class="field has-addons">
+                <div class="control">
+                  <input id="searchInput" class="input is-rounded" type="search" name="q" placeholder="Buscar..."
+                    aria-label="Buscar artículos" required>
+                </div>
+                <div class="control">
+                  <button id="searchButton" type="submit" class="button is-primary is-rounded" disabled>
+                    <span class="icon"><i class="fas fa-search"></i></span>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+
+        </div>
       </div>
     </div>
-  </div>
 </nav>

@@ -16,23 +16,29 @@
   <!-- Icono -->
   <link rel="icon" href="{{ '/assets/img/favicon.ico' | relative_url }}" sizes="any" />
 
-  <!-- Preconexión (con CDN utilizados) -->
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous" />
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="anonymous">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
   <!-- Bulma -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css" />
+  <!-- Carga optimizada de Bulma -->
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css" as="style">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css" media="print"
+    onload="this.onload=null;this.media='all';">
 
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- Carga optimizada de Font Awesome -->
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print"
+    onload="this.onload=null;this.media='all';">
 
   <!-- Google Fonts  -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload"
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400&display=swap" as="style">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400&display=swap" media="print"
+    onload="this.onload=null;this.media='all';">
 
   <!-- Estilos personalizados  -->
-  <link rel="stylesheet" href="{{ '/assets/main.css?v=1.0.3' | relative_url }}" />
+  <link rel="stylesheet" href="{{ '/assets/main.css?v=2.0.0' | relative_url }}" />
 
 </head>
 
@@ -61,7 +67,7 @@
   </button>
 
   <!-- Scripts -->
-  <script src="{{ '/assets/js/script.js?v=1.0.3' | relative_url }}" defer></script>
+  <script src="{{ '/assets/js/script.js?v=2.0.0' | relative_url }}" defer></script>
 </body>
 
 </html>

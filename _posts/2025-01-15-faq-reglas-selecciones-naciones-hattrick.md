@@ -9,6 +9,7 @@ excerpt: "Descubre todo lo que necesitas saber sobre las reglas que rigen las se
 image: "/assets/img/ht-b.png"
 featured: false
 published: true
+views: 0
 ---
 
 ## Preguntas Frecuentes sobre Reglas de las Selecciones Nacionales en Hattrick

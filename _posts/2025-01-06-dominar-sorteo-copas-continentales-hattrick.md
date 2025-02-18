@@ -9,19 +9,18 @@ excerpt: "Descubre cómo funciona el sorteo de las Copas Continentales en Hattri
 image: "/assets/img/ht-v.png"
 featured: false
 published: true
+views: 0
 ---
-
-## Dominar el Sorteo de las Copas Continentales en Hattrick
 
 El sorteo de las Copas Continentales es un evento clave que define el camino competitivo de las selecciones nacionales, ofreciendo oportunidades estratégicas para todos los equipos. Basado en la clasificación, este proceso asegura un equilibrio competitivo y brinda oportunidades estratégicas a todos los equipos.
 
 ---
 
-### ¿Cómo Funciona el Sorteo?
+## ¿Cómo Funciona el Sorteo?
 
 El sorteo distribuye a las selecciones en **bombos** según su posición en el ranking nacional. Esto permite que los equipos se distribuyan de forma equitativa en cada grupo, reduciendo el riesgo de desequilibrios significativos.
 
-#### Beneficios del Sistema:
+### Beneficios del Sistema:
 
 - **Equilibrio competitivo:** Evita que las selecciones más fuertes se enfrenten en las primeras fases.
 - **Expectativa estratégica:** Ayuda a los managers a anticipar posibles enfrentamientos.
@@ -30,9 +29,9 @@ El sorteo distribuye a las selecciones en **bombos** según su posición en el r
 
 ---
 
-### Estructura del Sorteo
+## Estructura del Sorteo
 
-#### División en Bombos
+### División en Bombos
 
 El número de bombos depende de la cantidad de equipos participantes. Por ejemplo, en la **Copa América** (30 equipos):
 
@@ -60,7 +59,7 @@ El número de bombos depende de la cantidad de equipos participantes. Por ejempl
   - **Posición en el grupo:** Quinta y sexta posición
   - **Rango de clasificación:** 21.º al 30.º
 
-#### Proceso de Asignación
+### Proceso de Asignación
 
 1. **Selecciones prioritarias:**
 
@@ -74,23 +73,23 @@ El número de bombos depende de la cantidad de equipos participantes. Por ejempl
 
 ---
 
-### Estrategias para Prepararte
+## Estrategias para Prepararte
 
-#### Mejora tu Clasificación
+### Mejora tu Clasificación
 
 - Escalar en el ranking te asegura un lugar en un bombo más favorable, lo que reduce el riesgo de enfrentarte a selecciones complicadas en la primera fase.
 
-#### Analiza a tus Posibles Rivales
+### Analiza a tus Posibles Rivales
 
 - Antes del sorteo, identifica los equipos que podrían coincidir en tu grupo, lo que te permitirá anticipar tácticas y estrategias.
 
-#### Optimiza tu Plantilla
+### Optimiza tu Plantilla
 
 - Mantén a tus jugadores en plena forma y con experiencia en las tácticas que planeas usar, asegurándote de que estén listos para enfrentar cualquier desafío en las Copas Continentales.
 
 ---
 
-### Puntos Clave para Recordar
+## Puntos Clave para Recordar
 
 - El sorteo se basa en la clasificación y divide a los equipos en bombos para equilibrar la competencia, lo que garantiza una experiencia justa y emocionante para todos los participantes.
 - Los equipos mejor clasificados tienen prioridad en la asignación de grupos.

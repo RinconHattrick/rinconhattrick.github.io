@@ -9,15 +9,14 @@ excerpt: "Conoce el camino hacia la Copa del Mundo en Hattrick y cómo clasifica
 image: "/assets/img/ht-v.png"
 featured: false
 published: true
+views: 0
 ---
-
-## Clasificar al mundial en Hattrick
 
 Clasificar al mundial es uno de los mayores logros, y retos, para una selección nacional en Hattrick. Este proceso exige una combinación de planificación estratégica, manejo eficiente del equipo y enfoque competitivo.
 
 ---
 
-### Entendiendo el Sistema de Clasificación
+## Entendiendo el Sistema de Clasificación
 
 El mundial reúne a las **96 mejores selecciones nacionales**. La clasificación tiene dos vías principales:
 
@@ -28,7 +27,7 @@ El objetivo es asegurar que todas las regiones tengan una representación justa 
 
 ---
 
-### Distribución de Plazas por Continente
+## Distribución de Plazas por Continente
 
 Cada continente tiene un número asignado de plazas basadas en su tamaño y desempeño histórico:
 
@@ -59,9 +58,9 @@ Cada continente tiene un número asignado de plazas basadas en su tamaño y dese
 
 ---
 
-### Cómo Funciona la Repesca
+## Cómo Funciona la Repesca
 
-#### ¿Quiénes Participan?
+### ¿Quiénes Participan?
 
 La repesca otorga **11 plazas adicionales** para el mundial. Participan:
 
@@ -74,7 +73,7 @@ Los criterios de selección para la repesca incluyen:
 2. **Diferencia de goles.**
 3. **Goles anotados.**
 
-#### Detalles de la Fase de Repesca
+### Detalles de la Fase de Repesca
 
 | **Aspecto**               | **Detalle**                                                           |
 | ------------------------- | --------------------------------------------------------------------- |
@@ -87,21 +86,21 @@ Los criterios de selección para la repesca incluyen:
 
 ---
 
-### Estrategias para Clasificar
+## Estrategias para Clasificar
 
-#### Domina la Fase de Grupos
+### Domina la Fase de Grupos
 
 - **Identifica partidos clave:** Prioriza enfrentar a tus rivales directos con tus mejores estrategias.
 - **Maximiza tu diferencia de goles:** Gana cómodamente contra selecciones más débiles para obtener una ventaja en el desempate.
 - **Planifica el entrenamiento:** Mantén a tus jugadores clave en su mejor forma.
 
-#### Prepara el Equipo para la Repesca
+### Prepara el Equipo para la Repesca
 
 - **Aprovecha el reinicio de atributos:** Ajusta tus tácticas en función del análisis de tus rivales.
 - **Estudia a tus contrincantes:** Observa sus patrones de juego y vulnerabilidades en partidos previos.
 - **Usa amistosos estratégicos:** Prueba nuevas formaciones sin presión para afinar tu estrategia.
 
-#### Colabora con la Comunidad
+### Colabora con la Comunidad
 
 - **Consulta en foros nacionales:** Aprende de las experiencias de otros managers.
 - **Comparte tus planes:** Genera unidad y aprovecha los análisis adicionales sobre tus rivales.
@@ -109,29 +108,29 @@ Los criterios de selección para la repesca incluyen:
 
 ---
 
-### Preguntas Frecuentes
+## Preguntas Frecuentes
 
-#### ¿Cómo funciona el sistema de clasificación en Hattrick?
+### ¿Cómo funciona el sistema de clasificación en Hattrick?
 
 El sistema de clasificación tiene dos fases: directa en las Copas Continentales o mediante la repesca.
 
-#### ¿Qué criterios definen un empate en puntos?
+### ¿Qué criterios definen un empate en puntos?
 
 1. Diferencia de goles.
 2. Goles anotados.
 3. Sorteo en caso de persistir el empate.
 
-#### ¿Puedo cambiar de táctica entre partidos?
+### ¿Puedo cambiar de táctica entre partidos?
 
 Sí. Adaptarte según las fortalezas y debilidades de tu rival es clave, especialmente con el reinicio de atributos en la repesca.
 
-#### ¿Cuántos partidos necesito ganar para clasificar?
+### ¿Cuántos partidos necesito ganar para clasificar?
 
 Dependerá de tu grupo y continente, pero generalmente entre 3 y 4 victorias son suficientes para asegurar una plaza directa o un lugar en la repesca.
 
 ---
 
-### Puntos Clave para Recordar
+## Puntos Clave para Recordar
 
 - **Clasificación en dos fases:** Directa en las Copas Continentales o mediante la repesca.
 - **Estrategia es fundamental:** Maximiza puntos y diferencia de goles en cada fase.

@@ -9,15 +9,14 @@ excerpt: "Descubre cómo organizar y aprovechar los amistosos de selecciones nac
 image: "/assets/img/ht-b.png"
 featured: false
 published: true
+views: 0
 ---
-
-## Todo sobre los amistosos de selecciones nacionales en Hattrick
 
 Los amistosos nacionales son una herramienta esencial para las selecciones en Hattrick, ya que permiten probar tácticas y mantener la actividad entre competiciones oficiales. Aquí te explicamos cómo aprovecharlos al máximo.
 
 ---
 
-### ¿Por qué son claves los amistosos nacionales?
+## ¿Por qué son claves los amistosos nacionales?
 
 Los amistosos cumplen varias funciones estratégicas para las selecciones nacionales:
 
@@ -27,14 +26,14 @@ Los amistosos cumplen varias funciones estratégicas para las selecciones nacion
 
 ---
 
-### Características principales de los amistosos nacionales
+## Características principales de los amistosos nacionales
 
-#### Horarios establecidos
+### Horarios establecidos
 
 - Los amistosos se juegan **todos los viernes a las 20:00 (hora Hattrick)**.
 - No se programan amistosos si la selección está participando en el Mundial.
 
-#### Diferencias con los amistosos de clubes
+### Diferencias con los amistosos de clubes
 
 Aunque comparten similitudes con los amistosos de clubes, los de selecciones tienen particularidades:
 
@@ -43,9 +42,9 @@ Aunque comparten similitudes con los amistosos de clubes, los de selecciones tie
 
 ---
 
-### Cómo organizar un amistoso nacional
+## Cómo organizar un amistoso nacional
 
-#### Guía para concertar un amistoso
+### Guía para concertar un amistoso
 
 1. **Enviar un reto:**
 
@@ -67,23 +66,23 @@ Aunque comparten similitudes con los amistosos de clubes, los de selecciones tie
 
 ---
 
-### Aspectos clave de los amistosos nacionales
+## Aspectos clave de los amistosos nacionales
 
-#### Ventaja de campo neutral
+### Ventaja de campo neutral
 
 Todos los amistosos se juegan en campo neutral, eliminando cualquier beneficio de jugar como local.
 
-#### Sin costos de alquiler
+### Sin costos de alquiler
 
 Organizar un amistoso no implica gastos adicionales relacionados con el estadio.
 
-#### Importancia de la comunicación
+### Importancia de la comunicación
 
 La organización de los partidos depende de la coordinación entre seleccionadores. La falta de comunicación puede resultar en partidos no deseados o en la pérdida de una oportunidad de amistoso.
 
 ---
 
-### Puntos clave para recordar
+## Puntos clave para recordar
 
 - **Horario fijo:** Los amistosos nacionales se juegan los viernes a las 20:00 (hora Hattrick).
 - **Organización manual:** La comunicación directa entre seleccionadores es esencial, ya que no hay notificaciones automáticas.

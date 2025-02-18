@@ -9,9 +9,8 @@ excerpt: "Descubre todo lo que necesitas saber sobre la gestión y participació
 image: "/assets/img/ht-b.png"
 featured: false
 published: true
+views: 0
 ---
-
-## Preguntas Frecuentes sobre Selecciones Nacionales y Sub-21 en Hattrick
 
 Este artículo responde a las preguntas más frecuentes sobre las selecciones nacionales y Sub-21 en Hattrick. Además, te damos claves importantes para entender su funcionamiento.
 

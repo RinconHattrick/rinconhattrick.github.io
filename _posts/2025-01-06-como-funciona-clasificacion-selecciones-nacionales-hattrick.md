@@ -9,25 +9,24 @@ excerpt: "Descubre cómo se calcula el ranking de selecciones nacionales y qué 
 image: "/assets/img/ht-v.png"
 featured: false
 published: true
+views: 0
 ---
-
-## Cómo funciona la clasificación de selecciones nacionales en Hattrick
 
 El sistema de clasificación de selecciones nacionales en Hattrick, es una herramienta clave que refleja el desempeño reciente de los equipos y determina su posicionamiento en competiciones como la Copa Continental y el Mundial. Entender cómo funciona te ayudará a planificar mejor tus estrategias.
 
 ---
 
-### ¿Qué es la clasificación de selecciones nacionales?
+## ¿Qué es la clasificación de selecciones nacionales?
 
 La clasificación es un ranking basado en el desempeño de las selecciones en las últimas cinco temporadas. Este sistema premia la consistencia al ponderar más los resultados recientes, influyendo directamente en la distribución de grupos en competiciones internacionales y la reputación de las selecciones.
 
 ---
 
-### Factores que determinan la clasificación
+## Factores que determinan la clasificación
 
 La puntuación que define la posición en el ranking depende de tres factores principales: el resultado del partido, la importancia del partido y la fuerza del rival. Estos factores se combinan mediante la fórmula: **P = R × I × F**.
 
-#### Resultado del partido (R)
+### Resultado del partido (R)
 
 El desempeño en cada encuentro se traduce en puntos de la siguiente forma:
 
@@ -41,7 +40,7 @@ El desempeño en cada encuentro se traduce en puntos de la siguiente forma:
 
 ---
 
-#### Importancia del partido (I)
+### Importancia del partido (I)
 
 La relevancia del evento influye directamente en los puntos obtenidos. Los torneos internacionales tienen mayor peso:
 
@@ -57,7 +56,7 @@ La relevancia del evento influye directamente en los puntos obtenidos. Los torne
 
 ---
 
-#### Fuerza del rival (F)
+### Fuerza del rival (F)
 
 Cuanto más alto esté el rival en la clasificación, mayor será el valor de este factor. La fórmula es:
 
@@ -70,7 +69,7 @@ Ejemplos:
 
 ---
 
-### Cálculo de la clasificación final: media ponderada
+## Cálculo de la clasificación final: media ponderada
 
 La puntuación de la clasificación es la media ponderada de los puntos obtenidos en las últimas cinco temporadas. Los resultados más recientes tienen mayor peso:
 
@@ -82,7 +81,7 @@ La puntuación de la clasificación es la media ponderada de los puntos obtenido
 | Hace 3 años   | 30%      |
 | Hace 4 años   | 20%      |
 
-#### Ejemplo de cálculo
+### Ejemplo de cálculo
 
 Si una selección obtuvo las siguientes medias anuales de puntos:
 
@@ -97,7 +96,7 @@ El cálculo sería:
 
 ---
 
-### Estrategias para mejorar en el ranking
+## Estrategias para mejorar en el ranking
 
 1. **Prioriza partidos clave:**  
    Participa en competiciones de mayor importancia, como el Mundial y las Copas Continentales.
@@ -113,7 +112,7 @@ El cálculo sería:
 
 ---
 
-### Puntos clave para recordar
+## Puntos clave para recordar
 
 - La clasificación nacional se calcula en función de los resultados, la importancia de los partidos y la calidad del rival.
 - Los resultados recientes tienen un impacto mayor, incentivando la consistencia en torneos importantes.

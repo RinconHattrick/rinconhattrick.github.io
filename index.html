@@ -3,35 +3,40 @@ layout: default
 title: "El Rincón de Hattrick"
 ---
 
-<div class="columns is-gapless ">
+<div class="columns is-gapless">
   <!-- Contenido principal -->
-  <div class="column ">
+  <div class="column">
     <!-- Hero mejorado con fondo y animación -->
     <section class="hero" role="banner">
       <div class="hero-body has-text-centered">
-        <h2 class="title is-1 ">{{ site.title }}</h2>
-        <p class="subtitle is-4">{{ site.description | default: "Bienvenido a nuestro blog sobre Hattrick." }}</p>
+        <h2 class="title is-1">{{ site.title }}</h2>
+        <p class="subtitle is-4">
+          {{ site.description | default: "Bienvenido a nuestro blog sobre
+          Hattrick." }}
+        </p>
       </div>
     </section>
 
     <!-- Categorías con últimos 2 artículos -->
-    {% for category in site.categories %}
-    {% assign category_name = category[0] %}
-    {% assign category_page = site.pages | where: "category", category_name | first %}
-    {% assign recent_posts = category[1] | sort: "date" | reverse | slice: 0,2 %}
+    {% for category in site.categories %} {% assign category_name = category[0]
+    %} {% assign category_page = site.pages | where: "category", category_name |
+    first %} {% assign recent_posts = category[1] | sort: "date" | reverse |
+    slice: 0,2 %}
 
     <section id="{{ category_name | slugify }}" class="mt-5 category-section" role="region"
       aria-labelledby="category-title-{{ category_name | slugify }}">
       <div class="card has-text-centered">
         <header class="card-header is-flex is-justify-content-center mx-3">
-          <h2 id="category-title-{{ category_name | slugify }}" class="title is-3" aria-label="Categoría: {{ category_page.title | default: category_name }}">
+          <h2 id="category-title-{{ category_name | slugify }}" class="title is-3"
+            aria-label="Categoría: {{ category_page.title | default: category_name }}">
             {{ category_page.title | default: category_name | capitalize }}
           </h2>
         </header>
 
         <div class="card-content">
           <p class="subtitle is-6 mb-4">
-            {{ category_page.description | default: "Explora artículos sobre esta temática en nuestro blog." }}
+            {{ category_page.description | default: "Explora artículos sobre
+            esta temática en nuestro blog." }}
           </p>
 
           <div class="columns is-gapless is-multiline is-centered">
@@ -40,11 +45,12 @@ title: "El Rincón de Hattrick"
               <article class="box animate">
                 {% if post.image %}
                 <figure class="image is-16by9">
-                  <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" width="629" height="297" />
+                  <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" width="324" height="182" />
                 </figure>
                 {% endif %}
 
-                <time datetime="{{ post.date | date: '%Y-%m-%d' }}" class="is-size-7 has-text-grey" aria-label="Publicado el {{ post.date | date: '%d de %B de %Y' }}">
+                <time datetime="{{ post.date | date: '%Y-%m-%d' }}" class="is-size-7 has-text-grey"
+                  aria-label="Publicado el {{ post.date | date: '%d de %B de %Y' }}">
                   <span class="icon-text">
                     <span class="icon" aria-hidden="true">
                       <i class="fas fa-calendar-day"></i>
@@ -60,7 +66,8 @@ title: "El Rincón de Hattrick"
                 </h3>
 
                 <p class="mt-2">
-                  {{ post.excerpt | strip_html | truncatewords: 30 | default: "Lee más sobre este artículo haciendo clic en el título." }}
+                  {{ post.excerpt | strip_html | truncatewords: 30 | default:
+                  "Lee más sobre este artículo haciendo clic en el título." }}
                 </p>
 
                 {% if post.tags %}
@@ -82,7 +89,8 @@ title: "El Rincón de Hattrick"
               aria-label="Ver más artículos de la categoría {{ category_page.title | default: category_name }}">
               <span class="icon-text">
                 <span class="icon"><i class="fas fa-folder-open" aria-hidden="true"></i></span>
-                <span>Ver más en {{ category_page.title | default: category_name }}</span>
+                <span>Ver más en {{ category_page.title | default: category_name
+                  }}</span>
               </span>
             </a>
             {% else %}
@@ -101,4 +109,3 @@ title: "El Rincón de Hattrick"
     {% endfor %}
   </div>
 </div>
-

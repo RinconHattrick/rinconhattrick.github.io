@@ -9,15 +9,14 @@ excerpt: "Domina el lenguaje común usado en Hattrick con esta guía detallada d
 image: "/assets/img/ht-b.png"
 featured: false
 published: true
+views: 0
 ---
-
-## Guía completa de abreviaturas en Hattrick
 
 En el dinámico mundo de Hattrick, las abreviaturas son herramientas esenciales para comunicarte eficazmente y comprender los aspectos clave del juego. Dominar estas abreviaturas te permitirá interactuar mejor con la comunidad y optimizar tu experiencia.
 
-### Abreviaturas por Categoría
+## Abreviaturas por Categoría
 
-### A
+## A
 
 - **AIM o AiM**: Táctica de Ataque en el Medio.
 - **AO**: Estrategia Todo Ofensivo.
@@ -25,11 +24,11 @@ En el dinámico mundo de Hattrick, las abreviaturas son herramientas esenciales 
 - **AOW**: Táctica de Ataque por las Bandas.
 - **AHP**: Prensa Asociada de Hattrick.
 
-### B
+## B
 
 - **BOT**: Equipo de computadora (controlado por el juego).
 
-### C
+## C
 
 - **CA**: Táctica de Contraataques.
 - **CAEX**: Estrategia de Contraataques Extremos (rara).
@@ -39,14 +38,14 @@ En el dinámico mundo de Hattrick, las abreviaturas son herramientas esenciales 
 - **CHPP**: Proveedor Certificado de Productos Hattrick.
 - **CR**: Entrenamiento de Centros (Extremo).
 
-### D
+## D
 
 - **DE**: Rol de Defensa con habilidad o entrenamiento en Defensa.
 - **dF o DDT**: Posición de Delantero Defensivo Técnico.
 - **DitS**: Estado de Ánimo Bailando en las Calles.
 - **DM**: Ver **IMd** (Mediocampista Defensivo).
 
-### E
+## E
 
 - **ECD**: Defensa Central Extra (obsoleto).
 - **EFW**: Delantero Extra (obsoleto).
@@ -54,21 +53,21 @@ En el dinámico mundo de Hattrick, las abreviaturas son herramientas esenciales 
 - **Et o ET**: Nivel de habilidad Extraterrestre.
 - **EXP o XP**: Experiencia.
 
-### F
+## F
 
 - **FED**: Federación.
 - **FFHF**: Federación de Foros de Fútbol Hattrick.
 - **Ftw**: Posición de Delantero Hacia la Banda.
 - **FW o F**: Posición de Delantero.
 
-### G
+## G
 
 - **GK**: Rol de Portero o habilidad de Entrenamiento en Portería.
 - **GM**: Funcionario GameMaster.
 - **GB**: Libro de Visitas.
 - **GAO**: Organización de Agentes Globales.
 
-### H
+## H
 
 - **H**: Especialidad Cabeza.
 - **HFA**: Asociación de Fútbol Hattrick.
@@ -85,35 +84,35 @@ En el dinámico mundo de Hattrick, las abreviaturas son herramientas esenciales 
 - **HM**: Hattrick Máster.
 - **HO**: Hattrick Organizer.
 
-### I
+## I
 
 - **IM**: Posición de Mediocampista Interior.
 - **IMd o DM**: Posición de Mediocampista Defensivo.
 - **IMo o OM**: Posición de Mediocampista Ofensivo.
 - **IMtw**: Posición de Mediocampista Interior hacia la Banda.
 
-### J
+## J
 
 - **J21**: Ver **U21** (Selección Nacional Sub-21).
 
-### L
+## L
 
 - **LA**: Funcionario Administrador de Lenguaje.
 - **LD**: Habilidad de Liderazgo.
 - **LS**: Táctica de Tiros Largos.
 
-### M
+## M
 
 - **MLC**: Desafío de Licencia de Manager.
 - **MOD o Mod**: Funcionario Moderador.
 - **MOTS o MotS o MOS**: Orden del Partido de la Temporada.
 
-### N
+## N
 
 - **NT**: Selección Nacional.
 - **NC o NTC**: Entrenador de Selección Nacional.
 
-### P
+## P
 
 - **P**: Especialidad Poderosa.
 - **PA**: Anuncio de Prensa.
@@ -127,17 +126,17 @@ En el dinámico mundo de Hattrick, las abreviaturas son herramientas esenciales 
 - **PR**: Táctica de Presión.
 - **PS**: Habilidad o entrenamiento en Pase.
 
-### Q
+## Q
 
 - **Q**: Especialidad Rápida.
 
-### R
+## R
 
 - **R**: Especialidad Resistente.
 - **RL o IRL**: "Vida Real" o "En la Vida Real".
 - **RTFM**: "Lee el Maldito Manual".
 
-### S
+## S
 
 - **S**: Especialidad de Soporte.
 - **SC**: Habilidad o entrenamiento en Anotación.
@@ -145,7 +144,7 @@ En el dinámico mundo de Hattrick, las abreviaturas son herramientas esenciales 
 - **SOAP**: Estrategia Enviar Órdenes y Rezar.
 - **SP**: Evento, habilidad o entrenamiento de Piezas de Juego.
 
-### T
+## T
 
 - **T**: Especialidad Técnico.
 - **TA**: Característica de Análisis de Equipo.
@@ -158,12 +157,12 @@ En el dinámico mundo de Hattrick, las abreviaturas son herramientas esenciales 
 - **TPA**: Ajuste de Precio de Transferencia.
 - **TPE**: Evaluación de Precio de Transferencia.
 
-### U
+## U
 
 - **U**: Especialidad Inpredecible.
 - **U21**: Selección Nacional U21.
 
-### W
+## W
 
 - **WG**: Posición de Extremo.
 - **WB**: Posición de Lateral.
@@ -176,12 +175,12 @@ En el dinámico mundo de Hattrick, las abreviaturas son herramientas esenciales 
 - **WOC o WoC**: Espíritu de Caminando en las Nubes.
 - **Wtm**: Posición de Extremo hacia el Medio.
 
-### X
+## X
 
 - **XIM**: Ver **EIM** (Mediocampista Interior Extra).
 - **XP**: Ver **EXP** (Experiencia).
 
-### Y
+## Y
 
 - **YA**: Academia Juvenil.
 - **YP**: Selección Juvenil.
@@ -189,7 +188,7 @@ En el dinámico mundo de Hattrick, las abreviaturas son herramientas esenciales 
 
 ---
 
-### Consejos clave para dominar las abreviaturas en Hattrick
+## Consejos clave para dominar las abreviaturas en Hattrick
 
 Aquí tienes algunos consejos clave para dominar las abreviaturas en Hattrick:
 

@@ -1,25 +1,26 @@
 <aside class="sticky-sidebar">
   <div class="box">
-      <h2 class="title is-5 has-text-weight-semibold">Enlaces Útiles</h2>
-      {% if site.data.enlaces %}
-        {% for categoria in site.data.enlaces %}
-          {% assign nombre_categoria = categoria[0] | default: 'Otros' %}
-          {% assign enlaces = categoria[1] %}
+    <h2 class="title is-5 has-text-weight-semibold">Enlaces Útiles</h2>
+    {% if site.data.enlaces %}
+    {% for categoria in site.data.enlaces %}
+    {% assign nombre_categoria = categoria[0] | default: 'Otros' %}
+    {% assign enlaces = categoria[1] %}
 
-          <p class="menu-label">{{ nombre_categoria | capitalize }}</p>
-          <ul class="menu-list">
-            {% for enlace in enlaces %}
-            <li>
-              <a href="{{ enlace.url }}" target="_blank" rel="noopener noreferrer" title="Abrir {{ enlace.nombre }}" aria-label="Abrir {{ enlace.nombre }} en una nueva pestaña">
-                <i class="fas fa-link" aria-hidden="true"></i>
-                <span>{{ enlace.nombre }}</span>
-              </a>
-            </li>
-            {% endfor %}
-          </ul>
-        {% endfor %}
-      {% else %}
-        <p class="has-text-grey">No hay enlaces disponibles en este momento.</p>
-      {% endif %}
+    <p class="menu-label">{{ nombre_categoria | capitalize }}</p>
+    <ul class="menu-list">
+      {% for enlace in enlaces %}
+      <li>
+        <a href="{{ enlace.url }}" target="_blank" rel="noopener noreferrer" title="Abrir {{ enlace.nombre }}"
+          aria-label="Abrir {{ enlace.nombre }} en una nueva pestaña">
+          <i class="fas fa-link" aria-hidden="true"></i>
+          <span>{{ enlace.nombre }}</span>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+    {% endfor %}
+    {% else %}
+    <p class="has-text-grey">No hay enlaces disponibles en este momento.</p>
+    {% endif %}
   </div>
 </aside>

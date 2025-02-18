@@ -19,7 +19,7 @@
   --border-radius: 8px;
   --transition-standard: all 0.3s ease-in-out;
   --shadow-md: 0 2px 5px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 4px 10px rgba(0, 0, 0, 0.2); 
+  --shadow-lg: 0 4px 10px rgba(0, 0, 0, 0.2);
 
   --background: var(--background-light);
   --text: var(--text-light);
@@ -41,7 +41,12 @@
   box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   line-height: 1.3;
@@ -49,16 +54,16 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
   font-family: "Roboto", sans-serif;
-  line-height: 1.6; 
+  line-height: 1.6;
   background-color: var(--background);
   color: var(--text);
 }
 
 .icon {
-  display: inline-flex; 
-  align-items: center; 
-  line-height: 1; 
-  vertical-align: middle; 
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+  vertical-align: middle;
 }
 
 /* ==============================
@@ -97,7 +102,7 @@ body {
   z-index: 10;
   padding: 0;
   margin: 0;
-  display: block; 
+  display: block;
 }
 
 .navbar-item.has-dropdown.is-hoverable:hover .navbar-dropdown {
@@ -106,7 +111,7 @@ body {
 }
 
 .navbar-item {
-  margin: 0; 
+  margin: 0;
 }
 
 /* ==============================
@@ -204,6 +209,7 @@ html {
     opacity: 0;
     transform: translateY(5px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -214,13 +220,17 @@ html {
    RESPONSIVE
 ============================== */
 @media (min-width: 768px) {
-  main, .sticky-sidebar {
-    margin-top: 3.5rem; 
+
+  main,
+  .sticky-sidebar {
+    margin-top: 3.5rem;
   }
 }
 
 @media (max-width: 767px) {
-  main, .sticky-sidebar {
+
+  main,
+  .sticky-sidebar {
     margin-top: 0;
   }
 
@@ -229,7 +239,7 @@ html {
     bottom: 80px;
   }
 
-   .is-hidden-tablet {
+  .is-hidden-tablet {
     display: none;
   }
 }
@@ -311,7 +321,7 @@ mark {
 }
 
 .sticky-sidebar:hover {
-  box-shadow: var(--shadow-lg); 
+  box-shadow: var(--shadow-lg);
   transition: box-shadow 0.3s ease-in-out;
 }
 
@@ -349,7 +359,7 @@ mark {
   cursor: pointer;
   opacity: 0;
   will-change: transform, opacity;
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; 
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
   box-shadow: var(--shadow-md);
 }
 

@@ -9,9 +9,8 @@ excerpt: "Descubre todo lo que necesitas saber sobre las selecciones nacionales 
 image: "/assets/img/ht-b.png"
 featured: false
 published: true
+views: 0
 ---
-
-## Preguntas Frecuentes sobre Competencias de Selecciones Nacionales
 
 Este artículo responde a las preguntas más frecuentes sobre las selecciones nacionales y Sub-21 en Hattrick, desde cómo funcionan las competiciones hasta las ventajas de tener jugadores en las selecciones.
 

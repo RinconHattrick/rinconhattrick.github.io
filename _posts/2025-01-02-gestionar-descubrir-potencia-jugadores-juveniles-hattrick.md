@@ -9,15 +9,14 @@ excerpt: "Descubre cómo sacar el máximo provecho de tus juveniles en Hattrick 
 image: "/assets/img/ht-v.png"
 featured: false
 published: true
+views: 0
 ---
-
-## Gestionar y descubrir el potencial de los jugadores juveniles
 
 Los jugadores juveniles son el futuro de cualquier equipo en Hattrick. Gestionarlos correctamente requiere paciencia, estrategia y un enfoque detallado en su desarrollo y evaluación.
 
 ---
 
-### Datos clave sobre los jugadores juveniles
+## Datos clave sobre los jugadores juveniles
 
 Cuando reclutas jugadores para tu equipo juvenil, estos tienen características iniciales y potencial que deberás descubrir con el tiempo:
 
@@ -27,11 +26,11 @@ Cuando reclutas jugadores para tu equipo juvenil, estos tienen características 
 
 ---
 
-### ¿Cómo evaluar a tus jugadores juveniles?
+## ¿Cómo evaluar a tus jugadores juveniles?
 
 La evaluación efectiva de tus juveniles es fundamental para aprovechar su potencial al máximo.
 
-#### Herramientas para evaluar
+### Herramientas para evaluar
 
 1. **Calificación por estrellas:**
 
@@ -51,26 +50,26 @@ La evaluación efectiva de tus juveniles es fundamental para aprovechar su poten
 
 ---
 
-### Estrategias para descubrir el potencial
+## Estrategias para descubrir el potencial
 
-#### Cambia las posiciones en el campo
+### Cambia las posiciones en el campo
 
 - Probar diferentes posiciones en el campo puede revelar dónde cada jugador tiene un mejor rendimiento.
 - Por ejemplo, un defensa promedio podría destacar como mediocampista ofensivo.
 
-#### Crea planes de entrenamiento estratégicos
+### Crea planes de entrenamiento estratégicos
 
 - Enfócate en habilidades clave para mejorar el desempeño del jugador.
 - Prioriza áreas según las necesidades del equipo y las pistas iniciales de los informes.
 
-#### Usa los partidos como herramientas de evaluación
+### Usa los partidos como herramientas de evaluación
 
 - Los amistosos son ideales para probar roles menos comunes.
 - Observa las calificaciones después de cada partido para ajustar posiciones o estrategias.
 
 ---
 
-### Consejos para maximizar el rendimiento juvenil
+## Consejos para maximizar el rendimiento juvenil
 
 Aquí tienes algunos consejos que te ayudarán a maximizar el rendimiento de tus jugadores juveniles:
 
@@ -91,7 +90,7 @@ Aquí tienes algunos consejos que te ayudarán a maximizar el rendimiento de tus
 
 ---
 
-### Puntos clave para recordar
+## Puntos clave para recordar
 
 - Los juveniles inician con habilidades ocultas que se revelan progresivamente mediante entrenamiento y partidos.
 - Herramientas como las calificaciones por estrellas, los comentarios de los ojeadores y los reportes de partidos son fundamentales para evaluar su potencial.

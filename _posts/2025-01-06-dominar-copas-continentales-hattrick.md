@@ -9,15 +9,14 @@ excerpt: "Descubre cómo dominar las Copas Continentales en Hattrick con esta gu
 image: "/assets/img/ht-v.png"
 featured: false
 published: true
+views: 0
 ---
-
-## Dominar las Copas Continentales en Hattrick
 
 Las Copas Continentales son uno de los eventos más prestigiosos en Hattrick, donde las selecciones nacionales de cada continente luchan por la gloria y un lugar destacado en el ranking. Más que un torneo, las Copas Continentales representan un trampolín hacia el éxito mundial.
 
 ---
 
-### ¿Qué Son las Copas Continentales y Por Qué Son Importantes?
+## ¿Qué Son las Copas Continentales y Por Qué Son Importantes?
 
 Organizadas por regiones, estas competiciones reúnen a las selecciones nacionales más destacadas de los siguientes continentes:
 
@@ -34,9 +33,9 @@ Además del prestigio, las Copas Continentales ofrecen:
 
 ---
 
-### Cómo Funciona el Torneo
+## Cómo Funciona el Torneo
 
-#### Fase de grupos: El inicio de la competencia
+### Fase de grupos: El inicio de la competencia
 
 Cada continente divide a sus selecciones en **grupos de 6 equipos**. El formato incluye una liga de ida y vuelta, donde cada equipo disputa 10 partidos.
 
@@ -49,16 +48,16 @@ Los **dos mejores equipos** de cada grupo avanzan a las eliminatorias, lo que ga
 
 ---
 
-#### Fase Eliminatoria: Camino al Título
+### Fase Eliminatoria: Camino al Título
 
 Tras la fase de grupos, los mejores equipos compiten en rondas eliminatorias directas.
 
-###### **Cuartos de Final**
+#### **Cuartos de Final**
 
 - Participan los 8 mejores equipos.
 - Los emparejamientos evitan enfrentamientos entre equipos del mismo grupo.
 
-###### **Semifinales y Final**
+#### **Semifinales y Final**
 
 - Determinan al campeón, subcampeón y tercer lugar del torneo.
 
@@ -80,7 +79,7 @@ Tras la fase de grupos, los mejores equipos compiten en rondas eliminatorias dir
 
 ---
 
-### Premios y Reconocimientos
+## Premios y Reconocimientos
 
 Las Copas Continentales otorgan:
 
@@ -92,9 +91,9 @@ Además, los equipos ganadores acumulan **puntos adicionales en el ranking nacio
 
 ---
 
-### Estrategias Clave para Managers Nacionales
+## Estrategias Clave para Managers Nacionales
 
-#### 1. **Desarrolla Talento Local**
+### 1. **Desarrolla Talento Local**
 
 Identifica y entrena a jugadores jóvenes con potencial, lo que te permitirá contribuir al éxito de la selección. Prioriza habilidades clave como:
 
@@ -102,7 +101,7 @@ Identifica y entrena a jugadores jóvenes con potencial, lo que te permitirá co
 - Anotación: Clave en partidos reñidos.
 - Pase y balón parado: Vital para aprovechar oportunidades estratégicas.
 
-#### 2. **Involucra a la Comunidad Nacional**
+### 2. **Involucra a la Comunidad Nacional**
 
 Participar en foros nacionales es crucial para:
 
@@ -110,20 +109,20 @@ Participar en foros nacionales es crucial para:
 - Apoyar las elecciones de seleccionadores.
 - Crear un ambiente de colaboración y unidad.
 
-#### 3. **Estudia y Optimiza Tácticas**
+### 3. **Estudia y Optimiza Tácticas**
 
 Analiza los partidos de tu selección y de los rivales:
 
 - Identifica patrones tácticos exitosos.
 - Experimenta en amistosos para perfeccionar estrategias antes de encuentros importantes.
 
-#### 4. **Contribuye con tus Jugadores**
+### 4. **Contribuye con tus Jugadores**
 
 Si tienes jugadores seleccionables, colabora con el seleccionador en su desarrollo y entrenamiento para maximizar su impacto en la competición.
 
 ---
 
-### Puntos Clave para Recordar
+## Puntos Clave para Recordar
 
 - Las Copas Continentales son un escaparate para las mejores selecciones de cada región, ofreciendo una plataforma para demostrar su talento y estrategia.
 - Incluyen una fase de grupos intensa y una fase eliminatoria emocionante hasta la final.
