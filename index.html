@@ -41,7 +41,7 @@ title: "El Rincón de Hattrick"
               <article class="box animate">
                 {% if post.image %}
                 <figure class="image is-16by9">
-                  <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" />
+                  <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" loading="lazy" />
                 </figure>
                 {% endif %}
 

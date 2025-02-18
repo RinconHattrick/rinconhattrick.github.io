@@ -3,34 +3,42 @@
 ============================== */
 :root {
   /* Colores */
-  --primary-color: #00d1b2;
-  --secondary-color: #485fc7;
+  --color-primary: #00d1b2;
+  --color-secondary: #485fc7;
+  --color-background-light: #ffffff;
+  --color-text-light: #363636;
+  --color-card-light: #f5f5f5;
+  --color-background-dark: #181825;
+  --color-text-dark: #f1f1f1;
+  --color-card-dark: #242435;
+  --color-marks: #ffdd57;
 
-  --background-light: #ffffff;
-  --text-light: #363636;
-  --card-background-light: #f5f5f5;
+  /* Gradientes */
+  --gradient-primary: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
 
-  --background-dark: #181825;
-  --text-dark: #f1f1f1;
-  --card-background-dark: #242435;
+  /* Espaciado y bordes */
+  --radius: 8px;
+  --transition: all 0.3s ease-in-out;
 
-  --marks: #ffdd57;
-  --primary-gradient: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-  --border-radius: 8px;
-  --transition-standard: all 0.3s ease-in-out;
+  /* Sombras */
   --shadow-md: 0 2px 5px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 4px 10px rgba(0, 0, 0, 0.2);
 
-  --background: var(--background-light);
-  --text: var(--text-light);
-  --card-background: var(--card-background-light);
+  /* Tema global */
+  --background: var(--color-background-light);
+  --text: var(--color-text-light);
+  --card-background: var(--color-card-light);
+
+  /* Breakpoints */
+  --breakpoint-mobile: 768px;
+  --breakpoint-tablet: 1024px;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: var(--background-dark);
-    --text: var(--text-dark);
-    --card-background: var(--card-background-dark);
+    --background: var(--color-background-dark);
+    --text: var(--color-text-dark);
+    --card-background: var(--color-card-dark);
   }
 }
 
@@ -39,6 +47,13 @@
 ============================== */
 * {
   box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+  background-color: var(--background);
+  color: var(--text);
 }
 
 h1,
@@ -50,13 +65,6 @@ h6 {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   line-height: 1.3;
-}
-
-body {
-  font-family: "Roboto", sans-serif;
-  line-height: 1.6;
-  background-color: var(--background);
-  color: var(--text);
 }
 
 .icon {
@@ -74,12 +82,6 @@ body {
   background-color: var(--background);
 }
 
-@media (prefers-color-scheme: dark) {
-  .navbar {
-    background-color: rgba(30, 30, 30, 0.9);
-  }
-}
-
 .navbar-item,
 .navbar-link {
   color: var(--text);
@@ -87,8 +89,8 @@ body {
 }
 
 .navbar-item.is-active {
-  background-color: var(--primary-color);
-  color: var(--background-light);
+  background-color: var(--color-primary);
+  color: var(--color-background-light);
 }
 
 /* ==============================
@@ -117,7 +119,7 @@ body {
 /* ==============================
    RESPONSIVE NAVBAR
 ============================== */
-@media (max-width: 1024px) {
+@media (max-width: var(--breakpoint-tablet)) {
   .sticky-sidebar {
     position: static;
     max-width: 100%;
@@ -130,27 +132,20 @@ body {
 }
 
 /* ==============================
-   STYLES GENERALES DE NAVBAR ITEM
-============================== */
-.navbar-item.has-dropdown {
-  position: relative;
-}
-
-/* ==============================
    TARJETAS
 ============================== */
 .card-header {
-  background: var(--primary-gradient);
+  background: var(--gradient-primary);
   color: white;
   padding: 1rem;
-  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  border-radius: var(--radius) var(--radius) 0 0;
 }
 
 /* ==============================
    BOTONES
 ============================== */
 .button {
-  transition: var(--transition-standard);
+  transition: var(--transition);
   font-weight: 500;
 }
 
@@ -162,10 +157,10 @@ body {
 }
 
 /* ==============================
-   SCROLLBAR PERSONALIZADO (Compatibilidad con Firefox)
+   SCROLLBAR PERSONALIZADO
 ============================== */
 html {
-  scrollbar-color: var(--primary-color) transparent;
+  scrollbar-color: var(--color-primary) transparent;
   scrollbar-width: thin;
 }
 
@@ -174,14 +169,14 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--primary-color);
-  border-radius: var(--border-radius);
+  background-color: var(--color-primary);
+  border-radius: var(--radius);
   border: 2px solid transparent;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: var(--secondary-color);
+  background-color: var(--color-secondary);
   transform: scale(1.1);
 }
 
@@ -197,13 +192,6 @@ html {
 /* ==============================
    ANIMACIONES
 ============================== */
-.box {
-  opacity: 0;
-  transform: translateY(10px);
-  animation: fadeIn 0.3s ease-out forwards;
-  will-change: opacity, transform;
-}
-
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -216,10 +204,19 @@ html {
   }
 }
 
+.fade-in {
+  animation: fadeIn 0.3s ease-out forwards;
+  will-change: opacity, transform;
+}
+
+.box {
+  @apply .fade-in;
+}
+
 /* ==============================
    RESPONSIVE
 ============================== */
-@media (min-width: 768px) {
+@media (min-width: var(--breakpoint-tablet)) {
 
   main,
   .sticky-sidebar {
@@ -227,7 +224,7 @@ html {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: var(--breakpoint-mobile)) {
 
   main,
   .sticky-sidebar {
@@ -243,7 +240,6 @@ html {
     display: none;
   }
 }
-
 
 /* ==============================
    BUSCADOR
@@ -266,7 +262,7 @@ html {
 
 #search-feedback {
   display: none;
-  transition: var(--transition-standard);
+  transition: var(--transition);
 }
 
 #search-feedback:not(.is-hidden) {
@@ -274,7 +270,7 @@ html {
 }
 
 mark {
-  background-color: var(--marks);
+  background-color: var(--color-marks);
   color: #222;
   padding: 2px 4px;
   border-radius: 3px;
@@ -282,13 +278,13 @@ mark {
 
 .notification.is-warning {
   background-color: rgba(255, 221, 87, 0.2);
-  border: 1px solid var(--marks);
-  border-radius: var(--border-radius);
+  border: 1px solid var(--color-marks);
+  border-radius: var(--radius);
   padding: 10px;
 }
 
 .notification.is-warning .icon {
-  color: var(--marks);
+  color: var(--color-marks);
   font-size: 1.2rem;
   vertical-align: middle;
 }
@@ -299,7 +295,7 @@ mark {
 .menu-list a:focus-visible,
 .button:focus-visible,
 .navbar-item:focus-visible {
-  outline: 2px solid var(--secondary-color);
+  outline: 2px solid var(--color-secondary);
   outline-offset: 2px;
 }
 
@@ -315,8 +311,7 @@ mark {
   overflow-y: auto;
   background-color: var(--card-background);
   box-shadow: var(--shadow-md);
-  padding: 0.3rem;
-  border-radius: var(--border-radius);
+  border-radius: var(--radius);
   transition: transform 0.3s ease;
 }
 
@@ -329,15 +324,15 @@ mark {
   display: block;
   padding: 0.3rem;
   margin-bottom: 0.3rem;
-  border-radius: var(--border-radius);
+  border-radius: var(--radius);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .menu-list a:hover,
 .menu-list a:focus {
-  background-color: var(--primary-color);
+  background-color: var(--color-primary);
   transform: translateY(-2px);
-  color: var(--background-light);
+  color: var(--color-background-light);
   will-change: transform;
 }
 
@@ -348,8 +343,8 @@ mark {
   position: fixed;
   bottom: 3.5rem;
   right: 1rem;
-  background-color: var(--primary-color);
-  color: var(--background-light);
+  background-color: var(--color-primary);
+  color: var(--color-background-light);
   border-radius: 50%;
   width: 30px;
   height: 30px;
