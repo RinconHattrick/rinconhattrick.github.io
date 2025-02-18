@@ -26,9 +26,7 @@ description: "Búsqueda de artículos en el sitio"
             </span>
           </div>
         </div>
-        <p class="help">
-          Escribe al menos 3 caracteres para comenzar a buscar.
-        </p>
+        <p class="help">Escribe al menos 3 caracteres para comenzar a buscar.</p>
       </form>
 
       <!-- Retroalimentación de búsqueda -->
@@ -105,13 +103,7 @@ description: "Búsqueda de artículos en el sitio"
   `;
 
       // Remueve todas las clases anteriores de estado y la clase is-hidden
-      this.feedbackElement.classList.remove(
-        "is-hidden",
-        "is-danger",
-        "is-primary",
-        "is-info",
-        "is-warning"
-      );
+      this.feedbackElement.classList.remove("is-hidden", "is-danger", "is-primary", "is-info", "is-warning");
       this.feedbackElement.classList.add(type);
 
       // Asegura que sea visible
@@ -160,7 +152,7 @@ description: "Búsqueda de artículos en el sitio"
         </time>
 
         <h3 class="title is-5 mt-2">
-          <a href="${item.url}" >
+          <a href="${item.url}">
             ${this.highlightMatch(item.title, query)}
           </a>
         </h3>
@@ -168,8 +160,7 @@ description: "Búsqueda de artículos en el sitio"
         <p class="mt-2">
           ${item.excerpt
             ? this.truncateText(this.highlightMatch(item.excerpt, query), 300)
-            : ""
-          }
+            : ""}
         </p>
       </article>
     `;
@@ -209,8 +200,7 @@ description: "Búsqueda de artículos en el sitio"
           throw new Error("Error al cargar los datos de búsqueda");
 
         const data = await response.json();
-        if (!Array.isArray(data))
-          throw new Error("Formato incorrecto de datos");
+        if (!Array.isArray(data)) throw new Error("Formato incorrecto de datos");
 
         const results = data
           .filter(

@@ -1,7 +1,7 @@
-Hattrick:
+hattrick:
   - nombre: "Hattrick"
     url: "https://www.hattrick.org/"
-  - nombre: "Canales de Hattrick en Telegram"
+  - nombre: "Canales de Hattrick"
     url: "https://bit.ly/460s7W5"
   - nombre: "Aplicación de Hattrick"
     url: "https://play.google.com/store/apps/details?id=org.hattrick.hattrick"
@@ -68,7 +68,7 @@ simuladores:
   - nombre: "HT-DOG"
     url: "https://ht-dog.net/"
 
-guías:
+guias:
   - nombre: "Guía Ocerin"
     url: "https://play.google.com/store/apps/details?id=com.guiaocerin"
   - nombre: "Links Ayuda Hattrick – Guía Ocerin"

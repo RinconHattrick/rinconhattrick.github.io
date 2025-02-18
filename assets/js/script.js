@@ -45,9 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     window.addEventListener("scroll", updateScrollButton);
-    scrollToTopBtn.addEventListener("click", () =>
-      window.scrollTo({ top: 0, behavior: "smooth" })
-    );
+    scrollToTopBtn.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
   }
 
   // === Navbar Responsivo ===
@@ -75,11 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    if (
-      categoryToggle &&
-      categoryMenu &&
-      (target === categoryToggle || categoryToggle.contains(target))
-    ) {
+    if (categoryToggle && categoryMenu && (target === categoryToggle || categoryToggle.contains(target))) {
       if (window.innerWidth <= 1024) {
         event.preventDefault();
         const isActive = categoryMenu.classList.toggle("is-active");
@@ -94,12 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
       toggleAriaExpanded(burger, false);
     }
 
-    if (
-      categoryMenu &&
-      !categoryMenu.contains(target) &&
-      categoryToggle &&
-      !categoryToggle.contains(target)
-    ) {
+    if (categoryMenu && !categoryMenu.contains(target) && categoryToggle && !categoryToggle.contains(target)) {
       toggleClass(categoryMenu, "is-active", false);
       toggleAriaExpanded(categoryToggle, false);
     }
