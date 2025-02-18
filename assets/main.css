@@ -1,5 +1,5 @@
 /* ==============================
-   VARIABLES Y TEMAS DE COLORES
+VARIABLES Y TEMAS DE COLORES
 ============================== */
 :root {
   /* Colores */
@@ -28,12 +28,9 @@
   --background: var(--color-background-light);
   --text: var(--color-text-light);
   --card-background: var(--color-card-light);
-
-  /* Breakpoints */
-  --breakpoint-mobile: 768px;
-  --breakpoint-tablet: 1024px;
 }
 
+/* Tema oscuro */
 @media (prefers-color-scheme: dark) {
   :root {
     --background: var(--color-background-dark);
@@ -43,9 +40,13 @@
 }
 
 /* ==============================
-   FUENTES TIPOGRÁFICAS
+FUENTES TIPOGRÁFICAS
 ============================== */
-* {
+
+/* Aplicar box-sizing a todos los elementos */
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -75,7 +76,7 @@ h6 {
 }
 
 /* ==============================
-   NAVBAR
+NAVBAR
 ============================== */
 .navbar {
   box-shadow: var(--shadow-md);
@@ -94,7 +95,7 @@ h6 {
 }
 
 /* ==============================
-   NAVBAR DROPDOWN
+NAVBAR DROPDOWN
 ============================== */
 .navbar-dropdown {
   max-height: 0;
@@ -117,9 +118,9 @@ h6 {
 }
 
 /* ==============================
-   RESPONSIVE NAVBAR
+RESPONSIVE NAVBAR
 ============================== */
-@media (max-width: var(--breakpoint-tablet)) {
+@media (max-width: 1024px) {
   .sticky-sidebar {
     position: static;
     max-width: 100%;
@@ -132,7 +133,7 @@ h6 {
 }
 
 /* ==============================
-   TARJETAS
+TARJETAS
 ============================== */
 .card-header {
   background: var(--gradient-primary);
@@ -142,7 +143,7 @@ h6 {
 }
 
 /* ==============================
-   BOTONES
+BOTONES
 ============================== */
 .button {
   transition: var(--transition);
@@ -157,7 +158,7 @@ h6 {
 }
 
 /* ==============================
-   SCROLLBAR PERSONALIZADO
+SCROLLBAR PERSONALIZADO
 ============================== */
 html {
   scrollbar-color: var(--color-primary) transparent;
@@ -181,7 +182,7 @@ html {
 }
 
 /* ==============================
-   FOOTER
+FOOTER
 ============================== */
 .footer {
   background-color: var(--background);
@@ -190,14 +191,13 @@ html {
 }
 
 /* ==============================
-   ANIMACIONES
+ANIMACIONES
 ============================== */
 @keyframes fadeIn {
   from {
     opacity: 0;
     transform: translateY(5px);
   }
-
   to {
     opacity: 1;
     transform: translateY(0);
@@ -210,22 +210,21 @@ html {
 }
 
 .box {
-  @apply .fade-in;
+  animation: fadeIn 0.3s ease-out forwards;
+  will-change: opacity, transform;
 }
 
 /* ==============================
-   RESPONSIVE
+RESPONSIVE
 ============================== */
-@media (min-width: var(--breakpoint-tablet)) {
-
+@media (min-width: 1024px) {
   main,
   .sticky-sidebar {
     margin-top: 3.5rem;
   }
 }
 
-@media (max-width: var(--breakpoint-mobile)) {
-
+@media (max-width: 768px) {
   main,
   .sticky-sidebar {
     margin-top: 0;
@@ -242,7 +241,7 @@ html {
 }
 
 /* ==============================
-   BUSCADOR
+BUSCADOR
 ============================== */
 .search-results-list {
   list-style: none;
@@ -290,7 +289,7 @@ mark {
 }
 
 /* ==============================
-   ACCESIBILIDAD
+ACCESIBILIDAD
 ============================== */
 .menu-list a:focus-visible,
 .button:focus-visible,
@@ -300,7 +299,7 @@ mark {
 }
 
 /* ==============================
-   SIDEBAR
+SIDEBAR
 ============================== */
 .sticky-sidebar {
   position: sticky;
@@ -337,7 +336,7 @@ mark {
 }
 
 /* ==============================
-   BOTÓN "SCROLL TO TOP"
+BOTÓN "SCROLL TO TOP"
 ============================== */
 .scroll-to-top-btn {
   position: fixed;
