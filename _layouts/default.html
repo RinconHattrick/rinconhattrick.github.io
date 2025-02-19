@@ -4,65 +4,75 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="robots" content="index, follow" />
+
     <!-- Theme Color -->
     <meta name="theme-color" content="#00d1b2" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#181825" media="(prefers-color-scheme: dark)" />
     <meta name="color-scheme" content="light dark" />
+    
     {% seo %}
-    <!-- Icono -->
+    
+    <!-- Favicon -->
     <link rel="icon" href="{{ '/assets/img/favicon.ico' | relative_url }}" sizes="any" />
-    <!-- Preconexión  -->
+
+    <!-- Preconexión -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+
     <!-- Preload de recursos críticos -->
     <link rel="preload" href="{{ '/assets/main.css' | relative_url }}" as="style" />
     <link rel="preload" href="{{ '/assets/js/script.js' | relative_url }}" as="script" />
+
     <!-- Bulma -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
-    <!-- Font Awesome -->
+
+    <!-- Font Awesome (solo un archivo en lugar de varios) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/solid.min.css" />
+
     <!-- Estilos personalizados -->
     <link rel="stylesheet" href="{{ '/assets/main.css?v=2.0.0' | relative_url }}" />
   </head>
 
   <body class="has-navbar-fixed-top">
     {% include header.html %}
+    
     <div class="container">
       <div class="columns is-gapless">
-        <main class="column is-full-touch is-three-quarters-desktop" aria-label="Contenido principal">{{ content }}</main>
+        <main class="column is-full-touch is-three-quarters-desktop" aria-label="Contenido principal">
+          {{ content }}
+        </main>
         {% if page.layout != "no-sidebar" %}
-        <section class="column is-hidden-touch is-one-quarter-desktop">{% include aside.html %}</section>
+          <section class="column is-hidden-touch is-one-quarter-desktop">
+            {% include aside.html %}
+          </section>
         {% endif %}
       </div>
     </div>
+    
     {% include footer.html %}
+
+    <!-- Botón de subir -->
     <button class="scroll-to-top-btn" id="scrollToTopBtn" title="Subir" aria-label="Subir al inicio">
       <i class="fas fa-arrow-up" aria-hidden="true"></i>
     </button>
 
-    <script type="text/javascript">
-      document.addEventListener("DOMContentLoaded", function () {
-        const images = document.querySelectorAll(".image img");
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll(".image img").forEach((img) => {
+          const handleLoad = () => img.parentElement.classList.add("is-loaded");
+          const handleError = () => {
+            img.classList.add("has-error");
+            img.src = "/assets/img/RinconHattrick.jpg";
+            img.alt = "Imagen de respaldo";
+          };
 
-        images.forEach((img) => {
-          img.addEventListener("load", function () {
-            this.parentElement.classList.add("is-loaded");
-          });
+          img.addEventListener("load", handleLoad);
+          img.addEventListener("error", handleError);
 
-          img.addEventListener("error", function () {
-            this.classList.add("has-error");
-            this.src = "/assets/img/RinconHattrick.jpg";
-          });
-
-          // Si la imagen ya está cargada del caché
-          if (img.complete) {
-            img.parentElement.classList.add("is-loaded");
-          }
+          if (img.complete) handleLoad();
         });
       });
     </script>
+
     <!-- Scripts -->
     <script src="{{ '/assets/js/script.js?v=2.0.0' | relative_url }}" defer></script>
   </body>
