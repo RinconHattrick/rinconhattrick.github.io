@@ -1,115 +1,88 @@
-/* ==============================
-VARIABLES PERSONALIZADAS
-============================== */
+/* Variables globales - mantener solo las que se usan para personalización */
 :root {
+  --color-primary: #3273dc;
+  --color-secondary: #23d160;
+  --color-marks: #ffd166;
   --radius: 8px;
-  --transition-default: all 0.3s ease-in-out;
-  --transition-transform: transform 0.3s ease;
   --shadow-md: 0 2px 5px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 4px 10px rgba(0, 0, 0, 0.2);
+  --transition-default: all 0.3s ease-in-out;
 }
 
-/* Tema oscuro */
+/* Tema oscuro - simplificado */
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #1a1a2e;
     --text: #f1f1f1;
+    --card-bg: #293241;
   }
 }
 
-/* ==============================
-TIPOGRAFÍA Y ESTILOS GENERALES
-============================== */
-body {
-  font-family: "Open Sans", Inter, system-ui, sans-serif;
-  line-height: 1.6;
-  transition: var(--transition-default);
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Montserrat", sans-serif;
-}
-
-h1 { font-size: 2.5rem; }
-h2 { font-size: 2rem; }
-h3 { font-size: 1.75rem; }
-
-@media (max-width: 768px) {
-  h1 { font-size: 2rem; }
-  h2 { font-size: 1.75rem; }
-  h3 { font-size: 1.5rem; }
-}
-
-/* ==============================
-COMPONENTES
-============================== */
+/* Componentes específicos que no están en Bulma */
 .image {
+  position: relative;
   overflow: hidden;
-  border-radius: var(--radius);
 }
 
 .image img {
-  transition: var(--transition-transform);
-  object-fit: cover;
-  width: 100%;
+  transition: transform 0.3s ease;
 }
 
 article:hover .image img {
   transform: scale(1.05);
 }
 
-/* ==============================
-NAVBAR
-============================== */
-.navbar {
-  box-shadow: var(--shadow-md);
-  transition: var(--transition-default);
+/* Navbar personalizado - solo estilos específicos */
+.navbar-item.has-dropdown .navbar-dropdown {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
 }
 
-/* ==============================
-BOTONES
-============================== */
-.button {
-  transition: var(--transition-transform), var(--transition-shadow);
-  font-weight: 500;
+.navbar-item.has-dropdown:hover .navbar-dropdown {
+  max-height: 300px;
+  opacity: 1;
 }
 
-.button:hover {
-  transform: translateY(-1px);
-  box-shadow: var(--shadow-md);
-}
-
-/* ==============================
-SCROLLBAR PERSONALIZADO
-============================== */
-html {
-  scrollbar-color: var(--color-primary) transparent;
-  scrollbar-width: thin;
-}
-
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-thumb {
+/* Scroll to top - funcionalidad no incluida en Bulma */
+.scroll-to-top-btn {
+  position: fixed;
+  bottom: 3.5rem;
+  right: 1rem;
   background-color: var(--color-primary);
-  border-radius: var(--radius);
+  color: white;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
   transition: var(--transition-default);
+  box-shadow: var(--shadow-md);
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background-color: var(--color-secondary);
+.scroll-to-top-btn:hover {
   transform: scale(1.1);
 }
 
-/* ==============================
-ANIMACIONES
-============================== */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(5px); }
-  to { opacity: 1; transform: translateY(0); }
+.scroll-to-top-btn.show {
+  opacity: 1;
 }
 
-.fade-in {
-  animation: fadeIn 0.3s ease-out forwards;
+/* Búsqueda - estilos específicos */
+mark {
+  background-color: var(--color-marks);
+  color: #222;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+/* Accesibilidad - mantener solo lo esencial */
+.menu-list a:focus-visible,
+.button:focus-visible,
+.navbar-item:focus-visible {
+  outline: 2px solid var(--color-secondary);
+  outline-offset: 2px;
 }
