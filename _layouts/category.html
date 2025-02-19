@@ -18,8 +18,7 @@ layout: default
     <div class="columns is-gapless">
       <div class="column">
         <main class="mt-5">
-          {% assign category_posts = site.categories[page.category] | sort: "date" | reverse %}
-          {% if category_posts.size > 0 %}
+          {% assign category_posts = site.categories[page.category] | sort: "date" | reverse %} {% if category_posts.size > 0 %}
           <div class="columns is-gapless is-multiline is-centered">
             {% for post in category_posts %}
             <div class="column is-6-tablet is-4-desktop">
@@ -35,9 +34,7 @@ layout: default
                   <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
                 </h3>
 
-                <p class="mt-2">
-                  {{ post.excerpt | strip_html | truncatewords: 25 }}
-                </p>
+                <p class="mt-2">{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
 
                 {% if post.tags %}
                 <div class="tags mt-2">
@@ -62,27 +59,24 @@ layout: default
 
         <!-- Footer con Navegación entre Categorías -->
         <div class="buttons is-centered mt-5">
-          {% assign categories = site.pages | where: "layout", "category" |
-          sort: "title" %} {% for cat in categories %} {% if cat.url == page.url
-          %} {% assign prev_index = forloop.index0 | minus: 1 %} {% assign
-          next_index = forloop.index0 | plus: 1 %} {% if prev_index >= 0 %}
+          {% assign categories = site.pages | where: "layout", "category" | sort: "title" %} {% for cat in categories %} {% if cat.url == page.url %}
+          {% assign prev_index = forloop.index0 | minus: 1 %} {% assign next_index = forloop.index0 | plus: 1 %} {% if prev_index >= 0 %}
           <a href="{{ categories[prev_index].url }}" class="button is-light is-rounded">
             <span class="icon"><i class="fas fa-arrow-left"></i></span>
-            <span>Anterior Categoría </span>
+            <span>Anterior</span>
           </a>
           {% endif %}
           <a href="{{ '/' | relative_url }}" class="button is-link is-rounded">
             <span class="icon"><i class="fas fa-home"></i></span>
             <span>Inicio</span>
           </a>
-          {% if next_index < categories.size %} <a href="{{ categories[next_index].url }}"
-            class="button is-light is-rounded">
-            <span>Siguiente Categoría </span>
+          {% if next_index < categories.size %}
+          <a href="{{ categories[next_index].url }}" class="button is-light is-rounded">
+            <span>Siguiente</span>
             <span class="icon"><i class="fas fa-arrow-right"></i></span>
-            </a>
-            {% endif %} {% endif %} {% endfor %}
+          </a>
+          {% endif %} {% endif %} {% endfor %}
         </div>
-
       </div>
     </div>
   </div>

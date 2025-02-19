@@ -1,54 +1,64 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: 'es' }}" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="robots" content="index, follow" />
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#00d1b2" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#181825" media="(prefers-color-scheme: dark)" />
+    <meta name="color-scheme" content="light dark" />
+    {% seo %}
+    <!-- Icono -->
+    <link rel="icon" href="{{ '/assets/img/favicon.ico' | relative_url }}" sizes="any" />
+    <!-- Preconexión (con CDN utilizados) -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous" />
+    <!-- Bulma -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="{{ '/assets/main.css?v=2.0.0' | relative_url }}" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="robots" content="index, follow" />
-  <!-- Theme Color -->
-  <meta name="theme-color" content="#00d1b2" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#181825" media="(prefers-color-scheme: dark)">
-  <meta name="color-scheme" content="light dark" />
-  {% seo %}
-  <!-- Icono -->
-  <link rel="icon" href="{{ '/assets/img/favicon.ico' | relative_url }}" sizes="any" />
-  <!-- Preconexión (con CDN utilizados) -->
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous" />
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="anonymous">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Bulma -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css" />
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400&display=swap"
-    rel="stylesheet">
-  <!-- Estilos personalizados -->
-  <link rel="stylesheet" href="{{ '/assets/main.css?v=2.0.0' | relative_url }}" />
-</head>
-
-<body class="has-navbar-fixed-top">
-  {% include header.html %}
-  <div class="container">
-    <div class="columns is-gapless">
-      <main class="column is-full-touch is-three-quarters-desktop">
-        {{ content }}
-      </main>
-      {% if page.layout != "no-sidebar" %}
-      <section class="column is-hidden-touch is-one-quarter-desktop">
-        {% include aside.html %}
-      </section>
-      {% endif %}
+  <body class="has-navbar-fixed-top">
+    {% include header.html %}
+    <div class="container">
+      <div class="columns is-gapless">
+        <main class="column is-full-touch is-three-quarters-desktop">{{ content }}</main>
+        {% if page.layout != "no-sidebar" %}
+        <section class="column is-hidden-touch is-one-quarter-desktop">{% include aside.html %}</section>
+        {% endif %}
+      </div>
     </div>
-  </div>
-  {% include footer.html %}
-  <button class="scroll-to-top-btn" id="scrollToTopBtn" title="Subir" aria-label="Subir al inicio"
-    onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
-    <i class="fas fa-arrow-up" aria-hidden="true"></i>
-  </button>
-  <!-- Scripts -->
-  <script src="{{ '/assets/js/script.js?v=2.0.0' | relative_url }}" defer></script>
-</body>
-
+    {% include footer.html %}
+    <button class="scroll-to-top-btn" id="scrollToTopBtn" title="Subir" aria-label="Subir al inicio">
+      <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+    <!-- Scripts -->
+    <script src="{{ '/assets/js/script.js?v=2.0.0' | relative_url }}" defer></script>
+  </body>
 </html>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const images = document.querySelectorAll(".image img");
+
+    images.forEach((img) => {
+      img.addEventListener("load", function () {
+        this.parentElement.classList.add("is-loaded");
+      });
+
+      img.addEventListener("error", function () {
+        this.classList.add("has-error");
+        this.src = "/assets/images/placeholder.jpg"; // Asegúrate de tener una imagen placeholder
+      });
+
+      // Si la imagen ya está cargada del caché
+      if (img.complete) {
+        img.parentElement.classList.add("is-loaded");
+      }
+    });
+  });
+</script>

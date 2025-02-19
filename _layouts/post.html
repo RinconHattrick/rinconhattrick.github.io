@@ -7,9 +7,7 @@ layout: default
     <div class="container">
       <h1 class="title is-2">{{ page.title }}</h1>
       <p class="has-text-grey">
-        <time datetime="{{ page.date | date_to_xmlschema }}">
-          Publicado el {{ page.date | date: "%d/%m/%Y" }}
-        </time>
+        <time datetime="{{ page.date | date_to_xmlschema }}"> Publicado el {{ page.date | date: "%d/%m/%Y" }} </time>
         {% if page.author %}
         <span class="mx-2">por</span>
         <strong>{{ page.author }}</strong>
@@ -25,7 +23,7 @@ layout: default
     {% if page.image %}
     <div class="columns is-gapless is-centered">
       <div class="column is-10">
-        <figure class="image is-16by9">
+        <figure class="image is-16by9 featured-image">
           <img src="{{ page.image | relative_url }}" alt="Imagen del artículo" loading="lazy" />
         </figure>
       </div>
@@ -54,7 +52,7 @@ layout: default
   {% if page.previous.url %}
   <a href="{{ page.previous.url | relative_url }}" class="button is-light">
     <span class="icon"><i class="fas fa-arrow-left"></i></span>
-    <span>Artículo Anterior</span>
+    <span>Anterior</span>
   </a>
   {% endif %}
 
@@ -65,7 +63,7 @@ layout: default
 
   {% if page.next.url %}
   <a href="{{ page.next.url | relative_url }}" class="button is-light">
-    <span>Artículo Siguiente</span>
+    <span>Siguiente</span>
     <span class="icon"><i class="fas fa-arrow-right"></i></span>
   </a>
   {% endif %}
@@ -75,11 +73,8 @@ layout: default
 <section class="section mt-6">
   <h2 class="title is-4">Artículos Relacionados</h2>
   <div class="columns is-gapless is-multiline is-centered">
-    {% assign category = page.categories | first %}
-    {% if category %}
-    {% assign related_posts = site.categories[category] | where_exp: "post", "post.url != page.url" | reverse | limit: 4
-    %}
-    {% for post in related_posts %}
+    {% assign category = page.categories | first %} {% if category %} {% assign related_posts = site.categories[category] | where_exp: "post",
+    "post.url != page.url" | reverse | limit: 4 %} {% for post in related_posts %}
     <div class="column is-6-tablet is-3-desktop">
       <div class="card">
         <div class="card-content">
@@ -91,8 +86,7 @@ layout: default
         </div>
       </div>
     </div>
-    {% endfor %}
-    {% else %}
+    {% endfor %} {% else %}
     <p class="has-text-grey">No hay artículos relacionados.</p>
     {% endif %}
   </div>

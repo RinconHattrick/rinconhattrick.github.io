@@ -9,10 +9,8 @@ permalink: /acerca-de/
     <!-- Hero Header -->
     <section class="hero main-header">
       <div class="hero-body has-text-centered">
-        <h2 class="title is-2">Acerca de El Rincón de Hattrick</h2>
-        <p class="subtitle is-4">
-          Tu guía definitiva para el éxito en Hattrick
-        </p>
+        <h1 class="title is-2">Acerca de El Rincón de Hattrick</h1>
+        <p class="subtitle is-4">Tu guía definitiva para el éxito en Hattrick</p>
       </div>
     </section>
 
@@ -20,21 +18,19 @@ permalink: /acerca-de/
     <section class="section">
       <div class="container">
         <div class="box has-text-centered">
-          <figure class="image is-64x64 is-inline-block pb-6">
-            <img src="/assets/img/elPatronHT.jpeg" alt="Perfil en Hattrick" class="is-rounded" />
+          <figure class="image is-1by1 is-inline-block pb-3">
+            <img src="/assets/img/elPatronHT.jpeg" alt="Perfil en Hattrick" />
           </figure>
           <h2 class="title is-4 pt-6">Sobre el Autor</h2>
           <p class="is-size-5">
-            ¡Hola! Soy <strong>elPatronHT</strong>, un apasionado de Hattrick y la gestión de equipos de fútbol.
-            A lo largo de los años, he adquirido experiencia en la planificación de juveniles, tácticas de juego y
-            estrategias de selección nacional.
+            ¡Hola! Soy <strong>elPatronHT</strong>, un apasionado de Hattrick y la gestión de equipos de fútbol. A lo largo de los años, he adquirido
+            experiencia en la planificación de juveniles, tácticas de juego y estrategias de selección nacional.
           </p>
           <p class="mt-3">
             Puedes conocer más sobre mi equipo en Hattrick aquí:
-            <a href="https://hattrick.org/goto.ashx?path=/Club/?TeamID=538167" target="_blank" rel="noopener noreferrer"
-              class="has-text-link">
-              Mi equipo en Hattrick
-            </a>.
+            <a href="https://hattrick.org/goto.ashx?path=/Club/?TeamID=538167" target="_blank" rel="noopener noreferrer" class="has-text-link">
+              Mi equipo en Hattrick </a
+            >.
           </p>
         </div>
       </div>
@@ -47,48 +43,40 @@ permalink: /acerca-de/
           <!-- Introducción -->
           <section class="box mb-6">
             <p>
-              <strong>El Rincón de Hattrick</strong> es un espacio dedicado a todos los apasionados del juego en línea
-              <em>Hattrick</em>.
-              Nuestro objetivo es proporcionar estrategias prácticas, consejos útiles y recursos especializados
-              para ayudarte a alcanzar el éxito en la gestión de juveniles y selecciones nacionales.
+              <strong>El Rincón de Hattrick</strong> es un espacio dedicado a todos los apasionados del juego en línea <em>Hattrick</em>. Nuestro
+              objetivo es proporcionar estrategias prácticas, consejos útiles y recursos especializados para ayudarte a alcanzar el éxito en la
+              gestión de juveniles y selecciones nacionales.
             </p>
             <p>
-              Aquí encontrarás análisis detallados, guías avanzadas y tácticas innovadoras para optimizar
-              tus decisiones como mánager y destacar en el competitivo universo de <em>Hattrick</em>.
+              Aquí encontrarás análisis detallados, guías avanzadas y tácticas innovadoras para optimizar tus decisiones como mánager y destacar en el
+              competitivo universo de <em>Hattrick</em>.
             </p>
           </section>
 
           <!-- Áreas de Especialización -->
           <section class="mb-6" role="complementary">
-            <h2 class="title is-3 has-text-centered mb-5">
-              Áreas de Especialización
-            </h2>
+            <h2 class="title is-3 has-text-centered mb-5">Áreas de Especialización</h2>
 
             <div class="columns is-multiline is-vcentered is-centered">
-              {% for category in site.categories %}
-              {% assign category_name = category[0] %}
-              {% assign category_page = site.pages | where: "category", category_name | first %}
-              {% if category_page %}
+              {% for category in site.categories %} {% assign category_name = category[0] %} {% assign category_page = site.pages | where: "category",
+              category_name | first %} {% if category_page %}
               <div class="column is-12-tablet is-4-desktop">
                 <div class="card has-text-centered">
                   <div class="card-content">
                     <div class="has-text-centered mb-4">
                       <span class="icon">
-                        <i class="fas {{ category_page.icon | default: 'fa-folder' }} fa-2x"
-                          aria-label="{{ category_page.title | default: category_name }}"></i>
+                        <i
+                          class="fas {{ category_page.icon | default: 'fa-folder' }} fa-2x"
+                          aria-label="{{ category_page.title | default: category_name }}"
+                        ></i>
                       </span>
                     </div>
-                    <h2 class="title is-4 has-text-centered mb-4">
-                      {{ category_page.title | default: category_name }}
-                    </h2>
-                    <p>
-                      {{ category_page.description | default: "Descripción no disponible." }}
-                    </p>
+                    <h2 class="title is-4 has-text-centered mb-4">{{ category_page.title | default: category_name }}</h2>
+                    <p>{{ category_page.description | default: "Descripción no disponible." }}</p>
                   </div>
                 </div>
               </div>
-              {% endif %}
-              {% endfor %}
+              {% endif %} {% endfor %}
             </div>
           </section>
 
