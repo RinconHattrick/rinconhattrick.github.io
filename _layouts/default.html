@@ -4,22 +4,78 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="robots" content="index, follow" />
+
     <!-- Theme Color -->
     <meta name="theme-color" content="#00d1b2" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#181825" media="(prefers-color-scheme: dark)" />
     <meta name="color-scheme" content="light dark" />
+
     {% seo %}
+
     <!-- Icono -->
     <link rel="icon" href="{{ '/assets/img/favicon.ico' | relative_url }}" sizes="any" />
-    <!-- Preconexión (con CDN utilizados) -->
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous" />
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous" />
-    <!-- Bulma -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css" />
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <!-- Estilos personalizados -->
-    <link rel="stylesheet" href="{{ '/assets/main.css?v=2.0.0' | relative_url }}" />
+
+    <!-- Precargas críticas -->
+    <link rel="preload" href="{{ '/assets/main.css' | relative_url }}" as="style" />
+    <link rel="preload" href="{{ '/assets/js/script.js' | relative_url }}" as="script" />
+
+    <!-- Preconexión optimizada -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+
+    <!-- CSS Critical -->
+    <style>
+      /* Aquí va el CSS crítico para el contenido above the fold */
+      .navbar-fixed-top {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 30;
+      }
+      .container {
+        max-width: 1344px;
+        margin: 0 auto;
+        padding: 1rem;
+      }
+      .columns {
+        display: flex;
+        margin-left: -0.75rem;
+        margin-right: -0.75rem;
+        margin-top: -0.75rem;
+      }
+      .column {
+        padding: 0.75rem;
+      }
+    </style>
+
+    <!-- CSS No crítico con carga diferida -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css" media="print" onload="this.media='all'" />
+
+    <!-- Font Awesome optimizado (solo los iconos necesarios) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/solid.min.css"
+      media="print"
+      onload="this.media='all'"
+    />
+
+    <!-- Estilos personalizados con versionado -->
+    <link rel="stylesheet" href="{{ '/assets/main.css?v=2.0.0' | relative_url }}" media="print" onload="this.media='all'" />
+
+    <!-- Fallback para navegadores sin JavaScript -->
+    <noscript>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/solid.min.css" />
+      <link rel="stylesheet" href="{{ '/assets/main.css?v=2.0.0' | relative_url }}" />
+    </noscript>
   </head>
 
   <body class="has-navbar-fixed-top">
@@ -33,32 +89,52 @@
       </div>
     </div>
     {% include footer.html %}
-    <button class="scroll-to-top-btn" id="scrollToTopBtn" title="Subir" aria-label="Subir al inicio">
+
+    <!-- Botón de scroll optimizado -->
+    <button class="scroll-to-top-btn" id="scrollToTopBtn" title="Subir" aria-label="Subir al inicio" hidden>
       <i class="fas fa-arrow-up" aria-hidden="true"></i>
     </button>
-    <!-- Scripts -->
+
+    <!-- Scripts optimizados -->
+    <script>
+      // Inline del script crítico para carga de imágenes
+      document.addEventListener("DOMContentLoaded", function () {
+        const images = document.querySelectorAll(".image img");
+        const loadImage = (img) => {
+          if (img.complete) {
+            img.parentElement?.classList.add("is-loaded");
+          }
+        };
+
+        const observerCallback = (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              loadImage(entry.target);
+              observer.unobserve(entry.target);
+            }
+          });
+        };
+
+        const imageObserver = new IntersectionObserver(observerCallback, {
+          rootMargin: "50px 0px",
+        });
+
+        images.forEach((img) => {
+          imageObserver.observe(img);
+
+          img.addEventListener("load", function () {
+            this.parentElement?.classList.add("is-loaded");
+          });
+
+          img.addEventListener("error", function () {
+            this.classList.add("has-error");
+            this.src = "/assets/img/RinconHattrick.jpg";
+          });
+        });
+      });
+    </script>
+
+    <!-- Script principal diferido -->
     <script src="{{ '/assets/js/script.js?v=2.0.0' | relative_url }}" defer></script>
   </body>
 </html>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const images = document.querySelectorAll(".image img");
-
-    images.forEach((img) => {
-      img.addEventListener("load", function () {
-        this.parentElement.classList.add("is-loaded");
-      });
-
-      img.addEventListener("error", function () {
-        this.classList.add("has-error");
-        this.src = "/assets/images/placeholder.jpg"; // Asegúrate de tener una imagen placeholder
-      });
-
-      // Si la imagen ya está cargada del caché
-      if (img.complete) {
-        img.parentElement.classList.add("is-loaded");
-      }
-    });
-  });
-</script>
