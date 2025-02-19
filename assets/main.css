@@ -1,217 +1,61 @@
 /* ==============================
-VARIABLES Y TEMAS DE COLORES
+VARIABLES PERSONALIZADAS
 ============================== */
 :root {
-  /* Colores - usando la paleta Azul/Verde (Profesional) */
-  --color-primary: #3273dc; /* Azul */
-  --color-secondary: #23d160; /* Verde */
-  --color-background-light: #ffffff;
-  --color-text-light: #363636;
-  --color-card-light: #f5f5f5;
-  --color-background-dark: #1a1a2e;
-  --color-text-dark: #f1f1f1;
-  --color-card-dark: #293241;
-  --color-marks: #ffd166; /* Amarillo */
-
-  /* Gradientes */
-  --gradient-primary: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
-
-  /* Espaciado y bordes */
   --radius: 8px;
-
-  /* Transiciones organizadas por propósito */
   --transition-default: all 0.3s ease-in-out;
   --transition-transform: transform 0.3s ease;
-  --transition-opacity: opacity 0.3s ease;
-  --transition-colors: background-color 0.3s ease, color 0.3s ease;
-  --transition-shadow: box-shadow 0.3s ease;
-  --transition-size: max-height 0.3s ease, width 0.3s ease;
-
-  /* Sombras */
   --shadow-md: 0 2px 5px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 4px 10px rgba(0, 0, 0, 0.2);
-
-  /* Tema global */
-  --background: var(--color-background-light);
-  --text: var(--color-text-light);
-  --card-background: var(--color-card-light);
 }
 
 /* Tema oscuro */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: var(--color-background-dark);
-    --text: var(--color-text-dark);
-    --card-background: var(--color-card-dark);
+    --background: #1a1a2e;
+    --text: #f1f1f1;
   }
 }
 
-/* =================================
-   RESET Y CONFIGURACIÓN GLOBAL
-================================= */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
+/* ==============================
+TIPOGRAFÍA Y ESTILOS GENERALES
+============================== */
 body {
-  font-family: "Open Sans", Inter, system-ui, -apple-system, sans-serif;
+  font-family: "Open Sans", Inter, system-ui, sans-serif;
   line-height: 1.6;
-  background-color: var(--background);
-  color: var(--text);
-  transition: var(--transition-colors);
+  transition: var(--transition-default);
 }
 
-/* =================================
-   TIPOGRAFÍA
-================================= */
-/* Configuración base para todos los encabezados */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Montserrat", system-ui, -apple-system, sans-serif;
-  line-height: 1.3;
-  margin-top: 2em;
-  margin-bottom: 0.75em;
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", sans-serif;
 }
 
-/* Colores de encabezados */
-h1 {
-  color: #1a56db;
-  font-weight: 700;
-  font-size: 2.5rem;
-  line-height: 1.2;
-}
-h2 {
-  color: #3273dc;
-  font-weight: 600;
-  font-size: 2rem;
-  line-height: 1.25;
-}
-h3 {
-  color: #0d6d4f;
-  font-weight: 600;
-  font-size: 1.75rem;
-  line-height: 1.3;
-}
-h4 {
-  font-weight: 500;
-  font-size: 1.5rem;
-  line-height: 1.35;
-}
-h5 {
-  font-weight: 500;
-  font-size: 1.25rem;
-  line-height: 1.4;
-}
-h6 {
-  font-weight: 500;
-  font-size: 1rem;
-  line-height: 1.4;
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.75rem; }
+
+@media (max-width: 768px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.75rem; }
+  h3 { font-size: 1.5rem; }
 }
 
-/* Reset de margen para primeros encabezados */
-h1:first-child,
-h2:first-child,
-h3:first-child {
-  margin-top: 0;
-}
-
-/* =================================
-   COMPONENTES
-================================= */
-/* Iconos */
-.icon {
-  display: inline-flex;
-  align-items: center;
-  line-height: 1;
-  vertical-align: middle;
-}
-
-/* Base de imágenes */
+/* ==============================
+COMPONENTES
+============================== */
 .image {
-  position: relative;
-  display: block;
   overflow: hidden;
-  background-color: var(--color-card-light);
-  border-radius: var(--radius) var(--radius) 0 0;
+  border-radius: var(--radius);
 }
 
 .image img {
   transition: var(--transition-transform);
   object-fit: cover;
   width: 100%;
-  height: 100%;
 }
 
-/* Estados de imagen */
 article:hover .image img {
   transform: scale(1.05);
-}
-
-.image img.has-error {
-  object-fit: contain;
-  background-color: var(--color-card-light);
-  padding: 1rem;
-}
-
-.image::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.05);
-  transition: var(--transition-opacity);
-  opacity: 1;
-  z-index: 1;
-}
-
-.image.is-loaded::before {
-  opacity: 0;
-}
-
-/* Imagen destacada */
-.featured-image {
-  box-shadow: var(--shadow-lg);
-  margin-bottom: 2rem;
-}
-
-.featured-image img {
-  object-fit: cover;
-}
-
-/* =================================
-   MEDIA QUERIES
-================================= */
-@media (max-width: 768px) {
-  h1 {
-    font-size: 2rem;
-  }
-  h2 {
-    font-size: 1.75rem;
-  }
-  h3 {
-    font-size: 1.5rem;
-  }
-  h4 {
-    font-size: 1.25rem;
-  }
-  h5,
-  h6 {
-    font-size: 1rem;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .image {
-    background-color: var(--color-background-dark);
-  }
-  .image img.has-error {
-    background-color: var(--color-background-dark);
-  }
 }
 
 /* ==============================
@@ -219,93 +63,20 @@ NAVBAR
 ============================== */
 .navbar {
   box-shadow: var(--shadow-md);
-  background-color: var(--background);
-  transition: var(--transition-colors), var(--transition-shadow);
-}
-
-.navbar-item,
-.navbar-link {
-  color: var(--text);
-  text-decoration: none;
-  transition: var(--transition-colors);
-}
-
-.navbar-item.is-active {
-  background-color: var(--color-primary);
-  color: var(--color-background-light);
-}
-
-/* ==============================
-NAVBAR DROPDOWN
-============================== */
-.navbar-dropdown {
-  max-height: 0;
-  opacity: 0;
-  overflow: hidden;
-  transition: var(--transition-size), var(--transition-opacity);
-  z-index: 10;
-  padding: 0;
-  margin: 0;
-  display: block;
-}
-
-.navbar-item.has-dropdown.is-hoverable:hover .navbar-dropdown,
-.navbar-item.has-dropdown.is-active .navbar-dropdown {
-  max-height: 300px;
-  opacity: 1;
-}
-
-.navbar-item {
-  margin: 0;
-}
-
-/* ==============================
-RESPONSIVE NAVBAR
-============================== */
-@media (max-width: 1024px) {
-  .sticky-sidebar {
-    position: static;
-    max-width: 100%;
-  }
-
-  .navbar-item.has-dropdown.is-hoverable:hover .navbar-dropdown,
-  .navbar-item.has-dropdown.is-active .navbar-dropdown {
-    max-height: 300px;
-    opacity: 1;
-  }
-}
-
-/* ==============================
-TARJETAS
-============================== */
-.card-header {
-  background: var(--gradient-primary);
-  color: white;
-  padding: 1rem;
-  border-radius: var(--radius) var(--radius) 0 0;
-}
-
-.card {
-  transition: var(--transition-shadow);
-}
-
-.card:hover {
-  box-shadow: var(--shadow-lg);
+  transition: var(--transition-default);
 }
 
 /* ==============================
 BOTONES
 ============================== */
 .button {
-  transition: var(--transition-transform), var(--transition-shadow), var(--transition-colors);
+  transition: var(--transition-transform), var(--transition-shadow);
   font-weight: 500;
 }
 
-.button:hover,
-.button:active {
+.button:hover {
   transform: translateY(-1px);
   box-shadow: var(--shadow-md);
-  will-change: transform;
 }
 
 /* ==============================
@@ -323,8 +94,7 @@ html {
 ::-webkit-scrollbar-thumb {
   background-color: var(--color-primary);
   border-radius: var(--radius);
-  border: 2px solid transparent;
-  transition: var(--transition-colors), var(--transition-transform);
+  transition: var(--transition-default);
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -333,308 +103,13 @@ html {
 }
 
 /* ==============================
-FOOTER
-============================== */
-.footer {
-  background-color: var(--background);
-  color: var(--text);
-  padding: 1.5rem 0;
-  transition: var(--transition-colors);
-}
-
-/* ==============================
 ANIMACIONES
 ============================== */
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(5px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .fade-in {
   animation: fadeIn 0.3s ease-out forwards;
-  will-change: opacity, transform;
-}
-
-.box {
-  animation: fadeIn 0.3s ease-out forwards;
-  will-change: opacity, transform;
-}
-
-/* ==============================
-RESPONSIVE
-============================== */
-@media (min-width: 1024px) {
-  main,
-  .sticky-sidebar {
-    margin-top: 3.5rem;
-  }
-}
-
-@media (min-width: 769px) and (max-width: 1023px) {
-  main,
-  .sticky-sidebar {
-    margin-top: 2rem;
-  }
-
-  .sticky-sidebar {
-    max-width: 230px;
-  }
-}
-
-@media (max-width: 768px) {
-  main,
-  .sticky-sidebar {
-    margin-top: 0;
-  }
-
-  .scroll-to-top-btn {
-    right: 20px;
-    bottom: 80px;
-  }
-
-  .is-hidden-tablet {
-    display: none;
-  }
-}
-
-/* ==============================
-BUSCADOR
-============================== */
-.search-results-list {
-  list-style: none;
-  padding: 0;
-}
-
-.search-results-list li {
-  border-bottom: 1px solid var(--text);
-  padding-bottom: 10px;
-  margin-bottom: 10px;
-  transition: var(--transition-colors);
-}
-
-.search-results-list li:last-child {
-  margin-bottom: 0;
-  border-bottom: none;
-}
-
-#search-feedback {
-  display: none;
-  transition: var(--transition-default);
-}
-
-#search-feedback:not(.is-hidden) {
-  display: block;
-}
-
-mark {
-  background-color: var(--color-marks);
-  color: #222;
-  padding: 2px 4px;
-  border-radius: 3px;
-  transition: var(--transition-colors);
-}
-
-.notification.is-warning {
-  background-color: rgba(255, 221, 87, 0.2);
-  border: 1px solid var(--color-marks);
-  border-radius: var(--radius);
-  padding: 10px;
-  transition: var(--transition-colors);
-}
-
-.notification.is-warning .icon {
-  color: var(--color-marks);
-  font-size: 1.2rem;
-  vertical-align: middle;
-}
-
-/* ==============================
-ACCESIBILIDAD
-============================== */
-.menu-list a:focus-visible,
-.button:focus-visible,
-.navbar-item:focus-visible {
-  outline: 2px solid var(--color-secondary);
-  outline-offset: 2px;
-}
-
-/* ==============================
-SIDEBAR
-============================== */
-.sticky-sidebar {
-  position: sticky;
-  top: 1rem;
-  max-width: 300px;
-  min-height: 250px;
-  max-height: calc(100vh - 6rem);
-  overflow-y: auto;
-  background-color: var(--card-background);
-  box-shadow: var(--shadow-md);
-  border-radius: var(--radius);
-  transition: var(--transition-shadow), var(--transition-transform), var(--transition-colors);
-}
-
-.sticky-sidebar:hover {
-  box-shadow: var(--shadow-lg);
-}
-
-.menu-list a {
-  display: block;
-  padding: 0.3rem;
-  margin-bottom: 0.3rem;
-  border-radius: var(--radius);
-  transition: var(--transition-transform), var(--transition-colors), var(--transition-shadow);
-}
-
-.menu-list a:hover,
-.menu-list a:focus {
-  background-color: var(--color-primary);
-  transform: translateY(-2px);
-  color: var(--color-background-light);
-  will-change: transform;
-}
-
-/* ==============================
-BOTÓN "SCROLL TO TOP"
-============================== */
-.scroll-to-top-btn {
-  position: fixed;
-  bottom: 3.5rem;
-  right: 1rem;
-  background-color: var(--color-primary);
-  color: var(--color-background-light);
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  opacity: 0;
-  will-change: transform, opacity;
-  transition: var(--transition-opacity), var(--transition-transform), var(--transition-colors);
-  box-shadow: var(--shadow-md);
-}
-
-.scroll-to-top-btn:hover {
-  transform: scale(1.1);
-}
-
-.scroll-to-top-btn.show {
-  opacity: 1;
-}
-
-/* ==============================
-REGLAS DE IMPRESIÓN
-============================== */
-@media print {
-  /* Resetear los colores para ahorrar tinta */
-  body {
-    background-color: white !important;
-    color: black !important;
-    font-size: 12pt;
-  }
-
-  /* Ocultar elementos irrelevantes para impresión */
-  .navbar,
-  .sticky-sidebar,
-  .footer,
-  .scroll-to-top-btn,
-  .search-form,
-  .no-print,
-  button:not(.print-only) {
-    display: none !important;
-  }
-
-  /* Asegurar que los contenedores ocupen todo el ancho */
-  main,
-  .container,
-  .section,
-  .content {
-    width: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-
-  /* Mejorar la visualización de enlaces */
-  a {
-    color: #000 !important;
-    text-decoration: underline;
-  }
-
-  /* Mostrar URL de enlaces externos después del texto */
-  a[href^="http"]:after {
-    content: " (" attr(href) ")";
-    font-size: 90%;
-    font-style: italic;
-  }
-
-  /* No mostrar URL para enlaces internos */
-  a[href^="#"]:after,
-  a[href^="javascript:"]:after {
-    content: "";
-  }
-
-  /* Evitar saltos de página dentro de elementos importantes */
-  h1,
-  h2,
-  h3,
-  h4,
-  img,
-  table,
-  figure,
-  .card,
-  .box {
-    page-break-inside: avoid;
-  }
-
-  /* Forzar salto de página después de ciertos elementos */
-  h1,
-  h2 {
-    page-break-after: avoid;
-    margin-top: 1cm;
-  }
-
-  /* Asegurar que las imágenes no excedan el ancho de la página */
-  img {
-    max-width: 100% !important;
-    height: auto !important;
-  }
-
-  /* Garantizar bordes visibles para tablas */
-  table {
-    border-collapse: collapse;
-  }
-
-  table,
-  th,
-  td {
-    border: 1px solid #ddd;
-  }
-
-  /* Ajustes específicos para tarjetas */
-  .card {
-    border: 1px solid #ddd !important;
-    box-shadow: none !important;
-  }
-
-  .card-header {
-    background: none !important;
-    color: black !important;
-    border-bottom: 1px solid #ddd !important;
-  }
-
-  /* Eliminar efectos visuales */
-  * {
-    box-shadow: none !important;
-    text-shadow: none !important;
-    animation: none !important;
-    transition: none !important;
-  }
 }
