@@ -1,88 +1,258 @@
-/* Variables globales - mantener solo las que se usan para personalización */
+/* Variables de colores */
 :root {
   --color-primary: #3273dc;
   --color-secondary: #23d160;
   --color-marks: #ffd166;
+
+  --color-background-light: #ffffff;
+  --color-background-dark: #1a1a2e;
+  --card-background: var(--color-background-light);
+
+  --gradient-primary: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
   --radius: 8px;
+
+  /* Transiciones */
+  --transition-transform: transform 0.3s ease;
+  --transition-opacity: opacity 0.3s ease;
+  --transition-size: max-height 0.3s ease, width 0.3s ease;
+  --transition-colors: background-color 0.3s ease, color 0.3s ease;
+  --transition-shadow: box-shadow 0.3s ease;
+
+  /* Sombras */
   --shadow-md: 0 2px 5px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 4px 10px rgba(0, 0, 0, 0.2);
-  --transition-default: all 0.3s ease-in-out;
+
+  /* Tema global */
+  --background: var(--color-background-light);
+  --text: #363636;
 }
 
-/* Tema oscuro - simplificado */
+/* Tema oscuro */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #1a1a2e;
+    --background: var(--color-background-dark);
     --text: #f1f1f1;
-    --card-bg: #293241;
+    --card-background: #293241;
   }
 }
 
-/* Componentes específicos que no están en Bulma */
-.image {
-  position: relative;
-  overflow: hidden;
+/* Estilos de página */
+body {
+  background-color: var(--background);
+  color: var(--text);
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
 }
 
+/* Imagen */
 .image img {
-  transition: transform 0.3s ease;
+  object-fit: cover;
+  transition: var(--transition-transform);
+  width: 100%;
+  height: 100%;
 }
 
 article:hover .image img {
   transform: scale(1.05);
 }
 
-/* Navbar personalizado - solo estilos específicos */
-.navbar-item.has-dropdown .navbar-dropdown {
+.image img.has-error {
+  object-fit: contain;
+  background-color: var(--card-background);
+  padding: 1rem;
+}
+
+.image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.05);
+  transition: var(--transition-opacity);
+  opacity: 1;
+  z-index: 1;
+}
+
+.image.is-loaded::before {
+  opacity: 0;
+}
+
+/* Navbar */
+.navbar {
+  box-shadow: var(--shadow-md);
+}
+
+.navbar-item.is-active {
+  background-color: var(--color-primary);
+  color: var(--background);
+}
+
+.navbar-dropdown {
   max-height: 0;
   opacity: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease, opacity 0.3s ease;
+  transition: var(--transition-size), var(--transition-opacity);
 }
 
-.navbar-item.has-dropdown:hover .navbar-dropdown {
+.navbar-item.has-dropdown.is-hoverable:hover .navbar-dropdown,
+.navbar-item.has-dropdown.is-active .navbar-dropdown {
   max-height: 300px;
   opacity: 1;
 }
 
-/* Scroll to top - funcionalidad no incluida en Bulma */
-.scroll-to-top-btn {
-  position: fixed;
-  bottom: 3.5rem;
-  right: 1rem;
-  background-color: var(--color-primary);
+/* Tarjeta */
+.card-header {
+  background: var(--gradient-primary);
   color: white;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: var(--transition-default);
-  box-shadow: var(--shadow-md);
 }
 
-.scroll-to-top-btn:hover {
-  transform: scale(1.1);
+.card:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+/* Botón */
+.button {
+  transition: var(--transition-transform), var(--transition-shadow), var(--transition-colors);
+}
+
+.button:hover,
+.button:active {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+  will-change: transform;
+}
+
+/* Scrollbar */
+html {
+  scrollbar-color: var(--color-primary) transparent;
+  scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary);
+  border-radius: var(--radius);
+  border: 2px solid transparent;
+  transition: var(--transition-colors), var(--transition-transform);
+}
+
+/* Animación */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-out forwards;
+  will-change: opacity, transform;
+}
+
+/* Media Queries */
+@media (min-width: 1024px) {
+  main,
+  .sticky-sidebar {
+    margin-top: 3.5rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1023px) {
+  main,
+  .sticky-sidebar {
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  main,
+  .sticky-sidebar {
+    margin-top: 0;
+  }
+
+  .scroll-to-top-btn {
+    right: 20px;
+    bottom: 80px;
+  }
+}
+
+/* Buscador */
+.search-results-list li {
+  border-bottom: 1px solid var(--text);
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  transition: var(--transition-colors);
+}
+
+.search-results-list li:last-child {
+  margin-bottom: 0;
+  border-bottom: none;
+}
+
+#search-feedback:not(.is-hidden) {
+  display: block;
+}
+
+mark {
+  background-color: var(--color-marks);
+  color: #222;
+}
+
+.notification.is-warning {
+  background-color: rgba(255, 221, 87, 0.2);
+  border: 1px solid var(--color-marks);
+  transition: var(--transition-colors);
+}
+
+.notification.is-warning .icon {
+  color: var(--color-marks);
+  font-size: 1.2rem;
+}
+
+/* Accesibilidad */
+:focus-visible {
+  outline: 2px solid var(--color-secondary);
+  outline-offset: 2px;
+}
+
+/* Sticky Sidebar */
+.sticky-sidebar {
+  max-width: 300px;
+  min-height: 250px;
+  max-height: calc(100vh - 6rem);
+  overflow-y: auto;
+  background-color: var(--card-background);
+  box-shadow: var(--shadow-md);
+  border-radius: var(--radius);
+  transition: var(--transition-shadow), var(--transition-colors);
+}
+
+.menu-list a {
+  border-radius: var(--radius);
+  transition: var(--transition-colors);
+}
+
+.menu-list a:hover {
+  background-color: var(--color-primary);
+  color: var(--background);
+}
+
+/* Scroll to Top Button */
+.scroll-to-top-btn {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  opacity: 0;
+  background-color: var(--color-primary);
+  transition: var(--transition-opacity), var(--transition-transform);
 }
 
 .scroll-to-top-btn.show {
   opacity: 1;
-}
-
-/* Búsqueda - estilos específicos */
-mark {
-  background-color: var(--color-marks);
-  color: #222;
-  padding: 2px 4px;
-  border-radius: 3px;
-}
-
-/* Accesibilidad - mantener solo lo esencial */
-.menu-list a:focus-visible,
-.button:focus-visible,
-.navbar-item:focus-visible {
-  outline: 2px solid var(--color-secondary);
-  outline-offset: 2px;
 }

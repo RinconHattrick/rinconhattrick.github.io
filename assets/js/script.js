@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const searchInput = document.getElementById("searchInput");
   const searchButton = document.getElementById("searchButton");
 
-  /** Función para alternar clases con un estado opcional */
+  /** Alterna clases con un estado opcional */
   const toggleClass = (element, className, state) => {
     if (element) element.classList.toggle(className, state);
   };
@@ -19,12 +19,90 @@ document.addEventListener("DOMContentLoaded", () => {
     if (element) element.setAttribute("aria-expanded", state);
   };
 
-  // === Validación de Búsqueda (mínimo 3 caracteres) ===
-  if (searchInput && searchButton) {
-    searchInput.addEventListener("input", () => {
-      searchButton.disabled = searchInput.value.trim().length < 3;
-    });
+  /** Valida si la búsqueda es válida */
+  const validateSearch = () => {
+    const isValid = searchInput.value.trim().length >= 3;
+    searchButton.disabled = !isValid;
+  };
 
+  /** Muestra u oculta el botón "Scroll to Top" */
+  let isVisible = false;
+  const updateScrollButton = () => {
+    requestAnimationFrame(() => {
+      const shouldShow = window.scrollY > 200;
+      if (shouldShow !== isVisible) {
+        toggleClass(scrollToTopBtn, "show", shouldShow);
+        isVisible = shouldShow;
+      }
+    });
+  };
+
+  /** Ajusta la posición del navbar según el tamaño de pantalla */
+  const updateNavbarPosition = () => {
+    const isMobile = window.matchMedia("(max-width: 767px)").matches;
+    toggleClass(nav, "is-fixed-top", !isMobile);
+    toggleClass(nav, "is-fixed-bottom", isMobile);
+    toggleClass(body, "has-navbar-fixed-top", !isMobile);
+    toggleClass(body, "has-navbar-fixed-bottom", isMobile);
+  };
+
+  /** Cierra los menús abiertos cuando se hace clic fuera de ellos */
+  const closeMenusOnClickOutside = (event) => {
+    const { target } = event;
+
+    // Cerrar el menú de navegación
+    if (menu && !menu.contains(target) && burger && !burger.contains(target)) {
+      toggleClass(menu, "is-active", false);
+      toggleClass(burger, "is-active", false);
+      toggleAriaExpanded(burger, false);
+    }
+
+    // Cerrar el menú de categorías
+    if (categoryMenu && !categoryMenu.contains(target) && categoryToggle && !categoryToggle.contains(target)) {
+      toggleClass(categoryMenu, "is-active", false);
+      toggleAriaExpanded(categoryToggle, false);
+    }
+  };
+
+  /** Manejador del menú de navegación */
+  const toggleNavbarMenu = () => {
+    const isActive = menu.classList.toggle("is-active");
+    toggleClass(burger, "is-active", isActive);
+    toggleAriaExpanded(burger, isActive);
+  };
+
+  /** Manejador del menú de categorías en pantallas pequeñas */
+  const toggleCategoryMenu = (event) => {
+    if (window.innerWidth <= 1024) {
+      event.preventDefault();
+      const isActive = categoryMenu.classList.toggle("is-active");
+      toggleAriaExpanded(categoryToggle, isActive);
+    }
+  };
+
+  /** Scroll al top de la página */
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  /** Debounce para evitar llamadas constantes en eventos de `resize` */
+  let resizeTimeout;
+  const onResize = () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(() => {
+      if (window.innerWidth > 1024) {
+        toggleClass(menu, "is-active", false);
+        toggleClass(burger, "is-active", false);
+        toggleAriaExpanded(burger, false);
+      }
+    }, 200);
+  };
+
+  // === Agregar Listeners ===
+
+  // Validación de búsqueda
+  if (searchInput && searchButton) {
+    searchInput.addEventListener("input", validateSearch);
     searchInput.addEventListener("keydown", (event) => {
       if (event.key === "Enter" && searchInput.value.trim().length < 3) {
         event.preventDefault();
@@ -32,73 +110,18 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // === Botón "Scroll to Top" ===
+  // Botón "Scroll to Top"
   if (scrollToTopBtn) {
-    let isVisible = false;
-
-    const updateScrollButton = () => {
-      const shouldShow = window.scrollY > 200;
-      if (shouldShow !== isVisible) {
-        toggleClass(scrollToTopBtn, "show", shouldShow);
-        isVisible = shouldShow;
-      }
-    };
-
     window.addEventListener("scroll", updateScrollButton);
-    scrollToTopBtn.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+    scrollToTopBtn.addEventListener("click", scrollToTop);
   }
 
-  // === Navbar Responsivo ===
-  const mobileQuery = window.matchMedia("(max-width: 767px)");
-
-  const updateNavbarPosition = () => {
-    const isMobile = mobileQuery.matches;
-    toggleClass(nav, "is-fixed-top", !isMobile);
-    toggleClass(nav, "is-fixed-bottom", isMobile);
-    toggleClass(body, "has-navbar-fixed-top", !isMobile);
-    toggleClass(body, "has-navbar-fixed-bottom", isMobile);
-  };
-
-  mobileQuery.addEventListener("change", updateNavbarPosition);
+  // Navbar responsivo
+  window.addEventListener("resize", onResize);
   updateNavbarPosition();
 
-  // === Manejo de Menús Interactivos ===
-  document.addEventListener("click", (event) => {
-    const target = event.target;
-
-    if (burger && menu && (target === burger || burger.contains(target))) {
-      const isActive = menu.classList.toggle("is-active");
-      toggleClass(burger, "is-active", isActive);
-      toggleAriaExpanded(burger, isActive);
-      return;
-    }
-
-    if (categoryToggle && categoryMenu && (target === categoryToggle || categoryToggle.contains(target))) {
-      if (window.innerWidth <= 1024) {
-        event.preventDefault();
-        const isActive = categoryMenu.classList.toggle("is-active");
-        toggleAriaExpanded(categoryToggle, isActive);
-      }
-      return;
-    }
-
-    if (menu && !menu.contains(target) && burger && !burger.contains(target)) {
-      toggleClass(menu, "is-active", false);
-      toggleClass(burger, "is-active", false);
-      toggleAriaExpanded(burger, false);
-    }
-
-    if (categoryMenu && !categoryMenu.contains(target) && categoryToggle && !categoryToggle.contains(target)) {
-      toggleClass(categoryMenu, "is-active", false);
-      toggleAriaExpanded(categoryToggle, false);
-    }
-  });
-
-  window.addEventListener("resize", () => {
-    if (window.innerWidth > 1024) {
-      toggleClass(menu, "is-active", false);
-      toggleClass(burger, "is-active", false);
-      toggleAriaExpanded(burger, false);
-    }
-  });
+  // Menús interactivos
+  document.addEventListener("click", closeMenusOnClickOutside);
+  if (burger && menu) burger.addEventListener("click", toggleNavbarMenu);
+  if (categoryToggle && categoryMenu) categoryToggle.addEventListener("click", toggleCategoryMenu);
 });
