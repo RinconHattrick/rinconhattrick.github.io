@@ -144,6 +144,7 @@ html {
     opacity: 0;
     transform: translateY(5px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -157,6 +158,7 @@ html {
 
 /* Media Queries */
 @media (min-width: 1024px) {
+
   main,
   .sticky-sidebar {
     margin-top: 3.5rem;
@@ -164,6 +166,7 @@ html {
 }
 
 @media (min-width: 769px) and (max-width: 1023px) {
+
   main,
   .sticky-sidebar {
     margin-top: 2rem;
@@ -171,6 +174,7 @@ html {
 }
 
 @media (max-width: 768px) {
+
   main,
   .sticky-sidebar {
     margin-top: 0;
@@ -178,7 +182,7 @@ html {
 
   .scroll-to-top-btn {
     right: 20px;
-    bottom: 80px;
+    bottom: 100px;
   }
 }
 
