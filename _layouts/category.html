@@ -22,7 +22,7 @@ layout: default
           <div class="columns is-gapless is-multiline is-centered">
             {% for post in category_posts %}
             <div class="column is-6-tablet is-4-desktop">
-              <article class="box">
+              <article class="box has-shadow">
                 <time datetime="{{ post.date | date: '%Y-%m-%d' }}" class="is-size-7 has-text-grey">
                   <span class="icon-text">
                     <span class="icon"><i class="fas fa-calendar-day"></i></span>
@@ -39,7 +39,7 @@ layout: default
                 {% if post.tags %}
                 <div class="tags mt-2">
                   {% for tag in post.tags %}
-                  <span class="tag is-light">{{ tag }}</span>
+                  <span class="tag is-light is-rounded">{{ tag }}</span>
                   {% endfor %}
                 </div>
                 {% endif %}
@@ -59,8 +59,8 @@ layout: default
 
         <!-- Footer con Navegación entre Categorías -->
         <div class="buttons is-centered mt-5">
-          {% assign categories = site.pages | where: "layout", "category" | sort: "title" %} {% for cat in categories %} {% if cat.url == page.url %}
-          {% assign prev_index = forloop.index0 | minus: 1 %} {% assign next_index = forloop.index0 | plus: 1 %} {% if prev_index >= 0 %}
+          {% assign categories = site.pages | where: "layout", "category" | sort: "title" %} {% for cat in categories %} {% if cat.url == page.url %} {% assign
+          prev_index = forloop.index0 | minus: 1 %} {% assign next_index = forloop.index0 | plus: 1 %} {% if prev_index >= 0 %}
           <a href="{{ categories[prev_index].url }}" class="button is-light is-rounded">
             <span class="icon"><i class="fas fa-arrow-left"></i></span>
             <span>Anterior</span>

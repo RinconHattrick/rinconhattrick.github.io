@@ -6,6 +6,7 @@
 
   --color-background-light: #ffffff;
   --color-background-dark: #1a1a2e;
+
   --card-background: var(--color-background-light);
 
   --gradient-primary: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
@@ -100,12 +101,13 @@ article:hover .image img {
 }
 
 /* Tarjeta */
+.hero,
 .card-header {
   background: var(--gradient-primary);
-  color: white;
+  color: var(--text);
 }
 
-.card:hover {
+.hero .card-header {
   box-shadow: var(--shadow-lg);
 }
 
@@ -158,7 +160,6 @@ html {
 
 /* Media Queries */
 @media (min-width: 1024px) {
-
   main,
   .sticky-sidebar {
     margin-top: 3.5rem;
@@ -166,7 +167,6 @@ html {
 }
 
 @media (min-width: 769px) and (max-width: 1023px) {
-
   main,
   .sticky-sidebar {
     margin-top: 2rem;
@@ -174,7 +174,6 @@ html {
 }
 
 @media (max-width: 768px) {
-
   main,
   .sticky-sidebar {
     margin-top: 0;
@@ -197,6 +196,9 @@ html {
 .search-results-list li:last-child {
   margin-bottom: 0;
   border-bottom: none;
+}
+.search-results-list li:hover {
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
 #search-feedback:not(.is-hidden) {
@@ -253,7 +255,7 @@ mark {
   bottom: 1rem;
   right: 1rem;
   opacity: 0;
-  background-color: var(--color-primary);
+  background-color: var(--color-secondary);
   transition: var(--transition-opacity), var(--transition-transform);
 }
 

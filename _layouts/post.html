@@ -50,19 +50,19 @@ layout: default
 <!-- Navegación entre artículos -->
 <div class="buttons is-centered mt-5">
   {% if page.previous.url %}
-  <a href="{{ page.previous.url | relative_url }}" class="button is-light">
+  <a href="{{ page.previous.url | relative_url }}" class="button is-light is-rounded">
     <span class="icon"><i class="fas fa-arrow-left"></i></span>
     <span>Anterior</span>
   </a>
   {% endif %}
 
-  <a href="{{ '/' | relative_url }}" class="button is-link">
+  <a href="{{ '/' | relative_url }}" class="button is-link is-rounded">
     <span class="icon"><i class="fas fa-home"></i></span>
     <span>Inicio</span>
   </a>
 
   {% if page.next.url %}
-  <a href="{{ page.next.url | relative_url }}" class="button is-light">
+  <a href="{{ page.next.url | relative_url }}" class="button is-light is-rounded">
     <span>Siguiente</span>
     <span class="icon"><i class="fas fa-arrow-right"></i></span>
   </a>
@@ -73,10 +73,10 @@ layout: default
 <section class="section mt-6">
   <h2 class="title is-4">Artículos Relacionados</h2>
   <div class="columns is-gapless is-multiline is-centered">
-    {% assign category = page.categories | first %} {% if category %} {% assign related_posts = site.categories[category] | where_exp: "post",
-    "post.url != page.url" | reverse | limit: 4 %} {% for post in related_posts %}
+    {% assign category = page.categories | first %} {% if category %} {% assign related_posts = site.categories[category] | where_exp: "post", "post.url !=
+    page.url" | reverse | limit: 4 %} {% for post in related_posts %}
     <div class="column is-6-tablet is-3-desktop">
-      <div class="card">
+      <div class="card has-shadow">
         <div class="card-content">
           <h3 class="title is-5">
             <a href="{{ post.url | relative_url }}">{{ post.title }}</a>

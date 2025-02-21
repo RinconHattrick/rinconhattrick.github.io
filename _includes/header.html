@@ -23,8 +23,7 @@
             <i class="fas fa-folder" aria-hidden="true"></i> <span>Categorías</span>
           </a>
           <div class="navbar-dropdown" id="category-menu">
-            {% assign category_pages = site.pages | where: "layout", "category" %} {% if category_pages.size > 0 %} {% for category_page in
-            category_pages %}
+            {% assign category_pages = site.pages | where: "layout", "category" %} {% if category_pages.size > 0 %} {% for category_page in category_pages %}
             <a class="navbar-item {% if page.url == category_page.url %}is-active{% endif %}" href="{{ category_page.url | relative_url }}">
               <i class="fas {{ category_page.icon }}" aria-hidden="true"></i> <span>{{ category_page.title }}</span>
             </a>

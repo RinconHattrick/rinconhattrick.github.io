@@ -7,7 +7,7 @@ permalink: /acerca-de/
 <section class="px-4">
   <div class="container">
     <!-- Hero Header -->
-    <section class="hero main-header">
+    <section class="hero">
       <div class="hero-body has-text-centered">
         <h1 class="title is-2">Acerca de El Rincón de Hattrick</h1>
         <p class="subtitle is-4">Tu guía definitiva para el éxito en Hattrick</p>
@@ -17,7 +17,7 @@ permalink: /acerca-de/
     <!-- Sobre el Autor -->
     <section class="section">
       <div class="container">
-        <div class="box has-text-centered">
+        <div class="box has-shadow has-text-centered">
           <h2 class="title is-4 pt-6">Sobre el Autor</h2>
           <p class="is-size-5">
             ¡Hola! Soy <strong>elPatronHT</strong>, un apasionado de Hattrick y la gestión de equipos de fútbol. A lo largo de los años, he adquirido
@@ -38,11 +38,11 @@ permalink: /acerca-de/
       <div class="container">
         <article class="content">
           <!-- Introducción -->
-          <section class="box mb-6">
+          <section class="box has-shadow mb-6">
             <p>
-              <strong>El Rincón de Hattrick</strong> es un espacio dedicado a todos los apasionados del juego en línea <em>Hattrick</em>. Nuestro
-              objetivo es proporcionar estrategias prácticas, consejos útiles y recursos especializados para ayudarte a alcanzar el éxito en la
-              gestión de juveniles y selecciones nacionales.
+              <strong>El Rincón de Hattrick</strong> es un espacio dedicado a todos los apasionados del juego en línea <em>Hattrick</em>. Nuestro objetivo es
+              proporcionar estrategias prácticas, consejos útiles y recursos especializados para ayudarte a alcanzar el éxito en la gestión de juveniles y
+              selecciones nacionales.
             </p>
             <p>
               Aquí encontrarás análisis detallados, guías avanzadas y tácticas innovadoras para optimizar tus decisiones como mánager y destacar en el
@@ -58,7 +58,7 @@ permalink: /acerca-de/
               {% for category in site.categories %} {% assign category_name = category[0] %} {% assign category_page = site.pages | where: "category",
               category_name | first %} {% if category_page %}
               <div class="column is-12-tablet is-4-desktop">
-                <div class="card has-text-centered">
+                <div class="card has-shadow has-text-centered">
                   <div class="card-content">
                     <div class="has-text-centered mb-4">
                       <span class="icon">
@@ -78,10 +78,8 @@ permalink: /acerca-de/
           </section>
 
           <!-- Call to Action -->
-          <section class="card has-text-centered p-6 mb-6">
-            <p class="is-size-5 has-text-weight-semibold mb-4">
-              ¡Únete a nosotros y domina <em>Hattrick</em>, el mejor juego de gestión de fútbol en línea!
-            </p>
+          <section class="card has-shadow has-text-centered p-6 mb-6">
+            <p class="is-size-5 has-text-weight-semibold mb-4">¡Únete a nosotros y domina <em>Hattrick</em>, el mejor juego de gestión de fútbol en línea!</p>
             <a href="/contacto" class="button is-primary is-rounded">
               <span class="icon"><i class="fas fa-paper-plane"></i></span>
               <span>Contactar</span>

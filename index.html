@@ -9,26 +9,21 @@ title: "El Rincón de Hattrick"
     <!-- Hero mejorado con fondo y animación -->
     <section class="hero" role="banner">
       <div class="hero-body has-text-centered">
-        <h1 class="title is-1">{{ site.title }}</h1>
+        <h1 class="title is-2">{{ site.title }}</h1>
         <p class="subtitle is-4">{{ site.description | default: "Bienvenido a nuestro blog sobre Hattrick." }}</p>
       </div>
     </section>
 
     <!-- Categorías con últimos 2 artículos -->
-    {% for category in site.categories %} {% assign category_name = category[0] %} {% assign category_page = site.pages | where: "category",
-    category_name | first %} {% assign recent_posts = category[1] | sort: "date" | reverse | slice: 0,2 %}
+    {% for category in site.categories %} {% assign category_name = category[0] %} {% assign category_page = site.pages | where: "category", category_name |
+    first %} {% assign recent_posts = category[1] | sort: "date" | reverse | slice: 0,2 %}
 
-    <section
-      id="{{ category_name | slugify }}"
-      class="mt-5 category-section"
-      role="region"
-      aria-labelledby="category-title-{{ category_name | slugify }}"
-    >
-      <div class="card has-text-centered">
+    <section id="{{ category_name | slugify }}" class="mt-5 category-section" role="region" aria-labelledby="category-title-{{ category_name | slugify }}">
+      <div class="card">
         <header class="card-header is-flex is-justify-content-center mx-3">
           <h2
             id="category-title-{{ category_name | slugify }}"
-            class="title is-3"
+            class="title is-3 has-text-white"
             aria-label="Categoría: {{ category_page.title | default: category_name }}"
           >
             {{ category_page.title | default: category_name | capitalize }}
@@ -41,10 +36,10 @@ title: "El Rincón de Hattrick"
           <div class="columns is-gapless is-multiline is-centered">
             {% for post in recent_posts %}
             <div class="column is-6-tablet is-6-desktop">
-              <article class="box">
+              <article class="box has-shadow" style="transition: var(--transition-shadow)">
                 {% if post.image %}
                 <figure class="image is-16by9">
-                  <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" loading="lazy" />
+                  <img class="has-radius" src="{{ post.image | relative_url }}" alt="{{ post.title }}" loading="lazy" />
                 </figure>
                 {% endif %}
 
@@ -65,14 +60,12 @@ title: "El Rincón de Hattrick"
                   <a href="{{ post.url | relative_url }}" rel="bookmark"> {{ post.title }} </a>
                 </h3>
 
-                <p class="mt-2">
-                  {{ post.excerpt | strip_html | truncatewords: 30 | default: "Lee más sobre este artículo haciendo clic en el título." }}
-                </p>
+                <p class="mt-2">{{ post.excerpt | strip_html | truncatewords: 30 | default: "Lee más sobre este artículo haciendo clic en el título." }}</p>
 
                 {% if post.tags %}
                 <div class="tags mt-2">
                   {% for tag in post.tags %}
-                  <span class="tag is-light">{{ tag }}</span>
+                  <span class="tag is-light is-rounded">{{ tag }}</span>
                   {% endfor %}
                 </div>
                 {% endif %}
@@ -86,7 +79,8 @@ title: "El Rincón de Hattrick"
             {% if category_page %}
             <a
               href="{{ category_page.url | relative_url }}"
-              class="button is-primary is-light"
+              class="button is-primary is-light is-rounded"
+              style="transition: var(--transition-colors)"
               aria-label="Ver más artículos de la categoría {{ category_page.title | default: category_name }}"
             >
               <span class="icon-text">
@@ -97,7 +91,8 @@ title: "El Rincón de Hattrick"
             {% else %}
             <a
               href="{{ '/categoria/' | append: category_name | relative_url }}"
-              class="button is-primary is-light"
+              class="button is-primary is-light is-rounded"
+              style="transition: var(--transition-colors)"
               aria-label="Ver más artículos de la categoría {{ category_name }}"
             >
               <span class="icon-text">

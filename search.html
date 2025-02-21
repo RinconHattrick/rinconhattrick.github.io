@@ -19,8 +19,14 @@ description: "Búsqueda de artículos en el sitio"
       <form class="mt-5" role="search" onsubmit="event.preventDefault()">
         <div class="field">
           <div class="control has-icons-left">
-            <input type="search" id="search-input" class="input is-rounded" placeholder="Buscar artículos..."
-              aria-label="Buscar artículos" autocomplete="off" />
+            <input
+              type="search"
+              id="search-input"
+              class="input is-rounded"
+              placeholder="Buscar artículos..."
+              aria-label="Buscar artículos"
+              autocomplete="off"
+            />
             <span class="icon is-small is-left">
               <i class="fas fa-search"></i>
             </span>
@@ -76,10 +82,7 @@ description: "Búsqueda de artículos en el sitio"
     handleInput(query) {
       if (query.length < 3) {
         this.clearResults();
-        this.showFeedback(
-          "Escribe al menos 3 caracteres para buscar.",
-          "is-info"
-        );
+        this.showFeedback("Escribe al menos 3 caracteres para buscar.", "is-info");
         return;
       }
 
@@ -128,10 +131,7 @@ description: "Búsqueda de artículos en el sitio"
       this.clearResults();
 
       if (!results.length) {
-        this.showFeedback(
-          '<span class="icon"><i class="fas fa-exclamation-triangle"></i></span> No se encontraron resultados relacionados.',
-          "is-warning"
-        );
+        this.showFeedback('<span class="icon"><i class="fas fa-exclamation-triangle"></i></span> No se encontraron resultados relacionados.', "is-warning");
         return;
       }
 
@@ -141,7 +141,7 @@ description: "Búsqueda de artículos en el sitio"
         const article = document.createElement("div");
         article.className = "column is-12-tablet is-6-desktop";
         article.innerHTML = `
-      <article class="box">
+      <article class="box has-shadow">
         <time datetime="${item.date}" class="is-size-7 has-text-grey">
           <span class="icon-text">
             <span class="icon" aria-hidden="true">
@@ -158,9 +158,7 @@ description: "Búsqueda de artículos en el sitio"
         </h3>
 
         <p class="mt-2">
-          ${item.excerpt
-            ? this.truncateText(this.highlightMatch(item.excerpt, query), 300)
-            : ""}
+          ${item.excerpt ? this.truncateText(this.highlightMatch(item.excerpt, query), 300) : ""}
         </p>
       </article>
     `;
@@ -171,10 +169,7 @@ description: "Búsqueda de artículos en el sitio"
     highlightMatch(text, query) {
       if (!query) return text;
       const regex = new RegExp(`(${query})`, "gi");
-      return text.replace(
-        regex,
-        '<mark class="has-background-warning">$1</mark>'
-      );
+      return text.replace(regex, '<mark class="has-background-warning">$1</mark>');
     }
 
     truncateText(text, length) {
@@ -190,34 +185,24 @@ description: "Búsqueda de artículos en el sitio"
     }
 
     async search(query) {
-      this.showFeedback(
-        '<span class="icon"><i class="fas fa-spinner fa-spin"></i></span> Cargando resultados...'
-      );
+      this.showFeedback('<span class="icon"><i class="fas fa-spinner fa-spin"></i></span> Cargando resultados...');
 
       try {
         const response = await fetch(this.searchJsonUrl);
-        if (!response.ok)
-          throw new Error("Error al cargar los datos de búsqueda");
+        if (!response.ok) throw new Error("Error al cargar los datos de búsqueda");
 
         const data = await response.json();
         if (!Array.isArray(data)) throw new Error("Formato incorrecto de datos");
 
         const results = data
-          .filter(
-            (item) =>
-              item.title.toLowerCase().includes(query.toLowerCase()) ||
-              item.excerpt.toLowerCase().includes(query.toLowerCase())
-          )
+          .filter((item) => item.title.toLowerCase().includes(query.toLowerCase()) || item.excerpt.toLowerCase().includes(query.toLowerCase()))
           .sort((a, b) => this.rankResults(a, b, query));
 
         this.renderResults(results, query);
         this.hideFeedback();
       } catch (error) {
         console.error(error);
-        this.showFeedback(
-          "No se pudieron obtener los resultados. Inténtalo más tarde.",
-          "is-danger"
-        );
+        this.showFeedback("No se pudieron obtener los resultados. Inténtalo más tarde.", "is-danger");
       }
     }
 
