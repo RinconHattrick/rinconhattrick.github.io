@@ -101,13 +101,13 @@ article:hover .image img {
 }
 
 /* Tarjeta */
-.hero,
+
 .card-header {
   background: var(--gradient-primary);
   color: var(--text);
 }
 
-.hero .card-header {
+ .card-header {
   box-shadow: var(--shadow-lg);
 }
 
@@ -229,6 +229,7 @@ mark {
 
 /* Sticky Sidebar */
 .sticky-sidebar {
+position:sticky;
   max-width: 300px;
   min-height: 250px;
   max-height: calc(100vh - 6rem);
