@@ -3,7 +3,7 @@ layout: default
 title: "El Rincón de Hattrick"
 ---
 
-<div class="columns is-gapless">
+<div class="columns">
   <!-- Contenido principal -->
   <div class="column">
     <!-- Hero mejorado con fondo y animación -->
@@ -33,7 +33,7 @@ title: "El Rincón de Hattrick"
         <div class="card-content">
           <p class="subtitle is-6 mb-4">{{ category_page.description | default: "Explora artículos sobre esta temática en nuestro blog." }}</p>
 
-          <div class="columns is-gapless is-multiline is-centered">
+          <div class="columns is-multiline is-centered">
             {% for post in recent_posts %}
             <div class="column is-6-tablet is-6-desktop">
               <article class="box has-shadow" style="transition: var(--transition-shadow)">
