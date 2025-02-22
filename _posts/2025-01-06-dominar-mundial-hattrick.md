@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "Dominar el Mundial en Hattrick"
+title: "Guía definitiva del Mundial en Hattrick: formato, estrategias y premios"
 author: elPatronHT
 date: 2025-01-16
-categories: selecciones-nacionales
-tags: [Mundial, competiciones, seleccionadores]
-excerpt: "Descubre todo lo que necesitas saber sobre el torneo más prestigioso de Hattrick: su formato, estrategias y premios, y lleva a tu selección a lo más alto."
+categories: [selecciones-nacionales]
+tags: [Mundial, competiciones, seleccionadores, estrategia]
+excerpt: "Descubre todo sobre el torneo más prestigioso de Hattrick: formato, estrategias clave, cómo avanzar rondas y los premios en juego."
+description: "Aprende cómo funciona el Mundial en Hattrick, cómo desarrollar estrategias efectivas y qué beneficios trae ganar el torneo más importante del juego."
 image: "/assets/img/ht-v.png"
 featured: false
 published: true

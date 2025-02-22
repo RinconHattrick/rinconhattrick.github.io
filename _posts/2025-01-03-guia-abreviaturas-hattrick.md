@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "Guía completa de abreviaturas en Hattrick"
+title: "Guía completa de abreviaturas en Hattrick: domina el lenguaje del juego"
 author: elPatronHT
 date: 2025-01-03
-categories: equipo-mayor
-tags: ["abreviaturas", "Hattrick", "tácticas"]
-excerpt: "Domina el lenguaje común usado en Hattrick con esta guía detallada de abreviaturas."
+categories: [equipo-mayor]
+tags: [abreviaturas, Hattrick, tácticas, terminología]
+excerpt: "Domina el lenguaje de Hattrick con esta guía detallada de abreviaturas y términos clave."
+description: "Descubre el significado de todas las abreviaturas y términos en Hattrick. Mejora tu comprensión del juego con esta guía completa."
 image: "/assets/img/ht-b.png"
 featured: false
 published: true

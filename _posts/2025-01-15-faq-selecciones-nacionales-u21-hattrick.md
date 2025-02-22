@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "Preguntas Frecuentes sobre Selecciones Nacionales y Sub-21 en Hattrick"
+title: "Selecciones Nacionales y Sub-21 en Hattrick: Preguntas Frecuentes"
 author: elPatronHT
 date: 2025-01-03
-categories: preguntas-frecuentes
-tags: [FAQ, selecciones, estrategias]
-excerpt: "Descubre todo lo que necesitas saber sobre la gestión y participación en las selecciones nacionales y Sub-21 en Hattrick, desde tácticas hasta aspectos clave que te ayudarán a triunfar."
+categories: [preguntas-frecuentes]
+tags: [FAQ, selecciones, estrategias, Sub-21]
+excerpt: "Descubre todo lo que necesitas saber sobre la gestión y participación en selecciones nacionales y Sub-21 en Hattrick, desde tácticas hasta estrategias clave."
+description: "Preguntas frecuentes sobre selecciones nacionales y Sub-21 en Hattrick. Aprende sobre gestión, estrategias y claves para triunfar con tu selección."
 image: "/assets/img/ht-b.png"
 featured: false
 published: true

@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "Gestionar jugadores nacionales en Hattrick"
+title: "Cómo gestionar jugadores nacionales en Hattrick y optimizar su rendimiento"
 author: elPatronHT
 date: 2025-01-02
-categories: selecciones-nacionales
-tags: [jugadores, selección, Hattrick]
-excerpt: "Aprende a gestionar la plantilla de tu selección nacional en Hattrick y selecciona a los mejores talentos."
+categories: [selecciones-nacionales]
+tags: [jugadores, selección, Hattrick, gestión]
+excerpt: "Aprende estrategias clave para gestionar la plantilla de jugadores nacionales en Hattrick y seleccionar los mejores talentos."
+description: "Guía sobre cómo gestionar jugadores nacionales en Hattrick. Aprende a seleccionar, entrenar y potenciar el rendimiento de los convocados."
 image: "/assets/img/ht-b.png"
 featured: false
 published: true

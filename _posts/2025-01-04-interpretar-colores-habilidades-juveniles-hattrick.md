@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "Interpretar los colores en las habilidades de juveniles en Hattrick"
+title: "Cómo interpretar los colores en las habilidades de juveniles en Hattrick"
 author: elPatronHT
 date: 2025-01-14
-categories: equipo-juvenil
-tags: [juveniles, habilidades, entrenamiento]
-excerpt: "Descubre el significado de los colores en las habilidades de los juveniles y cómo utilizarlos para optimizar su desarrollo."
+categories: [equipo-juvenil]
+tags: [juveniles, habilidades, análisis, entrenamiento]
+excerpt: "Descubre qué significan los colores en las habilidades de los juveniles y cómo usarlos para mejorar su desarrollo en Hattrick."
+description: "Guía para entender los colores en las habilidades de los juveniles en Hattrick. Aprende cómo utilizarlos estratégicamente para entrenar mejor a tus jugadores."
 image: "/assets/img/ht-v.png"
 featured: true
 published: true

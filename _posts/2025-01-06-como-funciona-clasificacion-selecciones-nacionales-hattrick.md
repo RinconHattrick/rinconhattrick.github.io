@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "Cómo funciona la clasificación de selecciones nacionales en Hattrick"
+title: "Ranking de selecciones en Hattrick: Cómo funciona y cómo mejorar tu posición"
 author: elPatronHT
 date: 2025-01-14
-categories: selecciones-nacionales
-tags: [ranking, selecciones, estrategia]
-excerpt: "Descubre cómo se calcula el ranking de selecciones nacionales y qué estrategias usar para mejorar tu posición."
+categories: [selecciones-nacionales]
+tags: [ranking, selecciones, estrategia, puntos, clasificación]
+excerpt: "Descubre cómo se calcula el ranking de selecciones en Hattrick, qué factores influyen en la clasificación y qué estrategias puedes aplicar para mejorar tu posición."
+description: "Guía detallada sobre el ranking de selecciones nacionales en Hattrick: cómo se calculan los puntos, qué influye en la clasificación y cómo escalar posiciones estratégicamente."
 image: "/assets/img/ht-v.png"
 featured: false
 published: true

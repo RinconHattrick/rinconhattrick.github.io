@@ -4,7 +4,7 @@ title: "Resultados de Búsqueda"
 description: "Búsqueda de artículos en el sitio"
 ---
 
-<section class="hero">
+<section class="hero is-link">
   <div class="hero-body has-text-centered">
     <div class="container">
       <h1 class="title is-2">Resultados de Búsqueda</h1>
@@ -19,14 +19,8 @@ description: "Búsqueda de artículos en el sitio"
       <form class="mt-5" role="search" onsubmit="event.preventDefault()">
         <div class="field">
           <div class="control has-icons-left">
-            <input
-              type="search"
-              id="search-input"
-              class="input is-rounded"
-              placeholder="Buscar artículos..."
-              aria-label="Buscar artículos"
-              autocomplete="off"
-            />
+            <input type="search" id="search-input" class="input is-rounded" placeholder="Buscar artículos..."
+              aria-label="Buscar artículos" autocomplete="off" />
             <span class="icon is-small is-left">
               <i class="fas fa-search"></i>
             </span>
@@ -39,7 +33,7 @@ description: "Búsqueda de artículos en el sitio"
       <div id="search-feedback" class="notification is-warning is-hidden mt-3" role="status" aria-live="polite"></div>
 
       <!-- Resultados de búsqueda -->
-      <div id="search-results" class="columns is-gapless is-multiline is-centered mt-5" aria-live="polite"></div>
+      <div id="search-results" class="columns  is-multiline is-centered mt-5" aria-live="polite"></div>
     </div>
   </div>
 

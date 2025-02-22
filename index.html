@@ -2,110 +2,84 @@
 layout: default
 title: "El Rincón de Hattrick"
 ---
-<div class="section">
-<div class="columns">
-  <!-- Contenido principal -->
-  <div class="column">
-    <!-- Hero mejorado con fondo y animación -->
-    <section class="hero" role="banner">
-      <div class="hero-body has-text-centered">
-        <h1 class="title is-2">{{ site.title }}</h1>
-        <p class="subtitle is-4">{{ site.description | default: "Bienvenido a nuestro blog sobre Hattrick." }}</p>
-      </div>
-    </section>
 
-    <!-- Categorías con últimos 2 artículos -->
-    {% for category in site.categories %} {% assign category_name = category[0] %} {% assign category_page = site.pages | where: "category", category_name |
-    first %} {% assign recent_posts = category[1] | sort: "date" | reverse | slice: 0,2 %}
+<main class="container">
 
-    <section id="{{ category_name | slugify }}" class="mt-5 category-section" role="region" aria-labelledby="category-title-{{ category_name | slugify }}">
-      <div class="card">
-        <header class="card-header is-flex is-justify-content-center mx-3">
-          <h2
-            id="category-title-{{ category_name | slugify }}"
-            class="title is-3 has-text-white"
-            aria-label="Categoría: {{ category_page.title | default: category_name }}"
-          >
-            {{ category_page.title | default: category_name | capitalize }}
-          </h2>
-        </header>
+  <!-- Hero principal -->
+  <section class="hero is-link" role="banner">
+    <div class="hero-body has-text-centered">
+      <h1 class="title is-2">{{ site.title }}</h1>
+      <p class="subtitle is-4">{{ site.description | default: "Bienvenido a nuestro blog sobre Hattrick." }}</p>
+    </div>
+  </section>
 
-        <div class="card-content">
-          <p class="subtitle is-6 mb-4">{{ category_page.description | default: "Explora artículos sobre esta temática en nuestro blog." }}</p>
+  <!-- Iteración de categorías -->
+  {% for category in site.categories %}
+  {% assign category_name = category[0] %}
+  {% assign category_page = site.pages | where: "category", category_name | first %}
+  {% assign recent_posts = category[1] | sort: "date" | reverse | slice: 0,2 %}
 
-          <div class="columns is-multiline is-centered">
-            {% for post in recent_posts %}
-            <div class="column is-6-tablet is-6-desktop">
-              <article class="box has-shadow" style="transition: var(--transition-shadow)">
-                {% if post.image %}
-                <figure class="image is-16by9">
-                  <img class="has-radius" src="{{ post.image | relative_url }}" alt="{{ post.title }}" loading="lazy" width="300" height="160" />
-                </figure>
-                {% endif %}
+  <article id="{{ category_name | slugify }}" class="category-section mt-5" role="region"
+    aria-labelledby="category-title-{{ category_name | slugify }}">
+    <div class="card">
+      <header class="card-header">
+        <h2 id="category-title-{{ category_name | slugify }}" class="title is-3">
+          {{ category_page.title | default: category_name | capitalize }}
+        </h2>
+      </header>
+      <div class="card-content">
+        <p class="subtitle is-6 mb-4">{{ category_page.description | default: "Explora artículos sobre esta temática
+          en nuestro blog." }}</p>
 
-                <time
-                  datetime="{{ post.date | date: '%Y-%m-%d' }}"
-                  class="is-size-7 has-text-grey"
-                  aria-label="Publicado el {{ post.date | date: '%d de %B de %Y' }}"
-                >
-                  <span class="icon-text">
-                    <span class="icon" aria-hidden="true">
-                      <i class="fas fa-calendar-day"></i>
-                    </span>
-                    <span>{{ post.date | date: "%d/%m/%Y" }}</span>
-                  </span>
-                </time>
+        <div class="columns is-multiline is-centered">
+          {% for post in recent_posts %}
+          <div class="column is-6-tablet is-6-desktop">
+            <article class="box has-shadow" style="transition: var(--transition-shadow)">
+              {% if post.image %}
+              <figure class="image is-16by9">
+                <img class="has-radius" src="{{ post.image | relative_url }}" alt="{{ post.title }}" loading="lazy"
+                  width="300" height="160" />
+              </figure>
+              {% endif %}
 
-                <h3 class="title is-5 mt-2">
-                  <a href="{{ post.url | relative_url }}" rel="bookmark"> {{ post.title }} </a>
-                </h3>
+              <time datetime="{{ post.date | date: '%Y-%m-%d' }}" class="is-size-7 has-text-grey">
+                <span class="icon-text">
+                  <span class="icon"><i class="fas fa-calendar-day"></i></span>
+                  <span>{{ post.date | date: "%d/%m/%Y" }}</span>
+                </span>
+              </time>
 
-                <p class="mt-2">{{ post.excerpt | strip_html | truncatewords: 30 | default: "Lee más sobre este artículo haciendo clic en el título." }}</p>
+              <h3 class="title is-5 mt-2">
+                <a href="{{ post.url | relative_url }}" rel="bookmark">{{ post.title }}</a>
+              </h3>
 
-                {% if post.tags %}
-                <div class="tags mt-2">
-                  {% for tag in post.tags %}
-                  <span class="tag is-light is-rounded">{{ tag }}</span>
-                  {% endfor %}
-                </div>
-                {% endif %}
-              </article>
-            </div>
-            {% endfor %}
+              <p class="mt-2">{{ post.excerpt | strip_html | truncatewords: 30 | default: "Lee más sobre este
+                artículo haciendo clic en el título." }}</p>
+
+              {% if post.tags %}
+              <div class="tags mt-2">
+                {% for tag in post.tags %}
+                <span class="tag is-light is-rounded">{{ tag }}</span>
+                {% endfor %}
+              </div>
+              {% endif %}
+            </article>
           </div>
+          {% endfor %}
+        </div>
 
-          <!-- Botón para ver más artículos de la categoría -->
-          <div class="has-text-centered mt-4">
-            {% if category_page %}
-            <a
-              href="{{ category_page.url | relative_url }}"
-              class="button is-primary is-light is-rounded"
-              style="transition: var(--transition-colors)"
-              aria-label="Ver más artículos de la categoría {{ category_page.title | default: category_name }}"
-            >
-              <span class="icon-text">
-                <span class="icon"><i class="fas fa-folder-open" aria-hidden="true"></i></span>
-                <span>Ver más en {{ category_page.title | default: category_name }}</span>
-              </span>
-            </a>
-            {% else %}
-            <a
-              href="{{ '/categoria/' | append: category_name | relative_url }}"
-              class="button is-primary is-light is-rounded"
-              style="transition: var(--transition-colors)"
-              aria-label="Ver más artículos de la categoría {{ category_name }}"
-            >
-              <span class="icon-text">
-                <span class="icon"><i class="fas fa-folder-open" aria-hidden="true"></i></span>
-                <span>Ver más en {{ category_name }}</span>
-              </span>
-            </a>
-            {% endif %}
-          </div>
+        <!-- Botón para más artículos -->
+        <div class="has-text-centered mt-4">
+          <a href="{{ category_page.url | relative_url }}" class="button is-link is-light is-rounded"
+            aria-label="Ver más artículos de {{ category_page.title | default: category_name }}">
+            <span class="icon-text">
+              <span class="icon"><i class="fas fa-folder-open"></i></span>
+              <span>Ver más en {{ category_page.title | default: category_name }}</span>
+            </span>
+          </a>
         </div>
       </div>
-    </section>
-    {% endfor %}
-  </div>
-</div>
-</div>
+    </div>
+  </article>
+  {% endfor %}
+</main>

@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "Diseñar planes de entrenamiento eficientes para los juveniles en Hattrick"
+title: "Cómo diseñar planes de entrenamiento eficientes para juveniles en Hattrick"
 author: elPatronHT
 date: 2025-01-17
-categories: equipo-juvenil
-tags: [entrenamiento, juveniles, desarrollo]
-excerpt: "Aprende a maximizar el potencial de tus juveniles con estrategias de entrenamiento bien estructuradas."
+categories: [equipo-juvenil]
+tags: [entrenamiento, juveniles, desarrollo, planificación]
+excerpt: "Descubre cómo estructurar planes de entrenamiento efectivos para potenciar el desarrollo de tus juveniles en Hattrick."
+description: "Aprende a diseñar entrenamientos eficientes para juveniles en Hattrick. Estrategias clave para mejorar habilidades y maximizar su evolución."
 image: "/assets/img/ht-v.png"
 featured: true
 published: true

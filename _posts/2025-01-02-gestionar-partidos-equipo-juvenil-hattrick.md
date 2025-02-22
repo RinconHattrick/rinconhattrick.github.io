@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "Gestionar los partidos de tu equipo juvenil en Hattrick"
+title: "Cómo gestionar los partidos de tu equipo juvenil en Hattrick"
 author: elPatronHT
 date: 2025-01-08
-categories: equipo-juvenil
-tags: [partidos, tácticas, desarrollo]
-excerpt: "Descubre cómo maximizar el desarrollo de tus jugadores juveniles y afinar tus estrategias a través de los partidos en Hattrick."
+categories: [equipo-juvenil]
+tags: [partidos, tácticas, desarrollo, estrategia]
+excerpt: "Aprende cómo gestionar los partidos de tu equipo juvenil en Hattrick para optimizar el desarrollo de jugadores y mejorar resultados."
+description: "Guía para gestionar partidos en Hattrick. Descubre cómo alinear juveniles, mejorar tácticas y potenciar su desarrollo en cada encuentro."
 image: "/assets/img/ht-v.png"
 featured: false
 published: true

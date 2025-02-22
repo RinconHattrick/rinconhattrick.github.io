@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<section class="hero">
+<section class="hero is-link">
   <div class="hero-body has-text-centered">
     <div class="container">
       <h1 class="title is-2">{{ page.title }}</h1>
@@ -15,11 +15,12 @@ layout: default
 
 <section class="px-4">
   <div class="container">
-    <div class="columns">
+    <div class="columns ">
       <div class="column">
         <main class="mt-5">
-          {% assign category_posts = site.categories[page.category] | sort: "date" | reverse %} {% if category_posts.size > 0 %}
-          <div class="columns is-gapless is-multiline is-centered">
+          {% assign category_posts = site.categories[page.category] | sort: "date" | reverse %} {% if
+          category_posts.size > 0 %}
+          <div class="columns  is-multiline is-centered">
             {% for post in category_posts %}
             <div class="column is-6-tablet is-4-desktop">
               <article class="box has-shadow">
@@ -59,8 +60,10 @@ layout: default
 
         <!-- Footer con Navegación entre Categorías -->
         <div class="buttons is-centered mt-5">
-          {% assign categories = site.pages | where: "layout", "category" | sort: "title" %} {% for cat in categories %} {% if cat.url == page.url %} {% assign
-          prev_index = forloop.index0 | minus: 1 %} {% assign next_index = forloop.index0 | plus: 1 %} {% if prev_index >= 0 %}
+          {% assign categories = site.pages | where: "layout", "category" | sort: "title" %} {% for cat in categories %}
+          {% if cat.url == page.url %} {% assign
+          prev_index = forloop.index0 | minus: 1 %} {% assign next_index = forloop.index0 | plus: 1 %} {% if prev_index
+          >= 0 %}
           <a href="{{ categories[prev_index].url }}" class="button is-light is-rounded">
             <span class="icon"><i class="fas fa-arrow-left"></i></span>
             <span>Anterior</span>
@@ -70,12 +73,12 @@ layout: default
             <span class="icon"><i class="fas fa-home"></i></span>
             <span>Inicio</span>
           </a>
-          {% if next_index < categories.size %}
-          <a href="{{ categories[next_index].url }}" class="button is-light is-rounded">
+          {% if next_index < categories.size %} <a href="{{ categories[next_index].url }}"
+            class="button is-light is-rounded">
             <span>Siguiente</span>
             <span class="icon"><i class="fas fa-arrow-right"></i></span>
-          </a>
-          {% endif %} {% endif %} {% endfor %}
+            </a>
+            {% endif %} {% endif %} {% endfor %}
         </div>
       </div>
     </div>

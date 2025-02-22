@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<section class="hero">
+<section class="hero is-link">
   <div class="hero-body has-text-centered">
     <div class="container">
       <h1 class="title is-2">{{ page.title }}</h1>
@@ -13,6 +13,13 @@ layout: default
         <strong>{{ page.author }}</strong>
         {% endif %}
       </p>
+      {% assign words = content | number_of_words %}
+      {% assign reading_time = words | divided_by: 200 | plus: 1 %}
+
+      <p class="tag is-info is-light">
+        ⏳ Tiempo de lectura: aproximadamente {{ reading_time }} minuto{% if reading_time > 1 %}s{% endif %}
+      </p>
+
     </div>
   </div>
 </section>
@@ -21,7 +28,7 @@ layout: default
   <article class="container article">
     <!-- Imagen Destacada -->
     {% if page.image %}
-    <div class="columns is-gapless is-centered">
+    <div class="columns  is-centered">
       <div class="column is-10">
         <figure class="image is-16by9 box has-shadow">
           <img src="{{ page.image | relative_url }}" alt="Imagen del artículo" loading="lazy" />
@@ -72,8 +79,9 @@ layout: default
 <!-- Artículos relacionados -->
 <section class="section mt-6">
   <h2 class="title is-4">Artículos Relacionados</h2>
-  <div class="columns is-gapless is-multiline is-centered">
-    {% assign category = page.categories | first %} {% if category %} {% assign related_posts = site.categories[category] | where_exp: "post", "post.url !=
+  <div class="columns  is-multiline is-centered">
+    {% assign category = page.categories | first %} {% if category %} {% assign related_posts =
+    site.categories[category] | where_exp: "post", "post.url !=
     page.url" | reverse | limit: 4 %} {% for post in related_posts %}
     <div class="column is-6-tablet is-3-desktop">
       <div class="card has-shadow">

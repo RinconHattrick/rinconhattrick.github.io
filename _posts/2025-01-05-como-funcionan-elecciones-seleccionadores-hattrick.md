@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "Cómo funcionan las elecciones de seleccionadores nacionales en Hattrick"
+title: "Elecciones de seleccionadores nacionales en Hattrick: reglas y proceso"
 author: elPatronHT
 date: 2025-01-01
-categories: selecciones-nacionales
-tags: [elecciones, seleccionadores, Hattrick]
-excerpt: "Descubre las reglas y responsabilidades detrás del proceso electoral de seleccionadores nacionales en Hattrick."
+categories: [selecciones-nacionales]
+tags: [elecciones, seleccionadores, Hattrick, votación]
+excerpt: "Descubre cómo funciona el sistema de elecciones de seleccionadores nacionales en Hattrick, sus reglas y responsabilidades."
+description: "Guía completa sobre el proceso de elecciones de seleccionadores nacionales en Hattrick. Conoce las reglas, la votación y el rol del seleccionador."
 image: "/assets/img/ht-b.png"
 featured: false
 published: true

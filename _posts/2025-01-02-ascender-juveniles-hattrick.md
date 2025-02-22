@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "Ascender juveniles en Hattrick"
+title: "Cómo ascender juveniles en Hattrick y maximizar su potencial"
 author: elPatronHT
 date: 2025-01-11
-categories: equipo-juvenil
-tags: [juveniles, ascenso, equipo]
-excerpt: "Descubre cómo ascender juveniles al primer equipo en Hattrick con esta guía detallada. Aprende los requisitos, cuándo promocionarlos y cómo maximizar su potencial y valor."
+categories: [equipo-juvenil]
+tags: [juveniles, ascenso, equipo, Hattrick]
+excerpt: "Aprende cuándo y cómo ascender juveniles en Hattrick para optimizar su desarrollo y aumentar su valor en el mercado."
+description: "Guía detallada sobre cómo ascender juveniles en Hattrick. Conoce los requisitos, el mejor momento para hacerlo y cómo aprovechar su potencial al máximo."
 image: "/assets/img/ht-v.png"
 featured: false
 published: true

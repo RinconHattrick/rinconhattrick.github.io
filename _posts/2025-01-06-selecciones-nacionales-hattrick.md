@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "Selecciones Nacionales en Hattrick"
+title: "Guía completa sobre Selecciones Nacionales en Hattrick"
 author: elPatronHT
 date: 2025-01-11
-categories: selecciones-nacionales
-tags: [selecciones, Hattrick, estrategias]
-excerpt: "Descubre cómo funcionan las selecciones nacionales en Hattrick y cómo puedes contribuir al éxito de tu país, convirtiéndote en un pilar fundamental para el crecimiento de tu nación en el juego."
+categories: [selecciones-nacionales]
+tags: [selecciones, Hattrick, estrategias, gestión]
+excerpt: "Descubre el funcionamiento de las selecciones nacionales en Hattrick y cómo puedes contribuir a su éxito con estrategias clave."
+description: "Aprende cómo funcionan las selecciones nacionales en Hattrick, cómo apoyar a tu selección y qué estrategias implementar para fortalecer el equipo nacional."
 image: "/assets/img/ht-n.png"
 featured: false
 published: true

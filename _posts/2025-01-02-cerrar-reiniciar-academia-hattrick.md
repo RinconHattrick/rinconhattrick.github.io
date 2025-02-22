@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "Cerrar o reiniciar tu academia juvenil en Hattrick"
+title: "¿Deberías cerrar o reiniciar tu academia juvenil en Hattrick?"
 author: elPatronHT
 date: 2025-01-12
-categories: equipo-juvenil
-tags: [juveniles, cierre, reinicio]
-excerpt: "¿Es hora de cerrar o reiniciar tu academia juvenil en Hattrick? Descubre los motivos, condiciones y pasos necesarios para tomar la mejor decisión."
+categories: [equipo-juvenil]
+tags: [juveniles, cierre, reinicio, academia]
+excerpt: "Descubre cuándo conviene cerrar o reiniciar tu academia juvenil en Hattrick y qué impacto tiene en tu equipo."
+description: "Analizamos las ventajas y desventajas de cerrar o reiniciar tu academia juvenil en Hattrick. Conoce los factores clave para tomar la mejor decisión."
 image: "/assets/img/ht-v.png"
 featured: false
 published: true

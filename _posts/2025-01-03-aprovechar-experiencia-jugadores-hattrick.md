@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "Aprovechar la experiencia de los jugadores en Hattrick"
+title: "Cómo aprovechar la experiencia de los jugadores en Hattrick para mejorar tu equipo"
 author: elPatronHT
 date: 2025-01-05
-categories: equipo-mayor
-tags: [Hattrick, experiencia, entrenamiento]
-excerpt: "Descubre cómo la experiencia en Hattrick puede mejorar el rendimiento de tus jugadores y llevar a tu equipo al éxito."
+categories: [equipo-mayor]
+tags: [Hattrick, experiencia, liderazgo, entrenamiento]
+excerpt: "Descubre cómo la experiencia de los jugadores influye en el rendimiento de tu equipo en Hattrick y cómo gestionarla estratégicamente."
+description: "Aprende cómo la experiencia en Hattrick afecta el rendimiento de los jugadores. Descubre estrategias para potenciar su impacto en el campo y mejorar tu equipo."
 image: "/assets/img/ht-b.png"
 featured: false
 published: true

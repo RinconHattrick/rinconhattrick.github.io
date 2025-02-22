@@ -45,6 +45,40 @@ body {
   line-height: 1.6;
 }
 
+/* botón */
+.button:hover,
+.button:active {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+  will-change: transform;
+}
+
+/* Navbar */
+.navbar {
+  box-shadow: var(--shadow-md);
+}
+
+.navbar-item.is-active {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.navbar-dropdown {
+  max-height: 0;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: var(--transition-size), var(--transition-opacity);
+}
+
+.navbar-item.has-dropdown.is-hoverable:hover .navbar-dropdown,
+.navbar-item.has-dropdown.is-active .navbar-dropdown {
+  max-height: 300px;
+  opacity: 1;
+}
+
+
 /* Imagen */
 .image img {
   object-fit: cover;
@@ -77,69 +111,6 @@ article:hover .image img {
   opacity: 0;
 }
 
-/* Navbar */
-.navbar {
-  box-shadow: var(--shadow-md);
-}
-
-.navbar-item.is-active {
-  background-color: var(--color-primary);
-  color: var(--background);
-}
-
-.navbar-dropdown {
-  max-height: 0;
-  opacity: 0;
-  overflow: hidden;
-  transition: var(--transition-size), var(--transition-opacity);
-}
-
-.navbar-item.has-dropdown.is-hoverable:hover .navbar-dropdown,
-.navbar-item.has-dropdown.is-active .navbar-dropdown {
-  max-height: 300px;
-  opacity: 1;
-}
-
-/* Tarjeta */
-
-.card-header {
-  background: var(--gradient-primary);
-  color: var(--text);
-}
-
- .card-header {
-  box-shadow: var(--shadow-lg);
-}
-
-/* Botón */
-.button {
-  transition: var(--transition-transform), var(--transition-shadow), var(--transition-colors);
-}
-
-.button:hover,
-.button:active {
-  transform: translateY(-1px);
-  box-shadow: var(--shadow-md);
-  will-change: transform;
-}
-
-/* Scrollbar */
-html {
-  scrollbar-color: var(--color-primary) transparent;
-  scrollbar-width: thin;
-}
-
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: var(--color-primary);
-  border-radius: var(--radius);
-  border: 2px solid transparent;
-  transition: var(--transition-colors), var(--transition-transform);
-}
-
 /* Animación */
 @keyframes fadeIn {
   from {
@@ -160,6 +131,7 @@ html {
 
 /* Media Queries */
 @media (min-width: 1024px) {
+
   main,
   .sticky-sidebar {
     margin-top: 3.5rem;
@@ -167,6 +139,7 @@ html {
 }
 
 @media (min-width: 769px) and (max-width: 1023px) {
+
   main,
   .sticky-sidebar {
     margin-top: 2rem;
@@ -174,6 +147,7 @@ html {
 }
 
 @media (max-width: 768px) {
+
   main,
   .sticky-sidebar {
     margin-top: 0;
@@ -197,6 +171,7 @@ html {
   margin-bottom: 0;
   border-bottom: none;
 }
+
 .search-results-list li:hover {
   background-color: rgba(0, 0, 0, 0.05);
 }
@@ -229,7 +204,6 @@ mark {
 
 /* Sticky Sidebar */
 .sticky-sidebar {
-position:sticky;
   max-width: 300px;
   min-height: 250px;
   max-height: calc(100vh - 6rem);

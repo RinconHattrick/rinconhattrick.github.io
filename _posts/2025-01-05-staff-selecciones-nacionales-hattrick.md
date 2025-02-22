@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "Staff de las selecciones nacionales en Hattrick: roles y gestión"
+title: "Staff de selecciones nacionales en Hattrick: roles y gestión"
 author: elPatronHT
 date: 2025-01-07
-categories: selecciones-nacionales
-tags: [personal, selección, Hattrick, staff]
-excerpt: "Descubre cómo los roles del equipo técnico de las selecciones nacionales contribuyen al éxito en Hattrick."
+categories: [selecciones-nacionales]
+tags: [staff, selección, Hattrick, gestión, equipo técnico]
+excerpt: "Descubre los roles clave del staff de selecciones nacionales en Hattrick y su impacto en el rendimiento del equipo."
+description: "Guía sobre la gestión del staff en selecciones nacionales de Hattrick. Conoce los roles clave y su importancia en el éxito del equipo."
 image: "/assets/img/ht-b.png"
 featured: false
 published: true

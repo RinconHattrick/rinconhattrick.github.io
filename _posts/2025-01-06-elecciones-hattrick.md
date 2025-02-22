@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "Elecciones Nacionales en Hattrick"
+title: "Elecciones en Hattrick: Cómo se eligen los seleccionadores nacionales"
 author: elPatronHT
 date: 2025-01-09
-categories: selecciones-nacionales
-tags: [elecciones, seleccionadores, votación]
-excerpt: "Descubre cómo funciona el sistema electoral en Hattrick para elegir a los seleccionadores nacionales, y sé parte del cambio que tu país necesita."
+categories: [selecciones-nacionales]
+tags: [elecciones, seleccionadores, votación, democracia]
+excerpt: "Descubre cómo funciona el sistema electoral en Hattrick, cómo votar por un seleccionador nacional y cuál es su impacto en la comunidad del juego."
+description: "Guía completa sobre las elecciones en Hattrick: cómo votar, qué hace un seleccionador nacional y cómo influye en el éxito de tu selección."
 image: "/assets/img/ht-v.png"
 featured: false
 published: true

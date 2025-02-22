@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "Preguntas Frecuentes sobre Competencias de Selecciones Nacionales"
+title: "Competencias de Selecciones Nacionales en Hattrick: Preguntas Frecuentes"
 author: elPatronHT
 date: 2025-01-01
-categories: preguntas-frecuentes
+categories: [preguntas-frecuentes]
 tags: [FAQ, selecciones, Hattrick, competiciones]
-excerpt: "Descubre todo lo que necesitas saber sobre las selecciones nacionales y Sub-21 en Hattrick, desde cómo funcionan las competiciones hasta las ventajas de tener jugadores en las selecciones."
+excerpt: "Resuelve todas tus dudas sobre las competiciones de selecciones nacionales y Sub-21 en Hattrick, su funcionamiento y beneficios."
+description: "Guía de preguntas frecuentes sobre las competiciones de selecciones nacionales y Sub-21 en Hattrick. Descubre cómo funcionan y por qué son clave en el juego."
 image: "/assets/img/ht-b.png"
 featured: false
 published: true

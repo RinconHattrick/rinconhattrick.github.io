@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "Mejores herramientas para optimizar tu academia juvenil en Hattrick"
+title: "Las mejores herramientas para gestionar tu academia juvenil en Hattrick"
 author: elPatronHT
 date: 2025-01-15
-categories: equipo-juvenil
-tags: [herramientas, juveniles, análisis]
-excerpt: "Conoce las mejores herramientas para potenciar la gestión y el rendimiento de tu cantera en Hattrick."
+categories: [equipo-juvenil]
+tags: [herramientas, juveniles, análisis, optimización]
+excerpt: "Descubre las herramientas más útiles para mejorar la gestión, análisis y rendimiento de tu academia juvenil en Hattrick."
+description: "Lista de herramientas para optimizar la gestión de tu academia juvenil en Hattrick. Aprende a analizar jugadores, planificar entrenamientos y mejorar tu cantera."
 image: "/assets/img/ht-v.png"
 featured: false
 published: true

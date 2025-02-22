@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "Optimizar el entrenamiento juvenil en Hattrick"
+title: "Estrategias para optimizar el entrenamiento juvenil en Hattrick"
 author: elPatronHT
 date: 2025-01-07
-categories: equipo-juvenil
-tags: [entrenamiento, juveniles, estrategia]
-excerpt: "Descubre cómo maximizar el desarrollo de tus juveniles con estrategias de entrenamiento efectivas."
+categories: [equipo-juvenil]
+tags: [entrenamiento, juveniles, desarrollo, estrategia]
+excerpt: "Descubre cómo estructurar un plan de entrenamiento eficiente para maximizar el desarrollo de tus juveniles en Hattrick."
+description: "Guía sobre cómo optimizar el entrenamiento juvenil en Hattrick. Aprende estrategias clave para mejorar habilidades y potenciar el crecimiento de tus jugadores."
 image: "/assets/img/ht-v.png"
 featured: false
 published: true

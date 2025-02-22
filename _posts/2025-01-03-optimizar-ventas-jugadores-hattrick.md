@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "Optimizar tus ventas de jugadores en Hattrick"
+title: "Cómo optimizar la venta de jugadores en Hattrick y maximizar ganancias"
 author: elPatronHT
 date: 2025-01-04
-categories: equipo-mayor
-tags: ["ventas Hattrick", "estrategias mercado", "jugadores"]
-excerpt: "Aprende a maximizar la visibilidad y el valor de tus jugadores con estrategias efectivas de venta en Hattrick."
+categories: [equipo-mayor]
+tags: [ventas Hattrick, mercado de fichajes, jugadores, estrategia financiera]
+excerpt: "Aprende a vender jugadores en Hattrick de manera estratégica para maximizar su valor y obtener mayores beneficios."
+description: "Guía sobre cómo vender jugadores en Hattrick de forma eficiente. Estrategias para aumentar su valor y obtener mejores ofertas en el mercado."
 image: "/assets/img/ht-b.png"
 featured: false
 published: true

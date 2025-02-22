@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "Reclutar juveniles en Hattrick"
+title: "Cómo reclutar juveniles en Hattrick: estrategias y consejos"
 author: elPatronHT
 date: 2025-01-01
-categories: equipo-juvenil
-tags: [juveniles, reclutamiento, estrategia]
-excerpt: "Explora los sistemas de reclutamiento juvenil en Hattrick y elige la mejor estrategia para el futuro de tu equipo."
+categories: [equipo-juvenil]
+tags: [juveniles, reclutamiento, scouting, estrategia]
+excerpt: "Explora los métodos de reclutamiento juvenil en Hattrick y elige la mejor estrategia para potenciar el futuro de tu equipo."
+description: "Descubre cómo reclutar juveniles en Hattrick de manera efectiva. Estrategias clave para mejorar tu cantera y desarrollar jugadores de calidad."
 image: "/assets/img/ht-v.png"
 featured: false
 published: true

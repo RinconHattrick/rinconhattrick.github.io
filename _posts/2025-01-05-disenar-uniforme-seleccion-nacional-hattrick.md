@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "Diseñar el uniforme de la selección nacional en Hattrick"
+title: "Cómo diseñar el uniforme de la selección nacional en Hattrick"
 author: elPatronHT
 date: 2025-01-08
-categories: selecciones-nacionales
+categories: [selecciones-nacionales]
 tags: [uniforme, selección, diseño, identidad, colores]
-excerpt: "Aprende a personalizar los colores y diseños del uniforme nacional y su impacto en la identidad del equipo."
+excerpt: "Aprende a personalizar los colores y diseños del uniforme nacional en Hattrick y su impacto en la identidad del equipo."
+description: "Descubre cómo diseñar el uniforme de la selección nacional en Hattrick. Personaliza colores, crea identidad y mejora la imagen de tu equipo."
 image: "/assets/img/ht-b.png"
 featured: false
 published: true

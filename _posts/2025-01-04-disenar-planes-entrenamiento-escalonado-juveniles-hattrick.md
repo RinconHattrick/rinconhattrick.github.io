@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "Diseñar planes de entrenamiento escalonado para los juveniles en Hattrick"
+title: "Cómo diseñar planes de entrenamiento escalonado para juveniles en Hattrick"
 author: elPatronHT
 date: 2025-01-16
-categories: equipo-juvenil
-tags: [entrenamiento, juveniles, desarrollo]
-excerpt: "Aprende a desarrollar a tus juveniles con entrenamientos progresivos y optimizados."
+categories: [equipo-juvenil]
+tags: [entrenamiento, juveniles, desarrollo, progresión]
+excerpt: "Aprende a aplicar entrenamientos progresivos y escalonados para optimizar el desarrollo de tus juveniles en Hattrick."
+description: "Guía sobre cómo diseñar entrenamientos escalonados para juveniles en Hattrick. Mejora su desarrollo con estrategias progresivas y eficientes."
 image: "/assets/img/ht-v.png"
 featured: true
 published: true

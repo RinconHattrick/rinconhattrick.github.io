@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "Cómo Funciona la Convocatoria de Jugadores en Hattrick"
+title: "Convocatoria de jugadores en Hattrick: Cómo se eligen y qué influye en la selección"
 author: elPatronHT
 date: 2025-01-10
-categories: selecciones-nacionales
-tags: [convocatoria, jugadores, selecciones]
-excerpt: "Descubre cómo los seleccionadores eligen jugadores y gestionan la experiencia táctica en las selecciones nacionales, llevando a tu equipo al éxito en la competición."
+categories: [selecciones-nacionales]
+tags: [convocatoria, jugadores, selecciones, criterios]
+excerpt: "Descubre cómo los seleccionadores eligen jugadores para la selección nacional en Hattrick, qué criterios usan y cómo influye el rendimiento de los futbolistas."
+description: "Explicación detallada sobre el proceso de convocatoria en Hattrick, los factores que influyen en la selección de jugadores y cómo optimizar su rendimiento en la selección."
 image: "/assets/img/ht-v.png"
 featured: false
 published: true

@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "Gestionar un Jugador en la Selección Nacional en Hattrick"
+title: "Cómo gestionar un jugador de selección nacional en Hattrick"
 author: elPatronHT
 date: 2025-01-10
-categories: selecciones-nacionales
-tags: [gestión, selección, jugadores]
-excerpt: "Descubre cómo maximizar el rendimiento de tus internacionales mientras proteges los intereses de tu club, y lleva a tu equipo al éxito en todos los frentes."
+categories: [selecciones-nacionales]
+tags: [gestión, selección, jugadores, rendimiento]
+excerpt: "Aprende a maximizar el rendimiento de tus jugadores internacionales y equilibrar su desarrollo entre la selección y tu club en Hattrick."
+description: "Guía sobre la gestión de jugadores convocados a la selección nacional en Hattrick. Optimiza su rendimiento sin descuidar los intereses de tu club."
 image: "/assets/img/ht-v.png"
 featured: false
 published: true

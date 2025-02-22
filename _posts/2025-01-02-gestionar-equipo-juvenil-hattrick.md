@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "Gestionar un equipo juvenil en Hattrick"
+title: "Guía para gestionar un equipo juvenil en Hattrick"
 author: elPatronHT
 date: 2025-01-02
-categories: equipo-juvenil
-tags: [juveniles, gestión, estrategias]
-excerpt: "Aprende cómo gestionar y optimizar tu equipo juvenil en Hattrick para construir un club exitoso a largo plazo."
+categories: [equipo-juvenil]
+tags: [juveniles, gestión, estrategias, administración]
+excerpt: "Conoce las claves para administrar tu equipo juvenil en Hattrick y convertirlo en una cantera competitiva a largo plazo."
+description: "Descubre cómo gestionar un equipo juvenil en Hattrick con estrategias de desarrollo, administración y planificación a largo plazo."
 image: "/assets/img/ht-v.png"
 featured: false
 published: true

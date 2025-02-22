@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "Maximizar el rendimiento de los ojeadores en los juveniles en Hattrick"
+title: "Cómo maximizar el rendimiento de los ojeadores juveniles en Hattrick"
 author: elPatronHT
 date: 2025-01-06
-categories: equipo-juvenil
-tags: [ojeadores, estrategia, juveniles]
-excerpt: "Aprende a gestionar y sacar el máximo provecho a los ojeadores juveniles en Hattrick para construir un equipo competitivo."
+categories: [equipo-juvenil]
+tags: [ojeadores, estrategia, juveniles, scouting]
+excerpt: "Aprende a gestionar y optimizar el trabajo de los ojeadores juveniles en Hattrick para descubrir talento y fortalecer tu equipo."
+description: "Descubre cómo mejorar el rendimiento de tus ojeadores en Hattrick. Estrategias para identificar juveniles prometedores y maximizar su desarrollo."
 image: "/assets/img/ht-v.png"
 featured: false
 published: true

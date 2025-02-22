@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "Gestionar y descubrir el potencial de los jugadores juveniles en Hattrick"
+title: "Cómo descubrir el potencial de los jugadores juveniles en Hattrick"
 author: elPatronHT
 date: 2025-01-05
-categories: equipo-juvenil
-tags: [juveniles, gestión, entrenamiento]
-excerpt: "Descubre cómo sacar el máximo provecho de tus juveniles en Hattrick con estrategias de evaluación y entrenamiento."
+categories: [equipo-juvenil]
+tags: [juveniles, gestión, entrenamiento, desarrollo]
+excerpt: "Descubre cómo evaluar el talento de tus juveniles en Hattrick y maximizar su desarrollo con estrategias de entrenamiento."
+description: "Aprende a identificar el potencial de tus juveniles en Hattrick. Estrategias clave para evaluar habilidades y entrenar futuras estrellas."
 image: "/assets/img/ht-v.png"
 featured: false
 published: true

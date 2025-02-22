@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "Clasificar al mundial en Hattrick"
+title: "Cómo clasificar al Mundial en Hattrick: Estrategias y claves del proceso"
 author: elPatronHT
 date: 2025-01-15
-categories: selecciones-nacionales
-tags: [Mundial, clasificación, Hattrick, selecciones]
-excerpt: "Conoce el camino hacia la Copa del Mundo en Hattrick y cómo clasificar con éxito."
+categories: [selecciones-nacionales]
+tags: [Mundial, clasificación, Hattrick, selecciones, estrategia]
+excerpt: "Descubre cómo funciona la clasificación al Mundial en Hattrick, qué criterios se usan y qué estrategias seguir para asegurar tu cupo en la Copa del Mundo."
+description: "Aprende cómo clasificar al Mundial en Hattrick, qué factores influyen en la clasificación y cómo preparar a tu selección para lograr un desempeño exitoso en el torneo."
 image: "/assets/img/ht-v.png"
 featured: false
 published: true

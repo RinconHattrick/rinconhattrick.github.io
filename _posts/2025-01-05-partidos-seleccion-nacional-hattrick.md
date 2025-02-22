@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "Partidos de selección nacional en Hattrick"
+title: "Cómo funcionan los partidos de selección nacional en Hattrick"
 author: elPatronHT
 date: 2025-01-04
-categories: selecciones-nacionales
-tags: [partidos, selección, Hattrick]
-excerpt: "Descubre los beneficios y consideraciones clave de los partidos de selección nacional en Hattrick."
+categories: [selecciones-nacionales]
+tags: [partidos, selección, Hattrick, estrategia]
+excerpt: "Descubre el impacto de los partidos de selección nacional en Hattrick y las estrategias clave para optimizar el rendimiento del equipo."
+description: "Conoce cómo funcionan los partidos de selección nacional en Hattrick. Aprende estrategias y claves para optimizar el rendimiento de tu equipo."
 image: "/assets/img/ht-b.png"
 featured: false
 published: true

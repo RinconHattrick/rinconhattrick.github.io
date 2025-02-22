@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "Cómo comenzar en Hattrick"
+title: "Guía para principiantes: cómo comenzar en Hattrick y gestionar tu equipo"
 author: elPatronHT
 date: 2025-01-01
-categories: equipo-mayor
-tags: [gestión de equipo, finanzas, entrenamiento]
-excerpt: "Descubre cómo gestionar tu club en Hattrick con estrategias clave para principiantes."
+categories: [equipo-mayor]
+tags: [gestión de equipo, finanzas, entrenamiento, principiantes]
+excerpt: "Descubre cómo gestionar tu club en Hattrick desde el inicio con estrategias clave para nuevos usuarios."
+description: "Guía para principiantes en Hattrick: aprende a gestionar tu equipo, administrar finanzas y entrenar jugadores desde cero."
 image: "/assets/img/ht-b.png"
 featured: false
 published: true

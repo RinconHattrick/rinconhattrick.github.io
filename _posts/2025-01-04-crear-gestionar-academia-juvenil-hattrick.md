@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "Crear y gestionar una academia juvenil en Hattrick"
+title: "Cómo crear y gestionar una academia juvenil en Hattrick de manera eficiente"
 author: elPatronHT
 date: 2025-01-13
-categories: equipo-juvenil
-tags: [juveniles, entrenamiento, academia]
-excerpt: "Guía práctica para construir una academia juvenil eficiente y potenciar el futuro de tu equipo en Hattrick."
+categories: [equipo-juvenil]
+tags: [juveniles, entrenamiento, academia, gestión]
+excerpt: "Guía paso a paso para construir y administrar una academia juvenil en Hattrick y desarrollar futuras estrellas para tu equipo."
+description: "Aprende cómo crear y gestionar una academia juvenil en Hattrick. Descubre estrategias para entrenar juveniles y maximizar su potencial."
 image: "/assets/img/ht-v.png"
 featured: true
 published: true

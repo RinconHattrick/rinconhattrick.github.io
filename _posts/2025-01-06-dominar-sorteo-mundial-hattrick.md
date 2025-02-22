@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "Dominar el Sorteo del Mundial en Hattrick"
+title: "Cómo funciona el sorteo del Mundial en Hattrick y cómo aprovecharlo"
 author: elPatronHT
 date: 2025-01-13
-categories: selecciones-nacionales
-tags:
-  [sorteo, Mundial, Hattrick, Copas Continentales, clasificación, estrategias]
-excerpt: "Descubre cómo funciona el sorteo del Mundial en Hattrick y las estrategias clave para enfrentarte a cualquier grupo con éxito, llevando a tu selección a lo más alto."
+categories: [selecciones-nacionales]
+tags: [sorteo, Mundial, Hattrick, clasificación, estrategia]
+excerpt: "Descubre cómo se realiza el sorteo del Mundial en Hattrick, qué factores influyen y cómo prepararte para cualquier grupo de competición."
+description: "Explicación detallada del sorteo del Mundial en Hattrick y estrategias clave para maximizar las oportunidades de tu selección nacional."
 image: "/assets/img/ht-v.png"
 featured: false
 published: true

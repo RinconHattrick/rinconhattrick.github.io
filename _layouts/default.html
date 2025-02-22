@@ -1,43 +1,54 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: 'es' }}" dir="ltr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta name="robots" content="index, follow" />
-    <!-- Theme Color -->
-    <meta name="theme-color" content="#485fc7" media="(prefers-color-scheme: light)" />
-    <meta name="theme-color" content="#181825" media="(prefers-color-scheme: dark)" />
-    <meta name="color-scheme" content="light dark" />
-    {% seo %}
-    <!-- Icono -->
-    <link rel="icon" href="{{ '/assets/img/favicon.ico' | relative_url }}" sizes="any" />
-    <!-- Preconexión  -->
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
-    <!-- Bulma -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css" />
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-    <!-- Estilos personalizados -->
-    <link rel="stylesheet" href="{{ '/assets/main.css?v=1.0.7' | relative_url }}" />
-  </head>
 
-  <body class="has-navbar-fixed-top">
-    {% include header.html %}
-    <div class="container">
-      <div class="columns is-gapless">
-        <main class="column is-full-touch is-three-quarters-desktop" aria-label="Contenido principal">{{ content }}</main>
-        {% if page.layout != "no-sidebar" %}
-        <section class="column is-hidden-touch is-one-quarter-desktop">{% include aside.html %}</section>
-        {% endif %}
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#485fc7" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#181825" media="(prefers-color-scheme: dark)" />
+  <meta name="color-scheme" content="light dark" />
+  {% seo %}
+
+  <!-- Icono -->
+  <link rel="icon" href="{{ '/assets/img/favicon.ico' | relative_url }}" sizes="any" />
+
+  <!-- Preconexión -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="{{ '/assets/main.css?v=1.0.11' | relative_url }}" />
+</head>
+
+<body class="has-navbar-fixed-top">
+  {% include header.html %}
+
+  <div class="container">
+    <div class="columns is-gapless is-variable is-2">
+      <main class="column is-full-touch is-three-quarters-desktop" aria-label="Contenido principal">
+        {{ content }}
+      </main>
+
+      {% if page.layout != "no-sidebar" %}
+      <aside class="column is-hidden-touch is-one-quarter-desktop">
+        {% include aside.html %}
+      </aside>
+      {% endif %}
     </div>
-    {% include footer.html %}
-    <button class="button is-rounded is-small scroll-to-top-btn" id="scrollToTopBtn" title="Subir" aria-label="Subir al inicio">
-      <i class="fas fa-arrow-up" aria-hidden="true"></i>
-    </button>
+  </div>
 
-    <!-- Scripts -->
-    <script src="{{ '/assets/js/script.js?v=1.0.7' | relative_url }}" defer></script>
-  </body>
+  {% include footer.html %}
+
+  <button class="button is-rounded is-small scroll-to-top-btn" id="scrollToTopBtn" title="Subir"
+    aria-label="Subir al inicio">
+    <i class="fas fa-arrow-up" aria-hidden="true"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="{{ '/assets/js/script.js?v=1.0.11' | relative_url }}" defer></script>
+</body>
+
 </html>

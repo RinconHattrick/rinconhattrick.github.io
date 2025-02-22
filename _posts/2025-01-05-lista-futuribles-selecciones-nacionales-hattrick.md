@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "Lista de futuribles para selecciones nacionales en Hattrick"
+title: "Cómo gestionar la lista de futuribles en selecciones nacionales de Hattrick"
 author: elPatronHT
 date: 2025-01-03
-categories: selecciones-nacionales
-tags: [futuribles, selección, Hattrick]
-excerpt: "Aprende a gestionar candidatos para las selecciones nacionales y maximizar el potencial de tus jugadores con la lista de futuribles."
+categories: [selecciones-nacionales]
+tags: [futuribles, selección, Hattrick, scouting]
+excerpt: "Aprende a gestionar y optimizar la lista de futuribles en Hattrick para seleccionar a los mejores jugadores nacionales."
+description: "Guía sobre cómo usar la lista de futuribles en selecciones nacionales de Hattrick. Optimiza tu scouting y selecciona talentos estratégicamente."
 image: "/assets/img/ht-b.png"
 featured: false
 published: true

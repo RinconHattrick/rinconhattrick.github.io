@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "Dominar la Liga de Aspirantes en Hattrick"
+title: "Liga de Aspirantes en Hattrick: Cómo funciona y estrategias para ganar"
 author: elPatronHT
 date: 2025-01-19
-categories: selecciones-nacionales
-tags: [Liga de Aspirantes, torneo, Hattrick]
-excerpt: "Descubre cómo la Liga de Aspirantes en Hattrick puede impulsar el desarrollo de tu selección nacional y mejorar su rendimiento competitivo, llevando a tu equipo al éxito en la competición."
+categories: [selecciones-nacionales]
+tags: [Liga de Aspirantes, torneo, Hattrick, selecciones, estrategia]
+excerpt: "Descubre cómo funciona la Liga de Aspirantes en Hattrick, qué impacto tiene en la selección nacional y qué estrategias usar para maximizar el rendimiento de tu equipo."
+description: "Guía detallada sobre la Liga de Aspirantes en Hattrick: estructura del torneo, beneficios para las selecciones y estrategias clave para el éxito."
 image: "/assets/img/ht-v.png"
 featured: false
 published: true
