@@ -53,14 +53,9 @@ body {
   will-change: transform;
 }
 
-/* Navbar */
-.navbar {
-  box-shadow: var(--shadow-md);
-}
-
 .navbar-item.is-active {
-  background-color: var(--color-primary);
-  color: white;
+  background-color: var(--color-primary) !important;
+  color: white !important;
 }
 
 .navbar-dropdown {
@@ -78,38 +73,35 @@ body {
   opacity: 1;
 }
 
-
 /* Imagen */
 .image img {
   object-fit: cover;
   transition: var(--transition-transform);
-  width: 100%;
-  height: 100%;
 }
 
+/* Efecto hover en imágenes dentro de artículos */
 article:hover .image img {
   transform: scale(1.05);
 }
 
+/* Manejo de imágenes con error */
 .image img.has-error {
   object-fit: contain;
-  background-color: var(--card-background);
+  background: #f5f5f5;
   padding: 1rem;
 }
 
-.image::before {
+/* Efecto de carga opcional */
+.image.is-loaded::before {
   content: "";
   position: absolute;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.05);
-  transition: var(--transition-opacity);
-  opacity: 1;
-  z-index: 1;
-}
-
-.image.is-loaded::before {
+  transition: opacity 0.3s ease;
   opacity: 0;
 }
+
+/* ****** */
 
 /* Animación */
 @keyframes fadeIn {
