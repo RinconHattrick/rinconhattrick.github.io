@@ -5,11 +5,9 @@ description: "Búsqueda de artículos en el sitio"
 ---
 
 <div class="container">
-  <section class="hero is-small is-link">
-    <div class="hero-body has-text-centered">
-      <div class="container">
-        <h1 class="title is-2">Resultados de Búsqueda</h1>
-      </div>
+  <section class="hero is-small is-link has-text-centered">
+    <div class="hero-body">
+      <h1 class="title is-2">Resultados de Búsqueda</h1>
     </div>
   </section>
 
@@ -18,8 +16,7 @@ description: "Búsqueda de artículos en el sitio"
     <form class="mt-5" role="search" onsubmit="event.preventDefault()">
       <div class="field has-addons">
         <div class="control has-icons-left is-expanded">
-          <input type="search" id="search-input" class="input is-rounded" placeholder="Buscar artículos..."
-            aria-label="Buscar artículos" autocomplete="off" />
+          <input type="search" id="search-input" class="input is-rounded" placeholder="Buscar artículos..." aria-label="Buscar artículos" autocomplete="off" />
           <span class="icon is-small is-left">
             <i class="fas fa-search"></i>
           </span>
@@ -129,10 +126,7 @@ description: "Búsqueda de artículos en el sitio"
       this.clearResults();
 
       if (!results.length) {
-        this.showFeedback(
-          '<span class="icon"><i class="fas fa-exclamation-triangle"></i></span> No se encontraron resultados.',
-          "is-warning"
-        );
+        this.showFeedback('<span class="icon"><i class="fas fa-exclamation-triangle"></i></span> No se encontraron resultados.', "is-warning");
         return;
       }
 
@@ -194,10 +188,7 @@ description: "Búsqueda de artículos en el sitio"
         if (!Array.isArray(data)) throw new Error("Formato incorrecto de datos");
 
         const results = data
-          .filter((item) =>
-            item.title.toLowerCase().includes(query.toLowerCase()) ||
-            item.excerpt.toLowerCase().includes(query.toLowerCase())
-          )
+          .filter((item) => item.title.toLowerCase().includes(query.toLowerCase()) || item.excerpt.toLowerCase().includes(query.toLowerCase()))
           .sort((a, b) => this.rankResults(a, b, query));
 
         this.renderResults(results, query);
@@ -228,5 +219,4 @@ description: "Búsqueda de artículos en el sitio"
       new SearchManager();
     }
   });
-
 </script>

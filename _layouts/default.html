@@ -1,54 +1,52 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: 'es' }}" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#3273dc" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="robots" content="index, follow" />
-  <meta name="theme-color" content="#3273dc" />
+    <!-- SEO -->
+    {% seo %}
 
-  <!-- SEO -->
-  {% seo %}
+    <!-- Icono -->
+    <link rel="icon" href="{{ '/assets/img/favicon.ico' | relative_url }}" sizes="any" type="image/x-icon" />
 
-  <!-- Icono -->
-  <link rel="icon" href="{{ '/assets/img/favicon.ico' | relative_url }}" sizes="any" type="image/x-icon" />
+    <!-- Preconexión -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
 
-  <!-- Preconexión -->
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+    <!-- Estilos -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="{{ '/assets/main.css?v=1.0.15' | relative_url }}" />
 
-  <!-- Estilos -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-  <link rel="stylesheet" href="{{ '/assets/main.css?v=1.0.14' | relative_url }}" />
-  <script>
-    if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
-      document.querySelector('meta[name="theme-color"]').setAttribute("content", "#181825");
-    }
-  </script>
-</head>
+    <script>
+      if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        document.querySelector('meta[name="theme-color"]').setAttribute("content", "#181825");
+      }
+    </script>
+  </head>
 
-<body class="has-navbar-fixed-top">
-  {% include header.html %}
+  <body class="has-navbar-fixed-top">
+    {% include header.html %}
 
-  <div class="container">
-    <div class="columns is-gapless is-variable is-2">
-      <main class="column is-full-touch is-three-quarters-desktop" aria-label="Contenido principal">{{ content }}</main>
-      {% if page.layout != "no-sidebar" %}
-      <aside class="column is-hidden-touch is-one-quarter-desktop">{% include aside.html %}</aside>
-      {% endif %}
+    <div class="container">
+      <div class="columns is-gapless is-variable is-2">
+        <main class="column is-full-touch is-three-quarters-desktop" aria-label="Contenido principal">{{ content }}</main>
+        {% if page.layout != "no-sidebar" %}
+        <aside class="column is-hidden-touch is-one-quarter-desktop">{% include aside.html %}</aside>
+        {% endif %}
+      </div>
     </div>
-  </div>
 
-  {% include footer.html %}
+    {% include footer.html %}
 
-  <!-- Botón de subir -->
-  <button class="button is-rounded is-small scroll-to-top-btn is-link" id="scrollToTopBtn" title="Subir"
-    aria-label="Subir al inicio" role="button">
-    <i class="fas fa-arrow-up" aria-hidden="true"></i>
-  </button>
+    <!-- Botón de subir -->
+    <button class="button is-rounded is-small is-link scroll-to-top-btn" id="scrollToTopBtn" title="Subir" aria-label="Subir al inicio">
+      <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
 
-  <script src="{{ '/assets/js/script.js?v=1.0.14' | relative_url }}" defer></script>
-</body>
-
+    <script src="{{ '/assets/js/script.js?v=1.0.15' | relative_url }}" defer></script>
+  </body>
 </html>

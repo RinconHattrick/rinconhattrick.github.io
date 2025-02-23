@@ -6,38 +6,30 @@ permalink: /contacto/
 
 <div class="container">
   <!-- Encabezado -->
-  <section class="hero is-small is-link">
-    <div class="hero-body has-text-centered">
+  <section class="hero is-small is-link has-text-centered">
+    <div class="hero-body">
       <h1 class="title is-2">Contáctame</h1>
-      <p class="subtitle is-4">¿Tienes preguntas, comentarios o simplemente quieres hablar sobre estrategias de
-        Hattrick?</p>
+      <p class="subtitle is-4">¿Tienes preguntas, comentarios o simplemente quieres hablar sobre estrategias de Hattrick?</p>
     </div>
   </section>
 
   <!-- Métodos de Contacto -->
   <section class="section">
     <div class="columns is-multiline is-centered">
-      {% assign contact_methods = "Telegram,WhatsApp,Correo Electrónico" | split: "," %}
-      {% assign icons = "fa-telegram,fa-whatsapp,fa-envelope" | split: "," %}
-      {% assign colors = "is-info,is-success,is-danger" | split: "," %}
-      {% assign descriptions = "Únete a nuestra comunidad para discutir estrategias y compartir
-      experiencias.,Contáctame por WhatsApp para asesoría rápida.,Envía tus consultas o propuestas de colaboración por
-      correo electrónico." | split: "," %}
-      {% assign links = "https://t.me/JuvenilesHT,https://wa.me/qr/537E4GO72BHHB1,mailto:tutorhattrick@hotmail.com" |
-      split: "," %}
-
-      {% for method in contact_methods %}
+      {% assign contact_data = "Telegram|fa-telegram|is-info|Únete a nuestra comunidad para discutir estrategias y compartir
+      experiencias.|https://t.me/JuvenilesHT,WhatsApp|fa-whatsapp|is-success|Contáctame por WhatsApp para asesoría
+      rápida.|https://wa.me/qr/537E4GO72BHHB1,Correo Electrónico|fa-envelope|is-danger|Envía tus consultas o propuestas de colaboración por correo
+      electrónico.|mailto:tutorhattrick@hotmail.com" | split: "," %} {% for data in contact_data %} {% assign item = data | split: "|" %}
       <div class="column is-4">
         <div class="card has-text-centered">
           <div class="card-content">
             <span class="icon is-large mb-3">
-              <i class="fab {{ icons[forloop.index0] }} fa-2x"></i>
+              <i class="fab {{ item[1] }} fa-2x"></i>
             </span>
-            <h2 class="title is-5">{{ method }}</h2>
-            <p class="mb-4">{{ descriptions[forloop.index0] }}</p>
-            <a href="{{ links[forloop.index0] }}" target="_blank" rel="noopener noreferrer"
-              class="button {{ colors[forloop.index0] }} is-medium is-fullwidth">
-              <i class="fab {{ icons[forloop.index0] }}"></i>
+            <h2 class="title is-5">{{ item[0] }}</h2>
+            <p class="mb-4">{{ item[3] }}</p>
+            <a href="{{ item[4] }}" target="_blank" rel="noopener noreferrer" class="button {{ item[2] }} is-medium is-fullwidth">
+              <i class="fab {{ item[1] }}"></i>
               <span>Contactar</span>
             </a>
           </div>
@@ -66,8 +58,7 @@ permalink: /contacto/
 
   <!-- Mensaje Final -->
   <section class="box has-text-centered p-5">
-    <p class="is-size-5">Estoy aquí para ayudarte con cualquier aspecto de Hattrick. No dudes en contactarme por el
-      medio que prefieras. ¡Espero tu mensaje!</p>
+    <p class="is-size-5">Estoy aquí para ayudarte con cualquier aspecto de Hattrick. No dudes en contactarme por el medio que prefieras. ¡Espero tu mensaje!</p>
   </section>
 
   <!-- Botón de Volver al Inicio -->

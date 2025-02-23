@@ -1,17 +1,16 @@
 ---
 layout: default
 ---
-<div class="container">
 
-  <section class="hero is-small is-link">
-    <div class="hero-body has-text-centered">
-      <div class="container">
-        <h1 class="title is-2">{{ page.title }}</h1>
-        <p class="is-small">
-          <time datetime="{{ page.date | date_to_xmlschema }}">Publicado el {{ page.date | date: "%d/%m/%Y" }}</time>
-          {% if page.author %} <span class="mx-2">por</span> <strong>{{ page.author }}</strong> {% endif %}
-        </p>
-      </div>
+<div class="container">
+  <!-- Encabezado del artículo -->
+  <section class="hero is-small is-link has-text-centered">
+    <div class="hero-body">
+      <h1 class="title is-2">{{ page.title }}</h1>
+      <p class="is-small">
+        <time datetime="{{ page.date | date_to_xmlschema }}">Publicado el {{ page.date | date: "%d/%m/%Y" }}</time>
+        {% if page.author %} <span class="mx-2">por</span> <strong>{{ page.author }}</strong> {% endif %}
+      </p>
     </div>
   </section>
 
@@ -19,7 +18,7 @@ layout: default
     <div class="container">
       {% if page.image %}
       <div class="columns is-centered">
-        <div class="column is-10">
+        <div class="column is-8">
           <figure class="image is-16by9 box has-shadow">
             <img src="{{ page.image | relative_url }}" alt="Imagen del artículo" loading="lazy" />
           </figure>
@@ -69,10 +68,8 @@ layout: default
     <div class="container">
       <h2 class="title is-4">Artículos Relacionados</h2>
       <div class="columns is-multiline is-centered">
-        {% assign category = page.categories | first %}
-        {% if category %}
-        {% assign related_posts = site.categories[category] | where_exp: "post", "post.url != page.url" | reverse %}
-        {% for post in related_posts limit: 4 %}
+        {% assign category = page.categories | first %} {% if category %} {% assign related_posts = site.categories[category] | where_exp: "post", "post.url !=
+        page.url" | reverse %} {% for post in related_posts limit: 4 %}
         <div class="column is-6-tablet is-6-desktop">
           <div class="card has-shadow">
             <div class="card-content">
@@ -90,8 +87,7 @@ layout: default
             </div>
           </div>
         </div>
-        {% endfor %}
-        {% else %}
+        {% endfor %} {% else %}
         <p class="has-text-grey">No hay artículos relacionados.</p>
         {% endif %}
       </div>
@@ -99,61 +95,56 @@ layout: default
   </section>
 </div>
 
-
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    class ShareManager {
-      constructor() {
-        this.shareButton = document.getElementById("shareButton");
-        this.shareData = {
-          title: document.title || "Artículo de El Rincón de Hattrick",
-          text: "¡Lee este artículo interesante en El Rincón de Hattrick!",
-          url: window.location.href,
-        };
-        if (this.shareButton) {
-          this.shareButton.addEventListener("click", () => this.handleShare());
-        }
-      }
-      async handleShare() {
-        if (navigator.share) {
-          try {
-            await navigator.share(this.shareData);
-          } catch (error) {
-            if (error.name !== "AbortError") {
-              this.showFallbackMessage();
-            }
-          }
-        } else {
-          this.showFallbackMessage();
-        }
-      }
-      showFallbackMessage() {
-        if (document.getElementById("share-fallback")) return;
-        const fallbackMessage = document.createElement("div");
-        fallbackMessage.id = "share-fallback";
-        fallbackMessage.classList.add("notification", "is-danger", "mt-3");
-        fallbackMessage.innerHTML = `
-          <button class="delete"></button>
-          No se puede compartir automáticamente. Copia este enlace:
-          <span class="has-background-light p-1 is-family-monospace">${this.shareData.url}</span>
-          <button class="button is-small is-link ml-2" id="copyButton">Copiar</button>
-        `;
-        this.shareButton.after(fallbackMessage);
-        fallbackMessage.addEventListener("click", (event) => {
-          if (event.target.matches(".delete")) fallbackMessage.remove();
-          if (event.target.matches("#copyButton")) this.copyToClipboard();
-        });
-      }
-      async copyToClipboard() {
+    const shareButton = document.getElementById("shareButton");
+    if (!shareButton) return;
+
+    const shareData = {
+      title: document.title,
+      text: "¡Lee este artículo interesante en El Rincón de Hattrick!",
+      url: window.location.href,
+    };
+
+    shareButton.addEventListener("click", async () => {
+      if (navigator.share) {
         try {
-          await navigator.clipboard.writeText(this.shareData.url);
-          alert("¡Enlace copiado al portapapeles!");
-        } catch {
-          alert("No se pudo copiar el enlace. Copia manualmente.");
+          await navigator.share(shareData);
+        } catch (error) {
+          if (error.name !== "AbortError") showFallbackMessage(shareData.url);
         }
+      } else {
+        showFallbackMessage(shareData.url);
+      }
+    });
+
+    function showFallbackMessage(url) {
+      if (document.getElementById("share-fallback")) return;
+
+      const fallbackMessage = document.createElement("div");
+      fallbackMessage.id = "share-fallback";
+      fallbackMessage.className = "notification is-danger mt-3";
+      fallbackMessage.innerHTML = `
+        <button class="delete"></button>
+        No se puede compartir automáticamente. Copia este enlace:
+        <span class="has-background-light p-1 is-family-monospace">${url}</span>
+        <button class="button is-small is-link ml-2" id="copyButton">Copiar</button>
+      `;
+
+      shareButton.after(fallbackMessage);
+      fallbackMessage.addEventListener("click", (event) => {
+        if (event.target.matches(".delete")) fallbackMessage.remove();
+        if (event.target.matches("#copyButton")) copyToClipboard(url);
+      });
+    }
+
+    async function copyToClipboard(url) {
+      try {
+        await navigator.clipboard.writeText(url);
+        alert("¡Enlace copiado al portapapeles!");
+      } catch {
+        alert("No se pudo copiar el enlace. Copia manualmente.");
       }
     }
-    new ShareManager();
-
   });
 </script>

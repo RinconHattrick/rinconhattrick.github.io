@@ -1,18 +1,21 @@
-/* Variables de colores */
+/* ================================
+   Variables de colores y temas
+================================ */
 :root {
   --color-marks: #ffdd57;
   --color-background-light: #ffffff;
   --color-background-dark: #1a1a2e;
-  --card-background: var(--color-background-light);
+  --color-primary: hsl(0, 0%, 21%);
+  --color-link-hover: hsl(217, 88%, 44%);
   --radius: 8px;
   --transition-default: 0.3s ease;
 
   /* Tema global */
   --background: var(--color-background-light);
   --text: #363636;
+  --card-background: var(--color-background-light);
 }
 
-/* Tema oscuro */
 @media (prefers-color-scheme: dark) {
   :root {
     --background: var(--color-background-dark);
@@ -21,6 +24,9 @@
   }
 }
 
+/* ================================
+   Estilos globales
+================================ */
 body {
   background-color: var(--background);
   color: var(--text);
@@ -35,15 +41,20 @@ mark {
   border-radius: var(--radius);
 }
 
+/* ================================
+   Mejoras específicas
+================================ */
 #search-feedback {
   display: block !important;
   visibility: visible !important;
   opacity: 1 !important;
 }
 
-/* Navbar */
+/* ================================
+   Navbar
+================================ */
 .navbar-item.is-active {
-  background-color: hsl(171, 100%, 41%);
+  background-color: var(--color-primary);
   color: var(--color-background-light);
 }
 
@@ -64,13 +75,17 @@ mark {
   visibility: visible;
 }
 
-/* Menú lateral */
-.card-content a:hover {
-  background-color: hsl(204, 86%, 53%);
+/* ================================
+   Menú lateral
+================================ */
+a:hover {
+  background-color: var(--color-link-hover);
   color: var(--color-background-light);
 }
 
-/* Botón "Scroll to Top" */
+/* ================================
+   Botón "Scroll to Top"
+================================ */
 .scroll-to-top-btn {
   position: fixed;
   bottom: 25px;
@@ -83,17 +98,11 @@ mark {
   opacity: 1;
 }
 
-@media (min-width: 1024px) {
-  main {
-    margin-top: 3rem;
-  }
-}
+/* ================================
+   Media Queries
+================================ */
 
 @media (max-width: 768px) {
-  main {
-    margin-top: 0;
-  }
-
   .scroll-to-top-btn {
     bottom: 60px;
   }
