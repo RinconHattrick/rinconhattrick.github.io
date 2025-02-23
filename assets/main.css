@@ -1,14 +1,19 @@
+/* ==================================================
+   VARIABLES Y TEMAS
+   ================================================== */
+
 /* Variables de colores */
 :root {
   --color-primary: #3273dc;
-  --color-secondary: #00d1b2;
   --color-marks: #ffdd57;
+  --color-background-light: #ffffff;
   --color-background-dark: #1a1a2e;
+  --card-background: var(--color-background-light);
   --radius: 8px;
   --transition-default: 0.3s ease;
 
   /* Tema global */
-  --background: #ffffff;
+  --background: var(--color-background-light);
   --text: #363636;
 }
 
@@ -17,10 +22,14 @@
   :root {
     --background: var(--color-background-dark);
     --text: #f1f1f1;
+    --card-background: #293241;
   }
 }
 
-/* Estilos de página */
+/* ==================================================
+   ESTILOS GENERALES
+   ================================================== */
+
 body {
   background-color: var(--background);
   color: var(--text);
@@ -28,10 +37,16 @@ body {
   line-height: 1.6;
 }
 
-/* Botón */
-.button:hover {
-  transform: translateY(-1px);
+mark {
+  background-color: var(--color-marks);
+  color: #222;
+  padding: 0.1em 0.3em;
+  border-radius: var(--radius);
 }
+
+/* ==================================================
+   3. COMPONENTES
+   ================================================== */
 
 /* Navbar */
 .navbar-item.is-active {
@@ -41,88 +56,34 @@ body {
 
 .navbar-dropdown {
   max-height: 0;
-  opacity: 0;
-  margin: 0;
   padding: 0;
+  margin: 0;
+  opacity: 0;
   visibility: hidden;
   overflow: hidden;
   transition: max-height var(--transition-default), opacity var(--transition-default), visibility var(--transition-default);
 }
 
-.navbar-item.has-dropdown:hover .navbar-dropdown {
+.navbar-item.has-dropdown.is-hoverable:hover .navbar-dropdown,
+.navbar-item.has-dropdown.is-active .navbar-dropdown {
   max-height: 300px;
   opacity: 1;
   visibility: visible;
-}
-
-/* Animación */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(5px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.fade-in {
-  animation: fadeIn var(--transition-default) ease-in-out forwards;
-  will-change: opacity, transform;
-}
-
-/* Media Queries */
-@media (min-width: 769px) {
-  main,
-  .sticky-sidebar {
-    margin-top: 1.5rem;
-  }
-}
-
-@media (max-width: 768px) {
-  main,
-  .sticky-sidebar {
-    margin-top: 0;
-  }
-  .scroll-to-top-btn {
-    bottom: 60px;
-  }
-}
-
-/*@media (max-width: 768px) {
-  main,
-  .sticky-sidebar {
-    margin-top: 0;
-  }
-}
-*/
-/* Resaltado de texto */
-mark {
-  background-color: var(--color-marks);
-  color: #222;
-  padding: 0.1em 0.3em;
-  border-radius: var(--radius);
 }
 
 /* Sticky Sidebar */
 .sticky-sidebar {
   max-width: 300px;
   min-height: 250px;
-  max-height: 90vh;
+  max-height: calc(100vh - 6rem);
   overflow-y: auto;
-  background-color: var(--background);
+  background-color: var(--card-background);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   border-radius: var(--radius);
   transition: box-shadow var(--transition-default), background-color var(--transition-default), color var(--transition-default);
 }
 
 /* Menú lateral */
-.menu-list a {
-  border-radius: var(--radius);
-  transition: background-color var(--transition-default), color var(--transition-default);
-}
-
 .menu-list a:hover {
   background-color: var(--color-primary);
   color: var(--background);
@@ -139,4 +100,32 @@ mark {
 
 .scroll-to-top-btn.show {
   opacity: 1;
+}
+
+/* ==================================================
+   MEDIA QUERIES
+   ================================================== */
+
+@media (min-width: 1024px) {
+
+  main,
+  .sticky-sidebar {
+    margin-top: 3rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1023px) {
+  main {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    margin-top: 0;
+  }
+
+  .scroll-to-top-btn {
+    bottom: 60px;
+  }
 }
