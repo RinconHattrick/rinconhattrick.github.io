@@ -16,7 +16,7 @@
         <a class="navbar-item {% if page.url == '/' %}is-active{% endif %}" href="{{ '/' | relative_url }}"> <i class="fas fa-home"></i> Inicio </a>
 
         <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link"> <i class="fas fa-folder"></i> Categorías </a>
+          <div class="navbar-link"><i class="fas fa-folder"></i> Categorías</div>
           <div class="navbar-dropdown">
             {% assign category_pages = site.pages | where: "layout", "category" %} {% for category_page in category_pages %}
             <a class="navbar-item {% if page.url == category_page.url %}is-active{% endif %}" href="{{ category_page.url | relative_url }}">
