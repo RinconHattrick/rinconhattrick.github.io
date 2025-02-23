@@ -2,51 +2,43 @@
 layout: default
 ---
 
-<section class="hero is-link">
+<progress id="readingProgress" class="progress is-primary" value="0" max="100"></progress>
+
+<section class="hero is-small is-link">
   <div class="hero-body has-text-centered">
     <div class="container">
       <h1 class="title is-2">{{ page.title }}</h1>
-      <p class="has-text-grey">
-        <time datetime="{{ page.date | date_to_xmlschema }}"> Publicado el {{ page.date | date: "%d/%m/%Y" }} </time>
-        {% if page.author %}
-        <span class="mx-2">por</span>
-        <strong>{{ page.author }}</strong>
-        {% endif %}
+      <p class="is-small">
+        <time datetime="{{ page.date | date_to_xmlschema }}">Publicado el {{ page.date | date: "%d/%m/%Y" }}</time>
+        {% if page.author %} <span class="mx-2">por</span> <strong>{{ page.author }}</strong> {% endif %}
       </p>
-      {% assign words = content | number_of_words %} {% assign reading_time = words | divided_by: 200 | plus: 1 %}
-
-      <p class="tag is-info is-light">⏳ Tiempo de lectura: aproximadamente {{ reading_time }} minuto{% if reading_time >
-        1 %}s{% endif %}</p>
     </div>
   </div>
 </section>
 
-<section class="px-4">
-  <article class="container article">
-    <!-- Imagen Destacada -->
+<section class="section">
+  <div class="container">
     {% if page.image %}
     <div class="columns is-centered">
       <div class="column is-10">
-        <figure class="image is-16by9 box has-shadow fade-in" width="360" height="203">
+        <figure class="image is-16by9 box has-shadow">
           <img src="{{ page.image | relative_url }}" alt="Imagen del artículo" loading="lazy" />
         </figure>
       </div>
     </div>
     {% endif %}
 
-    <section class="content mt-5">{{ content }}</section>
+    <article class="content mt-5">{{ content }}</article>
 
     <div class="has-text-centered my-6">
       <button id="shareButton" class="button is-primary is-light is-rounded" aria-label="Compartir artículo">
         <span class="icon-text">
-          <span class="icon">
-            <i class="fas fa-share-alt"></i>
-          </span>
+          <span class="icon"><i class="fas fa-share-alt"></i></span>
           <span>Compartir</span>
         </span>
       </button>
     </div>
-  </article>
+  </div>
 </section>
 
 <hr />
@@ -75,25 +67,36 @@ layout: default
 
 <!-- Artículos relacionados -->
 <section class="section mt-6">
-  <h2 class="title is-4">Artículos Relacionados</h2>
-  <div class="columns is-multiline is-centered">
-    {% assign category = page.categories | first %} {% if category %} {% assign related_posts =
-    site.categories[category] | where_exp: "post", "post.url !=
-    page.url" | reverse | limit: 4 %} {% for post in related_posts %}
-    <div class="column is-6-tablet is-3-desktop">
-      <div class="card has-shadow">
-        <div class="card-content">
-          <h3 class="title is-5">
-            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-          </h3>
-          <p>{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
-          <a href="{{ post.url | relative_url }}" class="button is-primary is-small">Leer más</a>
+  <div class="container">
+    <h2 class="title is-4">Artículos Relacionados</h2>
+    <div class="columns is-multiline is-centered">
+      {% assign category = page.categories | first %}
+      {% if category %}
+      {% assign related_posts = site.categories[category] | where_exp: "post", "post.url != page.url" | reverse %}
+      {% for post in related_posts limit: 4 %}
+      <div class="column is-6-tablet is-6-desktop">
+        <div class="card has-shadow">
+          <div class="card-content">
+            <h3 class="title is-5">
+              <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            </h3>
+            {% if post.tags %}
+            <p class="tags">
+              {% for tag in post.tags %}
+              <span class="tag is-info">{{ tag }}</span>
+              {% endfor %}
+            </p>
+            {% endif %}
+            <p>{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
+            <a href="{{ post.url | relative_url }}" class="button is-primary is-small">Leer más</a>
+          </div>
         </div>
       </div>
+      {% endfor %}
+      {% else %}
+      <p class="has-text-grey">No hay artículos relacionados.</p>
+      {% endif %}
     </div>
-    {% endfor %} {% else %}
-    <p class="has-text-grey">No hay artículos relacionados.</p>
-    {% endif %}
   </div>
 </section>
 
@@ -102,19 +105,15 @@ layout: default
     class ShareManager {
       constructor() {
         this.shareButton = document.getElementById("shareButton");
-
-        const pageTitle = document.querySelector("title")?.innerText || "Artículo de El Rincón de Hattrick";
         this.shareData = {
-          title: pageTitle,
+          title: document.title || "Artículo de El Rincón de Hattrick",
           text: "¡Lee este artículo interesante en El Rincón de Hattrick!",
           url: window.location.href,
         };
-
         if (this.shareButton) {
           this.shareButton.addEventListener("click", () => this.handleShare());
         }
       }
-
       async handleShare() {
         if (navigator.share) {
           try {
@@ -128,10 +127,8 @@ layout: default
           this.showFallbackMessage();
         }
       }
-
       showFallbackMessage() {
         if (document.getElementById("share-fallback")) return;
-
         const fallbackMessage = document.createElement("div");
         fallbackMessage.id = "share-fallback";
         fallbackMessage.classList.add("notification", "is-danger", "mt-3");
@@ -141,14 +138,12 @@ layout: default
           <span class="has-background-light p-1 is-family-monospace">${this.shareData.url}</span>
           <button class="button is-small is-link ml-2" id="copyButton">Copiar</button>
         `;
-
         this.shareButton.after(fallbackMessage);
         fallbackMessage.addEventListener("click", (event) => {
           if (event.target.matches(".delete")) fallbackMessage.remove();
           if (event.target.matches("#copyButton")) this.copyToClipboard();
         });
       }
-
       async copyToClipboard() {
         try {
           await navigator.clipboard.writeText(this.shareData.url);
@@ -158,7 +153,15 @@ layout: default
         }
       }
     }
-
     new ShareManager();
+
+    // Barra de progreso de lectura
+    document.addEventListener("scroll", () => {
+      const article = document.querySelector(".content");
+      if (!article) return;
+      const totalHeight = article.scrollHeight - window.innerHeight;
+      const progress = (window.scrollY / totalHeight) * 100;
+      document.getElementById("readingProgress").value = progress;
+    });
   });
 </script>

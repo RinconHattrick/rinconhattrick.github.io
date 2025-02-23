@@ -1,6 +1,6 @@
 /* Variables de colores */
 :root {
-  --color-primary: #3273dc;
+  --color-primary: hsl(204, 86%, 53%);
   --color-marks: #ffdd57;
   --color-background-light: #ffffff;
   --color-background-dark: #1a1a2e;
@@ -34,6 +34,12 @@ mark {
   color: #222;
   padding: 0.1em 0.3em;
   border-radius: var(--radius);
+}
+
+#search-feedback {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
 /* Navbar */
@@ -79,7 +85,6 @@ mark {
 }
 
 @media (min-width: 1024px) {
-
   main {
     margin-top: 3rem;
   }

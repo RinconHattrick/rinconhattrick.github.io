@@ -5,7 +5,7 @@ title: "El Rincón de Hattrick"
 
 <main class="container">
   <!-- Hero principal -->
-  <section class="hero is-link" role="banner">
+  <section class="hero is-small is-link" role="banner">
     <div class="hero-body has-text-centered">
       <h1 class="title is-2">{{ site.title }}</h1>
       <p class="subtitle is-4">{{ site.description | default: "Bienvenido a nuestro blog sobre Hattrick." }}</p>
@@ -13,16 +13,20 @@ title: "El Rincón de Hattrick"
   </section>
 
   <!-- Iteración de categorías -->
-  {% for category in site.categories %} {% assign category_name = category[0] %} {% assign category_page = site.pages | where: "category", category_name | first
+  {% for category in site.categories %} {% assign category_name = category[0] %} {% assign category_page = site.pages |
+  where: "category", category_name | first
   %} {% assign recent_posts = category[1] | sort: "date" | reverse | slice: 0,2 %}
 
-  <article id="{{ category_name | slugify }}" class="category-section mt-5" role="region" aria-labelledby="category-title-{{ category_name | slugify }}">
+  <article id="{{ category_name | slugify }}" class="category-section mt-5" role="region"
+    aria-labelledby="category-title-{{ category_name | slugify }}">
     <div class="card">
       <header class="card-header">
-        <h2 id="category-title-{{ category_name | slugify }}" class="title is-3">{{ category_page.title | default: category_name | capitalize }}</h2>
+        <h2 id="category-title-{{ category_name | slugify }}" class="title is-3">{{ category_page.title | default:
+          category_name | capitalize }}</h2>
       </header>
       <div class="card-content">
-        <p class="subtitle is-6 mb-4">{{ category_page.description | default: "Explora artículos sobre esta temática en nuestro blog." }}</p>
+        <p class="subtitle is-6 mb-4">{{ category_page.description | default: "Explora artículos sobre esta temática en
+          nuestro blog." }}</p>
 
         <div class="columns is-multiline is-centered">
           {% for post in recent_posts %}
@@ -30,7 +34,8 @@ title: "El Rincón de Hattrick"
             <article class="box has-shadow">
               {% if post.image %}
               <figure class="image is-16by9 box has-shadow fade-in">
-                <img class="has-radius" src="{{ post.image | relative_url }}" alt="{{ post.title }}" loading="lazy" width="360" height="203" />
+                <img class="has-radius" src="{{ post.image | relative_url }}" alt="{{ post.title }}" loading="lazy"
+                  width="360" height="203" />
               </figure>
               {% endif %}
 
@@ -45,7 +50,8 @@ title: "El Rincón de Hattrick"
                 <a href="{{ post.url | relative_url }}" rel="bookmark">{{ post.title }}</a>
               </h3>
 
-              <p class="mt-2">{{ post.excerpt | strip_html | truncatewords: 30 | default: "Lee más sobre este artículo haciendo clic en el título." }}</p>
+              <p class="mt-2">{{ post.excerpt | strip_html | truncatewords: 30 | default: "Lee más sobre este artículo
+                haciendo clic en el título." }}</p>
 
               {% if post.tags %}
               <div class="tags mt-2">
@@ -61,11 +67,8 @@ title: "El Rincón de Hattrick"
 
         <!-- Botón para más artículos -->
         <div class="has-text-centered mt-4">
-          <a
-            href="{{ category_page.url | relative_url }}"
-            class="button is-link is-light is-rounded"
-            aria-label="Ver más artículos de {{ category_page.title | default: category_name }}"
-          >
+          <a href="{{ category_page.url | relative_url }}" class="button is-link is-light is-rounded"
+            aria-label="Ver más artículos de {{ category_page.title | default: category_name }}">
             <span class="icon-text">
               <span class="icon"><i class="fas fa-folder-open"></i></span>
               <span>Ver más en {{ category_page.title | default: category_name }}</span>
