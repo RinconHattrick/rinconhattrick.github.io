@@ -1,30 +1,14 @@
 /* Variables de colores */
 :root {
   --color-primary: #3273dc;
-  --color-secondary: #23d160;
-  --color-marks: #ffd166;
-
-  --color-background-light: #ffffff;
+  --color-secondary: #00d1b2;
+  --color-marks: #ffdd57;
   --color-background-dark: #1a1a2e;
-
-  --card-background: var(--color-background-light);
-
-  --gradient-primary: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
   --radius: 8px;
-
-  /* Transiciones */
-  --transition-transform: transform 0.3s ease;
-  --transition-opacity: opacity 0.3s ease;
-  --transition-size: max-height 0.3s ease, width 0.3s ease;
-  --transition-colors: background-color 0.3s ease, color 0.3s ease;
-  --transition-shadow: box-shadow 0.3s ease;
-
-  /* Sombras */
-  --shadow-md: 0 2px 5px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 4px 10px rgba(0, 0, 0, 0.2);
+  --transition-default: 0.3s ease;
 
   /* Tema global */
-  --background: var(--color-background-light);
+  --background: #ffffff;
   --text: #363636;
 }
 
@@ -33,7 +17,6 @@
   :root {
     --background: var(--color-background-dark);
     --text: #f1f1f1;
-    --card-background: #293241;
   }
 }
 
@@ -45,63 +28,32 @@ body {
   line-height: 1.6;
 }
 
-/* botón */
-.button:hover,
-.button:active {
+/* Botón */
+.button:hover {
   transform: translateY(-1px);
-  box-shadow: var(--shadow-md);
-  will-change: transform;
 }
 
+/* Navbar */
 .navbar-item.is-active {
-  background-color: var(--color-primary) !important;
-  color: white !important;
+  background-color: var(--color-primary);
+  color: white;
 }
 
 .navbar-dropdown {
   max-height: 0;
-  padding: 0;
-  margin: 0;
   opacity: 0;
+  margin: 0;
+  padding: 0;
+  visibility: hidden;
   overflow: hidden;
-  transition: var(--transition-size), var(--transition-opacity);
+  transition: max-height var(--transition-default), opacity var(--transition-default), visibility var(--transition-default);
 }
 
-.navbar-item.has-dropdown.is-hoverable:hover .navbar-dropdown,
-.navbar-item.has-dropdown.is-active .navbar-dropdown {
+.navbar-item.has-dropdown:hover .navbar-dropdown {
   max-height: 300px;
   opacity: 1;
+  visibility: visible;
 }
-
-/* Imagen */
-.image img {
-  object-fit: cover;
-  transition: var(--transition-transform);
-}
-
-/* Efecto hover en imágenes dentro de artículos */
-article:hover .image img {
-  transform: scale(1.05);
-}
-
-/* Manejo de imágenes con error */
-.image img.has-error {
-  object-fit: contain;
-  background: #f5f5f5;
-  padding: 1rem;
-}
-
-/* Efecto de carga opcional */
-.image.is-loaded::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.05);
-  transition: opacity 0.3s ease;
-  opacity: 0;
-}
-
-/* ****** */
 
 /* Animación */
 @keyframes fadeIn {
@@ -109,7 +61,6 @@ article:hover .image img {
     opacity: 0;
     transform: translateY(5px);
   }
-
   to {
     opacity: 1;
     transform: translateY(0);
@@ -117,98 +68,59 @@ article:hover .image img {
 }
 
 .fade-in {
-  animation: fadeIn 0.3s ease-out forwards;
+  animation: fadeIn var(--transition-default) ease-in-out forwards;
   will-change: opacity, transform;
 }
 
 /* Media Queries */
-@media (min-width: 1024px) {
-
+@media (min-width: 769px) {
   main,
   .sticky-sidebar {
-    margin-top: 3.5rem;
-  }
-}
-
-@media (min-width: 769px) and (max-width: 1023px) {
-
-  main,
-  .sticky-sidebar {
-    margin-top: 2rem;
+    margin-top: 1.5rem;
   }
 }
 
 @media (max-width: 768px) {
-
   main,
   .sticky-sidebar {
     margin-top: 0;
   }
-
   .scroll-to-top-btn {
-    right: 20px;
-    bottom: 100px;
+    bottom: 60px;
   }
 }
 
-/* Buscador */
-.search-results-list li {
-  border-bottom: 1px solid var(--text);
-  padding-bottom: 10px;
-  margin-bottom: 10px;
-  transition: var(--transition-colors);
+/*@media (max-width: 768px) {
+  main,
+  .sticky-sidebar {
+    margin-top: 0;
+  }
 }
-
-.search-results-list li:last-child {
-  margin-bottom: 0;
-  border-bottom: none;
-}
-
-.search-results-list li:hover {
-  background-color: rgba(0, 0, 0, 0.05);
-}
-
-#search-feedback:not(.is-hidden) {
-  display: block;
-}
-
+*/
+/* Resaltado de texto */
 mark {
   background-color: var(--color-marks);
   color: #222;
-}
-
-.notification.is-warning {
-  background-color: rgba(255, 221, 87, 0.2);
-  border: 1px solid var(--color-marks);
-  transition: var(--transition-colors);
-}
-
-.notification.is-warning .icon {
-  color: var(--color-marks);
-  font-size: 1.2rem;
-}
-
-/* Accesibilidad */
-:focus-visible {
-  outline: 2px solid var(--color-secondary);
-  outline-offset: 2px;
+  padding: 0.1em 0.3em;
+  border-radius: var(--radius);
 }
 
 /* Sticky Sidebar */
 .sticky-sidebar {
   max-width: 300px;
   min-height: 250px;
-  max-height: calc(100vh - 6rem);
+  max-height: 90vh;
   overflow-y: auto;
-  background-color: var(--card-background);
-  box-shadow: var(--shadow-md);
+  background-color: var(--background);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   border-radius: var(--radius);
-  transition: var(--transition-shadow), var(--transition-colors);
+  transition: box-shadow var(--transition-default), background-color var(--transition-default), color var(--transition-default);
 }
 
+/* Menú lateral */
 .menu-list a {
   border-radius: var(--radius);
-  transition: var(--transition-colors);
+  transition: background-color var(--transition-default), color var(--transition-default);
 }
 
 .menu-list a:hover {
@@ -216,14 +128,13 @@ mark {
   color: var(--background);
 }
 
-/* Scroll to Top Button */
+/* Botón "Scroll to Top" */
 .scroll-to-top-btn {
   position: fixed;
-  bottom: 1rem;
-  right: 1rem;
+  bottom: 25px;
+  right: 16px;
   opacity: 0;
-  background-color: var(--color-secondary);
-  transition: var(--transition-opacity), var(--transition-transform);
+  transition: opacity var(--transition-default);
 }
 
 .scroll-to-top-btn.show {

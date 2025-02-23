@@ -19,20 +19,21 @@ document.addEventListener("DOMContentLoaded", () => {
     if (element) element.setAttribute("aria-expanded", state);
   };
 
-  /** Función para forzar un repintado (soluciona algunos problemas visuales) */
-  const forceRepaint = (element) => {
-    element.style.display = "none";
-    element.offsetHeight; // Forzar reflujo
-    element.style.display = "";
-  };
-
-  /** === Validación de búsqueda (mínimo 3 caracteres) === */
+  /** === Validación de búsqueda optimizada === */
   if (searchInput && searchButton) {
+    let timeout;
     const validateSearch = () => {
       searchButton.disabled = searchInput.value.trim().length < 3;
     };
 
-    searchInput.addEventListener("input", validateSearch);
+    const debounce =
+      (func, delay = 300) =>
+      (...args) => {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func(...args), delay);
+      };
+
+    searchInput.addEventListener("input", debounce(validateSearch));
     searchInput.addEventListener("keydown", (event) => {
       if (event.key === "Enter" && searchInput.value.trim().length < 3) {
         event.preventDefault();
@@ -42,73 +43,62 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /** === Botón "Scroll to Top" === */
   if (scrollToTopBtn) {
-    let isVisible = false;
-
     const updateScrollButton = () => {
-      const shouldShow = window.scrollY > 200;
-      if (shouldShow !== isVisible) {
-        toggleClass(scrollToTopBtn, "show", shouldShow);
-        isVisible = shouldShow;
-      }
+      toggleClass(scrollToTopBtn, "show", window.scrollY > 200);
     };
 
-    window.addEventListener("scroll", () => requestAnimationFrame(updateScrollButton));
+    window.addEventListener("scroll", updateScrollButton);
     scrollToTopBtn.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
   }
 
   /** === Navbar Responsiva === */
   const updateNavbarPosition = () => {
-    const isMobile = window.matchMedia("(max-width: 767px)").matches;
-    toggleClass(nav, "is-fixed-top", !isMobile);
-    toggleClass(nav, "is-fixed-bottom", isMobile);
-    toggleClass(body, "has-navbar-fixed-top", !isMobile);
-    toggleClass(body, "has-navbar-fixed-bottom", isMobile);
-    forceRepaint(nav); // Soluciona algunos problemas de visualización
+    const isMobile = window.innerWidth <= 767;
+    ["is-fixed-top", "has-navbar-fixed-top"].forEach((cls) => toggleClass(nav, cls, !isMobile));
+    ["is-fixed-bottom", "has-navbar-fixed-bottom"].forEach((cls) => toggleClass(nav, cls, isMobile));
   };
 
-  window.addEventListener("resize", () => requestAnimationFrame(updateNavbarPosition));
+  new ResizeObserver(updateNavbarPosition).observe(document.documentElement);
   updateNavbarPosition();
 
   /** === Manejo de Menús Interactivos === */
   document.addEventListener("click", (event) => {
     const target = event.target;
+    const isMobileView = window.innerWidth <= 1024;
 
-    // Alternar el menú de hamburguesa
-    if (burger && menu && (target === burger || burger.contains(target))) {
+    // Alternar menú de hamburguesa
+    if (burger && menu && target.closest(".navbar-burger")) {
       const isActive = menu.classList.toggle("is-active");
       toggleClass(burger, "is-active", isActive);
       toggleAriaExpanded(burger, isActive);
       return;
     }
 
-    // Alternar el menú de categorías (solo en móvil)
-    if (categoryToggle && categoryMenu && (target === categoryToggle || categoryToggle.contains(target))) {
-      if (window.innerWidth <= 1024) {
-        event.preventDefault();
-        const isActive = categoryMenu.classList.toggle("is-active");
-        toggleAriaExpanded(categoryToggle, isActive);
-      }
+    // Alternar menú de categorías en vista móvil
+    if (categoryToggle && categoryMenu && target.closest("#category-toggle") && isMobileView) {
+      event.preventDefault();
+      const isActive = categoryMenu.classList.toggle("is-active");
+      toggleAriaExpanded(categoryToggle, isActive);
       return;
     }
 
-    // Cerrar menús cuando se hace clic fuera
-    if (menu && !menu.contains(target) && burger && !burger.contains(target)) {
-      toggleClass(menu, "is-active", false);
-      toggleClass(burger, "is-active", false);
-      toggleAriaExpanded(burger, false);
-    }
-
-    if (categoryMenu && !categoryMenu.contains(target) && categoryToggle && !categoryToggle.contains(target)) {
-      toggleClass(categoryMenu, "is-active", false);
-      toggleAriaExpanded(categoryToggle, false);
-    }
+    // Cerrar menús al hacer clic fuera
+    [menu, categoryMenu].forEach((menuEl, i) => {
+      const toggleEl = i === 0 ? burger : categoryToggle;
+      if (menuEl && toggleEl && !menuEl.contains(target) && !toggleEl.contains(target)) {
+        toggleClass(menuEl, "is-active", false);
+        toggleAriaExpanded(toggleEl, false);
+      }
+    });
   });
 
   // Cerrar menú en pantallas grandes al redimensionar
   window.addEventListener("resize", () => {
     if (window.innerWidth > 1024) {
-      toggleClass(menu, "is-active", false);
-      toggleClass(burger, "is-active", false);
+      ["is-active"].forEach((cls) => {
+        toggleClass(menu, cls, false);
+        toggleClass(burger, cls, false);
+      });
       toggleAriaExpanded(burger, false);
     }
   });
