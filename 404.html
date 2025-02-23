@@ -5,36 +5,24 @@ permalink: /404.html
 ---
 
 <section class="hero is-fullheight-with-navbar" lang="es">
-  <div class="hero-body">
-    <div class="container">
-      <div class="columns is-centered">
-        <div class="column is-12-tablet is-8-desktop is-6-widescreen">
-          <div class="card has-shadow">
-            <div class="card-content has-text-centered">
-              <main role="main">
-                <h1 id="error-title" class="title is-2 has-text-danger mb-4" role="heading" aria-level="1">¡Ups! Página
-                  no encontrada</h1>
+  <div class="hero-body  has-background-light">
+    <div class="container has-text-centered">
+      <figure class="image is-128x128 is-inline-block">
+        <img src="{{ '/assets/img/404.svg' | relative_url }}" alt="Error 404">
+      </figure>
 
-                <p class="subtitle is-4 mb-5">La página que buscas no está disponible o ha sido movida.</p>
+      <h1 class="title is-2 has-text-danger mt-4">¡Ups! No encontramos esa página</h1>
+      <p class="subtitle is-4">Parece que te perdiste. Intenta alguna de estas opciones:</p>
 
-                <p class="is-size-5 mb-6">¿Qué tal si intentas alguna de estas opciones?</p>
-
-                <!-- Botones de navegación -->
-                <div class="buttons is-centered">
-                  <a href="{{ '/' | relative_url }}" class="button is-link is-rounded">
-                    <span class="icon"><i class="fas fa-home"></i></span>
-                    <span>Volver al Inicio</span>
-                  </a>
-
-                  <button onclick="window.history.back()" class="button is-warning is-rounded">
-                    <span class="icon"><i class="fas fa-arrow-left"></i></span>
-                    <span>Ir atrás</span>
-                  </button>
-                </div>
-              </main>
-            </div>
-          </div>
-        </div>
+      <div class="buttons is-centered">
+        <a href="{{ '/' | relative_url }}" class="button is-link is-rounded">
+          <span class="icon"><i class="fas fa-home"></i></span>
+          <span>Inicio</span>
+        </a>
+        <button onclick="window.history.back()" class="button is-warning is-rounded">
+          <span class="icon"><i class="fas fa-arrow-left"></i></span>
+          <span>Atrás</span>
+        </button>
       </div>
     </div>
   </div>

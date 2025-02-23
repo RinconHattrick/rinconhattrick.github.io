@@ -4,86 +4,77 @@ title: "Contacto"
 permalink: /contacto/
 ---
 
-<section class="px-4">
-  <div class="container">
-    <!-- Hero Header -->
-    <section class="hero is-link">
-      <div class="hero-body has-text-centered">
-        <h1 class="title is-2">Contáctame</h1>
-        <p class="subtitle is-4">¿Tienes preguntas, comentarios o simplemente quieres hablar sobre estrategias de Hattrick?</p>
-      </div>
-    </section>
-
-    <!-- Métodos de Contacto -->
-    <section class="section">
-      <div class="container">
-        <div class="columns is-multiline is-variable is-5 is-centered">
-          {% assign contact_methods = "Telegram,WhatsApp,Correo Electrónico" | split: "," %} {% assign icons = "fa-telegram,fa-whatsapp,fa-envelope" | split:
-          "," %} {% assign colors = "is-info,is-success,is-danger" | split: "," %} {% assign descriptions = "Únete a nuestra comunidad para discutir estrategias
-          y compartir experiencias.,Contáctame por WhatsApp para asesoría rápida.,Envía tus consultas o propuestas de colaboración por correo electrónico." |
-          split: "," %} {% assign links = "https://t.me/JuvenilesHT,https://wa.me/qr/537E4GO72BHHB1,mailto:tutorhattrick@hotmail.com" | split: "," %} {% for
-          method in contact_methods %}
-          <div class="column is-4-desktop is-6-tablet">
-            <div class="card has-shadow has-text-centered">
-              <div class="card-content">
-                <div class="mb-4">
-                  <span class="icon is-large">
-                    <i class="fab {{ icons[forloop.index0] }} fa-2x" aria-hidden="true"></i>
-                  </span>
-                </div>
-                <h2 class="title is-4 mb-3">{{ method }}</h2>
-                <p class="mb-5">{{ descriptions[forloop.index0] }}</p>
-                <a
-                  href="{{ links[forloop.index0] }}"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="button {{ colors[forloop.index0] }} is-medium is-rounded is-fullwidth-mobile"
-                  aria-label="Contactar por {{ method }}"
-                >
-                  <span class="icon">
-                    <i class="fab {{ icons[forloop.index0] }}" aria-hidden="true"></i>
-                  </span>
-                  <span>Contactar</span>
-                </a>
-              </div>
-            </div>
-          </div>
-          {% endfor %}
-        </div>
-      </div>
-    </section>
-
-    <!-- Sección de Preguntas Frecuentes -->
-    <section class="section">
-      <div class="container">
-        <h2 class="title is-2 has-text-centered">Preguntas Frecuentes</h2>
-        <div class="content">
-          <details class="box has-shadow">
-            <summary class="title is-5">¿Cuánto tiempo tardas en responder?</summary>
-            <p>Intento responder en menos de 24 horas. Si no recibes respuesta, revisa tu carpeta de spam.</p>
-          </details>
-
-          <details class="box has-shadow">
-            <summary class="title is-5">¿Puedo pedir asesoramiento sobre Hattrick?</summary>
-            <p>Sí, ayudo con estrategias, juveniles y tácticas. Contáctame por Telegram o correo.</p>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <!-- Mensaje Final -->
-    <section class="box has-shadow has-text-centered p-6 mb-6">
-      <p class="is-size-5">
-        Estoy aquí para ayudarte con cualquier aspecto de Hattrick. No dudes en contactarme por el medio que prefieras. ¡Espero tu mensaje!
-      </p>
-    </section>
-
-    <!-- Botón de Volver al Inicio -->
-    <div class="has-text-centered mt-5">
-      <a href="/" class="button is-link is-rounded" aria-label="Inicio">
-        <span class="icon"><i class="fas fa-home"></i></span>
-        <span>Volver al Inicio</span>
-      </a>
+<div class="container">
+  <!-- Encabezado -->
+  <section class="hero has-text-centered is-link">
+    <div class="hero-body">
+      <h1 class="title is-2">Contáctame</h1>
+      <p class="subtitle is-4">¿Tienes preguntas, comentarios o simplemente quieres hablar sobre estrategias de
+        Hattrick?</p>
     </div>
+  </section>
+
+  <!-- Métodos de Contacto -->
+  <section class="section">
+    <div class="columns is-multiline is-centered">
+      {% assign contact_methods = "Telegram,WhatsApp,Correo Electrónico" | split: "," %}
+      {% assign icons = "fa-telegram,fa-whatsapp,fa-envelope" | split: "," %}
+      {% assign colors = "is-info,is-success,is-danger" | split: "," %}
+      {% assign descriptions = "Únete a nuestra comunidad para discutir estrategias y compartir
+      experiencias.,Contáctame por WhatsApp para asesoría rápida.,Envía tus consultas o propuestas de colaboración por
+      correo electrónico." | split: "," %}
+      {% assign links = "https://t.me/JuvenilesHT,https://wa.me/qr/537E4GO72BHHB1,mailto:tutorhattrick@hotmail.com" |
+      split: "," %}
+
+      {% for method in contact_methods %}
+      <div class="column is-4">
+        <div class="card has-text-centered">
+          <div class="card-content">
+            <span class="icon is-large mb-3">
+              <i class="fab {{ icons[forloop.index0] }} fa-2x"></i>
+            </span>
+            <h2 class="title is-5">{{ method }}</h2>
+            <p class="mb-4">{{ descriptions[forloop.index0] }}</p>
+            <a href="{{ links[forloop.index0] }}" target="_blank" rel="noopener noreferrer"
+              class="button {{ colors[forloop.index0] }} is-medium is-fullwidth">
+              <i class="fab {{ icons[forloop.index0] }}"></i>
+              <span>Contactar</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- Preguntas Frecuentes -->
+  <section class="section">
+    <div class="container">
+      <h2 class="title is-3 has-text-centered">Preguntas Frecuentes</h2>
+      <div class="content">
+        <details class="box">
+          <summary class="title is-5">¿Cuánto tiempo tardas en responder?</summary>
+          <p>Intento responder en menos de 24 horas. Si no recibes respuesta, revisa tu carpeta de spam.</p>
+        </details>
+        <details class="box">
+          <summary class="title is-5">¿Puedo pedir asesoramiento sobre Hattrick?</summary>
+          <p>Sí, ayudo con estrategias, juveniles y tácticas. Contáctame por Telegram o correo.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mensaje Final -->
+  <section class="box has-text-centered p-5">
+    <p class="is-size-5">Estoy aquí para ayudarte con cualquier aspecto de Hattrick. No dudes en contactarme por el
+      medio que prefieras. ¡Espero tu mensaje!</p>
+  </section>
+
+  <!-- Botón de Volver al Inicio -->
+  <div class="has-text-centered mt-5">
+    <a href="/" class="button is-link is-rounded">
+      <span class="icon"><i class="fas fa-home"></i></span>
+      <span>Volver al Inicio</span>
+    </a>
   </div>
-</section>
+</div>

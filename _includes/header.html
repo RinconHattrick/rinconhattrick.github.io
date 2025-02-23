@@ -1,63 +1,59 @@
-<nav class="navbar has-shadow is-fixed-top" aria-label="Menú principal">
+<nav class="navbar is-fixed-top has-shadow">
   <div class="container">
     <div class="navbar-brand">
       <a class="navbar-item" href="{{ '/' | relative_url }}">
-        <h2 class="title is-4 mb-0">El Rincón de Hattrick</h2>
+        <h2 class="title is-4">El Rincón de Hattrick</h2>
       </a>
-
-      <button class="navbar-burger" aria-controls="navbarMenu" aria-expanded="false" aria-label="Abrir Menú"
-        data-target="navbarMenu">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
+      <button class="navbar-burger" data-target="navbarMenu">
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
     </div>
 
     <div id="navbarMenu" class="navbar-menu">
       <div class="navbar-end">
-        <a class="navbar-item {% if page.url == '/' %}is-active{% endif %}" href="{{ '/' | relative_url }}"
-          aria-label="Ir a la página principal">
-          <i class="fas fa-home" aria-hidden="true"></i> <span>Inicio</span>
+        <a class="navbar-item {% if page.url == '/' %}is-active{% endif %}" href="{{ '/' | relative_url }}">
+          <i class="fas fa-home"></i> Inicio
         </a>
 
         <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link" id="category-toggle" role="button" aria-haspopup="true" aria-expanded="false">
-            <i class="fas fa-folder" aria-hidden="true"></i> <span>Categorías</span>
+          <a class="navbar-link">
+            <i class="fas fa-folder"></i> Categorías
           </a>
-          <div class="navbar-dropdown" id="category-menu">
-            {% assign category_pages = site.pages | where: "layout", "category" %} {% if category_pages.size > 0 %} {%
-            for category_page in category_pages %}
+          <div class="navbar-dropdown">
+            {% assign category_pages = site.pages | where: "layout", "category" %}
+            {% if category_pages.size > 0 %}
+            {% for category_page in category_pages %}
             <a class="navbar-item {% if page.url == category_page.url %}is-active{% endif %}"
               href="{{ category_page.url | relative_url }}">
-              <i class="fas {{ category_page.icon }}" aria-hidden="true"></i> <span>{{ category_page.title }}</span>
+              <i class="fas {{ category_page.icon }}"></i> {{ category_page.title }}
             </a>
-            {% endfor %} {% else %}
-            <a class="navbar-item">No hay categorías disponibles</a>
+            {% endfor %}
+            {% else %}
+            <a class="navbar-item">No hay categorías</a>
             {% endif %}
           </div>
         </div>
 
         <a class="navbar-item {% if page.url contains '/acerca-de/' %}is-active{% endif %}"
           href="{{ '/acerca-de/' | relative_url }}">
-          <i class="fas fa-info-circle" aria-hidden="true"></i> <span>Acerca de</span>
+          <i class="fas fa-info-circle"></i> Acerca de
         </a>
-
         <a class="navbar-item {% if page.url contains '/contacto/' %}is-active{% endif %}"
           href="{{ '/contacto/' | relative_url }}">
-          <i class="fas fa-envelope" aria-hidden="true"></i> <span>Contáctanos</span>
+          <i class="fas fa-envelope"></i> Contacto
         </a>
 
         <div class="navbar-item">
-          <form action="{{ '/search/' | relative_url }}" method="get" role="search">
+          <form action="{{ '/search/' | relative_url }}" method="get">
             <div class="field has-addons">
               <div class="control">
-                <input id="searchInput" class="input is-rounded has-icons-left" type="search" name="q"
-                  placeholder="Buscar..." aria-label="Buscar artículos" required />
+                <input class="input is-rounded" type="search" name="q" placeholder="Buscar..." required />
               </div>
               <div class="control">
-                <button id="searchButton" type="submit" class="button is-primary is-rounded" disabled=""
-                  aria-label="Buscar">
-                  <span class="icon is-left"><i class="fas fa-search"></i></span>
+                <button type="submit" class="button is-primary is-rounded">
+                  <i class="fas fa-search"></i>
                 </button>
               </div>
             </div>

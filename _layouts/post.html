@@ -15,7 +15,8 @@ layout: default
       </p>
       {% assign words = content | number_of_words %} {% assign reading_time = words | divided_by: 200 | plus: 1 %}
 
-      <p class="tag is-info is-light">⏳ Tiempo de lectura: aproximadamente {{ reading_time }} minuto{% if reading_time > 1 %}s{% endif %}</p>
+      <p class="tag is-info is-light">⏳ Tiempo de lectura: aproximadamente {{ reading_time }} minuto{% if reading_time >
+        1 %}s{% endif %}</p>
     </div>
   </div>
 </section>
@@ -26,7 +27,7 @@ layout: default
     {% if page.image %}
     <div class="columns is-centered">
       <div class="column is-10">
-        <figure class="image is-16by9 box has-shadow fade-in" width="640" height="360">
+        <figure class="image is-16by9 box has-shadow fade-in" width="360" height="203">
           <img src="{{ page.image | relative_url }}" alt="Imagen del artículo" loading="lazy" />
         </figure>
       </div>
@@ -76,7 +77,8 @@ layout: default
 <section class="section mt-6">
   <h2 class="title is-4">Artículos Relacionados</h2>
   <div class="columns is-multiline is-centered">
-    {% assign category = page.categories | first %} {% if category %} {% assign related_posts = site.categories[category] | where_exp: "post", "post.url !=
+    {% assign category = page.categories | first %} {% if category %} {% assign related_posts =
+    site.categories[category] | where_exp: "post", "post.url !=
     page.url" | reverse | limit: 4 %} {% for post in related_posts %}
     <div class="column is-6-tablet is-3-desktop">
       <div class="card has-shadow">
