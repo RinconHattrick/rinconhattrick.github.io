@@ -1,6 +1,5 @@
 /* Variables de colores */
 :root {
-  --color-primary: hsl(204, 86%, 53%);
   --color-marks: #ffdd57;
   --color-background-light: #ffffff;
   --color-background-dark: #1a1a2e;
@@ -44,7 +43,7 @@ mark {
 
 /* Navbar */
 .navbar-item.is-active {
-  background-color: var(--color-primary);
+  background-color: hsl(171, 100%, 41%);
   color: var(--color-background-light);
 }
 
@@ -67,7 +66,7 @@ mark {
 
 /* Menú lateral */
 .card-content a:hover {
-  background-color: var(--color-primary);
+  background-color: hsl(204, 86%, 53%);
   color: var(--color-background-light);
 }
 
