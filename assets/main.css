@@ -79,8 +79,7 @@ mark {
    Menú lateral
 ================================ */
 a:hover {
-  background-color: var(--color-link-hover);
-  color: var(--color-background-light);
+ opacity: 0.6;
 }
 
 /* ================================
