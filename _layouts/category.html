@@ -54,13 +54,33 @@ layout: default
 
         <hr />
 
-        <!-- Navegación entre categorías -->
+        <!-- Navegación entre Categorías -->
         <div class="buttons is-centered mt-5">
-          {% for cat in site.categories %}
-          <a href="{{ cat[0] | slugify | prepend: '/categories/' | relative_url }}" class="button is-light is-rounded">
-            <span>#{{ cat[0] }}</span>
+          {% assign categories = site.categories | sort %}
+          {% assign current_category = page.category %}
+          {% assign category_list = categories | map: "first" %}
+          {% assign current_index = category_list.indexOf(current_category) %}
+
+          {% if current_index > 0 %}
+          <a href="{{ site.categories[category_list[current_index | minus: 1]].first.url | relative_url }}"
+            class="button is-light is-rounded">
+            <span class="icon"><i class="fas fa-arrow-left"></i></span>
+            <span>Anterior</span>
           </a>
-          {% endfor %}
+          {% endif %}
+
+          <a href="{{ '/' | relative_url }}" class="button is-link is-rounded">
+            <span class="icon"><i class="fas fa-home"></i></span>
+            <span>Inicio</span>
+          </a>
+
+          {% if current_index < category_list.size | minus: 1 %}
+          <a href="{{ site.categories[category_list[current_index | plus: 1]].first.url | relative_url }}"
+            class="button is-light is-rounded">
+            <span>Siguiente</span>
+            <span class="icon"><i class="fas fa-arrow-right"></i></span>
+          </a>
+          {% endif %}
         </div>
       </div>
     </div>
