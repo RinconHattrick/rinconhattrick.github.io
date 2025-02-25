@@ -36,7 +36,7 @@ description: "Búsqueda de artículos en el sitio"
     </div>
 
     <!-- Resultados de búsqueda -->
-    <div id="search-results" class="columns is-multiline is-centered mt-5" aria-live="polite"></div>
+    <div id="search-results" class="columns is-glapess is-multiline is-centered mt-5" aria-live="polite"></div>
   </div>
 </div>
 
@@ -134,7 +134,7 @@ description: "Búsqueda de artículos en el sitio"
 
       results.forEach((item) => {
         const article = document.createElement("div");
-        article.className = "column is-12-tablet is-6-desktop";
+        article.className = "column is-6-tablet is-6-desktop";
         article.innerHTML = `
         <article class="box has-shadow">
           <time datetime="${item.date}" class="is-size-7 has-text-grey">
