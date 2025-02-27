@@ -7,7 +7,7 @@ categories: [equipo-juvenil]
 tags: [finanzas, juveniles, costos, gestión]
 excerpt: "Conoce los costos de gestionar un equipo juvenil en Hattrick y aprende estrategias para optimizar su rentabilidad."
 description: "Explora los costos de mantener un equipo juvenil en Hattrick. Aprende cómo optimizar gastos, equilibrar la inversión y mejorar la rentabilidad de tu cantera."
-image: "/assets/img/ht-v.png"
+image: "/assets/img/hattrick.webp"
 featured: false
 published: true
 views: 0

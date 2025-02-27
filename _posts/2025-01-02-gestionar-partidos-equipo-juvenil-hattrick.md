@@ -7,7 +7,7 @@ categories: [equipo-juvenil]
 tags: [partidos, tácticas, desarrollo, estrategia]
 excerpt: "Aprende cómo gestionar los partidos de tu equipo juvenil en Hattrick para optimizar el desarrollo de jugadores y mejorar resultados."
 description: "Guía para gestionar partidos en Hattrick. Descubre cómo alinear juveniles, mejorar tácticas y potenciar su desarrollo en cada encuentro."
-image: "/assets/img/ht-v.png"
+image: "/assets/img/hattrick.webp"
 featured: false
 published: true
 views: 0

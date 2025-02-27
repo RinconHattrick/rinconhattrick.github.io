@@ -7,7 +7,7 @@ categories: [selecciones-nacionales]
 tags: [convocatoria, jugadores, selecciones, criterios]
 excerpt: "Descubre cómo los seleccionadores eligen jugadores para la selección nacional en Hattrick, qué criterios usan y cómo influye el rendimiento de los futbolistas."
 description: "Explicación detallada sobre el proceso de convocatoria en Hattrick, los factores que influyen en la selección de jugadores y cómo optimizar su rendimiento en la selección."
-image: "/assets/img/ht-v.png"
+image: "/assets/img/hattrick.webp"
 featured: false
 published: true
 views: 0

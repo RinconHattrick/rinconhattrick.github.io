@@ -7,7 +7,7 @@ categories: [selecciones-nacionales]
 tags: [elecciones, seleccionadores, votación, democracia]
 excerpt: "Descubre cómo funciona el sistema electoral en Hattrick, cómo votar por un seleccionador nacional y cuál es su impacto en la comunidad del juego."
 description: "Guía completa sobre las elecciones en Hattrick: cómo votar, qué hace un seleccionador nacional y cómo influye en el éxito de tu selección."
-image: "/assets/img/ht-v.png"
+image: "/assets/img/hattrick.webp"
 featured: false
 published: true
 views: 0

@@ -7,7 +7,7 @@ categories: [equipo-juvenil]
 tags: [juveniles, gestión, entrenamiento, desarrollo]
 excerpt: "Descubre cómo evaluar el talento de tus juveniles en Hattrick y maximizar su desarrollo con estrategias de entrenamiento."
 description: "Aprende a identificar el potencial de tus juveniles en Hattrick. Estrategias clave para evaluar habilidades y entrenar futuras estrellas."
-image: "/assets/img/ht-v.png"
+image: "/assets/img/hattrick.webp"
 featured: false
 published: true
 views: 0

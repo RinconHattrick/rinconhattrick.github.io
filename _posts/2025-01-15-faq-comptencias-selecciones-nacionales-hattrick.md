@@ -7,7 +7,7 @@ categories: [preguntas-frecuentes]
 tags: [FAQ, selecciones, Hattrick, competiciones]
 excerpt: "Resuelve todas tus dudas sobre las competiciones de selecciones nacionales y Sub-21 en Hattrick, su funcionamiento y beneficios."
 description: "Guía de preguntas frecuentes sobre las competiciones de selecciones nacionales y Sub-21 en Hattrick. Descubre cómo funcionan y por qué son clave en el juego."
-image: "/assets/img/ht-b.png"
+image: "/assets/img/hattrick.webp"
 featured: false
 published: true
 views: 0

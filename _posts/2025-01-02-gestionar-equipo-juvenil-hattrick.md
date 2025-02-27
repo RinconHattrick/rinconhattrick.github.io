@@ -7,7 +7,7 @@ categories: [equipo-juvenil]
 tags: [juveniles, gestión, estrategias, administración]
 excerpt: "Conoce las claves para administrar tu equipo juvenil en Hattrick y convertirlo en una cantera competitiva a largo plazo."
 description: "Descubre cómo gestionar un equipo juvenil en Hattrick con estrategias de desarrollo, administración y planificación a largo plazo."
-image: "/assets/img/ht-v.png"
+image: "/assets/img/hattrick.webp"
 featured: false
 published: true
 views: 0

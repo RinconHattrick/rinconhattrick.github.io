@@ -7,7 +7,7 @@ categories: [selecciones-nacionales]
 tags: [amistosos, selecciones, Hattrick, estrategia]
 excerpt: "Aprende a organizar partidos amistosos de selecciones nacionales en Hattrick y descubre su impacto en la preparación del equipo."
 description: "Descubre cómo organizar amistosos de selecciones nacionales en Hattrick. Optimiza la preparación de tu equipo con partidos estratégicos."
-image: "/assets/img/ht-b.png"
+image: "/assets/img/hattrick.webp"
 featured: false
 published: true
 views: 0

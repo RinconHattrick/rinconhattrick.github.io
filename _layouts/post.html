@@ -20,7 +20,7 @@ layout: default
       <div class="columns is-centered">
         <div class="column is-8">
           <figure class="image is-16by9 box has-shadow">
-            <img src="{{ page.image | relative_url }}" alt="Imagen del artículo" loading="lazy" />
+            <img src="{{ page.image | relative_url }}" alt="Imagen del artículo" width="300" height="115" />
           </figure>
         </div>
       </div>
@@ -68,7 +68,8 @@ layout: default
     <div class="container">
       <h2 class="title is-4">Artículos Relacionados</h2>
       <div class="columns is-multiline is-centered">
-        {% assign category = page.categories | first %} {% if category %} {% assign related_posts = site.categories[category] | where_exp: "post", "post.url !=
+        {% assign category = page.categories | first %} {% if category %} {% assign related_posts =
+        site.categories[category] | where_exp: "post", "post.url !=
         page.url" | reverse %} {% for post in related_posts limit: 4 %}
         <div class="column is-6-tablet is-6-desktop">
           <div class="card has-shadow">

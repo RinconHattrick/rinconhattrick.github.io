@@ -7,7 +7,7 @@ categories: [equipo-mayor]
 tags: [abreviaturas, Hattrick, tácticas, terminología]
 excerpt: "Domina el lenguaje de Hattrick con esta guía detallada de abreviaturas y términos clave."
 description: "Descubre el significado de todas las abreviaturas y términos en Hattrick. Mejora tu comprensión del juego con esta guía completa."
-image: "/assets/img/ht-b.png"
+image: "/assets/img/hattrick.webp"
 featured: false
 published: true
 views: 0
