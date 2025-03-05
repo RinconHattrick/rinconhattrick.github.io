@@ -1,10 +1,10 @@
-<nav class="navbar is-fixed-top has-shadow">
+<nav class="navbar is-fixed-top has-shadow" aria-label="Menú de navegación">
   <div class="container">
     <div class="navbar-brand">
       <a class="navbar-item" href="{{ '/' | relative_url }}">
-        <h2 class="title is-4">El Rincón de Hattrick</h2>
+        <h2 class="title is-4">{{ site.title | default: "Mi Sitio Web" }} ⚽</h2>
       </a>
-      <button class="navbar-burger" aria-label="Menu" aria-expanded="false" data-target="navbarMenu">
+      <button class="navbar-burger" aria-label="Abrir menú" aria-expanded="false" data-target="navbarMenu">
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
@@ -13,25 +13,32 @@
 
     <div id="navbarMenu" class="navbar-menu">
       <div class="navbar-end">
-        <a class="navbar-item {% if page.url == '/' %}is-active{% endif %}" href="{{ '/' | relative_url }}"> <i class="fas fa-home"></i> Inicio </a>
+        <a class="navbar-item {% if page.url == '/' %}is-active{% endif %}" href="{{ '/' | relative_url }}">
+          <span class="icon" aria-hidden="true">🏠</span> <span>Inicio</span>
+        </a>
 
+        {% assign category_pages = site.pages | where: "layout", "category" %}
+        {% if category_pages.size > 0 %}
         <div class="navbar-item has-dropdown is-hoverable">
-          <div class="navbar-link"><i class="fas fa-folder"></i> Categorías</div>
+          <a class="navbar-link" href="#"><span class="icon" aria-hidden="true">📂</span> <span>Categorías</span></a>
           <div class="navbar-dropdown">
-            {% assign category_pages = site.pages | where: "layout", "category" %} {% for category_page in category_pages %}
-            <a class="navbar-item {% if page.url == category_page.url %}is-active{% endif %}" href="{{ category_page.url | relative_url }}">
-              <i class="fas {{ category_page.icon }}"></i> {{ category_page.title }}
+            {% for category_page in category_pages %}
+            <a class="navbar-item {% if page.url == category_page.url %}is-active{% endif %}"
+              href="{{ category_page.url | relative_url }}">
+              <span class="icon" aria-hidden="true">📁</span> {{ category_page.title }}
             </a>
-            {% else %}
-            <a class="navbar-item">No hay categorías</a>
             {% endfor %}
           </div>
         </div>
+        {% endif %}
 
-        {% assign links = "acerca-de,contacto" | split: "," %} {% assign icons = "fa-info-circle,fa-envelope" | split: "," %} {% for link in links %} {% assign
-        link_url = '/' | append: link | append: '/' | relative_url %}
+        {% assign links = "acerca-de,contacto" | split: "," %}
+        {% assign icons = "ℹ️,✉️" | split: "," %}
+        {% for link in links %}
+        {% assign link_url = '/' | append: link | append: '/' | relative_url %}
         <a class="navbar-item {% if page.url == link_url %}is-active{% endif %}" href="{{ link_url }}">
-          <i class="fas {{ icons[forloop.index0] }}"></i> {{ link | replace: '-', ' ' | capitalize }}
+          <span class="icon" aria-hidden="true">{{ icons[forloop.index0] }}</span>
+          <span>{{ link | replace: '-', ' ' | capitalize }}</span>
         </a>
         {% endfor %}
 
@@ -43,7 +50,7 @@
               </div>
               <div class="control">
                 <button type="submit" class="button is-primary is-rounded" aria-label="Buscar">
-                  <i class="fas fa-search"></i>
+                  <span class="icon" aria-hidden="true">🔍</span>
                 </button>
               </div>
             </div>

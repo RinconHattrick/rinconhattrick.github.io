@@ -7,7 +7,7 @@ categories: [equipo-mayor]
 tags: [Hattrick, equipo competitivo, tácticas, estrategia fútbol]
 excerpt: "Descubre cómo construir un equipo fuerte y competitivo en Hattrick con estrategias efectivas."
 description: "Aprende a crear un equipo competitivo en Hattrick desde cero. Estrategias de fichajes, tácticas y entrenamiento para lograr el éxito."
-image: "/assets/img/hattrick.webp"
+image: "/assets/img/Rh.png"
 featured: true
 published: true
 views: 0
@@ -31,7 +31,7 @@ El entrenador debe equilibrar efectividad y costo para maximizar los recursos de
 - **Costo de contratación:** 268,700
 
 **¿Por qué este perfil?**  
-Un entrenador de nivel 4 es suficiente para los primeros ciclos de desarrollo del equipo. Un liderazgo pobre no afecta significativamente al rendimiento inicial y ayuda a mantener los costos bajo control.
+Un entrenador de nivel bueno (4) es suficiente para los primeros ciclos de desarrollo del equipo. El liderazgo pobre no afecta significativamente al espíritu y ayuda a mantener los costos bajo control.
 
 ### Personal auxiliar
 
@@ -99,7 +99,7 @@ El entrenamiento eficiente es la base para el desarrollo de un equipo competitiv
 
 1. **Compra en horarios estratégicos:** Busca jugadores cuando haya menos actividad en el mercado para obtener mejores precios.
 2. **Monitorea el desempeño:** Analiza los resultados de tus partidos para identificar áreas de mejora.
-3. **Ajusta el porcentaje de entrenamiento:** Configura entre 90% y 100% para un desarrollo rápido, pero ten cuidado con los cambios frecuentes, ya que afectan la forma de los jugadores.
+3. **Ajusta el porcentaje de entrenamiento:** Configura 10% condición - 100% de intensidad, para un desarrollo rápido, pero ten cuidado con los cambios frecuentes, ya que afectan la forma de los jugadores.
 
 ---
 
@@ -117,7 +117,7 @@ Aquí tienes algunos consejos iniciales para construir tu equipo:
 
 ## Puntos clave para recordar
 
-- Contratar un entrenador equilibrado en nivel y costo es esencial para comenzar bien.
+- Contratar un entrenador de nivel bueno (4) y liderazgo pobre, es esencial para comenzar bien.
 - Entrenar porteros o laterales es una estrategia rentable para generar ingresos a corto y medio plazo.
 - Usa herramientas como Foxtrick para tomar decisiones informadas y mejorar la gestión.
 - Aprovecha al máximo a los jugadores iniciales y realiza compras en horarios de menor actividad para optimizar tu presupuesto.

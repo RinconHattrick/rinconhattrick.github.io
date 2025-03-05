@@ -4,7 +4,6 @@ title: "El Rincón de Hattrick"
 ---
 
 <main class="container">
-  <!-- Hero principal -->
   <section class="hero is-small is-link has-text-centered" role="banner">
     <div class="hero-body">
       <h1 class="title is-2">{{ site.title }}</h1>
@@ -12,10 +11,10 @@ title: "El Rincón de Hattrick"
     </div>
   </section>
 
-  <!-- Iteración de categorías -->
-  {% for category in site.categories %} {% assign category_name = category[0] %} {% assign category_page = site.pages |
-  where: "category", category_name | first
-  %} {% assign recent_posts = category[1] | sort: "date" | reverse | slice: 0,2 %}
+  {% for category in site.categories %}
+  {% assign category_name = category[0] %}
+  {% assign category_page = site.pages | where: "category", category_name | first %}
+  {% assign recent_posts = category[1] | sort: "date" | reverse | slice: 0, 3 %}
 
   <section id="{{ category_name | slugify }}" class="mt-5" role="region"
     aria-labelledby="category-title-{{ category_name | slugify }}">
@@ -25,26 +24,25 @@ title: "El Rincón de Hattrick"
           {{ category_page.title | default: category_name | capitalize }}
         </h2>
       </header>
+
       <div class="card-content">
-        <p class="subtitle is-6 mb-4">{{ category_page.description | default: "Explora artículos sobre esta temática en
-          nuestro blog." }}</p>
+        <p class="subtitle is-6 mb-4">
+          {{ category_page.description | default: "Explora artículos sobre esta temática en nuestro blog." }}
+        </p>
 
         <div class="columns is-multiline is-centered">
           {% for post in recent_posts %}
-          <div class="column is-6-tablet is-6-desktop">
+          <div class="column is-6-tablet is-4-widescreen">
             <article class="box has-shadow">
               {% if post.image %}
-              <figure class="image  mb-3">
-                <img class="has-radius" src="{{ post.image | relative_url }}" alt="{{ post.title }}"
-                  width="324" height="182" />
+              <figure class="image is-16by9 mb-3">
+                <img class="has-radius" src="{{ post.image | relative_url }}" alt="{{ post.title }}" loading="lazy" />
               </figure>
               {% endif %}
 
               <time datetime="{{ post.date | date: '%Y-%m-%d' }}" class="is-size-7 has-text-grey">
-                <span class="icon-text">
-                  <span class="icon"><i class="fas fa-calendar-day"></i></span>
-                  <span>{{ post.date | date: "%d/%m/%Y" }}</span>
-                </span>
+                <span class="icon" aria-hidden="true">📅</span>
+                <span>{{ post.date | date: "%d/%m/%Y" }}</span>
               </time>
 
               <h3 class="title is-5 mt-2">
@@ -66,14 +64,11 @@ title: "El Rincón de Hattrick"
           {% endfor %}
         </div>
 
-        <!-- Botón para más artículos -->
         <div class="has-text-centered mt-4">
           <a href="{{ category_page.url | relative_url }}" class="button is-link is-light is-rounded"
             aria-label="Ver más artículos de {{ category_page.title | default: category_name }}">
-            <span class="icon-text">
-              <span class="icon"><i class="fas fa-folder-open"></i></span>
-              <span>Ver más en {{ category_page.title | default: category_name }}</span>
-            </span>
+            <span class="icon" aria-hidden="true">📂</span>
+            <span>Ver más en {{ category_page.title | default: category_name }}</span>
           </a>
         </div>
       </div>

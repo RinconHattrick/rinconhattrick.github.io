@@ -2,22 +2,15 @@
   <div class="content has-text-centered">
     <p>
       <strong>{{ site.title | default: "Mi Sitio Web" }}</strong> &copy;
-      <small>{{ "now" | date: "%Y" }}</small>
-      <span>{{ site.author | default: "Autor desconocido" }}</span>
+      <span>{{ "now" | date: "%Y" }}</span>
+      {{ site.author | default: "Autor desconocido" }}
     </p>
-    <div class="buttons is-centered is-flex is-justify-content-center">
-      <a
-        href="{{ '/acerca-de/' | relative_url }}"
-        class="button is-small is-rounded"
-        aria-label="Más información sobre nosotros"
-        title="Ver información sobre nosotros"
-      >
-        <i class="fas fa-info-circle" aria-hidden="true"></i>
-        <span>Acerca de</span>
+    <div class="buttons is-centered">
+      <a href="{{ '/acerca-de/' | relative_url }}" class="button is-small" aria-label="Más información sobre nosotros">
+        <span class="icon" aria-hidden="true">ℹ</span><span>Acerca de</span>
       </a>
-      <a href="{{ '/contacto/' | relative_url }}" class="button is-small is-rounded" aria-label="Formulario de contacto" title="Enviar un mensaje">
-        <i class="fas fa-envelope" aria-hidden="true"></i>
-        <span>Contacto</span>
+      <a href="{{ '/contacto/' | relative_url }}" class="button is-small" aria-label="Formulario de contacto">
+        <span class="icon" aria-hidden="true">✉</span><span>Contacto</span>
       </a>
     </div>
   </div>

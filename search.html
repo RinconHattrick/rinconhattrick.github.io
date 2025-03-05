@@ -18,17 +18,16 @@ description: "Búsqueda de artículos en el sitio"
         <div class="control has-icons-left is-expanded">
           <input type="search" id="search-input" class="input is-rounded" placeholder="Buscar artículos..."
             aria-label="Buscar artículos" autocomplete="off" />
-          <span class="icon is-small is-left">
-            <i class="fas fa-search"></i>
-          </span>
+          <span class="icon is-small is-left" aria-hidden="true">🧐</span>
         </div>
         <div class="control">
           <button type="submit" class="button is-info is-rounded">
-            <span class="icon"><i class="fas fa-search"></i></span>
+            <span class="icon" aria-hidden="true">🔍</span>
+            <span class="sr-only">Buscar</span>
           </button>
         </div>
       </div>
-      <p class="help">Escribe al menos 3 caracteres para comenzar a buscar.</p>
+      <p>Escribe al menos 3 caracteres para comenzar a buscar.</p>
     </form>
 
     <!-- Retroalimentación de búsqueda -->
@@ -37,13 +36,13 @@ description: "Búsqueda de artículos en el sitio"
     </div>
 
     <!-- Resultados de búsqueda -->
-    <div id="search-results" class="columns is-gapless is-multiline is-centered mt-5" aria-live="polite"></div>
+    <div id="search-results" class="columns is-multiline is-centered" aria-live="polite"></div>
   </div>
 </div>
 
 <div class="has-text-centered mt-6">
   <a href="{{ '/' | relative_url }}" class="button is-link is-rounded">
-    <span class="icon"><i class="fas fa-home"></i></span>
+    <span class="icon" aria-hidden="true">🏠</span>
     <span>Volver al Inicio</span>
   </a>
 </div>
@@ -97,9 +96,7 @@ description: "Búsqueda de artículos en el sitio"
       if (!this.feedbackElement) return;
 
       this.feedbackElement.innerHTML = `
-      <span class="icon" aria-hidden="true">
-        <i class="fas fa-info-circle"></i>
-      </span> ${message}
+      <span class="icon" aria-hidden="true">🔄</span> ${message}
     `;
 
       this.feedbackElement.classList.remove("is-hidden", "is-danger", "is-primary", "is-info", "is-warning");
@@ -127,7 +124,7 @@ description: "Búsqueda de artículos en el sitio"
       this.clearResults();
 
       if (!results.length) {
-        this.showFeedback('<span class="icon"><i class="fas fa-exclamation-triangle"></i></span> No se encontraron resultados.', "is-warning");
+        this.showFeedback('<span class="icon" aria-hidden="true">⚠️</span> No se encontraron resultados.', "is-warning");
         return;
       }
 
@@ -135,16 +132,12 @@ description: "Búsqueda de artículos en el sitio"
 
       results.forEach((item) => {
         const article = document.createElement("div");
-        article.className = "column is-6-tablet is-6-desktop";
+        article.className = "column is-6-tablet is-4-widescreen";
         article.innerHTML = `
         <article class="box has-shadow">
           <time datetime="${item.date}" class="is-size-7 has-text-grey">
-            <span class="icon-text">
-              <span class="icon" aria-hidden="true">
-                <i class="fas fa-calendar-day"></i>
-              </span>
+              <span class="icon" aria-hidden="true">📅</span>
               <span>${item.date}</span>
-            </span>
           </time>
           <h3 class="title is-5 mt-2">
             <a href="${item.url}">
@@ -180,7 +173,7 @@ description: "Búsqueda de artículos en el sitio"
     }
 
     async search(query) {
-      this.showFeedback('<span class="icon"><i class="fas fa-spinner fa-spin"></i></span> Cargando resultados...');
+      this.showFeedback('<span class="icon" aria-hidden="true">🎬</span> Cargando resultados...');
 
       try {
         const response = await fetch(this.searchJsonUrl);

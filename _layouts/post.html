@@ -3,13 +3,16 @@ layout: default
 ---
 
 <div class="container">
-  <!-- Encabezado del artículo -->
   <section class="hero is-small is-link has-text-centered">
     <div class="hero-body">
       <h1 class="title is-2">{{ page.title }}</h1>
       <p class="is-small">
-        <time datetime="{{ page.date | date_to_xmlschema }}">Publicado el {{ page.date | date: "%d/%m/%Y" }}</time>
-        {% if page.author %} <span class="mx-2">por</span> <strong>{{ page.author }}</strong> {% endif %}
+        <time datetime="{{ page.date | date_to_xmlschema }}">
+          Publicado el {{ page.date | date: "%d/%m/%Y" }}
+        </time>
+        {% if page.author %}
+        <span class="mx-2">por</span> <strong>{{ page.author }}</strong>
+        {% endif %}
       </p>
     </div>
   </section>
@@ -20,20 +23,21 @@ layout: default
       <div class="columns is-centered">
         <div class="column is-8">
           <figure class="image is-16by9 box has-shadow">
-            <img src="{{ page.image | relative_url }}" alt="Imagen del artículo" width="300" height="115" />
+            <img src="{{ page.image | relative_url }}" alt="{{ page.title | escape }}" width="300" height="115"
+              loading="lazy" />
           </figure>
         </div>
       </div>
       {% endif %}
 
-      <article class="content mt-5">{{ content }}</article>
+      <article class="content mt-5" role="article">
+        {{ content }}
+      </article>
 
       <div class="has-text-centered my-6">
         <button id="shareButton" class="button is-primary is-light is-rounded" aria-label="Compartir artículo">
-          <span class="icon-text">
-            <span class="icon"><i class="fas fa-share-alt"></i></span>
-            <span>Compartir</span>
-          </span>
+          <span class="icon" aria-hidden="true">🔗</span>
+          <span>Compartir</span>
         </button>
       </div>
     </div>
@@ -41,37 +45,37 @@ layout: default
 
   <hr />
 
-  <!-- Navegación entre artículos -->
   <div class="buttons is-centered mt-5">
     {% if page.previous.url %}
-    <a href="{{ page.previous.url | relative_url }}" class="button is-light is-rounded">
-      <span class="icon"><i class="fas fa-arrow-left"></i></span>
+    <a href="{{ page.previous.url | relative_url }}" class="button is-light is-rounded" aria-label="Artículo anterior">
+      <span class="icon" aria-hidden="true">⬅️</span>
       <span>Anterior</span>
     </a>
     {% endif %}
 
-    <a href="{{ '/' | relative_url }}" class="button is-link is-rounded">
-      <span class="icon"><i class="fas fa-home"></i></span>
-      <span>Volver al Inicio</span>
+    <a href="{{ '/' | relative_url }}" class="button is-link is-rounded" aria-label="Volver al inicio">
+      <span class="icon" aria-hidden="true">🏠</span>
+      <span>Inicio</span>
     </a>
 
     {% if page.next.url %}
-    <a href="{{ page.next.url | relative_url }}" class="button is-light is-rounded">
+    <a href="{{ page.next.url | relative_url }}" class="button is-light is-rounded" aria-label="Artículo siguiente">
       <span>Siguiente</span>
-      <span class="icon"><i class="fas fa-arrow-right"></i></span>
+      <span class="icon" aria-hidden="true">➡️</span>
     </a>
     {% endif %}
   </div>
 
-  <!-- Artículos relacionados -->
   <section class="section mt-6">
     <div class="container">
       <h2 class="title is-4">Artículos Relacionados</h2>
       <div class="columns is-multiline is-centered">
-        {% assign category = page.categories | first %} {% if category %} {% assign related_posts =
-        site.categories[category] | where_exp: "post", "post.url !=
-        page.url" | reverse %} {% for post in related_posts limit: 4 %}
-        <div class="column is-6-tablet is-6-desktop">
+        {% assign related_posts = site.categories[page.categories.first] | where_exp: "post", "post.url != page.url" |
+        reverse | limit: 4 %}
+
+        {% if related_posts.size > 0 %}
+        {% for post in related_posts %}
+        <div class="column is-6-tablet is-4-widescreen">
           <div class="card has-shadow">
             <div class="card-content">
               <h3 class="title is-5">
@@ -88,7 +92,8 @@ layout: default
             </div>
           </div>
         </div>
-        {% endfor %} {% else %}
+        {% endfor %}
+        {% else %}
         <p class="has-text-grey">No hay artículos relacionados.</p>
         {% endif %}
       </div>
