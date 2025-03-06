@@ -3,10 +3,10 @@ layout: default
 ---
 
 <div class="container">
-  <section class="hero is-small is-link has-text-centered">
+  <header class="hero is-small is-link has-text-centered">
     <div class="hero-body">
       <h1 class="title is-2">{{ page.title }}</h1>
-      <p class="is-small">
+      <p class="is-size-6">
         <time datetime="{{ page.date | date_to_xmlschema }}">
           Publicado el {{ page.date | date: "%d/%m/%Y" }}
         </time>
@@ -15,16 +15,15 @@ layout: default
         {% endif %}
       </p>
     </div>
-  </section>
+  </header>
 
   <section class="section">
     <div class="container">
       {% if page.image %}
       <div class="columns is-centered">
         <div class="column is-8">
-          <figure class="image is-1by1 box has-shadow">
-            <img src="{{ page.image | relative_url }}" alt="{{ page.title | escape }}" width="300" height="115"
-              loading="lazy" />
+          <figure class="image is-4by3">
+            <img src="{{ page.image | relative_url }}" alt="{{ page.title | escape }}" loading="lazy" />
           </figure>
         </div>
       </div>
@@ -71,7 +70,7 @@ layout: default
       <h2 class="title is-4">Artículos Relacionados</h2>
       <div class="columns is-multiline is-centered">
         {% assign related_posts = site.categories[page.categories.first] | where_exp: "post", "post.url != page.url" |
-        reverse | limit: 4 %}
+        sort: "date" | reverse | limit: 4 %}
 
         {% if related_posts.size > 0 %}
         {% for post in related_posts %}
@@ -108,7 +107,7 @@ layout: default
 
     const shareData = {
       title: document.title,
-      text: "¡Lee este artículo interesante en El Rincón de Hattrick!",
+      text: "¡Lee este artículo interesante en nuestro blog!",
       url: window.location.href,
     };
 

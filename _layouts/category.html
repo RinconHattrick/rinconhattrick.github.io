@@ -18,7 +18,7 @@ layout: default
         <main>
           {% assign category_posts = site.categories[page.category] | sort: "date" | reverse %}
           {% if category_posts.size > 0 %}
-          <div class="columns is-multiline is-centered">
+          <div class="columns is-multiline is-variable is-4 is-centered">
             {% for post in category_posts %}
             <div class="column is-6-tablet is-4-widescreen">
               <article class="box">

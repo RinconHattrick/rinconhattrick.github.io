@@ -1,0 +1,17 @@
+- name: "Telegram"
+  icon: "fa-telegram"
+  color: "is-info"
+  description: "Únete a nuestra comunidad para discutir estrategias y compartir experiencias."
+  link: "https://t.me/JuvenilesHT"
+
+- name: "WhatsApp"
+  icon: "fa-whatsapp"
+  color: "is-success"
+  description: "Contáctame por WhatsApp para asesoría rápida."
+  link: "https://wa.me/qr/537E4GO72BHHB1"
+
+- name: "Correo Electrónico"
+  icon: "fa-envelope"
+  color: "is-danger"
+  description: "Envía tus consultas o propuestas de colaboración por correo electrónico."
+  link: "mailto:tutorhattrick@hotmail.com"

@@ -4,43 +4,47 @@ title: "El Rincón de Hattrick"
 ---
 
 <main class="container">
-  <section class="hero is-small is-link has-text-centered" role="banner">
+  <header class="hero is-small is-link has-text-centered">
     <div class="hero-body">
       <h1 class="title is-2">{{ site.title }}</h1>
       <p class="subtitle is-4">{{ site.description | default: "Bienvenido a nuestro blog sobre Hattrick." }}</p>
     </div>
-  </section>
+  </header>
 
   {% for category in site.categories %}
   {% assign category_name = category[0] %}
   {% assign category_page = site.pages | where: "category", category_name | first %}
   {% assign recent_posts = category[1] | sort: "date" | reverse | slice: 0, 3 %}
 
-  <section id="{{ category_name | slugify }}" class="mt-5" role="region"
-    aria-labelledby="category-title-{{ category_name | slugify }}">
+  {% assign category_title = category_page.title | default: category_name | capitalize %}
+  {% assign category_desc = category_page.description | default: "Explora artículos sobre esta temática en nuestro
+  blog."
+  %}
+  {% assign category_slug = category_name | slugify %}
+
+  <section id="{{ category_slug }}" class="mt-5" role="region" aria-labelledby="category-title-{{ category_slug }}">
     <div class="card">
       <header class="card-header">
-        <h2 id="category-title-{{ category_name | slugify }}" class="card-header-title title is-3">
-          {{ category_page.title | default: category_name | capitalize }}
+        <h2 id="category-title-{{ category_slug }}" class="card-header-title title is-3">
+          {{ category_title }}
         </h2>
       </header>
 
       <div class="card-content">
-        <p class="subtitle is-6 mb-4">
-          {{ category_page.description | default: "Explora artículos sobre esta temática en nuestro blog." }}
-        </p>
+        <p class="subtitle is-6 mb-4">{{ category_desc }}</p>
 
-        <div class="columns is-multiline is-centered">
+        <div class="columns is-multiline is-variable is-4 is-centered">
           {% for post in recent_posts %}
           <div class="column is-6-tablet is-4-widescreen">
-            <article class="box has-shadow">
+            <article class="box">
               {% if post.image %}
               <figure class="image is-4by3 mb-3">
                 <img class="has-radius" src="{{ post.image | relative_url }}" alt="{{ post.title }}" loading="lazy" />
               </figure>
               {% endif %}
 
-              <time datetime="{{ post.date | date: '%Y-%m-%d' }}" class="is-size-7 has-text-grey">
+              <time datetime="{{ post.date | date: '%Y-%m-%d' }}" class="is-size-7 has-text-grey"
+                aria-label="Fecha de publicación: {{ post.date | date: '%d de %B de %Y' }}">
                 <span class="icon" aria-hidden="true">📅</span>
                 <span>{{ post.date | date: "%d/%m/%Y" }}</span>
               </time>
@@ -49,8 +53,11 @@ title: "El Rincón de Hattrick"
                 <a href="{{ post.url | relative_url }}" rel="bookmark">{{ post.title }}</a>
               </h3>
 
-              <p class="mt-2">{{ post.excerpt | strip_html | truncatewords: 30 | default: "Lee más sobre este artículo
-                haciendo clic en el título." }}</p>
+              <p class="mt-2">
+                {{ post.excerpt | strip_html | truncatewords: 30 | default: "Lee más sobre este artículo haciendo clic
+                en
+                el título." }}
+              </p>
 
               {% if post.tags %}
               <div class="tags mt-2">
@@ -66,9 +73,9 @@ title: "El Rincón de Hattrick"
 
         <div class="has-text-centered mt-4">
           <a href="{{ category_page.url | relative_url }}" class="button is-link is-light is-rounded"
-            aria-label="Ver más artículos de {{ category_page.title | default: category_name }}">
+            aria-label="Ver más artículos de {{ category_title }}">
             <span class="icon" aria-hidden="true">📂</span>
-            <span>Ver más en {{ category_page.title | default: category_name }}</span>
+            <span>Ver más en {{ category_title }}</span>
           </a>
         </div>
       </div>

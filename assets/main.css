@@ -41,13 +41,20 @@ mark {
   border-radius: var(--radius);
 }
 
-/* ================================
-   Mejoras específicas
-================================ */
-#search-feedback {
-  display: block !important;
-  visibility: visible !important;
-  opacity: 1 !important;
+a {
+  transition: opacity var(--transition-default);
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+.button {
+  transition: opacity var(--transition-default), background-color var(--transition-default);
+}
+
+.button:hover {
+  opacity: 0.9;
 }
 
 /* ================================
@@ -56,6 +63,7 @@ mark {
 .navbar-item.is-active {
   background-color: var(--color-primary);
   color: var(--color-background-light);
+  transition: background-color var(--transition-default), color var(--transition-default);
 }
 
 .navbar-dropdown {
@@ -64,8 +72,8 @@ mark {
   margin: 0;
   opacity: 0;
   visibility: hidden;
-  overflow: hidden;
-  transition: max-height var(--transition-default), opacity var(--transition-default), visibility var(--transition-default);
+  transform: translateY(-10px);
+  transition: max-height var(--transition-default), opacity var(--transition-default), visibility var(--transition-default), transform var(--transition-default);
 }
 
 .navbar-item.has-dropdown.is-hoverable:hover .navbar-dropdown,
@@ -73,10 +81,7 @@ mark {
   max-height: 300px;
   opacity: 1;
   visibility: visible;
-}
-
-a:hover {
-  opacity: 0.9;
+  transform: translateY(0);
 }
 
 /* ================================
@@ -104,10 +109,11 @@ a:hover {
 .scroll-to-top-btn.show {
   opacity: 1;
   visibility: visible;
-  transform: translateY(-10px);
+  transform: translateY(-10px) scale(1);
 }
 
 .scroll-to-top-btn:hover {
+  transform: translateY(-10px) scale(1.1);
   background-color: #275db3;
 }
 
@@ -117,6 +123,6 @@ a:hover {
 
 @media (max-width: 768px) {
   .scroll-to-top-btn {
-    bottom: 60px;
+    bottom: 3.75rem;
   }
 }

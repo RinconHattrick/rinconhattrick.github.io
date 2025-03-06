@@ -8,8 +8,7 @@ permalink: /404.html
   <div class="hero-body has-background-link-dark">
     <div class="container has-text-centered">
       <figure class="image is-128x128 is-inline-block">
-        <img src="https://pic.sopili.net/pub/emoji/twitter/2/72x72/274c.png" width="48" height="48"
-          alt="Pagina no encontrada" />
+        <img src="{{ '/assets/img/404.png' | relative_url }}" width="48" height="48" alt="Página no encontrada" />
       </figure>
 
       <h1 class="title is-2 has-text-danger mt-4">¡Ups! No encontramos esa página</h1>
@@ -21,7 +20,7 @@ permalink: /404.html
           <span>Inicio</span>
         </a>
 
-        <button onclick="window.history.back()" class="button is-warning is-rounded">
+        <button onclick="window.history.back()" class="button is-warning is-rounded" aria-label="Volver atrás">
           <span class="icon" aria-hidden="true">↩️</span>
           <span>Atrás</span>
         </button>
@@ -31,3 +30,21 @@ permalink: /404.html
 </section>
 
 <meta name="robots" content="noindex" />
+
+<style>
+  .hero-body {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>

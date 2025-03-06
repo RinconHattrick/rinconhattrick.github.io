@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (element) element.setAttribute("aria-expanded", state);
   };
 
-  /** Función para forzar un repintado (soluciona algunos problemas visuales) */
+  /** Forzar repintado (soluciona problemas visuales) */
   const forceRepaint = (element) => {
     element.style.display = "none";
     element.offsetHeight; // Forzar reflujo
@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
     toggleClass(nav, "is-fixed-bottom", isMobile);
     toggleClass(body, "has-navbar-fixed-top", !isMobile);
     toggleClass(body, "has-navbar-fixed-bottom", isMobile);
-    forceRepaint(nav); // Soluciona algunos problemas de visualización
+    forceRepaint(nav);
   };
 
   window.addEventListener("resize", () => requestAnimationFrame(updateNavbarPosition));

@@ -5,11 +5,11 @@ description: "Búsqueda de artículos en el sitio"
 ---
 
 <div class="container">
-  <section class="hero is-small is-link has-text-centered">
+  <header class="hero is-small is-link has-text-centered">
     <div class="hero-body">
       <h1 class="title is-2">Resultados de Búsqueda</h1>
     </div>
-  </section>
+  </header>
 
   <div class="content">
     <!-- Formulario de búsqueda -->
@@ -18,12 +18,11 @@ description: "Búsqueda de artículos en el sitio"
         <div class="control has-icons-left is-expanded">
           <input type="search" id="search-input" class="input is-rounded" placeholder="Buscar artículos..."
             aria-label="Buscar artículos" autocomplete="off" />
-          <span class="icon is-small is-left" aria-hidden="true">🧐</span>
+          <span class="icon is-small is-left" aria-hidden="true">🔍</span>
         </div>
         <div class="control">
-          <button type="submit" class="button is-info is-rounded">
-            <span class="icon" aria-hidden="true">🔍</span>
-            <span class="sr-only">Buscar</span>
+          <button type="submit" class="button is-info is-rounded" aria-label="Ejecutar búsqueda">
+            🔎
           </button>
         </div>
       </div>
@@ -36,7 +35,7 @@ description: "Búsqueda de artículos en el sitio"
     </div>
 
     <!-- Resultados de búsqueda -->
-    <div id="search-results" class="columns is-multiline is-centered" aria-live="polite"></div>
+    <div id="search-results" class="columns is-multiline is-variable is-4 is-centered" aria-live="polite"></div>
   </div>
 </div>
 
@@ -55,20 +54,14 @@ description: "Búsqueda de artículos en el sitio"
       this.feedbackElement = document.getElementById("search-feedback");
       this.resultsContainer = document.getElementById("search-results");
 
-      if (this.searchInput) {
-        this.init();
-      }
+      if (this.searchInput) this.init();
     }
 
     init() {
-      this.searchInput.addEventListener(
-        "input",
-        this.debounce((e) => this.handleInput(e.target.value.trim()), 300)
-      );
+      this.searchInput.addEventListener("input", this.debounce((e) => this.handleInput(e.target.value.trim()), 300));
 
       const queryParams = new URLSearchParams(window.location.search);
       const initialQuery = queryParams.get("q");
-
       if (initialQuery) {
         this.searchInput.value = initialQuery;
         this.search(initialQuery);
@@ -81,7 +74,6 @@ description: "Búsqueda de artículos en el sitio"
         this.showFeedback("Escribe al menos 3 caracteres para buscar.", "is-info");
         return;
       }
-
       this.updateURL(query);
       this.search(query);
     }
@@ -94,29 +86,17 @@ description: "Búsqueda de artículos en el sitio"
 
     showFeedback(message, type = "is-primary") {
       if (!this.feedbackElement) return;
-
-      this.feedbackElement.innerHTML = `
-      <span class="icon" aria-hidden="true">🔄</span> ${message}
-    `;
-
+      this.feedbackElement.querySelector(".message-body").innerHTML = message;
       this.feedbackElement.classList.remove("is-hidden", "is-danger", "is-primary", "is-info", "is-warning");
       this.feedbackElement.classList.add(type);
-      this.feedbackElement.style.display = "block";
-      this.feedbackElement.style.visibility = "visible";
-      this.feedbackElement.style.opacity = "1";
     }
 
     hideFeedback() {
-      if (this.feedbackElement) {
-        this.feedbackElement.classList.add("is-hidden");
-        this.feedbackElement.style.display = "none";
-      }
+      if (this.feedbackElement) this.feedbackElement.classList.add("is-hidden");
     }
 
     clearResults() {
-      if (this.resultsContainer) {
-        this.resultsContainer.innerHTML = "";
-      }
+      if (this.resultsContainer) this.resultsContainer.innerHTML = "";
     }
 
     renderResults(results, query) {
@@ -124,7 +104,7 @@ description: "Búsqueda de artículos en el sitio"
       this.clearResults();
 
       if (!results.length) {
-        this.showFeedback('<span class="icon" aria-hidden="true">⚠️</span> No se encontraron resultados.', "is-warning");
+        this.showFeedback("⚠️ No se encontraron resultados.", "is-warning");
         return;
       }
 
@@ -134,21 +114,21 @@ description: "Búsqueda de artículos en el sitio"
         const article = document.createElement("div");
         article.className = "column is-6-tablet is-4-widescreen";
         article.innerHTML = `
-        <article class="box has-shadow">
-          <time datetime="${item.date}" class="is-size-7 has-text-grey">
+          <article class="box has-shadow">
+            <time datetime="${item.date}" class="is-size-7 has-text-grey">
               <span class="icon" aria-hidden="true">📅</span>
               <span>${item.date}</span>
-          </time>
-          <h3 class="title is-5 mt-2">
-            <a href="${item.url}">
-              ${this.highlightMatch(item.title, query)}
-            </a>
-          </h3>
-          <p class="mt-2">
-            ${item.excerpt ? this.truncateText(this.highlightMatch(item.excerpt, query), 300) : ""}
-          </p>
-        </article>
-      `;
+            </time>
+            <h3 class="title is-5 mt-2">
+              <a href="${item.url}">
+                ${this.highlightMatch(item.title, query)}
+              </a>
+            </h3>
+            <p class="mt-2">
+              ${item.excerpt ? this.truncateText(this.highlightMatch(item.excerpt, query), 300) : ""}
+            </p>
+          </article>
+        `;
         this.resultsContainer.appendChild(article);
       });
     }
@@ -173,7 +153,7 @@ description: "Búsqueda de artículos en el sitio"
     }
 
     async search(query) {
-      this.showFeedback('<span class="icon" aria-hidden="true">🎬</span> Cargando resultados...');
+      this.showFeedback("🎬 Cargando resultados...");
 
       try {
         const response = await fetch(this.searchJsonUrl);
@@ -186,9 +166,8 @@ description: "Búsqueda de artículos en el sitio"
           .sort((a, b) => this.rankResults(a, b, query));
 
         this.renderResults(results, query);
-        this.hideFeedback();
       } catch (error) {
-        this.showFeedback("No se pudieron obtener los resultados. Inténtalo más tarde.", "is-danger");
+        this.showFeedback("❌ No se pudieron obtener los resultados. Inténtalo más tarde.", "is-danger");
       }
     }
 
@@ -209,8 +188,6 @@ description: "Búsqueda de artículos en el sitio"
   }
 
   document.addEventListener("DOMContentLoaded", () => {
-    if (document.getElementById("search-input")) {
-      new SearchManager();
-    }
+    if (document.getElementById("search-input")) new SearchManager();
   });
 </script>
