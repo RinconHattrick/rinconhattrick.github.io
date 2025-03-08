@@ -7,7 +7,7 @@ categories: [equipo-mayor]
 tags: [Hattrick, equipo competitivo, tácticas, estrategia fútbol]
 excerpt: "Descubre cómo construir un equipo fuerte y competitivo en Hattrick con estrategias efectivas."
 description: "Aprende a crear un equipo competitivo en Hattrick desde cero. Estrategias de fichajes, tácticas y entrenamiento para lograr el éxito."
-image: "/assets/img/Rh.png"
+image: "/assets/img/hattrick.webp"
 featured: true
 published: true
 views: 0
