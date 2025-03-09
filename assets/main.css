@@ -54,24 +54,6 @@ a:hover {
   transition: background-color var(--transition-default), color var(--transition-default);
 }
 
-.navbar-dropdown {
-  max-height: 0;
-  padding: 0;
-  margin: 0;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-10px);
-  transition: max-height var(--transition-default), opacity var(--transition-default), visibility var(--transition-default), transform var(--transition-default);
-}
-
-.navbar-item.has-dropdown.is-hoverable:hover .navbar-dropdown,
-.navbar-item.has-dropdown.is-active .navbar-dropdown {
-  max-height: 300px;
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-
 /* Scroll to Top */
 .scroll-to-top-btn {
   position: fixed;
