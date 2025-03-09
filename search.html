@@ -35,7 +35,7 @@ description: "Búsqueda de artículos en el sitio"
     </div>
 
     <!-- Resultados de búsqueda -->
-    <div id="search-results" class="columns is-multiline is-variable is-4 is-centered" aria-live="polite"></div>
+    <div id="search-results" class="columns is-multiline is-variable is-4 is-centered mt-3" aria-live="polite"></div>
   </div>
 </div>
 
@@ -127,7 +127,7 @@ description: "Búsqueda de artículos en el sitio"
             <p class="mt-2">
               ${item.excerpt ? this.truncateText(this.highlightMatch(item.excerpt, query), 300) : ""}
             </p>
-          </article>
+          </article>          
         `;
         this.resultsContainer.appendChild(article);
       });

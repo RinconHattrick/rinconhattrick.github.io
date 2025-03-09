@@ -27,9 +27,10 @@
 /* ================================
    Estilos globales
 ================================ */
+html,
 body {
-  background-color: var(--background);
-  color: var(--text);
+  background-color: var(--background) !important;
+  color: var(--text) !important;
   font-family: "Roboto", sans-serif;
   line-height: 1.6;
 }
@@ -92,6 +93,7 @@ a:hover {
   bottom: 1rem;
   right: 1rem;
   background-color: #3273dc;
+  border: none;
   color: white;
   border-radius: 50%;
   width: 2.5rem;
@@ -117,10 +119,21 @@ a:hover {
   background-color: #275db3;
 }
 
+#themeToggle {
+  border: none;
+  background: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+#themeToggle:hover {
+  transform: translateY(-10px) scale(1.1);
+}
+
 /* ================================
    Media Queries
 ================================ */
-
 @media (max-width: 768px) {
   .scroll-to-top-btn {
     bottom: 3.75rem;

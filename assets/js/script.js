@@ -112,4 +112,41 @@ document.addEventListener("DOMContentLoaded", () => {
       toggleAriaExpanded(burger, false);
     }
   });
+  const themeToggle = document.getElementById("themeToggle");
+  const STORAGE_KEY = "theme";
+  const SYSTEM_THEME = "system";
+  const DEFAULT_THEME = "light";
+
+  let currentTheme = localStorage.getItem(STORAGE_KEY) || SYSTEM_THEME;
+
+  const applyTheme = (theme) => {
+    document.documentElement.setAttribute("data-theme", theme);
+    themeToggle.innerHTML = theme === "dark" ? "🌙" : "🌞";
+    localStorage.setItem(STORAGE_KEY, theme);
+  };
+
+  // Detectar el tema del sistema
+  const detectOSTheme = () => {
+    return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  };
+
+  // Aplicar tema guardado o el del sistema
+  if (currentTheme === SYSTEM_THEME) {
+    currentTheme = detectOSTheme();
+  }
+  applyTheme(currentTheme);
+
+  // Alternar el tema al hacer clic
+  themeToggle.addEventListener("click", () => {
+    currentTheme = currentTheme === "dark" ? "light" : "dark";
+    applyTheme(currentTheme);
+  });
+
+  // Escuchar cambios en la preferencia del sistema
+  window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (event) => {
+    if (localStorage.getItem(STORAGE_KEY) === SYSTEM_THEME) {
+      applyTheme(event.matches ? "dark" : "light");
+    }
+  });
+
 });

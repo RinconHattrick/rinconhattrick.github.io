@@ -5,9 +5,9 @@ layout: default
 <div class="container">
   <section class="hero is-small is-link has-text-centered">
     <div class="hero-body">
-      <h1 class="title is-2">{{ page.title }}</h1>
+      <h1 class="title is-3">{{ page.title }}</h1>
       {% if page.description %}
-      <p class="subtitle is-4">{{ page.description }}</p>
+      <p class="subtitle is-5">{{ page.description }}</p>
       {% endif %}
     </div>
   </section>
@@ -41,7 +41,7 @@ layout: default
                 {% if post.tags %}
                 <div class="tags mt-2">
                   {% for tag in post.tags %}
-                  <span class="tag is-light">{{ tag }}</span>
+                  <span class="tag is-info">{{ tag }}</span>
                   {% endfor %}
                 </div>
                 {% endif %}
