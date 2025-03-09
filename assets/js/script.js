@@ -74,31 +74,32 @@ document.addEventListener("DOMContentLoaded", () => {
   document.addEventListener("click", (event) => {
     const target = event.target;
 
-    if (burger && menu && (target === burger || burger.contains(target))) {
-      const isActive = menu.classList.toggle("is-active");
-      toggleClass(burger, "is-active", isActive);
-      toggleAriaExpanded(burger, isActive);
-      return;
-    }
-
-    if (categoryToggle && categoryMenu && (target === categoryToggle || categoryToggle.contains(target))) {
-      if (window.innerWidth <= 1024) {
-        event.preventDefault();
-        const isActive = categoryMenu.classList.toggle("is-active");
-        toggleAriaExpanded(categoryToggle, isActive);
+    // Manejo del menú de navegación (burger menu)
+    if (burger && menu) {
+      if (target === burger || burger.contains(target)) {
+        const isActive = menu.classList.toggle("is-active");
+        toggleClass(burger, "is-active", isActive);
+        toggleAriaExpanded(burger, isActive);
+      } else if (!menu.contains(target)) {
+        // Si se hace clic fuera del menú, se cierra
+        menu.classList.remove("is-active");
+        burger.classList.remove("is-active");
+        toggleAriaExpanded(burger, false);
       }
-      return;
     }
 
-    if (menu && !menu.contains(target) && burger && !burger.contains(target)) {
-      toggleClass(menu, "is-active", false);
-      toggleClass(burger, "is-active", false);
-      toggleAriaExpanded(burger, false);
-    }
-
-    if (categoryMenu && !categoryMenu.contains(target) && categoryToggle && !categoryToggle.contains(target)) {
-      toggleClass(categoryMenu, "is-active", false);
-      toggleAriaExpanded(categoryToggle, false);
+    // Manejo del menú de categorías en móvil
+    if (categoryToggle && categoryMenu) {
+      if (target === categoryToggle || categoryToggle.contains(target)) {
+        if (window.innerWidth <= 1024) {
+          event.preventDefault();
+          const isActive = categoryMenu.classList.toggle("is-active");
+          toggleAriaExpanded(categoryToggle, isActive);
+        }
+      } else if (!categoryMenu.contains(target)) {
+        categoryMenu.classList.remove("is-active");
+        toggleAriaExpanded(categoryToggle, false);
+      }
     }
   });
 
