@@ -3,10 +3,10 @@ layout: default
 ---
 
 <div class="container">
-  <header class="hero is-small is-link has-text-centered">
+  <header class="hero is-small is-link is-bold has-text-centered">
     <div class="hero-body">
       <h1 class="title is-3">{{ page.title }}</h1>
-      <p class="is-size-6">
+      <p class="subtitle is-5">
         <time datetime="{{ page.date | date_to_xmlschema }}">
           Publicado el {{ page.date | date: "%d/%m/%Y" }}
         </time>
@@ -27,13 +27,13 @@ layout: default
       <div class="columns is-centered">
         <div class="column is-8">
           <figure class="image">
-            <img src="{{ page.image | relative_url }}" alt="{{ page.title | escape }}" width="115" height="300" />
+            <img src="{{ page.image | relative_url }}" alt="{{ page.title | escape }}" />
           </figure>
         </div>
       </div>
       {% endif %}
 
-      <article class="content mt-5 box" role="article">
+      <article class="content mt-5" role="article">
         {{ content }}
       </article>
 

@@ -5,16 +5,14 @@ permalink: /contacto/
 ---
 
 <section class="container">
-  <!-- Encabezado -->
-  <section class="hero is-small is-link has-text-centered">
+  <section class="hero is-small is-link is-bold has-text-centered">
     <div class="hero-body">
-      <h1 class="title is-2">Contáctame</h1>
-      <p class="subtitle is-4">¿Tienes preguntas, comentarios o simplemente quieres hablar sobre estrategias de
+      <h1 class="title is-3">Contáctame</h1>
+      <p class="subtitle is-5">¿Tienes preguntas, comentarios o simplemente quieres hablar sobre estrategias de
         Hattrick?</p>
     </div>
   </section>
 
-  <!-- Métodos de Contacto -->
   <section class="section">
     <div class="columns is-multiline is-centered">
       {% for contact in site.data.contact %}
@@ -38,7 +36,6 @@ permalink: /contacto/
     </div>
   </section>
 
-  <!-- Preguntas Frecuentes -->
   <section class="section">
     <div class="container">
       <h2 class="title is-3 has-text-centered">Preguntas Frecuentes</h2>
@@ -55,13 +52,11 @@ permalink: /contacto/
     </div>
   </section>
 
-  <!-- Mensaje Final -->
   <section class="has-text-centered p-5">
     <p class="is-size-5">Estoy aquí para ayudarte con cualquier aspecto de Hattrick. No dudes en contactarme por el
       medio que prefieras. ¡Espero tu mensaje!</p>
   </section>
 
-  <!-- Botón de Volver al Inicio -->
   <div class="has-text-centered mt-5">
     <a href="{{ '/' | relative_url }}" class="button is-link is-rounded" aria-label="Volver al Inicio">
       <span class="icon" aria-hidden="true">🏠</span>

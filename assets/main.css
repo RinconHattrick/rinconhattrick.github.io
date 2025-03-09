@@ -1,45 +1,18 @@
-/* ================================
-   Variables de colores y temas
-================================ */
+/* variables */
 :root {
-  --color-marks: #ffdd57;
-  --color-background-light: #ffffff;
-  --color-background-dark: #1a1a2e;
-  --color-primary: hsl(0, 0%, 21%);
-  --color-link-hover: hsl(171, 100%, 41%);
-  --radius: 8px;
   --transition-default: 0.3s ease;
-
-  /* Tema global */
-  --background: var(--color-background-light);
-  --text: #363636;
-  --card-background: var(--color-background-light);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: var(--color-background-dark);
-    --text: #f1f1f1;
-    --card-background: #293241;
-  }
-}
-
-/* ================================
-   Estilos globales
-================================ */
-html,
+/* Estilos globales*/
 body {
-  background-color: var(--background) !important;
-  color: var(--text) !important;
   font-family: "Roboto", sans-serif;
-  line-height: 1.6;
 }
 
 mark {
-  background-color: var(--color-marks);
+  background-color: var(--bulma-warning-on-scheme);
   color: #222;
   padding: 0.1em 0.3em;
-  border-radius: var(--radius);
+  border-radius: 8px;
 }
 
 a {
@@ -55,15 +28,29 @@ a:hover {
 }
 
 .button:hover {
-  opacity: 0.9;
+  opacity: 0.8;
 }
 
-/* ================================
-   Navbar
-================================ */
+.hero-body {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Navbar */
 .navbar-item.is-active {
-  background-color: var(--color-primary);
-  color: var(--color-background-light);
+  background-color: var(--bulma-link-on-scheme);
+  color: #f1f1f1;
   transition: background-color var(--transition-default), color var(--transition-default);
 }
 
@@ -85,16 +72,14 @@ a:hover {
   transform: translateY(0);
 }
 
-/* ================================
-   Botón "Scroll to Top"
-================================ */
+/* Scroll to Top */
 .scroll-to-top-btn {
   position: fixed;
   bottom: 1rem;
   right: 1rem;
-  background-color: #3273dc;
+  background-color: var(--bulma-link-on-scheme);
   border: none;
-  color: white;
+  color: #f1f1f1;
   border-radius: 50%;
   width: 2.5rem;
   height: 2.5rem;
@@ -116,7 +101,7 @@ a:hover {
 
 .scroll-to-top-btn:hover {
   transform: translateY(-10px) scale(1.1);
-  background-color: #275db3;
+
 }
 
 #themeToggle {
@@ -131,9 +116,7 @@ a:hover {
   transform: translateY(-10px) scale(1.1);
 }
 
-/* ================================
-   Media Queries
-================================ */
+/* Media Queries */
 @media (max-width: 768px) {
   .scroll-to-top-btn {
     bottom: 3.75rem;
