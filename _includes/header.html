@@ -17,21 +17,7 @@
           <span class="icon" aria-hidden="true">🏠</span> <span>Inicio</span>
         </a>
 
-        {% assign category_pages = site.pages | where: "layout", "category" %}
-        {% if category_pages.size > 0 %}
-        <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link" href="#"><span class="icon" aria-hidden="true">📂</span> <span>Categorías</span></a>
-          <div class="navbar-dropdown">
-            {% for category_page in category_pages %}
-            <a class="navbar-item {% if page.url == category_page.url %}is-active{% endif %}"
-              href="{{ category_page.url | relative_url }}">
-              <span class="icon" aria-hidden="true">📁</span> {{ category_page.title }}
-            </a>
-            {% endfor %}
-          </div>
-        </div>
-        {% endif %}
-
+   
         {% assign links = "acerca-de,contacto" | split: "," %}
         {% assign icons = "ℹ️,✉️" | split: "," %}
         {% for link in links %}
