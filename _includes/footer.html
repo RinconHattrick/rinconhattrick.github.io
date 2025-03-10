@@ -7,12 +7,26 @@
     </p>
 
     <div class="buttons is-centered">
-      <a href="{{ '/acerca-de/' | relative_url }}" class="button is-small" aria-label="Más información sobre nosotros">
-        <span class="icon" aria-hidden="true">ℹ️</span><span>Acerca de</span>
+      <a href="{{ '/acerca-de/' | relative_url }}" class="button is-small">
+        <span class="icon">ℹ️</span><span>Acerca de</span>
       </a>
-      <a href="{{ '/contacto/' | relative_url }}" class="button is-small" aria-label="Formulario de contacto">
-        <span class="icon" aria-hidden="true">✉️</span><span>Contacto</span>
+      <a href="{{ '/contacto/' | relative_url }}" class="button is-small">
+        <span class="icon">✉️</span><span>Contacto</span>
       </a>
     </div>
+
+    {% assign category_pages = site.pages | where: "layout", "category" %}
+    {% if category_pages.size > 0 %}
+    <div class="categories">
+      <h3 class="title is-5">Categorías</h3>
+      <div class="tags are-medium">
+        {% for category_page in category_pages %}
+        <a class="tag {% if page.url == category_page.url %}is-primary{% endif %}" href="{{ category_page.url | relative_url }}">
+          <span class="icon">📁</span> {{ category_page.title }}
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
   </div>
 </footer>
