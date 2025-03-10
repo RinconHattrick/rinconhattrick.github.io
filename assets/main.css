@@ -1,9 +1,3 @@
-/* variables */
-:root {
-  --transition-default: 0.3s ease;
-}
-
-/* Estilos globales*/
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -16,17 +10,15 @@ mark {
 }
 
 a {
-  transition: opacity var(--transition-default);
+  transition: opacity 0.3s ease;
 }
-
 a:hover {
   opacity: 0.8;
 }
 
 .button {
-  transition: opacity var(--transition-default), background-color var(--transition-default);
+  transition: opacity 0.3s ease, background-color 0.3s ease;
 }
-
 .button:hover {
   opacity: 0.8;
 }
@@ -40,21 +32,17 @@ a:hover {
     opacity: 0;
     transform: translateY(-10px);
   }
-
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
-
-/* Navbar */
 .navbar-item.is-active {
   background-color: var(--bulma-link-on-scheme);
   color: #f1f1f1;
-  transition: background-color var(--transition-default), color var(--transition-default);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Scroll to Top */
 .scroll-to-top-btn {
   position: fixed;
   bottom: 1rem;
@@ -63,8 +51,8 @@ a:hover {
   border: none;
   color: #f1f1f1;
   border-radius: 50%;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2rem;
+  height: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -72,18 +60,15 @@ a:hover {
   cursor: pointer;
   opacity: 0;
   visibility: hidden;
-  transition: opacity var(--transition-default), transform var(--transition-default);
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
-
 .scroll-to-top-btn.show {
   opacity: 1;
   visibility: visible;
   transform: translateY(-10px) scale(1);
 }
-
 .scroll-to-top-btn:hover {
   transform: translateY(-10px) scale(1.1);
-
 }
 
 #themeToggle {
@@ -93,12 +78,10 @@ a:hover {
   cursor: pointer;
   transition: transform 0.2s ease;
 }
-
 #themeToggle:hover {
   transform: translateY(-10px) scale(1.1);
 }
 
-/* Media Queries */
 @media (max-width: 768px) {
   .scroll-to-top-btn {
     bottom: 3.75rem;

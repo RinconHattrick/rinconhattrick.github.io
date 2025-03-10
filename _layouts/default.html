@@ -9,30 +9,42 @@
 
   {% seo %}
 
+  <!-- Favicons -->
   <link rel="icon" href="{{ '/assets/img/favicon.ico' | relative_url }}" sizes="any" type="image/x-icon">
-  <link rel="apple-touch-icon" href="{{ '/assets/img/favicon.ico' | relative_url }}">
+  <link rel="apple-touch-icon" href="{{ '/assets/img/apple-touch-icon.png' | relative_url }}">
+  <link rel="icon" href="{{ '/assets/img/favicon-32x32.png' | relative_url }}" sizes="32x32" type="image/png">
+  <link rel="icon" href="{{ '/assets/img/favicon-192x192.png' | relative_url }}" sizes="192x192" type="image/png">
 
+  <!-- CSS -->
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
   <link rel="stylesheet" href="{{ '/assets/main.css?v=1.0.18' | relative_url }}">
 
+  <!-- Cambio de color en modo oscuro -->
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const themeMeta = document.getElementById("themeColorMeta");
-      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-        themeMeta.setAttribute("content", "#181825");
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
+
+      function updateThemeColor() {
+        themeMeta.setAttribute("content", prefersDark.matches ? "#181825" : "#3273dc");
       }
+
+      updateThemeColor();
+      prefersDark.addEventListener("change", updateThemeColor);
     });
   </script>
 
-  <!-- Google Analytics -->
+  <!-- Google Analytics (solo en producción) -->
+  {% if jekyll.environment == "production" %}
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-3C878VFFXM"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag("js", new Date());
-    gtag("config", "G-3C878VFFXM", { 'anonymize_ip': true });
+    gtag("config", "G-3C878VFFXM", { 'anonymize_ip': true, "cookie_flags": "SameSite=None; Secure" });
   </script>
+  {% endif %}
 </head>
 
 <body class="has-navbar-fixed-top">
@@ -53,7 +65,7 @@
     <span aria-hidden="true">⇑</span>
   </button>
 
-  <script src="{{ '/assets/js/script.js?v=1.0.18' | relative_url }}" defer></script>
+  <script src="{{ '/assets/js/script.js?v=1.0.19' | relative_url }}" defer></script>
 </body>
 
 </html>
