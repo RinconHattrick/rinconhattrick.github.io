@@ -15,9 +15,12 @@ layout: default
         {% endif %}
       </p>
 
-      {% assign words = content | number_of_words %}
-      {% assign read_time = words | divided_by: 200 | ceil %}
-      <p class="is-size-6"><span class="icon" aria-hidden="true">📖</span> Tiempo de lectura: ~{{ read_time }} min</p>
+      {% assign words = content | number_of_words %} {% assign read_time = words
+      | divided_by: 200 | ceil %}
+      <p class="is-size-6">
+        <span class="icon" aria-hidden="true">📖</span> Tiempo de lectura: ~{{
+        read_time }} min
+      </p>
     </div>
   </header>
 
@@ -27,18 +30,23 @@ layout: default
       <div class="columns is-centered">
         <div class="column is-8">
           <figure class="image">
-            <img src="{{ page.image | relative_url }}" alt="{{ page.title | escape }}" />
+            <img
+              src="{{ page.image | relative_url }}"
+              alt="{{ page.title | escape }}"
+            />
           </figure>
         </div>
       </div>
       {% endif %}
 
-      <article class="content mt-5" role="article">
-        {{ content }}
-      </article>
+      <article class="content mt-5" role="article">{{ content }}</article>
 
       <div class="has-text-centered my-6">
-        <button id="shareButton" class="button is-primary is-light is-rounded" aria-label="Compartir artículo">
+        <button
+          id="shareButton"
+          class="button is-primary is-light is-rounded"
+          aria-label="Compartir artículo"
+        >
           <span class="icon" aria-hidden="true">🔗</span>
           <span>Compartir</span>
         </button>
@@ -50,19 +58,31 @@ layout: default
 
   <div class="buttons is-centered mt-5">
     {% if page.previous.url %}
-    <a href="{{ page.previous.url | relative_url }}" class="button is-light is-rounded" aria-label="Artículo anterior">
+    <a
+      href="{{ page.previous.url | relative_url }}"
+      class="button is-light is-rounded"
+      aria-label="Artículo anterior"
+    >
       <span class="icon" aria-hidden="true">⬅️</span>
       <span>Anterior</span>
     </a>
     {% endif %}
 
-    <a href="{{ '/' | relative_url }}" class="button is-link is-rounded" aria-label="Volver al inicio">
+    <a
+      href="{{ '/' | relative_url }}"
+      class="button is-link is-rounded"
+      aria-label="Volver al inicio"
+    >
       <span class="icon" aria-hidden="true">🏠</span>
       <span>Inicio</span>
     </a>
 
     {% if page.next.url %}
-    <a href="{{ page.next.url | relative_url }}" class="button is-light is-rounded" aria-label="Artículo siguiente">
+    <a
+      href="{{ page.next.url | relative_url }}"
+      class="button is-light is-rounded"
+      aria-label="Artículo siguiente"
+    >
       <span>Siguiente</span>
       <span class="icon" aria-hidden="true">➡️</span>
     </a>
@@ -73,35 +93,33 @@ layout: default
     <div class="container">
       <h2 class="title is-4">Artículos Relacionados</h2>
       <div class="columns is-multiline is-centered">
-        {% assign category = page.categories | first %}
-        {% assign related_posts = site.categories[category] | where_exp: "post", "post.url != page.url" %}
-
-        {% assign total_posts = related_posts | size %}
-        {% assign limit = total_posts | times: 0.45 | round %}
-        {% if limit < 1 %} {% assign limit=1 %} {% endif %} {% assign related_posts=related_posts | sort: "date" |
-          reverse | slice: 0, limit %} {% if related_posts.size> 0 %}
-          {% for post in related_posts %}
-          <div class="column is-6-tablet is-4-widescreen">
-            <div class="card has-shadow">
-              <div class="card-content">
-                <h3 class="title is-5">
-                  <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-                </h3>
-                {% if post.tags %}
-                <p class="tags">
-                  {% for tag in post.tags %}
-                  <span class="tag is-info">{{ tag }}</span>
-                  {% endfor %}
-                </p>
-                {% endif %}
-                <p>{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
-              </div>
+        {% assign category = page.categories | first %} {% assign related_posts
+        = site.categories[category] | where_exp: "post", "post.url != page.url"
+        %} {% assign total_posts = related_posts | size %} {% assign limit =
+        total_posts | times: 0.45 | round %} {% if limit < 1 %} {% assign
+        limit=1 %} {% endif %} {% assign related_posts=related_posts | sort:
+        "date" | reverse | slice: 0, limit %} {% if related_posts.size> 0 %} {%
+        for post in related_posts %}
+        <div class="column is-6-tablet is-4-widescreen">
+          <div class="card has-shadow">
+            <div class="card-content">
+              <h3 class="title is-5">
+                <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+              </h3>
+              {% if post.tags %}
+              <p class="tags">
+                {% for tag in post.tags %}
+                <span class="tag is-info">{{ tag }}</span>
+                {% endfor %}
+              </p>
+              {% endif %}
+              <p>{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
             </div>
           </div>
-          {% endfor %}
-          {% else %}
-          <p class="has-text-grey">No hay artículos relacionados.</p>
-          {% endif %}
+        </div>
+        {% endfor %} {% else %}
+        <p class="has-text-grey">No hay artículos relacionados.</p>
+        {% endif %}
       </div>
     </div>
   </section>

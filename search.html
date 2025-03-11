@@ -15,12 +15,22 @@ description: "Búsqueda de artículos en el sitio"
     <form class="mt-5" role="search" onsubmit="event.preventDefault()">
       <div class="field has-addons">
         <div class="control has-icons-left is-expanded">
-          <input type="search" id="search-input" class="input is-rounded" placeholder="Buscar artículos..."
-            aria-label="Buscar artículos" autocomplete="off" />
+          <input
+            type="search"
+            id="search-input"
+            class="input is-rounded"
+            placeholder="Buscar artículos..."
+            aria-label="Buscar artículos"
+            autocomplete="off"
+          />
           <span class="icon is-small is-left" aria-hidden="true">🔍</span>
         </div>
         <div class="control">
-          <button type="submit" class="button is-info is-rounded" aria-label="Ejecutar búsqueda">
+          <button
+            type="submit"
+            class="button is-info is-rounded"
+            aria-label="Ejecutar búsqueda"
+          >
             🔎
           </button>
         </div>
@@ -28,11 +38,20 @@ description: "Búsqueda de artículos en el sitio"
       <p>Escribe al menos 3 caracteres para comenzar a buscar.</p>
     </form>
 
-    <div id="search-feedback" class="message is-hidden mt-3" role="status" aria-live="polite">
+    <div
+      id="search-feedback"
+      class="message is-hidden mt-3"
+      role="status"
+      aria-live="polite"
+    >
       <div class="message-body"></div>
     </div>
 
-    <div id="search-results" class="columns is-multiline is-variable is-4 is-centered mt-3" aria-live="polite"></div>
+    <div
+      id="search-results"
+      class="columns is-multiline is-variable is-4 is-centered mt-3"
+      aria-live="polite"
+    ></div>
   </div>
 </div>
 
@@ -55,7 +74,10 @@ description: "Búsqueda de artículos en el sitio"
     }
 
     init() {
-      this.searchInput.addEventListener("input", this.debounce((e) => this.handleInput(e.target.value.trim()), 300));
+      this.searchInput.addEventListener(
+        "input",
+        this.debounce((e) => this.handleInput(e.target.value.trim()), 300)
+      );
 
       const queryParams = new URLSearchParams(window.location.search);
       const initialQuery = queryParams.get("q");
@@ -68,7 +90,10 @@ description: "Búsqueda de artículos en el sitio"
     handleInput(query) {
       if (query.length < 3) {
         this.clearResults();
-        this.showFeedback("Escribe al menos 3 caracteres para buscar.", "is-info");
+        this.showFeedback(
+          "Escribe al menos 3 caracteres para buscar.",
+          "is-info"
+        );
         return;
       }
       this.updateURL(query);
@@ -84,7 +109,13 @@ description: "Búsqueda de artículos en el sitio"
     showFeedback(message, type = "is-primary") {
       if (!this.feedbackElement) return;
       this.feedbackElement.querySelector(".message-body").innerHTML = message;
-      this.feedbackElement.classList.remove("is-hidden", "is-danger", "is-primary", "is-info", "is-warning");
+      this.feedbackElement.classList.remove(
+        "is-hidden",
+        "is-danger",
+        "is-primary",
+        "is-info",
+        "is-warning"
+      );
       this.feedbackElement.classList.add(type);
     }
 
@@ -122,7 +153,14 @@ description: "Búsqueda de artículos en el sitio"
               </a>
             </h3>
             <p class="mt-2">
-              ${item.excerpt ? this.truncateText(this.highlightMatch(item.excerpt, query), 300) : ""}
+              ${
+                item.excerpt
+                  ? this.truncateText(
+                      this.highlightMatch(item.excerpt, query),
+                      300
+                    )
+                  : ""
+              }
             </p>
           </article>          
         `;
@@ -134,7 +172,10 @@ description: "Búsqueda de artículos en el sitio"
       if (!text || !query) return text || "";
       const safeQuery = query.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
       const regex = new RegExp(`(${safeQuery})`, "gi");
-      return text.replace(regex, '<mark class="has-background-warning">$1</mark>');
+      return text.replace(
+        regex,
+        '<mark class="has-background-warning">$1</mark>'
+      );
     }
 
     truncateText(text, length) {
@@ -154,17 +195,26 @@ description: "Búsqueda de artículos en el sitio"
 
       try {
         const response = await fetch(this.searchJsonUrl);
-        if (!response.ok) throw new Error("Error al cargar los datos de búsqueda");
+        if (!response.ok)
+          throw new Error("Error al cargar los datos de búsqueda");
         const data = await response.json();
-        if (!Array.isArray(data)) throw new Error("Formato incorrecto de datos");
+        if (!Array.isArray(data))
+          throw new Error("Formato incorrecto de datos");
 
         const results = data
-          .filter((item) => item.title.toLowerCase().includes(query.toLowerCase()) || item.excerpt.toLowerCase().includes(query.toLowerCase()))
+          .filter(
+            (item) =>
+              item.title.toLowerCase().includes(query.toLowerCase()) ||
+              item.excerpt.toLowerCase().includes(query.toLowerCase())
+          )
           .sort((a, b) => this.rankResults(a, b, query));
 
         this.renderResults(results, query);
       } catch (error) {
-        this.showFeedback("❌ No se pudieron obtener los resultados. Inténtalo más tarde.", "is-danger");
+        this.showFeedback(
+          "❌ No se pudieron obtener los resultados. Inténtalo más tarde.",
+          "is-danger"
+        );
       }
     }
 

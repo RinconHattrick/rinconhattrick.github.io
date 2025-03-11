@@ -8,11 +8,20 @@ permalink: /404.html
   <div class="hero-body">
     <div class="container has-text-centered">
       <figure class="image is-128x128 is-inline-block">
-        <img src="{{ '/assets/img/404.png' | relative_url }}" width="48" height="48" alt="Página no encontrada" />
+        <img
+          src="{{ '/assets/img/404.png' | relative_url }}"
+          width="48"
+          height="48"
+          alt="Página no encontrada"
+        />
       </figure>
 
-      <h1 class="title is-1 has-text-danger mt-4">¡Ups! No encontramos esa página</h1>
-      <p class="subtitle is-3">Parece que te perdiste. Intenta alguna de estas opciones:</p>
+      <h1 class="title is-1 has-text-danger mt-4">
+        ¡Ups! No encontramos esa página
+      </h1>
+      <p class="subtitle is-3">
+        Parece que te perdiste. Intenta alguna de estas opciones:
+      </p>
 
       <div class="buttons is-centered">
         <a href="{{ '/' | relative_url }}" class="button is-link is-rounded">
@@ -20,7 +29,11 @@ permalink: /404.html
           <span>Inicio</span>
         </a>
 
-        <button onclick="window.history.back()" class="button is-warning is-rounded" aria-label="Volver atrás">
+        <button
+          onclick="window.history.back()"
+          class="button is-warning is-rounded"
+          aria-label="Volver atrás"
+        >
           <span class="icon" aria-hidden="true">↩️</span>
           <span>Atrás</span>
         </button>

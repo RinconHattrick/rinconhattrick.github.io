@@ -1,71 +1,110 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: 'es' }}" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#3273dc" id="themeColorMeta" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#3273dc" id="themeColorMeta">
+    {% seo %}
 
-  {% seo %}
+    <!-- Favicons -->
+    <link
+      rel="icon"
+      href="{{ '/assets/img/favicon.ico' | relative_url }}"
+      sizes="any"
+      type="image/x-icon"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="{{ '/assets/img/apple-touch-icon.png' | relative_url }}"
+    />
+    <link
+      rel="icon"
+      href="{{ '/assets/img/favicon-32x32.png' | relative_url }}"
+      sizes="32x32"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      href="{{ '/assets/img/favicon-192x192.png' | relative_url }}"
+      sizes="192x192"
+      type="image/png"
+    />
 
-  <!-- Favicons -->
-  <link rel="icon" href="{{ '/assets/img/favicon.ico' | relative_url }}" sizes="any" type="image/x-icon">
-  <link rel="apple-touch-icon" href="{{ '/assets/img/apple-touch-icon.png' | relative_url }}">
-  <link rel="icon" href="{{ '/assets/img/favicon-32x32.png' | relative_url }}" sizes="32x32" type="image/png">
-  <link rel="icon" href="{{ '/assets/img/favicon-192x192.png' | relative_url }}" sizes="192x192" type="image/png">
+    <!-- CSS -->
+    <link
+      rel="preconnect"
+      href="https://cdn.jsdelivr.net"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ '/assets/main.css?v=1.0.20' | relative_url }}"
+    />
 
-  <!-- CSS -->
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
-  <link rel="stylesheet" href="{{ '/assets/main.css?v=1.0.18' | relative_url }}">
+    <!-- Cambio de color en modo oscuro -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const themeMeta = document.getElementById("themeColorMeta");
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
 
-  <!-- Cambio de color en modo oscuro -->
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const themeMeta = document.getElementById("themeColorMeta");
-      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
+        function updateThemeColor() {
+          themeMeta.setAttribute(
+            "content",
+            prefersDark.matches ? "#181825" : "#3273dc"
+          );
+        }
 
-      function updateThemeColor() {
-        themeMeta.setAttribute("content", prefersDark.matches ? "#181825" : "#3273dc");
+        updateThemeColor();
+        prefersDark.addEventListener("change", updateThemeColor);
+      });
+    </script>
+
+    <!-- Google Analytics (solo en producción) -->
+    {% if jekyll.environment == "production" %}
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-3C878VFFXM"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
       }
+      gtag("js", new Date());
+      gtag("config", "G-3C878VFFXM", {
+        anonymize_ip: true,
+        cookie_flags: "SameSite=None; Secure",
+      });
+    </script>
+    {% endif %}
+  </head>
 
-      updateThemeColor();
-      prefersDark.addEventListener("change", updateThemeColor);
-    });
-  </script>
+  <body class="has-navbar-fixed-top">
+    <header role="banner">{% include header.html %}</header>
+    <main class="section" role="main">{{ content }}</main>
+    <footer role="contentinfo">{% include footer.html %}</footer>
+    <button
+      class="button scroll-to-top-btn"
+      id="scrollToTopBtn"
+      title="Subir al inicio"
+      aria-label="Subir al inicio"
+      hidden
+    >
+      <span aria-hidden="true">⇑</span>
+    </button>
 
-  <!-- Google Analytics (solo en producción) -->
-  {% if jekyll.environment == "production" %}
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3C878VFFXM"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag("js", new Date());
-    gtag("config", "G-3C878VFFXM", { 'anonymize_ip': true, "cookie_flags": "SameSite=None; Secure" });
-  </script>
-  {% endif %}
-</head>
-
-<body class="has-navbar-fixed-top">
-  <header role="banner">
-    {% include header.html %}
-  </header>
-
-  <main class="section" role="main">
-    {{ content }}
-  </main>
-
-  <footer role="contentinfo">
-    {% include footer.html %}
-  </footer>
-
-  <button class="button scroll-to-top-btn" id="scrollToTopBtn" title="Subir al inicio" aria-label="Subir al inicio"
-    hidden>
-    <span aria-hidden="true">⇑</span>
-  </button>
-
-  <script src="{{ '/assets/js/script.js?v=1.0.19' | relative_url }}" defer></script>
-</body>
-
+    <script
+      src="{{ '/assets/js/script.js?v=1.0.20' | relative_url }}"
+      defer
+    ></script>
+  </body>
 </html>
