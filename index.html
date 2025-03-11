@@ -39,9 +39,8 @@ title: "El Rincón de Hattrick"
             <article class="box">
               {% if post.image %}
               <figure class="image mb-3">
-                <img class="has-radius" src="{{ post.image | relative_url }}"
-                  srcset="{{ post.image | replace: '.webp', '-2x.webp' | relative_url }} 2x, {{ post.image | replace: '.webp', '-3x.webp' | relative_url }} 3x"
-                  alt="{{ post.title }}" width="300" height="115" fetchpriority="high">
+                <img class="has-radius" src="{{ post.image | relative_url }}" alt="{{ post.title }}" width="256"  
+                  height="256" fetchpriority="high" /> 
               </figure>
               {% endif %}
 
