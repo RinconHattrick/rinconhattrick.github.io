@@ -23,10 +23,8 @@
         <h3 class="title is-5 has-text-centered">Categorías</h3>
         <div class="tags are-medium is-justify-content-center">
           {% for category_page in category_pages %}
-          <a
-            class="tag is-light {% if page.url == category_page.url %}is-primary{% endif %} is-flex is-align-items-center"
-            href="{{ category_page.url | relative_url }}"
-          >
+          <a class="tag is-light {% if page.url == category_page.url %}is-primary{% endif %} is-flex is-align-items-center"
+            href="{{ category_page.url | relative_url }}">
             <span class="icon">📁</span>
             <span>{{ category_page.title }}</span>
           </a>

@@ -24,18 +24,11 @@ layout: default
               <article class="box">
                 {% if post.image %}
                 <figure class="image is-16by9 box has-shadow">
-                  <img
-                    src="{{ post.image | relative_url }}"
-                    alt="{{ post.title | escape }}"
-                    loading="lazy"
-                  />
+                  <img src="{{ post.image | relative_url }}" alt="{{ post.title | escape }}" loading="lazy" />
                 </figure>
                 {% endif %}
 
-                <time
-                  datetime="{{ post.date | date: '%Y-%m-%d' }}"
-                  class="is-size-7 has-text-grey"
-                >
+                <time datetime="{{ post.date | date: '%Y-%m-%d' }}" class="is-size-7 has-text-grey">
                   <span class="icon" aria-hidden="true">📅</span> {{ post.date |
                   date: "%d/%m/%Y" }}
                 </time>
@@ -77,10 +70,7 @@ layout: default
           sort: "title" %} {% for cat in categories %} {% if cat.url == page.url
           %} {% assign prev_index = forloop.index0 | minus: 1 %} {% assign
           next_index = forloop.index0 | plus: 1 %} {% if prev_index >= 0 %}
-          <a
-            href="{{ categories[prev_index].url }}"
-            class="button is-light is-rounded"
-          >
+          <a href="{{ categories[prev_index].url }}" class="button is-light is-rounded">
             <span class="icon" aria-hidden="true">⬅️</span>
             <span>Anterior</span>
           </a>
@@ -90,15 +80,12 @@ layout: default
             <span class="icon" aria-hidden="true">🏠</span> <span>Inicio</span>
           </a>
 
-          {% if next_index < categories.size %}
-          <a
-            href="{{ categories[next_index].url }}"
-            class="button is-light is-rounded"
-          >
+          {% if next_index < categories.size %} <a href="{{ categories[next_index].url }}"
+            class="button is-light is-rounded">
             <span>Siguiente</span>
             <span class="icon" aria-hidden="true">➡️</span>
-          </a>
-          {% endif %} {% endif %} {% endfor %}
+            </a>
+            {% endif %} {% endif %} {% endfor %}
         </div>
       </div>
     </div>

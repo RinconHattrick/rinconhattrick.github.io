@@ -4,12 +4,7 @@
       <a class="navbar-item" href="{{ '/' | relative_url }}">
         <h2 class="title is-4">{{ site.title | default: "Mi Sitio Web" }}</h2>
       </a>
-      <button
-        class="navbar-burger"
-        aria-label="Abrir menú"
-        aria-expanded="false"
-        data-target="navbarMenu"
-      >
+      <button class="navbar-burger" aria-label="Abrir menú" aria-expanded="false" data-target="navbarMenu">
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
@@ -18,23 +13,15 @@
 
     <div class="navbar-menu">
       <div class="navbar-end">
-        <a
-          class="navbar-item {% if page.url == '/' %}is-active{% endif %}"
-          href="{{ '/' | relative_url }}"
-        >
+        <a class="navbar-item {% if page.url == '/' %}is-active{% endif %}" href="{{ '/' | relative_url }}">
           <span class="icon" aria-hidden="true">🏠</span> <span>Inicio</span>
         </a>
 
         {% assign links = "acerca-de,contacto" | split: "," %} {% assign icons =
         "ℹ️,✉️" | split: "," %} {% for link in links %} {% assign link_url = '/'
         | append: link | append: '/' | relative_url %}
-        <a
-          class="navbar-item {% if page.url == link_url %}is-active{% endif %}"
-          href="{{ link_url }}"
-        >
-          <span class="icon" aria-hidden="true"
-            >{{ icons[forloop.index0] }}</span
-          >
+        <a class="navbar-item {% if page.url == link_url %}is-active{% endif %}" href="{{ link_url }}">
+          <span class="icon" aria-hidden="true">{{ icons[forloop.index0] }}</span>
           <span>{{ link | replace: '-', ' ' | capitalize }}</span>
         </a>
         {% endfor %}
@@ -43,20 +30,10 @@
           <form action="{{ '/search/' | relative_url }}" method="get">
             <div class="field has-addons">
               <div class="control">
-                <input
-                  class="input is-rounded"
-                  type="search"
-                  name="q"
-                  placeholder="Buscar..."
-                  required
-                />
+                <input class="input is-rounded" type="search" name="q" placeholder="Buscar..." required />
               </div>
               <div class="control">
-                <button
-                  type="submit"
-                  class="button is-primary is-rounded"
-                  aria-label="Buscar"
-                >
+                <button type="submit" class="button is-primary is-rounded" aria-label="Buscar">
                   <span class="icon" aria-hidden="true">🔍</span>
                 </button>
               </div>

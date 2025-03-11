@@ -26,13 +26,8 @@ permalink: /contacto/
             </span>
             <h2 class="title is-5">{{ contact.name }}</h2>
             <p class="mb-4">{{ contact.description }}</p>
-            <a
-              href="{{ contact.link }}"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="button {{ contact.color }} is-medium is-fullwidth"
-              aria-label="Contactar por {{ contact.name }}"
-            >
+            <a href="{{ contact.link }}" target="_blank" rel="noopener noreferrer"
+              class="button {{ contact.color }} is-medium is-fullwidth" aria-label="Contactar por {{ contact.name }}">
               <span class="icon" aria-hidden="true">📱</span>
               <span>Contactar</span>
             </a>
@@ -77,11 +72,7 @@ permalink: /contacto/
   </section>
 
   <div class="has-text-centered mt-5">
-    <a
-      href="{{ '/' | relative_url }}"
-      class="button is-link is-rounded"
-      aria-label="Volver al Inicio"
-    >
+    <a href="{{ '/' | relative_url }}" class="button is-link is-rounded" aria-label="Volver al Inicio">
       <span class="icon" aria-hidden="true">🏠</span>
       <span>Volver al Inicio</span>
     </a>

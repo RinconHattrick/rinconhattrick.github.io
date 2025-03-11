@@ -22,18 +22,10 @@ title: "El Rincón de Hattrick"
   category_page.description | default: "Explora artículos sobre esta temática en
   nuestro blog." %} {% assign category_slug = category_name | slugify %}
 
-  <section
-    id="{{ category_slug }}"
-    class="mt-5"
-    role="region"
-    aria-labelledby="category-title-{{ category_slug }}"
-  >
+  <section id="{{ category_slug }}" class="mt-5" role="region" aria-labelledby="category-title-{{ category_slug }}">
     <div class="card">
       <header class="card-header">
-        <h2
-          id="category-title-{{ category_slug }}"
-          class="card-header-title title is-3"
-        >
+        <h2 id="category-title-{{ category_slug }}" class="card-header-title title is-3">
           {{ category_title }}
         </h2>
       </header>
@@ -47,30 +39,19 @@ title: "El Rincón de Hattrick"
             <article class="box">
               {% if post.image %}
               <figure class="image mb-3">
-                <img
-                  class="has-radius"
-                  src="{{ post.image | relative_url }}"
-                  alt="{{ post.title }}"
-                  loading="lazy"
-                  width="300"
-                  height="115"
-                />
+                <img class="has-radius" src="{{ post.image | relative_url }}" alt="{{ post.title }}" loading="lazy"
+                  width="300" height="115" />
               </figure>
               {% endif %}
 
-              <time
-                datetime="{{ post.date | date: '%Y-%m-%d' }}"
-                class="is-size-7 has-text-grey"
-                aria-label="Fecha de publicación: {{ post.date | date: '%d de %B de %Y' }}"
-              >
+              <time datetime="{{ post.date | date: '%Y-%m-%d' }}" class="is-size-7 has-text-grey"
+                aria-label="Fecha de publicación: {{ post.date | date: '%d de %B de %Y' }}">
                 <span class="icon" aria-hidden="true">📅</span>
                 <span>{{ post.date | date: "%d/%m/%Y" }}</span>
               </time>
 
               <h3 class="title is-5 mt-2">
-                <a href="{{ post.url | relative_url }}" rel="bookmark"
-                  >{{ post.title }}</a
-                >
+                <a href="{{ post.url | relative_url }}" rel="bookmark">{{ post.title }}</a>
               </h3>
 
               <p class="mt-2">
@@ -91,11 +72,8 @@ title: "El Rincón de Hattrick"
         </div>
 
         <div class="has-text-centered mt-4">
-          <a
-            href="{{ category_page.url | relative_url }}"
-            class="button is-link is-light is-rounded"
-            aria-label="Ver más artículos de {{ category_title }}"
-          >
+          <a href="{{ category_page.url | relative_url }}" class="button is-link is-light is-rounded"
+            aria-label="Ver más artículos de {{ category_title }}">
             <span class="icon" aria-hidden="true">📂</span>
             <span>Ver más en {{ category_title }}</span>
           </a>
