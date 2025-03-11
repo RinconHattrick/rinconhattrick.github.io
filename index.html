@@ -39,14 +39,13 @@ title: "El Rincón de Hattrick"
             <article class="box">
               {% if post.image %}
           
-              </figure>
-<div class="columns is-centered">
+             <div class="columns is-centered">
   <div class="column is-6">
-    <figure class="image">
+    <figure class="image is-4by3">
       <img class="has-radius" src="{{ post.image | relative_url }}" alt="{{ post.title | escape }}" fetchpriority="high" />
     </figure>
   </div>
-</div>
+</div> 
               {% endif %}
 
               <time datetime="{{ post.date | date: '%Y-%m-%d' }}" class="is-size-7 has-text-grey"
