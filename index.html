@@ -38,9 +38,8 @@ title: "El Rincón de Hattrick"
           <div class="column is-6-tablet is-4-widescreen">
             <article class="box">
               {% if post.image %}
-              <figure class="image mb-3">
-                <img class="has-radius" src="{{ post.image | relative_url }}" alt="{{ post.title }}" width="256"  
-                  height="256" fetchpriority="high" /> 
+              <figure class="imagen is-256x256  mb-3">
+                <img class="has-radius" src="{{ post.image | relative_url }}" alt="{{ post.title }}" fetchpriority="high" /> 
               </figure>
               {% endif %}
 
