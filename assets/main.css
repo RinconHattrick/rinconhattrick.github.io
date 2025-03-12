@@ -2,6 +2,7 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+/* Marcar texto */
 mark {
   background-color: var(--bulma-warning-on-scheme);
   color: #222;
@@ -9,22 +10,16 @@ mark {
   border-radius: 8px;
 }
 
-a {
+/* Enlaces */
+a, .button {
   transition: opacity 0.3s ease;
 }
 
-a:hover {
+a:hover, .button:hover {
   opacity: 0.8;
 }
 
-.button {
-  transition: opacity 0.3s ease, background-color 0.3s ease;
-}
-
-.button:hover {
-  opacity: 0.8;
-}
-
+/* Animación de entrada */
 .hero-body {
   animation: fadeIn 0.5s ease-in-out;
 }
@@ -34,25 +29,25 @@ a:hover {
     opacity: 0;
     transform: translateY(-10px);
   }
-
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
+/* Navbar activo */
 .navbar-item.is-active {
   background-color: var(--bulma-link-on-scheme);
   color: #f1f1f1;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Botón de volver arriba */
 .scroll-to-top-btn {
   position: fixed;
   bottom: 1rem;
   right: 1rem;
   background-color: var(--bulma-link-on-scheme);
-  border: none;
   color: #f1f1f1;
   border-radius: 50%;
   width: 2rem;
@@ -63,35 +58,45 @@ a:hover {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   opacity: 0;
-  visibility: hidden;
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .scroll-to-top-btn.show {
   opacity: 1;
-  visibility: visible;
-  transform: translateY(-10px) scale(1);
+  transform: translateY(-10px);
 }
 
 .scroll-to-top-btn:hover {
   transform: translateY(-10px) scale(1.1);
 }
 
+/* Botón de tema */
 #themeToggle {
-  border: none;
-  background: none;
   font-size: 1.5rem;
   cursor: pointer;
   transition: transform 0.2s ease;
 }
 
 #themeToggle:hover {
-  transform: translateY(-10px) scale(1.1);
+  transform: scale(1.1);
 }
 
+/* Ajuste para móviles */
 @media (max-width: 768px) {
   .scroll-to-top-btn {
     bottom: 3.75rem;
   }
 }
 
+/* tema */
+  body.dark-theme {
+    background-color: #121212;
+    color: #e0e0e0;
+  }
+  body.dark-theme .navbar, body.dark-theme .footer {
+    background-color: #1f1f1f;
+  }
+  body.dark-theme .box {
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+  }

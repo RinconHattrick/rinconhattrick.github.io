@@ -7,15 +7,15 @@ permalink: /404.html
 <section class="hero is-medium">
   <div class="hero-body">
     <div class="container has-text-centered">
-      <figure class="image is-128x128 is-inline-block">
-        <img src="{{ '/assets/img/404.png' | relative_url }}" width="48" height="48" alt="Página no encontrada" />
+      <figure class="image is-256x256 is-inline-block">
+        <img src="{{ '/assets/img/404.png' | relative_url }}" width="256" height="256" alt="Error 404 - Página no encontrada" />
       </figure>
 
-      <h1 class="title is-1 has-text-danger mt-4">
-        ¡Ups! No encontramos esa página
+      <h1 class="title is-1 has-text-danger mt-4" role="alert">
+        ¡Ups! No encontramos esta página
       </h1>
       <p class="subtitle is-3">
-        Parece que te perdiste. Intenta alguna de estas opciones:
+        Parece que el enlace está roto o la página fue eliminada. Puedes intentar alguna de estas opciones:
       </p>
 
       <div class="buttons is-centered">
@@ -28,6 +28,25 @@ permalink: /404.html
           <span class="icon" aria-hidden="true">↩️</span>
           <span>Atrás</span>
         </button>
+      </div>
+
+      <hr />
+
+      <h2 class="title is-4">Tal vez te interesen estos artículos recientes:</h2>
+      <div class="columns is-multiline is-centered">
+        {% for post in site.posts limit: 3 %}
+        <div class="column is-6-tablet is-4-widescreen">
+          <div class="card">
+            <div class="card-content">
+              <h3 class="title is-5">
+                <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+              </h3>
+              <p>{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
+              <a href="{{ post.url | relative_url }}" class="button is-small is-link">Leer más</a>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
       </div>
     </div>
   </div>

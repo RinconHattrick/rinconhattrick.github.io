@@ -11,37 +11,57 @@
       </button>
     </div>
 
-    <div class="navbar-menu">
+    <div id="navbarMenu" class="navbar-menu">
       <div class="navbar-end">
         <a class="navbar-item {% if page.url == '/' %}is-active{% endif %}" href="{{ '/' | relative_url }}">
           <span class="icon" aria-hidden="true">🏠</span> <span>Inicio</span>
         </a>
 
-        {% assign links = "acerca-de,contacto" | split: "," %} {% assign icons =
-        "ℹ️,✉️" | split: "," %} {% for link in links %} {% assign link_url = '/'
-        | append: link | append: '/' | relative_url %}
-        <a class="navbar-item {% if page.url == link_url %}is-active{% endif %}" href="{{ link_url }}">
-          <span class="icon" aria-hidden="true">{{ icons[forloop.index0] }}</span>
-          <span>{{ link | replace: '-', ' ' | capitalize }}</span>
-        </a>
+        <!-- Categorías con dropdown -->
+        <div class="navbar-item has-dropdown is-hoverable">
+          <div class="navbar-link"><i class="fas fa-folder"></i> Categorías</div>
+          <div class="navbar-dropdown">
+            {% assign category_pages = site.pages | where: "layout", "category" %}
+            {% for category_page in category_pages %}
+              <a class="navbar-item {% if page.url == category_page.url %}is-active{% endif %}"
+                href="{{ category_page.url | relative_url }}">
+                <i class="fas {{ category_page.icon }}"></i> {{ category_page.title }}
+              </a>
+            {% else %}
+              <a class="navbar-item">No hay categorías</a>
+            {% endfor %}
+          </div>
+        </div>
+
+        <!-- Enlaces estáticos (Acerca de y Contacto) -->
+        {% assign links = "acerca-de,contacto" | split: "," %}
+        {% assign icons = "ℹ️,✉️" | split: "," %}
+        {% for link in links %}
+          {% assign link_url = '/' | append: link | append: '/' | relative_url %}
+          <a class="navbar-item {% if page.url == link_url %}is-active{% endif %}" href="{{ link_url }}">
+            <span class="icon" aria-hidden="true">{{ icons[forloop.index0] }}</span>
+            <span>{{ link | replace: '-', ' ' | capitalize }}</span>
+          </a>
         {% endfor %}
 
-        <div class="navbar-item">
-          <form action="{{ '/search/' | relative_url }}" method="get">
+        <!-- Buscador y botón de tema oscuro -->
+        <div class="navbar-item is-flex is-align-items-center">
+          <!-- Buscador -->
+          <form action="{{ '/search/' | relative_url }}" method="get" class="mr-3">
             <div class="field has-addons">
               <div class="control">
-                <input class="input is-rounded" type="search" name="q" placeholder="Buscar..." required />
+                <input class="input is-rounded is-small" type="search" name="q" placeholder="Buscar..." required />
               </div>
               <div class="control">
-                <button type="submit" class="button is-primary is-rounded" aria-label="Buscar">
+                <button type="submit" class="button is-primary is-rounded is-small" aria-label="Buscar">
                   <span class="icon" aria-hidden="true">🔍</span>
                 </button>
               </div>
             </div>
           </form>
-        </div>
-        <div class="navbar-item">
-          <button id="themeToggle" class="button is-info" title="Alternar tema">
+
+          <!-- Botón de cambio de tema -->
+          <button id="themeToggle" class="button is-info is-small" title="Alternar tema">
             🌞
           </button>
         </div>

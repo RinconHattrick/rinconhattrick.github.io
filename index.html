@@ -3,87 +3,81 @@ layout: default
 title: "El Rincón de Hattrick"
 ---
 
-<main class="container">
+<div class="container">
   <header class="hero is-small is-link is-bold has-text-centered">
     <div class="hero-body">
       <h1 class="title is-3">{{ site.title }}</h1>
       <p class="subtitle is-5">
-        {{ site.description | default: "Bienvenido a nuestro blog sobre
-        Hattrick." }}
+        {{ site.description | default: "Bienvenido a nuestro blog sobre Hattrick." }}
       </p>
     </div>
   </header>
 
-  {% for category in site.categories %} {% assign category_name = category[0] %}
-  {% assign category_page = site.pages | where: "category", category_name |
-  first %} {% assign recent_posts = category[1] | sort: "date" | reverse |
-  slice: 0, 3 %} {% assign category_title = category_page.title | default:
-  category_name | capitalize %} {% assign category_desc =
-  category_page.description | default: "Explora artículos sobre esta temática en
-  nuestro blog." %} {% assign category_slug = category_name | slugify %}
+  {% for category in site.categories %}
+    {% assign category_name = category[0] %}
+    {% assign category_page = site.pages | where: "category", category_name | first %}
+    {% assign recent_posts = category[1] | sort: "date" | reverse | slice: 0, 3 %}
+    {% assign category_title = category_page.title | default: category_name | replace: '-', ' ' | capitalize %}
+    {% assign category_desc = category_page.description | default: "Explora artículos sobre esta temática en nuestro blog." %}
+    {% assign category_slug = category_name | slugify %}
 
-  <section id="{{ category_slug }}" class="mt-5" role="region" aria-labelledby="category-title-{{ category_slug }}">
-    <div class="card">
-      <header class="card-header">
-        <h2 id="category-title-{{ category_slug }}" class="card-header-title title is-3">
-          {{ category_title }}
-        </h2>
-      </header>
+    <section id="{{ category_slug }}" class="mt-5" role="region" aria-labelledby="category-title-{{ category_slug }}">
+      <div class="card">
+        <header class="card-header">
+          <h2 id="category-title-{{ category_slug }}" class="card-header-title title is-3">
+            {{ category_title }}
+          </h2>
+        </header>
 
-      <div class="card-content">
-        <p class="subtitle is-6 mb-4">{{ category_desc }}</p>
+        <div class="card-content">
+          <p class="subtitle is-6 mb-4">{{ category_desc }}</p>
 
-        <div class="columns is-multiline is-variable is-4 is-centered">
-          {% for post in recent_posts %}
-          <div class="column is-6-tablet is-4-widescreen">
-            <article class="box">
-              {% if post.image %}
-          
-             <div class="columns is-centered">
-  <div class="column is-6">
-    <figure class="image">
-      <img class="has-radius" src="{{ post.image | relative_url }}" alt="{{ post.title | escape }}" fetchpriority="high" />
-    </figure>
-  </div>
-</div> 
-              {% endif %}
+          <div class="columns is-multiline is-variable is-4 is-centered">
+            {% for post in recent_posts %}
+              <div class="column is-6-tablet is-4-widescreen">
+                <article class="box">
+                  <figure class="image is-4by3 has-shadow">
+                    <img src="{{ post.image | default: '/assets/img/default.webp' | relative_url }}"
+                         alt="{{ post.title | escape }}" loading="lazy" />
+                  </figure>
 
-              <time datetime="{{ post.date | date: '%Y-%m-%d' }}" class="is-size-7 has-text-grey"
-                aria-label="Fecha de publicación: {{ post.date | date: '%d de %B de %Y' }}">
-                <span class="icon" aria-hidden="true">📅</span>
-                <span>{{ post.date | date: "%d/%m/%Y" }}</span>
-              </time>
+                  <time datetime="{{ post.date | date: '%Y-%m-%d' }}" class="is-size-7 has-text-grey">
+                    <span class="icon" aria-hidden="true">📅</span>
+                    <span aria-hidden="true">{{ post.date | date: "%d/%m/%Y" }}</span>
+                    <span class="sr-only">Publicado el {{ post.date | date: '%d de %B de %Y' }}</span>
+                  </time>
 
-              <h3 class="title is-5 mt-2">
-                <a href="{{ post.url | relative_url }}" rel="bookmark">{{ post.title }}</a>
-              </h3>
 
-              <p class="mt-2">
-                {{ post.excerpt | strip_html | truncatewords: 30 | default: "Lee
-                más sobre este artículo haciendo clic en el título." }}
-              </p>
+                  <h3 class="title is-5 mt-2">
+                    <a href="{{ post.url | relative_url }}" rel="bookmark">{{ post.title }}</a>
+                  </h3>
 
-              {% if post.tags %}
-              <div class="tags mt-2">
-                {% for tag in post.tags %}
-                <span class="tag is-info">{{ tag }}</span>
-                {% endfor %}
+                  <p class="mt-2">
+                    {{ post.excerpt | strip_html | truncatewords: 30 | default: "Lee más sobre este artículo haciendo clic en el título." }}
+                  </p>
+
+                  {% if post.tags %}
+                    <div class="tags mt-2">
+                      {% for tag in post.tags %}
+                        <span class="tag is-info">{{ tag }}</span>
+                      {% endfor %}
+                    </div>
+                  {% endif %}
+                  <a href="{{ post.url | relative_url }}" class="button is-small is-link">Leer más</a>
+                </article>
               </div>
-              {% endif %}
-            </article>
+            {% endfor %}
           </div>
-          {% endfor %}
-        </div>
 
-        <div class="has-text-centered mt-4">
-          <a href="{{ category_page.url | relative_url }}" class="button is-link is-light is-rounded"
-            aria-label="Ver más artículos de {{ category_title }}">
-            <span class="icon" aria-hidden="true">📂</span>
-            <span>Ver más en {{ category_title }}</span>
-          </a>
+
+          <div class="has-text-centered mt-4">
+            <a href="{{ category_page.url | default: '#' | relative_url }}" class="button is-link is-light is-rounded">
+              <span class="icon" aria-hidden="true">📂</span>
+              <span>Ver más en {{ category_title }}</span>
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
   {% endfor %}
-</main>
+</div>

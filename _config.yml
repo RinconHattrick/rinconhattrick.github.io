@@ -37,3 +37,11 @@ defaults:
     values:
       lang: "es"
       layout: "post"
+
+social:
+  - name: WhatsApp
+    url: "https://wa.me/qr/537E4GO72BHHB1"
+    icon: "📲"
+  - name: YouTube
+    url: "https://www.youtube.com/@elPatronHT"
+    icon: "▶️"

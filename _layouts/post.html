@@ -2,6 +2,13 @@
 layout: default
 ---
 
+<!-- Metaetiquetas SEO dinámicas -->
+{% assign default_image = "/assets/images/default.jpg" %}
+<meta property="og:title" content="{{ page.title }}">
+<meta property="og:description" content="{{ page.excerpt | strip_html }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:image" content="{% if page.image %}{{ page.image | absolute_url }}{% else %}{{ default_image | absolute_url }}{% endif %}">
+
 <div class="container">
   <header class="hero is-small is-link is-bold has-text-centered">
     <div class="hero-body">
@@ -15,26 +22,24 @@ layout: default
         {% endif %}
       </p>
 
-      {% assign words = content | number_of_words %} {% assign read_time = words
-      | divided_by: 200 | ceil %}
+      {% assign words = content | number_of_words %}
+      {% assign read_time = words | divided_by: 180 | ceil %}
       <p class="is-size-6">
-        <span class="icon" aria-hidden="true">📖</span> Tiempo de lectura: ~{{
-        read_time }} min
+        <span class="icon" aria-hidden="true">📖</span> Tiempo de lectura: ~{{ read_time }} min
       </p>
     </div>
   </header>
 
   <section class="section">
     <div class="container">
-      {% if page.image %}
       <div class="columns is-centered">
         <div class="column is-6">
           <figure class="image">
-            <img src="{{ page.image | relative_url }}" alt="{{ page.title | escape }}" />
+            <img src="{% if page.image %}{{ page.image | relative_url }}{% else %}{{ default_image | relative_url }}{% endif %}" 
+                 alt="{{ page.title | escape }}" />
           </figure>
         </div>
       </div>
-      {% endif %}
 
       <article class="content mt-5" role="article">{{ content }}</article>
 
@@ -74,12 +79,15 @@ layout: default
     <div class="container">
       <h2 class="title is-4">Artículos Relacionados</h2>
       <div class="columns is-multiline is-centered">
-        {% assign category = page.categories | first %} {% assign related_posts
-        = site.categories[category] | where_exp: "post", "post.url != page.url"
-        %} {% assign total_posts = related_posts | size %} {% assign limit =
-        total_posts | times: 0.45 | round %} {% if limit < 1 %} {% assign limit=1 %} {% endif %} {% assign
-          related_posts=related_posts | sort: "date" | reverse | slice: 0, limit %} {% if related_posts.size> 0 %} {%
-          for post in related_posts %}
+        {% assign category = page.categories | first %}
+        {% assign related_posts = site.categories[category] | where_exp: "post", "post.url != page.url" %}
+        {% assign total_posts = related_posts | size %}
+        {% assign limit = total_posts | times: 0.45 | round %}
+        {% if limit < 2 %} {% assign limit = 2 %} {% endif %}
+        {% assign related_posts = related_posts | sort: "date" | reverse | slice: 0, limit %}
+        
+        {% if related_posts.size > 0 %}
+          {% for post in related_posts %}
           <div class="column is-6-tablet is-4-widescreen">
             <div class="card has-shadow">
               <div class="card-content">
@@ -94,12 +102,14 @@ layout: default
                 </p>
                 {% endif %}
                 <p>{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
+                <a href="{{ post.url | relative_url }}" class="button is-small is-link">Leer más</a>
               </div>
             </div>
           </div>
-          {% endfor %} {% else %}
-          <p class="has-text-grey">No hay artículos relacionados.</p>
-          {% endif %}
+          {% endfor %}
+        {% else %}
+        <p class="has-text-grey">No hay artículos relacionados.</p>
+        {% endif %}
       </div>
     </div>
   </section>
@@ -151,10 +161,15 @@ layout: default
     async function copyToClipboard(url) {
       try {
         await navigator.clipboard.writeText(url);
-        alert("¡Enlace copiado al portapapeles!");
+        shareButton.classList.add("is-success");
+        shareButton.innerHTML = "<span class='icon' aria-hidden='true'>✅</span> Copiado";
+        setTimeout(() => {
+          shareButton.classList.remove("is-success");
+          shareButton.innerHTML = "<span class='icon' aria-hidden='true'>🔗</span> Compartir";
+        }, 2000);
       } catch {
         alert("No se pudo copiar el enlace. Copia manualmente.");
       }
     }
   });
-</script>
+</script>  

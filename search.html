@@ -15,8 +15,8 @@ description: "Búsqueda de artículos en el sitio"
     <form class="mt-5" role="search" onsubmit="event.preventDefault()">
       <div class="field has-addons">
         <div class="control has-icons-left is-expanded">
-          <input type="search" id="search-input" class="input is-rounded" placeholder="Buscar artículos..."
-            aria-label="Buscar artículos" autocomplete="off" />
+          <input type="search" id="search-input" class="input is-rounded"
+            placeholder="Buscar artículos..." aria-label="Buscar artículos" autocomplete="off" />
           <span class="icon is-small is-left" aria-hidden="true">🔍</span>
         </div>
         <div class="control">
@@ -71,10 +71,7 @@ description: "Búsqueda de artículos en el sitio"
     handleInput(query) {
       if (query.length < 3) {
         this.clearResults();
-        this.showFeedback(
-          "Escribe al menos 3 caracteres para buscar.",
-          "is-info"
-        );
+        this.showFeedback("Escribe al menos 3 caracteres para buscar.", "is-info");
         return;
       }
       this.updateURL(query);
@@ -90,14 +87,7 @@ description: "Búsqueda de artículos en el sitio"
     showFeedback(message, type = "is-primary") {
       if (!this.feedbackElement) return;
       this.feedbackElement.querySelector(".message-body").innerHTML = message;
-      this.feedbackElement.classList.remove(
-        "is-hidden",
-        "is-danger",
-        "is-primary",
-        "is-info",
-        "is-warning"
-      );
-      this.feedbackElement.classList.add(type);
+      this.feedbackElement.className = `message ${type}`;
     }
 
     hideFeedback() {
@@ -126,21 +116,18 @@ description: "Búsqueda de artículos en el sitio"
           <article class="box has-shadow">
             <time datetime="${item.date}" class="is-size-7 has-text-grey">
               <span class="icon" aria-hidden="true">📅</span>
-              <span>${item.date}</span>
+              <span>${this.formatDate(item.date)}</span>
+              <span class="sr-only">Publicado el ${this.formatDateLong(item.date)}</span>
             </time>
+
             <h3 class="title is-5 mt-2">
               <a href="${item.url}">
                 ${this.highlightMatch(item.title, query)}
               </a>
             </h3>
+
             <p class="mt-2">
-              ${item.excerpt
-            ? this.truncateText(
-              this.highlightMatch(item.excerpt, query),
-              300
-            )
-            : ""
-          }
+              ${item.excerpt ? this.truncateText(this.highlightMatch(item.excerpt, query), 200) : ""}
             </p>
           </article>          
         `;
@@ -151,23 +138,22 @@ description: "Búsqueda de artículos en el sitio"
     highlightMatch(text, query) {
       if (!text || !query) return text || "";
       const safeQuery = query.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-      const regex = new RegExp(`(${safeQuery})`, "gi");
-      return text.replace(
-        regex,
-        '<mark class="has-background-warning">$1</mark>'
-      );
+      return text.replace(new RegExp(`(${safeQuery})`, "gi"), 
+        '<mark class="has-background-warning">$1</mark>');
     }
 
     truncateText(text, length) {
       return text.length > length ? text.substring(0, length) + "..." : text;
     }
 
-    debounce(func, wait) {
-      let timeout;
-      return function (...args) {
-        clearTimeout(timeout);
-        timeout = setTimeout(() => func.apply(this, args), wait);
-      };
+    formatDate(dateStr) {
+      const date = new Date(dateStr);
+      return isNaN(date) ? dateStr : date.toLocaleDateString("es-ES");
+    }
+
+    formatDateLong(dateStr) {
+      const date = new Date(dateStr);
+      return isNaN(date) ? dateStr : date.toLocaleDateString("es-ES", { day: '2-digit', month: 'long', year: 'numeric' });
     }
 
     async search(query) {
@@ -175,26 +161,18 @@ description: "Búsqueda de artículos en el sitio"
 
       try {
         const response = await fetch(this.searchJsonUrl);
-        if (!response.ok)
-          throw new Error("Error al cargar los datos de búsqueda");
+        if (!response.ok) throw new Error("Error al cargar los datos de búsqueda");
         const data = await response.json();
-        if (!Array.isArray(data))
-          throw new Error("Formato incorrecto de datos");
+        if (!Array.isArray(data)) throw new Error("Formato incorrecto de datos");
 
-        const results = data
-          .filter(
-            (item) =>
-              item.title.toLowerCase().includes(query.toLowerCase()) ||
-              item.excerpt.toLowerCase().includes(query.toLowerCase())
-          )
-          .sort((a, b) => this.rankResults(a, b, query));
+        const results = data.filter(item => 
+          item.title.toLowerCase().includes(query.toLowerCase()) ||
+          (item.excerpt && item.excerpt.toLowerCase().includes(query.toLowerCase()))
+        ).sort((a, b) => this.rankResults(a, b, query));
 
         this.renderResults(results, query);
       } catch (error) {
-        this.showFeedback(
-          "❌ No se pudieron obtener los resultados. Inténtalo más tarde.",
-          "is-danger"
-        );
+        this.showFeedback("❌ No se pudieron obtener los resultados. Inténtalo más tarde.", "is-danger");
       }
     }
 
@@ -203,14 +181,20 @@ description: "Búsqueda de artículos en el sitio"
       const aTitle = a.title.toLowerCase();
       const bTitle = b.title.toLowerCase();
 
-      if (aTitle === query) return -1;
-      if (bTitle === query) return 1;
-      if (aTitle.startsWith(query) && !bTitle.startsWith(query)) return -1;
-      if (!aTitle.startsWith(query) && bTitle.startsWith(query)) return 1;
-      if (aTitle.includes(query) && !bTitle.includes(query)) return -1;
-      if (!aTitle.includes(query) && bTitle.includes(query)) return 1;
+      return aTitle === query ? -1 : 
+             bTitle === query ? 1 : 
+             aTitle.startsWith(query) ? -1 : 
+             bTitle.startsWith(query) ? 1 : 
+             aTitle.includes(query) ? -1 : 
+             bTitle.includes(query) ? 1 : 0;
+    }
 
-      return 0;
+    debounce(func, wait) {
+      let timeout;
+      return function (...args) {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func.apply(this, args), wait);
+      };
     }
   }
 

@@ -14,12 +14,12 @@
   <link rel="apple-touch-icon" href="{{ '/assets/img/apple-touch-icon.png' | relative_url }}" />
   <link rel="icon" href="{{ '/assets/img/favicon-32x32.png' | relative_url }}" sizes="32x32" type="image/png" />
   <link rel="icon" href="{{ '/assets/img/favicon-192x192.png' | relative_url }}" sizes="192x192" type="image/png" />
-  <link rel="preload" as="image" href="/assets/img/hattrick.webp" type="image/webp">
+  <link rel="preload" as="image" href="{{ '/assets/img/hattrick.webp' | relative_url }}" type="image/webp">
 
   <!-- CSS -->
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css" />
-  <link rel="stylesheet" href="{{ '/assets/main.css?v=1.0.22' | relative_url }}" />
+  <link rel="stylesheet" href="{{ '/assets/main.css?v=1.0.23' | relative_url }}" />
 
   <!-- Cambio de color en modo oscuro -->
   <script>
@@ -41,7 +41,7 @@
 
   <!-- Google Analytics (solo en producción) -->
   {% if jekyll.environment == "production" %}
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3C878VFFXM"></script>
+  <script defer src="https://www.googletagmanager.com/gtag/js?id=G-3C878VFFXM"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() {
@@ -60,12 +60,12 @@
   <header role="banner">{% include header.html %}</header>
   <main class="section" role="main">{{ content }}</main>
   <footer role="contentinfo">{% include footer.html %}</footer>
-  <button class="button scroll-to-top-btn" id="scrollToTopBtn" title="Subir al inicio" aria-label="Subir al inicio"
-    hidden>
+
+  <button class="button scroll-to-top-btn" id="scrollToTopBtn" title="Volver arriba" aria-label="Volver arriba" hidden>
     <span aria-hidden="true">⇑</span>
   </button>
 
-  <script src="{{ '/assets/js/script.js?v=1.0.22' | relative_url }}" defer></script>
+  <script src="{{ '/assets/js/script.js?v=1.0.23' | relative_url }}" defer></script>
 </body>
 
 </html>

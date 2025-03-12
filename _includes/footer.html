@@ -1,35 +1,25 @@
-<footer class="footer">
-  <div class="content has-text-centered">
-    <p>
-      <span>{{ site.title | default: "Mi Sitio Web" }}</span>
-      &copy;
-      <span>{{ "now" | date: "%Y" }}</span>
-      {{ site.author | default: "Autor desconocido" }}
+<footer class="footer py-5">
+  <div class="content has-text-centered is-flex is-flex-direction-column is-align-items-center">
+    <!-- Información de Copyright -->
+    <p class="is-size-6 has-text-weight-semibold mb-3">
+      &copy; {{ "now" | date: "%Y" }} <strong>{{ site.title | default: "Mi Sitio Web" }}</strong> - {{ site.author | default: "Autor desconocido" }}
     </p>
-    <div class="buttons is-centered">
-      <a href="{{ '/acerca-de/' | relative_url }}" class="button is-small">
-        <span class="icon">ℹ️</span>
-        <span> Acerca de </span>
-      </a>
-      <a href="{{ '/contacto/' | relative_url }}" class="button is-small">
-        <span class="icon">✉️</span>
-        <span>Contacto</span>
-      </a>
-    </div>
-    {% assign category_pages = site.pages | where: "layout", "category" %} {% if
-    category_pages.size > 0 %}
-    <div class="container mt-5">
-      <div class="box">
-        <h3 class="title is-5 has-text-centered">Categorías</h3>
-        <div class="tags are-medium is-justify-content-center">
-          {% for category_page in category_pages %}
-          <a class="tag is-light {% if page.url == category_page.url %}is-primary{% endif %} is-flex is-align-items-center"
-            href="{{ category_page.url | relative_url }}">
-            <span class="icon">📁</span>
-            <span>{{ category_page.title }}</span>
-          </a>
-          {% endfor %}
-        </div>
+
+    <!-- Redes Sociales -->
+    {% if site.social %}
+    <div class="mt-3">
+      <h3 class="title is-6 has-text-weight-semibold">Síguenos</h3>
+      <div class="buttons is-centered">
+        {% for platform in site.social %}
+        <a href="{{ platform.url }}" 
+           class="button is-small tooltip"
+           target="_blank" 
+           rel="noopener" 
+           aria-label="Síguenos en {{ platform.name }}" 
+           title="{{ platform.name }}">
+          <span class="icon">{{ platform.icon }}</span>
+        </a>
+        {% endfor %}
       </div>
     </div>
     {% endif %}
