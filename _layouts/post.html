@@ -2,47 +2,44 @@
 layout: default
 ---
 
-<!-- Metaetiquetas SEO dinámicas -->
 {% assign default_image = "/assets/images/default.jpg" %}
 <meta property="og:title" content="{{ page.title }}">
 <meta property="og:description" content="{{ page.excerpt | strip_html }}">
 <meta property="og:url" content="{{ page.url | absolute_url }}">
-<meta property="og:image" content="{% if page.image %}{{ page.image | absolute_url }}{% else %}{{ default_image | absolute_url }}{% endif %}">
+<meta property="og:image"
+  content="{% if page.image %}{{ page.image | absolute_url }}{% else %}{{ default_image | absolute_url }}{% endif %}">
 
 <div class="container">
   <header class="hero is-small is-link is-bold has-text-centered">
     <div class="hero-body">
       <h1 class="title is-3">{{ page.title }}</h1>
-      <p class="subtitle is-5">
+      <p class="subtitle is-6">
         <time datetime="{{ page.date | date_to_xmlschema }}">
           Publicado el {{ page.date | date: "%d/%m/%Y" }}
         </time>
         {% if page.author %}
-        <span class="mx-2">por</span> <span>{{ page.author }}</span>
+        <span class="mx-2">por</span> <strong>{{ page.author }}</strong>
         {% endif %}
       </p>
-
       {% assign words = content | number_of_words %}
       {% assign read_time = words | divided_by: 180 | ceil %}
-      <p class="is-size-6">
+      <p class="is-small">
         <span class="icon" aria-hidden="true">📖</span> Tiempo de lectura: ~{{ read_time }} min
       </p>
     </div>
   </header>
-
   <section class="section">
     <div class="container">
       <div class="columns is-centered">
         <div class="column is-6">
           <figure class="image">
-            <img src="{% if page.image %}{{ page.image | relative_url }}{% else %}{{ default_image | relative_url }}{% endif %}" 
-                 alt="{{ page.title | escape }}" />
+            <img
+              src="{% if page.image %}{{ page.image | relative_url }}{% else %}{{ default_image | relative_url }}{% endif %}"
+              alt="{{ page.title | escape }}" />
           </figure>
         </div>
       </div>
-
       <article class="content mt-5" role="article">{{ content }}</article>
-
       <div class="has-text-centered my-6">
         <button id="shareButton" class="button is-primary is-light is-rounded" aria-label="Compartir artículo">
           <span class="icon" aria-hidden="true">🔗</span>
@@ -51,9 +48,7 @@ layout: default
       </div>
     </div>
   </section>
-
   <hr />
-
   <div class="buttons is-centered mt-5">
     {% if page.previous.url %}
     <a href="{{ page.previous.url | relative_url }}" class="button is-light is-rounded" aria-label="Artículo anterior">
@@ -61,12 +56,10 @@ layout: default
       <span>Anterior</span>
     </a>
     {% endif %}
-
     <a href="{{ '/' | relative_url }}" class="button is-link is-rounded" aria-label="Volver al inicio">
       <span class="icon" aria-hidden="true">🏠</span>
       <span>Inicio</span>
     </a>
-
     {% if page.next.url %}
     <a href="{{ page.next.url | relative_url }}" class="button is-light is-rounded" aria-label="Artículo siguiente">
       <span>Siguiente</span>
@@ -83,49 +76,49 @@ layout: default
         {% assign related_posts = site.categories[category] | where_exp: "post", "post.url != page.url" %}
         {% assign total_posts = related_posts | size %}
         {% assign limit = total_posts | times: 0.45 | round %}
-        {% if limit < 2 %} {% assign limit = 2 %} {% endif %}
-        {% assign related_posts = related_posts | sort: "date" | reverse | slice: 0, limit %}
-        
-        {% if related_posts.size > 0 %}
+        {% if limit < 2 %} {% assign limit=2 %} {% endif %} {% assign related_posts=related_posts | sort: "date" |
+          reverse | slice: 0, limit %} {% if related_posts.size> 0 %}
           {% for post in related_posts %}
           <div class="column is-6-tablet is-4-widescreen">
-            <div class="card has-shadow">
+            <article class="card">
+              <div class="card-image">
+                <figure class="image has-shadow">
+                  <img src="{{ post.image | default: '/assets/img/default.webp' | relative_url }}"
+                    alt="{{ post.title | escape }}" loading="lazy" />
+                </figure>
+                <time datetime="{{ post.date | date: '%Y-%m-%d' }}" class="is-size-7 has-text-grey">
+                  <span class="icon" aria-hidden="true">📅</span>
+                  <span class="sr-only">Publicado el {{ post.date | date: '%d de %B de %Y' }}</span>
+                </time>
+              </div>
               <div class="card-content">
                 <h3 class="title is-5">
-                  <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                  <a href="{{ post.url | relative_url }}" rel="bookmark">{{ post.title }}</a>
                 </h3>
-                {% if post.tags %}
-                <p class="tags">
-                  {% for tag in post.tags %}
-                  <span class="tag is-info">{{ tag }}</span>
-                  {% endfor %}
+                <p class="mt-2">
+                  {{ post.excerpt | strip_html | truncatewords: 30 }}
                 </p>
-                {% endif %}
-                <p>{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
-                <a href="{{ post.url | relative_url }}" class="button is-small is-link">Leer más</a>
+                <a href="{{ post.url | relative_url }}" class="button is-small is-link mt-3">Leer más</a>
               </div>
-            </div>
+            </article>
           </div>
           {% endfor %}
-        {% else %}
-        <p class="has-text-grey">No hay artículos relacionados.</p>
-        {% endif %}
+          {% else %}
+          <p class="has-text-grey">No hay artículos relacionados.</p>
+          {% endif %}
       </div>
     </div>
   </section>
 </div>
-
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     const shareButton = document.getElementById("shareButton");
     if (!shareButton) return;
-
     const shareData = {
       title: document.title,
       text: "¡Lee este artículo interesante en nuestro blog!",
       url: window.location.href,
     };
-
     shareButton.addEventListener("click", async () => {
       if (navigator.share) {
         try {
@@ -137,10 +130,8 @@ layout: default
         showFallbackMessage(shareData.url);
       }
     });
-
     function showFallbackMessage(url) {
       if (document.getElementById("share-fallback")) return;
-
       const fallbackMessage = document.createElement("div");
       fallbackMessage.id = "share-fallback";
       fallbackMessage.className = "notification is-danger mt-3";
@@ -150,14 +141,12 @@ layout: default
         <span class="has-background-light p-1 is-family-monospace">${url}</span>
         <button class="button is-small is-link ml-2" id="copyButton">Copiar</button>
       `;
-
       shareButton.after(fallbackMessage);
       fallbackMessage.addEventListener("click", (event) => {
         if (event.target.matches(".delete")) fallbackMessage.remove();
         if (event.target.matches("#copyButton")) copyToClipboard(url);
       });
     }
-
     async function copyToClipboard(url) {
       try {
         await navigator.clipboard.writeText(url);
@@ -172,4 +161,4 @@ layout: default
       }
     }
   });
-</script>  
+</script>

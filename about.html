@@ -4,8 +4,8 @@ title: "Acerca de"
 permalink: /acerca-de/
 ---
 
-<section class="container">
-  <section class="hero is-small is-link is-bold has-text-centered">
+<div class="container">
+  <header class="hero is-small is-link is-bold has-text-centered">
     <div class="hero-body">
       <h1 class="title is-3">Acerca de {{ site.title }}</h1>
       <p class="subtitle is-5">Tu guía definitiva para el éxito en Hattrick</p>
@@ -14,31 +14,22 @@ permalink: /acerca-de/
         <span>Contactar</span>
       </a>
     </div>
-  </section>
-
+  </header>
   <article class="section">
-    <div class="columns is-vcentered">
+    <div class="columns is-centered is-vcentered">
       <div class="column is-4 has-text-centered">
         <figure class="image is-64x64 is-inline-block mb-4">
-          <img 
-            class="is-rounded" 
-            src="{{ site.baseurl }}/assets/img/elPatronHT.jpeg" 
-            alt="Foto del autor elPatronHT"
-            onerror="this.onerror=null; this.src='{{ site.baseurl }}/assets/img/default-avatar.png';"
-          />
+          <img class="is-rounded" src="{{ site.baseurl }}/assets/img/elPatronHT.jpeg" alt="Foto del autor elPatronHT"
+            onerror="this.onerror=null; this.src='{{ site.baseurl }}/assets/img/default-avatar.png';" />
         </figure>
         <h2 class="title is-4 mt-4">Sobre el Autor</h2>
         <p>
           ¡Hola! Soy <strong>{{ site.author | default: "elPatronHT" }}</strong>,
-          un apasionado de Hattrick con experiencia en planificación de juveniles, 
+          un apasionado de Hattrick con experiencia en planificación de juveniles,
           tácticas de juego y estrategias de selección nacional.
         </p>
-        <a 
-          href="https://hattrick.org/goto.ashx?path=/Club/?TeamID=538167" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          class="button is-light is-rounded mt-3"
-        >
+        <a href="https://hattrick.org/goto.ashx?path=/Club/?TeamID=538167" target="_blank" rel="noopener noreferrer"
+          class="button is-light is-rounded mt-3">
           <span class="icon">⚽</span>
           <span>Mi equipo en Hattrick</span>
         </a>
@@ -46,20 +37,19 @@ permalink: /acerca-de/
       <div class="column is-8">
         <div class="box has-shadow">
           <p>
-            <strong>{{ site.title }}</strong> es un espacio para todos los aficionados de 
-            <em>Hattrick</em>, ofreciendo estrategias, consejos y 
+            <strong>{{ site.title }}</strong> es un espacio para todos los aficionados de
+            <em>Hattrick</em>, ofreciendo estrategias, consejos y
             recursos especializados para mejorar como mánager.
           </p>
           <p>
-            Aquí encontrarás análisis detallados, guías avanzadas y tácticas innovadoras 
-            para optimizar tu desempeño y destacar en el competitivo universo de 
+            Aquí encontrarás análisis detallados, guías avanzadas y tácticas innovadoras
+            para optimizar tu desempeño y destacar en el competitivo universo de
             <em>Hattrick</em>.
           </p>
         </div>
       </div>
     </div>
   </article>
-
   <section class="section has-text-centered">
     <div class="content">
       <p>
@@ -70,11 +60,10 @@ permalink: /acerca-de/
       </p>
     </div>
   </section>
-
   <div class="has-text-centered mt-5">
     <a href="{{ '/' | relative_url }}" class="button is-link is-rounded">
       <span class="icon" aria-hidden="true">🏠</span>
       <span>Volver al Inicio</span>
     </a>
   </div>
-</section>
+</div>

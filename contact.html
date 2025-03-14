@@ -4,16 +4,15 @@ title: "Contacto"
 permalink: /contacto/
 ---
 
-<section class="container">
-  <section class="hero is-small is-link is-bold has-text-centered">
+<div class="container">
+  <header class="hero is-small is-link is-bold has-text-centered">
     <div class="hero-body">
       <h1 class="title is-3">Contáctame</h1>
       <p class="subtitle is-5">
         ¿Tienes preguntas, comentarios o simplemente quieres hablar sobre estrategias de Hattrick?
       </p>
     </div>
-  </section>
-
+  </header>
   <section class="section">
     <div class="columns is-multiline is-centered">
       {% for contact in site.data.contact %}
@@ -25,13 +24,8 @@ permalink: /contacto/
             </span>
             <h2 class="title is-5">{{ contact.name }}</h2>
             <p class="mb-4">{{ contact.description }}</p>
-            <a 
-              href="{{ contact.link }}" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              class="button {{ contact.color }} is-medium is-fullwidth"
-              aria-label="Contactar por {{ contact.name }}"
-            >
+            <a href="{{ contact.link }}" target="_blank" rel="noopener noreferrer"
+              class="button {{ contact.color }} is-medium is-fullwidth" aria-label="Contactar por {{ contact.name }}">
               <span class="icon" aria-hidden="true">📱</span>
               <span>Contactar</span>
             </a>
@@ -41,7 +35,6 @@ permalink: /contacto/
       {% endfor %}
     </div>
   </section>
-
   <section class="section">
     <div class="container">
       <h2 class="title is-3 has-text-centered">Preguntas Frecuentes</h2>
@@ -57,18 +50,16 @@ permalink: /contacto/
       </div>
     </div>
   </section>
-
   <section class="section has-text-centered">
     <p class="is-size-5">
-      Estoy aquí para ayudarte con cualquier aspecto de Hattrick. No dudes en contactarme por el medio que prefieras.  
+      Estoy aquí para ayudarte con cualquier aspecto de Hattrick. No dudes en contactarme por el medio que prefieras.
       <strong>¡Espero tu mensaje!</strong>
     </p>
   </section>
-
   <div class="has-text-centered mt-5">
     <a href="{{ '/' | relative_url }}" class="button is-link is-rounded" aria-label="Volver al Inicio">
       <span class="icon" aria-hidden="true">🏠</span>
       <span>Volver al Inicio</span>
     </a>
   </div>
-</section>
+</div>

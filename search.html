@@ -10,39 +10,32 @@ description: "Búsqueda de artículos en el sitio"
       <h1 class="title is-3">Resultados de Búsqueda</h1>
     </div>
   </header>
-
   <div class="content">
     <form class="mt-5" role="search" onsubmit="event.preventDefault()">
       <div class="field has-addons">
         <div class="control has-icons-left is-expanded">
-          <input type="search" id="search-input" class="input is-rounded"
-            placeholder="Buscar artículos..." aria-label="Buscar artículos" autocomplete="off" />
+          <input type="search" id="search-input" class="input is-rounded" placeholder="Buscar artículos..."
+            aria-label="Buscar artículos" autocomplete="off" />
           <span class="icon is-small is-left" aria-hidden="true">🔍</span>
         </div>
         <div class="control">
-          <button type="submit" class="button is-info is-rounded" aria-label="Ejecutar búsqueda">
-            🔎
-          </button>
+          <button type="submit" class="button is-info is-rounded" aria-label="Ejecutar búsqueda">🔎</button>
         </div>
       </div>
       <p>Escribe al menos 3 caracteres para comenzar a buscar.</p>
     </form>
-
     <div id="search-feedback" class="message is-hidden mt-3" role="status" aria-live="polite">
       <div class="message-body"></div>
     </div>
-
     <div id="search-results" class="columns is-multiline is-variable is-4 is-centered mt-3" aria-live="polite"></div>
   </div>
 </div>
-
 <div class="has-text-centered mt-6">
   <a href="{{ '/' | relative_url }}" class="button is-link is-rounded">
     <span class="icon" aria-hidden="true">🏠</span>
     <span>Volver al Inicio</span>
   </a>
 </div>
-
 <script>
   class SearchManager {
     constructor() {
@@ -50,16 +43,13 @@ description: "Búsqueda de artículos en el sitio"
       this.searchInput = document.getElementById("search-input");
       this.feedbackElement = document.getElementById("search-feedback");
       this.resultsContainer = document.getElementById("search-results");
-
       if (this.searchInput) this.init();
     }
-
     init() {
       this.searchInput.addEventListener(
         "input",
         this.debounce((e) => this.handleInput(e.target.value.trim()), 300)
       );
-
       const queryParams = new URLSearchParams(window.location.search);
       const initialQuery = queryParams.get("q");
       if (initialQuery) {
@@ -67,7 +57,6 @@ description: "Búsqueda de artículos en el sitio"
         this.search(initialQuery);
       }
     }
-
     handleInput(query) {
       if (query.length < 3) {
         this.clearResults();
@@ -77,27 +66,22 @@ description: "Búsqueda de artículos en el sitio"
       this.updateURL(query);
       this.search(query);
     }
-
     updateURL(query) {
       const url = new URL(window.location);
       url.searchParams.set("q", query);
       window.history.pushState({}, "", url);
     }
-
     showFeedback(message, type = "is-primary") {
       if (!this.feedbackElement) return;
       this.feedbackElement.querySelector(".message-body").innerHTML = message;
       this.feedbackElement.className = `message ${type}`;
     }
-
     hideFeedback() {
       if (this.feedbackElement) this.feedbackElement.classList.add("is-hidden");
     }
-
     clearResults() {
       if (this.resultsContainer) this.resultsContainer.innerHTML = "";
     }
-
     renderResults(results, query) {
       if (!this.resultsContainer) return;
       this.clearResults();
@@ -106,89 +90,83 @@ description: "Búsqueda de artículos en el sitio"
         this.showFeedback("⚠️ No se encontraron resultados.", "is-warning");
         return;
       }
-
       this.hideFeedback();
-
       results.forEach((item) => {
         const article = document.createElement("div");
         article.className = "column is-6-tablet is-4-widescreen";
         article.innerHTML = `
-          <article class="box has-shadow">
+          <article class="card">
+                <div class="card-image">
+            <figure class="image has-shadow">
+              <img src="${item.image ? item.image : '/assets/img/default.webp'}" 
+                  alt="${item.title}" 
+                  loading="lazy" />
+            </figure>
             <time datetime="${item.date}" class="is-size-7 has-text-grey">
               <span class="icon" aria-hidden="true">📅</span>
-              <span>${this.formatDate(item.date)}</span>
               <span class="sr-only">Publicado el ${this.formatDateLong(item.date)}</span>
             </time>
-
-            <h3 class="title is-5 mt-2">
+            </div>
+            <div class="card-content">
+            <h3 class="title is-5">
               <a href="${item.url}">
                 ${this.highlightMatch(item.title, query)}
               </a>
             </h3>
-
             <p class="mt-2">
               ${item.excerpt ? this.truncateText(this.highlightMatch(item.excerpt, query), 200) : ""}
             </p>
+            <a href="${item.url}" class="button is-small is-link mt-3">Leer más</a>
+            </div>
           </article>          
         `;
         this.resultsContainer.appendChild(article);
       });
     }
-
     highlightMatch(text, query) {
       if (!text || !query) return text || "";
       const safeQuery = query.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-      return text.replace(new RegExp(`(${safeQuery})`, "gi"), 
+      return text.replace(new RegExp(`(${safeQuery})`, "gi"),
         '<mark class="has-background-warning">$1</mark>');
     }
-
     truncateText(text, length) {
       return text.length > length ? text.substring(0, length) + "..." : text;
     }
-
     formatDate(dateStr) {
       const date = new Date(dateStr);
       return isNaN(date) ? dateStr : date.toLocaleDateString("es-ES");
     }
-
     formatDateLong(dateStr) {
       const date = new Date(dateStr);
       return isNaN(date) ? dateStr : date.toLocaleDateString("es-ES", { day: '2-digit', month: 'long', year: 'numeric' });
     }
-
     async search(query) {
       this.showFeedback("🎬 Cargando resultados...");
-
       try {
         const response = await fetch(this.searchJsonUrl);
         if (!response.ok) throw new Error("Error al cargar los datos de búsqueda");
         const data = await response.json();
         if (!Array.isArray(data)) throw new Error("Formato incorrecto de datos");
-
-        const results = data.filter(item => 
+        const results = data.filter(item =>
           item.title.toLowerCase().includes(query.toLowerCase()) ||
           (item.excerpt && item.excerpt.toLowerCase().includes(query.toLowerCase()))
         ).sort((a, b) => this.rankResults(a, b, query));
-
         this.renderResults(results, query);
       } catch (error) {
         this.showFeedback("❌ No se pudieron obtener los resultados. Inténtalo más tarde.", "is-danger");
       }
     }
-
     rankResults(a, b, query) {
       query = query.toLowerCase();
       const aTitle = a.title.toLowerCase();
       const bTitle = b.title.toLowerCase();
-
-      return aTitle === query ? -1 : 
-             bTitle === query ? 1 : 
-             aTitle.startsWith(query) ? -1 : 
-             bTitle.startsWith(query) ? 1 : 
-             aTitle.includes(query) ? -1 : 
-             bTitle.includes(query) ? 1 : 0;
+      return aTitle === query ? -1 :
+        bTitle === query ? 1 :
+          aTitle.startsWith(query) ? -1 :
+            bTitle.startsWith(query) ? 1 :
+              aTitle.includes(query) ? -1 :
+                bTitle.includes(query) ? 1 : 0;
     }
-
     debounce(func, wait) {
       let timeout;
       return function (...args) {
@@ -197,7 +175,6 @@ description: "Búsqueda de artículos en el sitio"
       };
     }
   }
-
   document.addEventListener("DOMContentLoaded", () => {
     if (document.getElementById("search-input")) new SearchManager();
   });

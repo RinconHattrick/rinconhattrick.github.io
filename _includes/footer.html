@@ -1,27 +1,8 @@
 <footer class="footer py-5">
   <div class="content has-text-centered is-flex is-flex-direction-column is-align-items-center">
-    <!-- Información de Copyright -->
     <p class="is-size-6 has-text-weight-semibold mb-3">
-      &copy; {{ "now" | date: "%Y" }} <strong>{{ site.title | default: "Mi Sitio Web" }}</strong> - {{ site.author | default: "Autor desconocido" }}
+      &copy; {{ "now" | date: "%Y" }} <strong>{{ site.title | default: "Mi Sitio Web" }}</strong>
+      - {{ site.author | default: "Autor desconocido" }}
     </p>
-
-    <!-- Redes Sociales -->
-    {% if site.social %}
-    <div class="mt-3">
-      <h3 class="title is-6 has-text-weight-semibold">Síguenos</h3>
-      <div class="buttons is-centered">
-        {% for platform in site.social %}
-        <a href="{{ platform.url }}" 
-           class="button is-small tooltip"
-           target="_blank" 
-           rel="noopener" 
-           aria-label="Síguenos en {{ platform.name }}" 
-           title="{{ platform.name }}">
-          <span class="icon">{{ platform.icon }}</span>
-        </a>
-        {% endfor %}
-      </div>
-    </div>
-    {% endif %}
   </div>
 </footer>

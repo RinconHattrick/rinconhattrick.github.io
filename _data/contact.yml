@@ -2,7 +2,6 @@
   color: "is-info"
   description: "Únete a nuestra comunidad para discutir estrategias y compartir experiencias."
   link: "https://t.me/JuvenilesHT"
-
 - name: "Correo Electrónico"
   color: "is-danger"
   description: "Envía tus consultas o propuestas de colaboración por correo electrónico."

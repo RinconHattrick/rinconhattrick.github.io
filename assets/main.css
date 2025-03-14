@@ -1,6 +1,9 @@
 body {
   font-family: "Roboto", sans-serif;
 }
+.footer {
+  padding: 1rem 0;
+}
 
 /* Marcar texto */
 mark {
@@ -11,11 +14,12 @@ mark {
 }
 
 /* Enlaces */
-a, .button {
+a,
+.button {
   transition: opacity 0.3s ease;
 }
-
-a:hover, .button:hover {
+a:hover,
+.button:hover {
   opacity: 0.8;
 }
 
@@ -23,7 +27,6 @@ a:hover, .button:hover {
 .hero-body {
   animation: fadeIn 0.5s ease-in-out;
 }
-
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -60,43 +63,34 @@ a:hover, .button:hover {
   opacity: 0;
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
-
 .scroll-to-top-btn.show {
   opacity: 1;
   transform: translateY(-10px);
 }
-
 .scroll-to-top-btn:hover {
   transform: translateY(-10px) scale(1.1);
 }
 
 /* Botón de tema */
 #themeToggle {
-  font-size: 1.5rem;
+  font-size: 1rem;
   cursor: pointer;
   transition: transform 0.2s ease;
 }
-
 #themeToggle:hover {
   transform: scale(1.1);
 }
 
-/* Ajuste para móviles */
-@media (max-width: 768px) {
-  .scroll-to-top-btn {
-    bottom: 3.75rem;
-  }
-}
-
 /* tema */
-  body.dark-theme {
-    background-color: #121212;
-    color: #e0e0e0;
-  }
-  body.dark-theme .navbar, body.dark-theme .footer {
-    background-color: #1f1f1f;
-  }
-  body.dark-theme .box {
-    background-color: #2a2a2a;
-    color: #e0e0e0;
-  }
+body.dark-theme {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+body.dark-theme .navbar,
+body.dark-theme .footer {
+  background-color: #1f1f1f;
+}
+body.dark-theme .box {
+  background-color: #2a2a2a;
+  color: #e0e0e0;
+}
