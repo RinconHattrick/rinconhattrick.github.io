@@ -7,7 +7,7 @@ categories: [selecciones-nacionales]
 tags: [calendario, selecciones, estrategia, planificación]
 excerpt: "Optimiza tu estrategia conociendo el calendario de selecciones nacionales en Hattrick y saca ventaja en la planificación de tu equipo."
 description: "Descubre cómo el calendario de selecciones nacionales en Hattrick puede ayudarte a planificar mejor tus estrategias y mejorar el rendimiento de tu equipo."
-image: "/assets/img/hattrick.webp"
+image: "/assets/img/Selecciones+Nacionales.png"
 featured: false
 published: true
 views: 0

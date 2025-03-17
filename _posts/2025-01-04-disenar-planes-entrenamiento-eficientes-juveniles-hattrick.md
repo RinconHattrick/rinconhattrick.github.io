@@ -7,7 +7,7 @@ categories: [equipo-juvenil]
 tags: [entrenamiento, juveniles, desarrollo, planificación]
 excerpt: "Descubre cómo estructurar planes de entrenamiento efectivos para potenciar el desarrollo de tus juveniles en Hattrick."
 description: "Aprende a diseñar entrenamientos eficientes para juveniles en Hattrick. Estrategias clave para mejorar habilidades y maximizar su evolución."
-image: "/assets/img/hattrick.webp"
+image: "/assets/img/Equipo+Juvenil.png"
 featured: true
 published: true
 views: 0

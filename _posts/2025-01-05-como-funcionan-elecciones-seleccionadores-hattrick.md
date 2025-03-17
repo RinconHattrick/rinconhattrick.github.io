@@ -7,7 +7,7 @@ categories: [selecciones-nacionales]
 tags: [elecciones, seleccionadores, Hattrick, votación]
 excerpt: "Descubre cómo funciona el sistema de elecciones de seleccionadores nacionales en Hattrick, sus reglas y responsabilidades."
 description: "Guía completa sobre el proceso de elecciones de seleccionadores nacionales en Hattrick. Conoce las reglas, la votación y el rol del seleccionador."
-image: "/assets/img/hattrick.webp"
+image: "/assets/img/Selecciones+Nacionales.png"
 featured: false
 published: true
 views: 0

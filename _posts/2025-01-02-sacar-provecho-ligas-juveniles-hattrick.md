@@ -7,7 +7,7 @@ categories: [equipo-juvenil]
 tags: [ligas, juveniles, estrategia, competencias]
 excerpt: "Descubre cómo utilizar las ligas juveniles en Hattrick para potenciar el desarrollo de tus jugadores y mejorar su rendimiento."
 description: "Guía sobre cómo sacar el máximo provecho de las ligas juveniles en Hattrick. Aprende estrategias para mejorar la progresión de tus jugadores y su adaptación competitiva."
-image: "/assets/img/hattrick.webp"
+image: "/assets/img/Equipo+Juvenil.png"
 featured: false
 published: true
 views: 0

@@ -7,7 +7,7 @@ categories: [selecciones-nacionales]
 tags: [Mundial, competiciones, seleccionadores, estrategia]
 excerpt: "Descubre todo sobre el torneo más prestigioso de Hattrick: formato, estrategias clave, cómo avanzar rondas y los premios en juego."
 description: "Aprende cómo funciona el Mundial en Hattrick, cómo desarrollar estrategias efectivas y qué beneficios trae ganar el torneo más importante del juego."
-image: "/assets/img/hattrick.webp"
+image: "/assets/img/Selecciones+Nacionales.png"
 featured: false
 published: true
 views: 0

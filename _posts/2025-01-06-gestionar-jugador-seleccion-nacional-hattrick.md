@@ -7,7 +7,7 @@ categories: [selecciones-nacionales]
 tags: [gestión, selección, jugadores, rendimiento]
 excerpt: "Aprende a maximizar el rendimiento de tus jugadores internacionales y equilibrar su desarrollo entre la selección y tu club en Hattrick."
 description: "Guía sobre la gestión de jugadores convocados a la selección nacional en Hattrick. Optimiza su rendimiento sin descuidar los intereses de tu club."
-image: "/assets/img/hattrick.webp"
+image: "/assets/img/Selecciones+Nacionales.png"
 featured: false
 published: true
 views: 0

@@ -7,7 +7,7 @@ categories: [equipo-juvenil]
 tags: [juveniles, ascenso, equipo, Hattrick]
 excerpt: "Aprende cuándo y cómo ascender juveniles en Hattrick para optimizar su desarrollo y aumentar su valor en el mercado."
 description: "Guía detallada sobre cómo ascender juveniles en Hattrick. Conoce los requisitos, el mejor momento para hacerlo y cómo aprovechar su potencial al máximo."
-image: "/assets/img/hattrick.webp"
+image: "/assets/img/Equipo+Juvenil.png"
 featured: false
 published: true
 views: 0

@@ -7,7 +7,7 @@ categories: [equipo-mayor]
 tags: [Hattrick, experiencia, liderazgo, entrenamiento]
 excerpt: "Descubre cómo la experiencia de los jugadores influye en el rendimiento de tu equipo en Hattrick y cómo gestionarla estratégicamente."
 description: "Aprende cómo la experiencia en Hattrick afecta el rendimiento de los jugadores. Descubre estrategias para potenciar su impacto en el campo y mejorar tu equipo."
-image: "/assets/img/hattrick.webp"
+image: "/assets/img/Equipo+Mayor.png"
 featured: false
 published: true
 views: 0

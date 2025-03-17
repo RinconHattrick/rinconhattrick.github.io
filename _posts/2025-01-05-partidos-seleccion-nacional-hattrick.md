@@ -7,7 +7,7 @@ categories: [selecciones-nacionales]
 tags: [partidos, selección, Hattrick, estrategia]
 excerpt: "Descubre el impacto de los partidos de selección nacional en Hattrick y las estrategias clave para optimizar el rendimiento del equipo."
 description: "Conoce cómo funcionan los partidos de selección nacional en Hattrick. Aprende estrategias y claves para optimizar el rendimiento de tu equipo."
-image: "/assets/img/hattrick.webp"
+image: "/assets/img/Selecciones+Nacionales.png"
 featured: false
 published: true
 views: 0

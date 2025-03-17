@@ -7,7 +7,7 @@ categories: [selecciones-nacionales]
 tags: [Copa de Naciones, Hattrick, selecciones, torneo, ranking, estrategias]
 excerpt: "Aprende cómo funciona la Copa de Naciones en Hattrick, cómo mejorar el rendimiento de tu selección y qué estrategias usar para escalar en el ranking internacional."
 description: "Descubre cómo competir en la Copa de Naciones de Hattrick, entender su impacto en el ranking y desarrollar estrategias efectivas para llevar a tu selección al éxito."
-image: "/assets/img/hattrick.webp"
+image: "/assets/img/Selecciones+Nacionales.png"
 featured: false
 published: true
 views: 0

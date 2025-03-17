@@ -7,7 +7,7 @@ categories: [selecciones-nacionales]
 tags: [staff, selección, Hattrick, gestión, equipo técnico]
 excerpt: "Descubre los roles clave del staff de selecciones nacionales en Hattrick y su impacto en el rendimiento del equipo."
 description: "Guía sobre la gestión del staff en selecciones nacionales de Hattrick. Conoce los roles clave y su importancia en el éxito del equipo."
-image: "/assets/img/hattrick.webp"
+image: "/assets/img/Selecciones+Nacionales.png"
 featured: false
 published: true
 views: 0

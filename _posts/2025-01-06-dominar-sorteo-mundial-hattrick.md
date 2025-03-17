@@ -7,7 +7,7 @@ categories: [selecciones-nacionales]
 tags: [sorteo, Mundial, Hattrick, clasificación, estrategia]
 excerpt: "Descubre cómo se realiza el sorteo del Mundial en Hattrick, qué factores influyen y cómo prepararte para cualquier grupo de competición."
 description: "Explicación detallada del sorteo del Mundial en Hattrick y estrategias clave para maximizar las oportunidades de tu selección nacional."
-image: "/assets/img/hattrick.webp"
+image: "/assets/img/Selecciones+Nacionales.png"
 featured: false
 published: true
 views: 0

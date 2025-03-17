@@ -7,7 +7,7 @@ categories: [equipo-juvenil]
 tags: [ojeadores, estrategia, juveniles, scouting]
 excerpt: "Aprende a gestionar y optimizar el trabajo de los ojeadores juveniles en Hattrick para descubrir talento y fortalecer tu equipo."
 description: "Descubre cómo mejorar el rendimiento de tus ojeadores en Hattrick. Estrategias para identificar juveniles prometedores y maximizar su desarrollo."
-image: "/assets/img/hattrick.webp"
+image: "/assets/img/Equipo+Juvenil.png"
 featured: false
 published: true
 views: 0

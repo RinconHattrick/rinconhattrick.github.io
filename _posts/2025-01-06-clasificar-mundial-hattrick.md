@@ -7,7 +7,7 @@ categories: [selecciones-nacionales]
 tags: [Mundial, clasificación, Hattrick, selecciones, estrategia]
 excerpt: "Descubre cómo funciona la clasificación al Mundial en Hattrick, qué criterios se usan y qué estrategias seguir para asegurar tu cupo en la Copa del Mundo."
 description: "Aprende cómo clasificar al Mundial en Hattrick, qué factores influyen en la clasificación y cómo preparar a tu selección para lograr un desempeño exitoso en el torneo."
-image: "/assets/img/hattrick.webp"
+image: "/assets/img/Selecciones+Nacionales.png"
 featured: false
 published: true
 views: 0

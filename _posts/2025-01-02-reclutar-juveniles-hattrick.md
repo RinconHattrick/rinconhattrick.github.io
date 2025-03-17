@@ -7,7 +7,7 @@ categories: [equipo-juvenil]
 tags: [juveniles, reclutamiento, scouting, estrategia]
 excerpt: "Explora los métodos de reclutamiento juvenil en Hattrick y elige la mejor estrategia para potenciar el futuro de tu equipo."
 description: "Descubre cómo reclutar juveniles en Hattrick de manera efectiva. Estrategias clave para mejorar tu cantera y desarrollar jugadores de calidad."
-image: "/assets/img/hattrick.webp"
+image: "/assets/img/Equipo+Juvenil.png"
 featured: false
 published: true
 views: 0
