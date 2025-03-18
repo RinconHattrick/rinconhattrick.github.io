@@ -32,7 +32,7 @@ layout: default
     <div class="container">
       <div class="columns is-centered">
         <div class="column is-6">
-          <figure class="image">
+          <figure class="image is-4by3 has-shadow">
             <img
               src="{% if page.image %}{{ page.image | relative_url }}{% else %}{{ default_image | relative_url }}{% endif %}"
               alt="{{ page.title | escape }}" />
