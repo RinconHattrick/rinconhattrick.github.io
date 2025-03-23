@@ -7,7 +7,7 @@ categories: [equipo-juvenil]
 tags: [entrenamiento, juveniles, desarrollo, progresión]
 excerpt: "Aprende a aplicar entrenamientos progresivos y escalonados para optimizar el desarrollo de tus juveniles en Hattrick."
 description: "Guía sobre cómo diseñar entrenamientos escalonados para juveniles en Hattrick. Mejora su desarrollo con estrategias progresivas y eficientes."
-image: "/assets/img/Equipo+Juvenil.png"
+image: "/assets/img/hattrick.webp"
 featured: true
 published: true
 views: 0

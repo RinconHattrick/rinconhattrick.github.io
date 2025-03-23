@@ -7,7 +7,7 @@ categories: [selecciones-nacionales]
 tags: [ranking, selecciones, estrategia, puntos, clasificación]
 excerpt: "Descubre cómo se calcula el ranking de selecciones en Hattrick, qué factores influyen en la clasificación y qué estrategias puedes aplicar para mejorar tu posición."
 description: "Guía detallada sobre el ranking de selecciones nacionales en Hattrick: cómo se calculan los puntos, qué influye en la clasificación y cómo escalar posiciones estratégicamente."
-image: "/assets/img/Selecciones+Nacionales.png"
+image: "/assets/img/hattrick.webp"
 featured: false
 published: true
 views: 0

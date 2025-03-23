@@ -7,7 +7,7 @@ categories: [equipo-juvenil]
 tags: [ojeadores, estrategia, juveniles, scouting]
 excerpt: "Aprende a gestionar y optimizar el trabajo de los ojeadores juveniles en Hattrick para descubrir talento y fortalecer tu equipo."
 description: "Descubre cómo mejorar el rendimiento de tus ojeadores en Hattrick. Estrategias para identificar juveniles prometedores y maximizar su desarrollo."
-image: "/assets/img/Equipo+Juvenil.png"
+image: "/assets/img/hattrick.webp"
 featured: false
 published: true
 views: 0
@@ -68,14 +68,17 @@ Los ojeadores son empleados que buscan nuevos talentos para tu equipo juvenil. P
 Aquí tienes algunas estrategias para sacar el máximo provecho a tus ojeadores:
 
 1. **Evalúa las necesidades de tu equipo**
+
    - Orienta las búsquedas a posiciones específicas si necesitas refuerzos concretos.
    - Realiza búsquedas generales si buscas variedad o no tienes carencias claras.
 
 2. **Contrata hasta tres ojeadores**
+
    - Si el presupuesto lo permite, aumenta el número de ojeadores activos para maximizar las opciones.
    - Esto incrementará las probabilidades de encontrar talentos destacados cada semana.
 
 3. **Toma decisiones informadas**
+
    - Analiza atributos clave como edad, posición y potencial antes de decidir.
    - Evalúa si el jugador encaja en el plan a largo plazo de tu equipo.
 

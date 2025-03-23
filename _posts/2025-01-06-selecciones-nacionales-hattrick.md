@@ -7,7 +7,7 @@ categories: [selecciones-nacionales]
 tags: [selecciones, Hattrick, estrategias, gestión]
 excerpt: "Descubre el funcionamiento de las selecciones nacionales en Hattrick y cómo puedes contribuir a su éxito con estrategias clave."
 description: "Aprende cómo funcionan las selecciones nacionales en Hattrick, cómo apoyar a tu selección y qué estrategias implementar para fortalecer el equipo nacional."
-image: "/assets/img/Selecciones+Nacionales.png"
+image: "/assets/img/hattrick.webp"
 featured: false
 published: true
 views: 0

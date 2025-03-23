@@ -7,7 +7,7 @@ categories: [preguntas-frecuentes]
 tags: [FAQ, juveniles, Hattrick, preguntas, gestión]
 excerpt: "Resuelve tus dudas sobre la gestión del equipo juvenil en Hattrick, desde reclutamiento de jugadores hasta optimización de entrenamientos."
 description: "Preguntas frecuentes sobre la gestión del equipo juvenil en Hattrick. Aprende a reclutar, entrenar y optimizar el rendimiento de tus juveniles."
-image: "/assets/img/Preguntas+Frecuentes.png"
+image: "/assets/img/hattrick.webp"
 featured: false
 published: true
 views: 0

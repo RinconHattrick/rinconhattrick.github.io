@@ -7,7 +7,7 @@ categories: [selecciones-nacionales]
 tags: [selección, Sub-21, desarrollo, Hattrick, talentos]
 excerpt: "Descubre el papel clave de la selección Sub-21 en Hattrick, su impacto en el desarrollo de jóvenes talentos y su rol estratégico."
 description: "Conoce la importancia de la selección Sub-21 en Hattrick. Aprende cómo contribuye al desarrollo de jugadores y al éxito de la selección mayor."
-image: "/assets/img/Selecciones+Nacionales.png"
+image: "/assets/img/hattrick.webp"
 featured: false
 published: true
 views: 0

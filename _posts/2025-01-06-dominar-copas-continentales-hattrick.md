@@ -4,10 +4,10 @@ title: "Copas Continentales en Hattrick: Estrategias para ganar y mejorar tu sel
 author: elPatronHT
 date: 2025-01-17
 categories: [selecciones-nacionales]
-tags: [Copas Continentales, Hattrick, selecciones, ranking, competiciones, estrategias]
+tags: [Copas Continentales, Hattrick, selecciones, competiciones, estrategias]
 excerpt: "Aprende cómo funcionan las Copas Continentales en Hattrick, su impacto en el ranking y qué estrategias usar para llevar a tu selección al éxito internacional."
 description: "Guía completa sobre las Copas Continentales en Hattrick: cómo se estructuran, cómo influyen en el ranking de selecciones y qué estrategias aplicar para ganar."
-image: "/assets/img/Selecciones+Nacionales.png"
+image: "/assets/img/hattrick.webp"
 featured: false
 published: true
 views: 0

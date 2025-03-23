@@ -7,7 +7,7 @@ categories: [selecciones-nacionales]
 tags: [Liga de Aspirantes, torneo, Hattrick, selecciones, estrategia]
 excerpt: "Descubre cómo funciona la Liga de Aspirantes en Hattrick, qué impacto tiene en la selección nacional y qué estrategias usar para maximizar el rendimiento de tu equipo."
 description: "Guía detallada sobre la Liga de Aspirantes en Hattrick: estructura del torneo, beneficios para las selecciones y estrategias clave para el éxito."
-image: "/assets/img/Selecciones+Nacionales.png"
+image: "/assets/img/hattrick.webp"
 featured: false
 published: true
 views: 0

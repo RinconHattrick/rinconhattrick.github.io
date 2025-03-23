@@ -24,9 +24,9 @@ layout: default
             <div class="column is-6-tablet is-4-widescreen">
               <article class="card">
                 <div class="card-image">
-                  <figure class="image is-4by3 has-shadow">
+                  <figure class="image is-256x256 has-shadow">
                     <img src="{{ post.image | default: '/assets/img/default.webp' | relative_url }}"
-                      alt="{{ post.title | escape }}"  />
+                      alt="{{ post.title | escape }}" loading="lazy" width="300" height="115" />
                   </figure>
                   <time datetime="{{ post.date | date: '%Y-%m-%d' }}" class="is-size-7 has-text-grey">
                     <span class="icon" aria-hidden="true">📅</span>

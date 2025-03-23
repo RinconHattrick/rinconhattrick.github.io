@@ -7,7 +7,7 @@ categories: [equipo-mayor]
 tags: [gestión de equipo, finanzas, entrenamiento, principiantes]
 excerpt: "Descubre cómo gestionar tu club en Hattrick desde el inicio con estrategias clave para nuevos usuarios."
 description: "Guía para principiantes en Hattrick: aprende a gestionar tu equipo, administrar finanzas y entrenar jugadores desde cero."
-image: "/assets/img/Equipo+Mayor.png"
+image: "/assets/img/hattrick.webp"
 featured: false
 published: true
 views: 0

@@ -7,7 +7,7 @@ categories: [equipo-juvenil]
 tags: [cazatalentos, ojeadores, scouting, refuerzos]
 excerpt: "Descubre cómo optimizar la red de cazatalentos en Hattrick para encontrar jugadores clave y reforzar tu equipo juvenil."
 description: "Aprende cómo utilizar eficientemente la red de cazatalentos en Hattrick. Encuentra juveniles con potencial y refuerza tu equipo de manera estratégica."
-image: "/assets/img/Equipo+Juvenil.png"
+image: "/assets/img/hattrick.webp"
 featured: false
 published: true
 views: 0

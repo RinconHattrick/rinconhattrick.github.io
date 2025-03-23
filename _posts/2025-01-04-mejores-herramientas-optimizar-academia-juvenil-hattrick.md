@@ -7,7 +7,7 @@ categories: [equipo-juvenil]
 tags: [herramientas, juveniles, análisis, optimización]
 excerpt: "Descubre las herramientas más útiles para mejorar la gestión, análisis y rendimiento de tu academia juvenil en Hattrick."
 description: "Lista de herramientas para optimizar la gestión de tu academia juvenil en Hattrick. Aprende a analizar jugadores, planificar entrenamientos y mejorar tu cantera."
-image: "/assets/img/Equipo+Juvenil.png"
+image: "/assets/img/hattrick.webp"
 featured: false
 published: true
 views: 0

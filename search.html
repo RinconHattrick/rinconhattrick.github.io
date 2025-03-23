@@ -97,10 +97,9 @@ description: "Búsqueda de artículos en el sitio"
         article.innerHTML = `
           <article class="card">
                 <div class="card-image">
-            <figure class="image is-4by3 has-shadow">
+            <figure class="image is-256x256 has-shadow">
               <img src="${item.image ? item.image : '/assets/img/default.webp'}" 
-                  alt="${item.title}" 
-                  loading="lazy" />
+                  alt="${item.title}" loading="lazy" width="300" height="115"/>
             </figure>
             <time datetime="${item.date}" class="is-size-7 has-text-grey">
               <span class="icon" aria-hidden="true">📅</span>

@@ -7,7 +7,7 @@ categories: [selecciones-nacionales]
 tags: [futuribles, selección, Hattrick, scouting]
 excerpt: "Aprende a gestionar y optimizar la lista de futuribles en Hattrick para seleccionar a los mejores jugadores nacionales."
 description: "Guía sobre cómo usar la lista de futuribles en selecciones nacionales de Hattrick. Optimiza tu scouting y selecciona talentos estratégicamente."
-image: "/assets/img/Selecciones+Nacionales.png"
+image: "/assets/img/hattrick.webp"
 featured: false
 published: true
 views: 0
