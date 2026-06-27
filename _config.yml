@@ -1,18 +1,26 @@
+# CONFIGURACIÓN GENERAL
 title: El Rincón de Hattrick
 description: "Estrategias y consejos para mejorar tus juveniles y gestionar tu selección nacional en Hattrick."
-author: elPatronHT
-
 url: "https://rinconhattrick.github.io"
 baseurl: ""
+lang: es
+timezone: Europe/Madrid
+image: /assets/img/default.webp
+permalink: "/:categories/:title/"
+author: elPatronHT
+author_team_url: "https://hattrick.org/goto.ashx?path=/Club/?TeamID=538167"
+color: "#4B8A61"
 
-theme: null
+# Jekyll 4: builds incrementales más rápidos
+incremental: true
+dir: ltr
 
+# MARKDOWN
 markdown: kramdown
 kramdown:
   input: GFM
-  hard_wrap: true
-
-permalink: "/:categories/:title/"
+  hard_wrap: false
+  syntax_highlighter: rouge
 
 plugins:
   - jekyll-feed
@@ -25,10 +33,10 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - .git/
-  - .github/
   - .gitignore
   - vendor/
   - _site/
+  - node_modules/
 
 defaults:
   - scope:
@@ -37,3 +45,5 @@ defaults:
     values:
       lang: "es"
       layout: "post"
+
+future: true
